@@ -1,59 +1,50 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
 #include <array>
 #include <queue>
+
 using namespace std;
-const int INF = 1e9;
 
-using train = array<int, 3>; // dist, pos, id
+using Pair = array<int, 2>;
 
-int tail(const vector<bool>& v, int M) {
-    for (int i = M; i > 0; i--) {
-        if (v[i]) return i;
-    }
-    return 0;
+void init() {
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    ios::sync_with_stdio(0);
 }
 
 int main() {
+    init();
+
     int N, M;
     cin >> N >> M;
 
-    vector<train> TS(N);
-
-    int i = 0;
-    for (train& tr : TS) {
-        cin >> tr[1] >> tr[0];
-        tr[0] -= tr[1];
-        tr[2] = ++i;
+    vector<Pair> TS(N + 1);
+    for (int i = 1; i <= N; i++) {
+        cin >> TS[i][0] >> TS[i][1];
     }
 
-    priority_queue<train> pq;
     vector<int> path;
-    vector<bool> bitmask(M + 1);
+    int i = 1, pos = 1, curr;
 
-    for (int pos = 0, i = 0; !bitmask[M]; i++) {
-        pq.push(TS[i]);
-        if (pos < TS[i][1]) {
-            const train& t = pq.top();
-            for (int i = t[1]; i <= t[1] + t[0]; i++) {
-                bitmask[i] = 1;
-            }
+    while (pos < M) {
+        curr = -1;
 
-            pos = tail(bitmask, M);
-            cout << pos << '\n';
-
-            /*cout << t[2] << ' ' << t[1] << ' ' << t[0] << " | ";
-            for (int i = 1; i <= M; i++) cout << bitmask[i] << ' ';
-            cout << '\n';*/
-
-            path.push_back(t[2]);
-            pq.pop();
+        while (i <= N && TS[i][0] <= pos) {
+            if (curr == -1 || TS[curr][1] < TS[i][1]) curr = i;
+            i++;
         }
+
+        if (curr == -1) { // impossible part
+            cout << -1;
+            exit(0);
+        }
+
+        pos = TS[curr][1];
+        path.push_back(curr);
     }
 
     cout << path.size() - 1 << '\n';
-    return 0;
     for (int n : path)  {
         cout << n << ' ';
     }
