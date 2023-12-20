@@ -2,6 +2,6 @@ bin/
 obj/
 .vscode/
 
-*/main
-*.out
+main
+a.out
 input*
