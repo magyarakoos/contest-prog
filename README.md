@@ -1,1 +1,1 @@
-# contest-prog
+# Contest Prog
