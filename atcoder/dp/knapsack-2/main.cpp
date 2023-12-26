@@ -20,19 +20,24 @@ int main() {
         cin >> w[i] >> v[i];
     }
 
-    vector<vector<ll>> dp(N + 1, vector<ll>(W + 1, -1));
+    int sum = accumulate(all(v), 0);
 
-    dp[0][0] = 0;
+    vector<ll> dp(sum + 1, LLONG_MAX >> 1);
+
+    dp[0] = 0;
 
     for (int i = 1; i <= N; i++) {
-        for (int j = 0; j <= W; j++) {
-            dp[i][j] = (
-                j >= w[i] && dp[i - 1][j - w[i]] != -1 && dp[i - 1][j] < dp[i - 1][j - w[i]] + v[i] ?
-                dp[i - 1][j - w[i]] + v[i] :
-                dp[i - 1][j]
-            );
+        for (int j = sum; j >= 0; j--) {
+            if (j >= v[i]) {
+                dp[j] = min(dp[j], dp[j - v[i]] + w[i]);
+            }
         }
     }
 
-    cout << *max_element(all(dp[N]));
+    do {
+        if (dp[sum] <= W) {
+            cout << sum;
+            exit(0);
+        }
+    } while (sum--);
 }
