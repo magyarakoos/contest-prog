@@ -3,20 +3,12 @@
 My general template:
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <array>
-#include <climits>
-#include <algorithm>
-#include <numeric>
-#include <unordered_set>
-#include <unordered_map>
-#include <queue>
+#include <bits/stdc++.h>
 
 #define speed cin.tie(0); ios::sync_with_stdio(0)
-#define range(start, exit, incr) for (int i = start; i exit; i incr)
 #define cinv(v) for (auto& e : v) cin >> e;
 #define all(v) v.begin(), v.end()
+#define has(s, e) s.count(e)
 
 using namespace std;
 using ll = long long;
@@ -28,5 +20,3 @@ int main() {
     
 }
 ```
-
-Note: some judge environments don't support the `bits/stdc++.h` header, so I generally include the most important ones.
