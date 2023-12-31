@@ -17,12 +17,16 @@ int main() {
     vector<int> v(N);
     cinv(v);
 
-    int l = 0, r = 0, count = 0, len = 0;
+    int l = 0, r = 1, count = 0, len = 0;
+
+    while (r < N && v[l] == v[r]) {
+        l++;
+        r++;
+    }
 
     while (r < N) {
         if ((r + 1 == N || v[r + 1] == v[r]) && r - l + 1 >= 2) {
             len = max(len, r - l + 1);
-            cout << l << ' ' << r << '\n';
             count++;
             r += 2;
             l = r - 1;

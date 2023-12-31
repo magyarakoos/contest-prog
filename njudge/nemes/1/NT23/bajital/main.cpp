@@ -12,24 +12,20 @@ using point = array<int, 2>;
 int main() {
     speed;
 
-    int N, x;
+    int N, x, remS = 0, divS = 0;
     cin >> N >> x;
-    vector<bool> al(N), am(N);
-    for (int i = 0; i < N; i++) {
+
+    while (N--) {
         int a;
         cin >> a;
-        al[i] = x <= a;
-        am[i] = x < a;
+        remS += a % x;
+        divS += a / x;
     }
 
-    int result = 0;
-    for (int i = 0; i < N; i++) {
-        result += am[i];
-        for (int j = 0; j < N; j++) {
-            if (i == j) continue;
-            result += al[i];
-        }
+    while (divS > remS) {
+        divS--;
+        remS += x;
     }
 
-    cout << result;
+    cout << divS;
 }
