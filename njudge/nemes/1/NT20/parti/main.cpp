@@ -9,40 +9,41 @@ using namespace std;
 using ll = long long;
 using point = array<int, 2>;
 
-int N;
-vector<vector<int>> g;
-vector<int> indegS;
-
-void remove(int node, int deg) {
-    indegS[node] = -1;
-    for (int neighbor : g[node]) {
-        indegS[neighbor]--;
-        if (!indegS[neighbor]) {
-            remove(neighbor, deg);
-        }
-    }
-}
-
 int main() {
     speed;
 
+    int N;
     cin >> N;
-    g.resize(N + 1);
-    indegS.resize(N + 1);
+
+    vector<point> g(N + 1);
+    vector<int> indegS(N + 1);
 
     for (int i = 1; i <= N; i++) {
         int U, V;
         cin >> U >> V;
-        g[i].push_back(U);
-        g[i].push_back(V);
+        g[i][0] = U;
+        g[i][1] = V;
         indegS[U]++;
         indegS[V]++;
     }
 
-    for (int i = 0; i < 2; i++) {
-        for (int node = 1; node <= N; node++) {
-            if (indegS[node] == i) {
-                remove(node, i);
+    queue<int> q;
+
+    for (int i = 1; i <= N; i++) {
+        if (indegS[i] < 2) {
+            q.push(i);
+        }
+    }
+
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+
+        for (int i = 0; i < 2; i++) {
+            int next = g[node][i];
+
+            if (--indegS[next] == 1) {
+                q.push(next);
             }
         }
     }
@@ -50,11 +51,12 @@ int main() {
     vector<int> result;
 
     for (int i = 1; i <= N; i++) {
-        if (indegS[i] == 2) {
+        if (indegS[i] >= 2) {
             result.push_back(i);
         }
     }
 
     cout << result.size() << '\n';
     for (int n : result) cout << n << ' ';
+    cout << '\n';
 }
