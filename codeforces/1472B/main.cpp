@@ -10,26 +10,24 @@ using ll = long long;
 using point = array<int, 2>;
 
 int main() {
+    speed;
+
     int T;
     cin >> T;
     while (T--) {
-        int N, K, mul = 1;
-        cin >> N >> K;
+        int N, oc = 0, tc = 0;
+        cin >> N;
         while (N--) {
             int a;
             cin >> a;
-            mul *= a;
+            (a == 1 ? oc : tc)++;
         }
 
-        if (2023 % mul) {
+        if ((tc % 2 == 0 && oc % 2 == 0) || (tc % 2 != 0 && oc > 0 && oc % 2 == 0)) {
+            cout << "YES\n";
+        }
+        else {
             cout << "NO\n";
-        } else {
-            cout << "YES\n" << 2023 / mul;
-            K--;
-            while (K--) {
-                cout << " 1";
-            }
-            cout << '\n';
         }
     }
 }
