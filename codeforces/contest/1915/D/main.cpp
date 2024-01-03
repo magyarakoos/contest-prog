@@ -26,13 +26,49 @@ int main() {
             char c;
             cin >> c;
             v[i] = c == 'a' || c == 'e';
+            s += c;
         }
 
         if (N == 1) {
-            cout << s[0] << '\n';
+            cout << s << '\n';
             continue;
         }
 
-        
+        vector<string> partS;
+        string t;
+
+        for (int i = 0; i < N; i++) {
+            if (i + 1 == N) {
+                t += s[i];
+            }
+
+            else if (!v[i] && !v[i + 1]) {
+                t += s[i];
+                partS.push_back(t);
+                t = "";
+            }
+            
+            else if (!v[i] && v[i + 1]) {
+                if (!t.empty()) partS.push_back(t);
+                t = "";
+                t += s[i];
+                t += s[i + 1];
+                if (i + 1 < N) i++;
+            }
+
+            else {
+                t += s[i];
+            }
+        }
+
+        if (!t.empty()) {
+            partS.push_back(t);
+        }
+
+        for (int i = 0; i < partS.size(); i++) {
+            cout << partS[i];
+            if (i + 1 < partS.size()) cout << '.';
+        }
+        cout << '\n';
     }
 }
