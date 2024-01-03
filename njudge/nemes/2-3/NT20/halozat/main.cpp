@@ -9,27 +9,14 @@ using namespace std;
 using ll = long long;
 using point = array<int, 2>;
 
-map<int, unordered_set<int>> g;
-vector<vector<int>> groupS;
-vector<bool> vis;
-
-void dfs(int n) {
-    vis[n] = 1;
-    groupS.back().push_back(n);
-    for (int neigh : g[n]) {
-        if (!vis[neigh]) {
-            dfs(neigh);
-        }
-    }
-}
-
 int main() {
     speed;
 
     int N, M, K;
     cin >> N >> M >> K;
 
-
+    vector<unordered_set<int>> g(N + 1);
+    
     while (M--) {
         int U, V;
         cin >> U >> V;
@@ -46,31 +33,24 @@ int main() {
 
     while (!todo.empty()) {
         int next = todo.front(); todo.pop();
+
         for (int neigh : g[next]) {
             g[neigh].erase(next);
             if (g[neigh].size() < K) {
                 todo.push(neigh);
             }
         }
-        g.erase(next);
     }
 
-    vis.resize(N + 1);
+    vector<int> result;
 
     for (int i = 1; i <= N; i++) {
-        if (!vis[i]) {
-            groupS.push_back({});
-            dfs(i);
+        if (g[i].size() >= K) {
+            result.push_back(i);
         }
     }
 
-    vector<int>& mx = *max_element(all(groupS), 
-    [](const vector<int>& a, const vector<int>& b){ return a.size() < b.size(); });
-
-    cout << mx.size() << '\n';
-
-    sort(all(mx));
-    for (int n : mx) {
-        cout << n << ' ';
-    }
+    cout << result.size() << '\n';
+    for (int x : result) cout << x << ' ';
+    cout << '\n';
 }

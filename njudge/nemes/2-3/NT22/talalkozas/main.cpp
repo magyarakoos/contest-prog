@@ -1,60 +1,63 @@
-#include <iostream>
-#include <vector>
-#include <array>
-#include <queue>
-#include <climits>
-#include <algorithm>
-#include <numeric>
-
-using namespace std;
+#include <bits/stdc++.h>
 
 #define speed cin.tie(0); ios::sync_with_stdio(0)
+#define cinv(v) for (auto& e : v) cin >> e;
+#define all(v) v.begin(), v.end()
+#define has(s, e) s.count(e)
 
-const int INF = 100'001;
+using namespace std;
+using ll = long long;
+using point = array<int, 2>;
 
-int main()
-{
+const int INF = 100'000;
+
+int main() {
 	speed;
 
-	int N, H;
+	int N;
 	cin >> N;
 
-	H = N / 2 + (N & 1);
-	
-	vector<int> eS(N);
-	vector<int> vS(N);
+	vector<int> beginS(N), endS(N);
 
 	for (int i = 0; i < N; i++) {
-		int E, V;
-		cin >> E >> V;
-		eS[i] = E;
-		vS[i] = V;
+		cin >> beginS[i] >> endS[i];
 	}
 
-	std::sort(eS.begin(), eS.end());
-	std::sort(vS.begin(), vS.end());
+	sort(all(beginS));
+	sort(all(endS));	
 
-	array<int, 2> min_v{ 0, INF };
+	int
+	H = N / 2 + (N & 1),
+	curr = 0,
+	begin = 0, 
+	end = 0,
+	mn_begin = -1,
+	mn_end = -1,
+	begin_i = 0,
+	end_i = 0;
 
-	for (int i = 0; i < N; i++) {
+	for (; begin <= INF; begin++) {
 
-		int e = vS[i],
-			v = eS.back(),
-			curr = N - i + 1,
-			j = N;
-
-		while (e < v && H < curr) {
-
-			v = eS[--j];
-			
-			curr--;
-
-			if (v - e < min_v[1] - min_v[0]) {
-				min_v = { e, v };
+		while ((end <= INF && curr < H) || begin == end) {
+			while (begin_i < N && beginS[begin_i] == end) {
+				begin_i++;
+				curr++;
 			}
+			end++;
+		}
+
+		if (H <= curr && (mn_begin == -1 || end - begin < mn_end - mn_begin)) {
+			mn_begin = begin;
+			mn_end = end;
+		}
+
+		while (end_i < N && endS[end_i] == begin) {
+			end_i++;
+			curr--;
 		}
 	}
 
-    // time limit bruh
-	cout << min_v[1] - min_v[0] + 1 << '\n' << min_v[0] << ' ' << min_v[1];
+	cout 
+	<< mn_end - mn_begin << '\n' 
+	<< mn_begin << ' ' << mn_end - 1; 
 }
