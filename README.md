@@ -5,6 +5,8 @@ My general template:
 ```cpp
 #include <bits/stdc++.h>
 
+#pragma region Utility
+
 #define speed cin.tie(0); ios::sync_with_stdio(0)
 #define cinv(v) for (auto& e : v) cin >> e;
 
@@ -18,6 +20,9 @@ My general template:
 #define smax(x, y) x = max(x, y)
 #define smin(x, y) x = min(x, y)
 
+#define sum(v) accumulate(all(v), 0)
+#define product(v, T) accumulate(all(v), 1, multiplies<T>())
+
 using namespace std;
 using ll = long long;
 using point = array<int, 2>;
@@ -25,8 +30,18 @@ using point = array<int, 2>;
 int max(point p) { return max(p[0], p[1]); }
 int min(point p) { return min(p[0], p[1]); }
 
+template <typename T>
+vector<T> prefix_sum(const vector<T>& v) {
+    vector<T> result(size(v));
+    partial_sum(all(v), result.begin());
+    return result;
+}
+
+#pragma endregion
+
 int main() {
     speed;
 
+    
 }
 ```
