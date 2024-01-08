@@ -20,6 +20,7 @@
 
 using namespace std;
 using ll = long long;
+using ull = unsigned long long;
 using point = array<int, 2>;
 
 int max(point p) { return max(p[0], p[1]); }
@@ -42,17 +43,26 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        vector<int> v(N + 1);
-        for (int i = 1; i <= N; i++) cin >> v[i];
+        vector<int> v(N);
+        cinv(v);
 
-        vector<point> dp(N + 1);
+        int result = 0, la = INT_MAX, lb = INT_MAX;
 
+        for (int i = 0; i < N; i++) {
+            int mn = min(la, lb), mx = max(la, lb);
 
+            if (v[i] <= mn) {
+                mn = v[i];
+            } else if (mx < v[i]) {
+                result++;
+                mn = v[i];
+            } else {
+                mx = v[i];
+            }
 
-        for (int i = 2; i <= N; i++) {
-
+            la = mn, lb = mx;
         }
 
-        cout << dp[N][0] + dp[N][1];
+        cout << result << '\n';
     }
 }
