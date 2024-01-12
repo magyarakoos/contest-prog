@@ -10,26 +10,36 @@ vector<ll> heightS;
 int N, K;
 
 ll window(int i) {
-    ll cost = 0;
-    cout << 0;
-    return 0;
-    cout << heightS[i] << ' ';
-    for (int j = i + 1; j < i + K; j++) {
-        cout << heightS[j] << ' ';
+    ll cost = 0, mx = 0;
+
+    for (int j = i; j < i + K; j++) {
+        mx = max(mx, heightS[j]);
     }
-    cout << '\n';
+
+    for (int j = i; j < i + K; j++) {
+        cost += mx - heightS[j];
+    }
+
     return cost;
 }
 
 int main() {
     speed;
 
+    cin >> N >> K;
+
     heightS.resize(N);
-    for (ll& h : heightS) cin >> h;
+
+    for (int i = 0; i < N; i++) {
+        cin >> heightS[i];
+        heightS[i] += i;
+    }
 
     ll result = LLONG_MAX;
 
     for (int i = 0; i <= N - K; i++) {
-        window(i);
+        result = min(result, window(i));
     }
+
+    cout << result;
 }
