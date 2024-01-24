@@ -42,13 +42,37 @@ int main() {
     cin >> N >> M >> K;
 
     vector<vector<int>> grid(N + 1, vector<int>(M + 1));
-    for (auto& line : grid) {
-        for (int& x : line) {
-            cin >> x;
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= M; j++) {
+            cin >> grid[i][j];
         }
     }
 
     vector<vector<vector<int>>> dp(N + 1, vector<vector<int>>(M + 1, vector<int>(K + 1, 1e9)));
 
     dp[1][1][0] = grid[1][1];
+
+    for (int dc = 1; dc <= K; dc++) {
+        dp[1][1][dc] = dp[1][1][dc - 1] / 2;
+    }
+
+    for (int y = 1; y <= N; y++) {
+        for (int x = 1; x <= M; x++) {
+            for (int dx = 0; dx <= K; dx++) {
+                for (int dt = 0; dt <= dx; dt++) {
+
+                    smin(
+                        dp[y][x][dx],
+                        (grid[y][x] >> dt) + // dt-szer elosztjuk kettővel a jelenlegi magasságot
+                        min( // a legkisebb kellemetlenség eddig legfeljebb dx - dt felhasználásával
+                            dp[y - 1][x][dx - dt],
+                            dp[y][x - 1][dx - dt]
+                        )
+                    );
+                }
+            }
+        }
+    }
+
+    cout << dp[N][M][K];
 }
