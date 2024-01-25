@@ -1,9 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-const vector<vector<int>> facts
 {
-    {},
 	{},
 	{2},
 	{3},
@@ -503,31 +498,5 @@ const vector<vector<int>> facts
 	{7, 71},
 	{2, 3, 83},
 	{499},
-	{2, 5}
-};
-
-void solve() {
-    int A, B;
-    cin >> A >> B;
-    unsigned long long result = 0;
-
-    for (int a = 1; a <= A; a++) {
-        int b = B;
-        for (int factor : facts[a]) {
-            cout << factor << ' ';
-            for (int i = factor; i <= B; i += factor) {
-                b--;
-            }
-        }
-        cout << a << ' ' << b << '\n';
-        result += a * b;
-    }
-
-    cout << result << '\n';
-}
-
-int main() {
-    int T;
-    cin >> T;
-    while (T--) solve();
+	{2, 5},
 }
