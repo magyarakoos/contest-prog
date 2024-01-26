@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 
 #pragma region Utility
@@ -36,32 +35,18 @@ vector<T> prefix_sum(const vector<T>& v) {
 #pragma endregion
 
 int main() {
-    #ifdef ONLINE_JUDGE
     speed;
-    #else
-    #define cin fin
-    ifstream fin("input.txt");
-    #endif
 
-    int N, S, T;
-    cin >> N >> S >> T;
-    vector<int> input(N + 1);
-    for (int i = 1; i <= N; i++) cin >> input[i];
-    vector<int> result({S});
-    int left = S, right = S;
-    for (int i = S; i <= N; i++) {
-        if (abs(input[right] - input[i]) >= T) {
-            result.push_back(i);
-            right = i;
+    int T;
+    cin >> T;
+    while (T--) {
+        int bx = 1e5, tx = -1e5;
+        for (int i = 0; i < 4; i++) {
+            int x, y;
+            cin >> x >> y;
+            smin(bx, x);
+            smax(tx, x);
         }
+        cout << (tx - bx) * (tx - bx) << '\n';
     }
-    for (int i = S; i > 0; i--) {
-        if (abs(input[left] - input[i]) >= T) {
-            result.push_back(i);
-            left = i;
-        }
-    }
-    sort(all(result));
-    cout << size(result) << '\n';
-    for (int x : result) cout << x << ' ';
 }
