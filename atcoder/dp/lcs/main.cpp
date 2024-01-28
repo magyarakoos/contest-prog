@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
-#define speed cin.tie(0); ios::sync_with_stdio(0)
 
 using namespace std;
 
 int main() {
-    speed;
+    cin.tie(0), ios::sync_with_stdio(0);
 
     string s, t, lcs;
     short i, j;
