@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-using namespace std;
 
 #define cinv(v) for (auto& e : v) cin >> e;
 #define all(v) v.begin(), v.end()
@@ -15,11 +14,11 @@ int main() {
     int N, M;
     cin >> N >> M;
 
-    vector<bool> catS(N + 1);
+    vector<bool> has_cat(N + 1);
     for (int i = 1; i <= N; i++) {
         char b;
         cin >> b;
-        catS[i] = b == '1';
+        has_cat[i] = b == '1';
     }
 
     vector<vector<int>> g(N + 1);
@@ -32,9 +31,31 @@ int main() {
     }
 
     vector<bool> vis(N + 1);
-    queue<array<int, 2>> q({{1, catS[1]}});
+    queue<array<int, 2>> q({{1, has_cat[1]}});
+    vis[1] = 1;
     
+    int result = 0;
+
     while (!q.empty()) {
-        
+        auto [node, cats] = q.front();
+        q.pop();
+
+        if (cats > M) {
+            continue;
+        }
+
+        if (node != 1 && size(g[node]) == 1) {
+            result++;
+            continue;
+        }
+
+        for (int neigh : g[node]) {
+            if (!vis[neigh]) {
+                vis[neigh] = 1;
+                q.push({neigh, (has_cat[node] ? cats + has_cat[neigh] : has_cat[neigh])});
+            }
+        }
     }
+
+    cout << result;
 }
