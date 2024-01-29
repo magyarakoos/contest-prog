@@ -8,7 +8,6 @@ int main() {
     cin >> N;
 
     unordered_map<int, int> m;
-
     int result = 0;
 
     while (N--) {
