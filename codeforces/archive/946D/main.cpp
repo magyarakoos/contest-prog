@@ -10,87 +10,36 @@ using ll = long long;
 
 constexpr int INF = 1e9;
 
-int first(const vector<bool>& v) {
-    for (int i = 0; i < size(v); i++) {
-        if (v[i]) {
-            return i;
-        }
-    }
-    return -1;
-}
-
-int last(const vector<bool>& v) {
-    for (int i = size(v) - 1; i >= 0; i--) {
-        if (v[i]) {
-            return i;
-        }
-    }
-    return -1;
-}
-
-int total(const vector<bool>& v) {
-    int f = first(v),
-        l = last(v);
-
-    return (f == -1 ? 0 : l - f + 1);
-}
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     int N, M, K;
     cin >> N >> M >> K;
 
-    vector<vector<bool>> table(N, vector<bool>(M));
+    vector<vector<int>> table(N);
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
             char b;
             cin >> b;
-            table[i][j] = b == '1';
+            if (b == '1') {
+                table[i].push_back(j);
+            }
         }
     }
 
     // hourS[i][j] = az i. napon j óra kihagyásával legalább hány órát kell bent lenni
-    vector<vector<int>> hourS(N, vector<int>(K + 1));
+    vector<vector<int>> hourS(N, vector<int>(K + 1, INF));
 
     for (int i = 0; i < N; i++) {
+        for (int j = 0; j <= K; j++) {
+            int left = 0, right = size(table[i]) - j - 1;
 
-        hourS[i][0] = total(table[i]);
-
-        for (int j = 1; j <= K; j++) {
-
-            int f = first(table[i]),
-                l = last(table[i]);
-            
-            if (f == -1) {
-                hourS[i][j] = 0;
-                continue;
+            while (right < size(table[i])) {
+                hourS[i][j] = min(hourS[i][j], table[i][right] - table[i][left] + 1);
+                left++;
+                right++;
             }
-
-            if (f == l) {
-                table[i][f] = 0;
-                hourS[i][j] = 0;
-                continue;
-            }
-
-            table[i][f] = 0;
-            int new_f = first(table[i]);
-            int gain_f = new_f - f + 1;
-            table[i][f] = 1;
-
-            table[i][l] = 0;
-            int new_l = last(table[i]);
-            int gain_l = l - new_l + 1;
-            table[i][l] = 1;
-
-            if (gain_f < gain_l) {
-                table[i][l] = 0;
-            } else {
-                table[i][f] = 0;
-            }
-
-            hourS[i][j] = total(table[i]);
         }
     }
 
