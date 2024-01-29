@@ -6,15 +6,15 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     string s, t, lcs;
-    short i, j;
     cin >> s >> t;
-    
-    vector<vector<short>> dp(s.size() + 1, vector<short>(t.size() + 1));
+    int N = s.size(), M = t.size();
 
-    for (i = s.size() - 1; i >= 0; i--) {
-        for (j = t.size() - 1; j >= 0; j--) {
+    vector<vector<int>> dp(N + 1, vector<int>(M + 1));
+
+    for (int i = N - 1; i >= 0; i--) {
+        for (int j = M - 1; j >= 0; j--) {
             if (s[i] == t[j]) {
-                dp[i][j] = 1 + dp[i + 1][j + 1];
+                dp[i][j] = dp[i + 1][j + 1] + 1;
             } else {
                 dp[i][j] = max(dp[i + 1][j], dp[i][j + 1]);
             }
@@ -22,13 +22,16 @@ int main() {
     }
 
     if (dp[0][0]) {
-        i = j = 0;
 
-        while (i < s.size() && j < t.size()) {
+        int i = 0, j = 0;
+
+        while (i < N && j < M) {
             if (s[i] == t[j]) {
                 lcs += s[i];
-                i++; j++;
-            } else if (dp[i + 1][j] < dp[i][j + 1]) {
+                i++;
+                j++;
+            }
+            else if (dp[i + 1][j] < dp[i][j + 1]) {
                 j++;
             } else {
                 i++;
