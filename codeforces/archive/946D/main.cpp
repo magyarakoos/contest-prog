@@ -33,7 +33,13 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j <= K; j++) {
+
             int left = 0, right = size(table[i]) - j - 1;
+            
+            if (right < left) {
+                hourS[i][j] = 0;
+                continue;
+            }
 
             while (right < size(table[i])) {
                 hourS[i][j] = min(hourS[i][j], table[i][right] - table[i][left] + 1);
