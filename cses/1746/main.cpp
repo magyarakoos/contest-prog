@@ -16,52 +16,50 @@ int main() {
     int N, M;
     cin >> N >> M;
 
-    vector<vector<int>> dp(N + 1, vector<int>(M + 2));
-
-    int lasti = 0;
-
     vector<int> v(N + 1);
     for (int i = 1; i <= N; i++) {
         cin >> v[i];
-        if (v[i]) {
-            dp[i][v[i]] = 1;
-            lasti = i;
-        }
     }
 
-    if (lasti == 0) {
-        ll result = 1;
-        for (int i = 0; i < N; i++) {
-            result *= 100;
-            result %= MOD;
-        }
-        cout << result;
-        exit(0);
-    }
+    vector<vector<int>> dp(N + 1, vector<int>(M + 2));
 
-    for (int i = 1; i <= lasti; i++) {
-        for (int j = 1; j <= M; j++) {
-            dp[i][j] = (int)(
-                (long long)(
-                    dp[i - 1][j - 1] + 
-                    dp[i - 1][j] + 
-                    dp[i - 1][j + 1]
-                ) % MOD
-            );
-        }
-    }
-
-    if (v[N]) {
-        cout << dp[N][v[N]];
+    if (v[1]) {
+        dp[1][v[1]] = 1;
     } else {
-        int diff = N - lasti;
-        ll result = 0;
-
-        for (int i = 0; i < 2 * diff + 1; i++) {
-            result += dp[lasti][v[lasti]];
-            result %= MOD;
-        }
-
-        cout << result;
+        fill(all(dp[1]), 1);
     }
+
+    for (int i = 2; i <= N; i++) {
+        if (v[i]) {
+            dp[i][v[i]] = (ll)(
+                dp[i - 1][v[i] - 1] +
+                dp[i - 1][v[i] + 1] +
+                dp[i - 1][v[i]]
+            ) % MOD;
+        } else {
+            for (int j = 1; j <= M; j++) {
+                dp[i][j] = (ll)(
+                    dp[i - 1][j - 1] + 
+                    dp[i - 1][j + 1] +
+                    dp[i - 1][j]
+                ) % MOD;
+            }
+        }
+    }
+
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= M; j++) {
+            cout << dp[i][j] << ' ';
+        }
+        cout << '\n';
+    }
+
+    int result = 0;
+
+    for (int i = 1; i <= M; i++) {
+        result += dp[N][i];
+        result %= MOD;
+    }
+
+    cout << result;
 }
