@@ -31,11 +31,9 @@ int main() {
         g[par][type == 'A' ? 0 : 1] = i;
     }
 
-    for (int i = 1; i <= N; i++) {
-        cerr << i << ' ' << g[i][0] << ' ' << g[i][1] << '\n';
-    }
+    int aSide = g[1][0] == 0, bSide = g[1][1] == 0;
 
-    cout << !g[1][0] + !g[1][1] << '\n' 
-         << free_spots(g[1][0]) << '\n' 
-         << free_spots(g[1][1]);
+    cout << aSide + bSide << '\n' 
+         << (aSide ? 0 : free_spots(g[1][0])) << '\n' 
+         << (bSide ? 0 : free_spots(g[1][1]));
 }
