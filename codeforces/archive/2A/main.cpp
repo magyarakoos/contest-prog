@@ -22,7 +22,7 @@ int main() {
     int N;
     cin >> N;
 
-    int result, playerID;
+    int result = INT_MIN, playerID = 0;
 
     for (int i = 0; i < N; i++) {
         string s;
