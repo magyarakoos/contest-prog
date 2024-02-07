@@ -11,25 +11,31 @@ using ll = long long;
 void solve() {
     int N, M, K;
     cin >> N >> M >> K;
-    vector<int> a(N), b(M);
-    cinv(a);
-    cinv(b);
 
     vector<array<bool, 2>> has(K + 1);
 
-    for (int x : a) has[x][0] = 1;
-    for (int x : b) has[x][1] = 1;
+    while (N--) {
+        int a;
+        cin >> a;
+        if (a <= K) has[a][0] = 1;
+    }
+    while (M--) {
+        int b;
+        cin >> b;
+        if (b <= K) has[b][1] = 1;
+    }
 
     int ac = 0, bc = 0, bothc = 0;
 
     for (int i = 1; i <= K; i++) {
-        if (has[i][0] && has[i][1]) {
-            bothc++;
-        }
-        else if (!has[i][0] && !has[i][1]) {
+        if (!has[i][0] && !has[i][1]) {
             cout << "NO\n";
             return;
         }
+        
+        if (has[i][0] && has[i][1]) {
+            bothc++;
+        } 
         else if (!has[i][1]) {
             ac++;
         }
@@ -37,18 +43,14 @@ void solve() {
             bc++;
         }
     }
+
     cout << (min(ac, K / 2) + min(bc, K / 2) + bothc >= K ? "YES\n" : "NO\n");
 }
 
 int main() {
-    #ifndef LOCAL
     cin.tie(0), ios::sync_with_stdio(0);
-    #else
-    ifstream fin("../input");
-    #define cin fin
-    #endif
     
-    int T = 1;
+    int T;
     cin >> T;
     while (T--) {
         solve();

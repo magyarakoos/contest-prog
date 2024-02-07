@@ -9,9 +9,9 @@
 using namespace std;
 using ll = long long;
 
-int result;
+int result, i;
 vector<vector<array<int, 2>>> g;
-vector<bool> vis;
+vector<int> vis; // mikor látogattuk meg, ha meglátogattuk
 
 void dfs(int u, int minw) {
     if (vis.at(u)) {
@@ -32,6 +32,7 @@ void solve() {
 
     g.assign(N + 1, vector<array<int, 2>>());
     vis.assign(N + 1, 0);
+    order.assign(N + 1, 0);
 
     while (M--) {
         int U, V, W;
@@ -41,6 +42,7 @@ void solve() {
     }
 
     result = INT_MAX;
+    i = 1;
     dfs(1, INT_MAX);
 
     cout << result << '\n';
