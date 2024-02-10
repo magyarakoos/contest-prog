@@ -57,4 +57,6 @@ int main() {
             }
         }
     }
+
+    cout << distS[N];
 }
