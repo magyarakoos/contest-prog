@@ -13,6 +13,6 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     constexpr int X1 = 0, Y1 = 0;
-    int X, Y;
+    int X
 
 }
