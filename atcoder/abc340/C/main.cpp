@@ -17,5 +17,5 @@ int main() {
 
     ll result = 0;
 
-    while ()
+    while (N )
 }
