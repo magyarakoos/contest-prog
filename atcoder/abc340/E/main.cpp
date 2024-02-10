@@ -25,6 +25,7 @@ int main() {
         int balls = A[B];
         A[B] = 0;
 
-        int div = balls / N
+        int div = balls / N;
+        for (int& x :)
     }
 }
