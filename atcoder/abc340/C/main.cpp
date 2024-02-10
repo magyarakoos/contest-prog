@@ -11,6 +11,8 @@ using ull = unsigned long long;
 
 ull result = 0;
 
+unordered_map<ull, ull>
+
 void solve(ull n) {
     if (n < 2) {
         return;
