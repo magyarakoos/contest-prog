@@ -10,7 +10,8 @@ using namespace std;
 using ll = long long;
 
 struct Point { 
-    
+    ll x;
+    ll y;
 }
 
 int main() {
