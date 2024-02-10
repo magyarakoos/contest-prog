@@ -17,5 +17,7 @@ int main() {
 
     ll result = 0;
 
-    while (N )
+    while (N >= 2) {
+        
+    }
 }
