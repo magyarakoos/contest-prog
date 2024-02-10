@@ -16,7 +16,7 @@ int main() {
     int N;
     cin >> N;
 
-    vector<vector<array<int, 2>>> g
+    vector<vector<array<int, 2>>> g()
 
     for (int i = 1; i < N; i++) {
         int A, B, X;
