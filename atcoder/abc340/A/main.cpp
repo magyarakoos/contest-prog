@@ -12,5 +12,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    cin >> A >> B 
+    int A, B, D;
+    cin >> A >> B >> D;
+    
 }
