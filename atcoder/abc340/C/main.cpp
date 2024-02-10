@@ -19,7 +19,7 @@ void solve(ll n) {
     int a = n / 2,
         b = n / 2 + (n & 1);
 
-    solve(n / 2);
+    solve(a);
     solve(n / 2 + (n & 1));
 }
 
