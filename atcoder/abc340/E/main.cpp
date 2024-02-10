@@ -32,9 +32,9 @@ int main() {
 
         int mod = balls % N;
 
-        int p = 0;
+        int p = 0, i;
 
-        for (int i = )
+        for (i = )
     }
 
     for (ll x : A) cout << x << ' ';
