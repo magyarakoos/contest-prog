@@ -24,5 +24,5 @@ int main() {
         g[i].push_back({X, B});
     }
 
-    priorit
+    
 }
