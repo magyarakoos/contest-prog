@@ -22,7 +22,7 @@ int main() {
     Point b, c;
     cin >> b.x >> b.y;
 
-    Point rectA = 
+    Point rectA = {min({a.x, b})}
 
     cout << c.x << ' ' << c.y;
 }
