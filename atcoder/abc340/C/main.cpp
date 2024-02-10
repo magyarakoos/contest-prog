@@ -11,7 +11,7 @@ using ull = unsigned long long;
 
 ull result = 0;
 
-unordered_map<ull, ull>
+unordered_map<ull, ull> cache;
 
 void solve(ull n) {
     if (n < 2) {
