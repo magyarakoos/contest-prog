@@ -12,7 +12,7 @@ using ll = long long;
 ll result = 0;
 
 void solve(ll n) {
-    
+
 }
 
 int main() {
@@ -21,11 +21,7 @@ int main() {
     ll N;
     cin >> N;
 
-    ll result = 0;
+    solve(N);
 
-    for (ll i = 1; N >= 2; i *= 2) {
-        result += N;
-        N = N / 2 + (N & 1);
-
-    }
+    cout << 
 }
