@@ -7,16 +7,16 @@
 #define has(s, e) s.count(e)
 
 using namespace std;
-using ll = long long;
+using ull = long long;
 
-ll result = 0;
+ull result = 0;
 
-void solve(ll n) {
+void solve(ull n) {
     if (n < 2) {
         return;
     }
 
-    ll a = n / 2,
+    ull a = n / 2,
         b = n / 2 + (n & 1);
 
     result += a + b;
@@ -28,7 +28,7 @@ void solve(ll n) {
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    ll N;
+    ull N;
     cin >> N;
 
     solve(N);
