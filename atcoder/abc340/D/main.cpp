@@ -17,8 +17,8 @@ int main() {
     cin >> N;
 
     for (int i = 1; i < N; i++) {
-        in >> A[i] >> B[i] >> X[i];
-
-c
+        int A, B, X;
+        cin >> A >> B >> X;
+        
     }
 }
