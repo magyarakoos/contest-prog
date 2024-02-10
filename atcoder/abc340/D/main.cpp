@@ -52,7 +52,7 @@ int main() {
             int new_dist = dist + neigh_dist;
 
             if (new_dist < distS[neigh_node]) {
-                distS[neigh_dist]
+                distS[neigh_node] = new_dist;
             }
         }
     }
