@@ -15,7 +15,7 @@ int main() {
     int N, M;
     cin >> N >> M;
 
-    vector<int> A(N);
+    vector<ll> A(N);
     cinv(A);
 
     while (M--) {
