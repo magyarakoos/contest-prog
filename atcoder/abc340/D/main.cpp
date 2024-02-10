@@ -21,6 +21,6 @@ int main() {
     for (int i = 1; i < N; i++) {
         int A, B, X;
         cin >> A >> B >> X;
-        
+        g[]
     }
 }
