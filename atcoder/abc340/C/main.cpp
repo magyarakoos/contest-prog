@@ -18,7 +18,7 @@ int main() {
     ll result = 0;
 
     while (N >= 2) {
-        
+        result += N;
         N = N / 2 + (N & 1);
 
     }
