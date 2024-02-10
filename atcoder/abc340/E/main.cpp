@@ -34,7 +34,10 @@ int main() {
 
         int p;
         for (int i = 0; i < mod; i++) {
-            if ()
+            p = B + i + 1;
+            if (p >= N) {
+                p = 0;
+            }
 
             A[(B + i + 1) % N]++;
         }
