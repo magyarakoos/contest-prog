@@ -48,6 +48,8 @@ int main() {
             continue;
         }
 
-        for (int neigh : )
+        for (int neigh : g[node]) {
+            if (!vi)
+        }
     }
 }
