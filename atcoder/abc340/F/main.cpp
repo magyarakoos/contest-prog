@@ -22,7 +22,7 @@ int main() {
     Point b, c;
     cin >> b.x >> b.y;
 
-
+    Point rectA = 
 
     cout << c.x << ' ' << c.y;
 }
