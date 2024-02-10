@@ -18,6 +18,8 @@ int main() {
     vector<int> A(N), B(N), X(N);
 
     for (int i = 1; i < N; i++) {
+        cin >> A[i] >> B[i] >> X[i];
+
         
     }
 }
