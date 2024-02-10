@@ -40,7 +40,7 @@ int main() {
         }
 
         for (i = 0; p < mod; p++) {
-            
+            A[i]++;
         }
     }
 
