@@ -53,6 +53,7 @@ int main() {
 
             if (new_dist < distS[neigh_node]) {
                 distS[neigh_node] = new_dist;
+                
             }
         }
     }
