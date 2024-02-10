@@ -36,4 +36,7 @@ int main() {
             A[(B + i + 1) % N]++;
         }
     }
+
+    for (int x : A) cout << x << ' ';
+    cout << '\n'
 }
