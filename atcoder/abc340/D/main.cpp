@@ -12,7 +12,9 @@ using ll = long long;
 struct Route {
     int node;
     ll dist;
-    bool operator()(Rou)
+    bool operator()(const Route& a, const Route& b) {
+        return a.dist > b.dist;
+    }
 }
 
 int main() {
