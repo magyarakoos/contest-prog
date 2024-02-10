@@ -13,13 +13,13 @@ ull result = 0;
 
 unordered_map<ull, ull> cache;
 
-ll solve(ull n) {
+ull solve(ull n) {
     if (has(cache, n)) {
         return cache[n];
     }
 
     if (n < 2) {
-        return;
+        return 0;
     }
 
     ull a = n / 2,
