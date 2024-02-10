@@ -23,7 +23,7 @@ ull solve(ull n) {
     ull a = n / 2,
         b = n / 2 + (n & 1);
 
-    solve(a);
+    ull sa = solve(a),
     solve(b);
 
     cache[n] = a + b;
