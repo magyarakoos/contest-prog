@@ -38,5 +38,5 @@ int main() {
     }
 
     for (int x : A) cout << x << ' ';
-    cout << '\n'
+    cout << '\n';
 }
