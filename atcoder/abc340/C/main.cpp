@@ -12,7 +12,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int N;
+    ll N;
     cin >> N;
 
     ll result = 0;
@@ -20,6 +20,6 @@ int main() {
     for (ll i = 1; N >= 2; i *= 2) {
         result += N;
         N = N / 2 + (N & 1);
-        
+
     }
 }
