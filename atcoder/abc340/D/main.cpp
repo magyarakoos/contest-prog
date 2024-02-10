@@ -49,7 +49,7 @@ int main() {
         }
 
         for (int neigh : g[node]) {
-            if (!vi)
+            int new_dist = 
         }
     }
 }
