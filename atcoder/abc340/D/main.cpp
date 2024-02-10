@@ -32,5 +32,6 @@ int main() {
         g[i].push_back({X, B});
     }
 
+    priority_queue<Route, vector<Route>, Route> pq;
     
 }
