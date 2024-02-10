@@ -15,8 +15,8 @@ unordered_map<ull, ull> cache;
 
 ll solve(ull n) {
     if (has(cache, n)) {
-        result += cache[n];
-        return;
+        result += ;
+        return cache[n];
     }
 
     if (n < 2) {
