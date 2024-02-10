@@ -12,7 +12,7 @@ using ll = long long;
 ll result = 0;
 
 void solve(ll n) {
-
+    
 }
 
 int main() {
