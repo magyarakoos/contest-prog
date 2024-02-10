@@ -23,4 +23,6 @@ int main() {
         g[i].push_back({i + 1, A});
         g[i].push_back({X, B});
     }
+
+    
 }
