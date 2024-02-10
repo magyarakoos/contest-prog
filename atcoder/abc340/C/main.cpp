@@ -9,8 +9,6 @@
 using namespace std;
 using ull = unsigned long long;
 
-ull result = 0;
-
 unordered_map<ull, ull> cache;
 
 ull solve(ull n) {
@@ -24,8 +22,6 @@ ull solve(ull n) {
 
     ull a = n / 2,
         b = n / 2 + (n & 1);
-
-    result += a + b;
 
     solve(a);
     solve(b);
