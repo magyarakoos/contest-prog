@@ -14,7 +14,9 @@ ull result = 0;
 unordered_map<ull, ull> cache;
 
 void solve(ull n) {
-    if (has(cache, ))
+    if (has(cache, n)) {
+        result += 
+    }
 
     if (n < 2) {
         return;
