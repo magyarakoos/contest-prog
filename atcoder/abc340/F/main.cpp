@@ -19,7 +19,7 @@ int main() {
 
     ll X3, Y3;
 
-    ll bottomX =    
+    ll bottomX = min({X1, X2, X3}),     
 
     cout << X3 << ' ' << Y3;
 }
