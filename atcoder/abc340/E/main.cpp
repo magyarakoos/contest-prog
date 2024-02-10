@@ -39,7 +39,7 @@ int main() {
             p++;
         }
 
-
+        for ()
     }
 
     for (ll x : A) cout << x << ' ';
