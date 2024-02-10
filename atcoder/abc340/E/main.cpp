@@ -17,4 +17,10 @@ int main() {
 
     vector<int> A(N);
     cinv(A);
+
+    while (M--) {
+        int B;
+        cin >> B;
+        
+    }
 }
