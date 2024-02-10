@@ -48,7 +48,7 @@ int main() {
             continue;
         }
 
-        for (int neigh : g[node]) {
+        for (auto [neigh_node, neigh_dist] : g[node]) {
             int new_dist = 
         }
     }
