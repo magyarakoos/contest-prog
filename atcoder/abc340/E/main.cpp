@@ -19,7 +19,7 @@ int main() {
     cinv(A);
 
     while (M--) {
-        ll B;
+        internal B;
         cin >> B;
 
         ll balls = A[B];
