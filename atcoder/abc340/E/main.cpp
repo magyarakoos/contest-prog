@@ -22,11 +22,11 @@ int main() {
         int B;
         cin >> B;
 
-        int balls = A[B];
+        ll balls = A[B];
         A[B] = 0;
 
-        int div = balls / N;
-        for (int& x : A) {
+        ll div = balls / N;
+        for (ll& x : A) {
             x += div;
         }
 
