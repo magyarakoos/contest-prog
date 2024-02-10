@@ -16,7 +16,7 @@ void solve(ll n) {
         return;
     }
 
-    int a = n / 2,
+    ll a = n / 2,
         b = n / 2 + (n & 1);
 
     result += a + b;
