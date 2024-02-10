@@ -40,5 +40,10 @@ int main() {
     pq.push({1, 0});
     dist[1] = 0;
 
-    
+    while (!pq.empty()) {
+        auto [node, dist] = pq.top();
+        pq.pop();
+
+        
+    }
 }
