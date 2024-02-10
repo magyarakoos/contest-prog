@@ -33,7 +33,7 @@ int main() {
         int mod = balls % N;
 
         for (int i = 0 ; i < mod; i++) {
-            A[]
+            A[(B + i + 1) % N]
         }
     }
 }
