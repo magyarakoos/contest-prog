@@ -16,7 +16,8 @@ void solve(ll n) {
         return;
     }
 
-    solve()
+    solve(n / 2);
+    solve(n / 2 + (n & 1));
 }
 
 int main() {
