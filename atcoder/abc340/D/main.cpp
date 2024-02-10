@@ -15,5 +15,5 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int>
+    vector<int> A(N), B(N), X(N);
 }
