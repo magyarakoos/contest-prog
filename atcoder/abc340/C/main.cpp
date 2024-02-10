@@ -19,8 +19,10 @@ void solve(ll n) {
     int a = n / 2,
         b = n / 2 + (n & 1);
 
+    result += a
+
     solve(a);
-    solve(n / 2 + (n & 1));
+    solve(b);
 }
 
 int main() {
