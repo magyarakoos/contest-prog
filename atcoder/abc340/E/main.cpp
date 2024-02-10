@@ -32,6 +32,6 @@ int main() {
 
         int mod = balls % N;
 
-        fo
+        for (int)
     }
 }
