@@ -27,10 +27,11 @@ void solve(ull n) {
         b = n / 2 + (n & 1);
 
     result += a + b;
-    cache[n] = a + b;
 
     solve(a);
     solve(b);
+    
+    cache[n] = a + b;
 }
 
 int main() {
