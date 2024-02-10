@@ -35,5 +35,7 @@ int main() {
     }
 
     priority_queue<Route, vector<Route>, Route> pq;
-    vector<ll> dist(N + 1,);
+    vector<ll> dist(N + 1, INF);
+
+    
 }
