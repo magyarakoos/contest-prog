@@ -37,6 +37,8 @@ int main() {
         for (i = B + 1; i < N && i < mod + B + 1; i++) {
             A[i]++;
         }
+
+        
     }
 
     for (ll x : A) cout << x << ' ';
