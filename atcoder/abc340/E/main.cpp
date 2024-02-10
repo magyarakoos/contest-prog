@@ -7,7 +7,7 @@
 #define has(s, e) s.count(e)
 
 using namespace std;
-using ll = unsigned long long;
+using ll = long long;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
