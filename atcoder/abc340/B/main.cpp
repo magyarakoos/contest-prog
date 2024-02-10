@@ -21,6 +21,8 @@ int main() {
         cin >> qt >> q;
         if (qt == 1) {
             
+        } else {
+
         }
     }
 }
