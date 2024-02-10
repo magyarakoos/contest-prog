@@ -20,7 +20,9 @@ int main() {
     ll X3, Y3;
 
     ll bottomX = min({X1, X2, X3}), bottomY = min({Y1, Y2, Y3}),
-       topX = max({X1, X2, X3}), topY =     
+       topX = max({X1, X2, X3}), topY = max({Y1, Y2, Y3});
+    
+        
 
     cout << X3 << ' ' << Y3;
 }
