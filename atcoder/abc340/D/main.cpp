@@ -49,7 +49,11 @@ int main() {
         }
 
         for (auto [neigh_node, neigh_dist] : g[node]) {
-            int new_dist = 
+            int new_dist = dist + neigh_dist;
+
+            if (new_dist < distS[neigh_node]) {
+                distS[neigh_dist]
+            }
         }
     }
 }
