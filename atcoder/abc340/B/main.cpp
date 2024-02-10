@@ -22,7 +22,7 @@ int main() {
         if (qt == 1) {
             v.push_back(x);
         } else {
-            cout << v[]
+            cout << v[size(v) - ]
         }
     }
 }
