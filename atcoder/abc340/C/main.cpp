@@ -13,7 +13,7 @@ ll result = 0;
 
 void solve(ll n) {
     if (n < 2) {
-        
+        return;
     }
 }
 
