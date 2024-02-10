@@ -32,14 +32,9 @@ int main() {
 
         int mod = balls % N;
 
-        for (int i = 0; i < mod; i++) {
-            int p = B + i + 1;
-            if (p >= N) {
-                p = 0;
-            }
+        int p = 0;
 
-            A[p]++;
-        }
+        for (int i = )
     }
 
     for (ll x : A) cout << x << ' ';
