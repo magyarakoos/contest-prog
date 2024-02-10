@@ -20,7 +20,7 @@ int main() {
     constexpr Point a = {0, 0};
     
     Point b;
-    cin >> b.X >> b.Y;
+    cin >> b.x >> b.y;
 
     ll X3, Y3;
 
