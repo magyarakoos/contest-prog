@@ -13,6 +13,7 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     constexpr ll X1 = 0, Y1 = 0;
+    
     ll X2, Y2;
     cin >> X2 >> Y2;
 
