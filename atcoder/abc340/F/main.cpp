@@ -12,10 +12,6 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int A, B, D;
-    cin >> A >> B >> D;
-    for (int i = A; i <= B; i += D) {
-        cout << i << ' ';
-    }
-    cout << '\n';
+    int X, Y;
+    
 }
