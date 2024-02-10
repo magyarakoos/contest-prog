@@ -12,7 +12,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int N, M;
+    ll N, M;
     cin >> N >> M;
 
     vector<ll> A(N);
@@ -30,13 +30,13 @@ int main() {
             x += div;
         }
 
-        int mod = balls % N;
+        ll mod = balls % N;
 
-        for (int i = 0 ; i < mod; i++) {
+        for (ll i = 0 ; i < mod; i++) {
             A[(B + i + 1) % N]++;
         }
     }
 
-    for (int x : A) cout << x << ' ';
+    for (ll x : A) cout << x << ' ';
     cout << '\n';
 }
