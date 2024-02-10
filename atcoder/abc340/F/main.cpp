@@ -17,10 +17,10 @@ struct Point {
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    constexpr Point X = {0, 0};
+    constexpr Point a = {0, 0};
     
     Point Y;
-    cin >> X2 >> Y2;
+    cin >> Y.X >> Y2;
 
     ll X3, Y3;
 
