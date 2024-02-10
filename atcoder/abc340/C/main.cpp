@@ -39,7 +39,5 @@ int main() {
     ull N;
     cin >> N;
 
-    solve(N);
-
-    cout << result;
+    cout << solve(N);
 }
