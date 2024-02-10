@@ -48,6 +48,6 @@ int main() {
             continue;
         }
 
-        for ()
+        for (int neigh : )
     }
 }
