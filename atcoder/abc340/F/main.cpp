@@ -19,10 +19,9 @@ int main() {
 
     constexpr Point a = {0, 0};
     
-    Point b;
+    Point b, c;
     cin >> b.x >> b.y;
 
-    ll X3, Y3;
 
     ll bottomX = min({X1, X2, X3}), bottomY = min({Y1, Y2, Y3}),
        topX = max({X1, X2, X3}), topY = max({Y1, Y2, Y3});
