@@ -14,5 +14,5 @@ int main() {
 
     int A, B, D;
     cin >> A >> B >> D;
-    
+    for (int i = A; i <=)
 }
