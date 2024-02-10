@@ -37,5 +37,5 @@ int main() {
     priority_queue<Route, vector<Route>, Route> pq;
     vector<ll> dist(N + 1, INF);
 
-    pq.push({1,})
+    pq.push({1, 0})
 }
