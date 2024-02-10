@@ -39,7 +39,7 @@ int main() {
             p++;
         }
 
-        for (i = 0; p < mod; p++) {
+        for (i = 0; p < mod; i++) {
             A[i]++;
         }
     }
