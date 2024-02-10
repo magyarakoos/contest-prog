@@ -41,6 +41,7 @@ int main() {
 
         for (i = 0; p < mod; i++) {
             A[i]++;
+            p++;
         }
     }
 
