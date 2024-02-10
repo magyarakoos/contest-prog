@@ -9,7 +9,7 @@
 using namespace std;
 using ll = long long;
 
-constexpr ll INF = 1e9 * 2 * 1e5;
+constexpr ll INF = 1e9 * 2 * 1e5 + 1;
 
 struct Route {
     int node;
