@@ -17,6 +17,6 @@ int main() {
     int Q;
     cin >> Q;
     while (Q--) {
-        
+        int qt, 
     }
 }
