@@ -21,6 +21,7 @@ int main() {
     while (M--) {
         int B;
         cin >> B;
-        
+
+        int balls = 
     }
 }
