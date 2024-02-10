@@ -30,7 +30,7 @@ int main() {
             x += div;
         }
 
-        ll mod = balls % N;
+        int mod = balls % N;
 
         for (int i = 0 ; i < mod; i++) {
             A[(B + i + 1) % N]++;
