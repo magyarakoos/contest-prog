@@ -12,7 +12,7 @@ using ll = long long;
 struct Route {
     int node;
     ll dist;
-    
+    bool operator()(Rou)
 }
 
 int main() {
