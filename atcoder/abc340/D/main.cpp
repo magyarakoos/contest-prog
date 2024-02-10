@@ -35,10 +35,10 @@ int main() {
     }
 
     priority_queue<Route, vector<Route>, Route> pq;
-    vector<ll> dist(N + 1, INF);
+    vector<ll> distS(N + 1, INF);
 
     pq.push({1, 0});
-    dist[1] = 0;
+    distS[1] = 0;
 
     while (!pq.empty()) {
         auto [node, dist] = pq.top();
