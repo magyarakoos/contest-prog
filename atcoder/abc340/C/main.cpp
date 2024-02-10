@@ -12,17 +12,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    vector<int> v;
+    int N;
+    cin >> N;
     
-    int Q;
-    cin >> Q;
-    while (Q--) {
-        int qt, x;
-        cin >> qt >> x;
-        if (qt == 1) {
-            v.push_back(x);
-        } else {
-            cout << v[size(v) - x] << '\n';
-        }
-    }
 }
