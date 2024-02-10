@@ -15,5 +15,7 @@ int main() {
     int N;
     cin >> N;
 
-    
+    ll result = 0;
+
+    while ()
 }
