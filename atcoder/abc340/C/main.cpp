@@ -13,7 +13,7 @@ ull result = 0;
 
 unordered_map<ull, ull> cache;
 
-void solve(ull n) {
+ll solve(ull n) {
     if (has(cache, n)) {
         result += cache[n];
         return;
@@ -30,7 +30,7 @@ void solve(ull n) {
 
     solve(a);
     solve(b);
-    
+
     cache[n] = a + b;
 }
 
