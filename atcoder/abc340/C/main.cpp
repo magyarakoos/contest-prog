@@ -28,6 +28,8 @@ void solve(ull n) {
 
     result += a + b;
 
+    
+
     solve(a);
     solve(b);
 }
