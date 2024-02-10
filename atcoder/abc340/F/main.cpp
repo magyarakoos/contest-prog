@@ -19,8 +19,8 @@ int main() {
 
     constexpr Point a = {0, 0};
     
-    Point Y;
-    cin >> Y.X >> Y2;
+    Point b;
+    cin >> b.X >> b.Y;
 
     ll X3, Y3;
 
