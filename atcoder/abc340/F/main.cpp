@@ -19,7 +19,7 @@ int main() {
 
     ll X3, Y3;
 
-    ll bottomX, bo    
+    ll bottomX =    
 
     cout << X3 << ' ' << Y3;
 }
