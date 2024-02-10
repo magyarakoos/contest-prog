@@ -18,9 +18,9 @@ int main() {
     cin >> Q;
     while (Q--) {
         int qt, x;
-        cin >> qt >> q;
+        cin >> qt >> x;
         if (qt == 1) {
-            
+
         } else {
 
         }
