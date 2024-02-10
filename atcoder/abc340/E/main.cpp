@@ -34,7 +34,9 @@ int main() {
 
         int p = 0, i;
 
-        for (i = ;;);
+        for (i = ;;) {
+
+        }
     }
 
     for (ll x : A) cout << x << ' ';
