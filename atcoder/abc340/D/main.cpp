@@ -9,6 +9,12 @@
 using namespace std;
 using ll = long long;
 
+struct Route {
+    int node;
+    ll dist;
+    
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
