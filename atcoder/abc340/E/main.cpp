@@ -22,6 +22,7 @@ int main() {
         int B;
         cin >> B;
 
-        int balls = 
+        int balls = A[B];
+        A[B] = 0;
     }
 }
