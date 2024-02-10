@@ -9,6 +9,10 @@
 using namespace std;
 using ll = long long;
 
+struct Point { 
+    
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -21,8 +25,8 @@ int main() {
 
     ll bottomX = min({X1, X2, X3}), bottomY = min({Y1, Y2, Y3}),
        topX = max({X1, X2, X3}), topY = max({Y1, Y2, Y3});
-    
-        
+
+
 
     cout << X3 << ' ' << Y3;
 }
