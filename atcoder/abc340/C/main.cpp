@@ -26,9 +26,8 @@ void solve(ull n) {
     ull a = n / 2,
         b = n / 2 + (n & 1);
 
+    cache[n] = a + b;
     result += a + b;
-
-    
 
     solve(a);
     solve(b);
