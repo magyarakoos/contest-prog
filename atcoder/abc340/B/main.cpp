@@ -20,7 +20,7 @@ int main() {
         int qt, x;
         cin >> qt >> x;
         if (qt == 1) {
-
+            v.push_back(x);
         } else {
 
         }
