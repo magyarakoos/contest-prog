@@ -15,7 +15,7 @@ struct Route {
     bool operator()(const Route& a, const Route& b) {
         return a.dist > b.dist;
     }
-}
+};
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
