@@ -12,7 +12,7 @@ using ll = long long;
 struct Point { 
     ll x;
     ll y;
-}
+};
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -22,7 +22,7 @@ int main() {
     Point b, c;
     cin >> b.x >> b.y;
 
-    
+
 
     cout << c.x << ' ' << c.y;
 }
