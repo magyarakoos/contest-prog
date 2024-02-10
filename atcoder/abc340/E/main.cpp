@@ -33,7 +33,7 @@ int main() {
         int mod = balls % N;
 
         for (int i = 0; i < mod; i++) {
-            p = B + i + 1;
+            int p = B + i + 1;
             if (p >= N) {
                 p = 0;
             }
