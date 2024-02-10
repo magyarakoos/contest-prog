@@ -34,7 +34,7 @@ int main() {
 
         int p = 0, i;
 
-        for (i = ;;) {
+        for (i = B + 1; i ;) {
 
         }
     }
