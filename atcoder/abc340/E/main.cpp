@@ -15,5 +15,6 @@ int main() {
     int N, M;
     cin >> N >> M;
 
-    vector<int> A
+    vector<int> A(N);
+    cinv(A);
 }
