@@ -19,6 +19,8 @@ int main() {
     while (Q--) {
         int qt, x;
         cin >> qt >> q;
-        if (qt == '')
+        if (qt == 1) {
+            
+        }
     }
 }
