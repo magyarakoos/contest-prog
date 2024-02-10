@@ -7,7 +7,7 @@
 #define has(s, e) s.count(e)
 
 using namespace std;
-using ull = long long;
+using ull = unsigned long long;
 
 ull result = 0;
 
