@@ -11,7 +11,7 @@ using ll = long long;
 
 ll result = 0;
 
-void solve() {
+void solve(ll n) {
 
 }
 
