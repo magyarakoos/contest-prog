@@ -44,6 +44,8 @@ int main() {
         auto [node, dist] = pq.top();
         pq.pop();
 
-        if ()
+        if (distS[node] != dist) {
+            continue;
+        }
     }
 }
