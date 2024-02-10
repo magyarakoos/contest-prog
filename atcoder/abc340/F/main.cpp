@@ -18,5 +18,7 @@ int main() {
 
     ll X3, Y3;
 
-    cout << X3 << Y3
+    
+
+    cout << X3 << ' ' << Y3;
 }
