@@ -39,7 +39,9 @@ int main() {
             p++;
         }
 
-        for ()
+        for (i = 0; p < mod; p++) {
+            
+        }
     }
 
     for (ll x : A) cout << x << ' ';
