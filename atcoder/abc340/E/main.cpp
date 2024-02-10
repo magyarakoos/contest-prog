@@ -12,14 +12,14 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    ll N, M;
+    int N, M;
     cin >> N >> M;
 
     vector<ll> A(N);
     cinv(A);
 
     while (M--) {
-        internal B;
+        int B;
         cin >> B;
 
         ll balls = A[B];
