@@ -16,5 +16,5 @@ int main() {
     ll X2, Y2;
     cin >> X2 >> Y2;
 
-    
+    ll X3, Y3
 }
