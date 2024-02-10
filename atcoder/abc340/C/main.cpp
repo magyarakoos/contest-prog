@@ -15,6 +15,8 @@ void solve(ll n) {
     if (n < 2) {
         return;
     }
+
+    solve()
 }
 
 int main() {
