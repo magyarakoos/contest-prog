@@ -26,7 +26,7 @@ ull solve(ull n) {
     ull sa = solve(a),
         sb = solve(b);
 
-    cache[n] = a + b;
+    cache[n] = sa + sb;
 }
 
 int main() {
