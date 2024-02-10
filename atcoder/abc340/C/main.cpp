@@ -23,5 +23,5 @@ int main() {
 
     solve(N);
 
-    cout << 
+    cout << result;
 }
