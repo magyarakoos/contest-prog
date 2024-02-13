@@ -40,11 +40,12 @@ int main() {
 
             int left = 1, right = 1;
 
-            while (i < N && v[i] == v[i - 1]) {
+            int i = 1, j = N - 2;
+            while (i < N && v[i] == control) {
                 left++;
                 i++;
             }
-            while (j >= 0 && v[j] == v[j + 1]) {
+            while (j >= 0 && v[j] == control) {
                 right++;
                 j--;
             }
