@@ -19,8 +19,10 @@ int main() {
         vector<int> v(N);
         cinv(v);
 
+        if (v[0] != v[N - 1]) {
+            int left = 0, right = 0;
 
-
-        int left = 0, right = N - 1;
+            while ()
+        }
     }
 }
