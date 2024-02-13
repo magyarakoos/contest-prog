@@ -20,11 +20,19 @@ int main() {
         cinv(v);
 
         if (v[0] != v[N - 1]) {
-            int left = 0, right = 0;
+            int left = 1, right = 1;
 
             int i = 1, j = N - 2;
-            while (i < N && v[i] == v[i - 1]) i++;
-            while (j >= 0)
+            while (i < N && v[i] == v[i - 1]) {
+                left++;
+                i++;
+            }
+            while (j >= 0 && v[j] == v[j + 1]) {
+                right++;
+                j--;
+            }
+
+            
         }
     }
 }
