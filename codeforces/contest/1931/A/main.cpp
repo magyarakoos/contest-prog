@@ -15,27 +15,6 @@ int main() {
     cin >> T;
     while (T--) {
         int N;
-        cin >> N;
-        // 78 -> 26 26 26 -> 26 52
 
-        int first = N - 52;
-        if (first <= 0) {
-            cout << 'a';
-            N--;
-        } else {
-            cout << (char)(first + 'a' - 1);
-            N -= first;
-        }
-
-        int second = N - 26;
-        if (second <= 0) {
-            cout << 'a';
-            N--;
-        } else {
-            cout << (char)(second + 'a' - 1);
-            N -= second;
-        }
-
-        cout << (char)(N + 'a' - 1) << '\n';
     }
 }
