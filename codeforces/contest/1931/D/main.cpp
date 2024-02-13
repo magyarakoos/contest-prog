@@ -36,13 +36,13 @@ int main() {
             // a = mody
 
             if (mx.count(X - modx) && my.count(mody)) {
-                result++;
-
-                vector<int> v(v.);
+                vector<int> v(min(size(mx[X - modx]), size(my[mody])));
 
                 auto it = set_intersection(all(mx[X - modx]), all(my[mody]), v.begin());
 
-                for (auto st = v.begin())
+                for (auto st = v.begin(); st != it; st++) {
+                    result++;
+                }
             }
 
             mx[modx].insert(i);
