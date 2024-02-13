@@ -64,6 +64,8 @@ int main() {
             } else {
                 it2++;
             }
+
+            cout << *it1[0] << ' ' << *it2[0] << '\n';
         }
 
         cout << result << '\n';
