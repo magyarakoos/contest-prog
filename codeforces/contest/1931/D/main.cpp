@@ -22,8 +22,6 @@ int main() {
 
         unordered_map<int, vector<int>> mx, my;
 
-        ll result = 0;
-
         vector<array<int, 2>> pairs1, pairs2;
 
         for (int i = 0; i < N; i++) {
@@ -54,7 +52,7 @@ int main() {
         auto it1 = pairs1.begin();
         auto it2 = pairs2.begin();
 
-        int result = 0;
+        ll result = 0;
 
         while (it1 != pairs1.end() && it2 != pairs2.end()) {
             if (*it1 == *it2) {
