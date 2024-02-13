@@ -20,7 +20,7 @@ int main() {
         vector<int> v(N);
         cinv(v);
 
-        unordered_map<int, set<int>> mx, my;
+        unordered_map<int, vector<int>> mx, my;
 
         ll result = 0;
 
@@ -34,13 +34,7 @@ int main() {
             // a = mody
 
             if (mx.count(X - modx) && my.count(mody)) {
-                vector<int> v(min(size(mx[X - modx]), size(my[mody])));
-
-                auto it = set_intersection(all(mx[X - modx]), all(my[mody]), v.begin());
-
-                for (auto st = v.begin(); st != it; st++) {
-                    result++;
-                }
+                
             }
 
             mx[modx].insert(i);
