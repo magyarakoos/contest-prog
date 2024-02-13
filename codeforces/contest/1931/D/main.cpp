@@ -20,7 +20,7 @@ int main() {
         vector<int> v(N);
         cinv(v);
 
-        unordered_map<int, int> mx, my;
+        unordered_map<int, unordered_set<int>> mx, my;
 
         int result = 0;
 
@@ -39,8 +39,8 @@ int main() {
                 result++;
             }
 
-            mx[modx] = i;
-            my[mody] = i;
+            mx[modx].push_back(i);
+            my[mody].push_back(i);
         }
     }
 }
