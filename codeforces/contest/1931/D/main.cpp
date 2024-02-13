@@ -24,6 +24,8 @@ int main() {
 
         ll result = 0;
 
+        vector<array<int, 2>> pairs1, pairs2;
+
         for (int i = 0; i < N; i++) {
             int modx = v[i] % X,
                 mody = v[i] % Y;
@@ -37,8 +39,8 @@ int main() {
                 
             }
 
-            mx[modx].insert(i);
-            my[mody].insert(i);
+            mx[modx].push_back(i);
+            my[mody].push_back(i);
         }
 
         cout << result << '\n';
