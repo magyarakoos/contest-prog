@@ -36,7 +36,18 @@ int main() {
 
             best = max({best, left, right});
         } else {
-            
+            int control = v[0];
+
+            int left = 1, right = 1;
+
+            while (i < N && v[i] == v[i - 1]) {
+                left++;
+                i++;
+            }
+            while (j >= 0 && v[j] == v[j + 1]) {
+                right++;
+                j--;
+            }
         }
     }
 }
