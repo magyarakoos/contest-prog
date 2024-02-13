@@ -37,8 +37,6 @@ int main() {
             }
 
             best = max({best, left, right});
-
-            cerr << left << ' ' << right << ' ';
         } else {
             int control = v[0];
 
@@ -49,17 +47,9 @@ int main() {
                 result++;
                 i++;
             }
-            while (j >= 0 && i < j)
-            while (i < j) {
-                if (v[i] == control) {
-                    i++;
-                    result++;
-                }
-                if (v[j] == control) {
-                    j--;
-                    result++;
-                }
-                
+            while (j >= 0 && i < j && v[j] == control) {
+                result++;
+                j--;
             }
 
             best = max(best, result);
