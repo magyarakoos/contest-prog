@@ -41,9 +41,13 @@ int main() {
             int result = 2;
 
             int i = 1, j = N - 2;
-            while (i + 1 < j) {
+            while (i < j) {
                 if (v[i] == control) {
                     i++;
+                    result++;
+                } else if (v[j] == control) {
+                    j--;
+                    result++;
                 }
             }
 
