@@ -49,6 +49,10 @@ int main() {
                 right++;
                 j--;
             }
+
+            best = max(best, left + right);
         }
+
+        cout << N - best << '\n';
     }
 }
