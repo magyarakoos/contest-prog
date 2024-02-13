@@ -36,11 +36,11 @@ int main() {
             // a = mody
 
             if (mx.count(X - modx) && my.count(mody)) {
-
+                result++;
             }
 
-            mx[modx] = i + 1;
-            my[mody] = i + 1;
+            mx[modx] = i;
+            my[mody] = i;
         }
     }
 }
