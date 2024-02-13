@@ -16,26 +16,43 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        vector<ll> a(N);
-        ll avg = 0;
-        for (int i = 0; i < N; i++) {
-            cin >> a[i];
-            avg += a[i];
-        }
-        avg /= N;
-        ll carry = 0;
-        for (int i = 0; i < N; i++) {
-            a[i] += carry;
-            if (a[i] < avg) {
-                cout << "NO\n";
-                goto next;
+        vector<int> v(N);
+        cinv(v);
+
+        int best = 1;
+
+        if (v[0] != v[N - 1]) {
+            int left = 1, right = 1;
+
+            int i = 1, j = N - 2;
+            while (i < N && v[i] == v[i - 1]) {
+                left++;
+                i++;
+            }
+            while (j >= 0 && v[j] == v[j + 1]) {
+                right++;
+                j--;
             }
 
-            carry = a[i] - avg;
+            best = max({best, left, right});
+        } else {
+            int control = v[0];
+
+            int left = 1, right = 1;
+
+            int i = 1, j = N - 2;
+            while (i < N && v[i] == control) {
+                left++;
+                i++;
+            }
+            while (j >= 0 && v[j] == control) {
+                right++;
+                j--;
+            }
+
+            best = max(best, left + right);
         }
 
-        cout << "YES\n";
-
-        next:continue;
+        cout << N - best << '\n';
     }
 }
