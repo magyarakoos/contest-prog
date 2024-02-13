@@ -36,7 +36,9 @@ int main() {
             // a = mody
 
             if (mx.count(X - modx) && my.count(mody)) {
-                
+                for (int ind : mx[X - modx]) {
+                    pairs1.push_back({i})
+                }
             }
 
             mx[modx].push_back(i);
