@@ -23,7 +23,8 @@ int main() {
             int left = 0, right = 0;
 
             int i = 1, j = N - 2;
-            while (v[i] == v[i - 1] && i < N) i++;
+            while (i < N && v[i] == v[i - 1]) i++;
+            while (j >= 0)
         }
     }
 }
