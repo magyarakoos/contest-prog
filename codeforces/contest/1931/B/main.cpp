@@ -17,6 +17,13 @@ int main() {
         int N;
         cin >> N;
         vector<ll> a(N);
-        cinv(a);
+        int avg = 0;
+        for (int i = 0; i < N; i++) {
+            cin >> a[i];
+            avg += a[i];
+        }
+        avg /= N;
+
+        
     }
 }
