@@ -22,7 +22,7 @@ int main() {
             cout << 'a';
             N--;
         } else {
-            cout << (char)(first + 'a' + 1);
+            cout << (char)(first + 'a');
             N -= first;
         }
 
@@ -31,10 +31,10 @@ int main() {
             cout << 'a';
             N--;
         } else {
-            cout << (char)(second + 'a' + 1);
+            cout << (char)(second + 'a');
             N -= second;
         }
 
-        cout << (char)(N + 'a' + 1) << '\n';
+        cout << (char)(N + 'a') << '\n';
     }
 }
