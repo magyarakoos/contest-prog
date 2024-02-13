@@ -20,8 +20,15 @@ int main() {
         int first = N - 52;
         if (first < 0) {
             cout << 'a';
+            N--;
         } else {
             cout << (char)(first + 'a');
+            N -= first;
+        }
+
+        int second = N - 26;
+        if (second < 0) {
+            cout << 
         }
     }
 }
