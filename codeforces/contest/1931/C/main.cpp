@@ -37,6 +37,8 @@ int main() {
             }
 
             best = max({best, left, right});
+
+            cerr << left << ' ' << right << ' ';
         } else {
             int control = v[0];
 
@@ -58,6 +60,8 @@ int main() {
             }
 
             best = max(best, result);
+
+            cerr << left 
         }
 
         cout << N - best << '\n';
