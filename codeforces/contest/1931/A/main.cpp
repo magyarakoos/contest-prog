@@ -15,6 +15,12 @@ int main() {
     cin >> T;
     while (T--) {
         int N;
+        cin >> N;
+        vector<int> v(N);
+        cinv(v);
 
+
+
+        int left = 0, right = N - 1;
     }
 }
