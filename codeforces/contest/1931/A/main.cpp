@@ -19,6 +19,8 @@ int main() {
         vector<int> v(N);
         cinv(v);
 
+        int best = 1;
+
         if (v[0] != v[N - 1]) {
             int left = 1, right = 1;
 
@@ -32,7 +34,9 @@ int main() {
                 j--;
             }
 
-            
+            cout << N - max(left, right) << '\n';
+        } else {
+
         }
     }
 }
