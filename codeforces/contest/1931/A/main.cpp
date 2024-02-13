@@ -34,9 +34,9 @@ int main() {
                 j--;
             }
 
-            cout << N - max(left, right) << '\n';
+            best = max({best, left, right});
         } else {
-
+            
         }
     }
 }
