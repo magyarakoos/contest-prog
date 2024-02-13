@@ -23,7 +23,10 @@ int main() {
         unordered_map<int, int> mp, mm;
 
         for (int i = 0; i < N; i++) {
-            int modx = v[i] % x;
+            int modx = v[i] % X,
+                mody = v[i] % Y;
+            
+            
         }
     }
 }
