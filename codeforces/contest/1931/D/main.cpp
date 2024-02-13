@@ -22,6 +22,8 @@ int main() {
 
         unordered_map<int, int> mx, my;
 
+        int result = 0;
+
         for (int i = 0; i < N; i++) {
             int modx = v[i] % X,
                 mody = v[i] % Y;
@@ -33,7 +35,7 @@ int main() {
             // a - mody = 0
             // a = mody
 
-            if (mx.count(X - modx) && my.count(targety)) {
+            if (mx.count(X - modx) && my.count(mody)) {
 
             }
 
