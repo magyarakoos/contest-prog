@@ -17,7 +17,7 @@ int main() {
         int N;
         cin >> N;
         vector<ll> a(N);
-        int avg = 0;
+        ll avg = 0;
         for (int i = 0; i < N; i++) {
             cin >> a[i];
             avg += a[i];
@@ -25,7 +25,11 @@ int main() {
         avg /= N;
         ll carry = 0;
         for (int i = 0; i < N; i++) {
-
+            if (a[i] < avg) {
+                cout << "NO"
+            }
         }
+
+        next:continue;
     }
 }
