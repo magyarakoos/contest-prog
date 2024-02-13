@@ -45,7 +45,11 @@ int main() {
             int result = 0;
 
             int i = 0, j = N - 1;
-            
+            while (i < N && v[i] == control) {
+                result++;
+                i++;
+            }
+            while (j >= 0 && i < j)
             while (i < j) {
                 if (v[i] == control) {
                     i++;
