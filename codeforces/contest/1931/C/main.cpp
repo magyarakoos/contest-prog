@@ -40,9 +40,9 @@ int main() {
         } else {
             int control = v[0];
 
-            int result = 2;
+            int result = 0;
 
-            int i = 1, j = N - 2;
+            int i = 0, j = N - 1;
             while (i < j) {
                 if (v[i] == control) {
                     i++;
@@ -60,6 +60,6 @@ int main() {
             best = max(best, result);
         }
 
-        cout << max(N - best, 0) << '\n';
+        cout << N - best << '\n';
     }
 }
