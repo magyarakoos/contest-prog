@@ -26,9 +26,12 @@ int main() {
             int modx = v[i] % X,
                 mody = v[i] % Y;
 
-            int targetx = X - modx;
+            int targetx = X - modx,
+                targety = Y - mody;
 
-            if ()
+            if (mx.count(targetx)) {
+                
+            }
         }
     }
 }
