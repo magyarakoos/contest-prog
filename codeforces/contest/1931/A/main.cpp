@@ -16,6 +16,7 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        
+        char first;
+        // 78 -> 26 26 26
     }
 }
