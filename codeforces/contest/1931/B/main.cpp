@@ -23,7 +23,9 @@ int main() {
             avg += a[i];
         }
         avg /= N;
+        ll carry = 0;
+        for (int i = 0; i < N; i++) {
 
-        
+        }
     }
 }
