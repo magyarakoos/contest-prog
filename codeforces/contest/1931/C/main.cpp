@@ -41,8 +41,10 @@ int main() {
             int result = 2;
 
             int i = 1, j = N - 2;
-            while (i < j) {
-                if (v[i])
+            while (i + 1 < j) {
+                if (v[i] == control) {
+                    i++;
+                }
             }
 
             best = max(best, result);
