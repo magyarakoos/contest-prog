@@ -17,9 +17,9 @@ int main() {
         int N;
         cin >> N;
         // 78 -> 26 26 26 -> 26 52
-        
+
         int first = N - 52;
-        if (first < 0) {
+        if (first <= 0) {
             cout << 'a';
             N--;
         } else {
@@ -28,7 +28,7 @@ int main() {
         }
 
         int second = N - 26;
-        if (second < 0) {
+        if (second <= 0) {
             cout << 'a';
             N--;
         } else {
