@@ -17,6 +17,11 @@ int main() {
         int N;
         cin >> N;
         // 78 -> 26 26 26 -> 26 52
-        int first = N - 52
+        int first = N - 52;
+        if (first < 0) {
+            cout << 'a';
+        } else {
+            cout << (char)(first + 'a');
+        }
     }
 }
