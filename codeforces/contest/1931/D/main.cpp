@@ -20,6 +20,10 @@ int main() {
         vector<int> v(N);
         cinv(v);
 
-        unordered_map<int, int> m
+        unordered_map<int, int> mp, mm;
+
+        for (int i = 0; i < N; i++) {
+            int modx = v[i] % x;
+        }
     }
 }
