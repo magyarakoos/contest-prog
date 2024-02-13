@@ -46,5 +46,7 @@ int main() {
             mx[modx].insert(i);
             my[mody].insert(i);
         }
+
+        cout << result << '\n';
     }
 }
