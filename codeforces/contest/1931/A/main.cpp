@@ -36,5 +36,7 @@ int main() {
         }
 
         cout << (char)(N + 'a') << '\n';
+
+        cout << first << ' ' << second << ' ' << N << '\n';
     }
 }
