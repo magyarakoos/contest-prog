@@ -45,23 +45,20 @@ int main() {
             int result = 0;
 
             int i = 0, j = N - 1;
+            
             while (i < j) {
                 if (v[i] == control) {
                     i++;
                     result++;
-                } 
-                else if (v[j] == control) {
+                }
+                if (v[j] == control) {
                     j--;
                     result++;
                 }
-                else {
-                    break;
-                }
+                
             }
 
             best = max(best, result);
-
-            cerr << result << '\n';
         }
 
         cout << N - best << '\n';
