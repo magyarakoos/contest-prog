@@ -58,6 +58,6 @@ int main() {
             best = max(best, result);
         }
 
-        cout << N - best << '\n';
+        cout << max(N - best, 0) << '\n';
     }
 }
