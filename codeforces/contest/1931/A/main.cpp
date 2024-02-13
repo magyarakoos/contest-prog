@@ -28,7 +28,13 @@ int main() {
 
         int second = N - 26;
         if (second < 0) {
-            cout << 
+            cout << 'a';
+            N--;
+        } else {
+            cout << (char)(second + 'a');
+            N -= second;
         }
+
+        cout << (char)(N + 'a') << '\n';
     }
 }
