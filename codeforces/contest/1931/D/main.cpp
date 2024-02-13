@@ -20,13 +20,15 @@ int main() {
         vector<int> v(N);
         cinv(v);
 
-        unordered_map<int, int> mp, mm;
+        unordered_map<int, int> mx, my;
 
         for (int i = 0; i < N; i++) {
             int modx = v[i] % X,
                 mody = v[i] % Y;
-            
-            
+
+            int targetx = X - modx;
+
+            if ()
         }
     }
 }
