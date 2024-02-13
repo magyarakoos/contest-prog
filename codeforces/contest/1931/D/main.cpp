@@ -48,32 +48,26 @@ int main() {
             my[mody].push_back(i);
         }
 
-                // Sort the vectors to enable efficient intersection check
         sort(all(pairs1));
-        sort(pairs2.begin(), pairs2.end());
+        sort(all(pairs2));
 
-        // Create iterators for pairs1 and pairs2
         auto it1 = pairs1.begin();
         auto it2 = pairs2.begin();
 
-        // Initialize a counter for intersecting elements
-        int intersectCount = 0;
+        int result = 0;
 
-        // Iterate through both vectors
         while (it1 != pairs1.end() && it2 != pairs2.end()) {
             if (*it1 == *it2) {
-                // Increment the counter if elements are equal (intersection found)
-                intersectCount++;
+                result++;
                 it1++;
                 it2++;
             } else if (*it1 < *it2) {
-                // Move to the next element in pairs1
                 it1++;
             } else {
-                // Move to the next element in pairs2
                 it2++;
             }
         }
 
+        cout << result << '\n';
     }
 }
