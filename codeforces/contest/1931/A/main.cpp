@@ -16,43 +16,26 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        vector<int> v(N);
-        cinv(v);
+        // 78 -> 26 26 26 -> 26 52
 
-        int best = 1;
-
-        if (v[0] != v[N - 1]) {
-            int left = 1, right = 1;
-
-            int i = 1, j = N - 2;
-            while (i < N && v[i] == v[i - 1]) {
-                left++;
-                i++;
-            }
-            while (j >= 0 && v[j] == v[j + 1]) {
-                right++;
-                j--;
-            }
-
-            best = max({best, left, right});
+        int first = N - 52;
+        if (first <= 0) {
+            cout << 'a';
+            N--;
         } else {
-            int control = v[0];
-
-            int left = 1, right = 1;
-
-            int i = 1, j = N - 2;
-            while (i < N && v[i] == control) {
-                left++;
-                i++;
-            }
-            while (j >= 0 && v[j] == control) {
-                right++;
-                j--;
-            }
-
-            best = max(best, left + right);
+            cout << (char)(first + 'a' - 1);
+            N -= first;
         }
 
-        cout << N - best << '\n';
+        int second = N - 26;
+        if (second <= 0) {
+            cout << 'a';
+            N--;
+        } else {
+            cout << (char)(second + 'a' - 1);
+            N -= second;
+        }
+
+        cout << (char)(N + 'a' - 1) << '\n';
     }
 }
