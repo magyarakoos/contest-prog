@@ -29,8 +29,12 @@ int main() {
             int targetx = X - modx,
                 targety = Y - mody;
 
+            // a - b = 0
+            // b = mody
+            
+
             if (mx.count(targetx) && my.count(targety)) {
-                
+
             }
 
             mx[modx] = i + 1;
