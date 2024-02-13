@@ -61,7 +61,7 @@ int main() {
 
             best = max(best, result);
 
-            cerr << left 
+            cerr << result << '\n';
         }
 
         cout << N - best << '\n';
