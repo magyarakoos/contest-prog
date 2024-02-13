@@ -37,7 +37,10 @@ int main() {
 
             if (mx.count(X - modx) && my.count(mody)) {
                 for (int ind : mx[X - modx]) {
-                    pairs1.push_back({i})
+                    pairs1.push_back({ind, i});
+                }
+                for (int ind : my[mody]) {
+                    pairs1.push_back({ind, i});
                 }
             }
 
@@ -45,6 +48,6 @@ int main() {
             my[mody].push_back(i);
         }
 
-        cout << result << '\n';
+        
     }
 }
