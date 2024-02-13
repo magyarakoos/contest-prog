@@ -46,15 +46,6 @@ int main() {
             my[mody].push_back(i);
         }
 
-        for (auto p : pairs1) {
-            cerr << p[0] << ' ' << p[1] << '\n';
-        }
-        cerr << '\n';
-        for (auto p : pairs2) {
-            cerr << p[0] << ' ' << p[1] << '\n';
-        }
-        cerr << "\n\n";
-
         sort(all(pairs1));
         sort(all(pairs2));
 
