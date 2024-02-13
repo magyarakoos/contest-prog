@@ -17,6 +17,9 @@ int main() {
         int N, X, Y;
         cin >> N >> X >> Y;
 
-        
+        vector<int> v(N);
+        cinv(v);
+
+        unordered_map<int, int> m
     }
 }
