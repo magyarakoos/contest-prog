@@ -38,19 +38,14 @@ int main() {
         } else {
             int control = v[0];
 
-            int left = 1, right = 1;
+            int result = 2;
 
             int i = 1, j = N - 2;
-            while (i < N && v[i] == control) {
-                left++;
-                i++;
-            }
-            while (j >= 0 && v[j] == control) {
-                right++;
-                j--;
+            while (i < j) {
+                if (v[i])
             }
 
-            best = max(best, left + right);
+            best = max(best, result);
         }
 
         cout << N - best << '\n';
