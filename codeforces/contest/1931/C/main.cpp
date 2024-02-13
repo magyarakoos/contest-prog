@@ -22,14 +22,16 @@ int main() {
         int best = 1;
 
         if (v[0] != v[N - 1]) {
-            int left = 1, right = 1;
+            int left = 0, right = 0;
 
-            int i = 1, j = N - 2;
-            while (i < N && v[i] == v[i - 1]) {
+            int c1 = v[0], c2 = v[N - 1];
+
+            int i = 0, j = N - 1;
+            while (i < N && v[i] == c1) {
                 left++;
                 i++;
             }
-            while (j >= 0 && v[j] == v[j + 1]) {
+            while (j >= 0 && v[j] == c2) {
                 right++;
                 j--;
             }
