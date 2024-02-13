@@ -46,6 +46,8 @@ int main() {
             my[mody].push_back(i);
         }
 
+        for (auto p : )
+
         sort(all(pairs1));
         sort(all(pairs2));
 
@@ -64,8 +66,6 @@ int main() {
             } else {
                 it2++;
             }
-
-            cout << *it1[0] << ' ' << *it2[0] << '\n';
         }
 
         cout << result << '\n';
