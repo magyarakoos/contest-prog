@@ -45,9 +45,13 @@ int main() {
                 if (v[i] == control) {
                     i++;
                     result++;
-                } else if (v[j] == control) {
+                } 
+                else if (v[j] == control) {
                     j--;
                     result++;
+                }
+                else {
+                    break;
                 }
             }
 
