@@ -22,13 +22,11 @@ int main() {
 
         unordered_map<int, set<int>> mx, my;
 
-        int result = 0;
+        ll result = 0;
 
         for (int i = 0; i < N; i++) {
             int modx = v[i] % X,
                 mody = v[i] % Y;
-
-            int targetx = X - modx;
 
             // a - b = 0
             // b = mody
