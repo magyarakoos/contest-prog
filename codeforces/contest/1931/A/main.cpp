@@ -22,7 +22,8 @@ int main() {
         if (v[0] != v[N - 1]) {
             int left = 0, right = 0;
 
-            while ()
+            int i = 1, j = N - 2;
+            while (v[i] == v[i - 1] && i < N) i++;
         }
     }
 }
