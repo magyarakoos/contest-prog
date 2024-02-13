@@ -26,8 +26,11 @@ int main() {
         ll carry = 0;
         for (int i = 0; i < N; i++) {
             if (a[i] < avg) {
-                cout << "NO"
+                cout << "NO\n";
+                goto next;
             }
+
+            carry += a[i] - avg;
         }
 
         next:continue;
