@@ -34,10 +34,10 @@ int main() {
             }
 
             for (int i = u; i < u + wait; i++) {
-                wa
+                waitc[i]++;
             }
         }
     }
 
-    cout << maxi + 1 << '\n';
+    cout << maxi + 1 << '\n' << max_element(all(waitc))
 }
