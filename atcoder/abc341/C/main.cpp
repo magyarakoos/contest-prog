@@ -7,8 +7,14 @@
 using namespace std;
 using ll = long long;
 
+int H, W, N;
+string T;
+vector<string> grid;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
+
+    cin >> H >> W >> N >> T;
 
     
 }
