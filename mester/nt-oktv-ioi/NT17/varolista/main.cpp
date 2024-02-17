@@ -38,4 +38,10 @@ int main() {
     }
 
     cout << maxi + 1 << '\n';
+
+    sort(all(rangeS));
+
+    for (auto [_, x] : rangeS) {
+        
+    }
 }
