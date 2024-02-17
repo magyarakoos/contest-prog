@@ -67,7 +67,7 @@ int main() {
 
             if (q == 0) {
                 cout << x << ' ';
-                q.add()
+                bit.add(i, 1);
             } else {
                 pq.push({x - q, i});
             }
