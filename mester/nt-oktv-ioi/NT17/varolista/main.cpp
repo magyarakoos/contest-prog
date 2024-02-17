@@ -16,7 +16,7 @@ int main() {
     int last = 0;
     int maxi = 0, maxw = 0;
 
-    vector<array<int, 2>> rangeS;
+    unordered_map<int, int> m;
 
     for (int i = 0; i < N; i++) {
         int u, t;
@@ -41,7 +41,9 @@ int main() {
 
     sort(all(rangeS));
 
+    int curr = 0;
+
     for (auto [_, x] : rangeS) {
-        
+        curr += 
     }
 }
