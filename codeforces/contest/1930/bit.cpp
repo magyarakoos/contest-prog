@@ -27,14 +27,14 @@ struct BIT {
 
     void updateRange(int l, int r, int val) {
         updateBIT(BITree1, l, val);
-        updateBIT(BITTree1, r + 1, -val);
+        updateBIT(BITree1, r + 1, -val);
 
-        updateBIT(BITTree2, l, val * (l - 1));
-        updateBIT(BITTree2, r + 1, -val * r);
+        updateBIT(BITree2, l, val * (l - 1));
+        updateBIT(BITree2, r + 1, -val * r);
     }
 
     int sum(int x) {
-        return (getSum(BITTree1, x) * x) - getSum(BITTree2, x);
+        return (getSum(BITree1, x) * x) - getSum(BITree2, x);
     }
 
     int rangeSum(int l, int r) {
