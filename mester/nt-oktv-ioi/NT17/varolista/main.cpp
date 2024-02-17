@@ -33,11 +33,11 @@ int main() {
                 maxi = i;
             }
 
-            for (int i = u; i < u + wait; i++) {
+            for (int i = u + 1; i < u + wait; i++) {
                 waitc[i]++;
             }
         }
     }
 
-    cout << maxi + 1 << '\n' << max_element(all(waitc))
+    cout << maxi + 1 << '\n' << *max_element(all(waitc));
 }
