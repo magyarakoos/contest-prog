@@ -58,7 +58,9 @@ int main() {
 
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
-            if (v[j][i] == )
+            if (v[j][i] == legtobb[i]) {
+                earns[]
+            }
         }
     }
 
