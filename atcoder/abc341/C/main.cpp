@@ -31,7 +31,7 @@ bool solve(int i, int j, int p = 0) {
         return grid[i - 1][j] && solve(i - 1, j, p + 1);
     }
     else if (T[p] == 'D') {
-        return grid[i + 1][j] && solve(i, j - 1, p + 1);
+        return grid[i + 1][j] && solve(i + 1, j, p + 1);
     }
 
     return 0;
@@ -61,4 +61,6 @@ int main() {
             }
         }
     }
+
+    cout << result;
 }
