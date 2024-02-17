@@ -59,7 +59,7 @@ int main() {
 
     while (curr) {
 
-        s += (step[curr][jobb] ? (jobb ? "EJ" : "EB") : "E");
+        s += (step[curr][jobb] ? (jobb ? "JE" : "BE") : "E");
 
         if (step[curr][jobb]) {
             jobb ^= 1;
