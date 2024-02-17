@@ -27,10 +27,10 @@ int main() {
         }
     }
 
-    double avg = accumulate(all(bevetel), 0) / N;
+    ll avg = accumulate(all(bevetel), 0) / N;
 
     for (int i = 0; i < N; i++) {
-        if ((double)bevetel[i] > avg) {
+        if (bevetel[i] > avg) {
             cout << i + 1 << ' ';
         }
     }
