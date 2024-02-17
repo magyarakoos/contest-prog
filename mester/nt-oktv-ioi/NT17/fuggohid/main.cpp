@@ -69,5 +69,5 @@ int main() {
     }
 
 
-    cout << "EE#";
+    cout << "E#";
 }
