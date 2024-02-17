@@ -110,8 +110,6 @@ const vector<string> vb {
     "1000010100"
 };
 
-
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
