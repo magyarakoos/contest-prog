@@ -21,6 +21,9 @@ int main() {
 
         if (last <= u) {
             last = u + t;
+            continue;
         }
+
+        
     }
 }
