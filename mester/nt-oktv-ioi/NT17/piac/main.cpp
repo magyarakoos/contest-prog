@@ -26,7 +26,7 @@ int main() {
             bevetel[i] += EAi * MEi;
             mennyiseg[S - 1][0] += MEi;
 
-            v[i][S - 1] = EAi;
+            v[i][S - 1] = max(v[i][S - 1], EAi);
         }
     }
 
@@ -48,7 +48,7 @@ int main() {
 
     vector<int> legtobb(N);
 
-    
+
 
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
