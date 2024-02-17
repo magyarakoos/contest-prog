@@ -122,7 +122,12 @@ int main() {
         string s = vb[N - 1];
         reverse(all(s));
 
-        
+        int result = 0;
+
+        for (int i = 0; i < size(s); i++) {
+            result += (s[i] == '1') * i;
+        }
+
     } else {
         throw exception();
     }
