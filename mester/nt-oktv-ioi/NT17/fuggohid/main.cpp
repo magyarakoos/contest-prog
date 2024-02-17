@@ -13,9 +13,14 @@ int main() {
     int N;
     cin >> N;
 
-    vector<int> Bal(N), Jobb(N);
-    for (int& e : Bal) cin >> e;
-    for (int& e : Jobb) cin >> e;
+    vector<int> Bal(N + 1), Jobb(N + 1);
+    
+    for (int i = 1; i <= N; i++) {
+        cin >> Bal[i];
+    }
+    for (int i = 1; i <= N; i++) {
+        cin >> Jobb[i];
+    }
 
-    vector<int> dp1(N), dp2
+    vector<int> dp1(N + 1), dp2
 }
