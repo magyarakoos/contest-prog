@@ -25,7 +25,10 @@ int main() {
             bevetel[i] += EAi * MEi;
             mennyiseg[S - 1][0] += MEi;
 
-            if ()
+            if (egysegar[S - 1][0] < EAi) {
+                egysegar[S - 1][0] = EAi;
+                egysegar[S - 1][1] = i;
+            }
         }
     }
 
