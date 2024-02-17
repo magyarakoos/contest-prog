@@ -59,10 +59,12 @@ int main() {
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             if (v[j][i] == legtobb[i]) {
-                earns[]
+                earns[j]++;
             }
         }
     }
+
+    int i,
 
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
