@@ -48,6 +48,8 @@ int main() {
 
     sort(rall(mennyiseg));
 
+    vector<int> 
+
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
     cout << '\n';
