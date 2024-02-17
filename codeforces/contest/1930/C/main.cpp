@@ -47,9 +47,10 @@ int main() {
             v[i] += i + 1;
         }
 
-        priority_queue<int> pq(v.be)
+        priority_queue<int> pq(all(v));
 
         BIT bit(N);
+
 
     }
 }
