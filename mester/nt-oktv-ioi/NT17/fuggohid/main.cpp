@@ -55,7 +55,12 @@ int main() {
 
     cout << (jobb ? 'J' : 'B');
 
-    
+    int curr = N;
+
+    while (curr) {
+
+        
+    }
 
 
     cout << 'E#';
