@@ -15,15 +15,16 @@ int main() {
     cin >> A >> B;
 
     vector<intv> AX(A);
-    for (auto [k, v] : AX) cin >> k >> v;
+    for (auto [e, v] : AX) cin >> e >> v;
 
     vector<intv> BX(A);
-    for (auto [k, v] : BX) cin >> k >> v;
+    for (auto [e, v] : BX) cin >> e >> v;
 
     vector<intv> result;
     int ap = 0, bp = 0;
 
-    cout << size(result) << '\n';
+    
 
-    for (auto [k, v] : )
+    cout << size(result) << '\n';
+    for (auto [e, v] : result) cout << e << ' ' << v << '\n';
 }
