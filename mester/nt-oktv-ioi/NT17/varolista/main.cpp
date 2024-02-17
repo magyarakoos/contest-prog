@@ -27,6 +27,7 @@ int main() {
         } else {
             last += t;
             int wait = last - u;
+            cerr << i << '' 
             if (maxw < wait) {
                 maxw = wait;
                 maxi = i;
