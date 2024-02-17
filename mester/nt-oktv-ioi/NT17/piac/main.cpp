@@ -14,7 +14,8 @@ int main() {
     cin >> N >> M >> K;
 
     vector<ll> bevetel(N);
-    vector<array<int, 2>> mennyiseg(M), egysegar(M);
+    vector<array<int, 2>> mennyiseg(M);
+    vector<vector<int>> 
 
     for (int i = 0; i < N; i++) {
         int F;
@@ -51,7 +52,7 @@ int main() {
     vector<int> legtobb(N);
 
     for (auto [db, id] : egysegar) {
-        
+
     }
 
     cout << size(p1) << ' ';
