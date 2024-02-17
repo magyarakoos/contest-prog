@@ -15,6 +15,13 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        vector<int> v()
+        vector<int> v(2 * N);
+        for (int& e : v) cin >> e;
+        
+        sort(all(v));
+
+        for (int i = 0; i < 2 * N; i += 2) {
+            
+        }
     }
 }
