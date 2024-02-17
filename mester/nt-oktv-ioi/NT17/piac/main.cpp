@@ -13,7 +13,7 @@ int main() {
     int N, M, K;
     cin >> N >> M >> K;
 
-    vector<vector<int>> EA(N);
+    vector<vector<int>> bevetel(N);
 
     for (int i = 0; i < N; i++) {
         int F;
@@ -21,6 +21,7 @@ int main() {
         while (F--) {
             int S, EAi, MEi;
             cin >> S >> EAi >> MEi;
+            
         }
     }
 }
