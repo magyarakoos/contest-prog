@@ -47,6 +47,8 @@ int main() {
 
         curr += v;
 
-        result = max(result, )
+        result = max(result, curr);
     }
+
+    cout << result;
 }
