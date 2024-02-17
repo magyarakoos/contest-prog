@@ -15,17 +15,14 @@ int main() {
     vector<int> A(N);
     for (int& e : A) cin >> e;
     
-    vector<int> S(N - 1), T(N - 1);
+    vector<ll> S(N - 1), T(N - 1);
 
     for (int i = 0; i < N - 1; i++) {
         cin >> S[i] >> T[i];
     }
 
     for (int i = 0; i < N - 1; i++) {
-        while (A[i] >= S[i]) {
-            A[i] -= S[i];
-            A[i + 1] += T[i];
-        }
+        A[i + 1] += T[i] * (A[i] / S[i]);
     }
 
     cout << A[N - 1];
