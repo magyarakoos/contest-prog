@@ -16,7 +16,7 @@ int main() {
     int last = 0;
     int maxi = 0, maxw = 0;
 
-    vector<int> waitc(100'000, 0);
+    vector<int> waitc(50'000, 0);
     
     for (int i = 0; i < N; i++) {
         int u, t;
