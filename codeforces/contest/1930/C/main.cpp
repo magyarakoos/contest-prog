@@ -42,8 +42,12 @@ int main() {
         int N;
         cin >> N;
         vector<int> v(N);
-        for (int i = 0; i < )
+        for (int i = 0; i < N; i++) {
+            cin >> v[i];
+            v[i] += i + 1;
+        }
 
+        priority_queue<int> pq(v.be)
 
         BIT bit(N);
 
