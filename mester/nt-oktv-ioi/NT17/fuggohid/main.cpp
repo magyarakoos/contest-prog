@@ -49,7 +49,7 @@ int main() {
         }
     }
 
-    bool 
+    bool jobb = dp[N][1] > dp[N][0];
 
-    cout << min(dp[N][0], dp[N][1]);
+    cout << dp[jobb];
 }
