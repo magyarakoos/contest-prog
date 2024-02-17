@@ -59,7 +59,11 @@ int main() {
 
     while (curr) {
 
-        int x = step[curr][jobb] ? (jobb ? "") : 0; 
+        cout << (step[curr][jobb] ? (jobb ? 'B' : 'J') : E);
+
+        if (step[curr][jobb]) {
+            jobb ^= 1;
+        }
     }
 
 
