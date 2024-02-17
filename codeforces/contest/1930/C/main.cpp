@@ -7,13 +7,13 @@
 using namespace std;
 using ll = long long;
 
-class FenwickTree {
+class BIT {
 private:
     vector<int> BITree;
     vector<int> lazy;
 
 public:
-    FenwickTree(int size) {
+    BIT(int size) {
         BITree.resize(size + 1, 0);
         lazy.resize(size + 1, 0);
     }
@@ -24,7 +24,7 @@ public:
     }
 
     void update(int index, int val) {
-        for (; index < BITree.size(); index += index & -index) {
+        for (; index < size(BITree); index += index & -index) {
             BITree[index] += val;
         }
     }
