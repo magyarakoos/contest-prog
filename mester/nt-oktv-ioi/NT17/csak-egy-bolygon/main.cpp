@@ -14,5 +14,7 @@ int main() {
     int A, B;
     cin >> A >> B;
 
-    vector<intv> 
+    vector<intv> AX(A);
+    for (auto [k, v] : v) cin >> e;
+    
 }
