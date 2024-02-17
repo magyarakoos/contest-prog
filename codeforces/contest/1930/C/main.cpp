@@ -64,14 +64,6 @@ int main() {
             int q = bit.query(i);
 
             cerr << x << ' ' << i << ' ' << q << '\n';
-
-            if (1) {
-                //cout << x - q << ' ';
-                bit.add(i, 1);
-                pq.pop();
-            } else {
-                pickable[i] = 1;
-            }
         }
 
         cout << '\n';
