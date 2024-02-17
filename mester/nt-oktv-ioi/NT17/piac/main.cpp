@@ -30,12 +30,12 @@ int main() {
         }
     }
 
-    double avg = accumulate(all(bevetel), 0) / N;
+    double avg = (double)accumulate(all(bevetel), 0) / N;
 
     vector<int> p1;
 
     for (int i = 0; i < N; i++) {
-        if (bevetel[i] > avg) {
+        if ((double)bevetel[i] > avg) {
             p1.push_back(i);
         }
     }
