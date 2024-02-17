@@ -6,6 +6,7 @@
 
 using namespace std;
 using ll = long long;
+using intv = struct { int e, int v; };
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
