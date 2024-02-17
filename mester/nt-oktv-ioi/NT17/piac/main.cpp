@@ -32,6 +32,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         cerr << bevetel[i] << ' ';
         if (bevetel[i] > avg) {
+            //cout << i + 1 << ' ';
         }
     }
     cerr << " | " << avg;
