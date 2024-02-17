@@ -24,7 +24,6 @@ int main() {
             cin >> S >> EAi >> MEi;
             bevetel[i] += EAi * MEi;
             mennyiseg[S - 1][0] += MEi;
-            mennyiseg[S - 1][1] = 
         }
     }
 
@@ -36,6 +35,10 @@ int main() {
         }
     }
     cout << '\n';
+
+    for (int i = 0; i < M; i++) {
+        mannyiseg[i][1] = i;
+    }
 
     sort(rall(mennyiseg));
 }
