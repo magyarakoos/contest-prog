@@ -16,5 +16,5 @@ int main() {
 
     cin >> H >> W >> N >> T;
 
-    
+    for (int i = 0; i < H; i++)
 }
