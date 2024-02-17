@@ -35,10 +35,15 @@ int main() {
 
         if (b < a) {
             step[i][0] = 1;
+            dp[i][0] = b + Bal[i];
+        } else {
+            dp[i][0] = a + Bal[i];
         }
 
+        a = dp[i - 1][1], b = dp[i - 1][0] + Bal[i];
+
         dp[i][0] = min(dp[i - 1][0], dp[i - 1][1] + Jobb[i]) + Bal[i];
-        dp[i][1] = min(dp[i - 1][1], dp[i - 1][0] + Bal[i]) + Jobb[i];
+        dp[i][1] = min(, ) + Jobb[i];
     }
 
     cout << min(dp[N][0], dp[N][1]);
