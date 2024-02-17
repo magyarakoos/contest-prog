@@ -25,5 +25,5 @@ int main() {
 
     cout << size(result) << '\n';
 
-    
+    for (auto [k, v] : )
 }
