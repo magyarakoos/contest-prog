@@ -7,42 +7,29 @@
 using namespace std;
 using ll = long long;
 
-class BIT {
-private:
-    vector<int> BITree;
-    vector<int> lazy;
+struct BIT {
+    vector<int> bit;  // binary indexed tree
+    int n;
 
-public:
-    BIT(int size) {
-        BITree.resize(size + 1, 0);
-        lazy.resize(size + 1, 0);
+    BIT(int n) {
+        this->n = n;
+        bit.assign(n, 0);
     }
 
-    void updateRange(int l, int r, int val) {
-        update(l, val);
-        update(r + 1, -val);
+    int sum(int r) {
+        int ret = 0;
+        for (; r >= 0; r = (r & (r + 1)) - 1)
+            ret += bit[r];
+        return ret;
     }
 
-    void update(int index, int val) {
-        for (; index < size(BITree); index += index & -index) {
-            BITree[index] += val;
-        }
+    int sum(int l, int r) {
+        return sum(r) - sum(l - 1);
     }
 
-    void rangeUpdate(int l, int r, int val) {
-        updateRange(l, r, val);
-    }
-
-    void pointUpdate(int index, int val) {
-        update(index, val);
-    }
-
-    int pointQuery(int index) {
-        int result = 0;
-        for (; index > 0; index -= index & -index) {
-            result += BITree[index];
-        }
-        return result;
+    void add(int idx, int delta) {
+        for (; idx < n; idx = idx | (idx + 1))
+            bit[idx] += delta;
     }
 };
 
@@ -59,6 +46,6 @@ int main() {
         
         BIT bit(N);
 
-        
+
     }
 }
