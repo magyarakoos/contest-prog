@@ -55,7 +55,7 @@ int main() {
 
     cout << (jobb ? "J" : "B");
 
-    int curr = N - 1;
+    int curr = N;
 
     while (curr) {
 
