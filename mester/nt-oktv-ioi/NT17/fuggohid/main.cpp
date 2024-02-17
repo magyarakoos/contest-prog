@@ -53,7 +53,7 @@ int main() {
 
     cout << dp[N][jobb] << '\n';
 
-    
 
-    cout << '#';
+
+    cout << 'E#';
 }
