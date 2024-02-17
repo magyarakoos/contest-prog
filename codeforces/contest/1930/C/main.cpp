@@ -73,7 +73,7 @@ int main() {
                 //cout << x << ' ';
                 bit.add(i, 1);
             } else {
-                pq.push({x - q, i});
+                pq.push({x, i});
                 pickable[i] = 1;
             }
         }
