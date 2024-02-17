@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-constexpr vector<string> vb = { 
+const vector<string> vb { 
     "1",
     "10",
     "100",
@@ -113,5 +113,8 @@ constexpr vector<string> vb = {
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
+    int N;
+    cin >> N;
 
+    if (N)
 }
