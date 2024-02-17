@@ -59,7 +59,7 @@ int main() {
 
     while (curr) {
 
-        bool b = step[curr][jobb] ? 
+        int x = step[curr][jobb] ? () : 0; 
     }
 
 
