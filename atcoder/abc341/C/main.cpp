@@ -19,8 +19,17 @@ bool solve(int i, int j, int p = 0) {
 
     bool valid = 0;
 
-    if (grid[i + 1][j]) {
-        valid = valid || solve(i + 1, j)
+    if (T[p] == 'L') {
+        
+    }
+    else if (T[p] == 'R') {
+        
+    }
+    else if (T[p] == 'U') {
+        
+    }
+    else if (T[p] == 'D') {
+        
     }
 }
 
