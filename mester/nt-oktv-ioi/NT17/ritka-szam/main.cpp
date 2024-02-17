@@ -128,6 +128,8 @@ int main() {
             result += (s[i] == '1') * (1 << i);
         }
 
+        cout << result;
+
     } else {
         throw exception();
     }
