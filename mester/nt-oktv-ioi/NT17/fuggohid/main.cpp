@@ -33,8 +33,8 @@ int main() {
 
         int a = dp[i - 1][0], b = dp[i - 1][1] + Jobb[i];
 
-        if (a < b) {
-            
+        if (b < a) {
+            step[i][0] = 1;
         }
 
         dp[i][0] = min(dp[i - 1][0], dp[i - 1][1] + Jobb[i]) + Bal[i];
