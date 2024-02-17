@@ -23,7 +23,13 @@ int main() {
     vector<intv> result;
     int ap = 0, bp = 0;
 
-    
+    while (1) {
+
+        if (AX[ap].e != BX[bp].e) {
+            
+        }
+
+    }
 
     cout << size(result) << '\n';
     for (auto [e, v] : result) cout << e << ' ' << v << '\n';
