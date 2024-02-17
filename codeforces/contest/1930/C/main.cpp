@@ -47,13 +47,14 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        vector<int> v(N);
+        vector<array<int, 2>> v(N);
         for (int i = 0; i < N; i++) {
-            cin >> v[i];
-            v[i] += i + 1;
+            cin >> v[i][0];
+            v[i][0] += i + 1;
+            v[i][1] = i;
         }
 
-        priority_queue<int> pq(all(v));
+        priority_queue<array<int, 2>> pq(all(v));
 
         BIT bit(N);
 
