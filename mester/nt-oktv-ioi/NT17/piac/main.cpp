@@ -48,7 +48,11 @@ int main() {
 
     sort(rall(mennyiseg));
 
-    vector<int> 
+    vector<int> legtobb(N);
+
+    for (auto [db, id] : egysegar) {
+        
+    }
 
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
