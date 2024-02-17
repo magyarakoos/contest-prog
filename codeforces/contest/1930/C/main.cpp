@@ -67,11 +67,12 @@ int main() {
 
             int q = bit.query(i);
 
-            if (pickable || q == 0) {
+            if (pickable[i] || q == 0) {
                 cout << x << ' ';
                 bit.add(i, 1);
             } else {
                 pq.push({x - q, i});
+                pickable[i] = 1;
             }
         }
 
