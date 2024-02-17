@@ -62,11 +62,15 @@ int main() {
 
             int q = bit.query(i);
 
-            cerr << x << ' ' << i << ' ' << q << '\n';
+            //cerr << x << ' ' << i << ' ' << q << '\n';
 
             if (q == 0) {
-                
+                pq.pop();
+                cout << x << ' ';
+                continue;
             }
+
+            
         }
 
         cout << '\n';
