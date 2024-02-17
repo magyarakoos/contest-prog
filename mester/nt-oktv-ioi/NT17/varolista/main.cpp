@@ -39,9 +39,7 @@ int main() {
 
     cout << (maxw ? maxi + 1 : 0) << '\n';
 
-    int curr = 0;
-
-    int result = 0;
+    int curr = 0, result = 0;
 
     for (auto [k, v] : m) {
         curr += v;
