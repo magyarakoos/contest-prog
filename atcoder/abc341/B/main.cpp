@@ -26,7 +26,6 @@ int main() {
             A[i] -= S[i];
             A[i + 1] += T[i];
         }
-        A[i + 1] += T[i] * (A[i] / S[i]);
     }
 
     cout << A[N - 1];
