@@ -9,22 +9,20 @@ using ll = long long;
 
 int H, W, N;
 string T;
-vector<string> grid;
+vector<vector<bool>> grid;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     cin >> H >> W >> N >> T;
 
-    for (int i = 0; i < H; i++) {
-        string s;
-        cin >> s;
-        grid.push_back(s);
-    }
+    grid.assign(H, vector<bool>(W));
 
     for (int i = 0; i < H; i++) {
         for (int j = 0; j < W; j++) {
-            if (grid[])
+            char c;
+            cin >> c;
+            
         }
     }
 }
