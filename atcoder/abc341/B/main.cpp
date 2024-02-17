@@ -21,5 +21,7 @@ int main() {
         cin >> S[i] >> T[i];
     }
 
-    
+    for (int i = 0; i < N - 1; i++) {
+        
+    }
 }
