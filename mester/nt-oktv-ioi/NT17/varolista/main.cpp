@@ -15,7 +15,7 @@ int main() {
 
     int last = 0;
 
-    int maxi = 0, value = 0;
+    int maxi = 0, maxv = 0;
     
     for (int i = 0; i < N; i++) {
         int u, t;
@@ -26,8 +26,8 @@ int main() {
             continue;
         } else {
             last += t;
-            int wait = 
-            if ()
+            int wait = last - u;
+            if (maxv < wait)
         }
     }
 }
