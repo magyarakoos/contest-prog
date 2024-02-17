@@ -22,7 +22,17 @@ int main() {
         for (int j = 0; j < W; j++) {
             char c;
             cin >> c;
-            
+            grid[i][j] = c == '.';
+        }
+    }
+
+    
+
+    for (int i = 0; i < H; i++) {
+        for (int j = 0; j < W; j++) {
+            if (grid[i][j]) {
+
+            }
         }
     }
 }
