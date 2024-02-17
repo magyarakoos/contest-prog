@@ -13,14 +13,14 @@ int main() {
     int N, M, K;
     cin >> N >> M >> K;
 
-    vector<vector<int>> v(N, vector<int>(M));
+    vector<vector<int>> EA(N);
 
     for (int i = 0; i < N; i++) {
         int F;
         cin >> F;
         while (F--) {
-            int S, EA, M;
-            cin >> S >> EA >> M;
+            int S, EAi, MEi;
+            cin >> S >> EAi >> MEi;
         }
     }
 }
