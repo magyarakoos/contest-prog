@@ -59,13 +59,15 @@ int main() {
 
     while (curr) {
 
-        cout << (step[curr][jobb] ? (jobb ? 'B' : 'J') : E);
+        cout << (step[curr][jobb] ? (jobb ? 'B' : 'J') : 'E');
 
         if (step[curr][jobb]) {
             jobb ^= 1;
         }
+
+        curr--;
     }
 
 
-    cout << 'E#';
+    cout << "E#";
 }
