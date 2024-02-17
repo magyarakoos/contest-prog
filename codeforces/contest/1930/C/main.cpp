@@ -59,7 +59,16 @@ int main() {
         BIT bit(N);
 
         while (!pq.empty()) {
-            if (bit.query())
+            
+            auto [x, i] = pq.top();
+
+
+
+            if (bit.query(i) == 0) {
+                cout << x << ' ';
+            } else {
+
+            }
         }
     }
 }
