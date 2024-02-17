@@ -16,11 +16,8 @@ bool solve(int i, int j, int p = 0) {
     if (p == N) {
         return 1;
     }
-
-    bool valid = 0;
-
     if (T[p] == 'L') {
-        
+        return grid[i][j - 1] && solve(i, j - 1,)
     }
     else if (T[p] == 'R') {
         
