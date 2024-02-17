@@ -16,7 +16,7 @@ int main() {
     int last = 0;
     int maxi = 0, maxw = 0;
 
-    
+    vector<array<int, 2>> rangeS;
 
     for (int i = 0; i < N; i++) {
         int u, t;
