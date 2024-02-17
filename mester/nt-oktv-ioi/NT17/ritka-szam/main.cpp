@@ -1,5 +1,3 @@
-*/
-
 #include <bits/stdc++.h>
 
 #define all(v) v.begin(), v.end()
@@ -9,14 +7,7 @@
 using namespace std;
 using ll = long long;
 
-int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-
-
-}
-
-const vector<string> vb = { 
+constexpr vector<string> vb = { 
     "1",
     "10",
     "100",
@@ -118,3 +109,9 @@ const vector<string> vb = {
     "1000010010",
     "1000010100"
 };
+
+int main() {
+    cin.tie(0), ios::sync_with_stdio(0);
+
+
+}
