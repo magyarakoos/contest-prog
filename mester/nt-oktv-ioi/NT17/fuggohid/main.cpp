@@ -59,7 +59,7 @@ int main() {
 
     while (curr) {
 
-        int x = step[curr][jobb] ? () : 0; 
+        int x = step[curr][jobb] ? (jobb ? "") : 0; 
     }
 
 
