@@ -51,5 +51,9 @@ int main() {
 
     bool jobb = dp[N][1] > dp[N][0];
 
-    cout << dp[jobb];
+    cout << dp[N][jobb] << '\n';
+
+    
+
+    cout << '#';
 }
