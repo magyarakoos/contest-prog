@@ -13,7 +13,13 @@ vector<vector<bool>> grid;
 
 bool solve(int i, int j, int p = 0) {
 
-    if (p == size(T))
+    if (p == N) {
+        return 1;
+    }
+
+    bool valid = 0;
+
+    if ()
 }
 
 int main() {
