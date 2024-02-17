@@ -15,6 +15,10 @@ int main() {
     cin >> A >> B;
 
     vector<intv> AX(A);
-    for (auto [k, v] : v) cin >> e;
-    
+    for (auto [k, v] : AX) cin >> k >> v;
+
+    vector<intv> BX(A);
+    for (auto [k, v] : BX) cin >> k >> v;
+
+    int ap = 0, bp = 0;
 }
