@@ -19,7 +19,8 @@ int main() {
         int F;
         cin >> F;
         while (F--) {
-
+            int S, EA, M;
+            cin >> S >> EA >> M;
         }
     }
 }
