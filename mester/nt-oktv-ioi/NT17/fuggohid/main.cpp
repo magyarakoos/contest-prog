@@ -22,5 +22,9 @@ int main() {
         cin >> Jobb[i];
     }
 
-    vector<int> dp1(N + 1), dp2
+    vector<array<int, 2>> dp(N + 1);
+
+    for (int i = 1; i <= N; i++) {
+        
+    }
 }
