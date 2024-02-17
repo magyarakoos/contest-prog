@@ -30,8 +30,12 @@ int main() {
     vector<array<bool, 2>> step(N + 1);
 
     for (int i = 2; i <= N; i++) {
-        
-        if (dp[i - 1][])
+
+        int a = dp[i - 1][0], b = dp[i - 1][1] + Jobb[i];
+
+        if (a < b) {
+            
+        }
 
         dp[i][0] = min(dp[i - 1][0], dp[i - 1][1] + Jobb[i]) + Bal[i];
         dp[i][1] = min(dp[i - 1][1], dp[i - 1][0] + Bal[i]) + Jobb[i];
