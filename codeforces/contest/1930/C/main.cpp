@@ -58,6 +58,8 @@ int main() {
 
         BIT bit(N);
 
+        vector<bool> pickable(N);
+
         while (!pq.empty()) {
             
             auto [x, i] = pq.top();
@@ -65,7 +67,7 @@ int main() {
 
             int q = bit.query(i);
 
-            if (q == 0) {
+            if (pickable || q == 0) {
                 cout << x << ' ';
                 bit.add(i, 1);
             } else {
