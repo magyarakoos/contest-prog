@@ -26,8 +26,8 @@ int main() {
             last = u + t;
             continue;
         } else {
+            rangeS.push_back()
             rangeS.push_back({last, -1});
-            rangeS.push_back({last + t - 1,})
             last += t;
             int wait = last - u;
             if (maxw < wait) {
