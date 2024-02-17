@@ -50,15 +50,12 @@ int main() {
         vector<array<int, 2>> v(N);
         for (int i = 0; i < N; i++) {
             cin >> v[i][0];
-            v[i][0] += i + 1;
             v[i][1] = i;
         }
 
         priority_queue<array<int, 2>> pq(all(v));
 
         BIT bit(N);
-
-        vector<bool> pickable(N);
 
         while (!pq.empty()) {
             
@@ -68,7 +65,7 @@ int main() {
 
             cerr << x << ' ' << i << ' ' << q << '\n';
 
-            if (pickable[i] || q == 0) {
+            if (1) {
                 //cout << x - q << ' ';
                 bit.add(i, 1);
                 pq.pop();
