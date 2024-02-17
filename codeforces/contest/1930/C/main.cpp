@@ -67,6 +67,8 @@ int main() {
 
             int q = bit.query(i);
 
+            cerr << x << ' ' << i << ' ' << q << '\n';
+
             if (pickable[i] || q == 0) {
                 cout << x << ' ';
                 bit.add(i, 1);
