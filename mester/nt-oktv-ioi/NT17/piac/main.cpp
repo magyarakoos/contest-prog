@@ -64,7 +64,11 @@ int main() {
         }
     }
 
-    int i,
+    int maxi = 0;
+
+    for (int i = 1; i < N; i++) {
+        if (v[maxi] < v[])
+    }
 
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
