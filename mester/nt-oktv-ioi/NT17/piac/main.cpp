@@ -16,10 +16,10 @@ int main() {
     vector<vector<int>> v(N, vector<int>(M));
 
     for (int i = 0; i < N; i++) {
-        int j;
-        cin >> j;
-        while (j--) {
-            
+        int F;
+        cin >> F;
+        while (F--) {
+
         }
     }
 }
