@@ -53,13 +53,15 @@ int main() {
 
     cout << dp[N][jobb] << '\n';
 
-    cout << (jobb ? "J" : "B");
+    string s;
+
+    s += (jobb ? "J" : "B");
 
     int curr = N;
 
     while (curr) {
 
-        cout << (step[curr][jobb] ? (jobb ? "EB" : "EJ") : "E");
+        s += (step[curr][jobb] ? (jobb ? "EB" : "EJ") : "E");
 
         if (step[curr][jobb]) {
             jobb ^= 1;
