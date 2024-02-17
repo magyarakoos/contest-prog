@@ -15,7 +15,7 @@ int main() {
 
     int last = 0;
 
-    int maxi = 0, maxv = 0;
+    int maxi = 0, maxw = 0;
     
     for (int i = 0; i < N; i++) {
         int u, t;
@@ -27,7 +27,12 @@ int main() {
         } else {
             last += t;
             int wait = last - u;
-            if (maxv < wait)
+            if (maxw < wait) {
+                maxw = wait;
+                maxi = i;
+            }
         }
     }
+
+    cout << maxi + 1 << '\n';
 }
