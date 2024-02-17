@@ -13,7 +13,10 @@ int main() {
     int N;
     cin >> N;
 
-    vector<vector<array<int, 2>>> g(2 * N + 1);
-
+    vector<int> Bal(N), Jobb(N);
+    for (int& e : Bal) cin >> e;
     
+
+
+    vector<vector<array<int, 2>>> g(2 * N + 1);
 }
