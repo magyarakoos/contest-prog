@@ -55,7 +55,6 @@ int main() {
 
     string s = "#E";
 
-
     int curr = N;
 
     while (curr) {
@@ -69,4 +68,6 @@ int main() {
         curr--;
     }
 
+    reverse(all(s));
+    cout << s;
 }
