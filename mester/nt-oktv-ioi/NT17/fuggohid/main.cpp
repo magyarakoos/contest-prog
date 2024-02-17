@@ -47,8 +47,6 @@ int main() {
         } else {
             dp[i][1] = a + Jobb[i];
         }
-
-        cerr << dp[i][0] << ' ' << dp[i][1] << '\n';
     }
 
     bool jobb = dp[N][1] < dp[N][0];
