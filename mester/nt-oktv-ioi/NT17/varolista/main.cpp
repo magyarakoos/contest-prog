@@ -16,9 +16,11 @@ int main() {
     int last = 0;
     
     for (int i = 0; i < N; i++) {
-        int 
+        int u, t;
+        cin >> u >> t;
+
+        if (last < u) {
+            last = u + t;
+        }
     }
-
-
-
 }
