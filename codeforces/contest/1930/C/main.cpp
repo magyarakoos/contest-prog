@@ -8,7 +8,7 @@ using namespace std;
 using ll = long long;
 
 struct BIT {
-    vector<int> bit;  // binary indexed tree
+    vector<int> bit;
     int n;
 
     BIT(int n) {
