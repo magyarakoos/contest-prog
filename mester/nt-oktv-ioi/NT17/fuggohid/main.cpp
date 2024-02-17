@@ -51,7 +51,7 @@ int main() {
 
     bool jobb = dp[N][1] < dp[N][0];
 
-    cout << dp[N][jobb] << '\n';
+    cout << dp[N][jobb] << '\n' << (jobb ? "J" : "B");
 
     string s = "#E";
 
@@ -69,5 +69,4 @@ int main() {
         curr--;
     }
 
-    s += (jobb ? "J" : "B");
 }
