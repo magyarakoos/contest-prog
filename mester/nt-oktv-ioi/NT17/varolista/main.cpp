@@ -16,7 +16,7 @@ int main() {
     int last = 0;
     int maxi = 0, maxw = 0;
 
-    unordered_map<int, int> m;
+    map<int, int> m;
 
     for (int i = 0; i < N; i++) {
         int u, t;
@@ -26,8 +26,8 @@ int main() {
             last = u + t;
             continue;
         } else {
-            rangeS.push_back({u, 1});
-            rangeS.push_back({last, -1});
+            m[u]++;
+            m[last]--;
             last += t;
             int wait = last - u;
             if (maxw < wait) {
@@ -39,11 +39,7 @@ int main() {
 
     cout << maxi + 1 << '\n';
 
-    sort(all(rangeS));
-
     int curr = 0;
 
-    for (auto [_, x] : rangeS) {
-        curr += 
-    }
+    
 }
