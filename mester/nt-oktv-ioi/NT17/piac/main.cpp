@@ -43,10 +43,15 @@ int main() {
 
     sort(rall(mennyiseg));
 
-    cout << mennyiseg[K - 1][1] - 1 << '\n';
 
+    for (auto [] e : v) cout << e << ' ';
+    cout << '
+    ';
+    
 
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
     cout << '\n';
+
+    cout << mennyiseg[K - 1][1] - 1 << '\n';
 }
