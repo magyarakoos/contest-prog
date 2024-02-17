@@ -26,12 +26,12 @@ int main() {
         }
     }
 
-    
+    int result = 0;
 
     for (int i = 0; i < H; i++) {
         for (int j = 0; j < W; j++) {
             if (grid[i][j]) {
-
+                result += solve(i, j);
             }
         }
     }
