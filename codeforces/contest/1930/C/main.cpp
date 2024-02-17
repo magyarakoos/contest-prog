@@ -58,7 +58,7 @@ int main() {
         BIT bit(N);
 
         while (!pq.empty()) {
-            
+            if (bit.query())
         }
     }
 }
