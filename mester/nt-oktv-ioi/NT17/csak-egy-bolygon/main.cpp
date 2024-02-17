@@ -6,7 +6,7 @@
 
 using namespace std;
 using ll = long long;
-using intv = struct { int e, int v; };
+using intv = struct { int e; int v; };
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -14,5 +14,5 @@ int main() {
     int A, B;
     cin >> A >> B;
 
-    
+    vector<intv> 
 }
