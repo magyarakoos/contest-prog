@@ -12,5 +12,14 @@ int main() {
 
     int N;
     cin >> N;
+
+    vector<int> Erk(N), Kez(N);
+
+    for (int i = 0; i < N; i++) {
+        cin >> Erk[i] >> Kez[i];
+    }
+
+    int last = 0;
+
     
 }
