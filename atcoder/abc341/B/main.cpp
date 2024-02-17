@@ -12,8 +12,8 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> A(N);
-    for (int& e : A) cin >> e;
+    vector<ll> A(N);
+    for (ll& e : A) cin >> e;
     
     vector<ll> S(N - 1), T(N - 1);
 
