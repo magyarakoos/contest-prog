@@ -10,7 +10,6 @@ using ll = long long;
 int H, W, N;
 string T;
 vector<string> grid;
-vector<vector<bool>> valid;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -23,5 +22,9 @@ int main() {
         grid.push_back(s);
     }
 
-    valid.resize(H, vector<bool>(W));
+    for (int i = 0; i < H; i++) {
+        for (int j = 0; j < W; j++) {
+            if (grid[])
+        }
+    }
 }
