@@ -38,7 +38,6 @@ public:
     }
 };
 
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -64,6 +63,10 @@ int main() {
             int q = bit.query(i);
 
             cerr << x << ' ' << i << ' ' << q << '\n';
+
+            if (q == 0) {
+                
+            }
         }
 
         cout << '\n';
