@@ -55,7 +55,7 @@ int main() {
 
     string s;
 
-    int curr = N - 1;
+    int curr = N;
 
     while (curr) {
 
