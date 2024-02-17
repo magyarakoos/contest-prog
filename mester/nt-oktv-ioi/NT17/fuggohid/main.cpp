@@ -53,9 +53,8 @@ int main() {
 
     cout << dp[N][jobb] << '\n';
 
-    string s;
+    string s = "#E";
 
-    s += (jobb ? "J" : "B");
 
     int curr = N;
 
@@ -70,6 +69,5 @@ int main() {
         curr--;
     }
 
-
-    cout << "E#";
+    s += (jobb ? "J" : "B");
 }
