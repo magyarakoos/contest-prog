@@ -29,7 +29,10 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         if ((double)bevetel[i] > avg) {
-            
+            cout << i + 1 << ' ';
         }
     }
+    cout << '\n';
+
+    
 }
