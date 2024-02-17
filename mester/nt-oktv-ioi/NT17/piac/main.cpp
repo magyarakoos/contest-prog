@@ -33,10 +33,13 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         if (bevetel[i] > avg) {
-            //cout << i + 1 << ' ';
+            p1.push_back(i);
         }
     }
-    cerr << " | " << avg;
+    cout << size(p1) << ' ';
+    for (int e : p1) cout << e << ' ';
+    cout << '\n';
+    
     cout << '\n';
 
     for (int i = 0; i < M; i++) {
