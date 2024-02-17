@@ -39,5 +39,7 @@ int main() {
         }
     }
 
+    for (int i = 0; i < )
+
     cout << maxi + 1 << '\n' << *max_element(all(waitc));
 }
