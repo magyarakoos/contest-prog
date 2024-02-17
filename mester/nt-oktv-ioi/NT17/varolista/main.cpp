@@ -19,7 +19,7 @@ int main() {
         int u, t;
         cin >> u >> t;
 
-        if (last < u) {
+        if (last <= u) {
             last = u + t;
         }
     }
