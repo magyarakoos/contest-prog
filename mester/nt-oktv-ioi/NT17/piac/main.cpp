@@ -30,7 +30,7 @@ int main() {
         }
     }
 
-    ll avg = accumulate(all(bevetel), 0) / N;
+    double avg = accumulate(all(bevetel), 0) / N;
 
     vector<int> p1;
 
