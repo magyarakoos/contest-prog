@@ -14,8 +14,9 @@ int main() {
     cin >> N;
 
     int last = 0;
-
     int maxi = 0, maxw = 0;
+
+    vector<bool> waitc()
     
     for (int i = 0; i < N; i++) {
         int u, t;
@@ -27,7 +28,6 @@ int main() {
         } else {
             last += t;
             int wait = last - u;
-            cerr << i << ' ' << wait << '\n'; 
             if (maxw < wait) {
                 maxw = wait;
                 maxi = i;
