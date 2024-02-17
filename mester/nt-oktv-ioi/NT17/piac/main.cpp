@@ -67,7 +67,9 @@ int main() {
     int maxi = 0;
 
     for (int i = 1; i < N; i++) {
-        if (v[maxi] < v[])
+        if (v[maxi] < v[i]) {
+            maxi = i;
+        }
     }
 
     cout << size(p1) << ' ';
@@ -75,4 +77,6 @@ int main() {
     cout << '\n';
 
     cout << mennyiseg[K - 1][1] + 1 << '\n';
+
+    cout << maxi + 1 << '\n';
 }
