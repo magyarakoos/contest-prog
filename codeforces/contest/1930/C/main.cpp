@@ -62,12 +62,12 @@ int main() {
             
             auto [x, i] = pq.top();
 
+            int q = bit.query(i);
 
-
-            if (bit.query(i) == 0) {
+            if (q == 0) {
                 cout << x << ' ';
             } else {
-
+                pq.push({x - q,})
             }
         }
     }
