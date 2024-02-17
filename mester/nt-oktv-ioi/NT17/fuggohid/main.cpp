@@ -13,5 +13,7 @@ int main() {
     int N;
     cin >> N;
 
-    vector<vector<array<int, 2>>> g;
+    vector<vector<array<int, 2>>> g(2 * N + 1);
+
+    
 }
