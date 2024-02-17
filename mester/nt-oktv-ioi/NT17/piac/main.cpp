@@ -46,9 +46,13 @@ int main() {
 
     sort(rall(mennyiseg));
 
-    vector<int> legtobb(N);
+    vector<int> legtobb(M);
 
-    
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            legtobb[i] = max(legtobb[i], v[])
+        }
+    }
 
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
