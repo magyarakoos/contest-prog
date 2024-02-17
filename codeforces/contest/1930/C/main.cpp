@@ -8,6 +8,9 @@ using namespace std;
 using ll = long long;
 
 struct BIT {
+private:
+    vector<int> bit;
+    int n;
     int sum(int r) {
         int ret = 0;
         for (; r >= 0; r = (r & (r + 1)) - 1)
@@ -18,14 +21,12 @@ struct BIT {
     int sum(int l, int r) {
         return sum(r) - sum(l - 1);
     }
-    vector<int> bit;
-    int n;
 
+public:
     BIT(int n) {
         this->n = n;
         bit.assign(n, 0);
     }
-
 
     void add(int idx, int delta) {
         for (; idx < n; idx = idx | (idx + 1))
@@ -56,6 +57,8 @@ int main() {
 
         BIT bit(N);
 
-
+        while (!pq.empty()) {
+            
+        }
     }
 }
