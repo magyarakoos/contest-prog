@@ -37,8 +37,17 @@ int main() {
     cout << '\n';
 
     for (int i = 0; i < M; i++) {
-        mannyiseg[i][1] = i;
+        mennyiseg[i][1] = i;
     }
 
     sort(rall(mennyiseg));
+
+    cout << mennyiseg[K - 1][1] - 1 << '\n';
+
+
 }
+
+3 3 2 2 1 3
+3 1 100 1 2 200 0 3 300 10 3
+2 2 300 1 3 200 1 1
+1 2 100 20
