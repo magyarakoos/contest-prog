@@ -44,9 +44,7 @@ int main() {
     int result = 0;
 
     for (auto [k, v] : m) {
-
         curr += v;
-
         result = max(result, curr);
     }
 
