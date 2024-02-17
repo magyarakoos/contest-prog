@@ -20,10 +20,12 @@ int main() {
         
         sort(all(v));
 
-        
+        int result = 0;
 
         for (int i = 1; i < 2 * N; i += 2) {
-
+            result += min(v[i], v[i - 1]);
         }
+
+        cout << result << '\n';
     }
 }
