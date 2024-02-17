@@ -25,10 +25,10 @@ bool solve(int i, int j, int p = 0) {
         return grid[i][j - 1] && solve(i, j - 1, p + 1);
     }
     else if (T[p] == 'R') {
-        return grid[i][j + 1] && solve(i, j - 1, p + 1);
+        return grid[i][j + 1] && solve(i, j + 1, p + 1);
     }
     else if (T[p] == 'U') {
-        return grid[i - 1][j] && solve(i, j - 1, p + 1);
+        return grid[i - 1][j] && solve(i - 1, j, p + 1);
     }
     else if (T[p] == 'D') {
         return grid[i + 1][j] && solve(i, j - 1, p + 1);
