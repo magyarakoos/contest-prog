@@ -36,11 +36,6 @@ int main() {
             p1.push_back(i);
         }
     }
-    cout << size(p1) << ' ';
-    for (int e : p1) cout << e << ' ';
-    cout << '\n';
-    
-    cout << '\n';
 
     for (int i = 0; i < M; i++) {
         mennyiseg[i][1] = i;
@@ -51,4 +46,7 @@ int main() {
     cout << mennyiseg[K - 1][1] - 1 << '\n';
 
 
+    cout << size(p1) << ' ';
+    for (int e : p1) cout << e + 1 << ' ';
+    cout << '\n';
 }
