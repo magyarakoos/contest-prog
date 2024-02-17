@@ -70,7 +70,7 @@ int main() {
             cerr << x << ' ' << i << ' ' << q << '\n';
 
             if (pickable[i] || q == 0) {
-                cout << x << ' ';
+                //cout << x << ' ';
                 bit.add(i, 1);
             } else {
                 pq.push({x - q, i});
