@@ -12,4 +12,6 @@ int main() {
 
     int A, B;
     cin >> A >> B;
+
+    
 }
