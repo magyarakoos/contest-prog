@@ -30,10 +30,11 @@ int main() {
     ll avg = accumulate(all(bevetel), 0) / N;
 
     for (int i = 0; i < N; i++) {
+        cerr << bevetel[i] << ' ';
         if (bevetel[i] > avg) {
-            cout << i + 1 << ' ';
         }
     }
+    cerr << " | " << avg;
     cout << '\n';
 
     for (int i = 0; i < M; i++) {
