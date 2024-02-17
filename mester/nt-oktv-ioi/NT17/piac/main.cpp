@@ -13,7 +13,7 @@ int main() {
     int N, M, K;
     cin >> N >> M >> K;
 
-    vector<int> bevetel(N);
+    vector<ll> bevetel(N);
 
     for (int i = 0; i < N; i++) {
         int F;
@@ -24,4 +24,6 @@ int main() {
             bevetel[i] += EAi * MEi;
         }
     }
+
+    int avg = sum
 }
