@@ -11,6 +11,11 @@ int H, W, N;
 string T;
 vector<vector<bool>> grid;
 
+bool solve(int i, int j, int p = 0) {
+
+    if (p == size(T))
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
