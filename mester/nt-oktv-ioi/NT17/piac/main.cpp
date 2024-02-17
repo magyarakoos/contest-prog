@@ -13,7 +13,7 @@ int main() {
     int N, M, K;
     cin >> N >> M >> K;
 
-    vector<ll> bevetel(N);
+    vector<ll> bevetel(N), mennyiseg(M);
 
     for (int i = 0; i < N; i++) {
         int F;
@@ -22,6 +22,7 @@ int main() {
             int S, EAi, MEi;
             cin >> S >> EAi >> MEi;
             bevetel[i] += EAi * MEi;
+            mennyiseg[S - 1] +=
         }
     }
 
@@ -34,5 +35,5 @@ int main() {
     }
     cout << '\n';
 
-    
+
 }
