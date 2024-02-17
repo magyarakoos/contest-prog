@@ -67,8 +67,8 @@ int main() {
 
             if (q == 0) {
                 cout << x << ' ';
+                q.add()
             } else {
-                
                 pq.push({x - q, i});
             }
         }
