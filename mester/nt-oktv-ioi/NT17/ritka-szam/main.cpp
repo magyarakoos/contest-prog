@@ -1,5 +1,5 @@
-/*
-vector<string> 1
+vector<string> vb = { 
+1
 10
 100
 101
@@ -99,20 +99,4 @@ vector<string> 1
 1000010001
 1000010010
 1000010100
-*/
-
-#include <bits/stdc++.h>
-
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define size(v) (int)v.size()
-
-using namespace std;
-using ll = long long;
-
-int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-
-
-}
+};
