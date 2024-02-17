@@ -20,8 +20,10 @@ int main() {
         
         sort(all(v));
 
-        for (int i = 0; i < 2 * N; i += 2) {
-            
+        
+
+        for (int i = 1; i < 2 * N; i += 2) {
+
         }
     }
 }
