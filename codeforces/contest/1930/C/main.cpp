@@ -15,6 +15,9 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
+        vector<int> v(N);
+        for (int& e : v) cin >> e;
+        
         
     }
 }
