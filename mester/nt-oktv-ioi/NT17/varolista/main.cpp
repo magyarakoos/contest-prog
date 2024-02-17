@@ -16,8 +16,8 @@ int main() {
     int last = 0;
     int maxi = 0, maxw = 0;
 
-    vector<int> waitc(50'000, 0);
     
+
     for (int i = 0; i < N; i++) {
         int u, t;
         cin >> u >> t;
@@ -32,17 +32,8 @@ int main() {
                 maxw = wait;
                 maxi = i;
             }
-
-            for (int i = u; i < u + wait; i++) {
-                waitc[i]++;
-            }
         }
     }
 
-    for (int i = 0; i < 20; i++) {
-        cout << waitc[i] << ' ';
-    }
-    cout << '\n';
-
-    cout << maxi + 1 << '\n' << *max_element(all(waitc));
+    cout << maxi + 1 << '\n';
 }
