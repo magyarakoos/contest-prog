@@ -23,7 +23,8 @@ int main() {
 
     for (int i = 0; i < N - 1; i++) {
         while (A[i] >= S[i]) {
-            
+            A[i] -= S[i];
+            A[i + 1] += T[i];
         }
         A[i + 1] += T[i] * (A[i] / S[i]);
     }
