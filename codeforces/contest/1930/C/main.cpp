@@ -63,17 +63,16 @@ int main() {
         while (!pq.empty()) {
             
             auto [x, i] = pq.top();
-            pq.pop();
 
             int q = bit.query(i);
 
             cerr << x << ' ' << i << ' ' << q << '\n';
 
             if (pickable[i] || q == 0) {
-                //cout << x << ' ';
+                cout << x - q << ' ';
                 bit.add(i, 1);
+                pq.pop();
             } else {
-                pq.push({x, i});
                 pickable[i] = 1;
             }
         }
