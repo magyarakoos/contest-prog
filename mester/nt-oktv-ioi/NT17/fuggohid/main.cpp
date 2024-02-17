@@ -28,6 +28,6 @@ int main() {
     dp[1][1] = Jobb[1];
 
     for (int i = 2; i <= N; i++) {
-        dp[i][0] = 
+        dp[i][0] = min(dp[i - 1][0], )
     }
 }
