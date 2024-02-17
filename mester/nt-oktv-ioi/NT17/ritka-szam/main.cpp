@@ -116,5 +116,9 @@ int main() {
     int N;
     cin >> N;
 
-    if (N)
+    if (N <= 100) {
+        
+    } else {
+        throw exception();
+    }
 }
