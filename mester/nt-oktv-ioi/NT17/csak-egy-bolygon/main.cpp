@@ -20,5 +20,10 @@ int main() {
     vector<intv> BX(A);
     for (auto [k, v] : BX) cin >> k >> v;
 
+    vector<intv> result;
     int ap = 0, bp = 0;
+
+    cout << size(result) << '\n';
+
+    
 }
