@@ -13,11 +13,16 @@ vector<vector<bool>> grid;
 
 bool solve(int i, int j, int p = 0) {
 
+    if (!grid[i][j]) {
+        return 0;
+    }
+
     if (p == N) {
         return 1;
     }
+
     if (T[p] == 'L') {
-        return grid[i][j - 1] && solve(i, j - 1,)
+        return grid[i][j - 1] && solve(i, j - 1, p + 1);
     }
     else if (T[p] == 'R') {
         
@@ -28,6 +33,8 @@ bool solve(int i, int j, int p = 0) {
     else if (T[p] == 'D') {
         
     }
+
+    return 0;
 }
 
 int main() {
