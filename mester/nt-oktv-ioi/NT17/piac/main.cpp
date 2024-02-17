@@ -15,7 +15,7 @@ int main() {
 
     vector<ll> bevetel(N);
     vector<array<int, 2>> mennyiseg(M);
-    vector<vector<int>> 
+    vector<vector<int>> v(N, vector<int>(M));
 
     for (int i = 0; i < N; i++) {
         int F;
@@ -26,10 +26,7 @@ int main() {
             bevetel[i] += EAi * MEi;
             mennyiseg[S - 1][0] += MEi;
 
-            if (egysegar[S - 1][0] < EAi) {
-                egysegar[S - 1][0] = EAi;
-                egysegar[S - 1][1] = i;
-            }
+            v[i][S - 1] = EAi;
         }
     }
 
@@ -51,9 +48,7 @@ int main() {
 
     vector<int> legtobb(N);
 
-    for (auto [db, id] : egysegar) {
-
-    }
+    
 
     cout << size(p1) << ' ';
     for (int e : p1) cout << e + 1 << ' ';
