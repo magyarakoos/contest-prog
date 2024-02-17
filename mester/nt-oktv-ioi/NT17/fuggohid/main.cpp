@@ -49,5 +49,7 @@ int main() {
         }
     }
 
+    bool 
+
     cout << min(dp[N][0], dp[N][1]);
 }
