@@ -25,5 +25,5 @@ int main() {
         }
     }
 
-    int avg = sum
+    ll avg = accumulate(all(bevetel), 0) /
 }
