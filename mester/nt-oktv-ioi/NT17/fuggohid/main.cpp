@@ -59,7 +59,7 @@ int main() {
 
     while (curr) {
 
-        
+        cout << (step[]);
     }
 
 
