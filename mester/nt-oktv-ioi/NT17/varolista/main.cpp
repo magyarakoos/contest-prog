@@ -37,7 +37,7 @@ int main() {
         }
     }
 
-    cout << maxi + 1 << '\n';
+    cout << (maxw ? maxi + 1 : 0) << '\n';
 
     int curr = 0;
 
