@@ -29,8 +29,9 @@ int main() {
 
     ll avg = accumulate(all(bevetel), 0) / N;
 
+    vector<int> p1;
+
     for (int i = 0; i < N; i++) {
-        cerr << bevetel[i] << ' ';
         if (bevetel[i] > avg) {
             //cout << i + 1 << ' ';
         }
