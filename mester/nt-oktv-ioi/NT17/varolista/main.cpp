@@ -26,12 +26,14 @@ int main() {
             last = u + t;
             continue;
         } else {
+            rangeS.push_back({last, })
             last += t;
             int wait = last - u;
             if (maxw < wait) {
                 maxw = wait;
                 maxi = i;
             }
+
         }
     }
 
