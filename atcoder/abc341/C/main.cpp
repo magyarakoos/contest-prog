@@ -16,5 +16,11 @@ int main() {
 
     cin >> H >> W >> N >> T;
 
-    for (int i = 0; i < H; i++)
+    for (int i = 0; i < H; i++) {
+        string s;
+        cin >> s;
+        grid.push_back(s);
+    }
+
+    
 }
