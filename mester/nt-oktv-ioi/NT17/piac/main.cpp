@@ -13,5 +13,10 @@ int main() {
     int N, M, K;
     cin >> N >> M >> K;
 
-    vector<vector<int>> v(N, M)
+    vector<vector<int>> v(N, vector<int>(M));
+
+    for (int i = 0; i < N; i++) {
+        int c;
+        cin >> c;
+    }
 }
