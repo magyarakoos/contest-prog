@@ -50,8 +50,12 @@ int main() {
 
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
-            legtobb[i] = max(legtobb[i], v[])
+            legtobb[i] = max(legtobb[i], v[j][i]);
         }
+    }
+
+    for (int i = 0; i < M; i++) {
+        
     }
 
     cout << size(p1) << ' ';
