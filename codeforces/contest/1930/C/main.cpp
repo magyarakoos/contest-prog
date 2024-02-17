@@ -61,13 +61,15 @@ int main() {
         while (!pq.empty()) {
             
             auto [x, i] = pq.top();
+            pq.pop();
 
             int q = bit.query(i);
 
             if (q == 0) {
                 cout << x << ' ';
             } else {
-                pq.push({x - q,})
+                
+                pq.push({x - q, i});
             }
         }
     }
