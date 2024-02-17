@@ -59,5 +59,6 @@ int main() {
         
         BIT bit(N);
 
+        
     }
 }
