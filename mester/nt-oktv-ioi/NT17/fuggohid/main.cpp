@@ -59,7 +59,11 @@ int main() {
 
     while (curr) {
 
-        
+        if (jobb) {
+            
+        } else {
+
+        }
     }
 
 
