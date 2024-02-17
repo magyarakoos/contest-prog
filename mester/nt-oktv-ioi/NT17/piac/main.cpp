@@ -13,7 +13,8 @@ int main() {
     int N, M, K;
     cin >> N >> M >> K;
 
-    vector<ll> bevetel(N), mennyiseg(M);
+    vector<ll> bevetel(N);
+    
 
     for (int i = 0; i < N; i++) {
         int F;
@@ -36,6 +37,4 @@ int main() {
     cout << '\n';
 
     sort(rall(mennyiseg));
-
-    
 }
