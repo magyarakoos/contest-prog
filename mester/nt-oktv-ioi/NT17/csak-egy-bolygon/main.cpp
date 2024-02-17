@@ -26,7 +26,7 @@ int main() {
     while (1) {
 
         if (AX[ap].e != BX[bp].e) {
-            
+            result.push_back({min(AX[ap].e, BX[bp].e), min()})
         }
 
     }
