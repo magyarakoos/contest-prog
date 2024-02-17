@@ -42,10 +42,10 @@ int main() {
         int N;
         cin >> N;
         vector<int> v(N);
-        for (int& e : v) cin >> e;
-        
-        BIT bit(N);
+        for (int i = 0; i < )
 
+
+        BIT bit(N);
 
     }
 }
