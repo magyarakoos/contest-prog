@@ -22,8 +22,9 @@ int main() {
         if (last <= u) {
             last = u + t;
             continue;
+        } else {
+            last += t;
+            
         }
-
-        last += t;
     }
 }
