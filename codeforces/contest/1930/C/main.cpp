@@ -72,5 +72,7 @@ int main() {
                 pq.push({x - q, i});
             }
         }
+
+        cout << '\n';
     }
 }
