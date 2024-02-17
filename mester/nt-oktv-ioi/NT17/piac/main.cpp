@@ -14,7 +14,7 @@ int main() {
     cin >> N >> M >> K;
 
     vector<ll> bevetel(N);
-    vector<array<int, 2>> mennyiseg(M);
+    vector<array<int, 2>> mennyiseg(M), 
 
     for (int i = 0; i < N; i++) {
         int F;
