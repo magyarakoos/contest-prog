@@ -53,7 +53,7 @@ int main() {
 
     cout << dp[N][jobb] << '\n' << (jobb ? "J" : "B");
 
-    string s = "#E";
+    string s;
 
     int curr = N - 1;
 
@@ -69,5 +69,5 @@ int main() {
     }
 
     reverse(all(s));
-    cout << s;
+    cout << s << "E#";
 }
