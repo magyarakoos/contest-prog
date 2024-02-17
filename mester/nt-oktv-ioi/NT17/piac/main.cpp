@@ -44,9 +44,7 @@ int main() {
     sort(rall(mennyiseg));
 
 
-    for (auto [] e : v) cout << e << ' ';
-    cout << '
-    ';
+    for (auto [e, id] : mennyiseg) cout << e << ' ' << id << '\n';
     
 
     cout << size(p1) << ' ';
