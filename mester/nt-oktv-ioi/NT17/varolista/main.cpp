@@ -26,6 +26,7 @@ int main() {
             continue;
         } else {
             last += t;
+            int wait = 
             if ()
         }
     }
