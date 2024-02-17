@@ -53,9 +53,9 @@ int main() {
 
     cout << dp[N][jobb] << '\n';
 
-    cout << (jobb ? 'J' : 'B');
+    cout << (jobb ? "J" : "B");
 
-    int curr = N;
+    int curr = N - 1;
 
     while (curr) {
 
@@ -69,5 +69,5 @@ int main() {
     }
 
 
-    cout << "E#";
+    cout << "EE#";
 }
