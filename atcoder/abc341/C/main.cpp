@@ -19,7 +19,9 @@ bool solve(int i, int j, int p = 0) {
 
     bool valid = 0;
 
-    if ()
+    if (grid[i + 1][j]) {
+        valid = valid || solve(i + 1, j)
+    }
 }
 
 int main() {
