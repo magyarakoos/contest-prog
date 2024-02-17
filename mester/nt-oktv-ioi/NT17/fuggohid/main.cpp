@@ -55,11 +55,11 @@ int main() {
 
     string s = "#E";
 
-    int curr = N;
+    int curr = N - 1;
 
     while (curr) {
 
-        s += (step[curr][jobb] ? (jobb ? "EB" : "EJ") : "E");
+        s += (step[curr][jobb] ? (jobb ? "EJ" : "EB") : "E");
 
         if (step[curr][jobb]) {
             jobb ^= 1;
