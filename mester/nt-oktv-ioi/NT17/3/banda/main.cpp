@@ -17,6 +17,10 @@ int solve(int u, bool choose) {
         return choose;
     }
 
+    if (cache.count({u, choose})) {
+        return cache[{u, choose}];
+    }
+
     if (choose) {
         int result = 1;
         for (int child : g[u]) {
