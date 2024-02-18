@@ -58,8 +58,11 @@ int main() {
         int best = 0;
 
         for (int j : intvS) {
-            for (int k = i + 1; k < M; k++) {
-                if (beginS[j] > sus[k] || endS)
+            int k;
+            for (k = i + 1; k < M; k++) {
+                if (beginS[j] > sus[k] || endS[j] < sus[k]) {
+                    break;
+                }
             }
         }
     }
