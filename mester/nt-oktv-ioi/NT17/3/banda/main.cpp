@@ -9,7 +9,6 @@ using ll = long long;
 
 int N;
 vector<vector<int>> g;
-vector<unordered_set<int>> m;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
@@ -25,11 +24,6 @@ int solve(int u, bool choose) {
     } else {
         int result = 0;
         for (int child : g[u]) {
-            int a = solve(child, 1);
-            int b = solve(child, 0);
-            if (a > b) {
-                m[u].insert(child);
-            }
             result += max(solve(child, 1), solve(child, 0));
         }
         return result;
@@ -42,7 +36,6 @@ int main() {
     cin >> N;
 
     g.resize(N + 1);
-    pick.resize(N + 1);
 
     for (int U = 2; U <= N; U++) {
         int V;
