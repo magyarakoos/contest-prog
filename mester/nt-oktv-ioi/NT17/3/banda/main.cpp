@@ -10,6 +10,8 @@ using ll = long long;
 int N;
 vector<vector<int>> g;
 
+unordered_map<pair<int, bool>, int> cache;
+
 int solve(int u, bool choose) {
     if (g[u].empty()) {
         return choose;
