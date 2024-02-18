@@ -15,5 +15,11 @@ int main() {
 
     cin >> N;
 
+    g.resize(N + 1);
 
+    for (int U = 2; U <= N; U++) {
+        int V;
+        cin >> V;
+        
+    }
 }
