@@ -52,7 +52,7 @@ int main() {
     path.resize(N + 1);
 
     for (int i = 1; i <= N; i++) {
-        if (!vis[i] && !indegS[i]) {
+        if (!vis[i] && !vis[g[i]] && !indegS[i]) {
             dfs(i);
         }
     }
