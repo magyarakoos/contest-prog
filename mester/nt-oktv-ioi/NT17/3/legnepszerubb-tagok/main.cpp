@@ -38,10 +38,13 @@ int main() {
 
     g.resize(N + 1);
 
+    vector<bool> indegS(N + 1, 1);
+
     for (int i = 1; i <= N; i++) {
         int u;
         cin >> u;
         g[i] = u;
+        indegS[u] = 0;
     }
 
     vis.resize(N + 1);
