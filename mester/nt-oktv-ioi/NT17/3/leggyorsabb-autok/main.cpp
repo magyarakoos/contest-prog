@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-vector<int> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
+vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
 
     vector<int> result;
 
@@ -63,7 +63,8 @@ int main() {
     for (int i = 0; i < N - 1; i++) {
         cerr << i + 1 << " : ";
         for (int x : intersectS[i]) {
-            cout << x << ' ';
+            cerr << x << ' ';
         }
+        cerr << '\n';
     }
 }
