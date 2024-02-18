@@ -28,5 +28,5 @@ int main() {
         g[V].push_back(U);
     }
 
-    
+    dfs()
 }
