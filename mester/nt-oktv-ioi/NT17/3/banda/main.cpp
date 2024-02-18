@@ -11,7 +11,7 @@ int N;
 vector<vector<int>> g;
 
 void solve(int u, bool choose) {
-    
+
 }
 
 int main() {
@@ -27,5 +27,6 @@ int main() {
         g[V].push_back(U);
     }
 
-
+    int a = solve(1, 1);
+    int b = solve(1, 0);
 }
