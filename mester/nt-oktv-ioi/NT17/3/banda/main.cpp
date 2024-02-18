@@ -10,6 +10,10 @@ using ll = long long;
 int N;
 vector<vector<int>> g;
 
+void solve(int u, bool choose) {
+    
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -23,5 +27,5 @@ int main() {
         g[V].push_back(U);
     }
 
-    
+
 }
