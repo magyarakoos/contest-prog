@@ -24,6 +24,7 @@ void dfs(int u) {
         return;
     }
 
+    path[t] = 
     t++;
     dfs(g[u]);
 }
