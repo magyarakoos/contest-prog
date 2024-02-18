@@ -12,6 +12,11 @@ int t = 1;
 
 vector<int> g;
 vector<bool> vis;
+vector<int> path;
+
+void dfs(int u) {
+
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -26,7 +31,12 @@ int main() {
         g[i] = u;
     }
 
+    vis.resize(N + 1);
+
     for (int i = 1; i <= N; i++) {
-        if ()
+        if (!vis[i]) {
+            vis[i] = 1;
+            dfs(i);
+        }
     }
 }
