@@ -9,7 +9,7 @@ using ll = long long;
 
 int N, M;
 vector<vector<int>> g;
-vector<int> color;
+vector<int> color, parentS;
 vector<bool> cycle;
 
 void dfs(int u, int par) {
@@ -23,7 +23,7 @@ void dfs(int u, int par) {
 
         while (curr != u) {
             cycle[curr] = 1;
-            curr = pa
+            curr = parentS[curr];
         }
     }
 }
@@ -36,6 +36,7 @@ int main() {
     g.resize(N + 1);
     color.resize(N + 1);
     cycle.resize(N + 1);
+    parentS.resize(N + 1);
 
     while (M--) {
         int U, V;
