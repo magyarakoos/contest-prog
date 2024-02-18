@@ -55,7 +55,6 @@ int main() {
 
         for (int j : intvS) {
 
-            for (m)
         }
     }
 }
