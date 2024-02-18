@@ -42,10 +42,14 @@ int main() {
         cin >> sus[i];
     }
 
+    int tot = M;
+
     for (int i = 0; i < M; i++) {
 
         vector<int> intvs = intvS_at(sus[i]);
 
-        if (intvs)
+        if (intvs.empty()) {
+            tot--;
+        }
     }
 }
