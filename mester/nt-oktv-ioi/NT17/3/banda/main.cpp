@@ -9,7 +9,7 @@ using ll = long long;
 
 int N;
 vector<vector<int>> g;
-vector<bool> pick;
+unordered_map<
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
@@ -27,8 +27,8 @@ int solve(int u, bool choose) {
         for (int child : g[u]) {
             int a = solve(child, 1);
             int b = solve(child, 0);
-            if (b > a) {
-
+            if (a > b) {
+                pickj
             }
             result += max(solve(child, 1), solve(child, 0));
         }
