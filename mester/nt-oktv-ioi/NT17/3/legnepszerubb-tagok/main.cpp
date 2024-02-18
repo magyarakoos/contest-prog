@@ -9,12 +9,12 @@ using ll = long long;
 
 int N;
 
-vector<
+vector<int> g;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     cin >> N;
 
-
+    
 }
