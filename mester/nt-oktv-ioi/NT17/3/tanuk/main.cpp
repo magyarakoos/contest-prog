@@ -8,13 +8,18 @@ using namespace std;
 using ll = long long;
 
 vector<int> beginS, endS;
+int N, M;
 
-vector<int> 
+vector<int> intvS_at(int t) {
+
+    for (int i = 0; i < t; i++) {
+        
+    }
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int N, M;
     cin >> N >> M;
 
     beginS.resize(N);
