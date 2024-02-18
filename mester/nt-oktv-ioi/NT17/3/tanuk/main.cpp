@@ -55,7 +55,7 @@ int main() {
             continue;
         }
 
-        int best = 0;
+        int best = 0, best_i = -1;
 
         for (int j : intvS) {
             int k;
@@ -63,6 +63,10 @@ int main() {
                 if (beginS[j] > sus[k] || endS[j] < sus[k]) {
                     break;
                 }
+            }
+            if (best < k) {
+                best = k;
+                best_i = j;
             }
         }
     }
