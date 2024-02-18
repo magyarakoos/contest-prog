@@ -23,12 +23,12 @@ int solve(int u, bool choose) {
         }
         return result;
     } else {
-        int a = 0, b = 0;
+        int result = 0;
         for (int child : g[u]) {
-            a += solve(child, 1);
+            result += solve(child, 1);
             b += solve(child, 0);
         }
-        return max(a, b);
+        return result;
     }
 }
 
