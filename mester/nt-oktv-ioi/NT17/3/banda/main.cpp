@@ -10,12 +10,14 @@ using ll = long long;
 int N;
 vector<vector<int>> g;
 
-unordered_map<pair<int, bool>, int> cache;
+unordered_map<ll, int> cache;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
         return choose;
     }
+
+    ll key = 
 
     if (cache.count({u, choose})) {
         return cache[{u, choose}];
