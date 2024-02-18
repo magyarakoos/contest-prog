@@ -27,7 +27,9 @@ void dfs(int u) {
         return;
     }
 
-    path[t++] = u;
+    vis[u] = t;
+    path[t] = u;
+    t++;
     dfs(g[u]);
 }
 
@@ -51,7 +53,6 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         if (!vis[i]) {
-            vis[i] = t;
             dfs(i);
         }
     }
