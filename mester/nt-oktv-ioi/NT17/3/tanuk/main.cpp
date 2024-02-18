@@ -73,7 +73,7 @@ int main() {
         result.push_back(best_i);
     }
 
-    cout << tot << '\n';
-
-    for ()
+    cout << tot << '\n' << size(result) << '\n';
+    for (int x : result) cout << x << ' ';
+    cout << '\n';
 }
