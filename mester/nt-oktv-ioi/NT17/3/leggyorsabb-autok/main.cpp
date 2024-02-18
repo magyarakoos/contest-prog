@@ -12,7 +12,12 @@ vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<arra
     auto sit = s.begin();
     auto tit = t.begin();
 
-    for (; sit != s.end() && tit)
+    while (sit != s.end() && tit != t.end()) {
+
+        if ((*sit)[0] == (*tit)[0]) {
+            
+        }
+    }
 }
 
 int main() {
