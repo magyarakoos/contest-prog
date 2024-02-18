@@ -32,7 +32,7 @@ void dfs(int u, int par) {
     color[u] = 1;
 
     for (int neigh : g[u]) {
-        if (parentS[u] != neigh) {
+        if (neigh != parentS[u]) {
             dfs(neigh, u);
         }
     }
@@ -58,4 +58,10 @@ int main() {
     }
 
     dfs(1, 0);
+
+    vector<int> result;
+
+    for (int i = 1; i <= N; i++) {
+        if (!cycle[i])
+    }
 }
