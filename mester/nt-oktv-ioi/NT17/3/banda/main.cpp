@@ -55,9 +55,11 @@ int main() {
 
     cout << max(a, b) << '\n';
     
+    vector<int> result;
+
     if (a < b) {
-        for (int child : g[1]) {
-            
+        for (int child : pick[1]) {
+
         }
     }
 }
