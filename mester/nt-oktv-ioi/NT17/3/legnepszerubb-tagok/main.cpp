@@ -17,7 +17,7 @@ void dfs(int u) {
 
     if (vis[u]) {
         int new_cyc_start = vis[u];
-        int new_cyc_end = t - 1;
+        int new_cyc_end = t;
         if (new_cyc_end - new_cyc_start > cyc_end - cyc_start) {
             cyc_start = new_cyc_start;
             cyc_end = new_cyc_end;
@@ -53,5 +53,9 @@ int main() {
         }
     }
 
-    cout << 
+    cout << cyc_end - cyc_start << '\n';
+
+    for (int i = cyc_start; i < cyc_end; i++)  {
+        
+    }
 }
