@@ -55,8 +55,12 @@ int main() {
             continue;
         }
 
+        int best = 0;
+
         for (int j : intvS) {
-            for (int k = i )
+            for (int k = i + 1; k < M; k++) {
+                if (beginS[])
+            }
         }
     }
 
