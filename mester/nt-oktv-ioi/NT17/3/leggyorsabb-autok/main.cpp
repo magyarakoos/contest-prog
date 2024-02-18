@@ -63,7 +63,7 @@ int main() {
     for (int i = 0; i < N - 1; i++) {
         cerr << i + 1 << " : ";
         for (auto [carid, x] : intersectS[i]) {
-            cerr << x << ' ';
+            cerr << '(' << carid << ',' << x << ") ";
         }
         cerr << '\n';
     }
