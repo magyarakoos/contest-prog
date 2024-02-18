@@ -20,6 +20,8 @@ int solve(int u, bool choose) {
         a += solve(child, 1);
         b += solve(child, 0);
     }
+
+    return max(a, b);
 }
 
 int main() {
@@ -37,4 +39,6 @@ int main() {
 
     int a = solve(1, 1);
     int b = solve(1, 0);
+
+    cout << a << ' ' << b << '\n';
 }
