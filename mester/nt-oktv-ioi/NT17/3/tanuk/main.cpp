@@ -50,6 +50,11 @@ int main() {
 
         if (intvs.empty()) {
             tot--;
+            continue;
+        }
+
+        for (int j : intvs) {
+            
         }
     }
 }
