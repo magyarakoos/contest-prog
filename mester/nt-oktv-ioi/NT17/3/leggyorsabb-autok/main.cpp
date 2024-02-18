@@ -20,6 +20,11 @@ int main() {
         min += hour * 60;
         placeid--;
 
-        v[placeid].insert({placeid, min})
+        v[placeid].insert({carid, min});
+    }
+
+    for (int i = 0; i < N; i++) {
+        cerr << i + 1 << " : ";
+        for (auto [])
     }
 }
