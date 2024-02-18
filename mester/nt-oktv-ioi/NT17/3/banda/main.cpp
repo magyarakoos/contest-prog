@@ -9,7 +9,7 @@ using ll = long long;
 
 int N;
 vector<vector<int>> g;
-vector<unordered_set<int>> m;
+vector<unordered_set<int>> pick;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
@@ -28,7 +28,7 @@ int solve(int u, bool choose) {
             int a = solve(child, 1);
             int b = solve(child, 0);
             if (a > b) {
-                m[u].insert(child);
+                pick[u].insert(child);
             }
             result += max(solve(child, 1), solve(child, 0));
         }
