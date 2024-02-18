@@ -44,8 +44,6 @@ int main() {
 
     int tot = M;
 
-    
-
     for (int i = 0; i < M; i++) {
 
         vector<int> intvS = intvS_at(sus[i]);
@@ -69,6 +67,8 @@ int main() {
                 best_i = j;
             }
         }
+
+        
     }
 
     cout << tot << '\n';
