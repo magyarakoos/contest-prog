@@ -12,7 +12,6 @@ vector<vector<int>> g;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
-        cerr << u << "  " << choose << '\n';
         return choose;
     }
 
@@ -25,8 +24,7 @@ int solve(int u, bool choose) {
     } else {
         int result = 0;
         for (int child : g[u]) {
-            result += solve(child, 1);
-            b += solve(child, 0);
+            result += max(solve(child, 1), solve(child, 0));
         }
         return result;
     }
@@ -48,5 +46,5 @@ int main() {
     int a = solve(1, 1);
     int b = solve(1, 0);
 
-    cout << a << ' ' << b << '\n';
+    cout << max(a, b) << '\n';
 }
