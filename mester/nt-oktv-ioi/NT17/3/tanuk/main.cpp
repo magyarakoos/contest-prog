@@ -74,6 +74,6 @@ int main() {
     }
 
     cout << tot << '\n' << size(result) << '\n';
-    for (int x : result) cout << x << ' ';
+    for (int x : result) cout << x + 1 << ' ';
     cout << '\n';
 }
