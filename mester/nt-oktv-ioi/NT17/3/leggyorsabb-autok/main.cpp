@@ -9,7 +9,7 @@ using ll = long long;
 
 vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
 
-    vector<int> result;
+    vector<array<int, 2>> result;
 
     auto sit = s.begin();
     auto tit = t.begin();
@@ -17,7 +17,7 @@ vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<arra
     while (sit != s.end() && tit != t.end()) {
 
         if ((*sit)[0] == (*tit)[0]) {
-            result.push_back((*tit)[1] - (*sit)[1]);
+            result.push_back({(*sit)[0], (*tit)[1] - (*sit)[1]});
             sit++;
             tit++;
         } else if ((*sit)[0] < (*tit)[0]) {
