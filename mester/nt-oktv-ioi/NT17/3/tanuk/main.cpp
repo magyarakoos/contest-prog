@@ -16,7 +16,9 @@ vector<int> intvS_at(int t) {
 
     for (int i = 0; i < N && t >= beginS[i]; i++) {
 
-        if ()
+        if (t <= endS[i]) {
+            result.push_back(i);
+        }
     }
 }
 
