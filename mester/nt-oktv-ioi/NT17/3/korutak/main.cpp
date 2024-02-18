@@ -12,6 +12,17 @@ vector<vector<int>> g;
 vector<int> color;
 vector<bool> cycle;
 
+void dfs(int u, int par) {
+
+    if (color[u] == 2) {
+        return;
+    }
+
+    if (color[u] == 1) {
+        
+    }
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
