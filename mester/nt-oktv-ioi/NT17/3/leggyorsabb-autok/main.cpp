@@ -72,5 +72,8 @@ int main() {
     }
     #endif
     
-    
+    for (int i = 0; i < N - 1; i++) {
+        int best = INT_MAX, bestid = 0;
+        
+    }
 }
