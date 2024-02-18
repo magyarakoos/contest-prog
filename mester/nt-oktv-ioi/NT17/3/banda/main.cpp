@@ -24,7 +24,7 @@ int solve(int u, bool choose) {
     } else {
         int result = 0;
         for (int child : g[u]) {
-            result += solve(child, 0);
+            result += solve(child, 1);
         }
         return result;
     }
