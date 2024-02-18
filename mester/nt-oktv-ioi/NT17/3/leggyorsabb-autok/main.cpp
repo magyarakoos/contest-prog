@@ -17,8 +17,10 @@ vector<int> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>
     while (sit != s.end() && tit != t.end()) {
 
         if ((*sit)[0] == (*tit)[0]) {
-            result.push_back({*sit, })
-        }
+            result.push_back((*tit)[1] - (*sit)[1]);
+        } else if ((*sit)[]) (
+
+        )
     }
 }
 
