@@ -10,8 +10,10 @@ using ll = long long;
 int N;
 vector<vector<int>> g;
 
-int32_t solve(int u, bool choose) {
-
+int solve(int u, bool choose) {
+    if (g[u].empty()) {
+        
+    }
 }
 
 int main() {
