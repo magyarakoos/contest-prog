@@ -59,4 +59,6 @@ int main() {
     for (int i = 0; i < N - 1; i++) {
         intersectS[i] = make_intersect(v[i], v[i + 1]);
     }
+
+    
 }
