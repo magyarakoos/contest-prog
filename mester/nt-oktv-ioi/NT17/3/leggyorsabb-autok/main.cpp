@@ -26,6 +26,8 @@ vector<int> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>
             tit++;
         }
     }
+
+    return result;
 }
 
 int main() {
@@ -53,4 +55,8 @@ int main() {
     }
 
     vector<vector<int>> intersectS(N - 1);
+
+    for (int i = 0; i < N - 1; i++) {
+        
+    }
 }
