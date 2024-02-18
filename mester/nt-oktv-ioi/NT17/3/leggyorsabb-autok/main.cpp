@@ -12,4 +12,5 @@ int main() {
 
     int N, M;
     cin >> N >> M;
+    vector<set<array<int, 2>>> v()
 }
