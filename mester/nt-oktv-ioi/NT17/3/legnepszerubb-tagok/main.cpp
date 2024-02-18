@@ -11,10 +11,11 @@ int N;
 int t = 1;
 
 vector<int> g, vis, path;
+int cyc_start, cyc_end;
 
 void dfs(int u) {
     if (vis[u]) {
-
+        if ()
     }
 }
 
