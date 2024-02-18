@@ -43,7 +43,7 @@ int main() {
     }
 
     int tot = M;
-    vector<int> result;
+    vector<int> result; 
 
     for (int i = 0; i < M; i++) {
 
