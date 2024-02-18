@@ -39,6 +39,7 @@ int main() {
     }
 
     vis.resize(N + 1);
+    path.resize(N + 1);
 
     for (int i = 1; i <= N; i++) {
         if (!vis[i]) {
