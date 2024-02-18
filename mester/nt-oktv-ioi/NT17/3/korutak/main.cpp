@@ -62,6 +62,12 @@ int main() {
     vector<int> result;
 
     for (int i = 1; i <= N; i++) {
-        if (!cycle[i])
+        if (!cycle[i]) {
+            result.push_back(i);
+        }
     }
+
+    cout << size(result) << '\n';
+    for (int e : result) cout << e + 1 << ' ';
+
 }
