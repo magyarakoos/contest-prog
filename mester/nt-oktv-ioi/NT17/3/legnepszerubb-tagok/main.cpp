@@ -15,8 +15,6 @@ int cyc_start, cyc_end;
 
 void dfs(int u) {
 
-    cerr << u << '\n';
-
     if (vis[u]) {
         int new_cyc_start = vis[u];
         int new_cyc_end = t;
