@@ -20,7 +20,7 @@ int solve(int u, bool choose) {
     ll key = (u << 8) | choose;
 
     if (cache.count(key)) {
-        return cache[{u, choose}];
+        return cache[key];
     }
 
     if (choose) {
