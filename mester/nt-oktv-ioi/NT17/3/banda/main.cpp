@@ -47,4 +47,8 @@ int main() {
     int b = solve(1, 0);
 
     cout << max(a, b) << '\n';
+    for (int i = 0; i < max(a, b); i++) {
+        cout << "0 ";
+    }
+    cout << '\n';
 }
