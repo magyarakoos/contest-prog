@@ -58,10 +58,10 @@ int main() {
     vector<int> result;
 
     if (a < b) {
+        
+    } else {
         for (int child : pick[1]) {
             result.push_back(child);
         }
-    } else {
-        
     }
 }
