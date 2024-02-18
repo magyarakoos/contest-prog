@@ -20,6 +20,8 @@ vector<int> intvS_at(int t) {
             result.push_back(i);
         }
     }
+
+    return result;
 }
 
 int main() {
@@ -42,6 +44,6 @@ int main() {
 
     for (int i = 0; i < M; i++) {
 
-
+        
     }
 }
