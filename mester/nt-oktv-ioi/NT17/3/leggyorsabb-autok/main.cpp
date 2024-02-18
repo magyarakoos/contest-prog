@@ -9,13 +9,15 @@ using ll = long long;
 
 vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
 
+    vector<array<int, 2>> result;
+
     auto sit = s.begin();
     auto tit = t.begin();
 
     while (sit != s.end() && tit != t.end()) {
 
         if ((*sit)[0] == (*tit)[0]) {
-            
+            result.push_back({*sit, })
         }
     }
 }
