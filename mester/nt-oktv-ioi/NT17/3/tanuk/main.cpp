@@ -46,15 +46,16 @@ int main() {
 
     for (int i = 0; i < M; i++) {
 
-        vector<int> intvs = intvS_at(sus[i]);
+        vector<int> intvS = intvS_at(sus[i]);
 
-        if (intvs.empty()) {
+        if (intvS.empty()) {
             tot--;
             continue;
         }
 
-        for (int j : intvs) {
-            
+        for (int j : intvS) {
+
+            sadasdasdasdadsadsadssaddsadsadsadsa
         }
     }
 }
