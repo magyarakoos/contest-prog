@@ -18,5 +18,8 @@ int main() {
         int carid, placeid, hour, min;
         cin >> carid >> placeid >> hour >> min;
         min += hour * 60;
+        placeid--;
+
+        v[placeid].insert({placeid, min})
     }
 }
