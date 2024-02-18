@@ -9,6 +9,7 @@ using ll = long long;
 
 int N;
 vector<vector<int>> g;
+vector<bool> pick;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
@@ -36,6 +37,7 @@ int main() {
     cin >> N;
 
     g.resize(N + 1);
+    pick.resize(N + 1);
 
     for (int U = 2; U <= N; U++) {
         int V;
