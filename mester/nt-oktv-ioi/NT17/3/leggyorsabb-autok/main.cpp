@@ -25,6 +25,9 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         cerr << i + 1 << " : ";
-        for (auto [])
+        for (auto [carid, min] : v[i]) {
+            cerr << '(' << carid << ',' << min << ") ";
+        }
+        cerr << '\n';
     }
 }
