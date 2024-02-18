@@ -89,8 +89,8 @@ int main() {
     for (int i = 0; i < N - 1; i++) {
         int best = INT_MAX, bestid = 0;
         for (auto [carid, x] : intersectS[i]) {
-            if (x < 0) {
-                x *= -1;
+            x *= -1;
+            if (x >= 0) {
                 if (x < best) {
                     best = x;
                     bestid = carid;
