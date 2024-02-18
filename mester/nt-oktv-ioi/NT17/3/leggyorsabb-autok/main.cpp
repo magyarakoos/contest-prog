@@ -9,7 +9,10 @@ using ll = long long;
 
 vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
 
+    auto sit = s.begin();
+    auto tit = t.begin();
 
+    for (; sit != s.end() && tit)
 }
 
 int main() {
