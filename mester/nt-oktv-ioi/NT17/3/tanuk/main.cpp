@@ -43,6 +43,7 @@ int main() {
     }
 
     int tot = M;
+    vector<int> result;
 
     for (int i = 0; i < M; i++) {
 
@@ -69,7 +70,10 @@ int main() {
         }
 
         i = best - 2;
+        result.push_back(best_i);
     }
 
     cout << tot << '\n';
+
+    for ()
 }
