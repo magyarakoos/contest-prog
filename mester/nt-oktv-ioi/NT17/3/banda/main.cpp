@@ -15,7 +15,7 @@ int solve(int u, bool choose) {
         return choose;
     }
 
-    int a = 0, b = 1;
+    int a = 0, b = choose;
     for (int child : g[u]) {
         if (!choose) a += solve(child, 1);
         b += solve(child, 0);
