@@ -44,6 +44,8 @@ int main() {
 
     int tot = M;
 
+    
+
     for (int i = 0; i < M; i++) {
 
         vector<int> intvS = intvS_at(sus[i]);
