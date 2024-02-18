@@ -47,18 +47,11 @@ int main() {
     vis.resize(N + 1);
     path.resize(N + 1);
 
-    cerr << '\n';
-
     for (int i = 1; i <= N; i++) {
         if (!vis[i]) {
             dfs(i);
         }
     }
 
-    for (int i = 1; i <= N; i++) {
-        cerr << path[i] << ' ';
-    }
-    cerr << '\n';
-
-    cerr << cyc_start << ' ' << cyc_end << '\n';
+    cout << 
 }
