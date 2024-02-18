@@ -76,8 +76,12 @@ int main() {
         int best = INT_MAX, bestid = 0;
         for (auto [carid, x] : intersectS[i]) {
             if (x >= 0) {
-                if ()
+                if (x < best) {
+                    best = x;
+                    bestid = carid;
+                }
             }
         }
+        cout << bestid
     }
 }
