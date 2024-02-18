@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+vector<pair<int, 
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -30,4 +32,6 @@ int main() {
         }
         cerr << '\n';
     }
+
+
 }
