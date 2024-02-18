@@ -8,8 +8,10 @@ using namespace std;
 using ll = long long;
 
 int N;
+int t = 1;
 
 vector<int> g;
+vector<bool> vis;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -24,5 +26,7 @@ int main() {
         g[i] = u;
     }
 
-    
+    for (int i = 1; i <= N; i++) {
+        if ()
+    }
 }
