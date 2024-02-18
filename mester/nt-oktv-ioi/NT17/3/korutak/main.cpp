@@ -32,8 +32,12 @@ void dfs(int u, int par) {
     color[u] = 1;
 
     for (int neigh : g[u]) {
-        
+        if (parentS[neigh] != par) {
+            dfs()
+        }
     }
+
+    color[u] = 2;
 }
 
 int main() {
