@@ -44,8 +44,8 @@ int main() {
 
     for (int i = 0; i < M; i++) {
 
+        vector<int> intvs = intvS_at(sus[i]);
 
-
-        }
+        if (intvs)
     }
 }
