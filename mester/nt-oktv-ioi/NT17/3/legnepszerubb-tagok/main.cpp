@@ -21,7 +21,6 @@ void dfs(int u) {
         if (new_cyc_end - new_cyc_start > cyc_end - cyc_start) {
             cyc_start = new_cyc_start;
             cyc_end = new_cyc_end;
-            cerr << cyc_start << ' ' << cyc_end << '\n';
         }
         return;
     }
@@ -56,11 +55,6 @@ int main() {
             dfs(i);
         }
     }
-
-    for (int i = 1; i <= N; i++) {
-        cerr << path[i] << ' ';
-    }
-    cerr << '\n';
 
     cout << cyc_end - cyc_start + 1 << '\n';
 
