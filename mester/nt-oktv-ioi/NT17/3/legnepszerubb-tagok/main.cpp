@@ -59,4 +59,6 @@ int main() {
         cerr << path[i] << ' ';
     }
     cerr << '\n';
+
+    cerr << cyc_start << ' ' << cyc_end << '\n';
 }
