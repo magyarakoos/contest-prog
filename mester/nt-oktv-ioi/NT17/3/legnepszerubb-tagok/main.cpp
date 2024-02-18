@@ -14,6 +14,9 @@ vector<int> g, vis, path;
 int cyc_start, cyc_end;
 
 void dfs(int u) {
+
+    cerr << u << '\n';
+
     if (vis[u]) {
         int new_cyc_start = vis[u];
         int new_cyc_end = t;
@@ -43,6 +46,8 @@ int main() {
 
     vis.resize(N + 1);
     path.resize(N + 1);
+
+    cerr << '\n';
 
     for (int i = 1; i <= N; i++) {
         if (!vis[i]) {
