@@ -29,6 +29,7 @@ void dfs(int u, int par) {
         return;
     }
 
+    parentS[u] = par;
     color[u] = 1;
 
     for (int neigh : g[u]) {
@@ -68,6 +69,6 @@ int main() {
     }
 
     cout << size(result) << '\n';
-    for (int e : result) cout << e + 1 << ' ';
+    for (int e : result) cout << e << ' ';
     cout << '\n';
 }
