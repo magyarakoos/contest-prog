@@ -38,23 +38,28 @@ int main() {
 
     g.resize(N + 1);
 
-    vector<bool> indegS(N + 1, 1);
+    vector<bool> indegS(N + 1);
 
     for (int i = 1; i <= N; i++) {
         int u;
         cin >> u;
         g[i] = u;
-        indegS[u] = 0;
+        indegS[u] = 1;
     }
 
     vis.resize(N + 1);
     path.resize(N + 1);
 
     for (int i = 1; i <= N; i++) {
-        if (!vis[i] && indegS[i]) {
+        if (!vis[i] && !indegS[i]) {
             dfs(i);
         }
     }
+
+    for (int i = 1; i <= N; i++) {
+        cerr << path[i] << ' ';
+    }
+    cerr << '\n';
 
     cout << cyc_end - cyc_start << '\n';
 
