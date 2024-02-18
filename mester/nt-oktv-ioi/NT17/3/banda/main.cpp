@@ -10,7 +10,7 @@ using ll = long long;
 int N;
 vector<vector<int>> g;
 
-void solve(int u, bool choose) {
+int32_t solve(int u, bool choose) {
 
 }
 
