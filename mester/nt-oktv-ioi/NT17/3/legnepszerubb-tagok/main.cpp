@@ -16,5 +16,13 @@ int main() {
 
     cin >> N;
 
+    g.resize(N + 1);
+
+    for (int i = 1; i <= N; i++) {
+        int u;
+        cin >> u;
+        g[i] = u;
+    }
+
     
 }
