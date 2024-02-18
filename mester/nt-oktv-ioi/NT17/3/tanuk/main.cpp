@@ -56,7 +56,7 @@ int main() {
         }
 
         for (int j : intvS) {
-            
+            for (int k = i )
         }
     }
 
