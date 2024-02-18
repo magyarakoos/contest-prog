@@ -69,5 +69,5 @@ int main() {
 
     cout << size(result) << '\n';
     for (int e : result) cout << e + 1 << ' ';
-
+    cout << '\n';
 }
