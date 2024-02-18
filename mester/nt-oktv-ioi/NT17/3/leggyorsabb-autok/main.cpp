@@ -54,7 +54,7 @@ int main() {
         cerr << '\n';
     }
 
-    vector<vector<int>> intersectS(N - 1);
+    vector<vector<array<int, 2>>> intersectS(N - 1);
 
     for (int i = 0; i < N - 1; i++) {
         intersectS[i] = make_intersect(v[i], v[i + 1]);
@@ -62,7 +62,7 @@ int main() {
 
     for (int i = 0; i < N - 1; i++) {
         cerr << i + 1 << " : ";
-        for (int x : intersectS[i]) {
+        for (auto [carid, x] : intersectS[i]) {
             cerr << x << ' ';
         }
         cerr << '\n';
