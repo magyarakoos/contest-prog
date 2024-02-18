@@ -10,13 +10,11 @@ using ll = long long;
 int N;
 int t = 1;
 
-vector<int> g;
-vector<bool> vis;
-vector<int> path;
+vector<int> g, vis, path;
 
 void dfs(int u) {
     if (vis[u]) {
-        
+
     }
 }
 
@@ -37,7 +35,7 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         if (!vis[i]) {
-            vis[i] = 1;
+            vis[i] = t;
             dfs(i);
         }
     }
