@@ -55,5 +55,7 @@ int main() {
 
     cout << max(a, b) << '\n';
     
-    if (a > b)
+    if (a < b) {
+        
+    }
 }
