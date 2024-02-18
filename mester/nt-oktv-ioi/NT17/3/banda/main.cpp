@@ -15,13 +15,19 @@ int solve(int u, bool choose) {
         return choose;
     }
 
-    int a = 0, b = choose;
-    for (int child : g[u]) {
-        if (!choose) a += solve(child, 1);
-        b += solve(child, 0);
+    if (choose) {
+        int result = 1;
+        for (int child : g[u]) {
+            result += solve(child, 0);
+        }
+        return result;
+    } else {
+        int result = 0;
+        for (int child : g[u]) {
+            result += solve(child, 0);
+        }
+        return result;
     }
-
-    return max(a, b);
 }
 
 int main() {
