@@ -20,11 +20,11 @@ void dfs(int u, int par) {
 
     if (color[u] == 1) {
         int curr = par;
-        cycle[par] 
+        cycle[par] = 1;
 
         while (curr != u) {
-            cycle[curr] = 1;
             curr = parentS[curr];
+            cycle[curr] = 1;
         }
 
         return;
