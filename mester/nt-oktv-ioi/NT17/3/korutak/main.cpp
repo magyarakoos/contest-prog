@@ -25,6 +25,14 @@ void dfs(int u, int par) {
             cycle[curr] = 1;
             curr = parentS[curr];
         }
+
+        return;
+    }
+
+    color[u] = 1;
+
+    for (int neigh : g[u]) {
+        
     }
 }
 
