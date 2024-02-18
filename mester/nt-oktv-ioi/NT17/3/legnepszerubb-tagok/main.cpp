@@ -51,4 +51,9 @@ int main() {
             dfs(i);
         }
     }
+
+    for (int i = 1; i <= N; i++) {
+        cerr << path[i] << ' ';
+    }
+    cerr << '\n';
 }
