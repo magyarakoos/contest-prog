@@ -12,7 +12,13 @@ int N, M;
 
 vector<int> intvS_at(int t) {
 
+    vector<int> result;
+
     for (int i = 0; i < t; i++) {
+        if (beginS[i] > t) {
+            return result;
+        }
+
         
     }
 }
