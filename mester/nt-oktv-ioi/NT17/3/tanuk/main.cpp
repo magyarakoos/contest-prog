@@ -56,7 +56,9 @@ int main() {
         }
 
         for (int j : intvS) {
-
+            
         }
     }
+
+    cout << tot << '\n';
 }
