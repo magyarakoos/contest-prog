@@ -14,9 +14,10 @@ vector<int> intvS_at(int t) {
 
     vector<int> result;
 
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N && t >= beginS[i]; i++) {
 
-   }
+        if ()
+    }
 }
 
 int main() {
