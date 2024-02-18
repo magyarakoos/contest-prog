@@ -9,7 +9,7 @@ using ll = long long;
 
 int N;
 vector<vector<int>> g;
-vector<unordered_set<int>> pick;
+vector<vector<int>> pick;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
@@ -28,7 +28,7 @@ int solve(int u, bool choose) {
             int a = solve(child, 1);
             int b = solve(child, 0);
             if (a > b) {
-                pick[u].insert(child);
+                pick[u].push_back(child);
             }
             result += max(solve(child, 1), solve(child, 0));
         }
@@ -56,6 +56,8 @@ int main() {
     cout << max(a, b) << '\n';
     
     if (a < b) {
-        
+        for (int child : g[1]) {
+            
+        }
     }
 }
