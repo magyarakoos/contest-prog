@@ -23,6 +23,9 @@ void dfs(int u) {
         }
         return;
     }
+
+    t++;
+    dfs(g[u]);
 }
 
 int main() {
