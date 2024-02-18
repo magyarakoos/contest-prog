@@ -16,8 +16,7 @@ vector<int> intvS_at(int t) {
 
     for (int i = 0; i < N; i++) {
 
-
-    }
+   }
 }
 
 int main() {
