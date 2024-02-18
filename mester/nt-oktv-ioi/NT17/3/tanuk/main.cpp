@@ -14,7 +14,7 @@ vector<int> intvS_at(int t) {
 
     vector<int> result;
 
-    for (int i = 0; i < N && t <= endS[i]; i++) {
+    for (int i = 0; i < N; i++) {
 
 
     }
