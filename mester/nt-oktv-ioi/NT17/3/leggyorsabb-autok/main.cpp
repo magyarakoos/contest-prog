@@ -7,7 +7,10 @@
 using namespace std;
 using ll = long long;
 
-vector<pair<int, 
+vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
+
+    
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
