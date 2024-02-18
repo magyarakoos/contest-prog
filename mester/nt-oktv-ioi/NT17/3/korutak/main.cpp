@@ -7,10 +7,16 @@
 using namespace std;
 using ll = long long;
 
+int N, M;
+vector<vector<int>> g;
+vector<int> color;
+vector<bool> cycle;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int N, M;
     cin >> N >> M;
+
+    g.resize(N + 1);
     
 }
