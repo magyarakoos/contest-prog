@@ -20,6 +20,7 @@ void dfs(int u, int par) {
 
     if (color[u] == 1) {
         int curr = par;
+        cycle[par] 
 
         while (curr != u) {
             cycle[curr] = 1;
