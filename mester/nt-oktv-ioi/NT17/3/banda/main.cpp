@@ -22,7 +22,7 @@ int solve(int u, bool choose) {
         }
         return result;
     } else {
-        int result = 0;
+        int a = 0, b = 0;
         for (int child : g[u]) {
             result += solve(child, 1);
         }
