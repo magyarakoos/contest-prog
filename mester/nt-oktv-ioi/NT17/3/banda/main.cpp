@@ -12,8 +12,10 @@ vector<vector<int>> g;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
-        
+        return choose;
     }
+
+    int a = 1
 }
 
 int main() {
