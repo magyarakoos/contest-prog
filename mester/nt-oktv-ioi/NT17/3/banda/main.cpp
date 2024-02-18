@@ -10,17 +10,9 @@ using ll = long long;
 int N;
 vector<vector<int>> g;
 
-unordered_map<ll, int> cache;
-
 int solve(int u, bool choose) {
     if (g[u].empty()) {
         return choose;
-    }
-
-    ll key = (u << 8) | choose;
-
-    if (cache.count(key)) {
-        return cache[key];
     }
 
     if (choose) {
