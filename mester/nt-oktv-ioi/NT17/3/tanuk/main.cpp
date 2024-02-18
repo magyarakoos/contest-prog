@@ -69,7 +69,7 @@ int main() {
             }
         }
 
-        i = best - 2;
+        i = best - 1;
         result.push_back(best_i);
     }
 
