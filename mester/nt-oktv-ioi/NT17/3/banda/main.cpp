@@ -59,7 +59,9 @@ int main() {
 
     if (a < b) {
         for (int child : pick[1]) {
-
+            result.push_back(child);
         }
+    } else {
+        
     }
 }
