@@ -9,7 +9,7 @@ using ll = long long;
 
 vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
 
-    
+
 }
 
 int main() {
@@ -36,5 +36,5 @@ int main() {
         cerr << '\n';
     }
 
-
+    vector<vector<array<int, 2>>> intersectS(N - 1);
 }
