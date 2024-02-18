@@ -59,7 +59,7 @@ int main() {
 
         for (int j : intvS) {
             for (int k = i + 1; k < M; k++) {
-                if (beginS[])
+                if (beginS[j] > sus[k] || endS)
             }
         }
     }
