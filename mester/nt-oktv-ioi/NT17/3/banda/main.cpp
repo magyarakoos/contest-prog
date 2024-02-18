@@ -12,6 +12,7 @@ vector<vector<int>> g;
 
 int solve(int u, bool choose) {
     if (g[u].empty()) {
+        cerr << u << "  " << choose << '\n';
         return choose;
     }
 
