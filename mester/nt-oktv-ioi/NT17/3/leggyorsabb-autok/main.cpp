@@ -7,9 +7,9 @@
 using namespace std;
 using ll = long long;
 
-vector<array<int, 2>> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
+vector<int> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>& t) {
 
-    vector<array<int, 2>> result;
+    vector<int> result;
 
     auto sit = s.begin();
     auto tit = t.begin();
@@ -46,5 +46,5 @@ int main() {
         cerr << '\n';
     }
 
-    vector<vector<array<int, 2>>> intersectS(N - 1);
+    vector<vector<int>> intersectS(N - 1);
 }
