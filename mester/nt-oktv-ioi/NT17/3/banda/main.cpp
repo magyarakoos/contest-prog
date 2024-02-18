@@ -17,9 +17,9 @@ int solve(int u, bool choose) {
         return choose;
     }
 
-    ll key = 
+    ll key = (u << 8) | choose;
 
-    if (cache.count({u, choose})) {
+    if (cache.count(key)) {
         return cache[{u, choose}];
     }
 
