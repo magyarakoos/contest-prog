@@ -20,6 +20,8 @@ int main() {
     for (int U = 2; U <= N; U++) {
         int V;
         cin >> V;
-        
+        g[V].push_back(U);
     }
+
+    
 }
