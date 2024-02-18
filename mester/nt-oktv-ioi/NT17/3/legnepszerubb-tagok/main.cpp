@@ -15,7 +15,9 @@ vector<bool> vis;
 vector<int> path;
 
 void dfs(int u) {
-
+    if (vis[u]) {
+        
+    }
 }
 
 int main() {
