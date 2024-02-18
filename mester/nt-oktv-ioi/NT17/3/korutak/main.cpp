@@ -18,5 +18,13 @@ int main() {
     cin >> N >> M;
 
     g.resize(N + 1);
-    
+    color.resize(N + 1);
+    cycle.resize(N + 1);
+
+    while (M--) {
+        int U, V;
+        cin >> U >> V;
+        g[U].push_back(V);
+        g[V].push_back(U);
+    }
 }
