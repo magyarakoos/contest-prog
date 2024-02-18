@@ -15,6 +15,8 @@ int main() {
     vector<set<array<int, 2>>> v(N);
 
     while (M--) {
-        int carid, placeid
+        int carid, placeid, hour, min;
+        cin >> carid >> placeid >> hour >> min;
+        min += hour * 60;
     }
 }
