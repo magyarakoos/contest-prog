@@ -25,6 +25,11 @@ int solve(int u, bool choose) {
     } else {
         int result = 0;
         for (int child : g[u]) {
+            int a = solve(child, 1);
+            int b = solve(child, 0);
+            if (b > a) {
+
+            }
             result += max(solve(child, 1), solve(child, 0));
         }
         return result;
