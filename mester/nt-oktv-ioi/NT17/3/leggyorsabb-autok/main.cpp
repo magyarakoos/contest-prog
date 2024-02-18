@@ -60,5 +60,10 @@ int main() {
         intersectS[i] = make_intersect(v[i], v[i + 1]);
     }
 
-    
+    for (int i = 0; i < N - 1; i++) {
+        cerr << i + 1 << " : ";
+        for (int x : intersectS[i]) {
+            cout << x << ' ';
+        }
+    }
 }
