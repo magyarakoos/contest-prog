@@ -19,9 +19,9 @@ void dfs(int u) {
         int new_cyc_start = vis[u];
         int new_cyc_end = t - 1;
         if (new_cyc_end - new_cyc_start > cyc_end - cyc_start) {
-            cerr << 
             cyc_start = new_cyc_start;
             cyc_end = new_cyc_end;
+            cerr << cyc_start << ' ' << cyc_end << '\n';
         }
         return;
     }
