@@ -18,9 +18,13 @@ vector<int> make_intersect(const set<array<int, 2>>& s, const set<array<int, 2>>
 
         if ((*sit)[0] == (*tit)[0]) {
             result.push_back((*tit)[1] - (*sit)[1]);
-        } else if ((*sit)[]) (
-
-        )
+            sit++;
+            tit++;
+        } else if ((*sit)[0] < (*tit)[0]) {
+            sit++;
+        } else {
+            tit++;
+        }
     }
 }
 
