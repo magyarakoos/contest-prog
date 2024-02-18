@@ -68,7 +68,7 @@ int main() {
             }
         }
 
-        i = k - 2;
+        i = best - 2;
     }
 
     cout << tot << '\n';
