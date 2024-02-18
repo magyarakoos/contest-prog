@@ -46,6 +46,7 @@ int main() {
         v[placeid].insert({carid, min});
     }
 
+    #ifdef LOCAL
     for (int i = 0; i < N; i++) {
         cerr << i + 1 << " : ";
         for (auto [carid, min] : v[i]) {
@@ -53,6 +54,7 @@ int main() {
         }
         cerr << '\n';
     }
+    #endif
 
     vector<vector<array<int, 2>>> intersectS(N - 1);
 
@@ -60,6 +62,7 @@ int main() {
         intersectS[i] = make_intersect(v[i], v[i + 1]);
     }
 
+    #ifdef LOCAL
     for (int i = 0; i < N - 1; i++) {
         cerr << i + 1 << " : ";
         for (auto [carid, x] : intersectS[i]) {
@@ -67,6 +70,6 @@ int main() {
         }
         cerr << '\n';
     }
-
+    #endif
     
 }
