@@ -56,6 +56,7 @@ int main() {
     cout << cyc_end - cyc_start << '\n';
 
     for (int i = cyc_start; i < cyc_end; i++)  {
-        
+        cout << path[i] << ' ';
     }
+    cout << '\n';
 }
