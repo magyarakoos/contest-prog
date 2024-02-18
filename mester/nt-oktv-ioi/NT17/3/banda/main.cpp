@@ -15,9 +15,10 @@ int solve(int u, bool choose) {
         return choose;
     }
 
-    int a = 0;
+    int a = 0, b = 1;
     for (int child : g[u]) {
         a += solve(child, 1);
+        b += solve(child, 0);
     }
 }
 
