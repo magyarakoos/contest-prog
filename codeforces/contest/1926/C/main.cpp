@@ -10,7 +10,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    unordered_map<int, int>
+    unordered_map<int, int> m;
 
     int T;
     cin >> T;
@@ -21,6 +21,12 @@ int main() {
         int result = 0;
 
         for (int i = 1; i <= N; i++) {
+
+            if (m.count(i)) {
+                result += m[i];
+            } else {
+                
+            }
 
             int j = i;
 
