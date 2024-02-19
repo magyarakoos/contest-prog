@@ -37,8 +37,7 @@ int main() {
             if (s.count(flip)) {
                 cout << flip << ' ' << v[i] << '\n';
                 result--;
-                s.erase()
-                s[v[i]]--;
+                s.extract()
             }
         }
 
