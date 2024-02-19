@@ -37,10 +37,10 @@ int main() {
             if (ita != m.end() && itb != m.end()) {
                 result--;
 
-                ita = m.find(v[i]);
-            auto itb = m.find(flip);
-
                 m.erase(ita);
+                ita = m.find(v[i]);
+                itb = m.find(flip);
+
                 m[v[i]]--;
             }
         }
