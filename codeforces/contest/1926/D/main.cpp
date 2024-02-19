@@ -19,7 +19,7 @@ int main() {
         cin >> N;
 
         vector<unsigned> v(N);
-        unordered_map<unsigned> s;
+        unordered_map<unsigned, int> m;
         
         int result = N;
 
@@ -27,20 +27,16 @@ int main() {
             unsigned X;
             cin >> X;
             v[i] = X;
-            if (s.count(X)) {
-                result++;
-            } else {
-                s.insert(X);
-            }
+            m[X]++;
         }
 
 
         for (int i = 0; i < N; i++) {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
 
-            if (s.count(flip)) {
+            if (m[flip]) {
                 result--;
-                s.erase(v[i]);
+                
             }
         }
 
