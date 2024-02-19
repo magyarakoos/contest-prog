@@ -13,14 +13,9 @@ int main() {
     int T;
     cin >> T;
     while (T--) {
-        int ac = 0, bc = 0;
-        for (int i = 0; i < 5; i++) {
-            char c;
-            cin >> c;
-            if (c == 'A') ac++;
-            if (c == 'B') bc++;
-        }
-
-        cout << (ac > bc ? "A\n" : "B\n");
+        int N;
+        cin >> N;
+        
+                
     }
 }
