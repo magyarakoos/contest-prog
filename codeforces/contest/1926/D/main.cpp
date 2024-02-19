@@ -31,11 +31,12 @@ int main() {
         int result = N;
 
         for (int i = 0; i < N; i++) {
-            unsigned flip = ~v[i] & (UINT_MAX - 1);
+            unsigned flip = ~v[i] & (UINT_MAX >> 1);
             cout << '~' << flip << '\n';
 
             if (s.count(flip)) {
                 result--;
+                s.erase(v[i]);
             }
         }
 
