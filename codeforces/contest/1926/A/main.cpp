@@ -21,6 +21,6 @@ int main() {
             if (c == 'B') bc++;
         }
 
-        cout << 
+        cout << (ac > bc ? "A\n" : "B\n");
     }
 }
