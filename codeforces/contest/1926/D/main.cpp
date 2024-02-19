@@ -18,6 +18,14 @@ int main() {
         int N;
         cin >> N;
         
+        unordered_set<int> s;
+
+        while (N--) {
+            int X;
+            cin >> X;
+            s.insert(X);
+        }
+
         
     }
 }
