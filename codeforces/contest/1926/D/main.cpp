@@ -34,12 +34,14 @@ int main() {
         for (int i = 0; i < N; i++) {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
 
+            if (!s.count(v[i])) {
+                continue;
+            }
+
             if (s.count(flip)) {
                 cout << flip << ' ' << v[i] << '\n';
                 result--;
-
-                auto it = s.fint()
-                s.extract()
+                
             }
         }
 
