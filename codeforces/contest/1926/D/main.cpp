@@ -34,8 +34,11 @@ int main() {
             int flip = ~v[i];
 
             if (s.count(flip)) {
-                
+                result--;
+                s.erase(v[i]);
             }
         }
+
+        cout << result;
     }
 }
