@@ -15,14 +15,14 @@ int main() {
     int T;
     cin >> T;
     while (T--) {
-        int N;
+        unsigned N;
         cin >> N;
 
-        vector<int> v(N);
-        unordered_set<int> s;
+        vector<unsigned> v(N);
+        unordered_set<unsigned> s;
         
         for (int i = 0; i < N; i++) {
-            int X;
+            unsigned X;
             cin >> X;
             v[i] = X;
             s.insert(X);
@@ -31,7 +31,7 @@ int main() {
         int result = N;
 
         for (int i = 0; i < N; i++) {
-            int flip = ~v[i];
+            unsigned flip = ~v[i];
             cout << '~' << flip << '\n';
 
             if (s.count(flip)) {
