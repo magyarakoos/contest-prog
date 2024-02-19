@@ -20,6 +20,8 @@ int main() {
 
         cout << 
             46 * (N / 10) + 
-            accumulate() +accumulate(v.begin(), v.begin() + (N % 10), 0) << '\n';
+            accumulate(v.begin(), v.begin() + (N / 10), 0) +
+            accumulate(v.begin(), v.begin() + (N % 10), 0)
+        << '\n';
     }
 }
