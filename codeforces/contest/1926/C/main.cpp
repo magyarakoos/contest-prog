@@ -16,13 +16,6 @@ int main() {
         int N;
         cin >> N;
 
-        const vector<int> v {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-        cout <<
-            46 * (N / 10) +
-            accumulate(v.begin(), v.begin() + (N / 10) + 1, 0) +
-            accumulate(v.begin(), v.begin() + (N % 10) + 1, 0) +
-            accumulate(v.begin(), v.begin() + (N / 10), 0)
-        << '\n';
+        for (int i = 1; i < N;)
     }
 }
