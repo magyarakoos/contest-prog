@@ -28,8 +28,14 @@ int main() {
             s.insert(X);
         }
 
+        int result = N;
+
         for (int i = 0; i < N; i++) {
-            
+            int flip = ~v[i];
+
+            if (s.count(flip)) {
+                
+            }
         }
     }
 }
