@@ -19,21 +19,17 @@ int main() {
         cin >> N;
 
         vector<int> v(N);
+        unordered_set<int> s;
         
         for (int i = 0; i < N; i++) {
             int X;
             cin >> X;
-            
-        }
-
-        unordered_set<int> s;
-
-        while (N--) {
-            int X;
-            cin >> X;
+            v[i] = X;
             s.insert(X);
         }
 
-
+        for (int i = 0; i < N; i++) {
+            
+        }
     }
 }
