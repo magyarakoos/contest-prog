@@ -18,6 +18,8 @@ int main() {
 
         unordered_multiset<unsigned> m;
 
+        int result = 0;
+
         for (int i = 0; i < N; i++) {
             unsigned X;
             cin >> X;
@@ -27,12 +29,13 @@ int main() {
             auto it = m.find(Y);
 
             if (it != m.end()) {
+                result++;
                 m.erase(it);
             } else {
                 m.insert(X);
             }
         }
 
-        cout << size(m) << '\n';
+        cout << size(m) + result << '\n';
     }
 }
