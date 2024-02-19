@@ -19,7 +19,10 @@ int main() {
         int N;
         cin >> N;
 
-        
+        if (N <= biggest) {
+            cout << v[N] << '\n';
+            continue;
+        }
 
         biggest = max(biggest, N);
 
