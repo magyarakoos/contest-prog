@@ -28,14 +28,15 @@ int main() {
 
         for (int i = biggest + 1; i <= N; i++) {
 
+            int k = 0;
             int j = i;
 
             while (j) {
-                v[i] += j % 10;
+                k += j % 10;
                 j /= 10;
             }
 
-            result += j;
+            result += k;
             v[i] = result;
         }
 
