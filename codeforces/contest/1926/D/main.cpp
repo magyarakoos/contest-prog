@@ -31,7 +31,10 @@ int main() {
         for (int i = 0; i < N; i++) {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
 
-            if (m.find() && m[flip]) {
+            auto ita = m.find(v[i]);
+            auto itb = m.find(flip);
+
+            if (ita != m.end() && m.find(flip) != m.end()) {
                 result--;
                 m[flip]--;
                 m[v[i]]--;
