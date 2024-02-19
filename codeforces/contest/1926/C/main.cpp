@@ -10,7 +10,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    unordered_map<int, int> m;
+    vector<int> v(200'000);
 
     int T;
     cin >> T;
@@ -22,18 +22,17 @@ int main() {
 
         for (int i = 1; i <= N; i++) {
 
-            if (m.count(i)) {
-                result += m[i];
+            if (v[i]) {
+                result += v[i];
             } else {
                 int j = i;
-                int k = 0;
 
                 while (j) {
-                    k += j % 10;
+                    v[i] += j % 10;
                     j /= 10;
                 }
 
-                m[i] = k;
+                v[i] = k;
                 result += k;
             }
         }
