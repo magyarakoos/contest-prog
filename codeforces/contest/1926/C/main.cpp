@@ -12,13 +12,17 @@ int main() {
 
     vector<int> v(200'001);
 
+    int biggest = 0
     int T;
     cin >> T;
     while (T--) {
         int N;
         cin >> N;
 
-        if () 
+        if (v[N]) {
+            cout << v[N] << '\n';
+            continue;
+        }
 
         int result = 0;
 
