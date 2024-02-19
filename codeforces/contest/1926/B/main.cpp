@@ -29,7 +29,9 @@ int main() {
         for (int i = 1; i < N; i++) {
             for (int j = 1; j < N; j++) {
                 
-                char c[] = a
+                if (v[i][j] + v[i - 1][j - 1] + v[i][j - 1] + v[i - 1][j] == 3) {
+                    cout <<
+                }
             }
         }
     }
