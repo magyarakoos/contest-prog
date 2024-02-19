@@ -16,8 +16,8 @@ int main() {
         int N;
         cin >> N;
 
-        const vector<int> v {1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9;
+        const vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        cout << single * (N / 10);
+        cout << accumulate(all(v)) * (N / 10);
     }
 }
