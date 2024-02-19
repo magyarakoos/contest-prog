@@ -36,12 +36,9 @@ int main() {
 
             if (ita != m.end() && itb != m.end()) {
                 result--;
-
                 m.erase(ita);
-                ita = m.find(v[i]);
                 itb = m.find(flip);
-
-                m[v[i]]--;
+                m.erase(itb);
             }
         }
 
