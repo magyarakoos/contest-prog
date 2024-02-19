@@ -24,11 +24,9 @@ int main() {
             continue;
         }
 
-        biggest = max(biggest, N);
+        int result = v[biggest];
 
-        int result = 0;
-
-        for (int i = 1; i <= N; i++) {
+        for (int i = biggest + 1; i <= N; i++) {
 
             if (!v[i]) {
                 int j = i;
@@ -43,5 +41,7 @@ int main() {
         }
 
         cout << result << '\n';
+
+        biggest = max(biggest, N);
     }
 }
