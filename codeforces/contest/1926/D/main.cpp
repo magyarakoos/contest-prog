@@ -32,13 +32,11 @@ int main() {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
 
             auto ita = m.find(v[i]);
-            auto itb = m.find(flip);
 
-            if (ita != m.end() && itb != m.end()) {
+            if (ita != m.end() && m.find(flip) != m.end()) {
                 result--;
                 m.erase(ita);
-                itb = m.find(flip);
-                m.erase(itb);
+                m.erase(m.find(flip));
             }
         }
 
