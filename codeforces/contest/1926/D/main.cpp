@@ -16,7 +16,6 @@ int main() {
         int N;
         cin >> N;
 
-        vector<unsigned> v(N);
         unordered_multiset<unsigned> m;
         
         int result = N;
@@ -24,20 +23,9 @@ int main() {
         for (int i = 0; i < N; i++) {
             unsigned X;
             cin >> X;
-            v[i] = X;
+
+            
             m.insert(X);
-        }
-
-        for (int i = 0; i < N; i++) {
-            unsigned flip = ~v[i] & (UINT_MAX >> 1);
-
-            auto ita = m.find(v[i]);
-
-            if (ita != m.end() && m.find(flip) != m.end()) {
-                result--;
-                m.erase(ita);
-                m.erase(m.find(flip));
-            }
         }
 
         cout << result << '\n';
