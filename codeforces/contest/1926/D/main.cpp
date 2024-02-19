@@ -19,7 +19,7 @@ int main() {
         cin >> N;
 
         vector<unsigned> v(N);
-        unordered_set<unsigned> s;
+        unordered_map<unsigned> s;
         
         int result = N;
 
@@ -29,9 +29,9 @@ int main() {
             v[i] = X;
             if (s.count(X)) {
                 result++;
-            }
-            else {
+            } else {
                 s.insert(X);
+            }
         }
 
 
