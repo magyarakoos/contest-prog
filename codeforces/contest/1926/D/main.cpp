@@ -17,7 +17,15 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
+
+        vector<int> v(N);
         
+        for (int i = 0; i < N; i++) {
+            int X;
+            cin >> X;
+            
+        }
+
         unordered_set<int> s;
 
         while (N--) {
@@ -26,6 +34,6 @@ int main() {
             s.insert(X);
         }
 
-        
+
     }
 }
