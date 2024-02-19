@@ -15,7 +15,21 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        
+
+        vector<vector<bool>> v(N, vector<bool>(N));
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                char c;
+                cin >> c;
+                v[i][j] = c == '1';
+            }
+        }
+
+        for (int i = 1; i < N; i++) {
+            for (int j = 1; j < N; j++) {
                 
+            }
+        }
     }
 }
