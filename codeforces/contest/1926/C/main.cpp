@@ -26,6 +26,6 @@ int main() {
             }
         }
 
-        cout << result << endl;
+        cout << result << '\n';
     }
 }
