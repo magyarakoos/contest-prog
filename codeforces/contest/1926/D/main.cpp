@@ -21,14 +21,19 @@ int main() {
         vector<unsigned> v(N);
         unordered_set<unsigned> s;
         
+        int result = N;
+
         for (int i = 0; i < N; i++) {
             unsigned X;
             cin >> X;
             v[i] = X;
-            s.insert(X);
+            if (s.count(X)) {
+                result++;
+            }
+            else {
+                s.insert(X);
         }
 
-        int result = N;
 
         for (int i = 0; i < N; i++) {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
