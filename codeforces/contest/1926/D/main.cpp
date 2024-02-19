@@ -36,7 +36,8 @@ int main() {
 
             if (m[flip]) {
                 result--;
-                
+                m[v[i]]--;
+                m[flip]--;
             }
         }
 
