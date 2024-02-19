@@ -31,11 +31,9 @@ int main() {
         for (int i = 0; i < N; i++) {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
 
-            auto ita = m.find(v[i]);
-
-            if (ita != m.end() && m.find(flip) != m.end()) {
+            if (m.find(v[i]) != m.end() && m.find(flip) != m.end()) {
                 result--;
-                m.erase(ita);
+                m.erase(m.find(v[i]));
                 m.erase(m.find(flip));
             }
         }
