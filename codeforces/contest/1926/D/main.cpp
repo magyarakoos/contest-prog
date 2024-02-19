@@ -37,8 +37,8 @@ int main() {
             if (m[flip]) {
                 cout << flip << ' ' << v[i] << '\n';
                 result--;
-                m[v[i]]--;
                 m[flip]--;
+                m[v[i]]--;
             }
         }
 
