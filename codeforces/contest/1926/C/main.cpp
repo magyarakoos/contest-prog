@@ -13,14 +13,15 @@ int main() {
     int T;
     cin >> T;
     while (T--) {
-        constexpr int N = 12;
+        int N;
+        cin >> N;
 
-        constexpr int v[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        const vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        constexpr int result =
+        cout << 
             46 * (N / 10) + 
-            accumulate(v, v + (N / 10), 0) +
-            accumulate(v, v.begin() + (N % 10), 0)
-        ;
+            accumulate(v.begin(), v.begin() + (N / 10), 0) +
+            accumulate(v.begin(), v.begin() + (N % 10), 0)
+        << '\n';
     }
 }
