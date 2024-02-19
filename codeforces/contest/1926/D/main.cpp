@@ -26,7 +26,11 @@ int main() {
 
             unsigned Y = ~X & (UINT_MAX >> 1);
 
-            if (m.find())
+            auto it = m.find(Y);
+
+            if (it != m.end()) {
+                
+            }
 
             m.insert(X);
         }
