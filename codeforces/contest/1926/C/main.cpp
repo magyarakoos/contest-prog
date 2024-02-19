@@ -25,14 +25,16 @@ int main() {
             if (m.count(i)) {
                 result += m[i];
             } else {
-                
-            }
+                int j = i;
+                int k = 0;
 
-            int j = i;
+                while (j) {
+                    k += j % 10;
+                    j /= 10;
+                }
 
-            while (j) {
-                result += j % 10;
-                j /= 10;
+                m[i] = k;
+                result += k;
             }
         }
 
