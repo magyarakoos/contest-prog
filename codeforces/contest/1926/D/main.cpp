@@ -17,8 +17,6 @@ int main() {
         cin >> N;
 
         unordered_multiset<unsigned> m;
-        
-        int result = N;
 
         for (int i = 0; i < N; i++) {
             unsigned X;
@@ -33,9 +31,8 @@ int main() {
             } else {
                 m.insert(X);
             }
-
         }
 
-        cout << result << '\n';
+        cout << size(m) << '\n';
     }
 }
