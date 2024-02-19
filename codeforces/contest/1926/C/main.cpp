@@ -16,6 +16,13 @@ int main() {
         int N;
         cin >> N;
 
-        for (int i = 1; i < N;)
+        int result = 0;
+
+        for (int i = 1; i <= N; i++) {
+
+            while (i) {
+                result += i % 10;
+            }
+        }
     }
 }
