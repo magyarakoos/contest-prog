@@ -22,7 +22,7 @@ int main() {
             46 * (N / 10) +
             accumulate(v.begin(), v.begin() + (N / 10) + 1, 0) +
             accumulate(v.begin(), v.begin() + (N % 10) + 1, 0) +
-            accumulate(v.begin(), v.begin() + (N % 10), 0)
+            accumulate(v.begin(), v.begin() + (N / 10), 0)
         << '\n';
     }
 }
