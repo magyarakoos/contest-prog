@@ -35,10 +35,9 @@ int main() {
 
             if (s.count(flip)) {
                 result--;
-                s.erase(v[i]);
             }
         }
 
-        cout << result;
+        cout << result << '\n';
     }
 }
