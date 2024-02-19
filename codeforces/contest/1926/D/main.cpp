@@ -24,7 +24,10 @@ int main() {
             unsigned X;
             cin >> X;
 
-            
+            unsigned Y = ~X & (UINT_MAX >> 1);
+
+            if (m.find())
+
             m.insert(X);
         }
 
