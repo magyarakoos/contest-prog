@@ -20,9 +20,11 @@ int main() {
 
         for (int i = 1; i <= N; i++) {
 
-            while (i) {
-                result += i % 10;
-                i /= 10;
+            int j = i;
+
+            while (j) {
+                result += j % 10;
+                j /= 10;
             }
         }
 
