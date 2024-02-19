@@ -29,10 +29,11 @@ int main() {
             auto it = m.find(Y);
 
             if (it != m.end()) {
-                
+                m.erase(it);
+            } else {
+                m.insert(X);
             }
 
-            m.insert(X);
         }
 
         cout << result << '\n';
