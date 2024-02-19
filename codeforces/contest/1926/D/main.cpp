@@ -28,7 +28,6 @@ int main() {
             m[X]++;
         }
 
-
         for (int i = 0; i < N; i++) {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
 
