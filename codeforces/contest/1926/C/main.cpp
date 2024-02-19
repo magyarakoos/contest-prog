@@ -31,7 +31,7 @@ int main() {
                 }
             }
 
-            result += v[i];
+            v[i] = result;
         }
 
         cout << result << '\n';
