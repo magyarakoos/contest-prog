@@ -22,19 +22,16 @@ int main() {
 
         for (int i = 1; i <= N; i++) {
 
-            if (v[i]) {
-                result += v[i];
-            } else {
+            if (!v[i]) {
                 int j = i;
 
                 while (j) {
                     v[i] += j % 10;
                     j /= 10;
                 }
-
-                v[i] = k;
-                result += k;
             }
+
+            result += v[i];
         }
 
         cout << result << '\n';
