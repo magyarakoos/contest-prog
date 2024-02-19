@@ -17,7 +17,7 @@ int main() {
         cin >> N;
 
         vector<unsigned> v(N);
-        unordered_multiset<unsigned, int> m;
+        unordered_multiset<unsigned> m;
         
         int result = N;
 
