@@ -15,7 +15,7 @@ int main() {
     int T;
     cin >> T;
     while (T--) {
-        unsigned N;
+        int N;
         cin >> N;
 
         vector<unsigned> v(N);
@@ -31,7 +31,7 @@ int main() {
         int result = N;
 
         for (int i = 0; i < N; i++) {
-            unsigned flip = ~v[i];
+            unsigned flip = ~v[i] & (UINT_MAX - 1)
             cout << '~' << flip << '\n';
 
             if (s.count(flip)) {
