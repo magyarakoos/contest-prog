@@ -28,16 +28,15 @@ int main() {
 
         for (int i = biggest + 1; i <= N; i++) {
 
-            if (!v[i]) {
-                int j = i;
+            int j = i;
 
-                while (j) {
-                    v[i] += j % 10;
-                    j /= 10;
-                }
+            while (j) {
+                v[i] += j % 10;
+                j /= 10;
             }
 
-            result += v[i];
+            result += j;
+            v[i] = result;
         }
 
         cout << result << '\n';
