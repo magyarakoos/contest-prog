@@ -35,6 +35,7 @@ int main() {
             unsigned flip = ~v[i] & (UINT_MAX >> 1);
 
             if (m[flip]) {
+                cout << flip << ' ' << v[i] << '\n';
                 result--;
                 m[v[i]]--;
                 m[flip]--;
