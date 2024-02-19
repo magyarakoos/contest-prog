@@ -10,19 +10,13 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    vector<int> v(200'001);
+    vector<int> v(200'000);
 
-    int biggest = 0
     int T;
     cin >> T;
     while (T--) {
         int N;
         cin >> N;
-
-        if (v[N]) {
-            cout << v[N] << '\n';
-            continue;
-        }
 
         int result = 0;
 
@@ -37,7 +31,7 @@ int main() {
                 }
             }
 
-            v[i] = result;
+            result += v[i];
         }
 
         cout << result << '\n';
