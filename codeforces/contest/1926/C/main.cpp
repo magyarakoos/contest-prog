@@ -22,7 +22,10 @@ int main() {
 
             while (i) {
                 result += i % 10;
+                i /= 10;
             }
         }
+
+        cout << result << endl;
     }
 }
