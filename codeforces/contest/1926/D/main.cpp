@@ -32,6 +32,7 @@ int main() {
 
         for (int i = 0; i < N; i++) {
             int flip = ~v[i];
+            cout << '~' << flip << '\n';
 
             if (s.count(flip)) {
                 result--;
