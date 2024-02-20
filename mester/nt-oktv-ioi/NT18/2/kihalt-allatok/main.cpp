@@ -34,7 +34,9 @@ int main() {
         
         if (mx < curr) {
             mx = curr;
-            t = 
+            t = k;
         }
     }
+
+    cout << mx << ' ' << t << '\n';
 }
