@@ -29,10 +29,14 @@ int main() {
         cout << E << ' ' << V << '\n';
     }
 
+    cout << '\n';
+
     int mx = 0, t = 0, curr = 0;
 
     for (auto [k, v] : m) {
         curr += v;
+
+        cout << k << ' ' << v << ' ' << curr << '\n';
         
         if (mx < curr) {
             mx = curr;
