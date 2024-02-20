@@ -45,7 +45,7 @@ int main() {
 
         int p = 1;
 
-        string path =
+        string path;
 
         while (p < N) {
             bool step = 0;
@@ -61,6 +61,10 @@ int main() {
                     step = 1;
                     i = y;
                     j = x;
+
+                    path += (
+                        dy == 1 && dx == 0 ? 
+                    );
                     break;
                 }
             }
