@@ -57,6 +57,9 @@ int main() {
                 if (m[y][x] == s[p]) {
                     p++;
                     step = 1;
+                    i = y;
+                    j = x;
+                    break;
                 }
             }
             if (!step) {
