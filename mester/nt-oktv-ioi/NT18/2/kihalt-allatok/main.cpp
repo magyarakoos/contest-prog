@@ -35,8 +35,6 @@ int main() {
 
     for (auto [k, v] : m) {
         curr += v;
-
-        cout << k << ' ' << v << ' ' << curr << '\n';
         
         if (mx < curr) {
             mx = curr;
@@ -44,5 +42,5 @@ int main() {
         }
     }
 
-    cout << mx << ' ' << t << '\n';
+    cout << mx << '\n' << -(t - M);
 }
