@@ -40,5 +40,11 @@ int main() {
         q.pop();
 
         vis.assign(N, vector<bool>(N, 0));
+
+        int p = 1;
+
+        while (p < N) {
+            
+        }
     }
 }
