@@ -10,6 +10,10 @@ using ll = long long;
 vector<vector<int>> g;
 vector<bool> vis;
 
+void dfs(int u) {
+    
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -29,6 +33,8 @@ int main() {
     vis.resize(N + 1);
 
     for (int i = 1; i <= N; i++) {
-        if (!vis[i] && size(g[i]) == 1)
+        if (!vis[i] && size(g[i]) == 1) {
+            dfs(i);
+        }
     }
 }
