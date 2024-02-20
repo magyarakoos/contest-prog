@@ -33,7 +33,12 @@ int main() {
         }
     }
 
+    vector<vector<bool>> vis(N, vector<bool>(N));
+
     while (!q.empty()) {
-        
+        auto [i, j] = q.front();
+        q.pop();
+
+        vis.assign(N, vector<bool>(N, 0));
     }
 }
