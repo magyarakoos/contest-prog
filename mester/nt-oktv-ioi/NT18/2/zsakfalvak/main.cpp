@@ -8,7 +8,6 @@ using namespace std;
 using ll = long long;
 
 vector<vector<int>> g;
-vector<bool> vis;
 
 int dfs(int u, int par = 0, int dist = 0) {
     if (size(g[u]) > 2) {
@@ -16,7 +15,9 @@ int dfs(int u, int par = 0, int dist = 0) {
     }
 
     for (int neigh : g[u]) {
-        if (!vis[neigh])
+        if (neigh != par) {
+            dfs(neigh, u, dist + 1);
+        }
     }
 }
 
@@ -35,8 +36,6 @@ int main() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
-
-    vis.resize(N + 1);
 
     vector<int> lengthS(N + 1);
 
