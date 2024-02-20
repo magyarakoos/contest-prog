@@ -55,7 +55,7 @@ int main() {
                 }
                 
                 if (m[y][x] == s[p]) {
-                    p^
+                    p
                 }
             }
             if (!step) {
