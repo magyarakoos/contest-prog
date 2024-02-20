@@ -21,6 +21,6 @@ int main() {
         g[U].push_back(i);
     }
 
-    
+    vector<int> dist(N + 1);
     queue<array<int, 2>> q;
 }
