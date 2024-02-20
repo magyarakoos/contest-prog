@@ -56,8 +56,10 @@ int main() {
                 step = 1;
             }
             if (!step) {
-                continue;
+                goto next;
             }
         }
+
+        next:continue;
     }
 }
