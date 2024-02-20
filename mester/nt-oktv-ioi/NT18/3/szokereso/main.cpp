@@ -23,11 +23,17 @@ int main() {
 
     cin >> s;
 
+    queue<array<int, 2>> q;
+
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            if (m[i][j] == s[s]) {
-                
+            if (m[i][j] == s[0]) {
+                q.push({i, j});
             }
         }
+    }
+
+    while (!q.empty()) {
+        
     }
 }
