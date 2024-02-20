@@ -28,7 +28,12 @@ int main() {
 
     q.push({1, 0});
 
+    int mx = 0;
+
     while (!q.empty()) {
-        
+        auto [node, dist] = q.front();
+        q.pop();
+
+        if ()
     }
 }
