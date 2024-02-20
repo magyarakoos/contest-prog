@@ -46,12 +46,17 @@ int main() {
         int p = 1;
 
         while (p < N) {
+            bool step = 0;
             for (auto [dy, dx] : dirs) {
                 int y = i + dy, x = j + dx;
 
                 if (y < 0 || x < 0 || y >= N || x >= N || vis[y][x]) {
                     continue;
                 }
+                step = 1;
+            }
+            if (!step) {
+                continue;
             }
         }
     }
