@@ -63,7 +63,10 @@ int main() {
                     j = x;
 
                     path += (
-                        dy == 1 && dx == 0 ? 
+                        dy == 1 && dx == 0 ? 'L' :
+                        dy == -1 && dx == 0 ? 'F' :
+                        dy == 0 && dx == 1 ? 'J' :
+                        'B'
                     );
                     break;
                 }
