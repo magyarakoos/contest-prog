@@ -47,7 +47,8 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         if (size(g[i]) == 1) {
-            mx = max(mx, (lengthS[i] = dfs(i)));
+            lengthS[i] = dfs(i)
+            mx = max(mx, ());
         }
     }
 
