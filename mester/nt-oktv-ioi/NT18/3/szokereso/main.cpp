@@ -43,6 +43,8 @@ int main() {
 
         vis.assign(N, vector<bool>(N, 0));
 
+        int si = i, sj = j;
+
         int p = 1;
 
         string path;
@@ -75,6 +77,8 @@ int main() {
                 goto next;
             }
         }
+
+        cout << si + 1 << ' ' << sj + 1 << '\n' << path;
 
         next:continue;
     }
