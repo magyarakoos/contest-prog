@@ -45,6 +45,8 @@ int main() {
 
         int p = 1;
 
+        string path =
+
         while (p < N) {
             bool step = 0;
             for (auto [dy, dx] : dirs) {
