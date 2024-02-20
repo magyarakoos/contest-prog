@@ -13,5 +13,14 @@ int main() {
     int N;
     cin >> N;
 
+    vector<vector<int>> g(N + 1);
+
+    for (int i = 2; i <= N; i++) {
+        int U;
+        cin >> U;
+        g[U].push_back(i);
+    }
+
     
+    queue<array<int, 2>> q;
 }
