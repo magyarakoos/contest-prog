@@ -43,7 +43,7 @@ int main() {
     int mx = 0;
 
     for (int i = 1; i <= N; i++) {
-        if (!vis[i] && size(g[i]) == 1) {
+        if (size(g[i]) == 1) {
             mx = max(mx, (lengthS[i] = dfs(i)));
         }
     }
