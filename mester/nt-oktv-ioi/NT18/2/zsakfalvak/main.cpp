@@ -10,7 +10,7 @@ using ll = long long;
 vector<vector<int>> g;
 vector<bool> vis;
 
-void dfs(int u) {
+int dfs(int u) {
 
 }
 
@@ -38,8 +38,9 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         if (!vis[i] && size(g[i]) == 1) {
-            lengthS[i] = dfs(i);
-
+            mx = max(mx, (lengthS[i] = dfs(i)));
         }
     }
+
+    
 }
