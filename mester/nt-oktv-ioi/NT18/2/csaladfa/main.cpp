@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+constexpr int INF = 1e9;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -23,4 +25,10 @@ int main() {
 
     vector<int> dist(N + 1);
     queue<array<int, 2>> q;
+
+    q.push({1, 0});
+
+    while (!q.empty()) {
+        
+    }
 }
