@@ -10,12 +10,8 @@ using ll = long long;
 vector<vector<int>> g;
 
 int dfs(int u, int par = 0, int dist = 0) {
-    if (size(g[u]) > 2) {
+    if (size(g[u]) > 2 || (par && size(g[u]) == 1)) {
         return dist;
-    }
-
-    if () {
-
     }
 
     for (int neigh : g[u]) {
@@ -53,5 +49,5 @@ int main() {
         }
     }
 
-
+    cout << mx << '\n';
 }
