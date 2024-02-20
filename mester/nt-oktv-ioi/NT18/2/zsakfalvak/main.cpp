@@ -10,8 +10,8 @@ using ll = long long;
 vector<vector<int>> g;
 vector<bool> vis;
 
-int dfs(int u) {
-
+int dfs(int u, int dist = 0) {
+    if (size(g[u]) < 2)
 }
 
 int main() {
@@ -42,5 +42,5 @@ int main() {
         }
     }
 
-    
+
 }
