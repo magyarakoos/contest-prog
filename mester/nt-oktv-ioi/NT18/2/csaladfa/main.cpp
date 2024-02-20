@@ -37,6 +37,9 @@ int main() {
         if (g[node].empty()) {
             distS[node] = dist;
             mx = max(mx, dist);
+            continue;
         }
+
+        
     }
 }
