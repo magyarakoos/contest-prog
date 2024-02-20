@@ -54,6 +54,6 @@ int main() {
     }
 
     cout << size(result) << ' ' << mx << '\n';
-    for (int x : result) cout << x + 1 << ' ';
+    for (int x : result) cout << x << ' ';
     cout << '\n';
 }
