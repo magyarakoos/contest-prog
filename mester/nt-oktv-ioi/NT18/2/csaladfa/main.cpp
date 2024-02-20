@@ -23,7 +23,7 @@ int main() {
         g[U].push_back(i);
     }
 
-    vector<int> dist(N + 1);
+    vector<int> distS(N + 1);
     queue<array<int, 2>> q;
 
     q.push({1, 0});
@@ -34,6 +34,9 @@ int main() {
         auto [node, dist] = q.front();
         q.pop();
 
-        if ()
+        if (g[node].empty()) {
+            distS[node] = dist;
+
+        }
     }
 }
