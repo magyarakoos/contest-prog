@@ -54,7 +54,9 @@ int main() {
                     continue;
                 }
                 
-                if ()
+                if (m[y][x] == s[p]) {
+                    p^
+                }
             }
             if (!step) {
                 goto next;
