@@ -40,6 +40,12 @@ int main() {
             continue;
         }
 
-        
+        for (int child : g[node]) {
+            q.push({child, dist + 1});
+        }
+    }
+
+    for (int i = 1; i <= N; i++) {
+        if ()
     }
 }
