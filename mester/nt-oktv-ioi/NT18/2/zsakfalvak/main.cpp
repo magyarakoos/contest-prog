@@ -14,7 +14,9 @@ int dfs(int u, int par = 0, int dist = 0) {
         return dist;
     }
 
-    if (par && )
+    if () {
+
+    }
 
     for (int neigh : g[u]) {
         if (neigh != par) {
