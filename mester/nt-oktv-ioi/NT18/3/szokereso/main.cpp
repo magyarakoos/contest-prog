@@ -83,4 +83,6 @@ int main() {
 
         next:continue;
     }
+
+    cout << "0 0";
 }
