@@ -8,6 +8,7 @@ using namespace std;
 using ll = long long;
 
 int N;
+string s;
 vector<string> m;
 
 int main() {
@@ -19,6 +20,8 @@ int main() {
     for (int i = 0; i < N; i++) {
         cin >> m[i];
     }
+
+    cin >> s;
 
     
 }
