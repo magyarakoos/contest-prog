@@ -18,7 +18,7 @@ int dfs(int u, int par = 0, int dist = 0) {
 
     for (int neigh : g[u]) {
         if (neigh != par) {
-            dfs(neigh, u, dist + 1);
+            return 1 + dfs(neigh, u, dist + 1);
         }
     }
 
@@ -47,8 +47,8 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         if (size(g[i]) == 1) {
-            lengthS[i] = dfs(i)
-            mx = max(mx, ());
+            lengthS[i] = dfs(i);
+            mx = max(mx, lengthS[i]);
         }
     }
 
