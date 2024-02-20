@@ -17,6 +17,15 @@ int main() {
 
     for (int i = 0; i < N; i++) {
 
-        
+        int E, V;
+        cin >> E >> V;
+
+        E = M - E;
+        V = M - V;
+
+        m[E]++;
+        m[V]--;
     }
+
+    
 }
