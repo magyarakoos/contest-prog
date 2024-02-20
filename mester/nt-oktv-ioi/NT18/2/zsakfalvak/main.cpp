@@ -21,6 +21,9 @@ int main() {
         int U, V;
         cin >> U >> V;
 
-        
+        g[U].push_back(V);
+        g[V].push_back(U);
     }
+
+    
 }
