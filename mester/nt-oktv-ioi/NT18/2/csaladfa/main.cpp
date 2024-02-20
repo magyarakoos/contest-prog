@@ -52,4 +52,8 @@ int main() {
             result.push_back(i);
         }
     }
+
+    cout << size(result) << ' ' << mx << '\n';
+    for (int x : result) cout << x + 1 << ' ';
+    cout << '\n';
 }
