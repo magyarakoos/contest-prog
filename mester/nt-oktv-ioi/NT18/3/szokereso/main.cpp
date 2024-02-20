@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+constexpr array<int, 2> dirs[] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
 int N;
 string s;
 vector<string> m;
@@ -44,7 +46,7 @@ int main() {
         int p = 1;
 
         while (p < N) {
-            
+
         }
     }
 }
