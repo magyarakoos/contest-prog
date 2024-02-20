@@ -14,8 +14,6 @@ int dfs(int u, int par = 0, int dist = 0) {
         return dist;
     }
 
-    cout << u << ' ' << par << ' ' << dist << '\n';
-
     for (int neigh : g[u]) {
         if (neigh != par) {
             return dfs(neigh, u, dist + 1);
@@ -53,4 +51,11 @@ int main() {
     }
 
     cout << mx << '\n';
+
+    for (int i = 1; i <= N; i++) {
+        if (lengthS[i] == mx) {
+            cout << i << ' ';
+        }
+    }
+    cout << '\n';
 }
