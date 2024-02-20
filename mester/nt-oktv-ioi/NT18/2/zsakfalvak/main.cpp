@@ -18,6 +18,9 @@ int main() {
     g.resize(N + 1);
 
     while (M--) {
+        int U, V;
+        cin >> U >> V;
+
         
     }
 }
