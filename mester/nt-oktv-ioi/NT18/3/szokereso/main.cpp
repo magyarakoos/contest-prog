@@ -46,7 +46,9 @@ int main() {
         int p = 1;
 
         while (p < N) {
-
+            for (auto [dy, dx] : dirs) {
+                if (dy + )
+            }
         }
     }
 }
