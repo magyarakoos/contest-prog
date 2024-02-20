@@ -79,6 +79,7 @@ int main() {
         }
 
         cout << si + 1 << ' ' << sj + 1 << '\n' << path;
+        exit(0);
 
         next:continue;
     }
