@@ -25,11 +25,7 @@ int main() {
 
         m[E]++;
         m[V]--;
-
-        cout << E << ' ' << V << '\n';
     }
-
-    cout << '\n';
 
     int mx = 0, t = 0, curr = 0;
 
