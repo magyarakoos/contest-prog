@@ -11,7 +11,7 @@ vector<vector<int>> g;
 vector<bool> vis;
 
 void dfs(int u) {
-    
+
 }
 
 int main() {
@@ -32,9 +32,14 @@ int main() {
 
     vis.resize(N + 1);
 
+    vector<int> lengthS(N + 1);
+
+    int mx = 0;
+
     for (int i = 1; i <= N; i++) {
         if (!vis[i] && size(g[i]) == 1) {
-            dfs(i);
+            lengthS[i] = dfs(i);
+
         }
     }
 }
