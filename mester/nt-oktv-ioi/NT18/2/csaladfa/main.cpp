@@ -45,7 +45,11 @@ int main() {
         }
     }
 
+    vector<int> result;
+
     for (int i = 1; i <= N; i++) {
-        if ()
+        if (distS[i] == mx) {
+            result.push_back(i);
+        }
     }
 }
