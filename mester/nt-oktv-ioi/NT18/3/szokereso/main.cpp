@@ -53,7 +53,8 @@ int main() {
                 if (y < 0 || x < 0 || y >= N || x >= N || vis[y][x]) {
                     continue;
                 }
-                step = 1;
+                
+                if ()
             }
             if (!step) {
                 goto next;
