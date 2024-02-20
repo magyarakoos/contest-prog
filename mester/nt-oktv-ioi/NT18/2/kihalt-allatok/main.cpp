@@ -27,9 +27,14 @@ int main() {
         m[V]--;
     }
 
-    int mx = 0, t = ;
+    int mx = 0, t = 0, curr = 0;
 
     for (auto [k, v] : m) {
-
+        curr += v;
+        
+        if (mx < curr) {
+            mx = curr;
+            t = 
+        }
     }
 }
