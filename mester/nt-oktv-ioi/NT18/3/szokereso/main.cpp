@@ -23,5 +23,11 @@ int main() {
 
     cin >> s;
 
-    
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (m[i][j] == s[s]) {
+                
+            }
+        }
+    }
 }
