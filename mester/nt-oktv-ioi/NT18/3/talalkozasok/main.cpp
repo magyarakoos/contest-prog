@@ -13,9 +13,10 @@ int main() {
     int N;
     cin >> N;
 
-    vector<array<int, 2>> v(N);
+    vector<array<int, 3>> v(N);
     for (int i = 0; i < N; i++) {
         cin >> v[i][0] >> v[i][1];
+        v[i][2] = i;
     }
 
     sort(all(v));
@@ -46,7 +47,7 @@ int main() {
 
         if (mx < curr) {
             mx = curr;
-            mxi = i;
+            mxi = v[i][2];
         }
     }
 
