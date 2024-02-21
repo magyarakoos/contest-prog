@@ -45,9 +45,14 @@ int main() {
 
     cout << dp[mxi][M] << '\n';
 
+    if (M == 1) {
+        cout << mxi + 1;
+        exit(0);
+    }
+
     int j = M;
 
     while (j > 1) {
-        
+
     }
 }
