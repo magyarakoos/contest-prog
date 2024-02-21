@@ -27,8 +27,10 @@ int main() {
         dp[i][1] = grid[i][1];
     }
 
-    for (int i = 2; i <= M; i++) {
-        for (int j = 1; j <= N; j++) {
+    for (int j = 2; j <= M; j++) {
+        for (int j = 1; j <= N; i++) {
+
+            dp[i][j] = max(dp[i - 1])
 
         }
     }
