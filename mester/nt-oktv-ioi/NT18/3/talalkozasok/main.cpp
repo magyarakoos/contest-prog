@@ -13,6 +13,10 @@ int main() {
     int N;
     cin >> N;
 
-    vector<int> E(N), V(N);
+    vector<array<int, 2>> v(N);
+    for (int i = 0; i < N; i++) {
+        cin >> v[i][0] >> v[i][1];
+    }
+
     
 }
