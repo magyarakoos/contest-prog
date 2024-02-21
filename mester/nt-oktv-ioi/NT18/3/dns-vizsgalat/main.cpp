@@ -7,7 +7,12 @@
 using namespace std;
 using ll = long long;
 
-bool window(int n,)
+bool window(int x, const string& s) {
+
+    int left = 0, right = x - 1;
+
+    for (; right < <)
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
