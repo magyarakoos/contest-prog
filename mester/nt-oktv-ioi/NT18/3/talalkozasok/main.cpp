@@ -20,7 +20,11 @@ int main() {
 
     sort(all(v));
 
+    int mx = 0, mxi = 0;
+
     for (int i = 0; i < N; i++) {
+        int curr = 0;
+
         
     }
 }
