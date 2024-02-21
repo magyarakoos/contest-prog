@@ -32,7 +32,7 @@ int main() {
                 break;
             }
 
-            if ()
+            if (v[j][0] <=)
         }
     }
 }
