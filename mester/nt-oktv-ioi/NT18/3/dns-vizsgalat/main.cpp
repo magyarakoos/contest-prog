@@ -19,8 +19,18 @@ bool window(int x, const string& s) {
             if (s[i] == 'A') {
                 hash |= 1;
             }
-            else if (s[i] == '')
+            else if (s[i] == 'C') {
+                hash |= (1 << 1);
+            }
+            else if (s[i] == 'G') {
+                hash |= (1 << 2);
+            }
+            else if (s[i] == 'T') {
+                hash |= (1 << 3);
+            }
         }
+
+        if (hash != ())
     }
 }
 
