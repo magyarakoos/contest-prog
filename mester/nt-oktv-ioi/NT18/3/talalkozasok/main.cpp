@@ -18,5 +18,9 @@ int main() {
         cin >> v[i][0] >> v[i][1];
     }
 
-    
+    sort(all(v));
+
+    for (int i = 0; i < N; i++) {
+        
+    }
 }
