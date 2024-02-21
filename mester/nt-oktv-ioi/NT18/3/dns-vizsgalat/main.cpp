@@ -16,7 +16,10 @@ bool window(int x, const string& s) {
         char hash = 0;
 
         for (int i = right; i <= left; i++) {
-            
+            if (s[i] == 'A') {
+                hash |= 1;
+            }
+            else if (s[i] == '')
         }
     }
 }
