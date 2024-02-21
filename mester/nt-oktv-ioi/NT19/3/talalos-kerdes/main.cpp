@@ -31,5 +31,15 @@ int main() {
     queue<edge> q;
     q.push({1, 0});
 
-    
+    while (!q.empty()) {
+        auto [node, w] = q.front();
+        q.pop();
+
+        if (g[node].empty()) {
+            m[w]++;
+            continue;
+        }
+
+        
+    }
 }
