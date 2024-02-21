@@ -46,7 +46,7 @@ int main() {
     cout << dp[mxi][M] << '\n';
 
     if (M == 1) {
-        cout << mxi + 1;
+        cout << mxi;
         exit(0);
     }
 
@@ -70,5 +70,5 @@ int main() {
         }
     }
 
-    cout << mxi + 1;
+    cout << mxi;
 }
