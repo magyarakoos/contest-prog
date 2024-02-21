@@ -40,6 +40,9 @@ int main() {
             continue;
         }
 
-        
+        for (edge child : g[node]) {
+
+            
+        }
     }
 }
