@@ -20,6 +20,9 @@ int main() {
         int U, V;
         cin >> U >> V;
 
-        
+        g[i].push_back({U, 1});
+        g[i].push_back({V, -1});
     }
+
+    vector<int> distS(2 * N + 2, )
 }
