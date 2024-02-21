@@ -20,6 +20,10 @@ int main() {
     vector<int> dp(M + 1);
 
     for (int i = 1; i <= M; i++) {
-        for (auto [H, A] : pipeS) 
+        for (auto [H, A] : pipeS) {
+            if (i >= H) {
+                dp[i] = min(dp[i], dp[i - H])
+            }
+        }
     }
 }
