@@ -34,6 +34,8 @@ bool window(int x, const string& s) {
             return 0;
         }
     }
+
+    return 1;
 }
 
 int main() {
