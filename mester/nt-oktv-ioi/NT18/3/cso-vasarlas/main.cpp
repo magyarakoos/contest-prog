@@ -31,5 +31,12 @@ int main() {
         }
     }
 
-    cout << dp[M];
+    if (dp[M] == INF) {
+        cout << 0;
+        exit(0);
+    }
+
+    cout << dp[M] << '\n';
+
+    
 }
