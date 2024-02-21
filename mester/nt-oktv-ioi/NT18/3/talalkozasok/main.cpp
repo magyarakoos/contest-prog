@@ -25,6 +25,14 @@ int main() {
     for (int i = 0; i < N; i++) {
         int curr = 0;
 
-        
+        for (int j = 0; j < N; j++) {
+            if (i == j) continue;
+
+            if (v[i][1] < v[j][0]) {
+                break;
+            }
+
+            
+        }
     }
 }
