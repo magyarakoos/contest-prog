@@ -25,10 +25,8 @@ int main() {
 
     for (int i = 1; i <= M; i++) {
         dp[i] = INF;
-        for (auto [H, A] : pipeS) {
-            if (i >= H) {
-                dp[i] = min(dp[i], dp[i - H] + A);
-            }
+        for (int j = 0; j < N; j++) {
+            if (i < H[j]) continue;
         }
     }
 
