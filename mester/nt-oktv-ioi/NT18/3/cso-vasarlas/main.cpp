@@ -28,7 +28,11 @@ int main() {
         for (int j = 0; j < N; j++) {
             if (i < H[j]) continue;
 
-            if (dp[i] < dp[i - H[j]])
+            if (dp[i] > dp[i - H[j]] + A[j]) {
+
+                dp[i] = dp[i - H[j]] + A[j];
+                buyS[Í]
+            }
         }
     }
 
