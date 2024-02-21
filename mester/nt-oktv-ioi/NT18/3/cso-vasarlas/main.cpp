@@ -31,7 +31,8 @@ int main() {
             if (dp[i] > dp[i - H[j]] + A[j]) {
 
                 dp[i] = dp[i - H[j]] + A[j];
-                buyS[Í]
+                buyS[i] = buyS[i - H[j]];
+                buyS[i][j]++;
             }
         }
     }
@@ -43,5 +44,7 @@ int main() {
 
     cout << dp[M] << '\n';
 
-    
+    for (int i = 0; i < N; i++) {
+        
+    }
 }
