@@ -15,12 +15,13 @@ int main() {
     int N, M;
     cin >> N >> M;
 
-    vector<array<int, 2>> pipeS(N);
+    vector<int> H(N), A(N);
     for (int i = 0; i < N; i++) {
-        cin >> pipeS[i][0] >> pipeS[i][1];
+        cin >> H[i] >> A[i];
     }
 
     vector<int> dp(M + 1);
+    vector<vector<int>> buyS(M + 1, vector<int>(N));
 
     for (int i = 1; i <= M; i++) {
         dp[i] = INF;
