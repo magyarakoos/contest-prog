@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+constexpr int INF = 1e9;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -21,6 +23,7 @@ int main() {
     vector<int> dp(M + 1);
 
     for (int i = 1; i <= M; i++) {
+        dp[i] = INF;
         for (auto [H, A] : pipeS) {
             if (i >= H) {
                 dp[i] = min(dp[i], dp[i - H] + A);
