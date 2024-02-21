@@ -54,5 +54,7 @@ int main() {
 
     cout << size(shopS) << '\n';
 
-    
+    for (auto [i, db] : shopS) {
+        cout << i + 1 << ' ' << db << '\n';
+    }
 }
