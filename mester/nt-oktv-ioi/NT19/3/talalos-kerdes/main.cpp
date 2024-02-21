@@ -6,6 +6,7 @@
 
 using namespace std;
 using ll = long long;
+using edge = struct { int node; int w; };
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -13,5 +14,5 @@ int main() {
     int N;
     cin >> N;
 
-    
+    vector<vector<edge>>
 }
