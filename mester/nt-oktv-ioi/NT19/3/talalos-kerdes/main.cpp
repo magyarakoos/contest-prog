@@ -14,5 +14,7 @@ int main() {
     int N;
     cin >> N;
 
-    vector<vector<edge>>
+    vector<vector<edge>> g(2 * N + 2);
+
+    
 }
