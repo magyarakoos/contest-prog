@@ -13,7 +13,11 @@ bool window(int x, const string& s) {
 
     for (;right < size(s); left++, right++) {
 
-        
+        char hash = 0;
+
+        for (int i = right; i <= left; i++) {
+            
+        }
     }
 }
 
