@@ -32,7 +32,7 @@ int main() {
                 break;
             }
 
-            if (max(v[i][0], v[j][0]) <= min(v[i][1], v[j][1])) {
+            if () {
                 curr++;
             }
         }
