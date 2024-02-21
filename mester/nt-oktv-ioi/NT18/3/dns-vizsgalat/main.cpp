@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+bool window(int n,)
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -15,9 +17,15 @@ int main() {
 
     int N = size(s);
 
-    if (N < 4)
+    if (N < 4) {
+        cout << N;
+        exit(0);
+    }
 
     for (int i = 4; i < N; i++) {
-
+        if (window(i, s)) {
+            cout << i;
+            exit(0);
+        }
     }
 }
