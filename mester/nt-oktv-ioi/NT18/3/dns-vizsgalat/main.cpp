@@ -32,8 +32,8 @@ bool window(int x, const string& s) {
 
         cout << hash << ' ' << x << '\n';
 
-        if (hash != 15) {
-            return 0;
+        /*if (hash != 15) {
+          return 0;
         }*/
     }
 
