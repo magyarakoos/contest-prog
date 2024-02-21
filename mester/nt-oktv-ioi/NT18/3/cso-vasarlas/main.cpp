@@ -27,6 +27,8 @@ int main() {
         dp[i] = INF;
         for (int j = 0; j < N; j++) {
             if (i < H[j]) continue;
+
+            if ()
         }
     }
 
