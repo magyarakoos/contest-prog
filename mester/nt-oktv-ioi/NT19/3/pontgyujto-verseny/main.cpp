@@ -53,6 +53,7 @@ int main() {
     int j = M;
 
     while (j > 1) {
-
+        int a = dp[mxi][j - 1];
+        if (dp[mxi][j - 1])
     }
 }
