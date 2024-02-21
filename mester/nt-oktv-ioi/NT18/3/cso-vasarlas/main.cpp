@@ -11,6 +11,7 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     int N, M;
+    cin >> N >> M;
 
     vector<array<int, 2>> pipeS(N);
     for (int i = 0; i < N; i++) {
@@ -22,8 +23,10 @@ int main() {
     for (int i = 1; i <= M; i++) {
         for (auto [H, A] : pipeS) {
             if (i >= H) {
-                dp[i] = min(dp[i], dp[i - H])
+                dp[i] = min(dp[i], dp[i - H] + A);
             }
         }
     }
+
+    cout << dp[M];
 }
