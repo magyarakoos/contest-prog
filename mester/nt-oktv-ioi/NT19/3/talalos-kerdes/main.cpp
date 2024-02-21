@@ -41,8 +41,7 @@ int main() {
         }
 
         for (edge child : g[node]) {
-
-            
+            q.push({child.node, w + child.w});
         }
     }
 }
