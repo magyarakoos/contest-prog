@@ -44,4 +44,13 @@ int main() {
             q.push({child.node, w + child.w});
         }
     }
+
+    int mx = 0, mxv = 0;
+
+    for (auto [k, v] : m) {
+        if (mx < v) {
+            mx = v;
+            
+        }
+    }
 }
