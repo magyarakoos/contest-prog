@@ -13,5 +13,15 @@ int main() {
     int N, M;
     cin >> N >> M;
 
+    vector<vector<int>> grid(N + 1, vector<int>(M + 1));
+
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= M; j++) {
+            cin >> grid[i][j];
+        }
+    }
+
+    vector<vector<int>> dp(N + 1, vector<int>(M + 1));
+
     
 }
