@@ -54,6 +54,11 @@ int main() {
 
     while (j > 1) {
         int a = dp[mxi][j - 1];
-        if (dp[mxi][j - 1])
+        int b = dp[mxi - 1][j - 1];
+        int c = dp[mxi + 1][j - 1];
+        
+        if (a == min({a, b, c})) {
+            
+        }
     }
 }
