@@ -44,7 +44,11 @@ int main() {
 
     cout << dp[M] << '\n';
 
+    vector<array<int, 2>> shopS;
+
     for (int i = 0; i < N; i++) {
-        
+        if (buyS[M][i]) {
+            
+        }
     }
 }
