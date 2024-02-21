@@ -64,7 +64,11 @@ int main() {
         }
 
         if (b >= c) {
-            
+            mxi--;
+        } else {
+            mxi++;
         }
     }
+
+    cout << mxi + 1;
 }
