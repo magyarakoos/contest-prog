@@ -37,7 +37,7 @@ bool window(int x, const string& s) {
         }*/
     }
 
-    return 1;
+    return 0;
 }
 
 int main() {
