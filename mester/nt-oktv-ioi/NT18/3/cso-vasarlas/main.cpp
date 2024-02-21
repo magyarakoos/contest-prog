@@ -12,5 +12,8 @@ int main() {
 
     int N, M;
 
-    
+    vector<array<int, 2>> pipeS(N);
+    for (int i = 0; i < N; i++) {
+        cin >> pipeS[i][0] >> pipeS[i][1]
+    }
 }
