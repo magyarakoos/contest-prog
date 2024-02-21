@@ -13,5 +13,11 @@ int main() {
     string s;
     cin >> s;
 
-    
+    int N = size(s);
+
+    if (N < 4)
+
+    for (int i = 4; i < N; i++) {
+
+    }
 }
