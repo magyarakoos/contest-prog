@@ -48,7 +48,11 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         if (buyS[M][i]) {
-            
+            shopS.push_back({i, buyS[M][i]});
         }
     }
+
+    cout << size(shopS) << '\n';
+
+    
 }
