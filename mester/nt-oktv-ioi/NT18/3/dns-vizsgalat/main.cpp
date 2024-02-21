@@ -13,7 +13,7 @@ bool window(int x, const string& s) {
 
     for (;right < size(s); left++, right++) {
 
-        char hash = 0;
+        int hash = 0;
 
         for (int i = right; i <= left; i++) {
             if (s[i] == 'A') {
@@ -30,7 +30,7 @@ bool window(int x, const string& s) {
             }
         }
 
-        if (hash != (1 << 4) - 1) {
+        if (hash != 15) {
             return 0;
         }
     }
@@ -55,4 +55,6 @@ int main() {
             exit(0);
         }
     }
+
+    cout << N;
 }
