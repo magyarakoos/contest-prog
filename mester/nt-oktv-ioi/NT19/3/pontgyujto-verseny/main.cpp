@@ -24,6 +24,10 @@ int main() {
     vector<vector<int>> dp(N + 1, vector<int>(M + 1));
 
     for (int i = 1; i <= M; i++) {
+        dp[i][1] = grid[i][1];
+    }
+
+    for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= N; j++) {
             
         }
