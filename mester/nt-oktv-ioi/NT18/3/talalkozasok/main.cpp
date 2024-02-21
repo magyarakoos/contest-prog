@@ -42,6 +42,8 @@ int main() {
             }
         }
 
+        cout << i << ' ' << curr << '\n';
+
         if (mx < curr) {
             mx = curr;
             mxi = i;
