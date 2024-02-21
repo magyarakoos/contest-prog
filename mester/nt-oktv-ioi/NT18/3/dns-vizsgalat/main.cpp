@@ -15,7 +15,8 @@ bool window(int x, const string& s) {
 
         int hash = 0;
 
-        for (int i = right; i <= left; i++) {
+        for (int i = left; i <= right; i++) {
+            cout << s[i] << ' ';
             if (s[i] == 'A') {
                 hash |= 1;
             }
@@ -32,12 +33,12 @@ bool window(int x, const string& s) {
 
         cout << hash << ' ' << x << '\n';
 
-        /*if (hash != 15) {
+        if (hash != 15) {
           return 0;
-        }*/
+        }
     }
 
-    return 0;
+    return 1;
 }
 
 int main() {
