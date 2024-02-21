@@ -57,13 +57,14 @@ int main() {
         int b = dp[mxi - 1][j - 1];
         int c = dp[mxi + 1][j - 1];
         
-        if (a > max(b, c)) {
-            j--;
+        j--;
+
+        if (a >= max(b, c)) {
             continue;
         }
 
-        if (b > c) {
-
+        if (b >= c) {
+            
         }
     }
 }
