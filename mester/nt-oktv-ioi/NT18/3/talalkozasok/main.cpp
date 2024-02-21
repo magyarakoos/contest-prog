@@ -38,7 +38,10 @@ int main() {
         }
 
         if (mx < curr) {
-            
+            mx = curr;
+            mxi = i;
         }
     }
+
+    cout << mxi + 1 << '\n' << mx; 
 }
