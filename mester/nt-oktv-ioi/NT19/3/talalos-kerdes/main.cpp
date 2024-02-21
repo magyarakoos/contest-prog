@@ -50,7 +50,9 @@ int main() {
     for (auto [k, v] : m) {
         if (mx < v) {
             mx = v;
-            
+            mxv = k;
         }
     }
+
+    cout << mxv << ' ' << mx;
 }
