@@ -11,7 +11,10 @@ bool window(int x, const string& s) {
 
     int left = 0, right = x - 1;
 
-    for (; right < <)
+    for (;right < size(s); left++, right++) {
+
+        
+    }
 }
 
 int main() {
