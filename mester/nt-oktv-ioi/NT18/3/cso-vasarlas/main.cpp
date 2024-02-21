@@ -28,7 +28,7 @@ int main() {
         for (int j = 0; j < N; j++) {
             if (i < H[j]) continue;
 
-            if ()
+            if (dp[i] < dp[i - H[j]])
         }
     }
 
