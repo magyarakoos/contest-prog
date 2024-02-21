@@ -35,8 +35,15 @@ int main() {
         }
     }
 
+    int mxi = 0;
+
     for (int i = 1; i <= N; i++) {
-        cout << dp[i][M] << ' ';
+        if (dp[mxi][M] < dp[i][M]) {
+            mxi = i;
+        }
     }
-    cout << '\n';
+
+    cout << dp[mxi][M] << '\n';
+
+    
 }
