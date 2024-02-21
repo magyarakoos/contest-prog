@@ -16,5 +16,10 @@ int main() {
 
     vector<vector<edge>> g(2 * N + 2);
 
-    
+    for (int i = 1; i <= N; i++) {
+        int U, V;
+        cin >> U >> V;
+
+        
+    }
 }
