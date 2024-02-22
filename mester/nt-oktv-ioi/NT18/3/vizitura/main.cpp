@@ -12,6 +12,10 @@ vector<vector<edge>> g;
 vector<bool> vis;
 vector<int> dp, from;
 
+void dfs(int u) {
+
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -29,6 +33,12 @@ int main() {
 
         g[U].push_back({V, W});
         g[V].push_back({U, W});
+    }
+
+    for (int i = 1; i <= N; i++) {
+        if (!vis[i]) {
+            dfs(i);
+        }
     }
 
 }
