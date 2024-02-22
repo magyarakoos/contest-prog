@@ -9,6 +9,7 @@ using ll = long long;
 using point = array<int, 2>;
 
 constexpr point dirs[] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+const string d = ""
 
 int N;
 vector<vector<char>> grid;
@@ -18,6 +19,10 @@ void solve(int si, int sj, int i, int j, int p, string path) {
     if (p == N) {
         cout << si + 1 << ' ' << sj + 1 << '\n' << path;
         exit(0);
+    }
+
+    for (int k = 0; k < 4; k++) {
+
     }
 }
 
