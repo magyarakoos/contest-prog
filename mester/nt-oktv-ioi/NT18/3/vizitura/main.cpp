@@ -39,6 +39,8 @@ int main() {
         queue<edge> q;
         q.push({s, 0});
 
+        vis[s] = 1;
+
         while (!q.empty()) {
             auto [node, w] = q.front();
             q.pop();
@@ -61,5 +63,5 @@ int main() {
         }
     }
 
-    cout << mx << '\n' << mxu << 
+    cout << mx << '\n' << mxu << ' ' << mxv << '\n';
 }
