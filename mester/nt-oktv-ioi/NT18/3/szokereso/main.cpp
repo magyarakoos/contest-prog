@@ -34,7 +34,11 @@ void solve(int si, int sj, int i, int j, int p, string path,
             continue;
         }
 
+        step = 1;
+    }
 
+    if (!step) {
+        
     }
 }
 
