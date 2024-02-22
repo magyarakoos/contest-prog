@@ -6,7 +6,9 @@
 
 using namespace std;
 using ll = long long;
-using edge = struct { int node; int w; };
+using edge = struct { 
+    int node; 
+    int w; };
 
 vector<vector<edge>> g;
 
@@ -26,5 +28,7 @@ int main() {
         g[V].push_back({U, W});
     }
 
-    for (int i = 1;)
+    for (int s = 1; s <= N; s++) {
+
+    }
 }
