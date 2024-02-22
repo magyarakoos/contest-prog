@@ -23,6 +23,8 @@ void solve(int si, int sj, int i, int j, int p, string path,
         exit(0);
     }
 
+    cerr << "WHOOP " << i << ' ' << j << '\n';
+
     vis[i][j] = 1;
 
     for (int k = 0; k < 4; k++) {
@@ -33,7 +35,7 @@ void solve(int si, int sj, int i, int j, int p, string path,
         if (di < 0 || dj < 0 || di >= N || dj >= N || vis[di][dj] || grid[di][dj] != s[p]) {
             continue;
         }
-        
+
         solve(si, sj, di, dj, p + 1, path + d[k], vis);
     }
 }
@@ -59,6 +61,8 @@ int main() {
             if (grid[i][j] == s[0]) {
 
                 vector<vector<bool>> vis(N, vector<bool>(N));
+                
+                cerr << "GOTIME\n";
 
                 solve(i, j, i, j, 0, "", vis);
             }
