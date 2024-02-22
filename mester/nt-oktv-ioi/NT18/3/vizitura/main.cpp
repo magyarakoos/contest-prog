@@ -8,7 +8,13 @@ using namespace std;
 using ll = long long;
 using edge = struct { 
     int node; 
-    int w; };
+    int w;
+    bool operator()(edge a, edge b) {
+        return a.w > b.w;
+    }
+};
+
+constexpr int INF = 1e9;
 
 vector<vector<edge>> g;
 
@@ -30,5 +36,6 @@ int main() {
 
     for (int s = 1; s <= N; s++) {
 
+        vector<int> distS
     }
 }
