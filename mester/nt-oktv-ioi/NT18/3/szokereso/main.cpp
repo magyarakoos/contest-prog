@@ -14,7 +14,9 @@ int N;
 vector<vector<char>> grid;
 string s;
 
-void solve(int i, int j, int p)
+void solve(int i, int j, int p) {
+    if ()
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
