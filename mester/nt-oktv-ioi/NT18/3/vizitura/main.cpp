@@ -18,5 +18,16 @@ int main() {
     int N;
     cin >> N;
 
+    g.resize(N + 1);
+    vis.resize(N + 1);
+    dp.resize(N + 1);
+    from.resize(N + 1);
+
+    for (int i = 1; i < N; i++) {
+        int U, V;
+        cin >> U >> V;
+
+        g[U].p
+    }
 
 }
