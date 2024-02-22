@@ -31,7 +31,10 @@ int main() {
                 has = 1;
                 result -= priceS[i];
             }
-            else if (has && E >)
+            else if (has && E <= priceS[i]) {
+                has = 0;
+                result += priceS[i];
+            }
         }
 
         cout << result << '\n';
