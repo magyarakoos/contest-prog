@@ -19,6 +19,13 @@ int main() {
     }
 
     while (Q--) {
-        int 
+        int result = 0;
+
+        int V, E;
+        cin >> V >> E;
+
+        for (int i = 0;)
+
+        cout << result << '\n';
     }
 }
