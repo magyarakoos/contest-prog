@@ -6,8 +6,9 @@
 
 using namespace std;
 using ll = long long;
+using point = array<int, 2>;
 
-constexpr array<int, 2> dirs[] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+constexpr point dirs[] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -16,6 +17,8 @@ int main() {
     cin >> N;
 
     vector<vector<char>> grid(N, vector<char>(N));
+
+    queue<point> todo;
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
