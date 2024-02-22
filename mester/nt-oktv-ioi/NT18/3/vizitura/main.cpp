@@ -41,6 +41,7 @@ int main() {
         cin >> U >> V >> W;
 
         g[U].push_back({V, W});
+        g[V].push_back({U, W});
     }
 
     for (int i = 1; i <= N; i++) {
