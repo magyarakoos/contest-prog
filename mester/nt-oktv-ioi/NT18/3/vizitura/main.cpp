@@ -49,5 +49,11 @@ int main() {
                 }
             }
         }
+
+        cout << s << " |";
+        for (int i = 1; i <= N; i++) {
+            cout << ' ' << distS[i];
+        }
+        cout << '\n';
     }
 }
