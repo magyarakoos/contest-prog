@@ -21,10 +21,17 @@ int main() {
     while (Q--) {
         int result = 0;
 
+        bool has = 0;
+
         int V, E;
         cin >> V >> E;
 
-        for (int i = 0;)
+        for (int i = 0; i < N; i++) {
+            if (!has && V >= priceS[i]) {
+                has = 1;
+                
+            }
+        }
 
         cout << result << '\n';
     }
