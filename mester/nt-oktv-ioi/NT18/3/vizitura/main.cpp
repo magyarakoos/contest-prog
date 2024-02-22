@@ -28,6 +28,8 @@ int main() {
         g[V].push_back({U, W});
     }
 
+    int mx = 0, mxu = 0, mxv = 0;
+
     for (int s = 1; s <= N; s++) {
 
         vector<int> distS(N + 1, INF);
@@ -49,11 +51,5 @@ int main() {
                 }
             }
         }
-
-        cout << s << " |";
-        for (int i = 1; i <= N; i++) {
-            cout << ' ' << distS[i];
-        }
-        cout << '\n';
     }
 }
