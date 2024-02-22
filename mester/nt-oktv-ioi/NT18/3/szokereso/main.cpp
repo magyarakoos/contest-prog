@@ -14,8 +14,10 @@ int N;
 vector<vector<char>> grid;
 string s;
 
-void solve(int i, int j, int p) {
-    if ()
+void solve(int si, int sj, int i, int j, int p, string path) {
+    if (p == N) {
+        
+    }
 }
 
 int main() {
