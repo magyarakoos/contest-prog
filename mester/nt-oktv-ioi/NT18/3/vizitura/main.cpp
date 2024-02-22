@@ -31,6 +31,7 @@ int main() {
     for (int s = 1; s <= N; s++) {
 
         vector<int> distS(N + 1, INF);
+        vector<bool> vis(N + 1);
         distS[s] = 0;
 
         queue<edge> q;
@@ -41,7 +42,10 @@ int main() {
             q.pop();
 
             for (edge neigh : g[node]) {
-                
+                if (!vis[neigh.node]) {
+                    vis[neigh.node] = 1;
+                    
+                }
             }
         }
     }
