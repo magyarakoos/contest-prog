@@ -15,7 +15,9 @@ int N;
 vector<vector<char>> grid;
 string s;
 
-void solve(int si, int sj, int i, int j, int p, string path) {
+void solve(int si, int sj, int i, int j, int p, string path,
+    vector<vector<bool>>& vis    
+) {
     if (p == N) {
         cout << si + 1 << ' ' << sj + 1 << '\n' << path;
         exit(0);
@@ -26,7 +28,9 @@ void solve(int si, int sj, int i, int j, int p, string path) {
         int di = i + dirs[k][0];
         int dj = j + dirs[k][1];
 
-        if (di < 0 || dj < 0 || di >= N || dj >= N || vis)
+        if (di < 0 || dj < 0 || di >= N || dj >= N || vis[di][dj]) {
+
+        }
     }
 }
 
@@ -49,6 +53,8 @@ int main() {
         for (int j = 0; j < N; j++) {
 
             if (grid[i][j] == s[0]) {
+
+                vector<vector<bool>> vis
 
                 solve(i, j, i, j, 0, "");
             }
