@@ -53,7 +53,13 @@ int main() {
         }
 
         for (int i = 1; i <= N; i++) {
-            if (distS[i])
+            if (mx < distS[i]) {
+                mx = distS[i];
+                mxu = s;
+                mxv = i;
+            }
         }
     }
+
+    cout << mx << ''
 }
