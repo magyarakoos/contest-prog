@@ -15,5 +15,5 @@ int main() {
     int N;
     cin >> N;
 
-    
+    vector<vector<char>> grid()
 }
