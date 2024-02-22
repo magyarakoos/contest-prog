@@ -36,6 +36,9 @@ int main() {
 
     for (int s = 1; s <= N; s++) {
 
-        vector<int> distS
+        vector<int> distS(N + 1, INF);
+        distS[s] = 0;
+
+        
     }
 }
