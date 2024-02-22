@@ -24,10 +24,11 @@ int main() {
     from.resize(N + 1);
 
     for (int i = 1; i < N; i++) {
-        int U, V;
-        cin >> U >> V;
+        int U, V, W;
+        cin >> U >> V >> W;
 
-        g[U].p
+        g[U].push_back({V, W});
+        g[V].push_back({U, W});
     }
 
 }
