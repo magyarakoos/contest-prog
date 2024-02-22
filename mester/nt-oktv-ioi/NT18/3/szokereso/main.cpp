@@ -33,7 +33,6 @@ void solve(int si, int sj, int i, int j, int p, string path,
         if (di < 0 || dj < 0 || di >= N || dj >= N || vis[di][dj] || grid[di][dj] != s[p]) {
             continue;
         }
-
         
         solve(si, sj, di, dj, p + 1, path + d[k], vis);
     }
