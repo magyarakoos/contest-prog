@@ -9,7 +9,7 @@ using ll = long long;
 using point = array<int, 2>;
 
 constexpr point dirs[] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-const string d = ""
+constexpr char d[] = "LFJB";
 
 int N;
 vector<vector<char>> grid;
