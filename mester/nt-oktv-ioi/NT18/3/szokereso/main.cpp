@@ -18,7 +18,7 @@ string s;
 void solve(int si, int sj, int i, int j, int p, string path,
     vector<vector<bool>> vis    
 ) {
-    if (p == N) {
+    if (p == size(s)) {
         cout << si + 1 << ' ' << sj + 1 << '\n' << path;
         exit(0);
     }
