@@ -16,7 +16,7 @@ vector<vector<char>> grid;
 string s;
 
 void solve(int si, int sj, int i, int j, int p, string path,
-    vector<vector<bool>>& vis    
+    vector<vector<bool>> vis    
 ) {
     if (p == N) {
         cout << si + 1 << ' ' << sj + 1 << '\n' << path;
@@ -54,9 +54,10 @@ int main() {
 
             if (grid[i][j] == s[0]) {
 
-                vector<vector<bool>> vis
+                vector<vector<bool>> vis(N, vector<bool>(N));
+                vis[i][j] = 1;
 
-                solve(i, j, i, j, 0, "");
+                solve(i, j, i, j, 0, "", vis);
             }
         }
     }
