@@ -10,14 +10,18 @@ using point = array<int, 2>;
 
 constexpr point dirs[] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
+int N;
+vector<vector<char>> grid;
+string s;
+
+void solve()
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int N;
     cin >> N;
 
-    vector<vector<char>> grid(N, vector<char>(N));
-
+    grid.assign(N, vector<char>(N));
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -25,7 +29,6 @@ int main() {
         }
     }
 
-    string s;
     cin >> s;
 
     for (int i = 0; i < N; i++) {
@@ -33,7 +36,7 @@ int main() {
 
             if (grid[i][j] == s[0]) {
 
-                
+
             }
         }
     }
