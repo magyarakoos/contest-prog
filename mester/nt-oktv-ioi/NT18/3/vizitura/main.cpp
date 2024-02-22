@@ -17,7 +17,11 @@ void dfs(int u) {
 
     for (edge neigh : g[u]) {
 
-        
+        if (!vis[neigh.node]) {
+            dfs(neigh.node);
+        }
+
+        dp[u] = max(dp[u], dp[neigh.node] + neigh.w);
     }
 }
 
