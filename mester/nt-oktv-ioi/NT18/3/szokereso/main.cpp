@@ -23,6 +23,7 @@ void solve(int si, int sj, int i, int j, int p, string path) {
 
     for (int k = 0; k < 4; k++) {
 
+        int di = i + di[]
     }
 }
 
