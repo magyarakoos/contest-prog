@@ -40,7 +40,9 @@ int main() {
             auto [node, w] = q.front();
             q.pop();
 
-            
+            for (edge neigh : g[node]) {
+                
+            }
         }
     }
 }
