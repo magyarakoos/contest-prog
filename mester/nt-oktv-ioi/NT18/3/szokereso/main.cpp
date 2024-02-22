@@ -15,5 +15,16 @@ int main() {
     int N;
     cin >> N;
 
-    vector<vector<char>> grid()
+    vector<vector<char>> grid(N, vector<char>(N));
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            cin >> grid[i][j];
+        }
+    }
+
+    string s;
+    cin >> s;
+
+    
 }
