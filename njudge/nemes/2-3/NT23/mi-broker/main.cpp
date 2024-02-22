@@ -29,8 +29,9 @@ int main() {
         for (int i = 0; i < N; i++) {
             if (!has && V >= priceS[i]) {
                 has = 1;
-                
+                result -= priceS[i];
             }
+            else if (has && E >)
         }
 
         cout << result << '\n';
