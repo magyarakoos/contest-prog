@@ -37,7 +37,10 @@ int main() {
         q.push({s, 0});
 
         while (!q.empty()) {
-            auto []
+            auto [node, w] = q.front();
+            q.pop();
+
+            
         }
     }
 }
