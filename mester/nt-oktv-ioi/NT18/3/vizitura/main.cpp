@@ -8,6 +8,10 @@ using namespace std;
 using ll = long long;
 using edge = struct { int node; int w; };
 
+vector<vector<edge>> g;
+vector<bool> vis;
+vector<int> dp, from;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
