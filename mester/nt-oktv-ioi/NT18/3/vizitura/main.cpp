@@ -6,13 +6,7 @@
 
 using namespace std;
 using ll = long long;
-using edge = struct { 
-    int node; 
-    int w;
-    bool operator()(edge a, edge b) {
-        return a.w > b.w;
-    }
-};
+using edge = struct { int node; int w; };
 
 constexpr int INF = 1e9;
 
@@ -39,6 +33,11 @@ int main() {
         vector<int> distS(N + 1, INF);
         distS[s] = 0;
 
-        
+        queue<edge> q;
+        q.push({s, 0});
+
+        while (!q.empty()) {
+            auto []
+        }
     }
 }
