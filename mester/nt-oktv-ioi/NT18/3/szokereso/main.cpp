@@ -23,22 +23,14 @@ void solve(int si, int sj, int i, int j, int p, string path,
         exit(0);
     }
 
-    bool step = 0;
-
     for (int k = 0; k < 4; k++) {
 
         int di = i + dirs[k][0];
         int dj = j + dirs[k][1];
 
-        if (di < 0 || dj < 0 || di >= N || dj >= N || vis[di][dj]) {
+        if (di < 0 || dj < 0 || di >= N || dj >= N || vis[di][dj] || grid[di][dj] ) {
             continue;
         }
-
-        step = 1;
-    }
-
-    if (!step) {
-        
     }
 }
 
