@@ -55,7 +55,6 @@ int main() {
             if (grid[i][j] == s[0]) {
 
                 vector<vector<bool>> vis(N, vector<bool>(N));
-                vis[i][j] = 1;
 
                 solve(i, j, i, j, 0, "", vis);
             }
