@@ -44,7 +44,8 @@ int main() {
             for (edge neigh : g[node]) {
                 if (!vis[neigh.node]) {
                     vis[neigh.node] = 1;
-                    
+                    distS[neigh.node] = w + neigh.w;
+                    q.push({neigh.node, w + neigh.w});
                 }
             }
         }
