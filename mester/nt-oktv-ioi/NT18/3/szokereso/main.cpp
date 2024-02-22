@@ -23,8 +23,6 @@ void solve(int si, int sj, int i, int j, int p, string path,
         exit(0);
     }
 
-    cerr << "WHOOP " << i << ' ' << j << '\n';
-
     vis[i][j] = 1;
 
     for (int k = 0; k < 4; k++) {
@@ -61,8 +59,6 @@ int main() {
             if (grid[i][j] == s[0]) {
 
                 vector<vector<bool>> vis(N, vector<bool>(N));
-                
-                cerr << "GOTIME\n";
 
                 solve(i, j, i, j, 1, "", vis);
             }
