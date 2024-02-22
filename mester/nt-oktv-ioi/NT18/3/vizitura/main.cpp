@@ -30,7 +30,7 @@ int main() {
 
     int mx = 0, mxu = 0, mxv = 0;
 
-    for (int s = 1; s <= N; s++) {
+    for (int s = 1; s < N; s++) {
 
         vector<int> distS(N + 1, INF);
         vector<bool> vis(N + 1);
