@@ -13,5 +13,12 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    
+    vector<int> priceS(N);
+    for (int i = 0; i < N; i++) {
+        cin >> priceS[i];
+    }
+
+    while (Q--) {
+        int 
+    }
 }
