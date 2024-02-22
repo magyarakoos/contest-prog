@@ -18,7 +18,6 @@ int main() {
 
     vector<vector<char>> grid(N, vector<char>(N));
 
-    queue<point> todo;
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -29,5 +28,13 @@ int main() {
     string s;
     cin >> s;
 
-    
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+
+            if (grid[i][j] == s[0]) {
+
+                
+            }
+        }
+    }
 }
