@@ -52,7 +52,7 @@ int main() {
             }
         }
 
-        for (int i = 1; i <= N; i++) {
+        for (int i = s + 1; i <= N; i++) {
             if (mx < distS[i]) {
                 mx = distS[i];
                 mxu = s;
