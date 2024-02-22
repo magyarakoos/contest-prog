@@ -35,6 +35,7 @@ void solve(int si, int sj, int i, int j, int p, string path,
         }
 
         
+        solve(si, sj, di, dj, p + 1, path + d[k], vis);
     }
 }
 
