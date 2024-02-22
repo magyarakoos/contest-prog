@@ -16,7 +16,8 @@ string s;
 
 void solve(int si, int sj, int i, int j, int p, string path) {
     if (p == N) {
-        
+        cout << si + 1 << ' ' << sj + 1 << '\n' << path;
+        exit(0);
     }
 }
 
@@ -40,8 +41,10 @@ int main() {
 
             if (grid[i][j] == s[0]) {
 
-
+                solve(i, j, i, j, 0, "");
             }
         }
     }
+
+    cout << "0 0";
 }
