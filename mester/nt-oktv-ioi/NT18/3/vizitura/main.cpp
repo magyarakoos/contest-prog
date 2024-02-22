@@ -13,7 +13,12 @@ vector<bool> vis;
 vector<int> dp, from;
 
 void dfs(int u) {
+    vis[u] = 1;
 
+    for (edge neigh : g[u]) {
+
+        
+    }
 }
 
 int main() {
