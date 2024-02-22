@@ -61,5 +61,5 @@ int main() {
         }
     }
 
-    cout << mx << ''
+    cout << mx << '\n' << mxu << 
 }
