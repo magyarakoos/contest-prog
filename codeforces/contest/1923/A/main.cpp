@@ -53,6 +53,8 @@ int main() {
                     break;
                 }
             }
+
+            for (int i = lo; i >=)
         }
 
 
