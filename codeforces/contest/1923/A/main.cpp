@@ -54,7 +54,11 @@ int main() {
                 }
             }
 
-            for (int i = lo; i >=)
+            for (int i = lo - 1; i >= 0; i--) {
+                if (!v[i]) {
+                    
+                }
+            }
         }
 
 
