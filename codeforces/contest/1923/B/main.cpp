@@ -36,9 +36,9 @@ int main() {
             }
 
             if (row[curr] < K) {
-
+                
             } else {
-                row[curr] = 0;
+                row[curr] -= K;
             }
         }
 
