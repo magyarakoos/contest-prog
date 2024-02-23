@@ -30,7 +30,7 @@ int main() {
         int curr = 1;
 
         for (; curr <= N; curr++) {
-            
+            if ()
         }
     }
 }
