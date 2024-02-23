@@ -54,6 +54,6 @@ int main() {
             continue;
         }
 
-        
+        int dist = fo;
     }
 }
