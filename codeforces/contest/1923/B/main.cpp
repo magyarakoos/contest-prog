@@ -48,6 +48,7 @@ int main() {
             }
 
             int k = K - row[curr];
+            row[curr] = 0;
 
             for (int j = curr + 1; j <= N; j++) {
                 if (row[j] >= k) break;
