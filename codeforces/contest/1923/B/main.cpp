@@ -44,6 +44,8 @@ int main() {
             }
         }
 
+        cout << "YES\n";
+
         next: continue;
     }
 }
