@@ -29,8 +29,18 @@ int main() {
         for (int i = 0; i < N; i++) {
             if (v[i] < K) {
                 cout << "NO\n";
-                b
+                goto next;
+            }
+
+            int k = K - ;
+
+
+
+            for (int j = i + 1; j < N; j++) {
+
             }
         }
+
+        next:continue;
     }
 }
