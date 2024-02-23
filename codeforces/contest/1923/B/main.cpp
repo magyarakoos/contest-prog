@@ -39,6 +39,8 @@ int main() {
             if (row[curr] == K) {
                 continue;
             }
+
+            if (curr < N)
         }
 
         cout << "YES\n";
