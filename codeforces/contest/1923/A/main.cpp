@@ -46,7 +46,7 @@ int main() {
         int result = 0;
 
         while (!valid(v)) {
-            int lo;
+            int lo = 0;
             for (int i = N - 1; i >= 0; i--) {
                 if (v[i]) {
                     lo = i;
@@ -56,12 +56,13 @@ int main() {
 
             for (int i = lo - 1; i >= 0; i--) {
                 if (!v[i]) {
-                    
+                    v[lo] = 0;
+                    v[i] = 1;
+                    result++;
+                    break;
                 }
             }
         }
-
-
 
         cout << result << '\n';
     }
