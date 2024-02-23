@@ -30,7 +30,14 @@ int main() {
         int curr = 1;
 
         for (; curr <= N; curr++) {
-            if ()
+            if (row[curr - 1]) {
+                cout << "NO\n";
+                goto next;
+            }
+
+            
         }
+
+        next: continue;
     }
 }
