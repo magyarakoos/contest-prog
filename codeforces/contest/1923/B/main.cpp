@@ -30,18 +30,14 @@ int main() {
         int curr = 1;
 
         for (; curr <= N; curr++) {
-            
-            if (row[curr] >= K) {
+
+            if (row[curr] > K) {
                 cout << "NO\n";
                 goto next;
             }
 
-            if (row[curr] < K) {
-                int k = K - row[curr];
-                row[curr] = 0;
-                if (curr < N) row[curr + 1] -= k;
-            } else {
-                row[curr] -= K;
+            if (row[curr] == K) {
+                continue;
             }
         }
 
