@@ -20,13 +20,12 @@ int main() {
         for (int& e : A) cin >> e;
 
         vector<int> v(N);
-
         for (int i = 0; i < N; i++) {
             int X;
             cin >> X;
-            X = abs(X) - 1;
-
-            
+            v[abs(X) - 1] += A[i];
         }
+
+
     }
 }
