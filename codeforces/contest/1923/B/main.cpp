@@ -28,15 +28,13 @@ int main() {
         }
 
         int curr = 1;
-
+#ifdef LOCAL
         for (int i = 1; i <= N; i++) {
             cout << row[i] << ' ';
         }
         cout << '\n';
-
+#endif
         for (; curr <= N; curr++) {
-
-            cout << row[curr] << ' ';
 
             if (row[curr] > K) {
                 cout << "NO\n";
@@ -51,12 +49,14 @@ int main() {
             row[curr] = 0;
 
             for (int j = curr + 1; j <= N; j++) {
-                if (row[j] >= k) break;
+                if (row[j] >= k) {
+                    row[j] -= k;
+                    break;
+                }
                 k -= row[j];
                 row[j] = 0;
             }
         }
-        cout << '\n';
 
         cout << "YES\n";
 
