@@ -45,7 +45,10 @@ int main() {
 
         int result = 0;
 
-        for (int i = )
+        int i = 0;
+        for (; i < N; i++) {
+            if (v[i]) break;
+        }
 
         cout << result << '\n';
     }
