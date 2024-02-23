@@ -45,6 +45,7 @@ int main() {
             for (int j = curr + 1; j <= N; j++) {
                 if (row[j] >= k) break;
                 k -= row[j];
+                row[j] = 0;
             }
         }
 
