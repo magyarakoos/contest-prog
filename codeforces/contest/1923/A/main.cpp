@@ -46,7 +46,8 @@ int main() {
         int coc = 0, lo;
         for (int i = fo; i < N; i++) {
             if (!v[i]) {
-                lo = 
+                lo = i - 1;
+                break;
             }
             coc += v[i];
         }
@@ -56,8 +57,11 @@ int main() {
             continue;
         }
 
-        for (int i = fo; i < N; i++) {
-
+        for (int i = lo + 1; i < N; i++) {
+            int fo = first(1, i, N - 1, v);
+            if (fo == -1) {
+                break;
+            }
         }
     }
 }
