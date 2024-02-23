@@ -36,10 +36,6 @@ int main() {
                 goto next;
             }
 
-            if (row[curr] == K) {
-                continue;
-            }
-
             if (curr < N) {
                 row[curr + 1] -= K - row[curr];
             }
