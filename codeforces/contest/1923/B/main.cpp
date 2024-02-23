@@ -17,7 +17,11 @@ int main() {
         cin >> N >> K;
 
         vector<int> A(N);
-        for (i& e : v) cin >> e;
+        for (int& e : A) cin >> e;
+        
+        vector<int> X(N);
+        for (int& e : X) cin >> e;
+
         
     }
 }
