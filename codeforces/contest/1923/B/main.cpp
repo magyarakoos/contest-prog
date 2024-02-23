@@ -27,6 +27,10 @@ int main() {
             row[abs(X)] += A[i];
         }
 
-        int curr = 
+        int curr = 1;
+
+        for (; curr <= N; curr++) {
+            
+        }
     }
 }
