@@ -22,6 +22,10 @@ int main() {
         vector<int> v(N);
 
         for (int i = 0; i < N; i++) {
+            int X;
+            cin >> X;
+            X = abs(X) - 1;
+
             
         }
     }
