@@ -40,7 +40,11 @@ int main() {
                 continue;
             }
 
-            while ()
+            int k = K - row[curr];
+
+            for (int j = curr + 1; j <= N; j++) {
+
+            }
         }
 
         cout << "YES\n";
