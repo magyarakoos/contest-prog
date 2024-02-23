@@ -7,7 +7,11 @@
 using namespace std;
 using ll = long long;
 
-int 
+int first(bool one, int i, int j, const vector<int>& v) {
+    for (; i <= j; i++) {
+        if (v[i])
+    }
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
