@@ -40,7 +40,9 @@ int main() {
                 continue;
             }
 
-            if (curr < N)
+            if (curr < N) {
+                row[curr + 1] -= K - row[curr];
+            }
         }
 
         cout << "YES\n";
