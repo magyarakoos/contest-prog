@@ -28,12 +28,7 @@ int main() {
         }
 
         int curr = 1;
-#ifdef LOCAL
-        for (int i = 1; i <= N; i++) {
-            cout << row[i] << ' ';
-        }
-        cout << '\n';
-#endif
+
         for (; curr <= N; curr++) {
 
             if (row[curr] > K) {
