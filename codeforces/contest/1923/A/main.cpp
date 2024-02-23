@@ -48,8 +48,13 @@ int main() {
         int lo;
 
         for (int i = N - 1; i >= 0; i--) {
-            if ()
+            if (v[i]) {
+                lo = i;
+                break;
+            }
         }
+
+        
 
         cout << result << '\n';
     }
