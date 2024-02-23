@@ -32,14 +32,16 @@ int main() {
         vector<int> v(N);
         for (int& e : v) cin >> e;
         
+        int oc = 0;
+
+        for (int e : v) oc += e;
+
         int fo = first(1, 0, N - 1, v);
 
         if (fo == -1) {
             cout << "0\n";
             continue;
         }
-
-        
 
         for (int i = 0; first(1, i, N - 1, v) < N; i++) {
             int fz = first(0, i, N - 1, v);
