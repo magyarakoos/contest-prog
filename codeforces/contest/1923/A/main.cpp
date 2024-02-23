@@ -48,5 +48,12 @@ int main() {
             if (!v[i]) break;
             coc += v[i];
         }
+
+        if (coc == oc) {
+            cout << "0\n";
+            continue;
+        }
+
+        
     }
 }
