@@ -7,18 +7,7 @@
 using namespace std;
 using ll = long long;
 
-int first(bool one, int i, int j, const vector<int>& v) {
-    for (; i <= j; i++) {
-        if (v[i] && one) {
-            return i;
-        }
-        if (!v[i] && !one) {
-            return i;
-        }
-    }
-
-    return -1;
-}
+bool valid (const vector<int>& v, )
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
