@@ -36,10 +36,11 @@ int main() {
 
             for (int j = i + 1; j < N && k; j++) {
                 
-                if (v[j] < k) {
-
+                if (v[j] >= k) {
                     break;
                 }
+
+
             }
         }
 
