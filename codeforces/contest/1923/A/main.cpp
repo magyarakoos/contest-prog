@@ -47,11 +47,12 @@ int main() {
 
         int lo;
 
-        while (!)
-        for (int i = N - 1; i >= 0; i--) {
-            if (v[i]) {
-                lo = i;
-                break;
+        while (!valid(v)) {
+            for (int i = N - 1; i >= 0; i--) {
+                if (v[i]) {
+                    lo = i;
+                    break;
+                }
             }
         }
 
