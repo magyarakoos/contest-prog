@@ -55,6 +55,7 @@ int main() {
                 row[j] = 0;
             }
         }
+        cout << '\n';
 
         cout << "YES\n";
 
