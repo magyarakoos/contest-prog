@@ -16,7 +16,12 @@ bool valid(const vector<int>& v) {
         if (v[i]) break;
     }
 
-    for (; i < )
+    int boc = 0;
+
+    for (; i < size(v); i++) {
+        if (!v[i]) break;
+        boc++;
+    }
 }
 
 int main() {
