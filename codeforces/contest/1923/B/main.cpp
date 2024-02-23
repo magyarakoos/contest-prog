@@ -27,7 +27,7 @@ int main() {
         }
 
         for (int i = 0; i < N; i++) {
-            if (v[i] < K) {
+            if (v[i] > K) {
                 cout << "NO\n";
                 goto next;
             }
@@ -36,7 +36,10 @@ int main() {
 
             for (int j = i + 1; j < N && k; j++) {
                 
-                
+                if (v[j] < k) {
+
+                    break;
+                }
             }
         }
 
