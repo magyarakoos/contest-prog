@@ -64,6 +64,11 @@ int main() {
             if (fo == -1) {
                 break;
             }
+            
+            cerr << fo - lo << '\n';
+            result += fo - lo;
         }
+
+        cout << result << '\n';
     }
 }
