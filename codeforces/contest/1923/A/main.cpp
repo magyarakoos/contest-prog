@@ -7,7 +7,15 @@
 using namespace std;
 using ll = long long;
 
-bool valid (const vector<int>& v, )
+bool valid(const vector<int>& v) {
+    int oc = 0;
+    for (int e : v) oc += e;
+
+    int i = 0;
+    for (int i = 0; i < N; i++) {
+        if ()
+    }
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
