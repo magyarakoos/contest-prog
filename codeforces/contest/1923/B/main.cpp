@@ -22,6 +22,6 @@ int main() {
         vector<int> X(N);
         for (int& e : X) cin >> e;
 
-        vector<int> left(N)
+        vector<int> left(N), right(N);
     }
 }
