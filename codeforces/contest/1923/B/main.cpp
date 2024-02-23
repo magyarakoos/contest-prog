@@ -40,9 +40,11 @@ int main() {
                     break;
                 }
 
-
+                k -= v[j];
             }
         }
+
+        cout << ""
 
         next:continue;
     }
