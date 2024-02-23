@@ -45,8 +45,12 @@ int main() {
 
         int result = 0;
 
-        n
-        
+        int lo;
+
+        for (int i = N - 1; i >= 0; i--) {
+            if ()
+        }
+
         cout << result << '\n';
     }
 }
