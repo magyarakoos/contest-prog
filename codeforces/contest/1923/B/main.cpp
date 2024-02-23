@@ -30,7 +30,8 @@ int main() {
         int curr = 1;
 
         for (; curr <= N; curr++) {
-            if (row[curr - 1]) {
+            
+            if (row[curr] >= K) {
                 cout << "NO\n";
                 goto next;
             }
