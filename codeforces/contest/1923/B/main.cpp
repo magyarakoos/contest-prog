@@ -26,5 +26,7 @@ int main() {
             cin >> X;
             row[abs(X)] += A[i];
         }
+
+        int curr = 
     }
 }
