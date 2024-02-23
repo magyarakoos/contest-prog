@@ -29,6 +29,11 @@ int main() {
 
         int curr = 1;
 
+        for (int i = 1; i <= N; i++) {
+            cout << row[i] << ' ';
+        }
+        cout << '\n';
+
         for (; curr <= N; curr++) {
 
             if (row[curr] > K) {
