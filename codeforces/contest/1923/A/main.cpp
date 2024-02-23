@@ -12,9 +12,11 @@ bool valid(const vector<int>& v) {
     for (int e : v) oc += e;
 
     int i = 0;
-    for (int i = 0; i < N; i++) {
-        if ()
+    for (; i < size(v); i++) {
+        if (v[i]) break;
     }
+
+    for (; i < )
 }
 
 int main() {
