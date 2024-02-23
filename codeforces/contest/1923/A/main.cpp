@@ -43,9 +43,11 @@ int main() {
 
         int fo = first(1, 0, N - 1, v);
 
-        int coc = 0;
+        int coc = 0, lo;
         for (int i = fo; i < N; i++) {
-            if (!v[i]) break;
+            if (!v[i]) {
+                lo = 
+            }
             coc += v[i];
         }
 
@@ -54,6 +56,8 @@ int main() {
             continue;
         }
 
-        int dist = fo;
+        for (int i = fo; i < N; i++) {
+
+        }
     }
 }
