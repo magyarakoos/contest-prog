@@ -36,6 +36,8 @@ int main() {
 
         for (; curr <= N; curr++) {
 
+            cout << row[curr] << ' ';
+
             if (row[curr] > K) {
                 cout << "NO\n";
                 goto next;
