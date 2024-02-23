@@ -32,12 +32,11 @@ int main() {
                 goto next;
             }
 
-            int k = K - ;
+            int k = K - v[i];
 
-
-
-            for (int j = i + 1; j < N; j++) {
-
+            for (int j = i + 1; j < N && k; j++) {
+                
+                
             }
         }
 
