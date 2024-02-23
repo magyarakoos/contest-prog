@@ -19,30 +19,10 @@ int main() {
         vector<int> A(N);
         for (int& e : A) cin >> e;
 
-        vector<int> row(N + 1);
+        vector<int> v(N);
 
         for (int i = 0; i < N; i++) {
-            int X;
-            cin >> X;
-            row[abs(X)] += A[i];
+            
         }
-
-        int curr = 1;
-
-        for (; curr <= N; curr++) {
-
-            if (row[curr] > K) {
-                cout << "NO\n";
-                goto next;
-            }
-
-            if (curr < N) {
-                row[curr + 1] -= K - row[curr];
-            }
-        }
-
-        cout << "YES\n";
-
-        next: continue;
     }
 }
