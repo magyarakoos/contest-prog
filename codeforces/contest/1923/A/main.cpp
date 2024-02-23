@@ -43,6 +43,10 @@ int main() {
 
         int fo = first(1, 0, N - 1, v);
 
-        
+        int coc = 0;
+        for (int i = fo; i < N; i++) {
+            if (!v[i]) break;
+            coc += v[i];
+        }
     }
 }
