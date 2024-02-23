@@ -32,11 +32,13 @@ int main() {
         vector<int> v(N);
         for (int& e : v) cin >> e;
         
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; first() < N; i++) {
             int fo = first(1, i, N - 1, v);
             int fz = first(0, i, N - 1, v);
 
-            
+            if (!v[i]) {
+
+            }
         }
     }
 }
