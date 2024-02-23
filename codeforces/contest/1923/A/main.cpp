@@ -57,6 +57,8 @@ int main() {
             continue;
         }
 
+        int result = 0;
+
         for (int i = lo + 1; i < N; i++) {
             int fo = first(1, i, N - 1, v);
             if (fo == -1) {
