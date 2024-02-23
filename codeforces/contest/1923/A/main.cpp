@@ -38,6 +38,15 @@ int main() {
         vector<int> v(N);
         for (int& e : v) cin >> e;
         
-        if (valid())
+        if (valid(v)) {
+            cout << "0\n";
+            continue;
+        }
+
+        int result = 0;
+
+        for (int i = )
+
+        cout << result << '\n';
     }
 }
