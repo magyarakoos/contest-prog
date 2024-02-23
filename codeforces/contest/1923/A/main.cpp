@@ -45,9 +45,8 @@ int main() {
 
         int result = 0;
 
-        int lo;
-
         while (!valid(v)) {
+            int lo;
             for (int i = N - 1; i >= 0; i--) {
                 if (v[i]) {
                     lo = i;
