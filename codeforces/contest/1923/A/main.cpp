@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+int 
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -20,7 +22,7 @@ int main() {
         for (int& e : v) cin >> e;
         
         for (int i = 0; i < N; i++) {
-            
+
         }
     }
 }
