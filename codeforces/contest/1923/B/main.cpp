@@ -18,10 +18,12 @@ int main() {
 
         vector<int> A(N);
         for (int& e : A) cin >> e;
-        
-        vector<int> X(N);
-        for (int& e : X) cin >> e;
 
         vector<int> left(N), right(N);
+
+        for (int i = 0; i < N; i++) {
+            int X;
+            cin >> X;
+        }
     }
 }
