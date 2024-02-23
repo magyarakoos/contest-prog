@@ -43,7 +43,7 @@ int main() {
             int k = K - row[curr];
 
             for (int j = curr + 1; j <= N; j++) {
-
+                if (row[j] )
             }
         }
 
