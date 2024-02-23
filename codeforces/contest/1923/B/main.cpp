@@ -10,4 +10,12 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
+    int T;
+    cin >> T;
+    while (T--) {
+        int N, K;
+        cin >> N >> K;
+
+        
+    }
 }
