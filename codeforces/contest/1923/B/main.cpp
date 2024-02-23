@@ -35,7 +35,11 @@ int main() {
                 goto next;
             }
 
-            
+            if (row[curr] < K) {
+
+            } else {
+                row[curr] = 0;
+            }
         }
 
         next: continue;
