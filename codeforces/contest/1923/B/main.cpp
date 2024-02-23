@@ -19,16 +19,12 @@ int main() {
         vector<int> A(N);
         for (int& e : A) cin >> e;
 
-        vector<int> left(N + 1), right(N + 1);
+        vector<int> row(N + 1);
 
         for (int i = 0; i < N; i++) {
             int X;
             cin >> X;
-            if (X > 0) {
-                right[X]
-            } else {
-
-            }
+            row[abs(X)] += A[i];
         }
     }
 }
