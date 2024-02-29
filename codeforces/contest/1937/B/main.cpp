@@ -42,7 +42,15 @@ int main() {
                 curr_round = round;
             }
 
-            if (x == N - 1 )
+            if (x == N - 1 && y == N - 1) {
+                continue;
+            }
+
+            if (y == 1) {
+                
+            } else {
+
+            }
         }
     };
 }
