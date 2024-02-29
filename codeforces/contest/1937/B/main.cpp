@@ -44,15 +44,13 @@ int main() {
                 curr_round = round;
             }
 
-            if (x == N - 1 && y == 1) {
-                continue;
-            }
-
             if (y == 1) {
                 if (v[x][y]) {
                     if (path[round]) {
                         count[round]++;
-                        if (x < N - )
+                        if (x < N - 1) {
+                            q.push({x + 1, })
+                        }
                     }
                     else continue;
                 } else {
