@@ -41,6 +41,8 @@ int main() {
             auto [x, y, dist, prv] = q.front();
             q.pop();
 
+            cout << x << ' ' << y << ' ' << dist << ' ' << prv << '\n';
+
             if (curr_d < dist) {
                 if (cntS[0]) {
                     path += '0';
@@ -64,7 +66,7 @@ int main() {
             for (auto [dx, dy] : dirs) {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
-                    q.push({nx, ny, dist + 1});
+                    q.push({nx, ny, dist + 1, v[x][y]});
                     cntS[v[x][y]]++;
                 }
             }
