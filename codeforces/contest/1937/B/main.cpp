@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+constexpr array<int, 2> dirs[] = {{1, 0}, {0, 1}};
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -24,7 +26,7 @@ int main() {
             }
         }
         
-        queue<array<int, 2>> q;
+        queue<array<int, 3>> q;
         q.push({0, 0, 0});
     };
 }
