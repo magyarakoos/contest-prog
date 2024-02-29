@@ -32,6 +32,7 @@ int main() {
         string path = to_string(v[0][0]);
 
         vector<array<int, 2>> posC(N);
+        posC[0][0] = 1;
 
         bool has_z = 0;
         int curr_dist = 0;
