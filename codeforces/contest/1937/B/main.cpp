@@ -52,13 +52,14 @@ int main() {
                 if (v[x][y]) {
                     if (path[round]) {
                         count[round]++;
-                        
+
                     }
                     else continue;
                 } else {
                     if (path[round]) {
                         count[round] = 1;
                         path[round] = 0;
+                        
                     } else {
                         count[round]++;
                     }
