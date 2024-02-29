@@ -63,7 +63,7 @@ int main() {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
                     if (posC[nx][ny]) {
-                        posC[nx][ny]++;
+                        posC[nx][ny] += posC[x][y];
                     } else {
                         posC[nx][ny] = 1;
                         q.push({nx, dist + 1, ny, v[nx][ny]});
