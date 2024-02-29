@@ -34,7 +34,6 @@ int main() {
         vector<array<int, 2>> posC(N);
 
         bool has_z = 0;
-        int count = 0;
         int curr_dist = 0;
 
         while (!q.empty()) {
@@ -56,7 +55,6 @@ int main() {
             }
 
             if (dist == N) {
-                count++;
                 continue;
             }
 
@@ -74,6 +72,6 @@ int main() {
             }
         }
 
-        cout << path << '\n' << count << '\n';
+        cout << path << '\n' << posC[N - 1][1] << '\n';
     };
 }
