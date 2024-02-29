@@ -34,7 +34,6 @@ int main() {
         string path = to_string(v[0][0]);
 
         bool has_z = 0;
-        
         int count = 0;
 
         while (!q.empty()) {
