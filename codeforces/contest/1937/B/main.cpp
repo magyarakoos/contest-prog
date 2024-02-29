@@ -31,9 +31,10 @@ int main() {
         q.push({0, 0, 0});
 
         vector<bool> path(N + 1);
+        path[0] = v[0][0];
 
         while (!q.empty()) {
-            if ()
+            auto []
         }
     };
 }
