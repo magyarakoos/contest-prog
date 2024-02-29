@@ -49,7 +49,10 @@ int main() {
 
             if (y == 1) {
                 if (v[x][y]) {
-                    if path[round]
+                    if (path[round]) count++;
+                    else continue;
+                } else {
+                    if (path[round])
                 }
             } else {
 
