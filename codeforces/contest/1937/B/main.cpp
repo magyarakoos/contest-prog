@@ -30,6 +30,10 @@ int main() {
 
         q.push({0, 0, 0});
 
-        
+        vector<bool> path(N + 1);
+
+        while (!q.empty()) {
+            if ()
+        }
     };
 }
