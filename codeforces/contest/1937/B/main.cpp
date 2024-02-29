@@ -44,7 +44,7 @@ int main() {
                 curr_round = round;
             }
 
-            if (x == N - 1 && y == N - 1) {
+            if (x == N - 1 && y == 1) {
                 continue;
             }
 
@@ -52,16 +52,17 @@ int main() {
                 if (v[x][y]) {
                     if (path[round]) {
                         count[round]++;
-
+                        if (x < N - )
                     }
                     else continue;
                 } else {
                     if (path[round]) {
                         count[round] = 1;
                         path[round] = 0;
-                        
+
                     } else {
                         count[round]++;
+
                     }
                 }
             } else {
