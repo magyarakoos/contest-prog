@@ -52,7 +52,9 @@ int main() {
                 curr_d = dist;
             }
 
-            if (path.back() == '0') {}
+            if (path.back() == '0' && prv) {
+                continue;
+            }
 
             if (dist == N) {
                 cout << "YAOU\n";
