@@ -63,7 +63,7 @@ int main() {
             for (auto [dx, dy] : dirs) {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
-                    q.push({nx, ny, dist + 1, v[nx][ny]});
+                    q.push({nx, dist + 1, ny, v[nx][ny]});
                     if (!v[nx][ny]) has_z = 1;
                 }
             }
