@@ -47,7 +47,7 @@ int main() {
             }
 
             if (y == 1) {
-                if ()
+                if ( path[round])
             } else {
 
             }
