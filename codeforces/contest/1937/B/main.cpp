@@ -35,8 +35,8 @@ int main() {
             auto [x, y, dist] = q.front();
             q.pop();
 
-            if (curr_d < d) {
-                
+            if (curr_d < dist) {
+                curr_d = dist;
             }
 
             if (dist == N) {
