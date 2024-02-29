@@ -28,6 +28,8 @@ int main() {
 
         int curr_round = 1;
 
-        q.push({0, 0,})
+        q.push({0, 0, 0});
+
+        
     };
 }
