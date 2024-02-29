@@ -28,5 +28,16 @@ int main() {
         
         queue<array<int, 3>> q;
         q.push({0, 0, 0});
+
+        while (!q.empty()) {
+            auto [x, y, dist] = q.front();
+            q.pop();
+
+            if (dist == N) {
+                cout << "YAOU\n";
+            }
+
+            
+        }
     };
 }
