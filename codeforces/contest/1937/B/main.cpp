@@ -23,53 +23,7 @@ int main() {
                 v[j][i] = c == '1';
             }
         }
-
-        queue<array<int, 3>> q;
-
-        int curr_round = 1;
-
-        q.push({0, 0, 0});
-
-        vector<bool> path(N + 1, 1);
-        vector<int> count(N + 1);
-        count[0] = 1;
-        path[0] = v[0][0];
-
-        while (!q.empty()) {
-            auto [x, y, round] = q.front(); q.pop();
-
-            if (curr_round < round) {
-                // előző kör kiértékelése, megszámoljuk hány jó van
-                
-                curr_round = round;
-            }
-
-            if (y == 1) {
-                if (v[x][y]) {
-                    if (path[round]) {
-                        count[round]++;
-                        if (x < N - 1) {
-                            q.push({x + 1, y, round + 1});
-                        } else continue;
-                    }
-                    else continue;
-                } else {
-                    if (path[round]) {
-                        count[round] = 1;
-                        path[round] = 0;
-                        if (x < N - 1) {
-                            q.push({x + 1, y, round + 1});
-                        } else continue;
-                    } else {
-                        count[round]++;
-                        if (x < N - 1) {
-                            q.push({x + 1, y, round + 1});
-                        } else continue;
-                    }
-                }
-            } else {
-                
-            }
-        }
+        
+        
     };
 }
