@@ -35,7 +35,7 @@ int main() {
 
         array<int, 2> cntS;
         
-        int count;
+        int count = 0;
 
         while (!q.empty()) {
             auto [x, y, dist, prv] = q.front();
@@ -69,5 +69,7 @@ int main() {
                 }
             }
         }
+
+        cout << count << '\n' << path << '\n';
     };
 }
