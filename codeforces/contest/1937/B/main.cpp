@@ -26,7 +26,7 @@ int main() {
             }
         }
         
-        queue<array<int, 4>> q;
+        queue<tuple<int, int, bool, bool>> q;
         q.push({0, 0, 0, 0});
 
         int curr_d = 0;
@@ -38,7 +38,7 @@ int main() {
         int count = 0;
 
         while (!q.empty()) {
-            auto [x, y, dist, prv] = q.front();
+            auto [x, dist, prv] = q.front();
             q.pop();
 
             if (curr_d < dist) {
