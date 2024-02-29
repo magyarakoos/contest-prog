@@ -40,7 +40,9 @@ int main() {
 
             for (auto [dx, dy] : dirs) {
                 int nx = x + dx, ny = y + dy;
-                if (nx < N && ny < 2)
+                if (nx < N && ny < 2) {
+                    
+                }
             }
         }
     };
