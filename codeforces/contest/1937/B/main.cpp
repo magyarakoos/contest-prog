@@ -41,7 +41,7 @@ int main() {
             for (auto [dx, dy] : dirs) {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
-                    
+                    q.push({nx, ny, dist + 1});
                 }
             }
         }
