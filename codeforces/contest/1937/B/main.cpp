@@ -35,6 +35,7 @@ int main() {
 
         bool has_z = 0;
         int curr_dist = 0;
+        int count = 0;
 
         while (!q.empty()) {
             auto [x, dist, y, prv] = q.front();
@@ -73,6 +74,6 @@ int main() {
             }
         }
 
-        cout << path << '\n' << posC[N - 1][1] << '\n';
+        cout << path << '\n' << count << '\n';
     };
 }
