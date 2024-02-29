@@ -73,6 +73,12 @@ int main() {
             }
         }
 
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < N; j++) {
+                cout << posC[j]
+            }
+        }        
+
         cout << path << '\n' << count << '\n';
     };
 }
