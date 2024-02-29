@@ -38,7 +38,7 @@ int main() {
         int count = 0;
 
         while (!q.empty()) {
-            auto [x, dist, prv] = q.front();
+            auto [x, dist, y, prv] = q.front();
             q.pop();
 
             if (curr_d < dist) {
