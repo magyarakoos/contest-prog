@@ -35,9 +35,10 @@ int main() {
 
             if (dist == N) {
                 cout << "YAOU\n";
+                continue;
             }
 
-            
+            for ()
         }
     };
 }
