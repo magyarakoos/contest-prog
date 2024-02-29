@@ -65,7 +65,7 @@ int main() {
                     if (posC[nx][ny]) {
                         posC[nx][ny] += posC[x][y];
                     } else {
-                        posC[nx][ny] = posC[x][y];
+                        posC[nx][ny] = 1;
                         q.push({nx, dist + 1, ny, v[nx][ny]});
                         if (!v[nx][ny]) has_z = 1;
                     }
