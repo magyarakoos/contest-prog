@@ -49,7 +49,7 @@ int main() {
                     if (path[round]) {
                         count[round]++;
                         if (x < N - 1) {
-                            q.push({x + 1, })
+                            q.push({x + 1, y, round + 1});
                         }
                     }
                     else continue;
@@ -57,10 +57,14 @@ int main() {
                     if (path[round]) {
                         count[round] = 1;
                         path[round] = 0;
-
+                        if (x < N - 1) {
+                            q.push({x + 1, y, round + 1});
+                        }
                     } else {
                         count[round]++;
-
+                        if (x < N - 1) {
+                            q.push({x + 1, y, round + 1});
+                        }
                     }
                 }
             } else {
