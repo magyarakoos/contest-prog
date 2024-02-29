@@ -15,6 +15,8 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        int x = 
+        int x = 1;
+        while ((x << 1) <= N) x <<= 1;
+        cout << x << '\n';
     }
 }
