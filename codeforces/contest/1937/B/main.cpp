@@ -41,15 +41,11 @@ int main() {
             auto [x, y, dist, prv] = q.front();
             q.pop();
 
-            cout << x << ' ' << y << ' ' << dist << ' ' << prv << '\n';
-
             if (curr_d < dist) {
                 if (cntS[0]) {
                     path += '0';
-                    count += cntS[0];
                 } else {
                     path += '1';
-                    count += cntS[1];
                 }
                 cntS = {0, 0};
                 curr_d = dist;
@@ -60,7 +56,7 @@ int main() {
             }
 
             if (dist == N) {
-                cout << "YAOU\n";
+                count++;
                 continue;
             }
 
