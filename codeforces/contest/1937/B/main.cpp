@@ -26,8 +26,8 @@ int main() {
             }
         }
         
-        queue<array<int, 3>> q;
-        q.push({0, 0, 0});
+        queue<array<int, 4>> q;
+        q.push({0, 0, 0, 0});
 
         int curr_d = 0;
 
@@ -38,7 +38,7 @@ int main() {
         int count;
 
         while (!q.empty()) {
-            auto [x, y, dist] = q.front();
+            auto [x, y, dist, prv] = q.front();
             q.pop();
 
             if (curr_d < dist) {
@@ -51,6 +51,8 @@ int main() {
                 }
                 curr_d = dist;
             }
+
+            if (path.back() == '1') {}
 
             if (dist == N) {
                 cout << "YAOU\n";
