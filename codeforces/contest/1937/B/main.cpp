@@ -33,14 +33,14 @@ int main() {
 
         vector<bool> path({v[0][0]});
 
-        int zc, oc;
+        array<int, 2> cntS;
 
         while (!q.empty()) {
             auto [x, y, dist] = q.front();
             q.pop();
 
             if (curr_d < dist) {
-                
+                if ()
                 curr_d = dist;
             }
 
@@ -53,7 +53,7 @@ int main() {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
                     q.push({nx, ny, dist + 1});
-                    s.insert(v[x][y]);
+                    cntS[v[x][y]]++;
                 }
             }
         }
