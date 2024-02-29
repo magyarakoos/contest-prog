@@ -38,7 +38,10 @@ int main() {
                 continue;
             }
 
-            for ()
+            for (auto [dx, dy] : dirs) {
+                int nx = x + dx, ny = y + dy;
+                if (nx < N && ny < 2)
+            }
         }
     };
 }
