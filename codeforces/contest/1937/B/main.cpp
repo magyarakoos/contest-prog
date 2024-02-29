@@ -43,7 +43,11 @@ int main() {
 
             if (curr_d < dist) {
                 if (cntS[0]) {
-
+                    path += '0';
+                    count += cntS[0];
+                } else {
+                    path += '1';
+                    count += cntS[1];
                 }
                 curr_d = dist;
             }
