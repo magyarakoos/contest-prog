@@ -31,6 +31,8 @@ int main() {
 
         string path = to_string(v[0][0]);
 
+        vector<array<int, 2>> posC(N);
+
         bool has_z = 0;
         int count = 0;
         int curr_dist = 0;
@@ -61,6 +63,7 @@ int main() {
             for (auto [dx, dy] : dirs) {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
+                    if (posC[nx][ny])
                     q.push({nx, dist + 1, ny, v[nx][ny]});
                     if (!v[nx][ny]) has_z = 1;
                 }
