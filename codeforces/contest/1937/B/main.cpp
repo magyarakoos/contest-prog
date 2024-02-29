@@ -65,9 +65,11 @@ int main() {
                 if (nx < N && ny < 2) {
                     if (posC[nx][ny]) {
                         posC[nx][ny]++;
+                    } else {
+                        posC[nx][ny] = 1;
+                        q.push({nx, dist + 1, ny, v[nx][ny]});
+                        if (!v[nx][ny]) has_z = 1;
                     }
-                    q.push({nx, dist + 1, ny, v[nx][ny]});
-                    if (!v[nx][ny]) has_z = 1;
                 }
             }
         }
