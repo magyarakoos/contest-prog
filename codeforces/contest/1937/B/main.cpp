@@ -51,6 +51,7 @@ int main() {
                     path += '1';
                     count += cntS[1];
                 }
+                cntS = {0, 0};
                 curr_d = dist;
             }
 
