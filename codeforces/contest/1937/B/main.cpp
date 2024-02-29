@@ -42,7 +42,7 @@ int main() {
             q.pop();
 
             if (curr_d < dist) {
-                if (cntS[0]) {
+                if (has_z) {
                     path += '0';
                 } else {
                     path += '1';
@@ -64,7 +64,7 @@ int main() {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
                     q.push({nx, ny, dist + 1, v[nx][ny]});
-                    cntS[v[nx][ny]]++;
+                    if (!v[nx][ny]) has_z = 1;
                 }
             }
         }
