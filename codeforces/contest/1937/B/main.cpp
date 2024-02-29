@@ -38,6 +38,7 @@ int main() {
             q.pop();
 
             if (curr_d < dist) {
+                
                 curr_d = dist;
             }
 
