@@ -33,7 +33,7 @@ int main() {
 
         string path = to_string(v[0][0]);
 
-        array<int, 2> cntS {0, 0};
+        bool has_z = 0;
         
         int count = 0;
 
@@ -47,7 +47,7 @@ int main() {
                 } else {
                     path += '1';
                 }
-                cntS = {0, 0};
+                has_z = 0;
                 curr_d = dist;
             }
 
