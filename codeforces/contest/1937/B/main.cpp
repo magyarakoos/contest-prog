@@ -55,6 +55,7 @@ int main() {
             }
 
             if (dist == N) {
+                count += posC[x][y];
                 continue;
             }
 
