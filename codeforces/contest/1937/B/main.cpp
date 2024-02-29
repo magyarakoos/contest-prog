@@ -31,16 +31,20 @@ int main() {
 
         int curr_d = 0;
 
-        vector<bool> path({v[0][0]});
+        string path = to_string(v[0][0]);
 
         array<int, 2> cntS;
+        
+        int count;
 
         while (!q.empty()) {
             auto [x, y, dist] = q.front();
             q.pop();
 
             if (curr_d < dist) {
-                if ()
+                if (cntS[0]) {
+
+                }
                 curr_d = dist;
             }
 
