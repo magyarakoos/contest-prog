@@ -56,7 +56,6 @@ int main() {
             }
 
             if (dist == N) {
-                cout << "YAUO\n";
                 continue;
             }
 
