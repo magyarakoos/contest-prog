@@ -34,7 +34,9 @@ int main() {
         path[0] = v[0][0];
 
         while (!q.empty()) {
-            auto []
+            auto [x, y, round] = q.front(); q.pop();
+
+            if (round )
         }
     };
 }
