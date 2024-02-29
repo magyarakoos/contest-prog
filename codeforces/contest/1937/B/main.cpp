@@ -56,6 +56,8 @@ int main() {
                     if (path[round]) {
                         count[round] = 1;
                         path[round] = 0;
+                    } else {
+                        count[round]++;
                     }
                 }
             } else {
