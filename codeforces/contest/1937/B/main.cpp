@@ -29,25 +29,24 @@ int main() {
         queue<tuple<int, int, bool, bool>> q;
         q.push({0, 0, 0, 0});
 
-        int curr_d = 0;
-
         string path = to_string(v[0][0]);
 
         bool has_z = 0;
         int count = 0;
+        int curr_dist = 0;
 
         while (!q.empty()) {
             auto [x, dist, y, prv] = q.front();
             q.pop();
 
-            if (curr_d < dist) {
+            if (curr_dist < dist) {
                 if (has_z) {
                     path += '0';
                 } else {
                     path += '1';
                 }
                 has_z = 0;
-                curr_d = dist;
+                curr_dist = dist;
             }
 
             if (path.back() == '0' && prv) {
