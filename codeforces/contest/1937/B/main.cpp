@@ -16,5 +16,11 @@ int main() {
         int N;
         cin >> N;
         vector<array<bool, 2>> v(N);
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < 2)
+            char c;
+            cin >> c;
+            v[i]
+        }
     };
 }
