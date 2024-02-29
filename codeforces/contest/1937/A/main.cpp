@@ -18,6 +18,6 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
-        cout << upper_bound(all(v), N) << '\n';
+        cout << lower_bound(all(v), N) << '\n';
     }
 }
