@@ -31,6 +31,8 @@ int main() {
 
         int curr_d = 0;
 
+        vector<bool> path({v[0][0]});
+
         while (!q.empty()) {
             auto [x, y, dist] = q.front();
             q.pop();
