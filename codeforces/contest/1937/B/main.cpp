@@ -24,8 +24,10 @@ int main() {
             }
         }
 
-        queue<array<int, 2>> q;
+        queue<array<int, 3>> q;
 
-        
+        int curr_round = 1;
+
+        q.push({0, 0,})
     };
 }
