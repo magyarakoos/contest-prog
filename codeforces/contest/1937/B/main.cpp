@@ -33,8 +33,10 @@ int main() {
 
         vector<bool> path({v[0][0]});
 
+        set<bool> s;
+
         while (!q.empty()) {
-            auto [x, y, dist, prv] = q.front();
+            auto [x, y, dist] = q.front();
             q.pop();
 
             if (curr_d < dist) {
@@ -51,6 +53,7 @@ int main() {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
                     q.push({nx, ny, dist + 1});
+                    s.insert(v[x][y]);
                 }
             }
         }
