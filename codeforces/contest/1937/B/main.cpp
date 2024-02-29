@@ -36,7 +36,9 @@ int main() {
         while (!q.empty()) {
             auto [x, y, round] = q.front(); q.pop();
 
-            if (round )
+            if (curr_round < round) {
+                // előző kör kiértékelése, megszámoljuk hány jó van
+            }
         }
     };
 }
