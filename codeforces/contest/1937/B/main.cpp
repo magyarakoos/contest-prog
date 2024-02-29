@@ -66,8 +66,8 @@ int main() {
             for (auto [dx, dy] : dirs) {
                 int nx = x + dx, ny = y + dy;
                 if (nx < N && ny < 2) {
-                    q.push({nx, ny, dist + 1, v[x][y]});
-                    cntS[v[x][y]]++;
+                    q.push({nx, ny, dist + 1, v[nx][ny]});
+                    cntS[v[nx][ny]]++;
                 }
             }
         }
