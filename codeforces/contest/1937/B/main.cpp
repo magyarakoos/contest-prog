@@ -69,6 +69,6 @@ int main() {
             }
         }
 
-        cout << count << '\n' << path << '\n';
+        cout << path << '\n' << count << '\n';
     };
 }
