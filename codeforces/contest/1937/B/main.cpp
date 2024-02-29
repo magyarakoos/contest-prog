@@ -38,10 +38,11 @@ int main() {
 
             if (curr_round < round) {
                 // előző kör kiértékelése, megszámoljuk hány jó van
-                curr_round = rount;
+                
+                curr_round = round;
             }
 
-
+            
         }
     };
 }
