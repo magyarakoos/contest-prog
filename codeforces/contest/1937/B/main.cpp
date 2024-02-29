@@ -25,6 +25,5 @@ int main() {
         }
 
         queue<array<int, 2>> q;
-        vector<bool> step
     };
 }
