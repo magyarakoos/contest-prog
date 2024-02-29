@@ -15,5 +15,6 @@ int main() {
     while (T--) {
         int N;
         cin >> N;
+        vector<array<bool, 2>> v(N);
     };
 }
