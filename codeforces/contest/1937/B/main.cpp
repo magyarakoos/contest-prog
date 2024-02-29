@@ -31,7 +31,8 @@ int main() {
         q.push({0, 0, 0});
 
         vector<bool> path(N + 1, 1);
-        int count = 1;
+        vector<int> count(N + 1);
+        count[0] = 1;
         path[0] = v[0][0];
 
         while (!q.empty()) {
