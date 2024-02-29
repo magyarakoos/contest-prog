@@ -24,6 +24,7 @@ int main() {
             }
         }
         
-        
+        queue<array<int, 2>> q;
+        q.push({0, 0, 0})
     };
 }
