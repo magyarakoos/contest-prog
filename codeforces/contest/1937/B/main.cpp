@@ -42,7 +42,7 @@ int main() {
                 curr_round = round;
             }
 
-            
+            if (x == N - 1 )
         }
     };
 }
