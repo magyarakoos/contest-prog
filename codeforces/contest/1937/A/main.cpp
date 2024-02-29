@@ -10,9 +10,9 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    const vector<int> v;
+    const vector<int> v({1});
     for (int i = 0; i < 31; i++) {
-        
+        v.push_back(v[size(v) - 1] * 2);
     }
     int T;
     cin >> T;
