@@ -26,14 +26,14 @@ int main() {
             }
         }
         
-        queue<array<int, 4>> q;
-        q.push({0, 0, 0, 0});
+        queue<array<int, 3>> q;
+        q.push({0, 0, 0});
 
         int curr_d = 0;
 
         vector<bool> path({v[0][0]});
 
-        set<bool> s;
+        int zc, oc;
 
         while (!q.empty()) {
             auto [x, y, dist] = q.front();
