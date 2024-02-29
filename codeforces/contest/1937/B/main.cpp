@@ -50,7 +50,7 @@ int main() {
                         count[round]++;
                         if (x < N - 1) {
                             q.push({x + 1, y, round + 1});
-                        }
+                        } else continue;
                     }
                     else continue;
                 } else {
@@ -59,16 +59,16 @@ int main() {
                         path[round] = 0;
                         if (x < N - 1) {
                             q.push({x + 1, y, round + 1});
-                        }
+                        } else continue;
                     } else {
                         count[round]++;
                         if (x < N - 1) {
                             q.push({x + 1, y, round + 1});
-                        }
+                        } else continue;
                     }
                 }
             } else {
-
+                if ()
             }
         }
     };
