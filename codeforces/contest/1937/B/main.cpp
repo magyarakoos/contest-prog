@@ -33,7 +33,7 @@ int main() {
 
         string path = to_string(v[0][0]);
 
-        array<int, 2> cntS;
+        array<int, 2> cntS {0, 0};
         
         int count = 0;
 
