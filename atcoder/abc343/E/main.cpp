@@ -24,5 +24,7 @@ int main() {
         exit(0);
     }
 
+    cout << "0 0 0 ";
+
     
 }
