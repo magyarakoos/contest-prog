@@ -24,14 +24,13 @@ int main() {
         cin >> A >> B;
         A--;
 
+
+        m[scoreS[A]]--;
+        m[scoreS[A] + B]++;
+
         for (const auto& [k, v] : m) {
             cerr << k << " : " << v << '\n';
         }
-
-        m[scoreS[A]]--;
-        if (m[scoreS[A]])
-        m[scoreS[A] + B]++;
-
 
         cout << size(m) << '\n';
         cerr << '\n';
