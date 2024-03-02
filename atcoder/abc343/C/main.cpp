@@ -27,10 +27,10 @@ bool pal(ll x) {
 int main() {
     ll N;
     cin >> N;
-    ll x = cbrt(N);
+    ll x = round(cbrt(N));
     // x_max = 1e6
     for(;x;x--) {
-        if (pal(x * x * x)) {
+        if (x * x * x <= N && pal(x * x * x)) {
             cout << x * x * x;
             exit(0);
         }
