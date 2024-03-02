@@ -15,12 +15,12 @@ ifstream f("../input");
 
 class SegmentTree {
 private:
-    vector<pair<int, int>> tree; // Pair to store both maximum and second maximum
+    vector<pair<int, int>> tree;
     int n;
 
 public:
     SegmentTree(const vector<int>& arr) {
-        n = arr.size();
+        n = size(arr);
         tree.resize(4 * n);
         build(arr, 0, 0, n - 1);
     }
@@ -76,7 +76,7 @@ public:
     }
 
     int query(int l, int r) {
-        return query(l, r, 0, 0, n - 1);
+        return query(l, r, 0, 0, n - 1).second;
     }
 };
 
