@@ -13,6 +13,8 @@ ifstream f("../input");
 #define cin f
 #endif
 
+
+
 int main() {
 
 }
