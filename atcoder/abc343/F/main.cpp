@@ -74,6 +74,7 @@ int main() {
     for (auto& e : A) cin >> e;
 
     SegmentTree tree(A);
+    SegmentTree tree2 = tree;
 
     
 }
