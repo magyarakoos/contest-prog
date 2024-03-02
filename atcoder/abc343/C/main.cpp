@@ -22,6 +22,9 @@ int main() {
     cin >> N;
     ll x = cbrt(N);
     while (x) {
+        ll y = x * x * x;
+
+        
         x--;
     }
 }
