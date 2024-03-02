@@ -23,7 +23,7 @@ int main() {
         cin >> A >> B;
         A--;
 
-        
+        m[scoreS[A]]
 
         cout << size(m) << '\n';
     }
