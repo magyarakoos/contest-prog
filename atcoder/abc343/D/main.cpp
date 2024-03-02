@@ -26,9 +26,8 @@ int main() {
 
 
         m[scoreS[A]]--;
-        m[scoreS[A] + B]++;
-
-        cerr << scoreS[A] 
+        scoreS[A] += B;
+        m[scoreS[A]]++;
 
         for (const auto& [k, v] : m) {
             cerr << k << " : " << v << '\n';
