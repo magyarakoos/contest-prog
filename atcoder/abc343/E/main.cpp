@@ -26,5 +26,5 @@ int main() {
 
     cout << "0 0 0 ";
 
-    
+    // TODO: 
 }
