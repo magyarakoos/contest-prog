@@ -22,6 +22,6 @@ int main() {
     cin >> N;
     ll x = cbrt(N);
     while (x) {
-
+        x--;
     }
 }
