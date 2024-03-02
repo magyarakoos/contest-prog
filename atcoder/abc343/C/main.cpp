@@ -14,7 +14,9 @@ ifstream f("../input");
 #endif
 
 bool pal(ll x) {
-
+    string s = to_string(x);
+    int l = 0, r = size(s) - 1;
+    
 }
 
 int main() {
