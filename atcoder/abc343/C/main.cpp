@@ -13,11 +13,15 @@ ifstream f("../input");
 #define cin f
 #endif
 
+bool pal(ll x) {
+
+}
+
 int main() {
     ll N;
     cin >> N;
     ll x = cbrt(N);
     while (x) {
-        
+
     }
 }
