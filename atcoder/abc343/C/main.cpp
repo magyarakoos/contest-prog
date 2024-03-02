@@ -21,6 +21,7 @@ bool pal(ll x) {
         l++;
         r--;
     }
+    return 1;
 }
 
 int main() {
