@@ -14,5 +14,5 @@ ifstream f("../input");
 #endif
 
 int main() {
-    
+
 }
