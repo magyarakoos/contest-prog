@@ -21,11 +21,10 @@ int main() {
     ll N;
     cin >> N;
     ll x = cbrt(N);
-    while (x) {
+    for(;x;x--) {
         if (pal(x * x * x)) {
             cout << x * x * x;
             exit(0);
         }
-        x--;
     }
 }
