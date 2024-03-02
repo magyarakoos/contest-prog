@@ -71,6 +71,9 @@ int main() {
     int N, Q;
     cin >> N >> Q;
     vector<int> A(N);
-    for (auto& e : v) cin >> e;
+    for (auto& e : A) cin >> e;
+
+    SegmentTree tree(A);
+
     
 }
