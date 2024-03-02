@@ -7,10 +7,13 @@
 using namespace std;
 using ll = long long;
 
+ifstream f("../input");
+
 #ifdef LOCAL
 #define cin f
 #else 
-
+cin.tie(0);
+ios::sync_with_stdio();
 #endif
 
 int main() {
