@@ -15,30 +15,37 @@ ifstream f("../input");
 
 class SegmentTree {
 private:
-    vector<int> tree;
+    vector<pair<int, int>> tree; // Pair to store both maximum and second maximum
     int n;
 
 public:
     SegmentTree(const vector<int>& arr) {
-        n = size(arr);
+        n = arr.size();
         tree.resize(4 * n);
         build(arr, 0, 0, n - 1);
     }
 
     void build(const vector<int>& arr, int node, int start, int end) {
         if (start == end) {
-            tree[node] = arr[start];
+            tree[node] = {arr[start], INT_MIN};
         } else {
             int mid = (start + end) / 2;
             build(arr, 2 * node + 1, start, mid);
             build(arr, 2 * node + 2, mid + 1, end);
-            tree[node] = max(tree[2 * node + 1], tree[2 * node + 2]);
+            updateNode(node);
         }
+    }
+
+    void updateNode(int node) {
+        vector<int> values = {tree[2 * node + 1].first, tree[2 * node + 1].second,
+                              tree[2 * node + 2].first, tree[2 * node + 2].second};
+        sort(values.begin(), values.end(), greater<int>());
+        tree[node] = {values[0], values[1]};
     }
 
     void update(int index, int value, int node, int start, int end) {
         if (start == end) {
-            tree[node] = value;
+            tree[node] = {value, INT_MIN};
         } else {
             int mid = (start + end) / 2;
             if (index <= mid) {
@@ -46,23 +53,33 @@ public:
             } else {
                 update(index, value, 2 * node + 2, mid + 1, end);
             }
-            tree[node] = max(tree[2 * node + 1], tree[2 * node + 2]);
+            updateNode(node);
         }
     }
 
-    int query(int l, int r, int node, int start, int end) {
+    pair<int, int> query(int l, int r, int node, int start, int end) {
+        if (r < start || l > end) {
+            return {INT_MIN, INT_MIN}; // Out of range
+        }
         if (l <= start && r >= end) {
-            return tree[node];
+            return tree[node]; // Current segment is fully within the query range
         }
         int mid = (start + end) / 2;
-        return max(query(l, r, 2 * node + 1, start, mid), query(l, r, 2 * node + 2, mid + 1, end));
+
+        pair<int, int> leftResult = query(l, r, 2 * node + 1, start, mid);
+        pair<int, int> rightResult = query(l, r, 2 * node + 2, mid + 1, end);
+
+        // Merge step to find the second maximum
+        vector<int> values = {leftResult.first, leftResult.second, rightResult.first, rightResult.second};
+        sort(values.begin(), values.end(), greater<int>());
+        return {values[0], values[1]};
     }
 
     void update(int index, int value) {
         update(index, value, 0, 0, n - 1);
     }
 
-    int query(int l, int r) {
+    pair<int, int> query(int l, int r) {
         return query(l, r, 0, 0, n - 1);
     }
 };
@@ -76,5 +93,5 @@ int main() {
     SegmentTree tree(A);
     SegmentTree tree2 = tree;
 
-    
+
 }
