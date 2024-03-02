@@ -16,5 +16,6 @@ ifstream f("../input");
 int main() {
     int A, B, C;
     cin >> A >> B >> C;
-    
+
+    int 
 }
