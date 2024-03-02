@@ -22,13 +22,10 @@ int main() {
     cin >> N;
     ll x = cbrt(N);
     while (x) {
-        ll y = x * x * x;
-
-        if (pal(y)) {
-            cout << y;
+        if (pal(x * x * x)) {
+            cout << x * x * x;
             exit(0);
         }
-
         x--;
     }
 }
