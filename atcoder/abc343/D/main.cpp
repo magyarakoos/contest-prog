@@ -24,7 +24,6 @@ int main() {
         cin >> A >> B;
         A--;
 
-
         if (m[scoreS[A]] == 1) {
             m.erase(scoreS[A]);
         } else {
@@ -34,7 +33,6 @@ int main() {
         scoreS[A] += B;
         m[scoreS[A]]++;
 
-        cout << size(m) << '\n';
-        cerr << '\n';
+        cout << size(m) << '\n';    
     }
 }
