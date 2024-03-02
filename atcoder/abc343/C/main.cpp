@@ -14,5 +14,7 @@ ifstream f("../input");
 #endif
 
 int main() {
+    ll N;
 
+    ll x = cbrt(N);
 }
