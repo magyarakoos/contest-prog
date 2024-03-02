@@ -24,7 +24,11 @@ int main() {
     while (x) {
         ll y = x * x * x;
 
-        
+        if (pal(y)) {
+            cout << y;
+            exit(0);
+        }
+
         x--;
     }
 }
