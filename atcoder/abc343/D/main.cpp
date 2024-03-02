@@ -14,5 +14,7 @@ ifstream f("../input");
 #endif
 
 int main() {
+    int N, T;
+    cin >> N >> T;
     
 }
