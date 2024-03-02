@@ -93,8 +93,11 @@ int main() {
         cin >> type;
         if (type == '1') {
             int P, X;
+            cin >> P >> X;
+            tree.update(P - 1, X);
         } else {
-
+            int L, R;
+            cin >> L >> R;
         }
     }
 }
