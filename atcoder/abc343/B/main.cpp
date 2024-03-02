@@ -14,5 +14,13 @@ ifstream f("../input");
 #endif
 
 int main() {
-    int 
+    int N;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            char c;
+            cin >> c;
+            if ()
+        }
+    }
 }
