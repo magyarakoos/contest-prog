@@ -89,6 +89,12 @@ int main() {
     SegmentTree tree(A);
 
     while (Q--) {
-        
+        char type, _;
+        cin >> type;
+        if (type == '1') {
+
+        } else {
+
+        }
     }
 }
