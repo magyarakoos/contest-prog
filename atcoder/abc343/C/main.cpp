@@ -35,4 +35,5 @@ int main() {
             exit(0);
         }
     }
+    cout << 1;
 }
