@@ -15,6 +15,7 @@ ifstream f("../input");
 
 int main() {
     ll N;
-
+    cin >> N;
     ll x = cbrt(N);
+    cout << x;
 }
