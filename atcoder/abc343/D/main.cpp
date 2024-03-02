@@ -16,5 +16,11 @@ ifstream f("../input");
 int main() {
     int N, T;
     cin >> N >> T;
-    
+    map<ll, int> m;
+    vector<ll> scoreS(N);
+    while (T--) {
+        int A, B;
+        cin >> A >> B;
+        A--;
+    }
 }
