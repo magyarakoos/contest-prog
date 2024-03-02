@@ -27,8 +27,11 @@ int main() {
         m[scoreS[A]]--;
         m[scoreS[A] + B]++;
 
-        for (const auto& [])
+        for (const auto& [k, v] : m) {
+            cerr << k << " : " << v << '\n';
+        }
 
         cout << size(m) << '\n';
+        cerr << '\n';
     }
 }
