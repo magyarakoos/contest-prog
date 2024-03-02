@@ -27,8 +27,9 @@ int main() {
         for (const auto& [k, v] : m) {
             cerr << k << " : " << v << '\n';
         }
-        
+
         m[scoreS[A]]--;
+        if (m[scoreS[A]])
         m[scoreS[A] + B]++;
 
 
