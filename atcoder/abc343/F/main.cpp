@@ -57,22 +57,18 @@ public:
         }
     }
 
-    pair<int, int> query(int l, int r, int node, int start, int end) {
-        if (r < start || l > end) {
-            return {INT_MIN, INT_MIN}; // Out of range
-        }
+    int query(int l, int r, int node, int start, int end) {
         if (l <= start && r >= end) {
-            return tree[node]; // Current segment is fully within the query range
+            return tree[node];
         }
         int mid = (start + end) / 2;
 
         pair<int, int> leftResult = query(l, r, 2 * node + 1, start, mid);
         pair<int, int> rightResult = query(l, r, 2 * node + 2, mid + 1, end);
 
-        // Merge step to find the second maximum
         vector<int> values = {leftResult.first, leftResult.second, rightResult.first, rightResult.second};
         sort(values.begin(), values.end(), greater<int>());
-        return {values[0], values[1]};
+        return values[1]
     }
 
     void update(int index, int value) {
