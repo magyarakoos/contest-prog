@@ -25,15 +25,5 @@ bool pal(ll x) {
 }
 
 int main() {
-    ll N;
-    cin >> N;
-    ll x = round(cbrt(N));
-    for(;x;x--) {
-        ll cube = x * x * x;
-        if (cube <= N && pal(cube)) {
-            cout << cube;
-            exit(0);
-        }
-    }
-    cout << 1;
+
 }
