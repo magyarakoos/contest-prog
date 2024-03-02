@@ -87,4 +87,8 @@ int main() {
     for (auto& e : A) cin >> e;
 
     SegmentTree tree(A);
+
+    while (Q--) {
+        
+    }
 }
