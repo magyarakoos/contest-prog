@@ -98,6 +98,7 @@ int main() {
         } else {
             int L, R;
             cin >> L >> R;
+            tree.query()
         }
     }
 }
