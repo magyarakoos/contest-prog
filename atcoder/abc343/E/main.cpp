@@ -17,5 +17,7 @@ int main() {
     int A, B, C;
     cin >> A >> B >> C;
 
-    int 
+    int volume = A + B * 2 + C * 3;
+
+    if (volume != 3 * 7 * 7 * 7)
 }
