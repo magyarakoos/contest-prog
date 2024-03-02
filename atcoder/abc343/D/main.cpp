@@ -34,10 +34,6 @@ int main() {
         scoreS[A] += B;
         m[scoreS[A]]++;
 
-        for (const auto& [k, v] : m) {
-            cerr << k << " : " << v << '\n';
-        }
-
         cout << size(m) << '\n';
         cerr << '\n';
     }
