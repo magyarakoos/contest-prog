@@ -28,7 +28,6 @@ int main() {
     ll N;
     cin >> N;
     ll x = round(cbrt(N));
-    // x_max = 1e6
     for(;x;x--) {
         ll cube = x * x * x;
         if (cube <= N && pal(cube)) {
