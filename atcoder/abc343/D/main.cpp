@@ -17,13 +17,15 @@ int main() {
     int N, T;
     cin >> N >> T;
     map<ll, int> m;
+    m[0] = N;
     vector<ll> scoreS(N);
     while (T--) {
         int A, B;
         cin >> A >> B;
         A--;
 
-        m[scoreS[A]]
+        m[scoreS[A]]--;
+        m[scoreS[A] + B]++;
 
         cout << size(m) << '\n';
     }
