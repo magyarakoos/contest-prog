@@ -25,7 +25,12 @@ int main() {
         A--;
 
 
-        m[scoreS[A]]--;
+        if (scoreS[A] == 1) {
+            m.erase(scoreS[A]);
+        } else {
+            m[scoreS[A]]--;
+        }
+        
         scoreS[A] += B;
         m[scoreS[A]]++;
 
