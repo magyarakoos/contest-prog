@@ -20,7 +20,8 @@ int main() {
         for (int j = 0; j < N; j++) {
             char c;
             cin >> c;
-            if ()
+            if (c == '1') cout << j + 1;
         }
+        cout << '\n';
     }
 }
