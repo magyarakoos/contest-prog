@@ -22,5 +22,9 @@ int main() {
         int A, B;
         cin >> A >> B;
         A--;
+
+        
+
+        cout << size(m) << '\n';
     }
 }
