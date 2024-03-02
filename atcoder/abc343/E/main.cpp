@@ -19,5 +19,10 @@ int main() {
 
     int volume = A + B * 2 + C * 3;
 
-    if (volume != 3 * 7 * 7 * 7)
+    if (volume != 3 * 7 * 7 * 7) {
+        cout << "No";
+        exit(0);
+    }
+
+    
 }
