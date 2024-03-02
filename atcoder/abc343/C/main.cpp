@@ -17,5 +17,6 @@ int main() {
     ll N;
     cin >> N;
     ll x = cbrt(N);
+    cerr << x << '\n';
     cout << x*x*x;
 }
