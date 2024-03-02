@@ -57,7 +57,7 @@ public:
         }
     }
 
-    int query(int l, int r, int node, int start, int end) {
+    pair<int, int> query(int l, int r, int node, int start, int end) {
         if (l <= start && r >= end) {
             return tree[node];
         }
@@ -67,15 +67,15 @@ public:
         pair<int, int> rightResult = query(l, r, 2 * node + 2, mid + 1, end);
 
         vector<int> values = {leftResult.first, leftResult.second, rightResult.first, rightResult.second};
-        sort(values.begin(), values.end(), greater<int>());
-        return values[1]
+        sort(rall(values));
+        return {values[0], values[1]};
     }
 
     void update(int index, int value) {
         update(index, value, 0, 0, n - 1);
     }
 
-    pair<int, int> query(int l, int r) {
+    int query(int l, int r) {
         return query(l, r, 0, 0, n - 1);
     }
 };
