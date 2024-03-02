@@ -30,8 +30,9 @@ int main() {
     ll x = round(cbrt(N));
     // x_max = 1e6
     for(;x;x--) {
-        if (x * x * x <= N && pal(x * x * x)) {
-            cout << x * x * x;
+        ll cube = x * x * x;
+        if (cube <= N && pal(cube)) {
+            cout << cube;
             exit(0);
         }
     }
