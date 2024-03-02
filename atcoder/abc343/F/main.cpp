@@ -52,7 +52,7 @@ public:
 
     int query(int l, int r, int node, int start, int end) {
         if (l <= start && r >= end) {
-            return tree[node]; // Current segment is fully within the query range
+            return tree[node];
         }
         int mid = (start + end) / 2;
         return max(query(l, r, 2 * node + 1, start, mid), query(l, r, 2 * node + 2, mid + 1, end));
