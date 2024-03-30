@@ -1,6 +1,4 @@
 #include <vector>
-#include <queue>
-#include <array>
 
 void init_labyrinth(int R, int C, std::vector<std::vector<int>> L);
 

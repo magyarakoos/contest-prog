@@ -1,4 +1,6 @@
 #include "labirintus.h"
+#include <queue>
+#include <array>
 
 std::vector<std::vector<int>> l;
 constexpr int dx[] = {1, -1, 0, 0}, dy[] = {0, 0, 1, -1};
