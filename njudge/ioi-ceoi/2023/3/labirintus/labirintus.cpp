@@ -1,7 +1,8 @@
 #include "labirintus.h"
 
 std::vector<std::vector<int>> l;
-constexpr int
+constexpr int dx[] = {1, -1, 0, 0};
+constexpr int dy = {0, 0, 1, -1};
 int r, c;
 
 
