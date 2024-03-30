@@ -22,9 +22,13 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
     vis[0][0] = 1;
 
     while (!q.empty()) {
-        auto [] = q.front(); q.pop();
+        auto [x, y] = q.front(); q.pop();
 
-        if (x == )
+        if (x == c - 1 && y == r - 1) {
+            for (int i = 0; i < N; i++) {
+            l[U[i]][V[i]] = 0;
+                };
+        }
     }
 
 
