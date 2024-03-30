@@ -36,7 +36,10 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
             if (nx < 0 || ny < 0 || nx >= c || ny >= r || l[ny][nx]) {
                 continue;
             }
-            q.push({nx, ny});
+            if (!vis[ny][nx]) {
+                vis[ny][nx] = 1;
+                q.push({nx, ny});
+            }
         }
     }
 
