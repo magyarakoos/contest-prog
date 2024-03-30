@@ -22,8 +22,8 @@ int main() {
     int iter = 0;
     ll curr = K - 1;
     while (curr < mn) {
-        iter++;
-        curr += ()
+        cerr << curr << "\n";
+        curr += (1 << ++iter);
     }
 
     cout << pow(K, iter) - 1 << "\n";
