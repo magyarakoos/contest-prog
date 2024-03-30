@@ -23,8 +23,7 @@ int main() {
     ll curr = K - 1;
     while (curr < mn) {
         iter++;
-        curr /= ()
-        curr *= (K - 1);
+        curr += ()
     }
 
     cout << pow(K, iter) - 1 << "\n";
