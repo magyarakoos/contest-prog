@@ -26,8 +26,13 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
 
         if (x == c - 1 && y == r - 1) {
             for (int i = 0; i < N; i++) {
-            l[U[i]][V[i]] = 0;
-                };
+                l[U[i]][V[i]] = 0;
+            };
+            return true;
+        }
+
+        for (int i = 0; i < 4; i++) {
+            
         }
     }
 
