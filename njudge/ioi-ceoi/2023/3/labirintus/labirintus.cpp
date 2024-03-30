@@ -17,7 +17,7 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
     }
 
     std::vector<std::vector<bool>> vis(r, std::vector<bool>(c));
-    std::queue<>
+    std::queue<std::array<int, 2>> q({{0, 0}});
 
     for (int i = 0; i < N; i++) {
         l[U[i]][V[i]] = 0;
