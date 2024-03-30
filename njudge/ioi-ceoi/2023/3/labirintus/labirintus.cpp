@@ -34,11 +34,11 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
         for (int i = 0; i < 4; i++) {
             int nx = x + dx[i], ny = y + dy[i];
             if (nx < 0 || ny < 0 || nx >= c || ny >= r || l[ny][nx]) {
-                
+                continue;
             }
+            q.push({nx, ny});
         }
     }
-
 
     for (int i = 0; i < N; i++) {
         l[U[i]][V[i]] = 0;
