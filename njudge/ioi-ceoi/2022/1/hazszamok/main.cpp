@@ -26,8 +26,6 @@ int main() {
         curr += (1 << ++iter);
     }
 
-    cout << pow(K, iter) - 1 << "\n";
-
     cerr << curr << "\n";
 
     cerr << iter << "\n";
