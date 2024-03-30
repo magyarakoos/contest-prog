@@ -19,9 +19,9 @@ int main() {
         mn = min(mn, v[i]);
     }
 
-    int iter = 1;
+    int iter = 0;
     ll curr = K;
-    while ((curr - 1) * K <= mn) {
+    while (curr < mn) {
         iter++;
         curr *= K;
     }
