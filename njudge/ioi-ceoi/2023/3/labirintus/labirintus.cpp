@@ -1,7 +1,11 @@
 #include "labirintus.h"
 
-void init_labyrinth(int R, int C, std::vector<std::vector<int>> L) {
+std::vector<std::vector<int>> lab;
+int r,
 
+
+void init_labyrinth(int R, int C, std::vector<std::vector<int>> L) {
+    lab = L;
     return;
 }
 
