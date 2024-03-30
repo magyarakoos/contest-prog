@@ -20,7 +20,7 @@ int main() {
     }
 
     int iter = 0;
-    ll curr = K;
+    ll curr = K - 1;
     while (curr < mn) {
         iter++;
         curr /= ()
