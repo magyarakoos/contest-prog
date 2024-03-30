@@ -12,5 +12,12 @@ int main() {
 
     int K;
     cin >> K;
-    vector<ll> v(K - 1);
+    vector<ll> v(K);
+    int mn = 1e12 + 1;
+    for (int i = 0; i < K; i++) {
+        cin >> v[i];
+        mn = min(mn, v[i]);
+    }
+
+    
 }
