@@ -16,7 +16,7 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
         l[U[i]][V[i]] = 1;
     }
 
-    
+    std::vector<std::vector<bool>> vis(R, std::vecto)
 
     for (int i = 0; i < N; i++) {
         l[U[i]][V[i]] = 0;
