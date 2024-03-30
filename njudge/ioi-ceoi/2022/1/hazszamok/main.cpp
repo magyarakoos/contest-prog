@@ -26,6 +26,8 @@ int main() {
         curr *= K;
     }
 
+    
+
     cerr << curr << "\n";
 
     cerr << iter << "\n";
