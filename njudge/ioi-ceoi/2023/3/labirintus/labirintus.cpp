@@ -1,8 +1,7 @@
 #include "labirintus.h"
 
 std::vector<std::vector<int>> l;
-constexpr int dx[] = {1, -1, 0, 0};
-constexpr int dy = {0, 0, 1, -1};
+constexpr int dx[] = {1, -1, 0, 0}, dy[] = {0, 0, 1, -1};
 int r, c;
 
 
@@ -23,7 +22,9 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
     vis[0][0] = 1;
 
     while (!q.empty()) {
+        auto [] = q.front(); q.pop();
 
+        if (x == )
     }
 
 
