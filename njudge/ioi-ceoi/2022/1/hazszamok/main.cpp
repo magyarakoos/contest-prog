@@ -19,11 +19,11 @@ int main() {
         mn = min(mn, v[i]);
     }
 
-    int iter = 0;
+    int iter = 1;
     ll curr = K;
-    while (curr - 1 < mn) {
-        curr *= K;
+    while ((curr - 1) * K <= mn) {
         iter++;
+        curr *= K;
     }
 
     cout << iter << "\n";
