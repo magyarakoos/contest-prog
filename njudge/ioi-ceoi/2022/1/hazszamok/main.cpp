@@ -21,7 +21,7 @@ int main() {
 
     int iter = 0;
     ll curr = K;
-    while (curr < mn) {
+    while (curr - 1 < mn) {
         curr *= K;
         iter++;
     }
