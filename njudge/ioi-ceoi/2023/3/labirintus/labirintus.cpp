@@ -1,12 +1,13 @@
 #include "labirintus.h"
 
-std::vector<std::vector<int>> lab;
-int r,
+std::vector<std::vector<int>> l;
+int r, c;
 
 
 void init_labyrinth(int R, int C, std::vector<std::vector<int>> L) {
-    lab = L;
-    return;
+    l = L;
+    r = R;
+    c = C;
 }
 
 bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
