@@ -32,7 +32,8 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
         }
 
         for (int i = 0; i < 4; i++) {
-            
+            int nx = x + dx[i], ny = y + dy[i];
+            if ()
         }
     }
 
