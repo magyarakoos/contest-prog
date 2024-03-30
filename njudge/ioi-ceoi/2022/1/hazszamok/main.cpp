@@ -25,4 +25,6 @@ int main() {
         curr *= K;
         iter++;
     }
+
+    cout << iter << "\n";
 }
