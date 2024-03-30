@@ -15,4 +15,12 @@ bool can_escape(int N, std::vector<int> U, std::vector<int> V) {
     for (int i = 0; i < N; i++) {
         l[U[i]][V[i]] = 1;
     }
+
+    
+
+    for (int i = 0; i < N; i++) {
+        l[U[i]][V[i]] = 0;
+    }
+
+    return false;
 }
