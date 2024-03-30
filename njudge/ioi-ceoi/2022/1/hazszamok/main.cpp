@@ -26,7 +26,7 @@ int main() {
         curr *= K;
     }
 
-    
+    cout << pow(K, iter) - 1 << "\n";
 
     cerr << curr << "\n";
 
