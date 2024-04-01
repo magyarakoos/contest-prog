@@ -91,6 +91,5 @@ int main() {
         curr = prv[curr];
     } while (curr != start);
 
-    for (ll x : distS) cout << x << " ";
-    cout << "\n" << start << " " << end << "\n";
+    
 }
