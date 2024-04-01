@@ -11,9 +11,10 @@ int main() {
 
     ps[0] = v[0];
     for (int i = 1; i < N; i++) {
-        ps[i]
+        ps[i] = ps[i - 1] + v[i];
     }
-    cout << "\n";
+    
+    for (int x : ps) cerr << x << " ";
 
     bool a_turn = 1;
 
