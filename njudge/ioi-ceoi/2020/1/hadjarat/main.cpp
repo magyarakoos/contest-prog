@@ -30,5 +30,9 @@ int main() {
         }
     }
 
-    cout << *max_element(all(dp));
+    int mxi = max_element(all(dp)) - dp.begin();
+
+    cout << dp[mxi] << "\n";
+
+    
 }
