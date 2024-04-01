@@ -11,6 +11,10 @@ int main() {
     bool a_turn = 1;
     ll A = 0, B = 0;
     while (!pq.empty()) {
-        
+
+        int val = v.
+
+
+        a_turn ^= 1;
     }
 }
