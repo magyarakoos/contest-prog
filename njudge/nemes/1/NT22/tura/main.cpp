@@ -24,8 +24,10 @@ void solve() {
             return;
         }
         if (uglyNeighbor[U] && ugly[V]) {
-            cout << "NEM\n3\n" << 
+            cout << "NEM\n3\n" << uglyNeighbor[U] << " " << U << " " << V << "\n";
+            return;
         }
+        if (ugly[U] && uglyNeighbor[])
     }
 
     cout << "IGEN\n";
