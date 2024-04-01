@@ -24,10 +24,9 @@ int main() {
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j < i; j++) {
             if (R[j] < R[i] && A[j] < A[i]) {
-                if (dp[i] < dp[j] + 1) {
-                    dp[i] = dp[j] + 1;
-                    prev[i] = j;
-                }
+                dp[i] = dp[j] + 1;
+                prev[i] = j;
+                break;
             }
         }
         s.insert({dp[i], R[i], A[i]});
