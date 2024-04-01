@@ -14,6 +14,13 @@ int main() {
     for (int& x : v) cin >> x;
 
     vector<int> befS, aftS;
+
+    for (int i = 0; i < M; i++) {
+        if (v[i] > v[M]) {
+            
+        }
+    }
+
     for (int i = 0; i < N; i++) {
         if (v[i] > v[M]) {
             befS.push_back(i);
@@ -23,5 +30,5 @@ int main() {
         }
     }
 
-    
+
 }
