@@ -24,14 +24,14 @@ int main() {
         }
     }
 
-    for (int i = 0; i < N; i++) {
+    for (int i = M + 1; i < N; i++) {
         if (v[i] > v[M]) {
-            befS.push_back(i);
+            befS.push_back({v[i], i});
         }
         else if (v[i] < v[M]) {
-            aftS.push_back(i);
+            aftS.push_back({v[i], i});
         }
     }
 
-
+    
 }
