@@ -11,5 +11,7 @@ int main() {
     M--;
 
     vector<int> v(N);
-    
+    for (int& x : v) cin >> x;
+
+    vector<array<int, 2>> aftS()
 }
