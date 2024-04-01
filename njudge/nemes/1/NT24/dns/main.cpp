@@ -9,7 +9,6 @@ int main() {
     cin >> N;
 
     int result = 0, a_before_g = 0, a_after_g = 0;
-    bool g_exists = 0;
 
     while (N--) {
         char C;
