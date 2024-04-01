@@ -13,9 +13,7 @@ int main() {
 
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
-    for (int i = 0; i < N; i++)
-
-
+    for (int i = 0; i < N; i++) S[i] = B[i] - A[i];
 
     /*for (int i = 0; i < N; i++) {
     int best_i = 0, best_j = 0, best_save = INT_MIN;
@@ -41,6 +39,9 @@ int main() {
         l = 0, r = 0, save = 0;
 
     for (; r < N; r++) {
-
+        if (save + S[r] <= 0) {
+            save = 0;
+            l = r + 1;
+        }
     } 
 }
