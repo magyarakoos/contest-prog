@@ -15,7 +15,8 @@ int main() {
     int N, X;
     cin >> N >> X;
 
-    deque<array<int, 2>> divS, remS;
+    set<array<int, 2>> divS;
+    set<array<int, 2>, >
 
     for (int i = 0; i < N; i++) {
         int A;
@@ -26,6 +27,6 @@ int main() {
     }
 
     while (!divS.empty() && !remS.empty()) {
-        
+
     }
 }
