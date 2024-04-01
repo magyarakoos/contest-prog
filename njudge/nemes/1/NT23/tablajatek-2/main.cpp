@@ -27,6 +27,7 @@ struct BigBase3 {
                     v[i] = 0;
                 }
             }
+            
         }
     }
 };
