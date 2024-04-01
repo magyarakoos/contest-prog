@@ -34,5 +34,5 @@ int main() {
         }
     }
 
-    cout << min(accumulate(all(B), 0), psB[best_i] + (psA[best_j - 1]));
+    cout << min(accumulate(all(B), 0), psB[best_i] + (psA[best_j + 1] - psA[best_i]) + psB[best]);
 }
