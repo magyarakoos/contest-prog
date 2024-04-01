@@ -44,8 +44,9 @@ int main() {
 
     g.resize(N + 1);
     for (int i = 1; i < N; i++) {
-        int U, V;
-        cin >> U >> V;
-        g[U].p
+        int U, V, W;
+        cin >> U >> V >> W;
+        g[U].push_back({V, W});
+        g[V].push_back({U, W});
     }
 }
