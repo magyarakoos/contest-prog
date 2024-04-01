@@ -100,5 +100,8 @@ int main() {
 
     for (int i = 0; i < size(distS); i++) {
         valueS[i] = max(pref[i], sum - pref[i]);
+        best = min(best, valueS[i]);
     }
+
+    
 }
