@@ -24,5 +24,5 @@ int main() {
         indegS[V]++;
     }
 
-    cout << accumulate(all(v), 0, )
+    cout << accumulate(indegS.begin(), indegS.end(), 0, )
 }
