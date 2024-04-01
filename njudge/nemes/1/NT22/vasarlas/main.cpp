@@ -42,6 +42,11 @@ int main() {
         if (save + S[r] <= 0) {
             save = 0;
             l = r + 1;
+        } else {
+            save += S[r];
+            if (best_save < save) {
+                best_save = save;
+            }
         }
     } 
 }
