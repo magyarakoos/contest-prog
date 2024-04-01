@@ -19,7 +19,7 @@ int main() {
 
     vector<int> dp(N + 1, 1), prev(N + 1, -1);
 
-    vector<
+    vector<array<int, 3>> v;
 
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j < i; j++) {
