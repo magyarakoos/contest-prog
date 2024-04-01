@@ -35,12 +35,12 @@ vector<T> prefix_sum(const vector<T>& v) {
 #pragma endregion
 
 int N;
-vector<
+vector<vector<array<int, 2>>> g;
 
 int main() {
     speed;
 
     cin >> N;
 
-
+    
 }
