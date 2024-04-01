@@ -15,7 +15,12 @@ struct Cmp {
         if (a[0] > b[0]) {
             return false;
         }
-        return 
+        if (a[1] > b[1]) {
+            return true;
+        }
+        if () {
+            return true;
+        }
     }
 };
 
