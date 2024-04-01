@@ -24,5 +24,7 @@ int main() {
         indegS[V]++;
     }
 
-    cout << accumulate(indegS.begin(), indegS.end(), 0, )
+    cout << accumulate(indegS.begin(), indegS.end(), 0, 
+        [](int a, int b){ return max(a - 2, 0) + max(b - 2, 0); }) << "\n"
+        
 }
