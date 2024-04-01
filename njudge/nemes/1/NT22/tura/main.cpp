@@ -8,7 +8,13 @@ void solve() {
     int N;
     cin >> N;
     vector<bool> ugly(N + 1);
+    for (int i = 1; i <= N; i++) {
+        int A;
+        cin >> A;
+        ugly[i] = A == -1;
+    }
 
+    
 }
 
 int main() {
