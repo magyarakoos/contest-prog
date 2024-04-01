@@ -56,6 +56,7 @@ int bfs(int s) {
                 vis[v] = 1;
                 dist[v] = dist[u] + w;
                 prv[v] = u;
+                prv_dist[v] = w;
                 q.push(v);
             }
         }
@@ -71,7 +72,7 @@ int main() {
     prv.resize(N + 1);
     prv_dist.resize(N + 1);
     g.resize(N + 1);
-    
+
     for (int i = 1; i < N; i++) {
         int U, V, W;
         cin >> U >> V >> W;
@@ -86,6 +87,7 @@ int main() {
 
     int curr = end;
     while (curr != start) {
-        distS
+        distS.push_back(prv_dist[curr]);
+        curr = prv[curr];
     }
 }
