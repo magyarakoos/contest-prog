@@ -79,8 +79,10 @@ int main() {
     int start = bfs(1);
     int end = bfs(start);
 
+    vector<ll> distS;
+
     int curr = end;
     while (curr != start) {
-        
+        distS
     }
 }
