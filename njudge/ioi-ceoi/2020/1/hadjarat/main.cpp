@@ -30,8 +30,7 @@ int main() {
                 }
             }
         }
-
-        s.insert({dp[i], R[i], })
+        s.insert({dp[i], R[i], A[i]});
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
