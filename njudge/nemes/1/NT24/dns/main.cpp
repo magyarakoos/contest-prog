@@ -8,7 +8,8 @@ int main() {
     int N;
     cin >> N;
 
-    ll result = 0, before_g = 0, after_g = 0;
+    ll result = 0;
+    int before_g = 0, after_g = 0;
 
     while (N--) {
         char C;
