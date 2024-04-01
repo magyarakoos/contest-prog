@@ -85,7 +85,8 @@ int main() {
     int start = bfs(1);
     int end = bfs(start);
 
-    vector<ll> distS, nodeS;
+    vector<ll> distS;
+    vector<int> nodeS;
 
     int curr = end;
     do {
@@ -106,5 +107,5 @@ int main() {
         best = min(best, valueS[i]);
     }
 
-    
+    for ()    
 }
