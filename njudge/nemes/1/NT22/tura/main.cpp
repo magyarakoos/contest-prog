@@ -4,12 +4,12 @@ using ll = long long;
 
 #define all(v) v.begin(), v.end()
 
-int N;
-vector<bool> ugly;
-vector<vector<int>> g;
 
 void solve() {
+    int N;
     cin >> N;
+vector<bool> ugly, uglyNeighbor;
+vector<vector<int>> g;
     ugly.assign(N + 1, 0);
     g.assign(N + 1, vector<int>());
 
