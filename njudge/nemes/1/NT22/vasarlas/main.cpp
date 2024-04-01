@@ -1,3 +1,4 @@
+// thanks to the creative genius of TomaSajt
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -46,6 +47,8 @@ int main() {
             save += S[r];
             if (best_save < save) {
                 best_save = save;
+                best_l = l;
+                best_r = r;
             }
         }
     } 
