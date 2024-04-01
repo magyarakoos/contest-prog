@@ -15,12 +15,15 @@ int main() {
     int N, X;
     cin >> N >> X;
 
-    vector<int> divS;
+    int indep_divS = 0;
 
     for (int i = 0; i < N; i++) {
         int A;
         cin >> A;
         int div = A / X, rem = A - div * X;
+        if (div && !rem) {
+
+        }
     }
 
 
