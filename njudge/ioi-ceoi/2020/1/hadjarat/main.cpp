@@ -19,6 +19,8 @@ int main() {
 
     vector<int> dp(N + 1, 1), prev(N + 1, -1);
 
+    vector<
+
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j < i; j++) {
             if (R[j] < R[i] && A[j] < A[i]) {
