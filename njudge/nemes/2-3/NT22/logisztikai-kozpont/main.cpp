@@ -109,6 +109,6 @@ int main() {
 
     for (int x : nodeS) cout << x << " ";
     cout << "\n";
-    for (ll x : distS) cout << x << " ";
+    for (ll x : valueS) cout << x << " ";
     cout << "\n";
 }
