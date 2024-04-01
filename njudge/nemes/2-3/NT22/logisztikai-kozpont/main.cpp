@@ -69,6 +69,10 @@ int main() {
     speed;
     cin >> N;
 
+    if (N == 1) {
+        cout <<
+    }
+
     prv.resize(N + 1);
     prv_dist.resize(N + 1);
     g.resize(N + 1);
