@@ -8,7 +8,15 @@ using namespace std;
 using ll = long long;
 
 struct Cmp {
-    bool operator()()
+    bool operator()(const array<int, 3>& a, const array<int, 3>& b) {
+        if (a[0] < b[0]) {
+            return true;
+        }
+        if (a[0] > b[0]) {
+            return false;
+        }
+        return 
+    }
 };
 
 int main() {
