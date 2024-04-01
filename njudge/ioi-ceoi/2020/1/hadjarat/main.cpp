@@ -37,8 +37,13 @@ int main() {
     stack<int> path;
 
     while (mxi != -1) {
-        cout << mxi << " ";
+        path.push(mxi);
         mxi = prev[mxi];
+    }
+
+    while (!path.empty()) {
+        cout << path.top() << " ";
+        path.pop();
     }
     cout << "\n";
 }
