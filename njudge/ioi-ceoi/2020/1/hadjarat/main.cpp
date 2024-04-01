@@ -7,18 +7,6 @@
 using namespace std;
 using ll = long long;
 
-struct Cmp {
-    bool operator()(const array<int, 3>& a, const array<int, 3>& b) {
-        if (a[0] < b[0]) {
-            return true;
-        }
-        if (a[0] > b[0]) {
-            return false;
-        }
-        return (a[1] > b[1] || a[2] > b[2]);
-    }
-};
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -31,8 +19,6 @@ int main() {
 
     vector<int> dp(N + 1, 1), prev(N + 1, -1);
 
-    priority_queue<array<int, 3>, vector<array<int, 3>>, Cmp> pq;
-
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j < i; j++) {
             if (R[j] < R[i] && A[j] < A[i]) {
@@ -42,8 +28,6 @@ int main() {
                 }
             }
         }
-
-        pq.push({dp[i], R[i]})
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
