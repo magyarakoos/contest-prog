@@ -34,7 +34,11 @@ int main() {
 
     cout << dp[mxi] << "\n";
 
+    stack<int> path;
+
     while (mxi != -1) {
         cout << mxi << " ";
+        mxi = prev[mxi];
     }
+    cout << "\n";
 }
