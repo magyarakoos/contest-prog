@@ -38,6 +38,10 @@ int main() {
     );
     }*/
 
+    int best_l = -1, best_r = -1, best_save = 0, 
+        l = 0, r = 0, save = 0;
 
-    int best_l = -1, best_r = -1, l = 0, r = 0, 
+    for (; r < N; r++) {
+        
+    } 
 }
