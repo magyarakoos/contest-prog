@@ -11,6 +11,7 @@ int main() {
         db += (c == '1');
     }
     int curr = 2;
+    cerr << db << "\n";
     ll result = 0;
     while (curr <= db) {
         result += db - curr + 1;
