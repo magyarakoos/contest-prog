@@ -19,7 +19,13 @@ void solve() {
         ugly[i] = A == -1;
     }
 
-    for (int i = 1; i < N;)
+    for (int i = 1; i < N; i++) {
+        int U, V;
+        cin >> U >> V;
+        if (ugly[U] && ugly[V]) {
+            cout << "NEM\n2\n" << U << " " << V;
+        }
+    }
 }
 
 int main() {
