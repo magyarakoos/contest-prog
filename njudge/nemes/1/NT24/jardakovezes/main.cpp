@@ -12,7 +12,11 @@ int main() {
         ll a = dp[i - 2][0] + dp[i - 2][1],
            b = dp[i - 3][0] + dp[i - 3][1];
         if (a < b) {
-            dp[i][0] = dp[i - 2][0]
+            dp[i][0] = dp[i - 2][0] + 1;
+            dp[i][1] = dp[i - 2][0];
+        } else {
+            dp[i][0] = dp[i - 3][0];
+            dp[i][1] = dp[i - 3][0] + 1;
         }
     }
 }
