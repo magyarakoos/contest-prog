@@ -39,5 +39,5 @@ int main() {
     }*/
 
 
-    int best_
+    int best_l = -1, best_r = -1, l = 0, r = 0, 
 }
