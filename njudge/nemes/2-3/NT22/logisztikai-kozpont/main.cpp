@@ -37,6 +37,8 @@ vector<T> prefix_sum(const vector<T>& v) {
 int N;
 vector<vector<array<ll, 2>>> g;
 
+constexpr
+
 // which is the farthest node from s
 int bfs(int s) {
     vector<bool> vis(N + 1);
@@ -58,7 +60,7 @@ int bfs(int s) {
         }
     }
 
-    return *
+    return *max_element(all(dist));
 }
 
 int main() {
