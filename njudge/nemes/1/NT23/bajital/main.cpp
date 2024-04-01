@@ -20,7 +20,9 @@ int main() {
     for (int i = 0; i < N; i++) {
         int A;
         cin >> A;
-        divS[i] = A / x;
-        remS[i]
+        divS[i] = A / X;
+        remS[i] = A % X;
     }
+
+    
 }
