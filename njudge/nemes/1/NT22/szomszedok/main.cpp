@@ -47,7 +47,7 @@ int main() {
     }
     cout << "\n";
 
-    int p1 = -1, p1_i = 0;
+    int p1 = -1, p1_i = -1;
     for (int i = 0; i < size(befS) - 1; i++) {
         if (befS[i][0] == INF) continue;
         int val = befS[i + 1][1] - max(befS[i][1], M);
@@ -62,14 +62,16 @@ int main() {
         cout << p1_i << " " << p1 << "\n";
     }
 
-    int p2 = -1;
+    int p2 = -1, p2_i = -1;
     for (int i = 0; i < size(aftS) - 1; i++) {
         if (abs(aftS[i][0]) == INF) continue;
+        int val = 
         p2 = max(p2, aftS[i + 1][1] - max(aftS[i][1], M));
     }
+
     if (p2 == -1) {
         cout << "-1";
     } else {
-        cout << p2_i << " " << p2 << "\n";
+        cout << p2_i << " " << p2;
     }
 }
