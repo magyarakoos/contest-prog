@@ -91,5 +91,6 @@ int main() {
         curr = prv[curr];
     } while (curr != start);
 
+    ll sum = sum(distS);
     
 }
