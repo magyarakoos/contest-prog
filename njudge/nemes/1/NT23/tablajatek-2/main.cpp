@@ -19,7 +19,7 @@ struct BigBase3 {
             v.back()++;
         } else {
             int i;
-            for (i = size(v) - 1; i >= 0; i--) {
+            for (i = size(v) - 1; i > -1; i--) {
                 if (v[i] < 2) {
                     v[i]++;
                     break;
@@ -27,7 +27,9 @@ struct BigBase3 {
                     v[i] = 0;
                 }
             }
-            
+            if (i == -1) {
+                v.insert(v.begin(), 1);
+            }
         }
     }
 };
