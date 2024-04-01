@@ -35,12 +35,7 @@ vector<T> prefix_sum(const vector<T>& v) {
 #pragma endregion
 
 int main() {
-    #ifdef ONLINE_JUDGE
     speed;
-    #else
-    #define cin fin
-    ifstream fin("input.txt");
-    #endif
 
     int N;
     cin >> N;
