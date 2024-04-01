@@ -53,9 +53,10 @@ int main() {
         int val = befS[i + 1][1] - max(befS[i][1], M);
         if (p1 < val) {
             p1 = val;
+            p1_i = befS[i][1];
         }
     }
-    cout << p1 << "\n";
+    cout << << p1 << "\n";
 
     int p2 = -1;
     for (int i = 0; i < size(aftS) - 1; i++) {
