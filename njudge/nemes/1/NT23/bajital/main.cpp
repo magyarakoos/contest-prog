@@ -14,7 +14,7 @@ int main() {
 
     int N, X;
     cin >> N >> X;
-    ll sum = 0, mx = 0;
-    
+    ll sum = 0, divS = 0;
+
 
 }
