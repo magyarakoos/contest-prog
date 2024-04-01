@@ -5,10 +5,11 @@ using ll = long long;
 #define all(v) v.begin(), v.end()
 
 int N;
-vector<vector<int>> g;
+vector<int> degreeS;
 
 int bambus() {
-    
+    int end_count = 0;
+
 }
 
 int star() {
@@ -24,7 +25,7 @@ int main() {
         exit(0);
     }
 
-    g.resize(N + 1);
+    degreeS.resize(N + 1);
 
     for (int i = 1; i < N; i++) {
         int U, V;
