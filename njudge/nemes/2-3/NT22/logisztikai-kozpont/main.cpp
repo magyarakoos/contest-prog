@@ -93,4 +93,6 @@ int main() {
 
     ll sum = sum(distS);
     auto pref = prefix_sum(distS);
+
+    vector<ll> valueS;
 }
