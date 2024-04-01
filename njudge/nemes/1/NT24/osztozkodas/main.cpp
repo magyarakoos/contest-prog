@@ -24,9 +24,12 @@ int main() {
         if (i + 1 <= K && v[i] < ps[i]) {
             playerS[turn] += ps[i];
             break;
-        } else {
-            
         }
+
+        playerS[turn] += v[i];
+
         turn ^= 1;
     }
+
+    cout << playerS[0] << " " << playerS[1];
 }
