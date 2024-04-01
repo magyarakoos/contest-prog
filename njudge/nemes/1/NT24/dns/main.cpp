@@ -16,7 +16,10 @@ int main() {
         cin >> C;
 
         if (C == 'C') continue;
-        if (C == 'A') a_after_g++;
-        if (C == 'G')
+        if (C == 'A') a_before_g++;
+        if (C == 'G') {
+            a_after_g += a_before_g;
+            a_before_g = 0;
+        }
     }    
 }
