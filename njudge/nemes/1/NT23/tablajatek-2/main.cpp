@@ -65,7 +65,7 @@ struct BigBase3 {
         int i = 0;
         while (i < size(v) - 1 && !v[i]) i++;
         for (; i < size(v); i++) {
-            cout << v[i]
+            cout << v[i];
         }
     }
 };
