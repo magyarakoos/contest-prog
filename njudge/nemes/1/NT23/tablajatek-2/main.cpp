@@ -63,7 +63,9 @@ struct BigBase3 {
 
     void print() const {
         int i = 0;
+        // get rid of leading zeros
         while (i < size(v) - 1 && !v[i]) i++;
+        
         for (; i < size(v); i++) {
             cout << v[i];
         }
