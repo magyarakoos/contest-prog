@@ -14,10 +14,10 @@ int main() {
            b = dp[i - 3][0] + dp[i - 3][1];
         if (a < b) {
             dp[i][0] = dp[i - 2][0] + 1;
-            dp[i][1] = dp[i - 2][0];
+            dp[i][1] = dp[i - 2][1];
         } else {
             dp[i][0] = dp[i - 3][0];
-            dp[i][1] = dp[i - 3][0] + 1;
+            dp[i][1] = dp[i - 3][1] + 1;
         }
     }
     cout << dp[N][0] << " " << dp[N][1];
