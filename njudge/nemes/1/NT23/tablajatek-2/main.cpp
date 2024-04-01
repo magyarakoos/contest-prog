@@ -39,8 +39,14 @@ struct BigBase3 {
         } else {
             int i;
             for (i = size(v) - 1; i > -1; i--) {
-                
+                if (v[i] > 0) {
+                    v[i]--;
+                    break;
+                } else {
+                    v[i] = 2;
+                }
             }
+            assert(i > -1);
         }
     }
 };
