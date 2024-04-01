@@ -13,5 +13,10 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    vector<array<int, 2>> aftS()
+    vector<array<int, 2>> befS, aftS;
+    for (int i = 0; i < N; i++) {
+        if (v[i] < v[M]) {
+            
+        }
+    }
 }
