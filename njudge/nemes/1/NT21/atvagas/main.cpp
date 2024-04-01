@@ -11,8 +11,11 @@ int bambus() {
     int end_count = 0;
     for (int i = 1; i <= N; i++) {
         if (degreeS[i] == 1 && end_count < 2) {
-            
+            end_count++;
+            continue;
         }
+
+        
     }
 }
 
