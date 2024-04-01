@@ -48,7 +48,13 @@ int bfs(int s) {
     q.push(s);
 
     while (!q.empty()) {
-        int node = 
+        int u = q.front(); q.pop();
+        for (auto [v, w] : g[u]) {
+            if (!vis[v]) {
+                vis[v] = 1;
+                
+            }
+        }
     }
 }
 
