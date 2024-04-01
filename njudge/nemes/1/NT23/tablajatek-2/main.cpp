@@ -58,6 +58,10 @@ struct BigBase3 {
     }
 
     void mul3() {
+        v.push_back(0);
+    }
+
+    void print() const {
         
     }
 };
