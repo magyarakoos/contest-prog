@@ -45,8 +45,10 @@ int bfs(int s) {
     vector<ll> dist(N + 1, 1e18);
     queue<int> q;
 
+    dist[0] = -1;
+
     vis[s] = 1;
-    dist[s] = dist[0] = 0;
+    dist[s] = 0;
     q.push(s);
 
     while (!q.empty()) {
