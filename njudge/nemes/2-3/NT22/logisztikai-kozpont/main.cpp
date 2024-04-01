@@ -36,7 +36,7 @@ vector<T> prefix_sum(const vector<T>& v) {
 
 int N;
 vector<vector<array<ll, 2>>> g;
-vector<int> prev;
+vector<int> prv;
 
 // which is the farthest node from s
 int bfs(int s) {
@@ -54,6 +54,7 @@ int bfs(int s) {
             if (!vis[v]) {
                 vis[v] = 1;
                 dist[v] = dist[u] + w;
+                prv[v] = u;
                 q.push(v);
             }
         }
@@ -66,6 +67,7 @@ int main() {
     speed;
     cin >> N;
 
+    prv.assign(N + 1, -1);
     g.resize(N + 1);
     for (int i = 1; i < N; i++) {
         int U, V, W;
