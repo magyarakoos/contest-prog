@@ -57,6 +57,6 @@ int main() {
     int p2 = -1;
     for (int i = 0; i < size(aftS) - 1; i++) {
         if (abs(aftS[i][0]) == INF) continue;
-        p2 = max(p2, aftS[i + 1][1] - max(befS[i][1], M));
+        p2 = max(p2, aftS[i + 1][1] - max(aftS[i][1], M));
     }
 }
