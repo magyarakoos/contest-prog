@@ -8,6 +8,7 @@ int N;
 vector<set<int>> g;
 
 int bambus() {
+    
 }
 
 int star() {
@@ -28,8 +29,8 @@ int main() {
     for (int i = 1; i < N; i++) {
         int U, V;
         cin >> U >> V;
-        g[U].push_back(V);
-        g[V].push_back(U);
+        g[U].insert(V);
+        g[V].insert(U);
     }
 
     cout << bambus() << "\n" << star();
