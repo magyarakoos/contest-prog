@@ -111,5 +111,5 @@ int main() {
         best = min(best, valueS[i]);
     }
 
-
+    
 }
