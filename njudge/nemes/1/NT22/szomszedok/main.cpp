@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define all(v) v.begin(), v.end()
-
 constexpr int INF = 1e4 + 1;
 
 int main() {
@@ -56,6 +54,7 @@ int main() {
             p1_i = befS[i][1];
         }
     }
+
     if (p1 == -1) {
         cout << "-1\n";
     } else {
@@ -65,8 +64,11 @@ int main() {
     int p2 = -1, p2_i = -1;
     for (int i = 0; i < size(aftS) - 1; i++) {
         if (abs(aftS[i][0]) == INF) continue;
-        int val = 
-        p2 = max(p2, aftS[i + 1][1] - max(aftS[i][1], M));
+        int val = aftS[i + 1][1] - max(aftS[i][1], M);
+        if (p2 < val) {
+            p2 = val;
+            p2_i = aftS[i][1];
+        }
     }
 
     if (p2 == -1) {
