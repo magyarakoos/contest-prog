@@ -16,6 +16,9 @@ int solve(const vector<int>& v) {
         while (prev[i] != -1 && v[prev[i]] < v[i]) {
             prev[i] = prev[prev[i]];
         }
+        if (prev[i] != -1) {
+            result = max(result, i - prev[i]);
+        }
     }
 }
 
