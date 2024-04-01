@@ -89,5 +89,6 @@ int main() {
     while (curr != start) {
         distS.push_back(prv_dist[curr]);
         curr = prv[curr];
+        if (curr == start) break;
     }
 }
