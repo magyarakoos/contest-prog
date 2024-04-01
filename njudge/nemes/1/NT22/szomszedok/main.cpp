@@ -35,5 +35,12 @@ int main() {
         }
     }
 
-    for (auto [])
+    for (auto [score, id] : befS) {
+        cout << score << " " << id << "\n";
+    }
+    cout << "\n";
+    for (auto [score, id] : aftS) {
+        cout << score << " " << id << "\n";
+    }
+    cout << "\n";
 }
