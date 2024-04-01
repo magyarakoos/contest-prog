@@ -6,8 +6,8 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> dp(N + 1);
-    for (int i = 1; i <= N; i++) {
-        
+    vector<int> dp(N + 1, INT_MAX);
+    for (int i = 3; i <= N; i++) {
+
     }
 }
