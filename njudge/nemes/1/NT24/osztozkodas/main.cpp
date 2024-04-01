@@ -20,5 +20,9 @@ int main() {
 
     bool a_turn = 1;
 
-
+    for (int i = v.size() - 1; i >= 0; i--) {
+        if (i + 1 <= K) {
+            
+        }
+    }
 }
