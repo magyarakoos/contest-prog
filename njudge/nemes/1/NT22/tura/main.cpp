@@ -4,7 +4,6 @@ using ll = long long;
 
 #define all(v) v.begin(), v.end()
 
-
 void solve() {
     int N;
     cin >> N;
