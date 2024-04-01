@@ -109,7 +109,11 @@ int main() {
 
     cout << best << "\n";
 
-    for (ll value : valueS) {
-        
+    vector<int> result;
+
+    for (int i = 0; i < size(valueS); i++) {
+        if (valueS[i] == best) {
+            result.push_back(nodeS[i]);
+        }
     }
 }
