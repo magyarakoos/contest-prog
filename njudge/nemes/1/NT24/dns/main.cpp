@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int N;
     string s;
-    cin >> s >> s;
+    cin >> N >> s;
 
     int result = 0, before_g = 0, after_g = 0;
 
