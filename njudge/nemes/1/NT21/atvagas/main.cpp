@@ -25,9 +25,8 @@ int main() {
     int bambus = 0;
 
     for (int i = 1; i <= N; i++) {
-        
+        if (indegS[i] > 2) bambus += indegS[i] - 2;
     }
 
-    cout
-        << "\n" << N - 1 - *max_element(all(indegS));
+    cout << bambus << "\n" << N - 1 - *max_element(all(indegS));
 }
