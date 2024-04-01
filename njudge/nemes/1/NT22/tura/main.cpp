@@ -4,7 +4,8 @@ using namespace std;
 void solve() {
     int N;
     cin >> N;
-    vector<bool> ugly(N + 1), uglyNeighbor(N + 1);
+    vector<bool> ugly(N + 1);
+    vector<int> uglyNeighbor(N + 1);
 
     for (int i = 1; i <= N; i++) {
         int A;
