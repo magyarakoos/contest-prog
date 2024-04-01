@@ -21,9 +21,9 @@ void solve() {
         cin >> U >> V;
         if (ugly[U] && ugly[V]) {
             cout << "NEM\n2\n" << U << " " << V << "\n";
-            //for (i++; i < N; i++) cin >> U >> V;
             return;
         }
+        if (uglyNeighbor[U])
     }
 
     cout << "IGEN\n";
