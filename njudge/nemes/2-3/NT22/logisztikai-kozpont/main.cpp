@@ -39,7 +39,8 @@ vector<vector<array<int, 2>>> g;
 
 // which is the farthest node from s
 int bfs(int s) {
-
+    vector<bool> vis(N + 1);
+    
 }
 
 int main() {
