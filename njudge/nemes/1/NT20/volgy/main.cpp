@@ -21,6 +21,7 @@ int solve(const vector<int>& v) {
             result = max(result, i - prev[i]);
         }
     }
+    return result;
 }
 
 int main() {
@@ -33,5 +34,5 @@ int main() {
     reverse(all(v));
 
     int result = max(solve(u), solve(v));
-    cout << (result < 2 ? -1 : result);
+    cout << (result <= 1 ? -1 : result);
 }
