@@ -19,10 +19,10 @@ int main() {
 
     for (int i = 0; i < M - 1; i++) {
         if (v[i] > v[M] && v[i] < befS.back()[0]) {
-            befS.back() = {v[i], M};
+            befS.back() = {v[i], i};
         }
         else if (v[i] < v[M] && v[i] > aftS.back()[0]) {
-            aftS.back() = {v[i], M};
+            aftS.back() = {v[i], i};
         }
     }
 
