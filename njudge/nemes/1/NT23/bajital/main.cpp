@@ -9,5 +9,5 @@ int main() {
         sum += A;
         divS += A / X;
     }
-    cout << min(A /)
+    cout << min(sum / (X + 1), divS);
 }
