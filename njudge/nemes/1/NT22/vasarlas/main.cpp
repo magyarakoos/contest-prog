@@ -27,7 +27,9 @@ int main() {
             int save = costB - costA;
 
             if (best_save < save) {
-
+                best_save = save;
+                best_i = i;
+                best_j = j;
             }
         }
     }
