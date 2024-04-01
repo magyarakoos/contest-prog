@@ -12,20 +12,8 @@ using point = array<int, 2>;
 int main() {
     speed;
 
-    int N, x, remS = 0, divS = 0;
+    int N, x;
     cin >> N >> x;
 
-    while (N--) {
-        int a;
-        cin >> a;
-        remS += a % x;
-        divS += a / x;
-    }
-
-    while (divS > remS) {
-        divS--;
-        remS += x;
-    }
-
-    cout << divS;
+    vector<int> 
 }
