@@ -5,13 +5,16 @@ using ll = long long;
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
     
-    int N, result = 0, a_count = 0;
+    int N;
     cin >> N;
+
+    int result = 0, a_count = 0;
+    bool g_exists = 0;
 
     while (N--) {
         char C;
         cin >> C;
 
-        
+        if ()
     }    
 }
