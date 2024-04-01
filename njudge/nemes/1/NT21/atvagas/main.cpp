@@ -7,6 +7,14 @@ using ll = long long;
 int N;
 vector<vector<int>> g;
 
+int bambus() {
+    
+}
+
+int star() {
+    return 0;
+}
+
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
