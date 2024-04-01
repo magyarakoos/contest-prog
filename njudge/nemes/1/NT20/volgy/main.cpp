@@ -15,8 +15,11 @@ int main() {
     int N;
     cin >> N;
 
-    vector<int> u(N), v(N);
-    cinv(T);
+    vector<int> u(N), v;
+    cinv(u);
+    v = u;
+    reverse(all(v));
 
+    int result = max()
 
 }
