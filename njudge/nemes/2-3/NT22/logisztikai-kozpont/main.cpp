@@ -71,11 +71,6 @@ int main() {
     speed;
     cin >> N;
 
-    if (N == 1) {
-        cout << "0\n1\n1";
-        exit(0);
-    }
-
     prv.resize(N + 1);
     prv_dist.resize(N + 1);
     g.resize(N + 1);
@@ -111,5 +106,5 @@ int main() {
         best = min(best, valueS[i]);
     }
 
-
+    
 }
