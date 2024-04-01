@@ -5,18 +5,9 @@ using ll = long long;
 #define all(v) v.begin(), v.end()
 
 int N;
-vector<int> degreeS;
+vector<set<int>> g;
 
 int bambus() {
-    int end_count = 0;
-    for (int i = 1; i <= N; i++) {
-        if (degreeS[i] == 1 && end_count < 2) {
-            end_count++;
-            continue;
-        }
-
-        if ()
-    }
 }
 
 int star() {
@@ -32,13 +23,13 @@ int main() {
         exit(0);
     }
 
-    degreeS.resize(N + 1);
+    g.resize(N + 1);
 
     for (int i = 1; i < N; i++) {
         int U, V;
         cin >> U >> V;
-        degreeS[U]++;
-        degreeS[V]++;
+        g[U].push_back(V);
+        g[V].push_back(U);
     }
 
     cout << bambus() << "\n" << star();
