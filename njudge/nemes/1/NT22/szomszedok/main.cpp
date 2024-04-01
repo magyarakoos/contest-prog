@@ -27,10 +27,10 @@ int main() {
     }
 
     for (int i = M + 1; i < N; i++) {
-        if (v[i] > v[M] && v[i] <= befS.back()[0]) {
+        if (v[i] > v[M] && v[i] < befS.back()[0]) {
             befS.push_back({v[i], i});
         }
-        else if (v[i] < v[M] && v[i] >= aftS.back()[0]) {
+        else if (v[i] < v[M] && v[i] > aftS.back()[0]) {
             aftS.push_back({v[i], i});
         }
     }
