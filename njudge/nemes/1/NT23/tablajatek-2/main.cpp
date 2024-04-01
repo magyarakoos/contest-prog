@@ -34,7 +34,14 @@ struct BigBase3 {
     }
 
     void sub() {
-        
+        if (v.back() > 0) {
+            v.back()--;
+        } else {
+            int i;
+            for (i = size(v) - 1; i > -1; i--) {
+                
+            }
+        }
     }
 };
 
