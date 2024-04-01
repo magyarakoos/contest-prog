@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
 
 #define all(v) v.begin(), v.end()
-
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
@@ -27,5 +25,5 @@ int main() {
     cout 
         << accumulate(all(indegS), 0, [](int a, int b){ 
             return max(a - 2, 0) + max(b - 2, 0); }) 
-         << "\n" << N - 1 - *max_element(all(indegS));
+        << "\n" << N - 1 - *max_element(all(indegS));
 }
