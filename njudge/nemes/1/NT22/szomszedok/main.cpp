@@ -17,7 +17,7 @@ int main() {
 
     vector<array<int, 2>> befS({{INF, -1}}), aftS({{0, -1}});
 
-    for (int i = 0; i < M - 1; i++) {
+    for (int i = 0; i < M; i++) {
         if (v[i] > v[M] && v[i] < befS.back()[0]) {
             befS.back() = {v[i], i};
         }
