@@ -9,13 +9,13 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> A(N), B(N), psA(N), psB(N);
+    vector<int> A(N), B(N), psA(N + 1), psB(N + 1);
 
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
 
-    partial_sum(all(A), psA.begin());
-    partial_sum(all(B), psB.begin());
+    partial_sum(all(A), psA.begin() + 1);
+    partial_sum(all(B), psB.begin() + 1);
 
-
+    
 }
