@@ -15,7 +15,7 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    vector<array<int, 2>> befS({{INF, N}}), aftS({{-INF, N}});
+    vector<array<int, 2>> befS({{INF, -1}}), aftS({{-INF, -1}});
 
     for (int i = 0; i < M; i++) {
         if (v[i] > v[M] && v[i] < befS.back()[0]) {
