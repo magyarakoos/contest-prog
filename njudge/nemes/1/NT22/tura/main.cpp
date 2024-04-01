@@ -28,7 +28,7 @@ void solve() {
             cout << "NEM\n3\n" << uglyNeighbor[U] << " " << U << " " << V << "\n";
             running = 0;
         }
-        if (ugly[U] && uglyNeighbor[V] && running) {
+        if (uglyNeighbor[V] && ugly[U] && running) {
             cout << "NEM\n3\n" << uglyNeighbor[V] << " " << V << " " << U << "\n";
             running = 0;
         }
