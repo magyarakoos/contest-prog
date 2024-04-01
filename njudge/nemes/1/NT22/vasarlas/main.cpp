@@ -10,8 +10,8 @@ int main() {
     int N;
     cin >> N;
     vector<int> A(N), B(N), prefA(N), prefB(N);
-    for (int i = 0; i < N; i++) {
-        cin >> A[i];
-        prefA[]
-    }
+    for (int& x : A) cin >> x;
+    for (int& x : B) cin >> x;
+
+    p
 }
