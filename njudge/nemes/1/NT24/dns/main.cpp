@@ -15,7 +15,8 @@ int main() {
         char C;
         cin >> C;
 
-        if (C == "C") continue;
-        
+        if (C == 'C') continue;
+        if (C == 'A') a_after_g++;
+        if (C == 'G')
     }    
 }
