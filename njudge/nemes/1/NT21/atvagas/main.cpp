@@ -10,6 +10,11 @@ int main() {
     int N;
     cin >> N;
 
+    if (N <= 3) {
+        cout << "0\n0";
+        exit(0);
+    }
+
     vector<vector<int>> g(N + 1);
-    
+
 }
