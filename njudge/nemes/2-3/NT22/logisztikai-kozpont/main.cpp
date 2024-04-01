@@ -48,7 +48,7 @@ int bfs(int s) {
     q.push(s);
 
     while (!q.empty()) {
-
+        int node = 
     }
 }
 
