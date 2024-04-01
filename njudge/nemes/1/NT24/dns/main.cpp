@@ -8,13 +8,14 @@ int main() {
     int N;
     cin >> N;
 
-    int result = 0, a_count = 0;
+    int result = 0, a_before_g = 0, a_after_g = 0;
     bool g_exists = 0;
 
     while (N--) {
         char C;
         cin >> C;
 
-        if ()
+        if (C == "C") continue;
+        
     }    
 }
