@@ -47,10 +47,11 @@ int main() {
     }
     cout << "\n";
 
-    int best_bef = 0;
-
+    int p1 = 0;
     for (int i = 0; i < size(befS) - 1; i++) {
         if (befS[i][0] == INF) continue;
-        best_bef = max(best_bef, befS[i + 1][1] - max(befS[i][1], M));
+        p1 = max(p1, befS[i + 1][1] - max(befS[i][1], M));
     }
+
+    cout << (p1 == N ? -1 : p1);
 }
