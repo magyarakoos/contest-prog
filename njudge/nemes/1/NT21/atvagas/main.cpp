@@ -15,7 +15,7 @@ int bambus() {
             continue;
         }
 
-        
+        if ()
     }
 }
 
