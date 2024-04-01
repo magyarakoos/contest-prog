@@ -37,6 +37,9 @@ vector<T> prefix_sum(const vector<T>& v) {
 int N;
 vector<vector<array<int, 2>>> g;
 
+// which is the furthest node from s
+int bfs()
+
 int main() {
     speed;
 
