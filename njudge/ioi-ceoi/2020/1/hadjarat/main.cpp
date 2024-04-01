@@ -12,4 +12,8 @@ int main() {
 
     int N;
     cin >> N;
+    vector<int> R(N + 1), A(N + 1);
+    for (int i = 1; i <= N; i++) {
+        cin >> 
+    }
 }
