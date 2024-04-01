@@ -20,7 +20,7 @@ int main() {
     aftS[0].push_back(0);
 
     for (int i = 0; i < M - 1; i++) {
-        if (v[i] > v[M] && v[i] <= befS.begin()->first) {
+        if (v[i] > v[M] && v[i] < befS.begin()->first) {
             befS.erase(befS.begin());
             befS[v[i]].push_back(i);
         }
