@@ -35,8 +35,8 @@ int main() {
         }
     }
 
-    befS.push_back({INF, N});
-    aftS.push_back({INF, N});
+    befS.push_back({INF, N - 1});
+    aftS.push_back({INF, N - 1});
 
     for (auto [score, id] : befS) {
         cout << score << " " << id << "\n";
