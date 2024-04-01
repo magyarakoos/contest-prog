@@ -25,6 +25,6 @@ int main() {
     }
 
     cout << accumulate(indegS.begin(), indegS.end(), 0, 
-        [](int a, int b){ return max(a - 2, 0) + max(b - 2, 0); }) << "\n"
-        
+            [](int a, int b){ return max(a - 2, 0) + max(b - 2, 0); }) << "\n"
+         << max_
 }
