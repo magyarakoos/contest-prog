@@ -21,13 +21,12 @@ int main() {
     bool turn = 0;
 
     for (int i = v.size() - 1; i >= 0; i--) {
-        if (i + 1 <= K) {
-            if (v[i] < ps[i]) {
-                playerS[turn] += ps[i];
-                break;
-            }
+        if (i + 1 <= K && v[i] < ps[i]) {
+            playerS[turn] += ps[i];
+            break;
+        } else {
+            
         }
-
         turn ^= 1;
     }
 }
