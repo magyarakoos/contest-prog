@@ -15,14 +15,14 @@ int main() {
         exit(0);
     }
 
-    vector<ve(N + 1);
+    vector<int> indegS(N + 1);
 
     for (int i = 1; i < N; i++) {
         int U, V;
         cin >> U >> V;
-        g[U].insert(V);
-        g[V].insert(U);
+        indegS[U]++;
+        indegS[V]++;
     }
 
-    cout << bambus() << "\n" << star();
+    cout << accumulate(all(v), 0, )
 }
