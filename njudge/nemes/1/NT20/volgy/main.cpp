@@ -9,6 +9,10 @@ using namespace std;
 using ll = long long;
 using point = array<int, 2>;
 
+int solve(const vector<int>& v) {
+    
+}
+
 int main() {
     speed;
 
@@ -20,6 +24,6 @@ int main() {
     v = u;
     reverse(all(v));
 
-    int result = max()
-
+    int result = max(solve(u), solve(v));
+    cout << (result < 2 ? -1 : result);
 }
