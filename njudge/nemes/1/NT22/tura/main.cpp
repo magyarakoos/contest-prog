@@ -6,10 +6,12 @@ using ll = long long;
 
 int N;
 vector<bool> ugly;
+vector<vector<int>> g;
 
 void solve() {
     cin >> N;
     ugly.assign(N + 1, 0);
+    g.assign(N + 1, vector<int>());
 
     for (int i = 1; i <= N; i++) {
         int A;
@@ -17,7 +19,7 @@ void solve() {
         ugly[i] = A == -1;
     }
 
-    
+    for (int i = 1; i < N;)
 }
 
 int main() {
