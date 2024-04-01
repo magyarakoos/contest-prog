@@ -96,9 +96,9 @@ int main() {
 
     vector<ll> valueS(size(distS));
 
-    ll best = 1e18;
+    ll best = sum;
 
     for (int i = 0; i < size(distS); i++) {
-        valueS[i] = max()
+        valueS[i] = max(pref[i], sum - pref[i]);
     }
 }
