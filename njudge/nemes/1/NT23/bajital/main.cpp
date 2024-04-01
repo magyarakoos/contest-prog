@@ -15,14 +15,14 @@ int main() {
     int N, X;
     cin >> N >> X;
 
-    queue<int> divS, remS;
+    deque<array<int, 2>> divS, remS;
 
     for (int i = 0; i < N; i++) {
         int A;
         cin >> A;
         int div = A / X, rem = A - div * X;
-        if (div) divS.push(div);
-        if (rem) remS.push(rem);
+        if (div) divS.push_back({div});
+        if (rem) remS.push_front(rem);
     }
 
 
