@@ -30,6 +30,7 @@ void solve() {
         }
         if (ugly[U] && uglyNeighbor[V]) {
             cout << "NEM\n3\n" << uglyNeighbor[V] << " " << V << " " << U << "\n"; 
+            for (i++; i < N; i++) cin >> U >> V;
             return;
         }
         if (ugly[U]) {
