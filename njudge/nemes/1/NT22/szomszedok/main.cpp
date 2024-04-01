@@ -35,8 +35,8 @@ int main() {
         }
     }
 
-    befS.push_back({INF, N - 1});
-    aftS.push_back({INF, N - 1});
+    befS.push_back({INF, N});
+    aftS.push_back({INF, N});
 
     for (auto [score, id] : befS) {
         cout << score << " " << id << "\n";
@@ -59,4 +59,5 @@ int main() {
         if (abs(aftS[i][0]) == INF) continue;
         p2 = max(p2, aftS[i + 1][1] - max(aftS[i][1], M));
     }
+    cout << p2;
 }
