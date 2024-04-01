@@ -21,7 +21,10 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         for (int j = i; j < N; j++) {
-            int 
+            int costA = psA[j + 1] - psA[i];
+            int costB = psB[j + 1] - psB[i];
+
+            
         }
     }
 
