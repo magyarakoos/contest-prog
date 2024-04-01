@@ -8,20 +8,20 @@ int main() {
     int N;
     cin >> N;
 
-    int result = 0, a_before_g = 0, a_after_g = 0;
+    int result = 0, before_g = 0, after_g = 0;
 
     while (N--) {
         char C;
         cin >> C;
 
         if (C == 'C') continue;
-        if (C == 'A') a_before_g++;
+        if (C == 'A') before_g++;
         else if (C == 'G') {
-            a_after_g += a_before_g;
-            a_before_g = 0;
+            after_g += before_g;
+            before_g = 0;
         }
         else {
-            result += a_after_g;
+            result += after_g;
         }
     }
 
