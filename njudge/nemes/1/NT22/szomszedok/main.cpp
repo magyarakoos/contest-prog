@@ -16,10 +16,11 @@ int main() {
     for (int& x : v) cin >> x;
 
     unordered_map<int, vector<int>> befS, aftS;
-    befS[INF] = 
+    befS[INF].push_back(0);
+    aftS[0].push_back(0);
 
     for (int i = 0; i < M - 1; i++) {
-        if (v[i] > v[M] && v[i] <= befS.back()[0]) {
+        if (v[i] > v[M] && v[i] <= befS[INF][0]) {
             befS.back() = {v[i], i};
         }
         else if (v[i] < v[M] && v[i] >= aftS.back()[0]) {
