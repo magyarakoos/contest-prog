@@ -17,9 +17,14 @@ int main() {
 
         if (C == 'C') continue;
         if (C == 'A') a_before_g++;
-        if (C == 'G') {
+        else if (C == 'G') {
             a_after_g += a_before_g;
             a_before_g = 0;
         }
-    }    
+        else {
+            result += a_after_g;
+        }
+    }
+
+    cout << result;
 }
