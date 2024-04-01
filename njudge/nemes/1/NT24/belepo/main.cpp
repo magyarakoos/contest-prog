@@ -8,12 +8,13 @@ int main() {
     while (N--) {
         char c;
         cin >> c;
-        db += c == '1';
+        db += (c == '1');
     }
     int curr = 2;
     ll result = 0;
     while (curr <= db) {
-        result += db - (++curr);
+        result += db - curr + 1;
+        curr++;
     }
     cout << result;
 }
