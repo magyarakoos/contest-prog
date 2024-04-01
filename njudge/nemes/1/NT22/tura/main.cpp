@@ -15,6 +15,7 @@ void solve() {
         ugly[i] = A == -1;
     }
 
+    bool running = 
     for (int i = 1; i < N; i++) {
         int U, V;
         cin >> U >> V;
