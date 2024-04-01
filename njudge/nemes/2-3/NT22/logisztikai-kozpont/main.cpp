@@ -107,5 +107,5 @@ int main() {
         best = min(best, valueS[i]);
     }
 
-    for ()    
+    for (int x : nodeS) cout << x << " ";    
 }
