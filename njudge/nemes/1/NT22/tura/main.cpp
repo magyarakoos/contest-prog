@@ -31,7 +31,12 @@ void solve() {
             cout << "NEM\n3\n" << uglyNeighbor[V] << " " << U << " " << V << "\n"; 
             return;
         }
-        
+        if (ugly[U]) {
+            uglyNeighbor[V] = U;
+        }
+        if (ugly[V]) {
+            uglyNeighbor[U] = V;
+        }
     }
 
     cout << "IGEN\n";
