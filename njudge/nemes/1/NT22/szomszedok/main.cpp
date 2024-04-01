@@ -36,15 +36,6 @@ int main() {
     befS.push_back({INF, N});
     aftS.push_back({INF, N});
 
-    for (auto [score, id] : befS) {
-        cout << score << " " << id << "\n";
-    }
-    cout << "\n";
-    for (auto [score, id] : aftS) {
-        cout << score << " " << id << "\n";
-    }
-    cout << "\n";
-
     int p1 = -1, p1_i = -1;
     for (int i = 0; i < size(befS) - 1; i++) {
         if (befS[i][0] == INF) continue;
