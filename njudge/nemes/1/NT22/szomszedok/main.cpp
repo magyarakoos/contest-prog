@@ -51,11 +51,6 @@ int main() {
 
     for (int i = 0; i < size(befS) - 1; i++) {
         if (befS[i][0] == INF) continue;
-        if (befS[i][1] < M) {
-            best_bef = max(best_bef, befS[i + 1][1] - max(befS[i][1], M));
-        }
-        else {
-            best_bef = max(best_bef, befS[i + 1] - befS[i]);
-        }
+        best_bef = max(best_bef, befS[i + 1][1] - max(befS[i][1], M));
     }
 }
