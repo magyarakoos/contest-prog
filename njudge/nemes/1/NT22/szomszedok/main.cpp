@@ -15,7 +15,8 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    unordered_map<int, vector<int>> befS({{INF, 0}}), aftS({{0, 0}});
+    unordered_map<int, vector<int>> befS, aftS;
+    befS[INF] = 
 
     for (int i = 0; i < M - 1; i++) {
         if (v[i] > v[M] && v[i] <= befS.back()[0]) {
