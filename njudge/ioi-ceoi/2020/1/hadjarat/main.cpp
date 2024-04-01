@@ -19,16 +19,16 @@ int main() {
 
     vector<int> dp(N + 1, 1), prev(N + 1, -1);
 
-    set<array<int, 3>> s;
+    set<array<int, 4>> s;
 
     for (int i = 1; i <= N; i++) {
         for (auto it = s.end();; it--) {
             if (it == s.end()) it--;
 
-            auto [_dp, _r, aj]
+            auto [_dp, _r, _a, _j] = *it;
 
             if (R[j] < R[i] && A[j] < A[i]) {
-                dp[i] = dp[j] + 1;
+                dp[i] = _dp + 1;
                 prev[i] = j;
                 break;
             }
