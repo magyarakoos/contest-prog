@@ -60,7 +60,7 @@ int bfs(int s) {
         }
     }
 
-    return *max_element(all(dist));
+    return max_element(all(dist)) - dist.begin();
 }
 
 int main() {
@@ -76,5 +76,5 @@ int main() {
     }
 
     int start = bfs(1);
-    assert()
+    int end = bfs(start);
 }
