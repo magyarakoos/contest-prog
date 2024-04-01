@@ -32,7 +32,7 @@ int main() {
         }
 
         v.push_back({dp[i], R[i], A[i]});
-        sort(all(v), [](){})
+        sort(all(v), [](const array<int, 3>& a, const array<int, 3>& b){ return a[0] < b[0]; });
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
