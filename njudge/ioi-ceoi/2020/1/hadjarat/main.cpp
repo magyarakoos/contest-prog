@@ -21,7 +21,7 @@ int main() {
 
     set<array<int, 2>> s;
 
-    s.insert({})
+    s.insert({1, 1});
 
     for (int i = 2; i <= N; i++) {
         for (auto it = s.end() ;; it--) {
