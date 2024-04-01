@@ -116,4 +116,8 @@ int main() {
             result.push_back(nodeS[i]);
         }
     }
+
+    cout << size(result) << "\n";
+    for (int x : result) cout << x << " ";
+    cout << "\n";
 }
