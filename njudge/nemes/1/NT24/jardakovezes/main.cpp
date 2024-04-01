@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 int main() {
     int N;
     cin >> N;
-    vector<array<int, 2>> dp(N + 1, {INT_MAX, INT_MAX});
+    vector<array<ll, 2>> dp(N + 1, {INT_MAX, INT_MAX});
     dp[0] = {0, 0};
     dp[2] = {1, 0};
     dp[3] = {0, 1};
