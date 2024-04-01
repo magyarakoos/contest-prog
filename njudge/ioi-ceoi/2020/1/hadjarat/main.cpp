@@ -22,7 +22,7 @@ int main() {
     set<array<int, 2>> s;
 
     for (int i = 1; i <= N; i++) {
-        for (auto it = s.end();; it--) {
+        for (auto it = s.end() ;; it--) {
             if (it == s.end()) it--;
 
             auto [x, j] = *it;
@@ -35,7 +35,8 @@ int main() {
 
             if (it == s.begin()) break;
         }
-        s.insert({dp[i], R[i], A[i]});
+
+        s.insert({dp[i], i});
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
