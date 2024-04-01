@@ -107,8 +107,9 @@ int main() {
         best = min(best, valueS[i]);
     }
 
-    for (int x : nodeS) cout << x << " ";
-    cout << "\n";
-    for (ll x : valueS) cout << x << " ";
-    cout << "\n";
+    cout << best << "\n";
+
+    for (ll value : valueS) {
+        
+    }
 }
