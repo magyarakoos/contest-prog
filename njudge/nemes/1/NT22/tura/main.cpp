@@ -15,19 +15,22 @@ void solve() {
         ugly[i] = A == -1;
     }
 
-    bool running = true;
+    bool running = 1;
     for (int i = 1; i < N; i++) {
         int U, V;
         cin >> U >> V;
 
         if (ugly[U] && ugly[V] && running) {
             cout << "NEM\n2\n" << U << " " << V << "\n";
+            running = 0;
         }
         if (uglyNeighbor[U] && ugly[V] && running) {
             cout << "NEM\n3\n" << uglyNeighbor[U] << " " << U << " " << V << "\n";
+            running = 0;
         }
         if (ugly[U] && uglyNeighbor[V] && running) {
             cout << "NEM\n3\n" << uglyNeighbor[V] << " " << V << " " << U << "\n";
+            running = 0;
         }
         
         if (ugly[U]) {
