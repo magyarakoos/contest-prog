@@ -50,7 +50,10 @@ int main() {
     int p1 = -1, p1_i = 0;
     for (int i = 0; i < size(befS) - 1; i++) {
         if (befS[i][0] == INF) continue;
-        p1 = max(p1, befS[i + 1][1] - max(befS[i][1], M));
+        int val = befS[i + 1][1] - max(befS[i][1], M);
+        if (p1 < val) {
+            p1 = val;
+        }
     }
     cout << p1 << "\n";
 
