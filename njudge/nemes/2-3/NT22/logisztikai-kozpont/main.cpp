@@ -94,5 +94,11 @@ int main() {
     ll sum = sum(distS);
     auto pref = prefix_sum(distS);
 
-    vector<ll> valueS;
+    vector<ll> valueS(size(distS));
+
+    ll best = 1e18;
+
+    for (int i = 0; i < size(distS); i++) {
+        valueS[i] = 
+    }
 }
