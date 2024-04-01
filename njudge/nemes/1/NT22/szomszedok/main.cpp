@@ -49,5 +49,7 @@ int main() {
 
     int best_bef = 0;
 
-    for (int i = 0; i <)
+    for (int i = 0; i < size(befS) - 1; i++) {
+        if (befS[i][0] == INF) continue;
+    }
 }
