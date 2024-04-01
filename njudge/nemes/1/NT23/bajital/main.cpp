@@ -16,14 +16,14 @@ int main() {
     cin >> N >> X;
 
     set<array<int, 2>> divS;
-    set<array<int, 2>, >
+    set<array<int, 2>, greater<array<int, 2>>> remS;
 
     for (int i = 0; i < N; i++) {
         int A;
         cin >> A;
         int div = A / X, rem = A - div * X;
-        if (div) divS.push_back({div, i});
-        if (rem) remS.push_front({rem, i});
+        if (div) divS.insert({div, i});
+        if (rem) remS.insert({rem, i});
     }
 
     while (!divS.empty() && !remS.empty()) {
