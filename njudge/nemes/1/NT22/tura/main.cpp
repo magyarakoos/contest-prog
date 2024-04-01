@@ -20,19 +20,18 @@ void solve() {
         int U, V;
         cin >> U >> V;
         if (running) {
-            
-        }
-        if (ugly[U] && ugly[V] && running) {
-            cout << "NEM\n2\n" << U << " " << V << "\n";
-            running = 0;
-        }
-        else if (uglyNeighbor[U] && ugly[V] && running) {
-            cout << "NEM\n3\n" << uglyNeighbor[U] << " " << U << " " << V << "\n";
-            running = 0;
-        }
-        else if (ugly[U] && uglyNeighbor[V] && running) {
-            cout << "NEM\n3\n" << uglyNeighbor[V] << " " << V << " " << U << "\n"; 
-            running = 0;
+            if (ugly[U] && ugly[V]) {
+                cout << "NEM\n2\n" << U << " " << V << "\n";
+                running = 0;
+            }
+            else if (uglyNeighbor[U] && ugly[V]) {
+                cout << "NEM\n3\n" << uglyNeighbor[U] << " " << U << " " << V << "\n";
+                running = 0;
+            }
+            else if (ugly[U] && uglyNeighbor[V]) {
+                cout << "NEM\n3\n" << uglyNeighbor[V] << " " << V << " " << U << "\n"; 
+                running = 0;
+            }
         }
         
         if (ugly[U]) {
