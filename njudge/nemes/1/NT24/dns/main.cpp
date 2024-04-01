@@ -7,8 +7,11 @@ int main() {
     
     int N, result = 0, a_count = 0;
     cin >> N;
-    ll result = 0;
-    int A_count = 0;
 
+    while (N--) {
+        char C;
+        cin >> C;
 
+        
+    }    
 }
