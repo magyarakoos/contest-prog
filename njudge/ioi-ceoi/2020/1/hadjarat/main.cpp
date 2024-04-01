@@ -31,7 +31,7 @@ int main() {
             }
         }
 
-        s.lower_bound()
+        s.insert({dp[i], R[i], })
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
