@@ -21,9 +21,11 @@ int main() {
         int A;
         cin >> A;
         int div = A / X, rem = A - div * X;
-        if (div) divS.push_back({div});
-        if (rem) remS.push_front(rem);
+        if (div) divS.push_back({div, i});
+        if (rem) remS.push_front({rem, i});
     }
 
-
+    while (!divS.empty() && !remS.empty()) {
+        
+    }
 }
