@@ -7,10 +7,9 @@
 
 using namespace std;
 using ll = long long;
-using point = array<int, 2>;
 
 int solve(const vector<int>& v) {
-    
+    vector<int> prev(v.size(), -1);
 }
 
 int main() {
