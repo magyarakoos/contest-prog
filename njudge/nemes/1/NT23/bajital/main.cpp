@@ -12,10 +12,15 @@ using point = array<int, 2>;
 int main() {
     speed;
 
-    int N, x;
-    cin >> N >> x;
+    int N, X;
+    cin >> N >> X;
 
     vector<int> divS(N), remS(N);
 
-    while (N--)
+    for (int i = 0; i < N; i++) {
+        int A;
+        cin >> A;
+        divS[i] = A / x;
+        remS[i]
+    }
 }
