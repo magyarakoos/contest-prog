@@ -8,7 +8,7 @@ using namespace std;
 using ll = long long;
 
 struct SortedV {
-
+    vector<
 };
 
 int main() {
