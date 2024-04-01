@@ -56,12 +56,20 @@ int main() {
             p1_i = befS[i][1];
         }
     }
-    cout << (p1 == -1 ? "" : )<< p1 << "\n";
+    if (p1 == -1) {
+        cout << "-1\n";
+    } else {
+        cout << p1_i << " " << p1 << "\n";
+    }
 
     int p2 = -1;
     for (int i = 0; i < size(aftS) - 1; i++) {
         if (abs(aftS[i][0]) == INF) continue;
         p2 = max(p2, aftS[i + 1][1] - max(aftS[i][1], M));
     }
-    cout << p2;
+    if (p2 == -1) {
+        cout << "-1";
+    } else {
+        cout << p2_i << " " << p2 << "\n";
+    }
 }
