@@ -32,6 +32,10 @@ struct BigBase3 {
             }
         }
     }
+
+    void sub() {
+        
+    }
 };
 
 int main() {
