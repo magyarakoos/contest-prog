@@ -53,7 +53,7 @@ int main() {
     vector<ll> prefix(N);
     partial_sum(heightS.begin(), heightS.end(), prefix.begin() + 1);
 
-    for (int i = 0; i < N - K; i++) {
+    for (int i = 0; i <= N - K; i++) {
         result = min(
             result, 
             (window_mx[i] * K) - 
