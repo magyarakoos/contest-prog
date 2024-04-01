@@ -8,10 +8,7 @@ using ll = long long;
 void solve() {
     int N;
     cin >> N;
-vector<bool> ugly, uglyNeighbor;
-vector<vector<int>> g;
-    ugly.assign(N + 1, 0);
-    g.assign(N + 1, vector<int>());
+    vector<bool> ugly(N + 1), uglyNeighbor(N + 1);
 
     for (int i = 1; i <= N; i++) {
         int A;
