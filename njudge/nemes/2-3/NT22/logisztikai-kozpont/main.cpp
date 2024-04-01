@@ -37,12 +37,12 @@ vector<T> prefix_sum(const vector<T>& v) {
 int N;
 vector<vector<array<ll, 2>>> g;
 
-constexpr
+constexpr ll INF = 1e18;
 
 // which is the farthest node from s
 int bfs(int s) {
     vector<bool> vis(N + 1);
-    vector<ll> dist(N + 1, LLONG_MAX);
+    vector<ll> dist(N + 1, INF);
     queue<int> q;
 
     vis[s] = 1;
@@ -74,4 +74,7 @@ int main() {
         g[U].push_back({V, W});
         g[V].push_back({U, W});
     }
+
+    int start = bfs(1);
+    assert()
 }
