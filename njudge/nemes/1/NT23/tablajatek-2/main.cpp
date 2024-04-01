@@ -8,13 +8,17 @@
 using namespace std;
 using ll = long long;
 
+struct BigBase3 {
+
+};
+
 int main() {
     speed;
 
     ll K, row = 0;
     cin >> K;
 
-    Integer col;
+    BigBase3 col;
 
     while (K--) {
         char m;
