@@ -13,6 +13,7 @@ int solve(const vector<int>& v) {
     int result = 0;
     for (int i = 0; i < N; i++) {
         prev[i] = i - 1;
+        while (prev[i] != -1 && v[prev[i]] < v[i])
     }
 }
 
