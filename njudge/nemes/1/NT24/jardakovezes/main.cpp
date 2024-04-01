@@ -9,8 +9,10 @@ int main() {
     dp[0] = {0, 0};
     dp[2] = {1, 0};
     for (int i = 3; i <= N; i++) {
-        int a = dp[i - 2][0] + dp[i - 2][1],
-            b = dp[i - 3][0] + dp[i - 3][1];
+        ll a = dp[i - 2][0] + dp[i - 2][1],
+           b = dp[i - 3][0] + dp[i - 3][1];
+        if (a < b) {
+            dp[i][0] = dp[i - 2][0]
+        }
     }
-    cout << dp[N];
 }
