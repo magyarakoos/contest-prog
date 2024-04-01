@@ -30,8 +30,8 @@ int main() {
     for (int i = 1; i < N; i++) {
         int U, V;
         cin >> U >> V;
-        g[U].push_back(V);
-        g[V].push_back(U);
+        degreeS[U]++;
+        degreeS[V]++;
     }
 
     cout << bambus() << "\n" << star();
