@@ -86,9 +86,8 @@ int main() {
     vector<ll> distS;
 
     int curr = end;
-    while (curr != start) {
+    do {
         distS.push_back(prv_dist[curr]);
         curr = prv[curr];
-        if (curr == start) break;
-    }
+    } while (curr != start);
 }
