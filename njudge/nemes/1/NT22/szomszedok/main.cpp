@@ -18,19 +18,19 @@ int main() {
     vector<array<int, 2>> befS({{INF, M}}), aftS({{0, M}});
 
     for (int i = 0; i < M - 1; i++) {
-        if (v[i] > v[M] && v[i] < befS.back()[0]) {
+        if (v[i] > v[M] && v[i] <= befS.back()[0]) {
             befS.back() = {v[i], i};
         }
-        else if (v[i] < v[M] && v[i] > aftS.back()[0]) {
+        else if (v[i] < v[M] && v[i] >= aftS.back()[0]) {
             aftS.back() = {v[i], i};
         }
     }
 
     for (int i = M + 1; i < N; i++) {
-        if (v[i] > v[M] && v[i] < befS.back()[0]) {
+        if (v[i] > v[M] && v[i] <= befS.back()[0]) {
             befS.push_back({v[i], i});
         }
-        else if (v[i] < v[M] && v[i] > befS[]) {
+        else if (v[i] < v[M] && v[i] >= befS.back()[0]) {
             aftS.push_back({v[i], i});
         }
     }
