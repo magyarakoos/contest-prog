@@ -14,6 +14,12 @@ int main() {
     cin >> N;
     vector<int> R(N + 1), A(N + 1);
     for (int i = 1; i <= N; i++) {
-        cin >> 
+        cin >> R[i] >> A[i];
+    }
+
+    vector<int> dp(N + 1);
+
+    for (int i = 1; i <= N; i++) {
+        
     }
 }
