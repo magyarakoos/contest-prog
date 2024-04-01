@@ -21,8 +21,8 @@ int main() {
 
     for (int i = 0; i < M - 1; i++) {
         if (v[i] > v[M] && v[i] <= befS[INF][0]) {
-            befS.erase(INF);
-            befS[] = {v[i], i};
+            befS.erase((befS.end() - 1));
+            befS[v[i]] = {v[i], i};
         }
         else if (v[i] < v[M] && v[i] >= aftS.back()[0]) {
             aftS.back() = {v[i], i};
