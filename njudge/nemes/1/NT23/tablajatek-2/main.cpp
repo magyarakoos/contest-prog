@@ -9,7 +9,10 @@ using namespace std;
 using ll = long long;
 
 struct BigBase3 {
-
+    deque<int> dq;
+    BigBase3() {
+        dq.push_back(0);
+    }
 };
 
 int main() {
