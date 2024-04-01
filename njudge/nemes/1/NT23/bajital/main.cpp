@@ -15,19 +15,14 @@ int main() {
     int N, X;
     cin >> N >> X;
 
-    
+    queue<int> divS, remS;
 
     for (int i = 0; i < N; i++) {
         int A;
         cin >> A;
         int div = A / X, rem = A - div * X;
-        if (div && !rem) {
-            indep_divS += div;
-        } else if (!div && rem) {
-            indep_remS += rem;
-        } else if (div && rem) {
-
-        }
+        if (div) divS.push(div);
+        if (rem) remS.push(rem);
     }
 
 
