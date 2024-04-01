@@ -56,7 +56,7 @@ int main() {
             p1_i = befS[i][1];
         }
     }
-    cout << << p1 << "\n";
+    cout << (p1 == -1 ? "" : )<< p1 << "\n";
 
     int p2 = -1;
     for (int i = 0; i < size(aftS) - 1; i++) {
