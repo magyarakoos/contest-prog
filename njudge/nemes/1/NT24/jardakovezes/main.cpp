@@ -12,8 +12,8 @@ int main() {
         if (dp[i - 2][0] + dp[i - 2][1] < dp[i - 3][0] + dp[i - 3][1]) {
             dp[i] = {dp[i - 2][0] + 1, dp[i - 3][0]};
         } else {
-            dp[i]
+            dp[i] = {dp[i - 2][0], dp[i - 3][0] + 1};
         }
     }
-    cout << dp[N];
+    cout << dp[N][0] << " " << dp[N][1];
 }
