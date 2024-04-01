@@ -20,7 +20,9 @@ int main() {
 
     for (int i = v.size() - 1; i >= 0; i--) {
         if (i + 1 <= K) {
-            if ()
+            if (v[i] < ps[i]) {
+                
+            }
         }
     }
 }
