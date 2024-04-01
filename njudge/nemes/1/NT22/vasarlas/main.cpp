@@ -9,12 +9,13 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> A(N), B(N), prefA(N), prefB(N);
+    vector<int> A(N), B(N), psA(N), psB(N);
+
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
 
-    partial_sum(all(A), prefA.begin());
-    partial_sum(all(B), prefB.begin());
+    partial_sum(all(A), psA.begin());
+    partial_sum(all(B), psB.begin());
 
-    for (int x : prefA) cout << x << " ";
+
 }
