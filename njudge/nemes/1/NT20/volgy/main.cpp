@@ -15,6 +15,8 @@ int main() {
     int N;
     cin >> N;
 
-    vector<int> T(N);
-    
+    vector<int> u(N), v(N);
+    cinv(T);
+
+
 }
