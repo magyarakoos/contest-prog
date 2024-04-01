@@ -25,14 +25,15 @@ int main() {
         for (auto it = s.end();; it--) {
             if (it == s.end()) it--;
 
-                
+            auto [_dp, _r, aj]
+
+            if (R[j] < R[i] && A[j] < A[i]) {
+                dp[i] = dp[j] + 1;
+                prev[i] = j;
+                break;
+            }
 
             if (it == s.begin()) break;
-        }
-        if (R[j] < R[i] && A[j] < A[i]) {
-            dp[i] = dp[j] + 1;
-            prev[i] = j;
-            break;
         }
         s.insert({dp[i], R[i], A[i]});
     }
