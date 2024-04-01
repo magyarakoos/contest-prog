@@ -7,12 +7,15 @@ int main() {
     cin >> N >> K;
     vector<int> v(N);
     for (int& x : v) cin >> x;
-    priority_queue<int> pq(v.begin(), v.end());
+    sort(v.begin(), v.end());
+    vector<ll> ps();
     bool a_turn = 1;
     ll A = 0, B = 0;
     while (!pq.empty()) {
 
-        if ()
+        if (pq.size() <= K) {
+
+        }
 
         a_turn ^= 1;
     }
