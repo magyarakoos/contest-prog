@@ -5,16 +5,13 @@ using ll = long long;
 int main() {
     int N, K;
     cin >> N >> K;
-    vector<ll> v(N), ps(N + 1);
+    vector<ll> v(N), ps(N);
     for (ll& x : v) cin >> x;
     sort(v.begin(), v.end());
 
-    for (int i = 1; i <= N; i++) {
-        ps[i] = ps[i - 1] + v[i - 1];
-    }
-
-    for (int i = 0; i <= N; i++) {
-        cout << ps[i] << " ";
+    ps[0] = v[0];
+    for (int i = 1; i < N; i++) {
+        ps[i]
     }
     cout << "\n";
 
@@ -22,7 +19,7 @@ int main() {
 
     for (int i = v.size() - 1; i >= 0; i--) {
         if (i + 1 <= K) {
-            
+
         }
     }
 }
