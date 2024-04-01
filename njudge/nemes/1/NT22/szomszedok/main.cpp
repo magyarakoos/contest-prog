@@ -15,14 +15,11 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    unordered_map<int, vector<int>> befS, aftS;
-    befS[INF].push_back(0);
-    aftS[0].push_back(0);
+    vector<array<int, 2>> befS({{INF, 0}}), aftS({{0, 0}});
 
     for (int i = 0; i < M - 1; i++) {
-        if (v[i] > v[M] && v[i] < befS.begin()->first) {
-            befS.erase(befS.begin());
-            befS[v[i]].push_back(i);
+        if (v[i] > v[M] && v[i] <= befS.back()[0]) {
+            befS.back() = {v[i], i};
         }
         else if (v[i] < v[M] && v[i] >= aftS.back()[0]) {
             aftS.back() = {v[i], i};
