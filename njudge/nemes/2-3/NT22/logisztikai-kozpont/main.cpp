@@ -83,11 +83,12 @@ int main() {
     int start = bfs(1);
     int end = bfs(start);
 
-    vector<ll> distS;
+    vector<ll> distS, nodeS;
 
     int curr = end;
     do {
         distS.push_back(prv_dist[curr]);
+        nodeS.push_back(prv[curr]);
         curr = prv[curr];
     } while (curr != start);
 
@@ -103,5 +104,5 @@ int main() {
         best = min(best, valueS[i]);
     }
 
-    
+
 }
