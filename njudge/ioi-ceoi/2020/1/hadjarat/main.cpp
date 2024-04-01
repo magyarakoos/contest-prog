@@ -22,7 +22,7 @@ int main() {
     set<array<int, 3>> s;
 
     for (int i = 1; i <= N; i++) {
-        for (int j = 1; j < i; j++) {
+        for (auto it = s.end();;)
             if (R[j] < R[i] && A[j] < A[i]) {
                 dp[i] = dp[j] + 1;
                 prev[i] = j;
