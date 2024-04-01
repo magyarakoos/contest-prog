@@ -36,6 +36,6 @@ int main() {
 
     cout << min(
         psB.back(), 
-        psB[best_i] + (psA[best_j + 1] - psA[best_i]) + (psB.back())
+        psB[best_i] + (psA[best_j + 1] - psA[best_i]) + (psB.back() - psB[best_j + 1])
     );
 }
