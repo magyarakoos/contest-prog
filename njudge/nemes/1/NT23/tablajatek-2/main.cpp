@@ -49,6 +49,17 @@ struct BigBase3 {
             assert(i > -1);
         }
     }
+
+    void div3() {
+        v.pop_back();
+        if (v.empty()) {
+            v.push_back(0);
+        }
+    }
+
+    void mul3() {
+        
+    }
 };
 
 int main() {
