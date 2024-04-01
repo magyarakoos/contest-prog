@@ -3,6 +3,8 @@ using namespace std;
 
 #define all(v) v.begin(), v.end()
 
+constexpr int INF = 1e4 + 1;
+
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
@@ -13,7 +15,7 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    vector<array<int, 2>> befS({{INT_MAX, M}}), aftS({{0, M}});
+    vector<array<int, 2>> befS({{INF, M}}), aftS({{0, M}});
 
     for (int i = 0; i < M - 1; i++) {
         if (v[i] > v[M] && v[i] < befS.back()[0]) {
@@ -33,5 +35,5 @@ int main() {
         }
     }
 
-    
+    for (auto [])
 }
