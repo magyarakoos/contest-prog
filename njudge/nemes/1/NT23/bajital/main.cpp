@@ -1,11 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+long long N, X, A, sum, divS;
 int main() {
-    long long N, X, sum, divS;
     cin >> N >> X;
-
     while (N--) {
-
+        cin >> A;
+        sum += A;
+        divS += A / X;
     }
+    cout << min(A /)
 }
