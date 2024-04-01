@@ -9,4 +9,7 @@ int main() {
 
     int N;
     cin >> N;
+
+    vector<vector<int>> g(N + 1);
+    
 }
