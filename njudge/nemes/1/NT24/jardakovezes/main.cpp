@@ -5,7 +5,7 @@ using ll = long long;
 int main() {
     int N;
     cin >> N;
-    vector<array<ll, 2>> dp(N + 1, {2e9, 2e9});
+    vector<array<ll, 2>> dp(N + 1, {INT_MAX, INT_MAX});
     dp[0] = {0, 0};
     dp[2] = {1, 0};
     for (int i = 3; i <= N; i++) {
@@ -19,4 +19,5 @@ int main() {
             dp[i][1] = dp[i - 3][0] + 1;
         }
     }
+    cout << dp[N][0] << " " << dp[N][1];
 }
