@@ -4,10 +4,12 @@ using ll = long long;
 
 #define all(v) v.begin(), v.end()
 
+int N;
+vector<vector<int>> g;
+
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
-    int N;
     cin >> N;
 
     if (N <= 3) {
@@ -15,6 +17,6 @@ int main() {
         exit(0);
     }
 
-    vector<vector<int>> g(N + 1);
+
 
 }
