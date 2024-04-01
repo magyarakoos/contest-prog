@@ -23,9 +23,12 @@ void solve() {
         int U, V;
         cin >> U >> V;
         if (ugly[U] && ugly[V]) {
-            cout << "NEM\n2\n" << U << " " << V;
+            cout << "NEM\n2\n" << U << " " << V << "\n";
+            exit(0);
         }
     }
+
+    cout << "IGEN\n";
 }
 
 int main() {
