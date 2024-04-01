@@ -47,12 +47,13 @@ int main() {
     }
     cout << "\n";
 
-    int p1 = 0;
+    int p1 = -1;
     for (int i = 0; i < size(befS) - 1; i++) {
         if (befS[i][0] == INF) continue;
         p1 = max(p1, befS[i + 1][1] - max(befS[i][1], M));
     }
     cout << p1 << "\n";
 
-    int p2 = 0;
+    int p2 = -1;
+    for (int i = 0; i < size(aftS))
 }
