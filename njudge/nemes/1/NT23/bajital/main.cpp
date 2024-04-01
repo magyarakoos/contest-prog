@@ -15,5 +15,7 @@ int main() {
     int N, x;
     cin >> N >> x;
 
-    vector<int> 
+    vector<int> divS(N), remS(N);
+
+    while (N--)
 }
