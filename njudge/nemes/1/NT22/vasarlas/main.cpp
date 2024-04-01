@@ -17,14 +17,14 @@ int main() {
     partial_sum(all(A), psA.begin() + 1);
     partial_sum(all(B), psB.begin() + 1);
 
-    int best_i = 0, best_j = 0;
+    int best_i = 0, best_j = 0
 
     for (int i = 0; i < N; i++) {
         for (int j = i; j < N; j++) {
             int costA = psA[j + 1] - psA[i];
             int costB = psB[j + 1] - psB[i];
 
-            
+            int save = costB - costA;
         }
     }
 
