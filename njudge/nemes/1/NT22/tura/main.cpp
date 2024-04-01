@@ -4,10 +4,13 @@ using ll = long long;
 
 #define all(v) v.begin(), v.end()
 
+int N;
+vector<bool> ugly;
+
 void solve() {
-    int N;
     cin >> N;
-    vector<bool> ugly(N + 1);
+    ugly.assign(N + 1, 0);
+
     for (int i = 1; i <= N; i++) {
         int A;
         cin >> A;
