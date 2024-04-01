@@ -13,8 +13,8 @@ int main() {
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
 
-    partial_sum(all(A), prefA.begin() + 1);
-    partial_sum(all(B), prefB.begin() + 1);
+    partial_sum(all(A), prefA.begin());
+    partial_sum(all(B), prefB.begin());
 
-    for (int x : prefA) cout << x << " "
+    for (int x : prefA) cout << x << " ";
 }
