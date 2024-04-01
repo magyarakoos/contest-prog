@@ -31,7 +31,8 @@ int main() {
             }
         }
 
-        v.pu
+        v.push_back({dp[i], R[i], A[i]});
+        sort(all(v), [](){})
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
