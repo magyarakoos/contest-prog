@@ -40,12 +40,16 @@ vector<vector<array<ll, 2>>> g;
 // which is the farthest node from s
 int bfs(int s) {
     vector<bool> vis(N + 1);
-    vector<ll> dist(N + 1);
+    vector<ll> dist(N + 1, LLONG_MAX);
     queue<int> q;
 
     vis[s] = 1;
     dist[s] = 0;
-    q.push()
+    q.push(s);
+
+    while (!q.empty()) {
+
+    }
 }
 
 int main() {
