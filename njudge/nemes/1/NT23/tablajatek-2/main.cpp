@@ -9,14 +9,14 @@ using namespace std;
 using ll = long long;
 
 struct BigBase3 {
-    deque<int> dq;
+    vector<int> v;
     BigBase3() {
-        dq.push_back(0);
+        v.push_back(0);
     }
 
     void add() {
-        if (dq.back() < 2) {
-            dq.back()++;
+        if (v.back() < 2) {
+            v.back()++;
         } else {
             
         }
