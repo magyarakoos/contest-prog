@@ -52,6 +52,7 @@ int main() {
         if (befS[i][0] == INF) continue;
         p1 = max(p1, befS[i + 1][1] - max(befS[i][1], M));
     }
-
     cout << (p1 == N ? -1 : p1);
+
+    int p2 = 0;
 }
