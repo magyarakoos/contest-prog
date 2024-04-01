@@ -15,7 +15,7 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    vector<array<int, 2>> befS({{INF, -1}}), aftS({{0, -1}});
+    vector<array<int, 2>> befS({{INF, N}}), aftS({{0, N}});
 
     for (int i = 0; i < M; i++) {
         if (v[i] > v[M] && v[i] < befS.back()[0]) {
@@ -52,7 +52,7 @@ int main() {
         if (befS[i][0] == INF) continue;
         p1 = max(p1, befS[i + 1][1] - max(befS[i][1], M));
     }
-    cout << (p1 == N ? -1 : p1);
+    cout << p1 << "\n";
 
     int p2 = 0;
 }
