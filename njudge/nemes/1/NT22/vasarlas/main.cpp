@@ -1,9 +1,6 @@
 // thanks to the creative genius of TomaSajt
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-
-#define all(v) v.begin(), v.end()
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
@@ -36,7 +33,11 @@ int main() {
     int sum = 0;
     for (int i = 0; i < N; i++) {
         if (i < best_l || i > best_r) {
-            
+            sum += B[i];
+        } else {
+            sum += A[i];
         }
     }
+
+    cout << sum;
 }
