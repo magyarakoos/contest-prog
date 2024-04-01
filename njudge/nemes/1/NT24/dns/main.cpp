@@ -13,8 +13,6 @@ int main() {
     while (N--) {
         char C;
         cin >> C;
-
-        if (C == 'C') continue;
         if (C == 'A') before_g++;
         if (C == 'G') {
             after_g += before_g;
