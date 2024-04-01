@@ -18,6 +18,10 @@ int main() {
     partial_sum(all(B), psB.begin() + 1);
 
     for (int i = 0; i < N; i++) {
-        for (int j = i)
+        for (int j = i; j < N; j++) {
+
+        }
     }
+
+
 }
