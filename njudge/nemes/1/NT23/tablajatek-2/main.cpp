@@ -18,7 +18,11 @@ struct BigBase3 {
         if (v.back() < 2) {
             v.back()++;
         } else {
-            
+            for (int i = size(v) - 1; i >= 0; i--) {
+                if (v[i] == 2) {
+                    
+                }
+            }
         }
     }
 };
