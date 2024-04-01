@@ -10,6 +10,10 @@ using ll = long long;
 int N;
 int solve(const vector<int>& v) {
     vector<int> prev(N, -1);
+    int result = 0;
+    for (int i = 0; i < N; i++) {
+        prev[i] = i - 1;
+    }
 }
 
 int main() {
