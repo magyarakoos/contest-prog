@@ -30,6 +30,8 @@ int main() {
                 }
             }
         }
+
+        v.pu
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
