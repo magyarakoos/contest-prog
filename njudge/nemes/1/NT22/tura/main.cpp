@@ -42,7 +42,7 @@ void solve() {
         }
     }
 
-    cout << "IGEN\n";
+    if ()cout << "IGEN\n";
 }
 
 int main() {
