@@ -13,6 +13,12 @@ struct BigBase3 {
     BigBase3() {
         dq.push_back(0);
     }
+
+    void add() {
+        if (dq.back() < 2) {
+            dq.
+        }
+    }
 };
 
 int main() {
