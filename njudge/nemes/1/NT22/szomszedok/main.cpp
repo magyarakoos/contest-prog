@@ -13,12 +13,13 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    vector<array<int, 2>> befS({{0, 0}}), aftS({{0, 0}});
+    vector<array<int, 2>> befS({{INT_MAX, 0}}), aftS({{0, 0}});
 
     for (int i = 0; i < M; i++) {
-        if (v[i] > v[M] && v[i] > befS.back()[0]) {
+        if (v[i] > v[M] && v[i] < befS.back()[0]) {
             befS.back() = {v[i], i};
         }
+        else if (v[i] < v[M] && v[i] >)
     }
 
     for (int i = 0; i < N; i++) {
