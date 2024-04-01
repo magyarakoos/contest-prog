@@ -16,7 +16,9 @@ struct BigBase3 {
 
     void add() {
         if (dq.back() < 2) {
-            dq.
+            dq.back()++;
+        } else {
+            
         }
     }
 };
