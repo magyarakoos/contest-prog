@@ -5,8 +5,10 @@ using ll = long long;
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
     
-    int N;
+    int N, result = 0, a_count = 0;
     cin >> N;
     ll result = 0;
-    int T
+    int A_count = 0;
+
+
 }
