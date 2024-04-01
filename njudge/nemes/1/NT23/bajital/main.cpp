@@ -26,7 +26,7 @@ int main() {
         if (rem) remS.insert({rem, i});
     }
 
-    while (!divS.empty() && !remS.empty()) {
-
+    while (1) {
+        
     }
 }
