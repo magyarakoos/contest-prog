@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 
 int main() {
-    int N, K, db;
+    int N, K, db = 0;
     cin >> N >> K;
     while (N--) {
         char c;
@@ -13,7 +13,7 @@ int main() {
     int curr = 2;
     ll result = 0;
     while (curr <= db) {
-        result += db - ++curr;
+        result += db - (++curr);
     }
     cout << result;
 }
