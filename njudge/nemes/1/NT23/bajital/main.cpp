@@ -15,14 +15,13 @@ int main() {
     int N, X;
     cin >> N >> X;
 
-    vector<int> divS(N), remS(N);
+    vector<int> divS;
 
     for (int i = 0; i < N; i++) {
         int A;
         cin >> A;
-        divS[i] = A / X;
-        remS[i] = A % X;
+        int div = A / X, rem = A - div * X;
     }
 
-    
+
 }
