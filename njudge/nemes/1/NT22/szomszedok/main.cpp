@@ -58,7 +58,7 @@ int main() {
     if (p1 == -1) {
         cout << "-1\n";
     } else {
-        cout << p1_i << " " << p1 << "\n";
+        cout << p1_i + 1 << " " << p1 << "\n";
     }
 
     int p2 = -1, p2_i = -1;
@@ -74,6 +74,6 @@ int main() {
     if (p2 == -1) {
         cout << "-1";
     } else {
-        cout << p2_i << " " << p2;
+        cout << p2_i + 1 << " " << p2;
     }
 }
