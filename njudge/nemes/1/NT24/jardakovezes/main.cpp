@@ -10,9 +10,9 @@ int main() {
     dp[3] = {0, 1};
     for (int i = 4; i <= N; i++) {
         if (dp[i - 2][0] + dp[i - 2][1] < dp[i - 3][0] + dp[i - 3][1]) {
-            dp[i]
+            dp[i] = {dp[i - 2][0] + 1, dp[i - 3][0]};
         } else {
-
+            dp[i]
         }
     }
     cout << dp[N];
