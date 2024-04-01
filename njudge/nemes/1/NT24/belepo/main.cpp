@@ -8,12 +8,11 @@ int main() {
     while (N--) {
         char c;
         cin >> c;
-        db += (c == '1');
+        db += c == '1';
     }
     int curr = 2;
-    cerr << db << "\n";
     ll result = 0;
-    while (curr <= db) {
+    while (curr <= db && curr <= K) {
         result += db - curr + 1;
         curr++;
     }
