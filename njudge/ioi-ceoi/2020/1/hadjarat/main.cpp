@@ -30,8 +30,6 @@ int main() {
                 }
             }
         }
-
-        v.push_back({dp[i], R[i], A[i]});
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
