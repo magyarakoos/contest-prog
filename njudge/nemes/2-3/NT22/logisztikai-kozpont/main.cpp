@@ -90,4 +90,7 @@ int main() {
         distS.push_back(prv_dist[curr]);
         curr = prv[curr];
     } while (curr != start);
+
+    for (ll x : distS) cout << x << " ";
+    cout << "\n" << 
 }
