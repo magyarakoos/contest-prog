@@ -92,5 +92,5 @@ int main() {
     } while (curr != start);
 
     ll sum = sum(distS);
-    
+    auto pref = prefix_sum(distS);
 }
