@@ -22,8 +22,12 @@ int main() {
         indegS[V]++;
     }
 
-    cout 
-        << accumulate(all(indegS), 0, [](int a, int b){ 
-            return max(a - 2, 0) + max(b - 2, 0); }) 
+    int bambus = 0;
+
+    for (int i = 1; i <= N; i++) {
+        
+    }
+
+    cout
         << "\n" << N - 1 - *max_element(all(indegS));
 }
