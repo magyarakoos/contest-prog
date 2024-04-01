@@ -46,4 +46,8 @@ int main() {
         cout << score << " " << id << "\n";
     }
     cout << "\n";
+
+    int best_bef = 0;
+
+    for (int i = 0; i <)
 }
