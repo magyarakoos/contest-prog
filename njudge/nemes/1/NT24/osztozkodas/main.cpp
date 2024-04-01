@@ -13,10 +13,8 @@ int main() {
     for (int i = 1; i < N; i++) {
         ps[i] = ps[i - 1] + v[i];
     }
-    
-    for (int x : ps) cerr << x << " ";
 
-    array<ll, 2> playerS;
+    array<ll, 2> playerS {0, 0};
 
     bool turn = 0;
 
