@@ -17,5 +17,7 @@ int main() {
     partial_sum(all(A), psA.begin() + 1);
     partial_sum(all(B), psB.begin() + 1);
 
-    
+    for (int i = 0; i < N; i++) {
+        for (int j = i)
+    }
 }
