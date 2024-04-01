@@ -7,5 +7,10 @@ int main() {
     cin >> N;
     vector<int> v(N);
     for (int& x : v) cin >> x;
-    priority_queue<int> pq()
+    priority_queue<int> pq(v.begin(), v.end());
+    bool a_turn = 1;
+    ll A = 0, B = 0;
+    while (!pq.empty()) {
+        
+    }
 }
