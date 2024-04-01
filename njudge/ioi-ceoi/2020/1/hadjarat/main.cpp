@@ -15,12 +15,7 @@ struct Cmp {
         if (a[0] > b[0]) {
             return false;
         }
-        if (a[1] > b[1]) {
-            return true;
-        }
-        if () {
-            return true;
-        }
+        return (a[1] > b[1] || a[2] > b[2]);
     }
 };
 
@@ -47,6 +42,8 @@ int main() {
                 }
             }
         }
+
+        pq.push({dp[i], R[i]})
     }
 
     int mxi = max_element(all(dp)) - dp.begin();
