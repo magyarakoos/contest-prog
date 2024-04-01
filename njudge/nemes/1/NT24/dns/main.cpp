@@ -16,11 +16,11 @@ int main() {
 
         if (C == 'C') continue;
         if (C == 'A') before_g++;
-        else if (C == 'G') {
+        if (C == 'G') {
             after_g += before_g;
             before_g = 0;
         }
-        else {
+        if (C == 'T') {
             result += after_g;
         }
     }
