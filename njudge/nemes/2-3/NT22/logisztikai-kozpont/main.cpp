@@ -42,5 +42,10 @@ int main() {
 
     cin >> N;
 
-    
+    g.resize(N + 1);
+    for (int i = 1; i < N; i++) {
+        int U, V;
+        cin >> U >> V;
+        g[U].p
+    }
 }
