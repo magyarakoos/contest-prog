@@ -17,7 +17,7 @@ int main() {
         cin >> R[i] >> A[i];
     }
 
-    vector<int> dp(N + 1);
+    vector<int> dp(N + 1, 1);
 
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j < i; j++) {
