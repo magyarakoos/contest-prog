@@ -15,7 +15,7 @@ int main() {
     int N, X;
     cin >> N >> X;
 
-    int indep_divS = 0, indep_remS = 0;
+    
 
     for (int i = 0; i < N; i++) {
         int A;
@@ -26,7 +26,7 @@ int main() {
         } else if (!div && rem) {
             indep_remS += rem;
         } else if (div && rem) {
-            
+
         }
     }
 
