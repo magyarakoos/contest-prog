@@ -5,18 +5,15 @@ using ll = long long;
 int main() {
     int N, K;
     cin >> N >> K;
-    vector<int> v(N);
-    for (int& x : v) cin >> x;
+    vector<ll> v(N), ps(N + 1);
+    for (ll& x : v) cin >> x;
     sort(v.begin(), v.end());
-    vector<ll> ps();
-    bool a_turn = 1;
-    ll A = 0, B = 0;
-    while (!pq.empty()) {
 
-        if (pq.size() <= K) {
-
-        }
-
-        a_turn ^= 1;
+    for (int i = 1; i <= N; i++) {
+        
     }
+
+    bool a_turn = 1;
+
+
 }
