@@ -78,4 +78,9 @@ int main() {
 
     int start = bfs(1);
     int end = bfs(start);
+
+    int curr = end;
+    while (curr != start) {
+        
+    }
 }
