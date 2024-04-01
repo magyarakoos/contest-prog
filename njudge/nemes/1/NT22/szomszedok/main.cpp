@@ -20,9 +20,9 @@ int main() {
     aftS[0].push_back(0);
 
     for (int i = 0; i < M - 1; i++) {
-        if (v[i] > v[M] && v[i] <= befS[INF][0]) {
-            auto it = 
-            befS.erase();
+        if (v[i] > v[M] && v[i] <= befS.begin()[0]) {
+            auto it = befS.begin();
+            befS.erase(befS.begin());
             befS[v[i]] = {v[i], i};
         }
         else if (v[i] < v[M] && v[i] >= aftS.back()[0]) {
