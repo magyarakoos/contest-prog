@@ -70,7 +70,8 @@ int main() {
     cin >> N;
 
     if (N == 1) {
-        cout <<
+        cout << "0\n1\n1";
+        exit(0);
     }
 
     prv.resize(N + 1);
