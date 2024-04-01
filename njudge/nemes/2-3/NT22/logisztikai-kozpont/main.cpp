@@ -44,7 +44,7 @@ int bfs(int s) {
     queue<int> q;
 
     vis[s] = 1;
-    dist[s] = 0;
+    dist[s] = dist[0] = 0;
     q.push(s);
 
     while (!q.empty()) {
@@ -52,10 +52,13 @@ int bfs(int s) {
         for (auto [v, w] : g[u]) {
             if (!vis[v]) {
                 vis[v] = 1;
-                
+                dist[v] = dist[u] + w;
+                q.push(v);
             }
         }
     }
+
+    return *
 }
 
 int main() {
