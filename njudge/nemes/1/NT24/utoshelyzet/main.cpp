@@ -65,21 +65,21 @@ int main() {
         cin >> T >> Y >> X;
         X--; Y--;
 
-        if (368 == tc) {
+        /*if (368 == tc) {
             clog << "\n";
             clog << T << " " << Y << " " << X << "\n";
             for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 clog << v[i][j];
             }clog<<"\n";}
-        }
+        }*/
         
         if (T == 3) {
             setvals(X, Y, 0, v[Y][X] == 3, 0);
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
                     if (v[i][j] > 1) {
-                        setvals(j, i, v[i][j],)
+                        setvals(j, i, v[i][j], v[i][j] == 3, 1);
                     }
                 }
             }
