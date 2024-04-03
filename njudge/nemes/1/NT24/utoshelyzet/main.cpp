@@ -70,7 +70,7 @@ int main() {
             continue;
         }
 
-        if (v[Y][X] || (T == 2 && !valid(X, Y))) {
+        if (v[Y][X]) {
             cout << "NEM\n";
             continue;
         }
