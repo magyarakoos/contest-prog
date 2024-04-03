@@ -14,6 +14,16 @@ int main() {
     int N;
     cin >> N;
     while (N--) {
+        int T, X, Y;
+        cin >> T >> X >> Y;
+        if (T == 1) {
 
+        }
+        if (T == 2) {
+
+        }
+        if (T == 3) {
+            
+        }
     }
 }
