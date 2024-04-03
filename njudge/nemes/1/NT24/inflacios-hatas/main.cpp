@@ -21,7 +21,7 @@ int main() {
         pq.pop();
         result += x;
         add += x;
-        if (size(pq) < K) {
+        if (size(pq) <= K) {
             result += add;
         }
     }
