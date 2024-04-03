@@ -12,18 +12,12 @@ int main() {
     vector<ll> v(N);
     for (ll& x : v) cin >> x;
 
-    priority_queue<ll, vector<ll>, greater<ll>> pq(v.begin(), v.end());
+    sort(v.begin(), v.end());
 
-    ll result = 0, add = 0;
+    ll result = 0;
 
-    while (!pq.empty()) {
-        ll x = pq.top();
-        pq.pop();
-        result += x;
-        add += x;
-        if (size(pq) <= K) {
-            result += add;
-        }
+    for (int i = 0; i < N; i++) {
+        
     }
 
     cout << result;
