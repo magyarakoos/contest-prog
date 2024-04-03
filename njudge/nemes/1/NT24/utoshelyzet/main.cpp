@@ -65,13 +65,13 @@ int main() {
         cin >> T >> Y >> X;
         X--; Y--;
 
-        for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            cout << v[i][j];
-        }cout<<"\n";}
+        // for (int i = 0; i < 8; i++) {
+        // for (int j = 0; j < 8; j++) {
+        //     cout << v[i][j];
+        // }cout<<"\n";}
         
         if (T == 3) {
-            setvals(X, Y, 0, v[Y][X] == 3);
+            setvals(X, Y, 0, v[Y][X] == 3, 0);
             cout << "-\n";
             continue;
         }
@@ -81,12 +81,12 @@ int main() {
             continue;
         }
 
-        setvals(X, Y, T + 1, T == 2);
+        setvals(X, Y, T + 1, T == 2, 1);
         cout << "IGEN\n";
     }
 
-    for (int i = 0; i < 8; i++) {
-    for (int j = 0; j < 8; j++) {
-        cout << v[i][j];
-    }cout<<"\n";}
+    // for (int i = 0; i < 8; i++) {
+    // for (int j = 0; j < 8; j++) {
+    //     cout << v[i][j];
+    // }cout<<"\n";}
 }
