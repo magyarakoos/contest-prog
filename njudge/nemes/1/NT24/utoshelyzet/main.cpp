@@ -19,8 +19,12 @@ int main() {
         X--; Y--;
         
         if (T == 3) {
-            int i = Y;
-            while ()
+            for (int i = Y; i < 8; i++) {
+                v[i][X] = 0;
+            }
+            for (int i = Y; i < 8; i++) {
+                v[i][X] = 0;
+            }
             cout << "-\n";
             continue;
         }
