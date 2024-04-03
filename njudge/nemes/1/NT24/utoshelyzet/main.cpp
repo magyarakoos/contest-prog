@@ -35,6 +35,10 @@ void setvals(int X, int Y, int type, bool diag) {
     v[Y][X] = type;
 }
 
+bool valid(int X, int Y) {
+
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -51,7 +55,7 @@ int main() {
             continue;
         }
 
-        if (v[Y][X]) {
+        if (v[Y][X] || ) {
             cout << "NEM\n";
             continue;
         }
@@ -59,7 +63,7 @@ int main() {
         if (T == 1) {
             setvals(X, Y, 1, 0);
         } else {
-            
+
         }
 
         cout << "IGEN\n";
