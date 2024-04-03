@@ -10,5 +10,10 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    
+    vector<vector<bool>> v(8, vector<bool>(8));
+    int N;
+    cin >> N;
+    while (N--) {
+
+    }
 }
