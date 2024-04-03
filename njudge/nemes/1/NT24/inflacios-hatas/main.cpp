@@ -18,7 +18,7 @@ int main() {
         ll x = pq.top();
         result += x;
         vector<ll> incr;
-        for (int i = 0; i < K && !pq.empty(); i++) {
+        for (int i = 0; !pq.empty() && i < K; i++) {
             incr.push_back(pq.top() + x);
             pq.pop();
         }
