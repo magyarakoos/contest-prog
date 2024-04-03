@@ -5,30 +5,30 @@ vector<vector<int>> v(8, vector<int>(8));
 
 void setvals(int X, int Y, int type, bool diag) {
     for (int i = Y + 1; i < 8; i++) {
-        v[i][X] = type;
+        v[i][X] = 1;
     }
     for (int i = Y - 1; i >= 0; i--) {
-        v[i][X] = type;
+        v[i][X] = 1;
     }
     for (int j = X + 1; j < 8; j++) {
-        v[Y][j] = type;
+        v[Y][j] = 1;
     }
     for (int j = X - 1; j >= 0; j--) {
-        v[Y][j] = type;
+        v[Y][j] = 1;
     }
 
     if (diag) {
         for (int i = Y + 1, j = X + 1; i < 8 && j < 8; i++, j++) {
-            v[i][j] = type;
+            v[i][j] = 1;
         }
         for (int i = Y - 1, j = X - 1; i >= 0 && j >= 0; i--, j--) {
-            v[i][j] = type;
+            v[i][j] = 1;
         }
         for (int i = Y - 1, j = X + 1; i >= 0 && j < 8; i--, j++) {
-            v[i][j] = type;
+            v[i][j] = 1;
         }
         for (int i = Y + 1, j = X - 1; i < 8 && j >= 0; i++, j--) {
-            v[i][j] = type;
+            v[i][j] = 1;
         }
     }
 
@@ -71,7 +71,7 @@ int main() {
         }cout<<"\n";}
         
         if (T == 3) {
-            setvals(X, Y, 0, v[Y][X] == 2);
+            setvals(X, Y, 0, v[Y][X] == 3);
             cout << "-\n";
             continue;
         }
@@ -81,7 +81,7 @@ int main() {
             continue;
         }
 
-        setvals(X, Y, T, T == 2);
+        setvals(X, Y, T + 1, T == 2);
         cout << "IGEN\n";
     }
 
