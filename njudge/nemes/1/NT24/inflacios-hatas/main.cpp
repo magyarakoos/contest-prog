@@ -20,7 +20,7 @@ int main() {
         result += x;
         add += x;
         if (pq.size() < K) {
-            
+            result += add;
         }
     }
 
