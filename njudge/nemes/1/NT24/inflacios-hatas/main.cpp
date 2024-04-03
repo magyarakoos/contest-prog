@@ -26,4 +26,6 @@ int main() {
             pq.push(y);
         }
     }
+
+    cout << result;
 }
