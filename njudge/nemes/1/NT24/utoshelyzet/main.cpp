@@ -17,8 +17,9 @@ int main() {
         int T, X, Y;
         cin >> T >> Y >> X;
         X--; Y--;
+        if (T < 3 && v[])
         if (T == 1) {
-
+            
         }
         if (T == 2) {
 
