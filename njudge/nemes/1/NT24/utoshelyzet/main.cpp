@@ -56,7 +56,12 @@ int main() {
             continue;
         }
 
-        setvals(X, Y, T, T == 2);
+        if (T == 1) {
+            setvals(X, Y, 1, 0);
+        } else {
+            
+        }
+
         cout << "IGEN\n";
     }
 }
