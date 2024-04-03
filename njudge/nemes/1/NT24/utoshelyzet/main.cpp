@@ -17,22 +17,22 @@ void setvals(int X, int Y, int type) {
         v[Y][j] = 0;
     }
 
-    if (v[Y][X] == 2) {
+    if (v[Y][X] == 2 || type == 2) {
         for (int i = Y + 1, j = X + 1; i < 8 && j < 8; i++, j++) {
-            v[i][j] = 0;
+            v[i][j] = type;
         }
         for (int i = Y - 1, j = X - 1; i >= 0 && j >= 0; i--, j--) {
-            v[i][j] = 0;
+            v[i][j] = type;
         }
         for (int i = Y - 1, j = X + 1; i >= 0 && j < 8; i--, j++) {
-            v[i][j] = 0;
+            v[i][j] = type;
         }
         for (int i = Y + 1, j = X - 1; i < 8 && j >= 0; i++, j--) {
-            v[i][j] = 0;
+            v[i][j] =type0;
         }
     }
 
-    v[Y][X] = 0;
+    v[Y][X] = type;
 }
 
 int main() {
