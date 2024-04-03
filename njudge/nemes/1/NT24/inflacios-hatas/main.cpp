@@ -18,10 +18,6 @@ int main() {
         ll x = pq.top();
         pq.pop();
         result += x;
-
-        for (ll y : incr) {
-            pq.push(y);
-        }
     }
 
     cout << result;
