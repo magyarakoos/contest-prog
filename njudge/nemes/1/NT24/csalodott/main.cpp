@@ -12,10 +12,11 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    int l = 0, r = 1, result = -1;
+    int l = 0, r = 1, result = -1, result_i = -1;
     while (r < N) {
         if (v[l] < v[r]) {
             result = max(result, r - l);
+            
             l = r;
         }
         r++;
