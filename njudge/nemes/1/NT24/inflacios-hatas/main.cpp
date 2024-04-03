@@ -17,7 +17,10 @@ int main() {
     ll result = 0;
 
     for (int i = 0; i < N; i++) {
-        for (int j = max(i + 1, N - K))
+        for (int j = max(i + 1, N - K); j < N; j++) {
+            v[j] += v[i];
+        }
+        result += v[i];
     }
 
     cout << result;
