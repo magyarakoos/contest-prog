@@ -13,21 +13,24 @@ int main() {
         X--; Y--;
         
         if (T == 3) {
-            for (int i = Y; i < 8; i++) {
+            for (int i = Y + 1; i < 8; i++) {
                 v[i][X] = 0;
             }
             for (int i = Y - 1; i >= 0; i--) {
                 v[i][X] = 0;
             }
-            for (int j = X; j < 8; j++) {
+            for (int j = X + 1; j < 8; j++) {
                 v[Y][j] = 0;
             }
             for (int j = X - 1; j >= 0; j--) {
                 v[Y][j] = 0;
             }
 
+            if (v[Y][X] == 2) {
+                
+            }
 
-
+            v[Y][X] = 0;
             cout << "-\n";
             continue;
         }
