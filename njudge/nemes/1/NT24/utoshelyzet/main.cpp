@@ -64,6 +64,10 @@ int main() {
         int T, X, Y;
         cin >> T >> Y >> X;
         X--; Y--;
+
+        for (int i = 0; i < 8; i++) {
+        for (int) @
+        }}
         
         if (T == 3) {
             setvals(X, Y, 0, v[Y][X] == 2);
