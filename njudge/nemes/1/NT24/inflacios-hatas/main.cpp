@@ -2,6 +2,8 @@
 using namespace std;
 using ll = long long;
 
+#define size(v) (int)v.size()
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -19,7 +21,7 @@ int main() {
         pq.pop();
         result += x;
         add += x;
-        if (pq.size() < K) {
+        if (size(pq) < K) {
             result += add;
         }
     }
