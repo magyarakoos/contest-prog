@@ -19,7 +19,8 @@ int main() {
         X--; Y--;
         
         if (T == 3) {
-            
+            int i = Y;
+            while ()
             cout << "-\n";
             continue;
         }
