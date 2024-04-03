@@ -7,12 +7,16 @@ int main() {
 
     int N, K;
     cin >> N >> K;
-    vector<int> v(N);
-    for (int& x : v) cin >> x;
+    vector<ll> v(N);
+    for (ll& x : v) cin >> x;
 
-    priority_queue<int, vector<int>, greater<int>> pq(v.begin(), v.end());
+    priority_queue<ll, vector<ll>, greater<ll>> pq(v.begin(), v.end());
 
     ll result = 0;
 
-    while ()
+    while (!pq.empty()) {
+        ll x = pq.top();
+        result += x;
+        
+    }
 }
