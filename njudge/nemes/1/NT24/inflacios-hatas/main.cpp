@@ -18,6 +18,7 @@ int main() {
         ll x = pq.top();
         pq.pop();
         result += x;
+        cout << result << " " << x << "\n";
         vector<ll> incr;
         for (int i = 0; !pq.empty() && i < K; i++) {
             incr.push_back(pq.top() + x);
