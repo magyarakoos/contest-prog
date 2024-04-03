@@ -66,12 +66,12 @@ int main() {
         X--; Y--;
 
         if (368 == tc) {
-            cerr << "\n";
-            cerr << T << " " << Y << " " << X << "\n";
+            clog << "\n";
+            clog << T << " " << Y << " " << X << "\n";
             for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                cerr << v[i][j];
-            }cerr<<"\n";}
+                clog << v[i][j];
+            }clog<<"\n";}
         }
         
         if (T == 3) {
