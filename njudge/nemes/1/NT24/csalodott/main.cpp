@@ -15,9 +15,11 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    int l = 0, r = 1, result = -1, mx = v[0];
+    int l = 0, r = 1, result = -1, mxi = 0, cur_len = -1;
     while (r < N) {
-
+        if (v[mxi] < v[r]) {
+            
+        }
     }
 
     cout << result;
