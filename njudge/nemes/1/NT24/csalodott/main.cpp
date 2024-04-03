@@ -15,10 +15,11 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    int l = 0, r = 1, result = -1, mxi = 0, cur_len = -1;
+    int l = 0, r = 1, result = -1;
     while (r < N) {
         if (v[mxi] < v[r]) {
-            
+            result = max(result, r - l + 1);
+            l = 
         }
     }
 
