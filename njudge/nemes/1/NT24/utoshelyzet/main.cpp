@@ -60,10 +60,14 @@ int main() {
 
     int N;
     cin >> N;
-    while (N--) {
+    for (int i = 1; i <= N; i++) {
         int T, X, Y;
         cin >> T >> Y >> X;
         X--; Y--;
+
+        if (i == 368) {
+            
+        }
 
         // for (int i = 0; i < 8; i++) {
         // for (int j = 0; j < 8; j++) {
