@@ -16,6 +16,8 @@ int main() {
     while (N--) {
         int T, X, Y;
         cin >> T >> X >> Y;
+        X--;
+        Y--;
         if (T == 1) {
 
         }
