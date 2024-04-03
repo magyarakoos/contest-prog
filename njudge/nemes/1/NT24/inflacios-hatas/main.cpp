@@ -17,9 +17,7 @@ int main() {
     ll result = 0;
 
     for (int i = 0; i < N; i++) {
-        if (N - i - 1 <= K) {
-            
-        }
+        for (int j = max(i + 1, N - K))
     }
 
     cout << result;
