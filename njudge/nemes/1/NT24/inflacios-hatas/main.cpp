@@ -19,7 +19,9 @@ int main() {
         pq.pop();
         result += x;
         add += x;
-        if ()
+        if (pq.size() < K) {
+            
+        }
     }
 
     cout << result;
