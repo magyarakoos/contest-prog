@@ -36,7 +36,19 @@ void setvals(int X, int Y, int type, bool diag) {
 }
 
 bool valid(int X, int Y) {
-
+    for (int i = Y + 1, j = X + 1; i < 8 && j < 8; i++, j++) {
+        if (v[i][j]) return 0;
+    }
+    for (int i = Y - 1, j = X - 1; i >= 0 && j >= 0; i--, j--) {
+        if (v[i][j]) return 0;
+    }
+    for (int i = Y - 1, j = X + 1; i >= 0 && j < 8; i--, j++) {
+        if (v[i][j]) return 0;
+    }
+    for (int i = Y + 1, j = X - 1; i < 8 && j >= 0; i++, j--) {
+        if (v[i][j]) return 0;
+    }
+    return 1;
 }
 
 int main() {
