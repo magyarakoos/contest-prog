@@ -52,9 +52,6 @@ bool valid(int X, int Y, int T) {
     return 1;
 }
 
-ofstream fout("out.2");
-#define cout fout
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -64,15 +61,6 @@ int main() {
         int T, X, Y;
         cin >> T >> Y >> X;
         X--; Y--;
-
-        /*if (368 == tc) {
-            clog << "\n";
-            clog << T << " " << Y << " " << X << "\n";
-            for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                clog << v[i][j];
-            }clog<<"\n";}
-        }*/
         
         if (T == 3) {
             setvals(X, Y, 0, v[Y][X] == 3, 0);
@@ -95,9 +83,4 @@ int main() {
         setvals(X, Y, T + 1, T == 2, 1);
         cout << "IGEN\n";
     }
-
-    // for (int i = 0; i < 8; i++) {
-    // for (int j = 0; j < 8; j++) {
-    //     cout << v[i][j];
-    // }cout<<"\n";}
 }
