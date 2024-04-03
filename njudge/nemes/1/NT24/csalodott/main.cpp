@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-ifstream fin("minta(1)")
+ifstream fin("minta(1)/be2.txt");
+#define cin fin
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
