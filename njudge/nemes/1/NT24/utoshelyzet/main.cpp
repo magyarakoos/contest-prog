@@ -66,8 +66,9 @@ int main() {
         X--; Y--;
 
         for (int i = 0; i < 8; i++) {
-        for (int) @
-        }}
+        for (int j = 0; j < 8; j++) {
+            cout << v[i][j];
+        }cout<<"\n";}
         
         if (T == 3) {
             setvals(X, Y, 0, v[Y][X] == 2);
@@ -83,4 +84,9 @@ int main() {
         setvals(X, Y, T, T == 2);
         cout << "IGEN\n";
     }
+
+    for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+        cout << v[i][j];
+    }cout<<"\n";}
 }
