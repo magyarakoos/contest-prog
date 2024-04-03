@@ -6,5 +6,8 @@ int main() {
 
     int N, K;
     cin >> N >> K;
-    
+    vector<int> v(N);
+    for (int& x : v) cin >> x;
+
+    priority_queue<
 }
