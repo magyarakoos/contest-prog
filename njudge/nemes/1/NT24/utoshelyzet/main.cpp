@@ -55,17 +55,12 @@ int main() {
             continue;
         }
 
-        if (v[Y][X] || ) {
+        if (v[Y][X] || (T == 2 && !valid(X, Y))) {
             cout << "NEM\n";
             continue;
         }
 
-        if (T == 1) {
-            setvals(X, Y, 1, 0);
-        } else {
-
-        }
-
+        setvals(X, Y, T, T == 2);
         cout << "IGEN\n";
     }
 }
