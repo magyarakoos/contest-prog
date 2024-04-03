@@ -33,6 +33,9 @@ int main() {
                 for (int i = Y - 1, j = X - 1; i >= 0 && j >= 0; i--, j--) {
                     v[i][j] = 0;
                 }
+                for (int i = Y - 1, j = X + 1; i >= 0 && j < 8; i--, j++) {
+                    v[i][j] = 0;
+                }
             }
 
             v[Y][X] = 0;
