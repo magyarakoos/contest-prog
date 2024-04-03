@@ -3,21 +3,21 @@ using namespace std;
 
 vector<vector<int>> v(8, vector<int>(8));
 
-void setvals(int X, int Y, int type) {
+void setvals(int X, int Y, int type, bool diag) {
     for (int i = Y + 1; i < 8; i++) {
-        v[i][X] = 0;
+        v[i][X] = type;
     }
     for (int i = Y - 1; i >= 0; i--) {
-        v[i][X] = 0;
+        v[i][X] = type;
     }
     for (int j = X + 1; j < 8; j++) {
-        v[Y][j] = 0;
+        v[Y][j] = type;
     }
     for (int j = X - 1; j >= 0; j--) {
-        v[Y][j] = 0;
+        v[Y][j] = type;
     }
 
-    if (v[Y][X] == 2 || type == 2) {
+    if (diag) {
         for (int i = Y + 1, j = X + 1; i < 8 && j < 8; i++, j++) {
             v[i][j] = type;
         }
@@ -28,7 +28,7 @@ void setvals(int X, int Y, int type) {
             v[i][j] = type;
         }
         for (int i = Y + 1, j = X - 1; i < 8 && j >= 0; i++, j--) {
-            v[i][j] =type0;
+            v[i][j] = type;
         }
     }
 
@@ -46,7 +46,7 @@ int main() {
         X--; Y--;
         
         if (T == 3) {
-            
+            setvals(X, Y, 0, )
             cout << "-\n";
             continue;
         }
