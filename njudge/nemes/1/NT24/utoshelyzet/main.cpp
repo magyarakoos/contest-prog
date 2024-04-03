@@ -66,6 +66,7 @@ int main() {
         X--; Y--;
 
         if (i == 368) {
+            cerr << T << " " << Y << " " << X << "\n";
             for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 cerr << v[i][j];
