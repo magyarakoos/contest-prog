@@ -18,6 +18,8 @@ int main() {
         ll x = pq.top();
         pq.pop();
         result += x;
+        add += x;
+        if ()
     }
 
     cout << result;
