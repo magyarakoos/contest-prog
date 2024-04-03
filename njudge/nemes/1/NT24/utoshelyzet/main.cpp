@@ -79,7 +79,7 @@ int main() {
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
                     if (v[i][j] > 1) {
-                        setvals()
+                        setvals(j, i, v[i][j],)
                     }
                 }
             }
