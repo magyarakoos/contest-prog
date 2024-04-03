@@ -10,7 +10,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    vector<vector<bool>> v(8, vector<bool>(8));
+    vector<vector<int>> v(8, vector<int>(8));
     int N;
     cin >> N;
     while (N--) {
@@ -19,6 +19,7 @@ int main() {
         X--; Y--;
         
         if (T == 3) {
+            
             cout << "-\n";
             continue;
         }
@@ -27,7 +28,7 @@ int main() {
             cout << "NEM\n";
             continue;
         }
-        
+
         if (T == 1) {
             
         }
