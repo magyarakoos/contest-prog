@@ -51,6 +51,9 @@ bool valid(int X, int Y) {
     return 1;
 }
 
+ofstream fout("out.2");
+#define cout fout
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
