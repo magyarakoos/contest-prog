@@ -9,25 +9,11 @@ int main() {
     cin >> N >> K;
     vector<ll> v(N);
     for (ll& x : v) cin >> x;
-
-    priority_queue<ll, vector<ll>, greater<ll>> pq(v.begin(), v.end());
+    sort(v.begin(), v.end());
 
     ll result = 0;
 
-    while (!pq.empty()) {
-        ll x = pq.top();
-        pq.pop();
-        result += x;
-        cout << result << " " << x << "\n";
-        vector<ll> incr;
-        for (int i = 0; !pq.empty() && i < K; i++) {
-            incr.push_back(pq.top() + x);
-            pq.pop();
-        }
-        for (ll y : incr) {
-            pq.push(y);
-        }
-    }
+    
 
     cout << result;
 }
