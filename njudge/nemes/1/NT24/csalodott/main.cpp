@@ -17,10 +17,11 @@ int main() {
 
     int l = 0, r = 1, result = -1;
     while (r < N) {
-        if (v[mxi] < v[r]) {
+        if (v[l] < v[r]) {
             result = max(result, r - l + 1);
-            l = 
+            l = r;
         }
+        r++;
     }
 
     cout << result;
