@@ -78,7 +78,9 @@ int main() {
             setvals(X, Y, 0, v[Y][X] == 3, 0);
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
-                    if (v[i][j])
+                    if (v[i][j] > 1) {
+                        setvals()
+                    }
                 }
             }
             cout << "-\n";
