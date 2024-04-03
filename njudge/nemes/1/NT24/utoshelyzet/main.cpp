@@ -35,7 +35,8 @@ void setvals(int X, int Y, int type, bool diag) {
     v[Y][X] = type;
 }
 
-bool valid(int X, int Y) {
+bool valid(int X, int Y, int T) {
+    if (T == 1) return 1;
     for (int i = Y + 1, j = X + 1; i < 8 && j < 8; i++, j++) {
         if (v[i][j]) return 0;
     }
@@ -70,7 +71,7 @@ int main() {
             continue;
         }
 
-        if (v[Y][X] || !valid()) {
+        if (v[Y][X] || !valid(X, Y, T)) {
             cout << "NEM\n";
             continue;
         }
