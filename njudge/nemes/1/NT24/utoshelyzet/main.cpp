@@ -60,12 +60,13 @@ int main() {
 
     int N;
     cin >> N;
-    for (int i = 1; i <= N; i++) {
+    for (int tc = 1; tc <= N; tc++) {
         int T, X, Y;
         cin >> T >> Y >> X;
         X--; Y--;
 
-        if (i == 368) {
+        if (368 == tc) {
+            cerr << "\n";
             cerr << T << " " << Y << " " << X << "\n";
             for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
