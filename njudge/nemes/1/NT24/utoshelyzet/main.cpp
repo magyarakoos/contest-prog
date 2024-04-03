@@ -47,7 +47,7 @@ bool valid(int X, int Y, int T) {
         if (v[i][j] > 1) return 0;
     }
     for (int i = Y + 1, j = X - 1; i < 8 && j >= 0; i++, j--) {
-        if (v[i][j] == 2) return 0;
+        if (v[i][j] > 1) return 0;
     }
     return 1;
 }
