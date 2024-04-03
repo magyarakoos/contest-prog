@@ -18,7 +18,7 @@ int main() {
     int l = 0, r = 1, result = -1;
     while (r < N) {
         if (v[l] < v[r]) {
-            result = max(result, r - l + 1);
+            result = max(result, r - l);
             l = r;
         }
         r++;
