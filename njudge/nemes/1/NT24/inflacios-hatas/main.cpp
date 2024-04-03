@@ -18,8 +18,6 @@ int main() {
         ll x = pq.top();
         pq.pop();
         result += x;
-        cerr << result << " " << x << "\n";
-        sleep(1);
         vector<ll> incr;
         for (int i = 0; !pq.empty() && i < K; i++) {
             incr.push_back(pq.top() + x);
