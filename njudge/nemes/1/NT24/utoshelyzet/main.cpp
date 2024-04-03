@@ -38,16 +38,16 @@ void setvals(int X, int Y, int type, bool diag) {
 bool valid(int X, int Y, int T) {
     if (T == 1) return 1;
     for (int i = Y + 1, j = X + 1; i < 8 && j < 8; i++, j++) {
-        if (v[i][j]) return 0;
+        if (v[i][j] > 1) return 0;
     }
     for (int i = Y - 1, j = X - 1; i >= 0 && j >= 0; i--, j--) {
-        if (v[i][j]) return 0;
+        if (v[i][j] > 1) return 0;
     }
     for (int i = Y - 1, j = X + 1; i >= 0 && j < 8; i--, j++) {
-        if (v[i][j]) return 0;
+        if (v[i][j] > 1) return 0;
     }
     for (int i = Y + 1, j = X - 1; i < 8 && j >= 0; i++, j--) {
-        if (v[i][j]) return 0;
+        if (v[i][j] == 2) return 0;
     }
     return 1;
 }
