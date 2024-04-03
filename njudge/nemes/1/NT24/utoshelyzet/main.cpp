@@ -76,6 +76,7 @@ int main() {
         
         if (T == 3) {
             setvals(X, Y, 0, v[Y][X] == 3, 0);
+            
             cout << "-\n";
             continue;
         }
