@@ -76,7 +76,11 @@ int main() {
         
         if (T == 3) {
             setvals(X, Y, 0, v[Y][X] == 3, 0);
-            
+            for (int i = 0; i < 8; i++) {
+                for (int j = 0; j < 8; j++) {
+                    if (v[i][j])
+                }
+            }
             cout << "-\n";
             continue;
         }
