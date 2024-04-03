@@ -27,7 +27,7 @@ int main() {
             }
 
             if (v[Y][X] == 2) {
-                
+                for (int i = Y + 1, j = X + 1; i < 8 && )
             }
 
             v[Y][X] = 0;
