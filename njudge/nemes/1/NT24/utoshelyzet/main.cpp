@@ -66,13 +66,11 @@ int main() {
         X--; Y--;
 
         if (i == 368) {
-            
+            for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                cerr << v[i][j];
+            }cerr<<"\n";}
         }
-
-        // for (int i = 0; i < 8; i++) {
-        // for (int j = 0; j < 8; j++) {
-        //     cout << v[i][j];
-        // }cout<<"\n";}
         
         if (T == 3) {
             setvals(X, Y, 0, v[Y][X] == 3, 0);
