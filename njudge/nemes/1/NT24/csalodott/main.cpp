@@ -15,8 +15,8 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    int l = 0, r = 0;
-    int cur_max
+    int l = 0, r = 1;
+    int cur_max = v[0];
     while (r < N) {
 
     }
