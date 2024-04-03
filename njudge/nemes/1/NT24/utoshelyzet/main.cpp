@@ -3,32 +3,32 @@ using namespace std;
 
 vector<vector<int>> v(8, vector<int>(8));
 
-void setvals(int X, int Y, int type, bool diag) {
+void setvals(int X, int Y, int type, bool diag, int val) {
     for (int i = Y + 1; i < 8; i++) {
-        v[i][X] = 1;
+        v[i][X] = val;
     }
     for (int i = Y - 1; i >= 0; i--) {
-        v[i][X] = 1;
+        v[i][X] = val;
     }
     for (int j = X + 1; j < 8; j++) {
-        v[Y][j] = 1;
+        v[Y][j] = val;
     }
     for (int j = X - 1; j >= 0; j--) {
-        v[Y][j] = 1;
+        v[Y][j] = val;
     }
 
     if (diag) {
         for (int i = Y + 1, j = X + 1; i < 8 && j < 8; i++, j++) {
-            v[i][j] = 1;
+            v[i][j] = val;
         }
         for (int i = Y - 1, j = X - 1; i >= 0 && j >= 0; i--, j--) {
-            v[i][j] = 1;
+            v[i][j] = val;
         }
         for (int i = Y - 1, j = X + 1; i >= 0 && j < 8; i--, j++) {
-            v[i][j] = 1;
+            v[i][j] = val;
         }
         for (int i = Y + 1, j = X - 1; i < 8 && j >= 0; i++, j--) {
-            v[i][j] = 1;
+            v[i][j] = val;
         }
     }
 
