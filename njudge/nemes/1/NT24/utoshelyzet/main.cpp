@@ -46,7 +46,7 @@ int main() {
         X--; Y--;
         
         if (T == 3) {
-            setvals(X, Y, 0, )
+            setvals(X, Y, 0, v[Y][X] == 2);
             cout << "-\n";
             continue;
         }
@@ -61,5 +61,7 @@ int main() {
         } else {
 
         }
+
+        cout << "IGEN\n";
     }
 }
