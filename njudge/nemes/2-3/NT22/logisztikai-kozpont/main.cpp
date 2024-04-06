@@ -40,15 +40,14 @@ vector<ll> distS;
 vector<int> parS;
 
 void dfs(int u, int par) {
-    cerr << u << "\n";
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         if (u == 3) continue;
         dfs(v, u);
-        // if (distS[v] < distS[u] + w) {
-        //     distS[v] = distS[u] + w;
-        //     parS[v] = u;
-        // }
+        if (distS[v] < distS[u] + w) {
+            distS[v] = distS[u] + w;
+            parS[v] = u;
+        }
     }
 }
 
@@ -58,6 +57,7 @@ int main() {
 
     g.resize(N + 1);
     distS.resize(N + 1);
+    parS.resize(N + 1);
     for (int i = 1; i < N; i++) {
         int U, V, W;
         cin >> U >> V >> W;
@@ -65,24 +65,14 @@ int main() {
         g[V].push_back({U, W});
     }
 
-    for (int i = 1; i <= N; i++) {
-        cout << i << " | ";
-        for (auto [v, w] : g[i]) {
-            cout << v << " ";
-        }
-        cout << "\n";
-    }
-
     dfs(1, 0);
     int start = max_index(distS);
-    exit(0);
 
     distS.assign(N + 1, 0);
     parS .assign(N + 1, 0);
 
     dfs(start, 0);
     int end = max_index(distS);
-
 
     cout << start << " " << end << "\n";
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
