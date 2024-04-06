@@ -12,7 +12,10 @@ vector<int> v;
 
 vector<int> after() {
     vector<int> aft = v;
-    
+    int i = M - 1;
+    for (;;i--) {
+        
+    }
 }
 
 int main() {
