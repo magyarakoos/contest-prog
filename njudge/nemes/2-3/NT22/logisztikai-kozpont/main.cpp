@@ -43,10 +43,7 @@ void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         dfs(v, u);
-        if (distS[v] < distS[u] + w) {
-            distS[v] = distS[u] + w;
-            parS[v] = u;
-        }
+        distS[v] = max(distS[v], distS[u] + w);
     }
 }
 
