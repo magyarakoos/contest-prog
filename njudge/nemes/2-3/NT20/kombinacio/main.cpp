@@ -10,31 +10,20 @@ using ll = long long;
 int N, M;
 
 vector<int> after(vector<int> v) {
-
-    if (v.empty()) return {};
-
     for (int i = M - 1 ; i >= 0; i--) {
         if (v[i] < N - (M - i - 1)) {
             v[i]++;
             for (int j = i + 1; j < M; j++) {
                 v[j] = v[i] + j - i;
             }
-
-            for (int x : v) cout << x << " ";
-            cout << endl;
-            sleep(1);
-            return after(v);
+            return v;
         }
     }
     // körbeértünk, lex-minimális lesz a megoldás
     for (int i = 0; i < M; i++) {
         v[i] = i + 1;
     }
-    
-    for (int x : v) cout << x << " ";
-    cout << endl;
-    sleep(1);
-    return after(v);
+    return v;
 }
 
 int main() {
@@ -43,6 +32,7 @@ int main() {
     cin >> N >> M;
     vector<int> v(M);
     for (int& x : v) cin >> x;
+    
     
     for (int x : after(v)) cout << x << " ";
     cout << "\n";
