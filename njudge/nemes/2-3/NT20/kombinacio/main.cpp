@@ -11,12 +11,12 @@ int N, M;
 
 vector<int> after(vector<int> v) {
     for (int i = M - 1 ; i >= 0; i--) {
-        cout << i << " " << v[i] << " " << N - (M - i - 1) << "\n";
         if (v[i] < N - (M - i - 1)) {
+            v[i]++;
             for (int j = i + 1; j < M; j++) {
                 v[j] = v[i] + j - i;
             }
-            break;
+            return v;
         }
     }
     // körbeértünk, lex-minimális lesz a megoldás
