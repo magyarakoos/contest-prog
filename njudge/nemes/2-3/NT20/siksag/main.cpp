@@ -34,15 +34,16 @@ int main() {
 
             if (bigger) {
                 l = max_height_pos + 1;
+                max_height_pos = 
             } else {
 
             }
         } else {
-            if (min_height > v[r]) {
+            if (min_height >= v[r]) {
                 min_height = v[r];
                 min_height_pos = r;
             }
-            if (max_height < v[r]) {
+            if (max_height <= v[r]) {
                 max_height = v[r];
                 max_height_pos = r;
             }
