@@ -39,12 +39,8 @@ vector<int> before(vector<int> v) {
         v[0]--;
     } else {
         for (int i = 0; i < N; i++) {
-            v[i] =
+            v[i] += N - M;
         }
-    }
-    // körbeértünk, lex-minimális lesz a megoldás
-    for (int i = 0; i < M; i++) {
-        v[i] = i + 1;
     }
     return v;
 }
@@ -60,5 +56,4 @@ int main() {
     cout << "\n";
     for (int x : after(v)) cout << x << " ";
     cout << "\n";
-    
 }
