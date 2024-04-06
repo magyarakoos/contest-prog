@@ -10,9 +10,11 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int P;
-    cin >> P;
-    int A;
-    cin >> A;
-    set<
+    set<pair<int, bool>> s;
+    int P, A;
+    cin >> P >> A;
+
+    while (A--) {
+        
+    }
 }
