@@ -31,7 +31,9 @@ int main() {
     }
 
     bool A_free = 0, E_free = 0;
-    for (const auto& v : m) {
-        for (auto [c,])
+    for (const auto& [T, v] : m) {
+        for (auto [c, b] : v) {
+
+        }
     }
 }
