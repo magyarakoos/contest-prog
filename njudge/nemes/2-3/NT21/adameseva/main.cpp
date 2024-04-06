@@ -30,6 +30,8 @@ int main() {
         m[EV].push_back({'E', 0});
     }
 
+    vector<array<int, 2>> result;
+
     bool A_free = 0, E_free = 0;
     for (const auto& [t, v] : m) {
         for (auto [c, b] : v) {
@@ -40,6 +42,8 @@ int main() {
             }
         }
 
-        
+        if (A_free && E_free) {
+
+        }
     }
 }
