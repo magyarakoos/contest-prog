@@ -26,7 +26,6 @@ int main() {
         }
 
         if (sum >= P) {
-            cout << l << ' ' << r << '\n';
             result = min(result, r - l + 1);
         }
 
