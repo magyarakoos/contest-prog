@@ -58,7 +58,8 @@ int main() {
             }
         }
 
-        cerr << l << " " << r << "\n";
+        cerr << l << " " << r << " ";
+        cerr << min_height << " " << max_height << "\n";
         r++;
     }
 
