@@ -18,6 +18,7 @@ int main() {
     while (M--) {
         int U, V, W;
         cin >> U >> V;
-        g[U]
+        g[U].push_back({V, W});
+        g[V].push_back({U, W});
     }
 }
