@@ -12,4 +12,7 @@ int main() {
 
     int P;
     cin >> P;
+    int A;
+    cin >> A;
+    set<
 }
