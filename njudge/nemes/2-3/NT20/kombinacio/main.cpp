@@ -27,13 +27,10 @@ vector<int> after(vector<int> v) {
 }
 
 vector<int> before(vector<int> v) {
-    for (int i = M - 1 ; i >= 0; i--) {
-        if (v[i] < N - (M - i - 1)) {
-            v[i]++;
-            for (int j = i + 1; j < M; j++) {
-                v[j] = v[i] + j - i;
-            }
-            return v;
+    for (int i = M - 1 ; i > 0; i--) {
+        if (v[i - 1] + 1 < v[i]) {
+            v[i]--;
+            for (int j = i + 1; j < )
         }
     }
     // körbeértünk, lex-minimális lesz a megoldás
