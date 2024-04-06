@@ -13,5 +13,11 @@ int main() {
     int N, M, K, H;
     cin >> N >> M >> K >> H;
 
-    vector<vector<array<int, 2>>>
+    vector<vector<array<int, 2>>> g(N + 1);
+
+    while (M--) {
+        int U, V, W;
+        cin >> U >> V;
+        g[U]
+    }
 }
