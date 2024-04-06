@@ -10,7 +10,7 @@ using ll = long long;
 int N, M;
 
 vector<int> after(vector<int> v) {
-    for (int i = M - 1 ;; i--) {
+    for (int i = M - 1 ; i >= 0; i--) {
         if (v[i] < N - (M - i - 1)) {
             for (int j = i + 1; j < M; j++) {
                 v[j] = v[i] + j - i;
