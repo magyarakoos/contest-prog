@@ -35,6 +35,8 @@ int main() {
 
         if (h > H) continue;
 
-        for ()
+        for (auto [v, w] : g[u]) {
+            speedS
+        }
     }
 }
