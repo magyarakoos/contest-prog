@@ -43,8 +43,8 @@ void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         dfs(v, u);
-        cout << u << " " << v << " ";
-        cout << distS[v] << " " << distS[u] + w << "\n";
+        cerr << u << " " << v << " ";
+        cerr << distS[v] << " " << distS[u] + w << "\n";
         distS[v] = max(distS[v], distS[u] + w);
     }
 }
@@ -68,6 +68,8 @@ int main() {
 
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
     cout << "\n";
+
+    exit(0);
 
     distS.assign(N + 1, 0);
     parS .assign(N + 1, 0);
