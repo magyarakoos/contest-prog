@@ -19,7 +19,7 @@ int main() {
         result_i = 0, result_len = 1, l = 0, r = 1;
     
     while (r < N) {
-        cout << l << " " << r << "\n";
+        cerr << l << " " << r << "\n";
 
         if (abs(v[r] - v[r - 1]) > 1) {
             l = r;
@@ -61,5 +61,6 @@ int main() {
         r++;
     }
 
+    cerr << "\n";
     cout << result_len << " " << result_i + 1;
 }
