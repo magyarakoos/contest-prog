@@ -19,7 +19,7 @@ int main() {
 
     int result = INT_MAX, sum = v[0];
 
-    for (int l = 0, r = 1; r <= N; r++) {
+    for (int l = 0, r = 0; r < N; r++) {
         while (sum < P && l < r - 1) {
             sum -= v[l];
             l++;
