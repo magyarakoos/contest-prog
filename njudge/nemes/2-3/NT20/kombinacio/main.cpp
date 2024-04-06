@@ -8,13 +8,11 @@ using namespace std;
 using ll = long long;
 
 int N, M;
-vector<int> v;
 
-vector<int> after() {
-    vector<int> aft = v;
+vector<int> after(vector<int> v) {
     int i = M - 1;
     for (;;i--) {
-        if ()
+        if (v[])
     }
 }
 
@@ -22,7 +20,7 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     cin >> N >> M;
-    v.resize(M);
+    vector<int> v(M);
     for (int& x : v) cin >> x;
     
 }
