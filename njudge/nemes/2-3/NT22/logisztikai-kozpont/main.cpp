@@ -50,7 +50,7 @@ void proc(int start, int end) {
         if (curr < result_t) {
             result_t = curr;
             result_nodeS.clear();
-            result_nodeS.insert();
+            result_nodeS.insert(path[i].first);
         }
     }
 }
