@@ -40,6 +40,8 @@ void proc(int start, int end) {
         path.push_back({curr, par_distS[curr]});
         curr = parS[curr];
     } while (curr);
+
+    for (auto [u, w] : path) cout << u << " "
 }
 
 void get_ends(int start) {
