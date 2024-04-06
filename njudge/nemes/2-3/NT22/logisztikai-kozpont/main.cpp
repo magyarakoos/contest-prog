@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
-using namespace std;
 
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 #define size(v) (int)v.size()
 #define has(s, e) s.count(e)
+
+using namespace std;
+using ll = long long;
 
 int N;
 vector<vector<array<ll, 2>>> g;
@@ -49,7 +51,7 @@ int main() {
     }
 
     dfs(1, 0);
-    int start = max_index(distS);
+    int start = max_element(all(distS)) - distS.begin();
 
     for (int u = 1; u <= N; u++) {
         if (distS[u] == distS[start]) {
