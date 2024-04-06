@@ -41,6 +41,9 @@ vector<int> parS;
 
 void dfs(int u, int par) {
     cerr << u << "\n";
+    if (u == 3) {
+        cout << size(g[u]) << "\n";
+    }
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         dfs(v, u);
