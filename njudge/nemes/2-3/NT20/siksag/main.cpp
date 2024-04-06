@@ -42,7 +42,7 @@ int main() {
             }
             if (max_height < v[r]) {
                 max_height = v[r];
-                max_ehi
+                max_height_pos = r;
             }
         }
     }
