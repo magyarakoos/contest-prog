@@ -53,6 +53,9 @@ int main() {
     dfs(1, 0);
     int start = max_element(all(distS)) - distS.begin();
 
+    for (int i = 1; i <= N; i++) cout << distS[i] << " ";
+    cout << "\n";
+
     for (int u = 1; u <= N; u++) {
         if (distS[u] == distS[start]) {
             proc(u);
