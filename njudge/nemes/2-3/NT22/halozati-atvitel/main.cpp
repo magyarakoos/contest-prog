@@ -7,8 +7,6 @@
 using namespace std;
 using ll = long long;
 
-constexpr int INF = 100'001;
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -19,7 +17,7 @@ int main() {
 
     while (M--) {
         int U, V, W;
-        cin >> U >> V;
+        cin >> U >> V >> W;
         g[U].push_back({V, W});
         g[V].push_back({U, W});
     }
@@ -42,6 +40,7 @@ int main() {
     }
 
     for (int i = 1; i <= N; i++) {
-        if (i == K) cout << 0;
+        if (i == K) cout << 0 << "\n";
+        else cout << speedS[i] << "\n";
     }
 }
