@@ -24,7 +24,7 @@ void dfs(int u, int par) {
     }
 }
 
-void proc(int start) {
+void get_ends(int start) {
     distS.assign(N + 1, 0);
     parS .assign(N + 1, 0);
 
@@ -33,13 +33,13 @@ void proc(int start) {
 
     for (int u = 1; u <= N; u++) {
         if (distS[u] = distS[end]) {
-            
+            proc(start, u);
         }
     }
+}
 
-    cout << start << " " << end << "\n";
-    for (int i = 1; i <= N; i++) cout << distS[i] << " ";
-    cout << "\n";
+void proc(int start, int end) {
+
 }
 
 int main() {
@@ -64,7 +64,7 @@ int main() {
 
     for (int u = 1; u <= N; u++) {
         if (distS[u] == distS[start]) {
-            proc(u);
+            get_ends(u);
         }
     }
 }
