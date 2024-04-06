@@ -20,8 +20,10 @@ int main() {
     
     while (r < N) {
         if (abs(v[r] - v[r - 1]) > 1) {
+            if ()
             l = r;
-            
+            min_height = max_height = v[r];
+
             r++;
 
         }
