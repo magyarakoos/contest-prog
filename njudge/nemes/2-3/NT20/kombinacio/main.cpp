@@ -30,7 +30,9 @@ vector<int> before(vector<int> v) {
     for (int i = M - 1 ; i > 0; i--) {
         if (v[i - 1] + 1 < v[i]) {
             v[i]--;
-            for (int j = i + 1; j < )
+            for (int j = i + 1; j < M; j++) {
+                v[j] = N - (M - j - 1);
+            }
         }
     }
     // körbeértünk, lex-minimális lesz a megoldás
