@@ -45,8 +45,9 @@ void proc(int end) {
     for (auto [u, w] : path) sum += w;
 
     for (auto [u, w] : path) {
-        cout << u << "," 
+        cout << u << "," << w << " ";
     }
+    cout << "\n";
 
     ll running_sum = 0;
     for (int i = 0; i < N; i++) {
