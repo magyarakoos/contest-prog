@@ -7,16 +7,19 @@
 using namespace std;
 using ll = long long;
 
-vector<int> after()
+int N, M;
+vector<int> v;
+
+vector<int> after() {
+    vector<int> aft = v;
+    
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int N, M;
     cin >> N >> M;
-    vector<int> v(M);
+    v.resize(M);
     for (int& x : v) cin >> x;
-    vector<int> bef = v, aft = v;
-
     
 }
