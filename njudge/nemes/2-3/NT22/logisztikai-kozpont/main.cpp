@@ -42,6 +42,9 @@ void proc(int start, int end) {
     } while (curr);
 
     ll sum = 0;
+    for (auto [u, w] : path) sum += w;
+
+    ll running_sum = 0;
     for ()
 }
 
