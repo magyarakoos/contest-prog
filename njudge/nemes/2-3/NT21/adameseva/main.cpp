@@ -52,4 +52,7 @@ int main() {
             }
         }
     }
+
+    cout << size(result) << "\n";
+    for (int i = 0; i < size(resul))
 }
