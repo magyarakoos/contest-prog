@@ -14,6 +14,7 @@ vector<ll> distS;
 vector<int> parS;
 
 ll result_t = 1e18;
+vector<int> result_nodeS;
 
 void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
@@ -31,7 +32,7 @@ void proc(int start, int end) {
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
     cout << "\n";
 
-
+    
 }
 
 void get_ends(int start) {
