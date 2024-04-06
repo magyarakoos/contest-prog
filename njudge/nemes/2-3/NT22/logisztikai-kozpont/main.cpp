@@ -73,5 +73,6 @@ int main() {
     int end = max_index(distS);
 
     cout << start << " " << end << "\n";
-    for (int )
+    for (int i = 1; i <= N; i++) cout << distS[i] << " ";
+    cout << "\n";
 }
