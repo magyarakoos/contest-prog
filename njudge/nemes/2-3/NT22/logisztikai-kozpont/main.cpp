@@ -48,6 +48,8 @@ void proc(int end) {
     for (int i = 0; i < size(path); i++) {
         ll curr = max(running_sum, sum - running_sum);
 
+        cout << curr << " ";
+
         if (curr < result_t) {
             result_t = curr;
             result_nodeS.clear();
@@ -57,6 +59,7 @@ void proc(int end) {
             result_nodeS.insert(path[i].first);
         }
     }
+    cout << "\n";
 }
 
 void get_ends(int start) {
