@@ -41,7 +41,8 @@ void proc(int start, int end) {
         curr = parS[curr];
     } while (curr);
 
-    for (auto [u, w] : path) cout << u << " "
+    for (auto [u, w] : path) cout << u << "," << w << " ";
+    cout << "\n";
 }
 
 void get_ends(int start) {
