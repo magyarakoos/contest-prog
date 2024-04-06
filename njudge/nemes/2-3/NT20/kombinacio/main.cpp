@@ -43,6 +43,9 @@ vector<int> before(vector<int> v) {
     }
     if (v[0] > 1) {
         v[0]--;
+        for (int j = 1; j < M; j++) {
+            v[j] = N - (M - j - 1);
+        }
     } else {
         for (int i = 0; i < N; i++) {
             v[i] += N - M;
