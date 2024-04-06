@@ -19,6 +19,11 @@ int main() {
         result_i = 0, result_len = 1, l = 0, r = 1;
     
     while (r < N) {
-        
+        if (abs(v[r] - v[r - 1]) > 1) {
+            l = r;
+            
+            r++;
+
+        }
     }
 }
