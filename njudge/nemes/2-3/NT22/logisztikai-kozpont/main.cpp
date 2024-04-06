@@ -36,7 +36,7 @@ void proc(int start, int end) {
     int curr = end;
 
     do {
-        
+
     }
 }
 
@@ -57,6 +57,10 @@ void get_ends(int start) {
 int main() {
     cin.tie(0); ios::sync_with_stdio(0);
     cin >> N;
+
+    if (N == 1) {
+        cout << "0\n1\n1";
+    }
 
     g.resize(N + 1);
     distS.resize(N + 1);
