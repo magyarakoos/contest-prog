@@ -62,5 +62,5 @@ int main() {
     dfs(1, 0);
     int mxi = max_index(distS);
 
-    
+    distS.assign(N + 1, 0);
 }
