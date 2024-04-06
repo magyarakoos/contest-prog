@@ -43,7 +43,9 @@ int main() {
         }
 
         if (A_free && E_free) {
-            if()
+            if (result.empty() || result.back()[1] != -1) {
+                result.push_back({t, -1});
+            }
         } else {
             if (result.back()[1] == -1) {
                 result.back()[1] = t;
