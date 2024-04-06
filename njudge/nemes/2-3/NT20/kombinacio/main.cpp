@@ -41,7 +41,6 @@ vector<int> before(vector<int> v) {
             v[i] += N - M;
         }
     }
-
     return v;
 }
 
