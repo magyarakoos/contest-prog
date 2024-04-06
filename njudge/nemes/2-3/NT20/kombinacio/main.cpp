@@ -1,3 +1,5 @@
+// O(M)
+
 #include <bits/stdc++.h>
 
 #define all(v) v.begin(), v.end()
@@ -35,10 +37,7 @@ vector<int> before(vector<int> v) {
                 v[j] = N - (M - j - 1);
             }
 
-            for (int x : v) cout << x << " ";
-            cout << endl;
-            sleep(1);
-            return before(v);
+            return v;
         }
     }
     if (v[0] > 1) {
@@ -52,10 +51,7 @@ vector<int> before(vector<int> v) {
         }
     }
 
-    for (int x : v) cout << x << " ";
-    cout << endl;
-    sleep(1);
-    return before(v);
+    return v;
 }
 
 int main() {
