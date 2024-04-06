@@ -17,9 +17,9 @@ int main() {
     vector<int> v(N);
     cinv(v);
 
-    int result = INT_MAX, sum = v[0];
+    int result = INT_MAX, sum = 0;
 
-    for (int l = 0, r = 0; r < N; r++) {
+    for (int l = 0, r = 0; l < N;) {
         while (sum < P && l < r - 1) {
             sum -= v[l];
             l++;
