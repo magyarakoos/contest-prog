@@ -37,14 +37,15 @@ void proc(int start, int end) {
     int curr = end;
 
     do {
-        path.push_back({parS[curr], par_distS[curr]});
+        path.push_back({curr, par_distS[curr]});
         curr = parS[curr];
     } while (curr);
 }
 
 void get_ends(int start) {
-    distS.assign(N + 1, 0);
-    parS .assign(N + 1, 0);
+    distS    .assign(N + 1, 0);
+    parS     .assign(N + 1, 0);
+    par_distS.assign(N + 1, 0);
 
     dfs(start, 0);
     int end = max_element(all(distS)) - distS.begin();
