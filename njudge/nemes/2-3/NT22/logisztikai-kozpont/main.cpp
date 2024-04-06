@@ -37,16 +37,11 @@ void proc(int start, int end) {
     int curr = end;
 
     do {
-        path.push_back({curr, par_distS[curr]});
-        curr = parS[curr];
-    } while (curr);
-
-    ll sum = 0;
-    for (auto [u, w] : path) sum += w;
-
+        path.push_back({curr, par_distS[curr]});accumulate()
     ll running_sum = 0;
     for (int i = 0; i < N; i++) {
         ll curr = max(running_sum, sum - running_sum);
+
     }
 }
 
