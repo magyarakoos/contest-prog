@@ -36,7 +36,14 @@ int main() {
              (v[r - 1] > v[r] && min_height > v[r]))) {
 
         } else {
-            
+            if (min_height > v[r]) {
+                min_height = v[r];
+                min_height_pos = r;
+            }
+            if (max_height < v[r]) {
+                max_height = v[r];
+                max_ehi
+            }
         }
     }
 }
