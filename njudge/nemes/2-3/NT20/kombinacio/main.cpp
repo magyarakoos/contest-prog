@@ -32,4 +32,7 @@ int main() {
     vector<int> v(M);
     for (int& x : v) cin >> x;
     
+    for (int x : after(v)) cout << x << " ";
+    cout << "\n";
+    
 }
