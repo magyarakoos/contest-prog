@@ -39,5 +39,7 @@ int main() {
                 E_free = b;
             }
         }
+
+        
     }
 }
