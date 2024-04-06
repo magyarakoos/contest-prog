@@ -29,10 +29,6 @@ void dfs(int u, int par) {
 }
 
 void proc(int end) {
-    // cout << start << " " << end << "\n";
-    // for (int i = 1; i <= N; i++) cout << distS[i] << " ";
-    // cout << "\n";
-
     vector<pair<int, ll>> path;
     int curr = end;
 
@@ -48,8 +44,6 @@ void proc(int end) {
     for (int i = 0; i < size(path); i++) {
         ll curr = max(running_sum, sum - running_sum);
 
-        cout << curr << " ";
-
         if (curr < result_t) {
             result_t = curr;
             result_nodeS.clear();
@@ -61,7 +55,6 @@ void proc(int end) {
 
         running_sum += path[i].second;
     }
-    cout << "\n";
 }
 
 void get_ends(int start) {
