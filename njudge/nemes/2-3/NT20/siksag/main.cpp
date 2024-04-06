@@ -28,7 +28,9 @@ int main() {
             min_height = max_height = v[r];
             min_height_pos = max_height_pos = r;
             r++;
-
+            continue;
         }
+
+        
     }
 }
