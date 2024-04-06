@@ -42,10 +42,9 @@ vector<int> parS;
 void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
-        dfs(v, u);
-        cerr << u << " " << v << " ";
-        cerr << distS[v] << " " << distS[u] + w << "\n";
+        if (distS[v] < )
         distS[v] = max(distS[v], distS[u] + w);
+        dfs(v, u);
     }
 }
 
