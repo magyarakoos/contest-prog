@@ -58,6 +58,8 @@ void proc(int end) {
         else if (curr == result_t) {
             result_nodeS.insert(path[i].first);
         }
+
+        running_sum += path[i].second;
     }
     cout << "\n";
 }
