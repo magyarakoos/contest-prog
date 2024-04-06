@@ -37,8 +37,9 @@ void proc(int start, int end) {
     int curr = end;
 
     do {
-        path.push_back({parS[]})
-    }
+        path.push_back({parS[curr], par_distS[curr]});
+        curr = parS[curr];
+    } while (curr);
 }
 
 void get_ends(int start) {
