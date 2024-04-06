@@ -26,6 +26,7 @@ int main() {
     queue<array<int, 2>> q;
 
     q.push({K, 0});
+    speedS[K] = 100'001;
 
     while (!q.empty()) {
         auto [u, h] = q.front();
