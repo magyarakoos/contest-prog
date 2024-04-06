@@ -9,7 +9,7 @@ using namespace std;
 using ll = long long;
 
 int N;
-vector<vector<array<ll, 2>>> g;
+vector<vector<pair<int, ll>>> g;
 vector<ll> distS;
 vector<int> parS;
 
@@ -29,7 +29,7 @@ void proc(int start, int end) {
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
     cout << "\n";
 
-    
+
 }
 
 void get_ends(int start) {
