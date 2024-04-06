@@ -25,7 +25,6 @@ int main() {
             min_height = max_height = v[r];
             min_height_pos = max_height_pos = r;
             r++;
-            cerr << l << " " << r << "\n";
             continue;
         }
 
@@ -61,9 +60,6 @@ int main() {
                 result_i = l;
             }
         }
-
-        cerr << l << " " << r << " ";
-        cerr << min_height << " " << max_height << "\n";
         r++;
     }
 
