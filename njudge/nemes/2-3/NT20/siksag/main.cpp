@@ -31,6 +31,6 @@ int main() {
             continue;
         }
 
-        if ((v[r - 1] < v[r] && ))
+        if (( && v[r - 1] < v[r] && ))
     }
 }
