@@ -1,3 +1,4 @@
+// O(N)
 #include <bits/stdc++.h>
 
 #define all(v) v.begin(), v.end()
@@ -63,6 +64,5 @@ int main() {
         r++;
     }
 
-    cerr << "\n";
     cout << result_len << " " << result_i + 1;
 }
