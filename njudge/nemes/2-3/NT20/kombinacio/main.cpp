@@ -12,7 +12,9 @@ int N, M;
 vector<int> after(vector<int> v) {
     int i = M - 1;
     for (;;i--) {
-        if (v[i] < N - (M - i - 1))
+        if (v[i] < N - (M - i - 1)) {
+            
+        }
     }
 }
 
