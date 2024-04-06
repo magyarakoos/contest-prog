@@ -41,7 +41,6 @@ vector<int> parS;
 
 void dfs(int u, int par) {
     cerr << u << "\n";
-    if (u == 3)
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         if (u == 3) continue;
@@ -64,6 +63,11 @@ int main() {
         cin >> U >> V >> W;
         g[U].push_back({V, W});
         g[V].push_back({U, W});
+    }
+
+    for (int i = 1; i <= N; i++) {
+        cout << i << " | ";
+        for (auto [v, w] : g[u])
     }
 
     dfs(1, 0);
