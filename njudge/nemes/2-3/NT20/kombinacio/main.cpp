@@ -35,8 +35,10 @@ vector<int> before(vector<int> v) {
                 v[j] = N - (M - j - 1);
             }
 
-            
-            return v;
+            for (int x : v) cout << x << " ";
+            cout << "\n";
+            sleep(1);
+            return before(v);
         }
     }
     if (v[0] > 1) {
@@ -46,7 +48,11 @@ vector<int> before(vector<int> v) {
             v[i] += N - M;
         }
     }
-    return v;
+    
+    for (int x : v) cout << x << " ";
+    cout << "\n";
+    sleep(1);
+    return before(v);
 }
 
 int main() {
