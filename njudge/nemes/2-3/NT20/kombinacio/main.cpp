@@ -11,6 +11,7 @@ int N, M;
 
 vector<int> after(vector<int> v) {
     for (int i = M - 1 ; i >= 0; i--) {
+        cout << i << " " << v[i] << " " << N - (M - i - 1) << "\n";
         if (v[i] < N - (M - i - 1)) {
             for (int j = i + 1; j < M; j++) {
                 v[j] = v[i] + j - i;
@@ -18,7 +19,6 @@ vector<int> after(vector<int> v) {
             break;
         }
     }
-    assert(1 == 0);
     // körbeértünk, lex-minimális lesz a megoldás
     for (int i = 0; i < M; i++) {
         v[i] = i + 1;
