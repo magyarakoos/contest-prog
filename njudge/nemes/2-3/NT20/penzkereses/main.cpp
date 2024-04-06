@@ -19,19 +19,17 @@ int main() {
 
     int result = INT_MAX, sum = 0;
 
-    for (int l = 0, r = 0; l < N;) {
+    for (int l = 0, r = 0; l < N; l++) {
         while (sum < P && r < N) {
             sum += v[r];
             r++;
         }
 
         if (sum >= P) {
-            result = min(result, r - l + 1);
+            result = min(result, r - l);
         }
 
-        if (r < N) {
-            sum += v[r];
-        }
+        sum -= v[l];
     }
 
     cout << result;
