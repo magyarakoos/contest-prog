@@ -43,8 +43,10 @@ void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         dfs(v, u);
-        if (distS[])
-        distS[v] = max(distS[v], distS[u] + w);
+        if (distS[v] < distS[u] + w) {
+            distS[v] = distS[u] + w;
+            parS[v] = u;
+        }
     }
 }
 
@@ -65,4 +67,5 @@ int main() {
     int mxi = max_index(distS);
 
     distS.assign(N + 1, 0);
+    parS .assign(N + 1, 0);
 }
