@@ -33,8 +33,10 @@ int main() {
 
         if (min_height != max_height && 
             ((v[r - 1] < v[r] && max_height < v[r]) || 
-             (v[r - 1] > v[r] && min_height <))) {
+             (v[r - 1] > v[r] && min_height > v[r]))) {
 
+        } else {
+            
         }
     }
 }
