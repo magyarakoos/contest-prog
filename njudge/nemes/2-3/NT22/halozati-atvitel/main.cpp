@@ -21,4 +21,6 @@ int main() {
         g[U].push_back({V, W});
         g[V].push_back({U, W});
     }
+
+    vector<int> speedS(N + 1);
 }
