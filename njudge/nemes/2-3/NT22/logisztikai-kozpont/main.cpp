@@ -50,6 +50,10 @@ void dfs(int u, int par) {
     }
 }
 
+void proc(int start) {
+
+}
+
 int main() {
     speed;
     cin >> N;
@@ -66,6 +70,10 @@ int main() {
 
     dfs(1, 0);
     int start = max_index(distS);
+
+    for (int i = 1; i <= N; i++) {
+        if ()
+    }
 
     distS.assign(N + 1, 0);
     parS .assign(N + 1, 0);
