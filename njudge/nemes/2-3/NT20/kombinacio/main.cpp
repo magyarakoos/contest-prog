@@ -38,7 +38,9 @@ vector<int> before(vector<int> v) {
     if (v[0] > 1) {
         v[0]--;
     } else {
-
+        for (int i = 0; i < N; i++) {
+            v[i] =
+        }
     }
     // körbeértünk, lex-minimális lesz a megoldás
     for (int i = 0; i < M; i++) {
