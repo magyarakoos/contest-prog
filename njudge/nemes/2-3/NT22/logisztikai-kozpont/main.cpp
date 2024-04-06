@@ -68,4 +68,6 @@ int main() {
 
     distS.assign(N + 1, 0);
     parS .assign(N + 1, 0);
+
+    dfs(mxi, 0);
 }
