@@ -22,7 +22,7 @@ void dfs(int u, int par) {
         if (distS[v] < distS[u] + w) {
             distS[v] = distS[u] + w;
             parS[v] = u;
-            par_distS[]
+            par_distS[v] = w;
         }
         dfs(v, u);
     }
