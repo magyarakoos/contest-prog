@@ -24,7 +24,7 @@ int main() {
         g[V].push_back({U, W});
     }
 
-    vector<int> speedS(N + 1);
+    vector<int> speedS(N + 1, -1);
     queue<array<int, 2>> q;
 
     q.push({K, 0});
@@ -36,7 +36,8 @@ int main() {
         if (h > H) continue;
 
         for (auto [v, w] : g[u]) {
-            speedS
+            speedS[v] = max(speedS[v], min(speedS[u], w));
+            
         }
     }
 }
