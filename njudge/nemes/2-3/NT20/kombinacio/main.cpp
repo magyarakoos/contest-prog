@@ -26,12 +26,16 @@ vector<int> after(vector<int> v) {
 }
 
 vector<int> before(vector<int> v) {
+    if (v.empty()) return {};
+
     for (int i = M - 1 ; i > 0; i--) {
         if (v[i - 1] + 1 < v[i]) {
             v[i]--;
             for (int j = i + 1; j < M; j++) {
                 v[j] = N - (M - j - 1);
             }
+
+            
             return v;
         }
     }
