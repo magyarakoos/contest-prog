@@ -19,6 +19,8 @@ int main() {
         result_i = 0, result_len = 1, l = 0, r = 1;
     
     while (r < N) {
+        cout << l << " " << r << "\n";
+
         if (abs(v[r] - v[r - 1]) > 1) {
             l = r;
             min_height = max_height = v[r];
@@ -38,7 +40,8 @@ int main() {
                 max_height = v[r];
             } else {
                 l = min_height_pos + 1;
-                min_height
+                min_height_pos = r;
+                min_height = v[r];
             }
         } else {
             if (min_height >= v[r]) {
