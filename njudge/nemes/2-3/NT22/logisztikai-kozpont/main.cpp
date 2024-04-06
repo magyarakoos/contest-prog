@@ -36,12 +36,14 @@ vector<T> prefix_sum(const vector<T>& v) {
 
 int N;
 vector<vector<array<ll, 2>>> g;
+vector<ll> distS;
 
 int main() {
     speed;
     cin >> N;
 
     g.resize(N + 1);
+    distS.resize(N + 1);
     for (int i = 1; i < N; i++) {
         int U, V, W;
         cin >> U >> V >> W;
