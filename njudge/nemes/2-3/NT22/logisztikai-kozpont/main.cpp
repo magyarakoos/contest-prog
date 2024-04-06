@@ -1,20 +1,10 @@
 #include <bits/stdc++.h>
-
-#pragma region Utility
-
-#define speed 
-#define cinv(v) for (auto& e : v) cin >> e;
+using namespace std;
 
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 #define size(v) (int)v.size()
 #define has(s, e) s.count(e)
-
-#define max_index(v) max_element(all(v)) - v.begin()
-#define min_index(v) min_element(all(v)) - v.begin()
-#define smax(x, y) x = max(x, y)
-#define smin(x, y) x = min(x, y)
-
 
 int N;
 vector<vector<array<ll, 2>>> g;
@@ -37,7 +27,7 @@ void proc(int start) {
     parS .assign(N + 1, 0);
 
     dfs(start, 0);
-    int end = max_index(distS);
+    int end = max_element(all(distS)) - distS.begin();
 
     cout << start << " " << end << "\n";
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
