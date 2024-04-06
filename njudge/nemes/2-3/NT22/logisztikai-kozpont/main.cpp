@@ -70,4 +70,8 @@ int main() {
     parS .assign(N + 1, 0);
 
     dfs(start, 0);
+    int end = max_index(distS);
+
+    cout << start << " " << end << "\n";
+    for (int )
 }
