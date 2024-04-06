@@ -40,12 +40,12 @@ int main() {
                 max_height = v[r];
                 max_height_pos = r;
             }
+            if (result_len < r - l + 1) {
+                result_len = r - l + 1;
+                result_i = l;
+            }
         }
 
-        if (result_len < r - l + 1) {
-            result_len = r - l + 1;
-            result_i = l;
-        }
         r++;
     }
 }
