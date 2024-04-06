@@ -10,6 +10,9 @@ using ll = long long;
 int N, M;
 
 vector<int> after(vector<int> v) {
+
+    if ()
+
     for (int i = M - 1 ; i >= 0; i--) {
         if (v[i] < N - (M - i - 1)) {
             v[i]++;
@@ -19,6 +22,7 @@ vector<int> after(vector<int> v) {
 
             for (int x : v) cout << x << " ";
             cout << "\n";
+            sleep(1);
             return after(v);
         }
     }
@@ -26,7 +30,11 @@ vector<int> after(vector<int> v) {
     for (int i = 0; i < M; i++) {
         v[i] = i + 1;
     }
-    return v;
+    
+    for (int x : v) cout << x << " ";
+    cout << "\n";
+    sleep(1);
+    return after(v);
 }
 
 int main() {
