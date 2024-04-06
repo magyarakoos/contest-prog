@@ -18,6 +18,7 @@ vector<int> after(vector<int> v) {
             break;
         }
     }
+    assert(1 == 0);
     // körbeértünk, lex-minimális lesz a megoldás
     for (int i = 0; i < M; i++) {
         v[i] = i + 1;
