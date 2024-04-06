@@ -37,7 +37,11 @@ int main() {
 
         for (auto [v, w] : g[u]) {
             speedS[v] = max(speedS[v], min(speedS[u], w));
-            
+            q.push({v, h + 1});
         }
+    }
+
+    for (int i = 1; i <= N; i++) {
+        
     }
 }
