@@ -40,6 +40,8 @@ int main() {
                 max_height_pos = r;
             } else {
                 l = max_height_pos + 1;
+                max_height = min_height;
+                max_height_pos = min_height_pos;
                 min_height = v[r];
                 min_height_pos = r;
             }
