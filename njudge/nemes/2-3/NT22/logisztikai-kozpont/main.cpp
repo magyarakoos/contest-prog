@@ -44,6 +44,10 @@ void proc(int end) {
     ll sum = 0;
     for (auto [u, w] : path) sum += w;
 
+    for (auto [u, w] : path) {
+        cout << u << "," 
+    }
+
     ll running_sum = 0;
     for (int i = 0; i < N; i++) {
         ll curr = max(running_sum, sum - running_sum);
