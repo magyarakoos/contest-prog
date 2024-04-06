@@ -40,6 +40,7 @@ vector<ll> distS;
 vector<int> parS;
 
 void dfs(int u, int par) {
+    cerr << u << "\n";
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         dfs(v, u);
