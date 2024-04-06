@@ -38,7 +38,7 @@ void get_ends(int start) {
     int end = max_element(all(distS)) - distS.begin();
 
     for (int u = 1; u <= N; u++) {
-        if (distS[u] = distS[end]) {
+        if (distS[u] == distS[end]) {
             proc(start, u);
         }
     }
