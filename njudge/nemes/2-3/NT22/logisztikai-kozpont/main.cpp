@@ -37,11 +37,13 @@ vector<T> prefix_sum(const vector<T>& v) {
 int N;
 vector<vector<array<ll, 2>>> g;
 vector<ll> distS;
+vector<int> parS;
 
 void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
         dfs(v, u);
+        if (distS[])
         distS[v] = max(distS[v], distS[u] + w);
     }
 }
