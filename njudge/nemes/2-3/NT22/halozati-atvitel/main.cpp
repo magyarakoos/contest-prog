@@ -30,6 +30,11 @@ int main() {
     q.push({K, 0});
 
     while (!q.empty()) {
+        auto [u, h] = q.front();
+        q.pop();
 
+        if (h > H) continue;
+
+        for ()
     }
 }
