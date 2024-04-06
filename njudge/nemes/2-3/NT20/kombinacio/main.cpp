@@ -11,7 +11,7 @@ int N, M;
 
 vector<int> after(vector<int> v) {
 
-    if ()
+    if (v.empty()) return {};
 
     for (int i = M - 1 ; i >= 0; i--) {
         if (v[i] < N - (M - i - 1)) {
@@ -21,7 +21,7 @@ vector<int> after(vector<int> v) {
             }
 
             for (int x : v) cout << x << " ";
-            cout << "\n";
+            cout << endl;
             sleep(1);
             return after(v);
         }
@@ -32,7 +32,7 @@ vector<int> after(vector<int> v) {
     }
     
     for (int x : v) cout << x << " ";
-    cout << "\n";
+    cout << endl;
     sleep(1);
     return after(v);
 }
