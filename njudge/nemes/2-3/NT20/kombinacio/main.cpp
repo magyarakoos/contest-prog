@@ -1,13 +1,6 @@
 // O(M)
-
 #include <bits/stdc++.h>
-
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define size(v) (int)v.size()
-
 using namespace std;
-using ll = long long;
 
 int N, M;
 
@@ -28,8 +21,6 @@ vector<int> after(vector<int> v) {
 }
 
 vector<int> before(vector<int> v) {
-    if (v.empty()) return {};
-
     for (int i = M - 1 ; i > 0; i--) {
         if (v[i - 1] + 1 < v[i]) {
             v[i]--;
