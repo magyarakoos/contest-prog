@@ -47,7 +47,7 @@ void proc(int start, int end) {
     ll running_sum = 0;
     for (int i = 0; i < N; i++) {
         ll curr = max(running_sum, sum - running_sum);
-        
+
         if (curr < result_t) {
             result_t = curr;
             result_nodeS.clear();
@@ -103,4 +103,6 @@ int main() {
             get_ends(u);
         }
     }
+
+    cout << result_t << "\n" << size(result_nodeS) << "\n"
 }
