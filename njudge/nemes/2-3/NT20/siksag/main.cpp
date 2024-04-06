@@ -32,7 +32,11 @@ int main() {
 
         if (min_height != max_height && (bigger || smoller)) {
 
-            
+            if (bigger) {
+                l = max_height_pos + 1;
+            } else {
+
+            }
         } else {
             if (min_height > v[r]) {
                 min_height = v[r];
