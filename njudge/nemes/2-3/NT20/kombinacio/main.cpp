@@ -19,7 +19,6 @@ vector<int> after(vector<int> v) {
             return v;
         }
     }
-    // körbeértünk, lex-minimális lesz a megoldás
     for (int i = 0; i < M; i++) {
         v[i] = i + 1;
     }
@@ -33,7 +32,13 @@ vector<int> before(vector<int> v) {
             for (int j = i + 1; j < M; j++) {
                 v[j] = N - (M - j - 1);
             }
+            return v;
         }
+    }
+    if (v[0] > 1) {
+        v[0]--;
+    } else {
+
     }
     // körbeértünk, lex-minimális lesz a megoldás
     for (int i = 0; i < M; i++) {
