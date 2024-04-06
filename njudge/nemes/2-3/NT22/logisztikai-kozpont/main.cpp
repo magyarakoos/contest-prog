@@ -31,7 +31,11 @@ void proc(int start) {
     dfs(start, 0);
     int end = max_element(all(distS)) - distS.begin();
 
-    
+    for (int u = 1; u <= N; u++) {
+        if (distS[u] = distS[end]) {
+            
+        }
+    }
 
     cout << start << " " << end << "\n";
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
