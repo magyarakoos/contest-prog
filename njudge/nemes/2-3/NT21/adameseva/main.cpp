@@ -1,3 +1,4 @@
+// O()
 #include <bits/stdc++.h>
 
 #define all(v) v.begin(), v.end()
@@ -29,5 +30,5 @@ int main() {
         m[EV].push_back({'E', 0});
     }
 
-    
+
 }
