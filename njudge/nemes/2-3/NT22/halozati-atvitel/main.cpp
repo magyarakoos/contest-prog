@@ -12,4 +12,6 @@ int main() {
 
     int N, M, K, H;
     cin >> N >> M >> K >> H;
+
+    vector<vector<array<int, 2>>>
 }
