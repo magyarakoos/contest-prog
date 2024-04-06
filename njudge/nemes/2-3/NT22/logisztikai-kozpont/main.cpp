@@ -41,13 +41,10 @@ vector<int> parS;
 
 void dfs(int u, int par) {
     cerr << u << "\n";
-    if (u == 3) {
-        cout << par << "\n";
-        exit(0);
-    }
+    if (u == 3)
     for (auto [v, w] : g[u]) {
-        if (v == pa r) continue;
-        if (u == 3)
+        if (v == par) continue;
+        if (u == 3) continue;
         dfs(v, u);
         if (distS[v] < distS[u] + w) {
             distS[v] = distS[u] + w;
