@@ -15,6 +15,8 @@ int main() {
     cin >> P >> A;
 
     while (A--) {
-        
+        int AK, AV;
+        cin >> AK >> AV;
+        s.insert({AK})
     }
 }
