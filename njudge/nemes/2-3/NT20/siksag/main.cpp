@@ -60,4 +60,6 @@ int main() {
 
         r++;
     }
+
+    cout << result_len << " " << result_i + 1;
 }
