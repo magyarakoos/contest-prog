@@ -67,7 +67,10 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         cout << i << " | ";
-        for (auto [v, w] : g[u])
+        for (auto [v, w] : g[i]) {
+            cout << v << " ";
+        }
+        cout << "\n";
     }
 
     dfs(1, 0);
