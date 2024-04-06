@@ -20,10 +20,6 @@ int main() {
     
     while (r < N) {
         if (abs(v[r] - v[r - 1]) > 1) {
-            if (result_len < r - l + 1) {
-                result_len = r - l + 1;
-                result_i = l;
-            }
             l = r;
             min_height = max_height = v[r];
             min_height_pos = max_height_pos = r;
@@ -43,6 +39,10 @@ int main() {
             if (max_height < v[r]) {
                 max_height = v[r];
                 max_height_pos = r;
+            }
+            if (result_len < r - l + 1) {
+                result_len = r - l + 1;
+                result_i = l;
             }
         }
     }
