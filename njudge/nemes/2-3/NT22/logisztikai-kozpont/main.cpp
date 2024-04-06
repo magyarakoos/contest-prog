@@ -71,8 +71,10 @@ int main() {
     dfs(1, 0);
     int start = max_index(distS);
 
-    for (int i = 1; i <= N; i++) {
-        if ()
+    for (int u = 1; u <= N; u++) {
+        if (distS[u] == distS[start]) {
+            proc(u);
+        }
     }
 
     distS.assign(N + 1, 0);
