@@ -16,7 +16,10 @@ vector<int> after(vector<int> v) {
             for (int j = i + 1; j < M; j++) {
                 v[j] = v[i] + j - i;
             }
-            return v;
+
+            for (int x : v) cout << x << " ";
+            cout << "\n";
+            return after(v);
         }
     }
     // körbeértünk, lex-minimális lesz a megoldás
