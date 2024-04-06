@@ -10,12 +10,7 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    // {T, x}
-    // x = 1 : Ádám megjön
-    // x = 2 : Ádám elmegy
-    // x = 3 : Éva megjön
-    // x = 4 : Éva elmegy
-    map<int, array<int, 2>> s;
+    map<int, vector<pair>> s;
     int P, A;
     cin >> P >> A;
 
