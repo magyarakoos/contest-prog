@@ -14,7 +14,7 @@ vector<ll> distS, par_distS;
 vector<int> parS;
 
 ll result_t = 1e18;
-vector<int> result_nodeS;
+set<int> result_nodeS;
 
 void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
@@ -50,7 +50,7 @@ void proc(int start, int end) {
         if (curr < result_t) {
             result_t = curr;
             result_nodeS.clear();
-            result_nodeS.push_back()
+            result_nodeS.insert();
         }
     }
 }
