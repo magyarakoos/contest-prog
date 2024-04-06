@@ -10,7 +10,7 @@ using ll = long long;
 
 int N;
 vector<vector<pair<int, ll>>> g;
-vector<ll> distS;
+vector<ll> distS, par_distS;
 vector<int> parS;
 
 ll result_t = 1e18;
@@ -22,6 +22,7 @@ void dfs(int u, int par) {
         if (distS[v] < distS[u] + w) {
             distS[v] = distS[u] + w;
             parS[v] = u;
+            par_distS[]
         }
         dfs(v, u);
     }
@@ -36,7 +37,7 @@ void proc(int start, int end) {
     int curr = end;
 
     do {
-
+        path.push_back
     }
 }
 
@@ -60,6 +61,7 @@ int main() {
 
     if (N == 1) {
         cout << "0\n1\n1";
+        exit(0);
     }
 
     g.resize(N + 1);
