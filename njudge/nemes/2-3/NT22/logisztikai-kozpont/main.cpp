@@ -29,9 +29,9 @@ void dfs(int u, int par) {
 }
 
 void proc(int start, int end) {
-    cout << start << " " << end << "\n";
-    for (int i = 1; i <= N; i++) cout << distS[i] << " ";
-    cout << "\n";
+    // cout << start << " " << end << "\n";
+    // for (int i = 1; i <= N; i++) cout << distS[i] << " ";
+    // cout << "\n";
 
     vector<pair<int, ll>> path;
     int curr = end;
