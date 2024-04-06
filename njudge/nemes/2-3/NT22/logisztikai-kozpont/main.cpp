@@ -32,7 +32,12 @@ void proc(int start, int end) {
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
     cout << "\n";
 
-    vector<int> path;
+    vector<pair<int, ll>> path;
+    int curr = end;
+
+    do {
+        
+    }
 }
 
 void get_ends(int start) {
