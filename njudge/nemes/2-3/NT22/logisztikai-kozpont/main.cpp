@@ -28,7 +28,7 @@ void dfs(int u, int par) {
     }
 }
 
-void proc(int start, int end) {
+void proc(int end) {
     // cout << start << " " << end << "\n";
     // for (int i = 1; i <= N; i++) cout << distS[i] << " ";
     // cout << "\n";
@@ -69,7 +69,7 @@ void get_ends(int start) {
 
     for (int u = 1; u <= N; u++) {
         if (distS[u] == distS[end]) {
-            proc(start, u);
+            proc(u);
         }
     }
 }
