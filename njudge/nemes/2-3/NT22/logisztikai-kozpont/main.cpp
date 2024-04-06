@@ -29,7 +29,7 @@ void proc(int start, int end) {
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
     cout << "\n";
 
-
+    
 }
 
 void get_ends(int start) {
