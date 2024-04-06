@@ -42,7 +42,6 @@ vector<int> parS;
 void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
-        if (u == 3) continue;
         dfs(v, u);
         if (distS[v] < distS[u] + w) {
             distS[v] = distS[u] + w;
