@@ -12,5 +12,9 @@ int main() {
 
     int N, M;
     cin >> N >> M;
-    vector<int> v
+    vector<int> v(M);
+    for (int& x : v) cin >> x;
+    vector<int> bef = v, aft = v;
+
+    if (bef)
 }
