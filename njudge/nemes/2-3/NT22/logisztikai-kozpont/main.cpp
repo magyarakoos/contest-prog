@@ -103,5 +103,6 @@ int main() {
     }
 
     cout << result_t << "\n" << size(result_nodeS) << "\n";
-    for (int u : result_nodeS) cout << u << "\n";
+    for (int u : result_nodeS) cout << u << " ";
+    cout << "\n";
 }
