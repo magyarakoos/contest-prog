@@ -47,9 +47,13 @@ void proc(int start, int end) {
     ll running_sum = 0;
     for (int i = 0; i < N; i++) {
         ll curr = max(running_sum, sum - running_sum);
+        
         if (curr < result_t) {
             result_t = curr;
             result_nodeS.clear();
+            result_nodeS.insert(path[i].first);
+        }
+        else if (curr == result_t) {
             result_nodeS.insert(path[i].first);
         }
     }
