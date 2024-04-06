@@ -47,7 +47,7 @@ int main() {
                 result.push_back({t, -1});
             }
         } else {
-            if (result.back()[1] == -1) {
+            if (!result.empty() && result.back()[1] == -1) {
                 result.back()[1] = t;
             }
         }
