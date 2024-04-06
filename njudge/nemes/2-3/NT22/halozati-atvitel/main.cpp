@@ -32,7 +32,7 @@ int main() {
         auto [u, h] = q.front();
         q.pop();
 
-        if (h > H) continue;
+        if (h > H || (u == K && h)) continue;
 
         for (auto [v, w] : g[u]) {
             speedS[v] = max(speedS[v], min(speedS[u], w));
