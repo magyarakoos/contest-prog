@@ -38,17 +38,21 @@ int N;
 vector<vector<array<ll, 2>>> g;
 vector<ll> distS;
 
+
+
 int main() {
     speed;
     cin >> N;
 
     g.resize(N + 1);
     distS.resize(N + 1);
+    par.resize(N + 1);
     for (int i = 1; i < N; i++) {
         int U, V, W;
         cin >> U >> V >> W;
         g[U].push_back({V, W});
         g[V].push_back({U, W});
     }
+
 
 }
