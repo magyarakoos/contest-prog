@@ -54,5 +54,5 @@ int main() {
     }
 
     cout << size(result) << "\n";
-    for (int i = 0; i < size(resul))
+    for (auto [b, e] : result) cout << b << " " << (e == -1 ? P : e) << "\n";
 }
