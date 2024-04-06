@@ -21,5 +21,13 @@ int main() {
         m[AV].push_back({'A', 0});
     }
 
-    int E
+    cin >> E;
+    while (E--) {
+        int EK, EV;
+        cin >> EK >> EV;
+        m[EK].push_back({'E', 1});
+        m[EV].push_back({'E', 0});
+    }
+
+    
 }
