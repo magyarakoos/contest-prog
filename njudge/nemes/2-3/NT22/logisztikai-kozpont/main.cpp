@@ -37,7 +37,7 @@ void proc(int start, int end) {
     int curr = end;
 
     do {
-        path.push_back
+        path.push_back({parS[]})
     }
 }
 
@@ -64,9 +64,11 @@ int main() {
         exit(0);
     }
 
-    g.resize(N + 1);
-    distS.resize(N + 1);
-    parS.resize(N + 1);
+    g        .resize(N + 1);
+    distS    .resize(N + 1);
+    parS     .resize(N + 1);
+    par_distS.resize(N + 1);
+
     for (int i = 1; i < N; i++) {
         int U, V, W;
         cin >> U >> V >> W;
