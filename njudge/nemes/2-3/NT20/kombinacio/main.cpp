@@ -12,6 +12,5 @@ int main() {
 
     int N, M;
     cin >> N >> M;
-
-    
+    vector<int> v
 }
