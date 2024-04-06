@@ -30,8 +30,8 @@ int main() {
         m[EV].push_back({'E', 0});
     }
 
-    bool A_free, E_free = 0;
+    bool A_free = 0, E_free = 0;
     for (const auto& v : m) {
-
+        for (auto [c,])
     }
 }
