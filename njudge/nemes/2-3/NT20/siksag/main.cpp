@@ -16,5 +16,9 @@ int main() {
     for (int& x : v) cin >> x;
 
     int min_height = v[0], max_height = v[0], min_height_pos = 0, max_height_pos = 0,
-        result_i = 0, result_len = 1, l = 0, r = 0;
+        result_i = 0, result_len = 1, l = 0, r = 1;
+    
+    while (r < N) {
+        
+    }
 }
