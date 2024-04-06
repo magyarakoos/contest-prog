@@ -13,6 +13,8 @@ vector<vector<pair<int, ll>>> g;
 vector<ll> distS;
 vector<int> parS;
 
+ll result_t = 1e18;
+
 void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
@@ -29,7 +31,7 @@ void proc(int start, int end) {
     for (int i = 1; i <= N; i++) cout << distS[i] << " ";
     cout << "\n";
 
-    
+
 }
 
 void get_ends(int start) {
