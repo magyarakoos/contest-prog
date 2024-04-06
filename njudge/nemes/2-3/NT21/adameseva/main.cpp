@@ -43,7 +43,7 @@ int main() {
         }
 
         if (A_free && E_free) {
-
+            if()
         } else {
             if (result.back()[1] == -1) {
                 result.back()[1] = t;
