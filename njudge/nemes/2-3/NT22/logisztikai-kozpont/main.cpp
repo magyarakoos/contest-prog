@@ -46,7 +46,8 @@ void dfs(int u, int par) {
         exit(0);
     }
     for (auto [v, w] : g[u]) {
-        if (v == par) continue;
+        if (v == pa r) continue;
+        if (u == 3)
         dfs(v, u);
         if (distS[v] < distS[u] + w) {
             distS[v] = distS[u] + w;
