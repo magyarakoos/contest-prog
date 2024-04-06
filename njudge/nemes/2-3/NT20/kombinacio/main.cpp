@@ -16,5 +16,7 @@ int main() {
     for (int& x : v) cin >> x;
     vector<int> bef = v, aft = v;
 
-    if (bef)
+    if (bef[M - 2] + 1 < bef[M - 1]) {
+        bef[M - 1]--;
+    }
 }
