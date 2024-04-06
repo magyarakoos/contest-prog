@@ -23,4 +23,7 @@ int main() {
     }
 
     vector<int> speedS(N + 1);
+    queue<array<int, 2>> q;
+
+    q.push()
 }
