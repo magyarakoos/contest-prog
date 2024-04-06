@@ -51,7 +51,15 @@ void dfs(int u, int par) {
 }
 
 void proc(int start) {
+    distS.assign(N + 1, 0);
+    parS .assign(N + 1, 0);
 
+    dfs(start, 0);
+    int end = max_index(distS);
+
+    cout << start << " " << end << "\n";
+    for (int i = 1; i <= N; i++) cout << distS[i] << " ";
+    cout << "\n";
 }
 
 int main() {
@@ -76,14 +84,4 @@ int main() {
             proc(u);
         }
     }
-
-    distS.assign(N + 1, 0);
-    parS .assign(N + 1, 0);
-
-    dfs(start, 0);
-    int end = max_index(distS);
-
-    cout << start << " " << end << "\n";
-    for (int i = 1; i <= N; i++) cout << distS[i] << " ";
-    cout << "\n";
 }
