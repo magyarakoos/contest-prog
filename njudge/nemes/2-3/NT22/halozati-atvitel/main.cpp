@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+constexpr int INF = 100'001;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -25,5 +27,9 @@ int main() {
     vector<int> speedS(N + 1);
     queue<array<int, 2>> q;
 
-    q.push()
+    q.push({K, 0});
+
+    while (!q.empty()) {
+
+    }
 }
