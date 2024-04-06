@@ -45,7 +45,9 @@ void proc(int start, int end) {
     for (auto [u, w] : path) sum += w;
 
     ll running_sum = 0;
-    for ()
+    for (int i = 0; i < N; i++) {
+        
+    }
 }
 
 void get_ends(int start) {
