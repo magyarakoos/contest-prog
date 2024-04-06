@@ -10,7 +10,9 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    set<pair<int, bool>> s;
+    // {T, x}
+    // x = 1 : Ádám, 
+    set<array<int, 2>> s;
     int P, A;
     cin >> P >> A;
 
