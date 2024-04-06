@@ -20,9 +20,9 @@ int main() {
     int result = INT_MAX, sum = 0;
 
     for (int l = 0, r = 0; l < N;) {
-        while (sum < P && l < r - 1) {
-            sum -= v[l];
-            l++;
+        while (sum < P && r < N) {
+            sum += v[r];
+            r++;
         }
 
         if (sum >= P) {
