@@ -13,9 +13,13 @@ vector<int> after(vector<int> v) {
     int i = M - 1;
     for (;;i--) {
         if (v[i] < N - (M - i - 1)) {
-            
+
         }
     }
+    for (int i = 0; i < M; i++) {
+        v[i] = i + 1;
+    }
+    return v;
 }
 
 int main() {
