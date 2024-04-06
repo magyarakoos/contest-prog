@@ -67,6 +67,9 @@ int main() {
     dfs(1, 0);
     int start = max_index(distS);
 
+    for (int i = 1; i <= N; i++) cout << distS[i] << " ";
+    cout << "\n";
+
     distS.assign(N + 1, 0);
     parS .assign(N + 1, 0);
 
