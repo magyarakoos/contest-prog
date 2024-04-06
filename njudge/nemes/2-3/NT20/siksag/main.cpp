@@ -36,6 +36,8 @@ int main() {
 
             if (bigger) {
                 l = min_height_pos + 1;
+                min_height = max_height;
+                min_height_pos = max_height_pos;
                 max_height = v[r];
                 max_height_pos = r;
             } else {
