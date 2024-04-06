@@ -41,7 +41,8 @@ vector<ll> distS;
 void dfs(int u, int par) {
     for (auto [v, w] : g[u]) {
         if (v == par) continue;
-        
+        dfs(v, u);
+        distS[v] = max(distS[v], distS[u] + w);
     }
 }
 
@@ -58,5 +59,5 @@ int main() {
         g[V].push_back({U, W});
     }
 
-
+    
 }
