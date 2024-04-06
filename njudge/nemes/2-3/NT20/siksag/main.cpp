@@ -27,8 +27,8 @@ int main() {
             continue;
         }
 
-        bool bigger = (v[r - 1] > v[r] && min_height > v[r]),
-            smoller = (v[r - 1] < v[r] && max_height < v[r]);
+        bool bigger = v[r - 1] > v[r] && min_height > v[r],
+            smoller = v[r - 1] < v[r] && max_height < v[r];
 
         if (min_height != max_height && (bigger || smoller)) {
 
