@@ -36,7 +36,7 @@ vector<int> before(vector<int> v) {
             }
 
             for (int x : v) cout << x << " ";
-            cout << "\n";
+            cout << endl;
             sleep(1);
             return before(v);
         }
@@ -48,9 +48,9 @@ vector<int> before(vector<int> v) {
             v[i] += N - M;
         }
     }
-    
+
     for (int x : v) cout << x << " ";
-    cout << "\n";
+    cout << endl;
     sleep(1);
     return before(v);
 }
