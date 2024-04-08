@@ -20,8 +20,10 @@ void build(const vector<int>& v, int curr, int l, int r) {
     int mid = (l + r) / 2;
     build(v, curr * 2, l, r);
     build(v, curr * 2 + 1, l, r);
-    t[]
+    a[curr] = min(a[curr * 2], a[curr * 2] + 1);
 }
+
+void min()
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
