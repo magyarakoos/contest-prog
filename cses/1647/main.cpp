@@ -6,7 +6,7 @@
 
 using namespace std;
 using ll = long long;
-constexpr int MAXN = 2e5;
+constexpr ll MAXN = 2e5;
 
 int N, a[MAXN + 1];
 
@@ -19,7 +19,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
     int tmid = (tl + tr) / 2;
     build(v, curr * 2, tl, tmid);
     build(v, curr * 2 + 1, tmid + 1, tr);
-    a[curr] = min(a[curr * 2], a[curr * 2 + 1]); // Fixing this line
+    a[curr] = min(a[curr * 2], a[curr * 2 + 1]);
 }
 
 int query(int curr, int tl, int tr, int l, int r) {
@@ -50,6 +50,6 @@ int main() {
     while (Q--) {
         int L, R;
         cin >> L >> R;
-        cout << min(1, 0, N - 1, L, R) << "\n";
+        cout << query(1, 0, N - 1, L, R) << "\n";
     }
 }
