@@ -18,6 +18,7 @@ void build(const vector<int>& v, int l, int r) {
     }
 
     int mid = (l + r) / 2;
+    build(v, l,)
 }
 
 int main() {
