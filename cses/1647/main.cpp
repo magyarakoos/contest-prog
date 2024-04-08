@@ -18,8 +18,8 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
     }
 
     int tmid = (tl + tr) / 2;
-    build(v, curr * 2, tl, tr);
-    build(v, curr * 2 + 1, tl, tr);
+    build(v, curr * 2, tl, tmid);
+    build(v, curr * 2 + 1, tmid + 1, tr);
     a[curr] = min(a[curr * 2], a[curr * 2] + 1);
 }
 
@@ -51,6 +51,6 @@ int main() {
     while (Q--) {
         int L, R;
         cin >> L >> R;
-        cout << min(1, 0, N - 1, L, R);
+        cout << min(1, 0, N - 1, L, R) << "\n";
     }
 }
