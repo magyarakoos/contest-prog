@@ -63,6 +63,14 @@ int main() {
     build(v, 1, 0, N - 1);
 
     while (Q--) {
-        
+        int type;
+        cin >> type;
+        if (type == 1) {
+            int K, U;
+            cin >> K >> U;
+        } else {
+            
+
+        }
     }
 }
