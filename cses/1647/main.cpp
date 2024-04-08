@@ -13,8 +13,11 @@ int N, a[MAXN + 1];
 
 void build(const vector<int>& v, int l, int r) {
     if (l == r) {
-        a[l]
+        a[l] = v[l];
+        return;
     }
+
+    int mid = (l + r) / 2;
 }
 
 int main() {
