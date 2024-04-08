@@ -24,7 +24,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 
 int query(int curr, int tl, int tr, int l, int r) {
     if (l > r) {
-        return MAXN;
+        return 0;
     }
     if (l == tl && r == tr) {
         return a[curr];
