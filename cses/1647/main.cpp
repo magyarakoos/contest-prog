@@ -23,7 +23,9 @@ void build(const vector<int>& v, int curr, int l, int r) {
     a[curr] = min(a[curr * 2], a[curr * 2] + 1);
 }
 
-void min()
+int min(int curr, int tl, int tr, int l, int r) {
+    if ()
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
