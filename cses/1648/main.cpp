@@ -40,8 +40,12 @@ ll query(int curr, int tl, int tr, int l, int r) {
 
 void update(int curr, int tl, int tr, int pos, int x) {
     if (tl == tr) {
-        a[curr] 
+        a[curr] = x;
     }
+
+    int tmid = (tl + tr) / 2;
+    
+    if (tmid )
 }
 
 int main() {
