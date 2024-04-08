@@ -15,5 +15,5 @@ int main() {
     int Q;
     cin >> N >> Q;
 
-    
+    build(v, 1, 0, N - 1);
 }
