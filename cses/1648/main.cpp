@@ -13,7 +13,13 @@ int N, a[4 * MAXN + 1];
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
         a[tl] = v[tl];
+        return;
     }
+
+    int tmid = (tl + tr) / 2;
+    build(v, curr * 2, tl, tmid);
+    build(v, curr * 2 + 1, tmid + 1, tr);
+    
 }
 
 int main() {
