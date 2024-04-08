@@ -34,7 +34,7 @@ int min(int curr, int tl, int tr, int l, int r) {
     int tmid = (l + r) / 2;
     return min(
         min(curr * 2, tl, tmid, l, min(r, tmid)),
-        
+        min(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r);
     );
 }
 
