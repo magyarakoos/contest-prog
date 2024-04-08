@@ -6,8 +6,10 @@
 
 using namespace std;
 using ll = long long;
+constexpr int MAXN = 2e
 
 
+int a[]
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
