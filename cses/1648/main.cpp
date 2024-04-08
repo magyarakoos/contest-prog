@@ -33,7 +33,9 @@ ll query(int curr, int tl, int tr, int l, int r) {
     
     int tmid = (tl + tr) / 2;
     return 
-        query(curr * 2, tl, tmid, l, min(tmid, r));
+        query(curr * 2, tl, tmid, l, min(tmid, r)) +
+        query(curr * 2 + 1, tmid + 1, tr, max(tmid + 1, l), r)
+    ;
 }
 
 int main() {
