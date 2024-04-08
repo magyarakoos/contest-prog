@@ -9,7 +9,7 @@ using ll = long long;
 constexpr ll MAXN = 2e5;
 
 int N;
-int a[4 * MAXN]; // Adjusted array size to accommodate the segment tree
+int a[4 * MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
@@ -25,7 +25,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 
 int query(int curr, int tl, int tr, int l, int r) {
     if (l > r) {
-        return INT_MAX; // Assuming you are querying for minimum, return max value for invalid queries
+        return INT_MAX;
     }
     if (l == tl && r == tr) {
         return a[curr];
