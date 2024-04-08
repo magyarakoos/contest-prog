@@ -46,5 +46,11 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    build(v, 1, 0,)
+    build(v, 1, 0, N - 1);
+
+    while (Q--) {
+        int L, R;
+        cin >> L >> R;
+        cout << min(1, 0, N - 1, L, R);
+    }
 }
