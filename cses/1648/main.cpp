@@ -38,6 +38,10 @@ ll query(int curr, int tl, int tr, int l, int r) {
     ;
 }
 
+void update(int curr, int tl, int tr, int pos, int x) {
+    
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int Q;
