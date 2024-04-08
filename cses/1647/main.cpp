@@ -8,7 +8,6 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 2e5;
 
-
 int N, a[MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
