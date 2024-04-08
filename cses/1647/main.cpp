@@ -11,6 +11,12 @@ constexpr int MAXN = 2e5;
 
 int N, a[MAXN + 1];
 
+void build(const vector<int>& v, int l, int r) {
+    if (l == r) {
+        a[l]
+    }
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int Q;
@@ -19,5 +25,5 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    
+
 }
