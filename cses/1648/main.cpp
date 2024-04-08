@@ -23,7 +23,15 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
     a[curr] = a[curr * 2] + a[curr * 2 + 1];
 }
 
-ll query(int curr, int tl, int)
+ll query(int curr, int tl, int tr, int l, int r) {
+    if (l > r) {
+        return 0;
+    }
+    if (l == tl && r == tr) {
+        return a[curr];
+    }
+    
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
