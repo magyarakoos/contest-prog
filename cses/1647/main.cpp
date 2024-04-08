@@ -33,7 +33,7 @@ int min(int curr, int tl, int tr, int l, int r) {
 
     int mid = (l + r) / 2;
     return min(
-        min()
+        min(curr * 2, tl, mid,)
     );
 }
 
