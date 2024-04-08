@@ -8,7 +8,8 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 2e5;
 
-int N, a[4 * MAXN + 1];
+int N;
+ll a[4 * MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
@@ -19,7 +20,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
     int tmid = (tl + tr) / 2;
     build(v, curr * 2, tl, tmid);
     build(v, curr * 2 + 1, tmid + 1, tr);
-    
+    a[]
 }
 
 int main() {
