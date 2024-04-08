@@ -46,9 +46,9 @@ void update(int curr, int tl, int tr, int pos, int x) {
     int tmid = (tl + tr) / 2;
     
     if (pos <= tmid) {
-        update(curr * 2, )
+        update(curr * 2, tl, tmid, pos, x);
     } else {
-
+        update(curr * 2 + 1, tmid + 1, tr, pos, x);
     }
     a[curr] = a[curr * 2] + a[curr * 2 + 1];
 }
