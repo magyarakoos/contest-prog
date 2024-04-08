@@ -24,7 +24,13 @@ void build(const vector<int>& v, int curr, int l, int r) {
 }
 
 int min(int curr, int tl, int tr, int l, int r) {
-    if ()
+    if (l > r) {
+        return MAXN;
+    }
+    if (l == tl && r == tr) {
+        return a[curr];
+    }
+    
 }
 
 int main() {
