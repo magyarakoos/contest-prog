@@ -13,7 +13,7 @@ ll a[4 * MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
-        a[tl] = v[tl];
+        a[curr] = v[tl];
         return;
     }
 
@@ -39,7 +39,9 @@ ll query(int curr, int tl, int tr, int l, int r) {
 }
 
 void update(int curr, int tl, int tr, int pos, int x) {
-    
+    if (tl == tr) {
+        a[curr] 
+    }
 }
 
 int main() {
