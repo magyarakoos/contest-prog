@@ -41,6 +41,7 @@ ll query(int curr, int tl, int tr, int l, int r) {
 void update(int curr, int tl, int tr, int pos, int x) {
     if (tl == tr) {
         a[curr] = x;
+        return;
     }
 
     int tmid = (tl + tr) / 2;
@@ -68,7 +69,7 @@ int main() {
         if (type == 1) {
             int K, U;
             cin >> K >> U;
-            update()
+            update(1, 0, N - 1, K - 1, U);
         } else {
             int L, R;
             cin >> L >> R;
