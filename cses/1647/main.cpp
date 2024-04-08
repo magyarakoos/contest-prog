@@ -30,7 +30,11 @@ int min(int curr, int tl, int tr, int l, int r) {
     if (l == tl && r == tr) {
         return a[curr];
     }
-    
+
+    int mid = (l + r) / 2;
+    return min(
+        min()
+    );
 }
 
 int main() {
