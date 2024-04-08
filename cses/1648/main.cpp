@@ -10,10 +10,18 @@ constexpr int MAXN = 2e5;
 
 int N, a[4 * MAXN + 1];
 
+void build(const vector<int>& v, int curr, int tl, int tr) {
+    if (tl == tr) {
+        a[tl] = v[tl];
+    }
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int Q;
     cin >> N >> Q;
+    vector<int> v(N);
+    for (int& x : v) cin >> x;
 
     build(v, 1, 0, N - 1);
 }
