@@ -12,17 +12,17 @@ int N, a[MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
-        a[tl] = v[tl];
+        a[curr] = v[tl];
         return;
     }
 
     int tmid = (tl + tr) / 2;
     build(v, curr * 2, tl, tmid);
     build(v, curr * 2 + 1, tmid + 1, tr);
-    a[curr] = min(a[curr * 2], a[curr * 2 + 1]);
+    a[curr] = min(a[curr * 2], a[curr * 2 + 1]); // Fixing this line
 }
 
-int min(int curr, int tl, int tr, int l, int r) {
+int query(int curr, int tl, int tr, int l, int r) {
     if (l > r) {
         return MAXN;
     }
@@ -32,8 +32,8 @@ int min(int curr, int tl, int tr, int l, int r) {
 
     int tmid = (tl + tr) / 2;
     return min(
-        min(curr * 2, tl, tmid, l, min(r, tmid)),
-        min(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r)
+        query(curr * 2, tl, tmid, l, min(r, tmid)),
+        query(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r)
     );
 }
 
