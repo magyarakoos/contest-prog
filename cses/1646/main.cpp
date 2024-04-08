@@ -16,6 +16,12 @@ int main() {
     for (int& x : v) cin >> x;
 
     for (int i = 1; i <= N; i++) {
-        ps[i] = v[i]
+        ps[i] = ps[i - 1] + v[i - 1];
+    }
+
+    while (Q--) {
+        int L, R;
+        cin >> L >> R;
+        cout << ps[R] - ps[L]
     }
 }
