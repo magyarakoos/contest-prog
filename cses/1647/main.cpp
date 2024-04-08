@@ -6,12 +6,15 @@
 
 using namespace std;
 using ll = long long;
-constexpr int MAXN = 2e
+constexpr int MAXN = 2e5;
 
 
-int a[]
+int N, a[MAXN + 1];
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
+    int Q;
+    cin >> N >> Q;
 
+    
 }
