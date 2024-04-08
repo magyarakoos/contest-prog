@@ -11,14 +11,16 @@ constexpr int MAXN = 2e5;
 
 int N, a[MAXN + 1];
 
-void build(const vector<int>& v, int l, int r) {
+void build(const vector<int>& v, int curr, int l, int r) {
     if (l == r) {
         a[l] = v[l];
         return;
     }
 
     int mid = (l + r) / 2;
-    build(v, l,)
+    build(v, curr * 2, l, r);
+    build(v, curr * 2 + 1, l, r);
+    t[]
 }
 
 int main() {
