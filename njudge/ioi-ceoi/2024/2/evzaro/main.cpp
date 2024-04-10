@@ -15,9 +15,6 @@ void bfs(point s) {
     while (!q.empty()) {
         auto [pos, dist] = q.front(); q.pop();
         auto [x, y] = pos;
-        if (dist > 0) {
-            cerr << "AW HELL NAW\n";
-        }
         for (int i = 0; i < 4; i++) {
             int nx = x + dx[i], ny = y + dy[i];
             if (!m.count({nx, ny}) || m[{nx, ny}].second) {
