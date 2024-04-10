@@ -39,11 +39,11 @@ int32_t main() {
     v.resize(N);
     for (int i = 0; i < N; i++) {
         cin >> v[i][0] >> v[i][1];
-        m[{v[i][0], v[i][1]}] = {i, 0};
+        m[{v[i][0], v[i][1]}] = {i, '$'};
     }
 
     for (int i = 0; i < N; i++) {
-        if (!m[v[i]].second) {
+        if (m[v[i]].second == '$') {
             bfs(v[i]);
         }
         cout << m[v[i]].second;
