@@ -25,6 +25,8 @@ void bfs(point s) {
     }
 }
 
+ifstream fin()
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
