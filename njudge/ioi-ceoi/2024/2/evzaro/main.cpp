@@ -6,6 +6,11 @@ using point = array<int, 2>;
 map<point, pair<int, bool>> m;
 vector<point> v;
 
+void bfs(point s) {
+    m[s].second = 1;
+    
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -19,7 +24,7 @@ int main() {
     string s(N, 'L');
     for (int i = 0; i < N; i++) {
         if (!m[v[i]].second) {
-            bfs()
+            bfs(v[i]);
         }
     }
 }
