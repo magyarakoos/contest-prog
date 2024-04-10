@@ -1,5 +1,6 @@
 // O(N log N)
 #include <bits/stdc++.h>
+#define int ll
 using namespace std;
 using ll = long long;
 using point = array<int, 2>;
