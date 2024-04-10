@@ -25,10 +25,13 @@ void bfs(point s) {
     }
 }
 
-ifstream fin()
+ifstream fin("in.txt");
+ofstream fout("out.txt");
+#define cin fin
+#define cout fout
 
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
+    //cin.tie(0), ios::sync_with_stdio(0);
 
     int N;
     cin >> N;
