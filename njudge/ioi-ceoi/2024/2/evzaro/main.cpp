@@ -36,7 +36,6 @@ int main() {
     }
     for (int i = 0; i < N; i++) {
         if (!m[v[i]].second) {
-            m[v[i]].second = 'L';
             bfs(v[i]);
         }
         cout << m[v[i]].second;
