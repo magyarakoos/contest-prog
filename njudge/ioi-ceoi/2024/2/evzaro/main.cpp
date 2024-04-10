@@ -8,7 +8,7 @@ map<point, pair<int, char>> m;
 vector<point> v;
 
 void bfs(point s) {
-    m[s].second = 1;
+    m[s].second = 'L';
     queue<pair<point, int>> q({{s, 0}});
     while (!q.empty()) {
         auto [pos, dist] = q.front(); q.pop();
@@ -34,13 +34,11 @@ int main() {
         cin >> v[i][0] >> v[i][1];
         m[{v[i][0], v[i][1]}] = {i, 0};
     }
-    string s(N, 'L');
     for (int i = 0; i < N; i++) {
         if (!m[v[i]].second) {
             m[v[i]].second = 'L';
             bfs(v[i]);
         }
-        s[i] = m[v[i]].second;
+        cout << m[v[i]].second;
     }
-    cout << s;
 }
