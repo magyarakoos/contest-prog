@@ -19,7 +19,7 @@ void bfs(point s) {
                 continue;
             }
             m[{nx, ny}].second = (dist % 2 ? 'F' : 'L');
-
+            q.push({{nx, ny}, dist + 1});
         }
     }
 }
@@ -39,5 +39,6 @@ int main() {
         if (!m[v[i]].second) {
             bfs(v[i]);
         }
+        
     }
 }
