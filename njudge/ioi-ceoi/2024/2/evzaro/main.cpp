@@ -15,12 +15,12 @@ void bfs(point s) {
     while (!q.empty()) {
         auto [pos, dist] = q.front(); q.pop();
         auto [x, y] = pos;
-        m[{x, y}].second = (dist % 2 ? 'F' : 'L');
         for (int i = 0; i < 4; i++) {
             int nx = x + dx[i], ny = y + dy[i];
             if (!m.count({nx, ny}) || m[{nx, ny}].second) {
                 continue;
             }
+            m[{x, y}].second = (dist % 2 ? 'L' : 'F');
             q.push({{nx, ny}, dist + 1});
         }
     }
@@ -31,7 +31,7 @@ ofstream fout("out.txt");
 #define cin fin
 #define cout fout
 
-int main() {
+int32_t main() {
     //cin.tie(0), ios::sync_with_stdio(0);
 
     int N;
