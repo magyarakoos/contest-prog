@@ -9,11 +9,13 @@ int main() {
     map<point, pair<int, bool>> m;
     int N;
     cin >> N;
+    vector<point> v(N);
     for (int i = 0; i < N; i++) {
-        int X, Y;
-        cin >> X >> Y;
-        m[{X, Y}] = {i, 0};
+        cin >> v[i][0] >> v[i][1];
+        m[{v[i][0], v[i][1]}] = {i, 0};
     }
     string s(N, 'L');
-    
+    for (int i = 0; i < N; i++) {
+        if (!m[])
+    }
 }
