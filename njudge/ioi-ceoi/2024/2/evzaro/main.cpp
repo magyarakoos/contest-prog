@@ -2,6 +2,7 @@
 using namespace std;
 using ll = long long;
 using point = array<int, 2>;
+constexpr int dx[] = {1, -1, 0, 0}, dy[] = {0, 0, 1, -1};
 
 map<point, pair<int, bool>> m;
 vector<point> v;
@@ -11,6 +12,7 @@ void bfs(point s) {
     queue<pair<point, int>> q({{s, 0}});
     while (!q.empty()) {
         auto [pos, dist] = q.front(); q.pop();
+        auto [x, y] = pos;
         
     }
 }
