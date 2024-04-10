@@ -6,13 +6,14 @@ using point = array<int, 2>;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    map<point, int> m;
+    map<point, pair<int, bool>> m;
     int N;
     cin >> N;
     for (int i = 0; i < N; i++) {
         int X, Y;
         cin >> X >> Y;
-        m[{X, Y}] = i;
+        m[{X, Y}] = {i, 0};
     }
-    vector<
+    string s(N, 'L');
+    
 }
