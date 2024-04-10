@@ -18,6 +18,7 @@ void bfs(point s) {
             if (!m.count({nx, ny}) || m[{nx, ny}].second) {
                 continue;
             }
+            m[{nx, ny}].second = 1;
             
         }
     }
