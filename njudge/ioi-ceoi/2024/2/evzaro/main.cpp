@@ -8,7 +8,11 @@ vector<point> v;
 
 void bfs(point s) {
     m[s].second = 1;
-    
+    queue<pair<point, int>> q({{s, 0}});
+    while (!q.empty()) {
+        auto [pos, dist] = q.front(); q.pop();
+        
+    }
 }
 
 int main() {
