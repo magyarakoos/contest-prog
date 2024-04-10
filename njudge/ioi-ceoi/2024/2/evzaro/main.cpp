@@ -39,6 +39,6 @@ int main() {
         if (!m[v[i]].second) {
             bfs(v[i]);
         }
-        
+        s[i] = m[v[i]].second;
     }
 }
