@@ -37,6 +37,7 @@ int main() {
     string s(N, 'L');
     for (int i = 0; i < N; i++) {
         if (!m[v[i]].second) {
+            m[v[i]].second = 'L';
             bfs(v[i]);
         }
         s[i] = m[v[i]].second;
