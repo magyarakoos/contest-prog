@@ -4,7 +4,7 @@ using ll = long long;
 using point = array<int, 2>;
 constexpr int dx[] = {1, -1, 0, 0}, dy[] = {0, 0, 1, -1};
 
-map<point, pair<int, bool>> m;
+map<point, pair<int, char>> m;
 vector<point> v;
 
 void bfs(point s) {
@@ -18,8 +18,8 @@ void bfs(point s) {
             if (!m.count({nx, ny}) || m[{nx, ny}].second) {
                 continue;
             }
-            m[{nx, ny}].second = 1;
-            
+            m[{nx, ny}].second = (dist % 2 ? 'F' : 'L');
+
         }
     }
 }
