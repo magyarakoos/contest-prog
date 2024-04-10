@@ -41,4 +41,5 @@ int main() {
         }
         s[i] = m[v[i]].second;
     }
+    cout << s;
 }
