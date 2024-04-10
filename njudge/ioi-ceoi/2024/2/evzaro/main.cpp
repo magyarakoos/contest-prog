@@ -1,3 +1,4 @@
+// O(N log N)
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -35,6 +36,7 @@ int main() {
         cin >> v[i][0] >> v[i][1];
         m[{v[i][0], v[i][1]}] = {i, 0};
     }
+
     for (int i = 0; i < N; i++) {
         if (!m[v[i]].second) {
             bfs(v[i]);
