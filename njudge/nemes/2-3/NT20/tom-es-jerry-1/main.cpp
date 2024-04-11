@@ -8,13 +8,12 @@ int N, M, T, P, E, INF = 1e9;
 vector<vector<point>> g;
 
 int main() {
-    speed;
+    cin.tie(0), ios::sync_with_stdio(0);
 
     cin >> N >> M >> T >> P >> E;
 
     g.resize(N + 1);
-    tom.resize(N + 1);
-    jerry.resize(N + 1);
+    vector<vector<int>> tom(N + 1), jerry(N + 1);
     while (M--) {
         int A, B, S;
         cin >> A >> B >> S;
@@ -22,7 +21,6 @@ int main() {
         g[A].push_back({B, S});
         g[B].push_back({A, S});
     }
-    vector<vector<int>> tom(N + 1,), jerry;
 
 
 
