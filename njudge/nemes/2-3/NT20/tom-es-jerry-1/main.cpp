@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
+int N, M, T, P, E, INF = 1e9;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    int N, M, T, P, E;
+    
     cin >> N >> M >> T >> P >> E;
     vector<vector<int>> jg(N + 1), tg(N + 1);
     while (M--) {
@@ -32,6 +33,7 @@ int main() {
 
     vector<bool> jerry(N + 1);
     jerry[E] = 1;
+
     priority_queue<array<int, 2>> pq;
     pq.push({tom[E], E});
     while (!pq.empty()) {
