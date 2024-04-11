@@ -34,7 +34,8 @@ int main() {
         }
     }
 
-    prio
+    priority_queue<point> pq({{tom[E], E}});
+    
 
     while (P--) {
         int K;
