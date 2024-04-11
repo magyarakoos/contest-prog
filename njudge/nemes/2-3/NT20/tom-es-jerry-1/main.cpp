@@ -8,9 +8,9 @@ vector<int> tom, jerry;
 void bfs(int s, vector<int>& d, int min_w, int goal) {
     queue<int> q({s});
     d[s] = 0;
+    return;
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        cerr << u << "\n";
         if (u == goal) return;
         for (auto [v, w] : g[u]) {
             if (d[u] + 1 < d[v] && min_w <= w && d[u] + 1 < tom[v]) {
