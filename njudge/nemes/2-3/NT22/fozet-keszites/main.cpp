@@ -514,7 +514,6 @@ void solve() {
     for (int a = 1; a <= A; a++) {
         int b = B;
         for (int factor : facts[a]) {
-            cout << factor << ' ';
             for (int i = factor; i <= B; i += factor) {
                 b--;
             }
