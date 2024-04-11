@@ -38,7 +38,9 @@ int main() {
     pq.push({tom[E], E});
     while (!pq.empty()) {
         auto [dist, u] = pq.top(); pq.pop();
-        
+        for (auto [v, w] : g[u]) {
+            if (jerry[v]) continue;
+        }
     }
 
     while (P--) {
