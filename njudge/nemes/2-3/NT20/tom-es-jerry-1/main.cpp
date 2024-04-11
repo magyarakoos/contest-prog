@@ -35,18 +35,13 @@ int main() {
   priority_queue<array<int, 2>> pq;
   pq.push({tom[E], E});
   while (!pq.empty()) {
-    auto [u_t, u] = pq.top();
-    pq.pop();
-    if (u_t < 0)
-      continue;
-    jerry[u] = true;
+    auto [dist, u] = pq.top(); pq.pop();
+    if (dist < 0) continue;
+    jerry[u] = 1;
     for (int v : jg[u]) {
-      if (jerry[v])
-        continue;
-      // jerry should be at position `v`
-      // not later than `T = dist_from_tom[v] - 1` to avoid getting caught
-      // not later than `T = u_t - 1` so that they can step to `u` right after
-      pq.push({min(tom[v] - 1, u_t - 1), v});
+      if (!jerry[v]) {
+        pq.push({min(tom[v] - 1, dist - 1), v});
+      }
     }
   }
 
