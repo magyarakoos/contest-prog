@@ -537,7 +537,11 @@ void solve() {
 			result++;
 			used.insert(s1);
 		}
-		
+		auto s2 = simplify(b, a);
+		if (!used.count(s2)) {
+			result++;
+			used.insert(s2);
+		}
 	}
 }
 
