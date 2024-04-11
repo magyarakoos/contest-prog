@@ -35,6 +35,7 @@ int main() {
     }
     priority_queue<point> pq;
     pq.push({tom[E], E});
+    jerry[E] = 1;
     while (!pq.empty()) {
         auto [dist, u] = pq.top(); pq.pop();
         if (u < 0) continue;
@@ -44,11 +45,10 @@ int main() {
             pq.push({min(tom[u] - 1, dist - 1), v});
         }
     }
-    exit(0);
 
     while (P--) {
         int K;
         cin >> K;
-        cout << (jerry[E] ? "IGEN" : "NEM") << '\n';
+        cout << (jerry[K] ? "IGEN" : "NEM") << '\n';
     }
 }
