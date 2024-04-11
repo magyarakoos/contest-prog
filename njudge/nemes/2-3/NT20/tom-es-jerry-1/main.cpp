@@ -38,5 +38,7 @@ int main() {
     while (P--) {
         int K;
         cin >> K;
+        jerry.assign(N + 1, INF);
+        bfs()
     }
 }
