@@ -39,6 +39,6 @@ int main() {
     while (P--) {
         int K;
         cin >> K;
-        cout << (jerry[E] < INF ? "IGEN\n" : "NEM\n");
+        cout << (jerry[K] < INF ? "IGEN\n" : "NEM\n");
     }
 }
