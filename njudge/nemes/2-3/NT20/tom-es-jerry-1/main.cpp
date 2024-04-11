@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+using point = array<int, 2>;
 
-int N, M, T, P, E, INF = INT_MAX;
-vector<vector<int>> tg, jg;
+int N, M, T, P, E, INF = 1e9;
+vector<vector<point>> g;
 vector<int> tom;
 vector<bool> jerry;
 
@@ -11,43 +12,38 @@ int main() {
 
     cin >> N >> M >> T >> P >> E;
 
-    tg.resize(N + 1);
-    jg.resize(N + 1);
+    g.resize(N + 1);
     tom.assign(N + 1, INF);
     jerry.resize(N + 1);
     while (M--) {
-        int U, V, W;
-        cin >> U >> V >> W;
+        int A, B, S;
+        cin >> A >> B >> S;
     
-        jg[U].push_back(V);
-        jg[V].push_back(U);
-        if (W == 2) {
-            tg[U].push_back(V);
-            tg[V].push_back(U);
-        }
+        g[A].push_back({B, S});
+        g[B].push_back({A, S});
     }
 
     queue<int> q({T});
     tom[T] = 0;
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        for (int v : tg[u]) {
-            if (tom[v] == INF) {
+        for (auto [v, w] : g[u]) {
+            if (tom[v] == INF && w == 2) {
                 tom[v] = tom[u] + 1;
                 q.push(v);
             }
         }
     }
 
-    priority_queue<array<int, 2>> pq;
+    priority_queue<point> pq;
     pq.push({tom[E], E});
     while (!pq.empty()) {
         auto [dist, u] = pq.top(); pq.pop();
         if (u < 0) continue;
         jerry[u] = 1;
-        for (int v : jg[u]) {
+        for (auto [v, w] : g[u]) {
             if (jerry[v]) continue;
-            pq.push({min(tom[] - 1, dist - 1), v});
+            pq.push({min(tom[v] - 1, dist - 1), v});
         }
     }
 
