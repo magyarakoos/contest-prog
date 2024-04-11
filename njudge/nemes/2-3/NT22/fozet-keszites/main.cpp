@@ -506,7 +506,9 @@ const vector<vector<int>> facts
 	{2, 5}
 };
 
+pair<int, int> simplify(int a, int b) {
 
+}
 
 void solve() {
     int A, B;
