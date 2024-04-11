@@ -558,7 +558,8 @@ void solve() {
 			used.insert(s2);
 		}
 
-		if (i % 2 )
+		if (A < B) b++;
+		else a++;
 	}
 }
 
