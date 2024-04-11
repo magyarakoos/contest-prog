@@ -16,11 +16,14 @@ int main() {
     tom.assign(N + 1, INF);
     jerry.resize(N + 1);
     while (M--) {
-        int A, B, S;
-        cin >> A >> B >> S;
+        int U, V, S;
+        cin >> U >> V >> S;
     
-        g[A].push_back({B, S});
-        g[B].push_back({A, S});
+        jg[U].push_back(V);
+        jg[V].push_back(U);
+        if (S == 2) {
+
+        }
     }
 
     queue<int> q({T});
