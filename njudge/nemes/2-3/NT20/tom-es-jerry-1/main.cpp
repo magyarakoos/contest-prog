@@ -2,7 +2,7 @@
 using namespace std;
 using point = array<int, 2>;
 
-int N, M, T, P, E, INF = 1e9;
+int N, M, T, P, E, INF = INT_MAX;
 vector<vector<point>> g;
 vector<int> tom;
 vector<bool> jerry;
@@ -50,6 +50,6 @@ int main() {
     while (P--) {
         int K;
         cin >> K;
-        cout << (jerry[K] ? "IGEN" : "NEM") << '\n';
+        cout << (jerry[K] ? "IGEN" : "NEM") << endl;
     }
 }
