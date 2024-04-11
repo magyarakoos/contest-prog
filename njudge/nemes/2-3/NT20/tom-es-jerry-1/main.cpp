@@ -34,12 +34,12 @@ int main() {
         g[B].push_back({A, S});
     }
 
-    bfs(T, tom, 2);
+    bfs(T, tom, 2, 0);
 
     while (P--) {
         int K;
         cin >> K;
         jerry.assign(N + 1, INF);
-        bfs(K,)
+        bfs(K, jerry, 1, E);
     }
 }
