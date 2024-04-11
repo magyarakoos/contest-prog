@@ -1,16 +1,14 @@
-
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-using point = array<int, 2>;
 
 int N, M, T, P, E, INF = 1e9;
-vector<vector<point>> g;
+vector<vector<array<int, 2>>> g;
 
 void bfs(int s, vector<int>& d) {
     queue<int> q({s});
     d[s] = 0;
     while (!q.empty()) {
+        int u = q.front(); q.pop();
         
     }
 }
