@@ -12,7 +12,7 @@ void bfs(int s, vector<int>& d, int min_w, int goal) {
         int u = q.front(); q.pop();
         if (u == goal) return;
         for (auto [v, w] : g[u]) {
-            if (d[u] + 1 < d[v] && min_w <= w) {
+            if (d[u] + 1 < d[v] && min_w <= w && ) {
                 d[v] = d[u] + 1;
                 q.push(v);
             }
