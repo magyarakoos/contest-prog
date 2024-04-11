@@ -4,11 +4,12 @@ using namespace std;
 int N, M, T, P, E, INF = 1e9;
 vector<vector<array<int, 2>>> g;
 
-void bfs(int s, vector<int>& d, int min_w) {
+void bfs(int s, vector<int>& d, int min_w, int goal) {
     queue<int> q({s});
     d[s] = 0;
     while (!q.empty()) {
         int u = q.front(); q.pop();
+        if (u == goal) return;
         for (auto [v, w] : g[u]) {
             if (d[u] + 1 < d[v] && min_w <= w) {
                 d[v] = d[u] + 1;
@@ -39,6 +40,6 @@ int main() {
         int K;
         cin >> K;
         jerry.assign(N + 1, INF);
-        bfs()
+        bfs(K,)
     }
 }
