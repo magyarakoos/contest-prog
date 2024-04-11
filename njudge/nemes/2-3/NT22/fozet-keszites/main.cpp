@@ -532,11 +532,23 @@ void solve() {
 
 	int a = 1, b = 1;
 	for (int i = 0; i < 500; i++) {
+		if (A < a || B < b) {
+			cout << result << "\n";
+			return;
+		}
+
 		auto s1 = simplify(a, b);
 		if (!used.count(s1)) {
+			A -= a;
 			result++;
 			used.insert(s1);
 		}
+
+		if (A < a || B < b) {
+			cout << result << "\n";
+			return;
+		}
+		
 		auto s2 = simplify(b, a);
 		if (!used.count(s2)) {
 			result++;
