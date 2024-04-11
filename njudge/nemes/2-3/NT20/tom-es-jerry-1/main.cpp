@@ -28,13 +28,13 @@ int main() {
     while (!q.empty()) {
         int u = q.front(); q.pop();
         for (auto [v, w] : g[u]) {
-            if (tom[u] + 1 < tom[v] && w == 2) {
+            if ( && w == 2) {
                 tom[v] = tom[u] + 1;
                 q.push(v);
             }
         }
     }
-    
+
     priority_queue<point> pq;
     pq.push({tom[E], E});
     while (!pq.empty()) {
