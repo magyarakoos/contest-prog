@@ -8,7 +8,6 @@ vector<int> tom, jerry;
 void bfs(int s, vector<int>& d, int min_w, int goal) {
     queue<int> q({s});
     d[s] = 0;
-    return;
     while (!q.empty()) {
         int u = q.front(); q.pop();
         if (u == goal) return;
@@ -27,6 +26,7 @@ int main() {
     cin >> N >> M >> T >> P >> E;
 
     g.resize(N + 1);
+    tom.assign(N + 1, INF);
     while (M--) {
         int A, B, S;
         cin >> A >> B >> S;
@@ -36,7 +36,6 @@ int main() {
     }
 
     bfs(T, tom, 2, 0);
-    exit(0);
     while (P--) {
         int K;
         cin >> K;
