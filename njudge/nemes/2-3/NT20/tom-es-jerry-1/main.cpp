@@ -36,11 +36,11 @@ int main() {
     }
 
     bfs(T, tom, 2, 0);
+    bfs(K, jerry, 1, E);
     while (P--) {
         int K;
         cin >> K;
         jerry.assign(N + 1, INF);
-        bfs(K, jerry, 1, E);
         cout << (jerry[E] < INF ? "IGEN\n" : "NEM\n");
     }
 }
