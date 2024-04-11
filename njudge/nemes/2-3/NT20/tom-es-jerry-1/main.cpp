@@ -36,7 +36,10 @@ int main() {
 
     priority_queue<point> pq;
     pq.push({tom[E], E});
-    
+    while (!pq.empty()) {
+        auto [dist, u] = pq.top(); pq.pop();
+        
+    }
 
     while (P--) {
         int K;
