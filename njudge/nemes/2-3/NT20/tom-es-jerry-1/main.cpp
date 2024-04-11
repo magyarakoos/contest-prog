@@ -31,7 +31,7 @@ int main() {
     tom[T] = 0;
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        for (auto [v, w] : tg[u]) {
+        for (int v : tg[u]) {
             if (tom[v] == INF) {
                 tom[v] = tom[u] + 1;
                 q.push(v);
@@ -45,7 +45,7 @@ int main() {
         auto [dist, u] = pq.top(); pq.pop();
         if (u < 0) continue;
         jerry[u] = 1;
-        for (auto [v, w] : g[u]) {
+        for (int v : g[u]) {
             if (jerry[v]) continue;
             pq.push({min(tom[u] - 1, dist - 1), v});
         }
