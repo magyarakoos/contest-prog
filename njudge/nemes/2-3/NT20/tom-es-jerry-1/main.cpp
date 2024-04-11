@@ -26,7 +26,7 @@ int main() {
     while (!q.empty()) {
         int u = q.front(); q.pop();
         for (auto v : tg[u]) {
-            if (tom[v] == INT_MAX) {
+            if (tom[v] == INF) {
                 tom[v] = tom[u] + 1;
                 q.push(v);
             }
