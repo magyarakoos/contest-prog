@@ -529,8 +529,8 @@ void solve() {
     cin >> A >> B;
     unsigned long long result = 0;
 	set<pair<int, int>> used;
+
 	
-    //cout << result << '\n';
 }
 
 int main() {
