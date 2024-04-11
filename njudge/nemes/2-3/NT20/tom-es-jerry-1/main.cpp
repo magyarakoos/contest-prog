@@ -14,7 +14,7 @@ int main() {
 
     g.resize(N + 1);
     tom.assign(N + 1, INF);
-    jerry.assign(N + 1, INF)
+    jerry.resize(N + 1);
     while (M--) {
         int A, B, S;
         cin >> A >> B >> S;
@@ -36,7 +36,6 @@ int main() {
     }
     priority_queue<point> pq;
     pq.push({tom[E], E});
-    jerry[E] = 1;
     while (!pq.empty()) {
         auto [dist, u] = pq.top(); pq.pop();
         if (u < 0) continue;
