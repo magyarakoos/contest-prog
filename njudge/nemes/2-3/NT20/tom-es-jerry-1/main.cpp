@@ -4,12 +4,14 @@ using namespace std;
 int N, M, T, P, E, INF = 1e9;
 vector<vector<array<int, 2>>> g;
 
-void bfs(int s, vector<int>& d) {
+void bfs(int s, vector<int>& d, int w) {
     queue<int> q({s});
     d[s] = 0;
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        
+        for (int v : g[u]) {
+            if (d[u] + 1 < d[v] && )
+        }
     }
 }
 
