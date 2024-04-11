@@ -23,11 +23,10 @@ int main() {
         g[A].push_back({B, S});
         g[B].push_back({A, S});
     }
-    queue<int> q({s});
-    d[s] = 0;
+    queue<int> q({T});
+    tom[T] = 0;
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        if (u == goal) return;
         for (auto [v, w] : g[u]) {
             if (d[u] + 1 < d[v] && min_w <= w && d[u] + 1 < tom[v]) {
                 d[v] = d[u] + 1;
