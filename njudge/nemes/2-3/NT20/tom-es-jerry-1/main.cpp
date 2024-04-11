@@ -1,55 +1,59 @@
 #include <bits/stdc++.h>
 using namespace std;
-using point = array<int, 2>;
-
-int N, M, T, P, E, INF = 1e9;
-vector<vector<point>> g;
-vector<int> tom;
-vector<bool> jerry;
 
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-    cin >> N >> M >> T >> P >> E;
-
-    g.resize(N + 1);
-    tom.assign(N + 1, INF);
-    jerry.resize(N + 1);
-    while (M--) {
-        int A, B, S;
-        cin >> A >> B >> S;
-    
-        g[A].push_back({B, S});
-        g[B].push_back({A, S});
+  cin.tie(0), ios::sync_with_stdio(0);
+  int N, m, tom_start, attempts, goal;
+  cin >> N >> m >> tom_start >> attempts >> goal;
+  vector<vector<int>> graph(N + 1), tom_graph(N + 1);
+  while (m--) {
+    int u, v, s;
+    cin >> u >> v >> s;
+    graph[u].push_back(v);
+    graph[v].push_back(u);
+    if (s == 2) {
+      tom_graph[u].push_back(v);
+      tom_graph[v].push_back(u);
     }
+  }
 
-    queue<int> q({T});
-    tom[T] = 0;
-    while (!q.empty()) {
-        int u = q.front(); q.pop();
-        for (auto [v, w] : g[u]) {
-            if (tom[v] == INF && w == 2) {
-                tom[v] = tom[u] + 1;
-                q.push(v);
-            }
-        }
+  vector<int> dist_from_tom(N + 1, INT_MAX);
+  queue<int> tq;
+  tq.push(tom_start);
+  dist_from_tom[tom_start] = 0;
+  while (!tq.empty()) {
+    int u = tq.front();
+    tq.pop();
+    for (auto v : tom_graph[u]) {
+      if (dist_from_tom[v] != INT_MAX)
+        continue;
+      dist_from_tom[v] = dist_from_tom[u] + 1;
+      tq.push(v);
     }
+  }
+  vector<bool> can_jerry_start_at(N + 1);
+  can_jerry_start_at[goal] = true;
+  priority_queue<array<int, 2>> pq;
+  pq.push({dist_from_tom[goal], goal});
+  while (!pq.empty()) {
+    auto [u_t, u] = pq.top();
+    pq.pop();
+    if (u_t < 0)
+      continue;
+    can_jerry_start_at[u] = true;
+    for (int v : graph[u]) {
+      if (can_jerry_start_at[v])
+        continue;
+      // jerry should be at position `v`
+      // not later than `T = dist_from_tom[v] - 1` to avoid getting caught
+      // not later than `T = u_t - 1` so that they can step to `u` right after
+      pq.push({min(dist_from_tom[v] - 1, u_t - 1), v});
+    }
+  }
 
-    priority_queue<point> pq;
-    pq.push({tom[E], E});
-    while (!pq.empty()) {
-        auto [dist, u] = pq.top(); pq.pop();
-        if (u < 0) continue;
-        jerry[u] = 1;
-        for (auto [v, w] : g[u]) {
-            if (jerry[v]) continue;
-            pq.push({min(tom[v] - 1, dist - 1), v});
-        }
-    }
-
-    while (P--) {
-        int K;
-        cin >> K;
-        cout << (jerry[K] ? "IGEN" : "NEM") << '\n';
-    }
+  while (attempts--) {
+    int jerry_start;
+    cin >> jerry_start;
+    cout << (can_jerry_start_at[jerry_start] ? "IGEN" : "NEM") << endl;
+  }
 }
