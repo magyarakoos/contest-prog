@@ -39,16 +39,16 @@ int main() {
     while (!pq.empty()) {
         auto [dist, u] = pq.top(); pq.pop();
         if (u < 0) continue;
-        
+        jerry[u] = 1;
         for (auto [v, w] : g[u]) {
             if (jerry[v]) continue;
-
+            pq.push()
         }
     }
 
     while (P--) {
         int K;
         cin >> K;
-        cout << (jerry[E] < INF ? "IGEN\n" : "NEM\n");
+        cout << (jerry[E] ? "IGEN" : "NEM") << '\n';
     }
 }
