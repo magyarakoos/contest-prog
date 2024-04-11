@@ -50,6 +50,6 @@ int main() {
     while (P--) {
         int K;
         cin >> K;
-        cout << (jerry[K] ? "IGEN" : "NEM") << endl;
+        cout << (jerry[K] ? "IGEN" : "NEM") << '\n';
     }
 }
