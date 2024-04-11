@@ -4,9 +4,12 @@ int N, M, T, P, E, INF = 1e9;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    
     cin >> N >> M >> T >> P >> E;
+
     vector<vector<int>> jg(N + 1), tg(N + 1);
+    vector<int> tom(N + 1, INF);
+    vector<bool> jerry(N + 1);
+
     while (M--) {
         int U, V, W;
         cin >> U >> V >> W;
@@ -18,7 +21,6 @@ int main() {
         }
     }
 
-    vector<int> tom(N + 1, INT_MAX);
     queue<int> q({T});
     tom[T] = 0;
     while (!q.empty()) {
@@ -31,9 +33,7 @@ int main() {
         }
     }
 
-    vector<bool> jerry(N + 1);
     jerry[E] = 1;
-
     priority_queue<array<int, 2>> pq;
     pq.push({tom[E], E});
     while (!pq.empty()) {
