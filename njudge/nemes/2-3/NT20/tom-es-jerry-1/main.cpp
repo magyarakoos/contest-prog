@@ -21,17 +21,17 @@ int main() {
   queue<int> q({T});
   tom[T] = 0;
   while (!q.empty()) {
-    int u = q.front();
-    q.pop();
+    int u = q.front(); q.pop();
     for (auto v : tg[u]) {
-      if (tom[v] != INT_MAX)
-        continue;
-      tom[v] = tom[u] + 1;
-      q.push(v);
+      if (tom[v] == INT_MAX) {
+        tom[v] = tom[u] + 1;
+        q.push(v);
+      }
     }
   }
-  vector<bool> can_jerry_start_at(N + 1);
-  can_jerry_start_at[E] = true;
+
+  vector<bool> jerry(N + 1);
+  jerry[E] = 1;
   priority_queue<array<int, 2>> pq;
   pq.push({tom[E], E});
   while (!pq.empty()) {
@@ -39,9 +39,9 @@ int main() {
     pq.pop();
     if (u_t < 0)
       continue;
-    can_jerry_start_at[u] = true;
+    jerry[u] = true;
     for (int v : jg[u]) {
-      if (can_jerry_start_at[v])
+      if (jerry[v])
         continue;
       // jerry should be at position `v`
       // not later than `T = dist_from_tom[v] - 1` to avoid getting caught
@@ -53,6 +53,6 @@ int main() {
   while (P--) {
     int jerry_start;
     cin >> jerry_start;
-    cout << (can_jerry_start_at[jerry_start] ? "IGEN" : "NEM") << endl;
+    cout << (jerry[jerry_start] ? "IGEN" : "NEM") << endl;
   }
 }
