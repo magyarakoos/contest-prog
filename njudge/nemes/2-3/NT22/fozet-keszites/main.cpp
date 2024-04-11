@@ -530,8 +530,9 @@ void solve() {
     unsigned long long result = 0;
 	set<pair<int, int>> used;
 
+	int a = 1, b = 1;
 	for (int i = 0; i < 500; i++) {
-		
+		if (!used.count())
 	}
 }
 
