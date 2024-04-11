@@ -33,7 +33,6 @@ int main() {
             }
         }
     }
-
     priority_queue<point> pq;
     pq.push({tom[E], E});
     while (!pq.empty()) {
@@ -45,6 +44,7 @@ int main() {
             pq.push({min(tom[u] - 1, dist - 1), v});
         }
     }
+    exit(0);
 
     while (P--) {
         int K;
