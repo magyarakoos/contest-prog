@@ -24,7 +24,7 @@ int main() {
     cin >> N >> M >> T >> P >> E;
 
     g.resize(N + 1);
-    vector<int> tom(N + 1, INF), jerry(N + 1, INF);
+    vector<int> tom(N + 1, INF), jerry;
     while (M--) {
         int A, B, S;
         cin >> A >> B >> S;
@@ -33,7 +33,7 @@ int main() {
         g[B].push_back({A, S});
     }
 
-    bfs()
+    bfs(T, tom, 2);
 
     while (P--) {
         int K;
