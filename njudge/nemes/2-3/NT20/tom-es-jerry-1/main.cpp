@@ -42,7 +42,7 @@ int main() {
         jerry[u] = 1;
         for (auto [v, w] : g[u]) {
             if (jerry[v]) continue;
-            pq.push()
+            pq.push({min(tom[u] - 1, dist - 1), v});
         }
     }
 
