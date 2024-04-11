@@ -506,21 +506,12 @@ const vector<vector<int>> facts
 	{2, 5}
 };
 
+
+
 void solve() {
     int A, B;
     cin >> A >> B;
     unsigned long long result = 0;
-
-    for (int a = 1; a <= A; a++) {
-        int b = B;
-        for (int factor : facts[a]) {
-            for (int i = factor; i <= B; i += factor) {
-                b--;
-            }
-        }
-        cout << a << ' ' << b << '\n';
-        result += a * b;
-    }
 
     //cout << result << '\n';
 }
