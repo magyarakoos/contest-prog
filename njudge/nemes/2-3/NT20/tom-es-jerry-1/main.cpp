@@ -28,7 +28,7 @@ int main() {
     while (!q.empty()) {
         int u = q.front(); q.pop();
         for (auto [v, w] : g[u]) {
-            if (d[u] + 1 < d[v] && min_w <= w && d[u] + 1 < tom[v]) {
+            if (tom[u] + 1 < tom[v] && min_w <= w && d[u] + 1 < tom[v]) {
                 d[v] = d[u] + 1;
                 q.push(v);
             }
