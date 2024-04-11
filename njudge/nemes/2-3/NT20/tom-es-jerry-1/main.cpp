@@ -37,7 +37,7 @@ vector<T> prefix_sum(const vector<T>& v) {
 
 int N, M, T, P, E;
 vector<vector<point>> g;
-vector<vector<int>>
+vector<vector<int>> tom, jerry;
 
 int main() {
     speed;
@@ -45,7 +45,8 @@ int main() {
     cin >> N >> M >> T >> P >> E;
 
     g.resize(N + 1);
-
+    tom.resize(N + 1);
+    jerry.resize(N + 1);
     while (M--) {
         int A, B, S;
         cin >> A >> B >> S;
@@ -54,8 +55,7 @@ int main() {
         g[B].push_back({A, S});
     }
 
-    vector<vector<int>> tom_distS, jerry_distS;
-    /// TODO: solve
+    
 
     while (P--) {
         int K;
