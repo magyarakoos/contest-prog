@@ -28,7 +28,7 @@ int main() {
     while (!q.empty()) {
         int u = q.front(); q.pop();
         for (auto [v, w] : g[u]) {
-            if ( && w == 2) {
+            if (tom[v] == INF && w == 2) {
                 tom[v] = tom[u] + 1;
                 q.push(v);
             }
