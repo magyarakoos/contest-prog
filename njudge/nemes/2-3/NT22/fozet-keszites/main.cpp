@@ -516,7 +516,10 @@ const vector<int> primes {
 
 pair<int, int> simplify(int a, int b) {
 	for (int prime : primes) {
-		
+		if (a % prime == 0 && b % prime == 0) {
+			a /= prime;
+			b /= prime;
+		}
 	}
 	return {a, b};
 }
@@ -525,7 +528,8 @@ void solve() {
     int A, B;
     cin >> A >> B;
     unsigned long long result = 0;
-
+	set<pair<int, int>> used;
+	
     //cout << result << '\n';
 }
 
