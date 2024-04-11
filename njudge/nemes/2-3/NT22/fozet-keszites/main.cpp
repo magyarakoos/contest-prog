@@ -1,19 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-pair<int, int> simplify(int a, int b) {
-	for (int prime : primes) {
-		if (a % prime == 0 && b % prime == 0) {
-			a /= prime;
-			b /= prime;
-		}
-	}
-	return {a, b};
+void solve() {
+	int A, B;
+	cin >> A >> B;
 }
 
-void solve() {}
-
 int main() {
+	cin.tie(0), ios::sync_with_stdio(0);
     int T;
     cin >> T;
     while (T--) solve();
