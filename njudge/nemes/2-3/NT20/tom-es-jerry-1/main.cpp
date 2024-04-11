@@ -16,13 +16,14 @@ int main() {
     tom.assign(N + 1, INF);
     jerry.resize(N + 1);
     while (M--) {
-        int U, V, S;
-        cin >> U >> V >> S;
+        int U, V, W;
+        cin >> U >> V >> W;
     
         jg[U].push_back(V);
         jg[V].push_back(U);
-        if (S == 2) {
-
+        if (W == 2) {
+            tg[U].push_back(V);
+            tg[V].push_back(U);
         }
     }
 
@@ -30,7 +31,7 @@ int main() {
     tom[T] = 0;
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        for (auto [v, w] : g[u]) {
+        for (auto [v, w] : tg[u]) {
             if (tom[v] == INF && w == 2) {
                 tom[v] = tom[u] + 1;
                 q.push(v);
