@@ -40,7 +40,7 @@ int main() {
         int K;
         cin >> K;
         jerry.assign(N + 1, INF);
-        bfs(K, jerry, 1, E);
+        //bfs(K, jerry, 1, E);
         cout << (jerry[E] < INF ? "IGEN\n" : "NEM\n");
     }
 }
