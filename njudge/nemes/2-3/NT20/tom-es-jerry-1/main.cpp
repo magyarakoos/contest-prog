@@ -37,6 +37,7 @@ vector<T> prefix_sum(const vector<T>& v) {
 
 int N, M, T, P, E;
 vector<vector<point>> g;
+vector<vector<int>>
 
 int main() {
     speed;
