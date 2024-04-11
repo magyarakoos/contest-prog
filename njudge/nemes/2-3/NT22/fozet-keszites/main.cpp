@@ -540,6 +540,7 @@ void solve() {
 		auto s1 = simplify(a, b);
 		if (!used.count(s1)) {
 			A -= a;
+			B -= b;
 			result++;
 			used.insert(s1);
 		}
@@ -548,12 +549,16 @@ void solve() {
 			cout << result << "\n";
 			return;
 		}
-		
+
 		auto s2 = simplify(b, a);
 		if (!used.count(s2)) {
+			A -= a;
+			B -= b;
 			result++;
 			used.insert(s2);
 		}
+
+		if (i % 2 )
 	}
 }
 
