@@ -17,24 +17,23 @@ int main() {
     }
   }
 
-  vector<int> dist_from_tom(N + 1, INT_MAX);
-  queue<int> tq;
-  tq.push(T);
-  dist_from_tom[T] = 0;
-  while (!tq.empty()) {
-    int u = tq.front();
-    tq.pop();
+  vector<int> tom(N + 1, INT_MAX);
+  queue<int> q({T});
+  tom[T] = 0;
+  while (!q.empty()) {
+    int u = q.front();
+    q.pop();
     for (auto v : tg[u]) {
-      if (dist_from_tom[v] != INT_MAX)
+      if (tom[v] != INT_MAX)
         continue;
-      dist_from_tom[v] = dist_from_tom[u] + 1;
-      tq.push(v);
+      tom[v] = tom[u] + 1;
+      q.push(v);
     }
   }
   vector<bool> can_jerry_start_at(N + 1);
   can_jerry_start_at[E] = true;
   priority_queue<array<int, 2>> pq;
-  pq.push({dist_from_tom[E], E});
+  pq.push({tom[E], E});
   while (!pq.empty()) {
     auto [u_t, u] = pq.top();
     pq.pop();
@@ -47,7 +46,7 @@ int main() {
       // jerry should be at position `v`
       // not later than `T = dist_from_tom[v] - 1` to avoid getting caught
       // not later than `T = u_t - 1` so that they can step to `u` right after
-      pq.push({min(dist_from_tom[v] - 1, u_t - 1), v});
+      pq.push({min(tom[v] - 1, u_t - 1), v});
     }
   }
 
