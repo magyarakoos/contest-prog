@@ -14,6 +14,7 @@ int main() {
 
     g.resize(N + 1);
     tom.assign(N + 1, INF);
+    jerry.assign(N + 1, INF)
     while (M--) {
         int A, B, S;
         cin >> A >> B >> S;
