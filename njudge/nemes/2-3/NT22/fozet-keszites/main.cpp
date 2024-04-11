@@ -522,7 +522,7 @@ void solve() {
         result += a * b;
     }
 
-    cout << result << '\n';
+    //cout << result << '\n';
 }
 
 int main() {
