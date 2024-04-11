@@ -41,5 +41,6 @@ int main() {
         cin >> K;
         jerry.assign(N + 1, INF);
         bfs(K, jerry, 1, E);
+        if ()
     }
 }
