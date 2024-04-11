@@ -32,7 +32,7 @@ int main() {
     while (!q.empty()) {
         int u = q.front(); q.pop();
         for (auto [v, w] : tg[u]) {
-            if (tom[v] == INF && w == 2) {
+            if (tom[v] == INF) {
                 tom[v] = tom[u] + 1;
                 q.push(v);
             }
