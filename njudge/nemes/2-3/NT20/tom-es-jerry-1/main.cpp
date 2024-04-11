@@ -34,6 +34,7 @@ int main() {
             }
         }
     }
+    
     priority_queue<point> pq;
     pq.push({tom[E], E});
     while (!pq.empty()) {
