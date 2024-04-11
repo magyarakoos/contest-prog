@@ -34,7 +34,8 @@ int main() {
         }
     }
 
-    priority_queue<point> pq({{tom[E], E}});
+    priority_queue<point> pq;
+    pq.push({tom[E], E});
     
 
     while (P--) {
