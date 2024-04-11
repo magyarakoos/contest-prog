@@ -530,7 +530,9 @@ void solve() {
     unsigned long long result = 0;
 	set<pair<int, int>> used;
 
-	
+	for (int a = 1; a <= A; a++) {
+		for ()
+	}
 }
 
 int main() {
