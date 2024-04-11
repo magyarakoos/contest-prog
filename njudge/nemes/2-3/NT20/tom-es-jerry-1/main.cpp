@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+using point = array<int, 2>;
 
 int N, M, T, P, E, INF = 1e9;
-vector<vector<array<int, 2>>> g;
-vector<int> tom, jerry;
+vector<vector<point>> g;
+vector<int> tom;
+vector<bool> jerry;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -31,6 +33,8 @@ int main() {
             }
         }
     }
+
+    prio
 
     while (P--) {
         int K;
