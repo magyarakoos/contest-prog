@@ -11,7 +11,8 @@ void bfs(int s, vector<int>& d, int min_w) {
         int u = q.front(); q.pop();
         for (auto [v, w] : g[u]) {
             if (d[u] + 1 < d[v] && min_w <= w) {
-                q.push();
+                d[v] = d[u] + 1;
+                q.push(v);
             }
         }
     }
@@ -32,10 +33,10 @@ int main() {
         g[B].push_back({A, S});
     }
 
+    bfs()
 
     while (P--) {
         int K;
         cin >> K;
-        cout << (K & 1 ? "IGEN" : "NEM") << '\n';
     }
 }
