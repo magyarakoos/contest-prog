@@ -515,7 +515,10 @@ const vector<int> primes {
 };
 
 pair<int, int> simplify(int a, int b) {
-	
+	for (int prime : primes) {
+		
+	}
+	return {a, b};
 }
 
 void solve() {
