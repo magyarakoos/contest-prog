@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-using point = array<int, 2>;
 
 int N, M, T, P, E, INF = INT_MAX;
-vector<vector<point>> g;
+vector<vector<int>> tg, jg;
 vector<int> tom;
 vector<bool> jerry;
 
@@ -12,7 +11,8 @@ int main() {
 
     cin >> N >> M >> T >> P >> E;
 
-    g.resize(N + 1);
+    tg.resize(N + 1);
+    jg.resize(N + 1);
     tom.assign(N + 1, INF);
     jerry.resize(N + 1);
     while (M--) {
@@ -35,7 +35,7 @@ int main() {
         }
     }
 
-    priority_queue<point> pq;
+    priority_queue<array<int, 2>> pq;
     pq.push({tom[E], E});
     while (!pq.empty()) {
         auto [dist, u] = pq.top(); pq.pop();
