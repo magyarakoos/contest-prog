@@ -3,28 +3,28 @@ using namespace std;
 
 int main() {
   cin.tie(0), ios::sync_with_stdio(0);
-  int N, m, tom_start, attempts, goal;
-  cin >> N >> m >> tom_start >> attempts >> goal;
-  vector<vector<int>> graph(N + 1), tom_graph(N + 1);
-  while (m--) {
-    int u, v, s;
-    cin >> u >> v >> s;
-    graph[u].push_back(v);
-    graph[v].push_back(u);
-    if (s == 2) {
-      tom_graph[u].push_back(v);
-      tom_graph[v].push_back(u);
+  int N, M, T, P, E;
+  cin >> N >> M >> T >> P >> E;
+  vector<vector<int>> jg(N + 1), tg(N + 1);
+  while (M--) {
+    int U, V, W;
+    cin >> U >> V >> W;
+    jg[U].push_back(V);
+    jg[V].push_back(U);
+    if (W == 2) {
+      tg[U].push_back(V);
+      tg[V].push_back(U);
     }
   }
 
   vector<int> dist_from_tom(N + 1, INT_MAX);
   queue<int> tq;
-  tq.push(tom_start);
-  dist_from_tom[tom_start] = 0;
+  tq.push(T);
+  dist_from_tom[T] = 0;
   while (!tq.empty()) {
     int u = tq.front();
     tq.pop();
-    for (auto v : tom_graph[u]) {
+    for (auto v : tg[u]) {
       if (dist_from_tom[v] != INT_MAX)
         continue;
       dist_from_tom[v] = dist_from_tom[u] + 1;
@@ -32,16 +32,16 @@ int main() {
     }
   }
   vector<bool> can_jerry_start_at(N + 1);
-  can_jerry_start_at[goal] = true;
+  can_jerry_start_at[E] = true;
   priority_queue<array<int, 2>> pq;
-  pq.push({dist_from_tom[goal], goal});
+  pq.push({dist_from_tom[E], E});
   while (!pq.empty()) {
     auto [u_t, u] = pq.top();
     pq.pop();
     if (u_t < 0)
       continue;
     can_jerry_start_at[u] = true;
-    for (int v : graph[u]) {
+    for (int v : jg[u]) {
       if (can_jerry_start_at[v])
         continue;
       // jerry should be at position `v`
@@ -51,7 +51,7 @@ int main() {
     }
   }
 
-  while (attempts--) {
+  while (P--) {
     int jerry_start;
     cin >> jerry_start;
     cout << (can_jerry_start_at[jerry_start] ? "IGEN" : "NEM") << endl;
