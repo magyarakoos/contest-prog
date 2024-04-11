@@ -532,9 +532,12 @@ void solve() {
 
 	int a = 1, b = 1;
 	for (int i = 0; i < 500; i++) {
-		if (!used.count(simplify(a, b))) {
-			result
+		auto s1 = simplify(a, b);
+		if (!used.count(s1)) {
+			result++;
+			used.insert(s1);
 		}
+		
 	}
 }
 
