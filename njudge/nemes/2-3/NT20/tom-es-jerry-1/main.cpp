@@ -7,8 +7,12 @@ using point = array<int, 2>;
 int N, M, T, P, E, INF = 1e9;
 vector<vector<point>> g;
 
-void bfs(int s, vector<vector<int>>& d) {
+void bfs(int s, vector<int>& d) {
+    queue<int> q({s});
     d[s] = 0;
+    while (!q.empty()) {
+        
+    }
 }
 
 int main() {
@@ -17,7 +21,7 @@ int main() {
     cin >> N >> M >> T >> P >> E;
 
     g.resize(N + 1);
-    vector<vector<int>> tom(N + 1), jerry(N + 1);
+    vector<int> tom(N + 1, INF), jerry(N + 1, INF);
     while (M--) {
         int A, B, S;
         cin >> A >> B >> S;
