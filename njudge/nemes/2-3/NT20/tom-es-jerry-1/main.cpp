@@ -45,9 +45,9 @@ int main() {
         auto [dist, u] = pq.top(); pq.pop();
         if (u < 0) continue;
         jerry[u] = 1;
-        for (int v : g[u]) {
+        for (int v : jg[u]) {
             if (jerry[v]) continue;
-            pq.push({min(tom[u] - 1, dist - 1), v});
+            pq.push({min(tom[] - 1, dist - 1), v});
         }
     }
 
