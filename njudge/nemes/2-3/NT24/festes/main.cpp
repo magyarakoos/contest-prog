@@ -3,6 +3,16 @@ using namespace std;
 using ll = long long;
 #define vec vector
 
+void solve() {
+    vec<ll> dp(N + 1);
+    for (int j = 1; j <= N; j++) {
+        dp[j] = LLONG_MAX;
+        for (int k = 0; k < j; k++) {
+            dp[j] = min(dp[j], dp[k] + colS[])
+        }
+    }
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int N, M;
@@ -29,13 +39,7 @@ int main() {
         }
         ll curr = 0;
 
-        vec<ll> dp(N + 1);
-        for (int j = 1; j <= N; j++) {
-            dp[j] = LLONG_MAX;
-            for (int k = 0; k < j; k++) {
-                dp[j] = min(dp[j], dp[k] + colS[])
-            }
-        }
+        
 
         res = min(res, curr);
     }
