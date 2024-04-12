@@ -21,8 +21,8 @@ ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     cin >> N >> M;
-    vec<ll> rowS(N);
-    vec<vec<vec<ll>>> colS(M, vec<vec<ll>>(N, vec<ll>(N)));
+    vec<ll> rowS(N + 1);
+    vec<vec<vec<ll>>> colS(M + 1, vec<vec<ll>>(N, vec<ll>(N)));
 
     for (int i = 0; i < N; i++) {
         cin >> rowS[i];
