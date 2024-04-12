@@ -40,8 +40,7 @@ int main() {
         ll curr = 0;
         vec<bool> mask(N + 1);
         for (int j = 0; j < N; j++) {
-            mask[j + 1] = (i >> j) & 1;
-            if (mask[j + 1]) curr += rowS[j];
+            if (mask[j + 1] = (i >> j) & 1) curr += rowS[j];
         }
 
         for (int j = 0; j < M; j++) {
