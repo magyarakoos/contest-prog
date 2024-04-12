@@ -58,7 +58,7 @@ int main() {
         }
     }
 
-    for (int i = 0; i < (1 << N); i++) {
-        
+    for (int mask = 0; mask < (1 << N); mask++) {
+
     }
 }
