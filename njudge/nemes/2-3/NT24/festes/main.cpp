@@ -14,7 +14,9 @@ void solve(vector<bool> painted) {
         for (int i = 0; i < N; i++) {
             if (painted[i]) curr += rowS[i];
         }
+
         for (int i = 0; i < M; i++) {
+            ll mn = LLONG_MAX;
             for (int j = 0; j < N; j++) {
                 for (int k = j; k < N; k++) {
 
