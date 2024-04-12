@@ -2,10 +2,6 @@
 using namespace std;
 using ll = long long;
 #define vec vector
-#define sz(v) (int)v.size()
-
-vec<ll> rowS;
-vec<vec<vec<ll>>> colS;
 
 void solve(vector<bool> painted) {
     if (sz(painted) == N) {
@@ -41,9 +37,10 @@ void solve(vector<bool> painted) {
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
+    int N, M;
     cin >> N >> M;
-    rowS.resize(N);
-    colS.assign(M, vec<vec<ll>>(N, vec<ll>(N)));
+    vec<ll> rowS(N);
+    vec<vec<vec<ll>>> colS(M, vec<vec<ll>>(N, vec<ll>(N)));
 
     for (int i = 0; i < N; i++) {
         cin >> rowS[i];
