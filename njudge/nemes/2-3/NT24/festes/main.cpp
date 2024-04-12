@@ -29,7 +29,7 @@ int main() {
     }
     for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= N; j++) {
-            for (int k = j; k < N; k++) {
+            for (int k = j; k <= N; k++) {
                 cin >> colS[i][j][k];
             }
         }
@@ -38,10 +38,10 @@ int main() {
     ll res = LLONG_MAX;
     for (int i = 0; i < (1 << N); i++) {
         ll curr = 0;
-        vec<bool> mask(N);
+        vec<bool> mask(N + 1);
         for (int j = 0; j < N; j++) {
-            mask[j] = (i >> j) & 1;
-            if (mask[j]) curr += rowS[j];
+            mask[j + 1] = (i >> j) & 1;
+            if (mask[j + 1]) curr += rowS[j];
         }
 
         for (int j = 0; j < M; j++) {
