@@ -4,10 +4,8 @@ using ll = long long;
 #define vec vector
 #define sz(v) (int)v.size()
 
-int N, M;
 vec<ll> rowS;
 vec<vec<vec<ll>>> colS;
-ll res = LLONG_MAX;
 
 void solve(vector<bool> painted) {
     if (sz(painted) == N) {
