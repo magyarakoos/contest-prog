@@ -14,8 +14,7 @@ void solve(vector<bool> painted) {
         for (int i = 0; i < N; i++) {
             if (painted[i]) curr += rowS[i];
         }
-
-        
+        vec<ll> dp(N)
     } else {
         painted.push_back(0);
         solve(painted);
