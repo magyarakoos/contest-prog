@@ -9,7 +9,7 @@ void solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
     for (int j = 1; j <= N; j++) {
         dp[j] = LLONG_MAX;
         for (int k = 0; k < j; k++) {
-            dp[j] = min(dp[j], dp[k] + col[k][j]);
+            dp[j] = min(dp[j], dp[k] + col[k + 1][j]);
         }
     }
 }
