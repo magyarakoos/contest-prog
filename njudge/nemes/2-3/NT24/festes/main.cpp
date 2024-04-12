@@ -8,11 +8,11 @@ ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
     vec<ll> dp(N + 1, LLONG_MAX);
     dp[0] = 0;
     for (int j = 1; j <= N; j++) {
-        if (mask[j - 1]) {
+        if (mask[j]) {
             dp[j] = dp[j - 1];
         }
         for (int k = 0; k < j; k++) {
-            dp[j] = min(dp[j], dp[k] + col[k][j - 1]);
+            dp[j] = min(dp[j], dp[k] + col[k + 1][j]);
         }
     }
     return dp[N];
@@ -43,7 +43,7 @@ int main() {
             if (mask[j + 1] = (i >> j) & 1) curr += rowS[j];
         }
 
-        for (int j = 0; j < M; j++) {
+        for (int j = 1; j <= M; j++) {
             curr += solve(mask, colS[j]);
         }
 
