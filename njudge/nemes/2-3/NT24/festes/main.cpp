@@ -8,11 +8,11 @@ ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
     vec<ll> dp(N + 1, LLONG_MAX);
     dp[0] = 0;
     for (int j = 1; j <= N; j++) {
-        if (mask[j]) {
+        if (mask[j - 1]) {
             dp[j] = dp[j - 1];
         }
         for (int k = 0; k < j; k++) {
-            dp[j] = min(dp[j], dp[k] + col[k + 1][j]);
+            dp[j] = min(dp[j], dp[k] + col[k][j - 1]);
         }
     }
     return dp[N];
@@ -21,15 +21,15 @@ ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     cin >> N >> M;
-    vec<ll> rowS(N + 1);
-    vec<vec<vec<ll>>> colS(M + 1, vec<vec<ll>>(N + 1, vec<ll>(N + 1)));
+    vec<ll> rowS(N);
+    vec<vec<vec<ll>>> colS(M, vec<vec<ll>>(N, vec<ll>(N)));
 
-    for (int i = 1; i <= N; i++) {
+    for (int i = 0; i < N; i++) {
         cin >> rowS[i];
     }
-    for (int i = 1; i <= M; i++) {
-        for (int j = 1; j <= N; j++) {
-            for (int k = j; k <= N; k++) {
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int k = j; k < N; k++) {
                 cin >> colS[i][j][k];
             }
         }
@@ -38,12 +38,13 @@ int main() {
     ll res = LLONG_MAX;
     for (int i = 0; i < (1 << N); i++) {
         ll curr = 0;
-        vec<bool> mask(N + 1);
+        vec<bool> mask(N);
         for (int j = 0; j < N; j++) {
-            if (mask[j + 1] = (i >> j) & 1) curr += rowS[j];
+            mask[j] = (i >> j) & 1;
+            if (mask[j]) curr += rowS[j];
         }
 
-        for (int j = 1; j <= M; j++) {
+        for (int j = 0; j < M; j++) {
             curr += solve(mask, colS[j]);
         }
 
