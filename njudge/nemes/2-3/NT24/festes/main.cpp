@@ -10,6 +10,9 @@ int main() {
     vec<ll> rowS(N);
     vec<vec<vec<ll>>> colS(M, vec<vec<ll>>(N, vec<ll>(N)));
     for (int i = 0; i < N; i++) {
+        cin >> rowS[i];
+    }
+    for (int i = 0; i < M; i++) {
         
     }
 }
