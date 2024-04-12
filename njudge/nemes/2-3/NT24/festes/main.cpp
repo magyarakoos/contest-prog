@@ -17,7 +17,8 @@ void solve(vector<bool> painted) {
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
                 for (int k = j; k < N; k++) {
-                    
+
+                    vector<bool> mask = painted;
                 }
             }
         }
