@@ -7,12 +7,13 @@ int N, M;
 ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
     vec<ll> dp(N + 1, LLONG_MAX);
     dp[0] = 0;
-    for (int j = 1; j <= N; j++) {
-        if (mask[j - 1]) {
-            dp[j] = dp[j - 1];
+    for (int i = 1; i <= N; i++) {
+        if (mask[i - 1]) {
+            dp[i] = dp[i - 1];
         }
-        for (int k = 0; k < j; k++) {
-            dp[j] = min(dp[j], dp[k] + col[k][j - 1]);
+        for (int k = 0; k < i; k++) {
+            for ()
+            dp[i] = min(dp[i], dp[k] + col[k][i - 1]);
         }
     }
     return dp[N];
