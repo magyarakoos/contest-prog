@@ -34,8 +34,6 @@ int main() {
             }
         }
     }
-
-    ll res = LLONG_MAX;
     for (int i = 0; i < (1 << N); i++) {
         ll base = 0;
         vec<bool> mask(N);
@@ -44,8 +42,8 @@ int main() {
             if (mask[j]) base += rowS[j];
         }
 
-        
-
-        res = min(res, base);
+        for (int j = 0; j < M; j++) {
+            base += solve(mask, colS[])
+        }
     }
 }
