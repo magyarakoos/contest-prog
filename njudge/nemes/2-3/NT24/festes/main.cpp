@@ -43,7 +43,9 @@ int main() {
         }
         ll curr = 0;
         
-        
+        for (int j = 0; j < N; j++) {
+            if (mask[j]) curr += j
+        }
 
         res = min(res, curr);
     }
