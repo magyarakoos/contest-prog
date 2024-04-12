@@ -28,7 +28,10 @@ void solve(vector<bool> painted) {
                     }
                 }
             }
+            curr += mn;
         }
+
+        cout << curr;
     } else {
         painted.push_back(0);
         solve(painted);
