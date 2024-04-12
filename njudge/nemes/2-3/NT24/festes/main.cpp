@@ -22,13 +22,13 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     cin >> N >> M;
     vec<ll> rowS(N + 1);
-    vec<vec<vec<ll>>> colS(M + 1, vec<vec<ll>>(N, vec<ll>(N)));
+    vec<vec<vec<ll>>> colS(M + 1, vec<vec<ll>>(N + 1, vec<ll>(N + 1)));
 
-    for (int i = 0; i < N; i++) {
+    for (int i = 1; i <= N; i++) {
         cin >> rowS[i];
     }
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
+    for (int i = 1; i <= M; i++) {
+        for (int j = 1; j <= N; j++) {
             for (int k = j; k < N; k++) {
                 cin >> colS[i][j][k];
             }
