@@ -5,11 +5,12 @@ using ll = long long;
 
 int N, M;
 vec<ll> rowS;
-vec<bool> 
 vec<vec<vec<ll>>> colS;
 ll res = LLONG_MAX;
 
-void solve()
+void solve(vector<bool> painted) {
+    if (painted.size() == N)
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
