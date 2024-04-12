@@ -8,6 +8,9 @@ ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
     vec<ll> dp(N + 1, LLONG_MAX);
     dp[0] = 0;
     for (int j = 1; j <= N; j++) {
+        if (mask[j - 1]) {
+            dp[j] = dp[j - 1];
+        }
         for (int k = 0; k < j; k++) {
             dp[j] = min(dp[j], dp[k] + col[k][j - 1]);
         }
