@@ -9,5 +9,7 @@ int main() {
     cin >> N >> M;
     vec<ll> rowS(N);
     vec<vec<vec<ll>>> colS(M, vec<vec<ll>>(N, vec<ll>(N)));
-
+    for (int i = 0; i < N; i++) {
+        
+    }
 }
