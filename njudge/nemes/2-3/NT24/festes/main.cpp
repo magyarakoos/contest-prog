@@ -58,7 +58,7 @@ int main() {
         }
     }
 
-    ll res = LLONG_MAX
+    ll res = LLONG_MAX;
     for (int mask = 0; mask < (1 << N); mask++) {
         ll curr = 0;
     }
