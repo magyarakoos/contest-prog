@@ -15,7 +15,11 @@ void solve(vector<bool> painted) {
             if (painted[i]) curr += rowS[i];
         }
         for (int i = 0; i < M; i++) {
-            
+            for (int j = 0; j < N; j++) {
+                for (int k = j; k < N; k++) {
+                    
+                }
+            }
         }
     } else {
         painted.push_back(0);
