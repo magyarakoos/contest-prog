@@ -19,13 +19,12 @@ void solve(vector<bool> painted) {
             ll mn = LLONG_MAX;
             for (int j = 0; j < N; j++) {
                 for (int k = j; k < N; k++) {
-
                     vector<bool> mask = painted;
                     for (int l = j; l <= k; l++) {
                         mask[l] = 1;
                     }
                     if (count(mask.begin(), mask.end(), 1) != N) {
-                        continue;
+                        mn = min(mn, colS[i][j][k]);
                     }
                 }
             }
