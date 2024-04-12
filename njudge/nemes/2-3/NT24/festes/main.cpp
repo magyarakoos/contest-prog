@@ -37,16 +37,15 @@ int main() {
 
     ll res = LLONG_MAX;
     for (int i = 0; i < (1 << N); i++) {
+        ll base = 0;
         vec<bool> mask(N);
         for (int j = 0; j < N; j++) {
             mask[j] = (i >> j) & 1;
-        }
-        ll curr = 0;
-        
-        for (int j = 0; j < N; j++) {
-            if (mask[j]) curr += j
+            if (mask[j]) base += rowS[j];
         }
 
-        res = min(res, curr);
+        
+
+        res = min(res, base);
     }
 }
