@@ -13,7 +13,7 @@ ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
         }
         for (int j = 0; j < i; j++) {
             for (int k = 0; k <= j; k++) {
-                dp[i] = min(dp[i], dp[j] + col[][]);
+                dp[i] = min(dp[i], dp[j] + col[k][i - 1]);
             }
         }
     }
