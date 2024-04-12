@@ -34,16 +34,22 @@ int main() {
             }
         }
     }
+
+    ll res = LLONG_MAX;
     for (int i = 0; i < (1 << N); i++) {
-        ll base = 0;
+        ll curr = 0;
         vec<bool> mask(N);
         for (int j = 0; j < N; j++) {
             mask[j] = (i >> j) & 1;
-            if (mask[j]) base += rowS[j];
+            if (mask[j]) curr += rowS[j];
         }
 
         for (int j = 0; j < M; j++) {
-            base += solve(mask, colS[])
+            curr += solve(mask, colS[j]);
         }
+
+        res = min(res, curr);
     }
+
+    cout << res;
 }
