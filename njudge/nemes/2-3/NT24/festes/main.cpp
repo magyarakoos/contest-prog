@@ -23,11 +23,13 @@ int main() {
 
     ll res = LLONG_MAX;
     for (int i = 0; i < (1 << N); i++) {
-        vector<bool> mask(N);
-        
+        vec<bool> mask(N);
+        for (int j = 0; j < N; j++) {
+            mask[j] = (i >> j) & 1;
+        }
         ll curr = 0;
 
-
+        vec<
 
         res = min(res, curr);
     }
