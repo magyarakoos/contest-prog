@@ -1,4 +1,4 @@
-// N(N + 1)/2 * 
+// N(N + 1)/2 * (N + M(N(N + 1)/2))
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
