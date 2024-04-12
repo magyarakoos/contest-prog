@@ -19,6 +19,9 @@ void solve(vector<bool> painted) {
                 for (int k = j; k < N; k++) {
 
                     vector<bool> mask = painted;
+                    for (int l = j; l <= k; l++) {
+                        mask[l] = 1;
+                    }
                 }
             }
         }
