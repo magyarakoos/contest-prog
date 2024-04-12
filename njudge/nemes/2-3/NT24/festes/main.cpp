@@ -4,7 +4,7 @@ using ll = long long;
 #define vec vector
 int N, M;
 
-void solve(int N, int M, const vec<) {
+void solve(const vector<bool>& mask) {
     vec<ll> dp(N + 1);
     for (int j = 1; j <= N; j++) {
         dp[j] = LLONG_MAX;
