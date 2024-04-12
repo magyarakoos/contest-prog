@@ -23,7 +23,7 @@ void solve(vector<bool> painted) {
                     for (int l = j; l <= k; l++) {
                         mask[l] = 1;
                     }
-                    if (count(mask.begin(), mask.end(), 1) != N) {
+                    if (count(mask.begin(), mask.end(), 1) == N) {
                         mn = min(mn, colS[i][j][k]);
                     }
                 }
