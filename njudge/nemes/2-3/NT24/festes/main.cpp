@@ -58,6 +58,7 @@ int main() {
         }
     }
 
-    solve({});
-    cout << res;
+    for (int i = 0; i < (1 << N); i++) {
+        i >> j & 1
+    }
 }
