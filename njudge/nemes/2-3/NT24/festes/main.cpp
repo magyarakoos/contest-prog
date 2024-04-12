@@ -30,8 +30,7 @@ void solve(vector<bool> painted) {
             }
             curr += mn;
         }
-
-        cout << curr;
+        res = min(res, curr);
     } else {
         painted.push_back(0);
         solve(painted);
