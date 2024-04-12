@@ -12,8 +12,8 @@ ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
             dp[i] = dp[i - 1];
         }
         for (int j = 0; j < i; j++) {
-            for (int k = 0; k <= i; k++) {
-                dp[i] = min(dp[i], dp[j]);
+            for (int k = 0; k <= j; k++) {
+                dp[i] = min(dp[i], dp[j] + col[][]);
             }
         }
     }
