@@ -22,8 +22,12 @@ int main() {
     }
 
     ll res = LLONG_MAX;
-    for (int mask = 0; mask < (1 << N); mask++) {
+    for (int i = 0; i < (1 << N); i++) {
+        vector<bool> mask(N);
+        
         ll curr = 0;
+
+
 
         res = min(res, curr);
     }
