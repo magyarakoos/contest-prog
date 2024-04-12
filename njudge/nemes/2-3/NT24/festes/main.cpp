@@ -5,9 +5,9 @@ using ll = long long;
 int N, M;
 
 ll solve(const vector<bool>& mask, const vec<vec<ll>>& col) {
-    vec<ll> dp(N + 1);
+    vec<ll> dp(N + 1, LLONG_MAX);
+    dp[0] = 0;
     for (int j = 1; j <= N; j++) {
-        dp[j] = ;
         for (int k = 0; k < j; k++) {
             dp[j] = min(dp[j], dp[k] + col[k][j - 1]);
         }
@@ -39,7 +39,7 @@ int main() {
             mask[j] = (i >> j) & 1;
         }
         ll curr = 0;
-
+        
         
 
         res = min(res, curr);
