@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-#define vec vector;
+#define vec vector
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
