@@ -15,7 +15,8 @@ void solve(vector<bool> painted) {
         painted.push_back(0);
         solve(painted);
         painted.back() = 1;
-        solve()
+        solve(painted);
+        painted.pop_back();
     }
 }
 
@@ -36,5 +37,5 @@ int main() {
         }
     }
 
-    
+    solve()
 }
