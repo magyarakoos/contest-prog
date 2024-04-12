@@ -2,6 +2,7 @@
 using namespace std;
 using ll = long long;
 #define vec vector
+#define size(v) (int)v.size()
 
 int N, M;
 vec<ll> rowS;
@@ -9,7 +10,7 @@ vec<vec<vec<ll>>> colS;
 ll res = LLONG_MAX;
 
 void solve(vector<bool> painted) {
-    if (painted.size() == N) {
+    if (size(painted) == N) {
         ll curr = 0;
         for (int i = 0; i < N; i++) {
             if (painted[i]) curr += rowS[i];
