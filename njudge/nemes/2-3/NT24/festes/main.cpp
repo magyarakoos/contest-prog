@@ -7,5 +7,5 @@ int main() {
     int N, M;
     cin >> N >> M;
     vector<ll> rowS(N);
-    
+    vector<vector<vector<ll>>> colS(M,)
 }
