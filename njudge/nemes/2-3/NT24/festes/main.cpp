@@ -11,6 +11,10 @@ ll res = LLONG_MAX;
 void solve(vector<bool> painted) {
     if (painted.size() == N) {
         ll curr = 0;
+        for (int i = 0; i < N; i++) {
+            if (painted[i]) curr += rowS[i];
+        }
+
         
     } else {
         painted.push_back(0);
