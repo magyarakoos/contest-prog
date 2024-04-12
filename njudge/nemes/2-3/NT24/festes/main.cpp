@@ -31,7 +31,9 @@ int main() {
 
         vec<ll> dp(N + 1);
         for (int j = 1; j <= N; j++) {
-            for (int k = )
+            for (int k = 0; k < j; k++) {
+                d
+            }
         }
 
         res = min(res, curr);
