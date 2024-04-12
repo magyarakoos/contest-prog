@@ -10,7 +10,8 @@ ll res = LLONG_MAX;
 
 void solve(vector<bool> painted) {
     if (painted.size() == N) {
-
+        ll curr = 0;
+        
     } else {
         painted.push_back(0);
         solve(painted);
@@ -37,5 +38,6 @@ int main() {
         }
     }
 
-    solve()
+    solve({});
+    cout << res;
 }
