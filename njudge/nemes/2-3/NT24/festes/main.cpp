@@ -1,3 +1,4 @@
+// N(N + 1)/2 * 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -14,7 +15,9 @@ void solve(vector<bool> painted) {
         for (int i = 0; i < N; i++) {
             if (painted[i]) curr += rowS[i];
         }
-        
+        for (int i = 0; i < M; i++) {
+
+        }
     } else {
         painted.push_back(0);
         solve(painted);
