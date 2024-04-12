@@ -9,7 +9,14 @@ vec<vec<vec<ll>>> colS;
 ll res = LLONG_MAX;
 
 void solve(vector<bool> painted) {
-    if (painted.size() == N)
+    if (painted.size() == N) {
+
+    } else {
+        painted.push_back(0);
+        solve(painted);
+        painted.back() = 1;
+        solve()
+    }
 }
 
 int main() {
