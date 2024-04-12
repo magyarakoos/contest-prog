@@ -31,8 +31,9 @@ int main() {
 
         vec<ll> dp(N + 1);
         for (int j = 1; j <= N; j++) {
+            dp[j] = LLONG_MAX;
             for (int k = 0; k < j; k++) {
-                d
+                dp[j] = min(dp[j], dp[k] + colS[])
             }
         }
 
