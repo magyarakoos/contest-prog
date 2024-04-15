@@ -2,10 +2,13 @@
 using namespace std;
 constexpr int MOD = 1e9 + 7;
 stack<int> s;
+vector<vector<int>> g;
+vector<bool> vis;
+vector<int> dp;
 
 void dfs(int u) {
     vis[u] = 1;
-    for (v : g[u]) {
+    for (int v : g[u]) {
         if (!vis[v]) dfs(v);
     }
 }
@@ -13,9 +16,6 @@ void dfs(int u) {
 int main() {
     int N, M;
     cin >> N >> M;
-    vector<vector<int>> g(N + 1);
-    vector<bool> vis(N + 1);
-    vector<int> dp(N + 1);
     while (M--) {
         int U, V;
         cin >> U >> V;
