@@ -8,7 +8,11 @@ vector<int> dp;
 
 void dfs(int u) {
     for (int v : g[u]) {
-        if ()
+        if (!vis[v]) {
+            vis[v] = 1;
+            dp[v] = dp[u];
+            dfs(v);
+        }
     }
 }
 
@@ -23,4 +27,5 @@ int main() {
         cin >> U >> V;
         g[U].push_back(V);
     }
+    dp[1] = 1;
 }
