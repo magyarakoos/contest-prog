@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 constexpr int MOD = 1e9 + 7;
-stack<int> s;
 vector<vector<int>> g;
 vector<bool> vis;
 vector<int> dp;
@@ -24,10 +23,11 @@ int main() {
         for (int v : g[u]) {
             if (!vis[v]) {
                 vis[v] = 1;
-                
+                q.push(v);
             } else {
                 dp[u] = (dp[u] + dp[v]) % MOD;
             }
         }
     }
+    
 }
