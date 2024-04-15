@@ -29,8 +29,5 @@ int main() {
     }
     vis[1] = dp[1] = 1;
     dfs(1);
-    for (int i = 1; i <= N; i++) {
-        cout << dp[i] << " ";
-    }
-    cout << "\n";
+    cout << dp[N];
 }
