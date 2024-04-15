@@ -2,8 +2,9 @@
 using namespace std;
 using ll = long long;
 
-#define all(v) v.begin(), v.end()
 
 int main() {
+    int N, M;
+    cin >> N >> M;
     
 }
