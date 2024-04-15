@@ -6,14 +6,6 @@ vector<vector<int>> g;
 vector<bool> vis;
 vector<int> dp;
 
-void dfs(int u) {
-    vis[u] = 1;
-    for (int v : g[u]) {
-        if (!vis[v]) dfs(v);
-    }
-    s.push(u);
-}
-
 int main() {
     int N, M;
     cin >> N >> M;
