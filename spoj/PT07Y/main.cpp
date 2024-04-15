@@ -5,10 +5,10 @@ vector<vector<int>> g;
 vector<bool> vis;
 
 void dfs(int u, int p) {
-    vis[v] = 1;
+    vis[u] = 1;
     for (int v : g[u]) {
         if (v == p) continue;
-        if (vis[v]) continue; //over(0);
+        if (vis[v]) over(0);
         dfs(v, u);
     }
 }
@@ -16,7 +16,7 @@ void dfs(int u, int p) {
 int main() {
     int N, M;
     cin >> N >> M;
-    //if (M != N - 1) over(0);
+    if (M != N - 1) over(0);
 
     g.resize(N + 1);
     vis.resize(N + 1);
@@ -27,7 +27,5 @@ int main() {
         g[V].push_back(U);
     }
     dfs(1, 0);
-    for (int i = 1; i <= N; i++) cout << vis[i];
-    cout << "\n";
     over((count(vis.begin() + 1, vis.end(), 1) == N));
 }
