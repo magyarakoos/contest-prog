@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define over(b) cout << (b ? "YES" : "NO"); exit(0)
+#define over(b) cout << (b ? "YES" : "NO"), exit(0)
 vector<vector<int>> g;
 vector<bool> vis;
 
