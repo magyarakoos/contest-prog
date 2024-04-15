@@ -29,5 +29,5 @@ int main() {
             }
         }
     }
-    cout << dp[N];
+    for (int i = 1; i <= N; i++) cout << dp[i] << "\n";
 }
