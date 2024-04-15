@@ -20,6 +20,13 @@ int main() {
     dp[N] = 1;
     queue<int> q({N});
     while (!q.empty()) {
-        int u = q.front(); q.pop()
+        int u = q.front(); q.pop();
+        for (int v : g[u]) {
+            if (!vis[v]) {
+
+            } else {
+                
+            }
+        }
     }
 }
