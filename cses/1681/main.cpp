@@ -6,6 +6,10 @@ vector<vector<int>> g;
 vector<bool> vis;
 vector<int> dp;
 
+int solve(int u) {
+    
+}
+
 int main() {
     int N, M;
     cin >> N >> M;
@@ -15,6 +19,6 @@ int main() {
     while (M--) {
         int U, V;
         cin >> U >> V;
-        g[U].push_back(V);
+        g[V].push_back(U);
     }
 }
