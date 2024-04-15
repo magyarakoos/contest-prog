@@ -2,6 +2,8 @@
 using namespace std;
 constexpr int MOD = 1e9 + 7;
 
+
+
 int main() {
     int N, M;
     cin >> N >> M;
