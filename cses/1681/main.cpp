@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 constexpr int MOD = 1e9 + 7;
+stack<int> s;
 vector<vector<int>> g;
 vector<bool> vis;
 vector<int> dp;
@@ -14,22 +15,17 @@ int main() {
     while (M--) {
         int U, V;
         cin >> U >> V;
-        g[V].push_back(U);
+        g[U].push_back(V);
     }
-    dp[N] = 1;
-    queue<int> q({N});
+    queue<int> q({1});
+    dp[1] = 1;
+    vis[1] = 1;
     while (!q.empty()) {
         int u = q.front(); q.pop();
         for (int v : g[u]) {
-            if (!vis[v]) {
-                dp[v] = dp[u];
-                vis[v] = 1;
-                q.push(v);
-            } else {
-                dp[u] = (dp[u] + dp[v]) % MOD;
-            }
+            if (!vis[])
+            dp[v] = (dp[u] + dp[v]) % MOD;
+            q.push(v);
         }
     }
-    for (int i = 1; i <= N; i++) cout << dp[i] << " ";
-    cout << "\n";
 }
