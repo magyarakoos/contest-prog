@@ -16,18 +16,5 @@ int main() {
         cin >> U >> V;
         g[U].push_back(V);
     }
-    queue<int> q({1});
-    dp[1] = 1;
-    vis[1] = 1;
-    while (!q.empty()) {
-        int u = q.front(); q.pop();
-        for (int v : g[u]) {
-            dp[v] = (dp[u] + dp[v]) % MOD;
-            if (!vis[v]) {
-                vis[v] = 1;
-                q.push(v);
-            }
-        }
-    }
-    for (int i = 1; i <= N; i++) cout << dp[i] << "\n";
+    
 }
