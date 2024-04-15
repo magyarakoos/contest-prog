@@ -1,8 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 constexpr int MOD = 1e9 + 7;
+stack<int> s;
 
-
+void dfs(int u) {
+    vis[u] = 1;
+    for (v : g[u]) {
+        if (!vis[v]) dfs(v);
+    }
+}
 
 int main() {
     int N, M;
