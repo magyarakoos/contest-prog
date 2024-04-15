@@ -18,5 +18,8 @@ int main() {
         g[V].push_back(U);
     }
     dp[N] = 1;
-    
+    queue<int> q({N});
+    while (!q.empty()) {
+        
+    }
 }
