@@ -7,7 +7,9 @@ vector<bool> vis;
 void dfs(int u, int p) {
     for (int v : g[u]) {
         if (v == p) continue;
-        if ()
+        if (vis[v]) end(0);
+        vis[v] = 1;
+        dfs(v, u);
     }
 }
 
@@ -15,6 +17,7 @@ int main() {
     int N, M;
     cin >> N >> M;
     if (M != N - 1) end(0);
+
     g.resize(N + 1);
     vis.resize(N + 1);
     while (M--) {
@@ -23,5 +26,5 @@ int main() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
-
+    end()
 }
