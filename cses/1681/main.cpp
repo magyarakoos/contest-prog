@@ -23,9 +23,10 @@ int main() {
         int u = q.front(); q.pop();
         for (int v : g[u]) {
             if (!vis[v]) {
-
-            } else {
+                vis[v] = 1;
                 
+            } else {
+                dp[u] = (dp[u] + dp[v]) % MOD;
             }
         }
     }
