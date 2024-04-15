@@ -11,7 +11,7 @@ void dfs(int u) {
     for (int v : g[u]) {
         if (!vis[v]) dfs(v);
     }
-    s.push()
+    s.push(u);
 }
 
 int main() {
@@ -25,5 +25,6 @@ int main() {
         cin >> U >> V;
         g[U].push_back(V);
     }
-
+    dfs(1);
+    vector<int> order;
 }
