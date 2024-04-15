@@ -20,6 +20,6 @@ int main() {
     dp[N] = 1;
     queue<int> q({N});
     while (!q.empty()) {
-        
+        int u = q.front(); q.pop()
     }
 }
