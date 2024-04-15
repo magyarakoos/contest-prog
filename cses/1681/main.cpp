@@ -28,5 +28,6 @@ int main() {
     dfs(1);
     vector<int> order;
     while (!s.empty()) order.push_back(s.top()), s.pop();
-    dp[]
+    for (int x : order) cout << x << " ";
+    cout << "\n";
 }
