@@ -16,7 +16,7 @@ void dfs(int u, int p) {
 int main() {
     int N, M;
     cin >> N >> M;
-    if (M != N - 1) over(0);
+    //if (M != N - 1) over(0);
 
     g.resize(N + 1);
     vis.resize(N + 1);
