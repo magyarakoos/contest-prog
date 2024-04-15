@@ -13,6 +13,10 @@ int main() {
         cin >> U >> V;
         g[U].push_back(V);
     }
+    queue<int> q({1});
     vis[1] = dp[1] = 1;
-    queue<
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        
+    }
 }
