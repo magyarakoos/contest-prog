@@ -27,5 +27,7 @@ int main() {
         g[V].push_back(U);
     }
     dfs(1, 0);
+    for (int i = 1; i <= N; i++) cout << vis[i];
+    cout << "\n";
     over((count(vis.begin() + 1, vis.end(), 1) == N));
 }
