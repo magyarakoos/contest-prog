@@ -17,17 +17,5 @@ int main() {
         cin >> U >> V;
         g[U].push_back(V);
     }
-    for (int u = 1; u <= N; u++) {
-        if (!vis[u]) {
-            dfs(u);
-        }
-    }
-    vis.assign(N + 1, 0);
-    vector<int> order;
-    while (!s.empty()) {
-        order.push_back(s.top());
-        s.pop();
-    }
-    for (int x : order) cout << x << " ";
-    cout << "\n";
+    
 }
