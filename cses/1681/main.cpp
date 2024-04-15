@@ -19,11 +19,12 @@ int main() {
     }
     queue<int> q({1});
     dp[1] = 1;
-    vis[1] = 1;
     while (!q.empty()) {
         int u = q.front(); q.pop();
         for (int v : g[u]) {
-            
+            dp[v] = (dp[u] + dp[v]) % MOD;
+            q.push(v);
         }
     }
+    cout << dp[N];
 }
