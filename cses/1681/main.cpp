@@ -4,6 +4,15 @@ constexpr int MOD = 1e9 + 7;
 vector<vector<int>> g;
 vector<bool> vis;
 vector<int> dp;
+stack<int> s;
+
+void dfs(int u) {
+    vis[u] = 1;
+    for (int v : g[u]) {
+        if (!vis[v]) dfs(v);
+    }
+    s.push()
+}
 
 int main() {
     int N, M;
@@ -16,5 +25,5 @@ int main() {
         cin >> U >> V;
         g[U].push_back(V);
     }
-    
+
 }
