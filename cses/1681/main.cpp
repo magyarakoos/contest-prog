@@ -22,6 +22,7 @@ int main() {
         int u = q.front(); q.pop();
         for (int v : g[u]) {
             if (!vis[v]) {
+                dp[v] = dp[u];
                 vis[v] = 1;
                 q.push(v);
             } else {
