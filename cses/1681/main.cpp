@@ -8,12 +8,11 @@ vector<int> dp;
 
 void dfs(int u) {
     for (int v : g[u]) {
+        dp[v] = (dp[u] + dp[v]) % MOD;
         if (!vis[v]) {
             vis[v] = 1;
-            dp[v] = dp[u];
             dfs(v);
         }
-        
     }
 }
 
