@@ -30,5 +30,12 @@ int main() {
             dfs(u);
         }
     }
-    
+    vis.assign(N + 1, 0);
+    vector<int> order;
+    while (!s.empty()) {
+        order.push_back(s.top());
+        s.pop();
+    }
+    for (int x : order) cout << x << " ";
+    cout << "\n";
 }
