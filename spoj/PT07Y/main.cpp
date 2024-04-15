@@ -7,7 +7,7 @@ vector<bool> vis;
 void dfs(int u, int p) {
     for (int v : g[u]) {
         if (v == p) continue;
-        if (vis[v]) over(0);
+        if (vis[v]) continue; //over(0);
         vis[v] = 1;
         dfs(v, u);
     }
