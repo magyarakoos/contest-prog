@@ -26,5 +26,6 @@ int main() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
+    dfs(1, 0);
     over((count(vis.begin() + 1, vis.end(), 1) == N));
 }
