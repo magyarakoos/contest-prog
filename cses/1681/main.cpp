@@ -2,13 +2,17 @@
 using namespace std;
 using ll = long long;
 vector<vector<int>> g;
+vector<int> dp;
 
-void dfs()
+void dfs() {
+    
+}
 
 int main() {
     int N, M;
     cin >> N >> M;
     g.resize(N + 1);
+    dp.resize(N + 1);
     while (M--) {
         int U, V;
         cin >> U >> V;
