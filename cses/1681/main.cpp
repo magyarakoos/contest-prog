@@ -17,6 +17,7 @@ int main() {
     vis[1] = dp[1] = 1;
     while (!q.empty()) {
         int u = q.front(); q.pop();
+        cout << u << "\n";
         for (int v : g[u]) {
             dp[v] = (dp[u] + dp[v]) % MOD;
             if (!vis[v]) {
