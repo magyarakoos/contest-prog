@@ -13,6 +13,7 @@ void dfs(int u) {
             dp[v] = dp[u];
             dfs(v);
         }
+        
     }
 }
 
@@ -27,5 +28,5 @@ int main() {
         cin >> U >> V;
         g[U].push_back(V);
     }
-    dp[1] = 1;
+    vis[1] = dp[1] = 1;
 }
