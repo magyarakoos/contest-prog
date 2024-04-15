@@ -27,4 +27,6 @@ int main() {
     }
     dfs(1);
     vector<int> order;
+    while (!s.empty()) order.push_back(s.top()), s.pop();
+    dp[]
 }
