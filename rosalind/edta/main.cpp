@@ -32,9 +32,10 @@ int main() {
                 j++;
             }
             else if (dp[i + 1][j] < dp[i][j + 1]) {
-                
+                lcs += "-";
                 j++;
             } else {
+                lcs += "-";
                 i++;
             }
         }
