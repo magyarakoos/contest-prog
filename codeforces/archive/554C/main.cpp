@@ -12,7 +12,7 @@ int main() {
             if (j == 0 || i == j) {
                 choose[i][j] = 1;
             } else {
-                choose[i][j] = choose[i - 1][j - 1] + choose[i - 1][j];
+                choose[i][j] = (choose[i - 1][j - 1] + choose[i - 1][j]) % MOD;
             }
         }
     }
