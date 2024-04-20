@@ -3,10 +3,10 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-    
+
 }
 
-#define cases true
+#define cases 0
 #ifdef LOCAL
 ifstream cin("../input");
 ofstream cout("../output");
