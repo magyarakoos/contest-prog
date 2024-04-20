@@ -31,7 +31,10 @@ ll backtrack(int x) {
             if (!over()) {
                 if (x == 1) {
                     ll e = backtrack(2);
-                    if (abs(e) != INF) e += m[i];
+                    if (abs(e) != INF) {
+                        e += m[i];
+                        cout << e << "\n";
+                    }
                     ans = max(ans, e);
                 } else {
                     ans = min(ans, backtrack(1));
