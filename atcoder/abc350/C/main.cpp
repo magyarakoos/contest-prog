@@ -6,9 +6,10 @@ using ll = long long;
 void solve() {
     int N;
     cin >> N;
+    map<int, int> m;
     vector<int> A(N);
     for (int& x : A) cin >> x;
-    
+
 }
 
 int main() {
