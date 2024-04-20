@@ -41,6 +41,8 @@ void update(int curr, int tl, int tr, int pos, ll x) {
     }
 }
 
+ll query()
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
