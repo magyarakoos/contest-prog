@@ -11,8 +11,9 @@ void solve() {
         int X;
         cin >> X;
         X--;
-        v[]
+        v[X] = v[X] ^ 1;
     }
+    cout << count(v.begin(), v.end(), 1) << "\n";
 }
 
 int main() {
