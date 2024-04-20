@@ -8,7 +8,7 @@ for i in 0:2
 end
 
 over = () -> begin
-    for i in 1:3 if length(countmap(m[(i * 3):3]))
+    for i in 1:3:7 if length(countmap(m[i:i+2]))
     end 
 end
 
