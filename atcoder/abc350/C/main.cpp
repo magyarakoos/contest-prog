@@ -14,14 +14,13 @@ void solve() {
         m[A[i]] = i;
     }
     vector<array<int, 2>> result;
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N - 1; i++) {
         if (A[i] != i) {
             A[m[i]] = A[i];
             A[i] = i;
             result.push_back({i, m[i]});
         }
     }
-    assert(result.size() < (size_t)N);
     cout << result.size() << "\n";
     for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
 }
