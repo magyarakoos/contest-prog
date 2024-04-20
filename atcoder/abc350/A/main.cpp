@@ -4,8 +4,9 @@ using ll = long long;
 
 
 #ifdef LOCAL
-ifstream ci
-
+ifstream cin("../input");
+ofstream cout("../output");
+#endif
 int main() {
     #ifndef LOCAl
     cin.tie(0), ios::sync_with_stdio(0);
