@@ -11,14 +11,15 @@ void solve() {
         cin >> c;
         if (c == '0') {
             if (groupS.back()) {
-                cout << groupS.back() << " ";
                 groupS.push_back(0);
             }
         } else {
             groupS.back()++;
         }
     }
-    cout << "\n";
+    if (!groupS.back()) groupS.pop_back();
+
+    
 }
 
 int main() {
