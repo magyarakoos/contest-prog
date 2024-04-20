@@ -30,10 +30,11 @@ ll backtrack(int x) {
 
             if (!over()) {
                 if (x == 1) {
-                    ll e = backrack(2);
-                    if (abs(e) != INF)
+                    ll e = backtrack(2);
+                    if (abs(e) != INF) e += m[i];
+                    ans = max(ans, e);
                 } else {
-
+                    ans = min(ans, backtrack(1));
                 }
             }            
 
