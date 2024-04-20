@@ -21,7 +21,7 @@ void solve() {
         }
     }
     cout << result.size() << "\n";
-    for (auto [l, r] : result) cout << l << " " << r << "\n";
+    for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
 }
 
 int main() {
