@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-constexpr int MOD = 1e9 + 7, MAXN = 1001;
+constexpr int MOD = 1e9 + 7, MAXN = 1000;
 
-ll choose[MAXN][MAXN];
+ll choose[MAXN + 1][MAXN + 1];
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
