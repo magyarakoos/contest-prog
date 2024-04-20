@@ -20,6 +20,7 @@ end
 s = Set{Int}()
 
 backtrack = (x) -> begin
+    ans = (x == 1 ? typemin(Int3))
     for i in 1:9
         if i ∉ s
             
