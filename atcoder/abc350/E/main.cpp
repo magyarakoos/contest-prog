@@ -12,7 +12,9 @@ double dp(int u) {
     }
 
     double a = X + dp(u / A);
-    double b = Y;
+    double b = 6 * Y;
+
+    for (int i = 2; i <= 6; i++) 
     
     m[u] = min(a, b);
     return min(a, b);
