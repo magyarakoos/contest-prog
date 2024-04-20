@@ -24,8 +24,7 @@ double dp(int u) {
 #define cases 0
 void solve() {
     cin >> N >> A >> X >> Y;
-    auto [steps, cost] = dp(N);
-    cout << setprecision(15) << cost / steps;
+    cout << setprecision(15) << dp(N);
 }
 
 int main() {
