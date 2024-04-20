@@ -5,14 +5,15 @@ using ll = long long;
 int N, A, X, Y;
 map<int, double> cache;
 
-double dp(int u) {
+pair<int, double> dp(int u) {
 
 }
 
 #define cases 0
 void solve() {
     cin >> N >> A >> X >> Y;
-    cout << setprecision(15) << 
+    auto []
+    cout << setprecision(15) << ;
 }
 
 int main() {
