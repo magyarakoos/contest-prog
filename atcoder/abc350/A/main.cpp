@@ -2,14 +2,16 @@
 using namespace std;
 using ll = long long;
 
-#define cases 0
+#define cases 1
 void solve() {
     cout << "Hi mom\n";
 }
 
 #ifdef LOCAL
-ifstream cin("../input");
-ofstream cout("../output");
+#define cin fin
+#define cout fout
+ifstream fin("../input");
+ofstream fout("../output");
 #endif
 int main() {
     #ifndef LOCAl
