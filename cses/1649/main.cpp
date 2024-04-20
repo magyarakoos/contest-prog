@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-constexpr int MAXN = 2e5 + 1, INF = 1e18;
+constexpr ll MAXN = 2e5 + 1, INF = 1e18;
 
 ll t[MAXN];
 
@@ -16,8 +16,11 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
     }
 }
 
-void query(int curr, int tl, int tr, int l, int r) {
-
+ll query(int curr, int tl, int tr, int l, int r) {
+    if (l > r) {
+        return INF;
+    }
+    if ()
 }
 
 int main() {
