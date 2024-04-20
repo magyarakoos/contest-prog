@@ -8,7 +8,7 @@ void solve() {
     cin >> c >> c >> c;
     int N;
     cin >> N;
-    cout << (N >= 1 && N <= 349)
+    cout << (N >= 1 && N <= 349 && N != 316 ? "Yes" : "No");
 }
 
 int main() {
