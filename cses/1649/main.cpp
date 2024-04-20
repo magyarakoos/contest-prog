@@ -41,8 +41,6 @@ void update(int curr, int tl, int tr, int pos, ll x) {
     }
 }
 
-ll query()
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -57,9 +55,11 @@ int main() {
         if (T == 1) {
             int K, U;
             cin >> K >> U;
-            update()
+            update(1, 0, N - 1, K - 1, U);
         } else {
-
+            int L, R;
+            cin >> L >> R;
+            
         }
     }
 }
