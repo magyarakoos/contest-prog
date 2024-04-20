@@ -13,7 +13,7 @@ pair<int, double> dp(int u) {
         return cache[u];
     }
 
-    pair<int, double> a = dp
+    pair<int, double> a = dp(u / X);
 }
 
 #define cases 0
