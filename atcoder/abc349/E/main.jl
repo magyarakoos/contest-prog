@@ -25,6 +25,8 @@ backtrack = (x) -> begin
         if i ∉ s
             push!(s, i)
             if x == 1
+                e = backtrack(2)
+                if abs(e) != Int(1e10)
                 ans = max(ans, backtrack(2))
             else
                 ans = min(ans, backtrack(1))
