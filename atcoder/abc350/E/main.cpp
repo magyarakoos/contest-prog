@@ -2,6 +2,7 @@
 using namespace std;
 using ll = long long;
 
+int N, A, X, Y;
 #define cases 0
 void solve() {
     
