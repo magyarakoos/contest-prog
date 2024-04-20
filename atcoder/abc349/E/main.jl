@@ -21,6 +21,8 @@ s = Set{Int}()
 
 backtrack = (x) -> begin
     for i in 1:9
-        ∉
+        if i ∉ s
+            
+        end
     end
 end
