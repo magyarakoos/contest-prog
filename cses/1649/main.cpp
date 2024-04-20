@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 2e5 + 1;
 
-ll tree[MAXN];
+ll tan[MAXN];
 
 
 
@@ -21,7 +21,7 @@ int main() {
         if (T == 1) {
 
         } else {
-            
+
         }
     }
 }
