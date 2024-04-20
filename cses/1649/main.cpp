@@ -20,7 +20,13 @@ ll query(int curr, int tl, int tr, int l, int r) {
     if (l > r) {
         return INF;
     }
-    if ()
+    if (l == tl && r == tr) {
+        return t[curr];
+    }
+    int tmid = (tl + tr) / 2;
+    return min(
+        query(curr * 2, )
+    );
 }
 
 int main() {
