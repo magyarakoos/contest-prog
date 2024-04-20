@@ -8,12 +8,13 @@ void solve() {
 }
 
 #ifdef LOCAL
-ifstream fin("../input");
 #define cin fin
 #endif
 int main() {
     #ifndef LOCAL
     cin.tie(0), ios::sync_with_stdio(0);
+    #else
+    ifstream fin("../input");
     #endif
     int T = 1;
     if (cases) cin >> T;
