@@ -32,8 +32,8 @@ ll backtrack(int x) {
                 if (x == 1) {
                     ll e = backtrack(2);
                     if (abs(e) != INF) e += m[i];
-                    cout << s.size() << "\n";
                     ans = max(ans, e);
+                    if (s.size() == 9) cout << ans << " " << i << "\n";
                 } else {
                     ans = min(ans, backtrack(1));
                 }
