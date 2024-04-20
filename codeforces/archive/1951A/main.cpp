@@ -11,8 +11,8 @@ void solve() {
         cin >> c;
         if (c == '0') {
             if (groupS.back()) {
-                groupS.push_back(0);
                 cout << groupS.back() << " ";
+                groupS.push_back(0);
             }
         } else {
             groupS.back()++;
