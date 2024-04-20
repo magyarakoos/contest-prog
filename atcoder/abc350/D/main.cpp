@@ -4,13 +4,13 @@ using ll = long long;
 
 vector<vector<int>> g;
 vector<bool> vis;
-vector<int> group_degS, degS;
+vector<int> degS;
 int group_size, group_edges;
 
 void dfs(int u) {
     vis[u] = 1;
-    curr++;
-    group_degS.back() += degS[u];
+    group_size++;
+    group_edges += degS[u];
     for (int v : g[u]) {
         if (!vis[v]) dfs(v);
     }
@@ -32,8 +32,8 @@ void solve() {
     }
     for (int u = 1; u <= N; u++) {
         if (!vis[u]) {
-            curr = 0;
-            group_degS.push_back(0);
+            group_size = 0;
+            group_edges = 0;
             dfs(u);
         }
     }
