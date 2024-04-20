@@ -26,22 +26,21 @@ backtrack = (x) -> begin
             push!(s, i)
             d[i] = x
 
-            if over(d) 
-
             if !over(d)
-            if x == 1
-                e = backtrack(2)
-                if abs(e) != Int(1e10)
-                    e += m[i]
+                if x == 1
+                    e = backtrack(2)
+                    if abs(e) != Int(1e10)
+                        e += m[i]
+                    end
+                    ans = max(ans, e)
+                else
+                    ans = min(ans, backtrack(1))
                 end
-                ans = max(ans, e)
-            else
-                ans = min(ans, backtrack(1))
             end
-        end
 
             d[i] = i
             delete!(s, i)
         end
     end
+    return ans
 end
