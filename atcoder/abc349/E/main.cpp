@@ -5,6 +5,11 @@ using ll = long long;
 ll m[9], d[9], sum, INF = 1e10;
 set<int> s;
 
+bool over() {
+    if (d[0] == d[1] && d[1] == d[2] ||
+        d[3] == d[4] && d[4] == d[])
+}
+
 ll backtrack(int x) {
     if (s.size() == 9) return 0;
 
