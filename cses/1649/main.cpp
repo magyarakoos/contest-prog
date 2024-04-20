@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-constexpr ll MAXN = 2e5 + 1, INF = 1e18;
+constexpr ll MAXN = 2e5, INF = 1e18;
 
-ll t[MAXN];
+ll t[4 * MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
