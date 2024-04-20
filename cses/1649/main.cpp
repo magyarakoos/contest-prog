@@ -52,6 +52,8 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
+    build(v, 1, 0, N - 1);
+
     while (Q--) {
         int T;
         cin >> T;
