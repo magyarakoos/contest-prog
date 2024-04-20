@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-#define cases 1
+constexpr bool cases = 1;
 void solve() {
     cout << "Hi mom\n";
 }
