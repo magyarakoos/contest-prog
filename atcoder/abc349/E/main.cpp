@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-ll m[9], d[9], sum, INF = 1e11;
+ll m[9], d[9], sum, INF = 1e10;
 set<int> s;
 
 bool over() {
@@ -33,6 +33,7 @@ ll backtrack(int x) {
                     ll e = backtrack(2);
                     if (abs(e) != INF) {
                         e += m[i];
+                        if (s.size() == 9) cout << ans << " " << e << "\n";
                     }
                     ans = max(ans, e);
                 } else {
@@ -55,5 +56,5 @@ int main() {
         cin >> m[i];
         sum += m[i];
     }
-    cout << (backtrack(1) + INF > (sum + 20000000) / 2 ? "Takahashi" : "Aoki");
+    cout << (backtrack(1) + INF > (sum + INF * 2) / 2 ? "Takahashi" : "Aoki");
 }
