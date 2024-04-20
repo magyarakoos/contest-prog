@@ -12,8 +12,7 @@ double dp(int u) {
     }
 
     double a = X + dp(u / A);
-
-    double value_b = 0, steps_b = 0;
+    double b = Y;
     for (int i = 2; i <= 6; i++) {
         pair<double, double> curr_b = dp(u / i);
         value_b += (curr_b.second + Y) / (curr_b.first + 1);
