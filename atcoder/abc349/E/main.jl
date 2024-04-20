@@ -18,8 +18,10 @@ over = (d) -> begin
 end
 
 s = Set{Int}()
+d = collect(1:9)
 
 backtrack = (x) -> begin
+    if length(s) == 9 return 0 end
     ans = (x == 1 ? -Int(1e10) : Int(1e10))
     for i in 1:9
         if i ∉ s
@@ -44,3 +46,5 @@ backtrack = (x) -> begin
     end
     return ans
 end
+
+println(backtrack(1))
