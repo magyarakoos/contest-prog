@@ -28,7 +28,7 @@ double dp(ll x) {
 #define cases 0
 void solve() {
     cin >> N >> A >> X >> Y;
-    cout << setprecision(10) << dp(N);
+    cout << dp(N) << "\n";
 }
 
 int main() {
@@ -36,4 +36,5 @@ int main() {
     int T = 1;
     if (cases) cin >> T;
     while (T--) solve();
+    cout << sizeof(ld) << " " << sizeof(double) << "\n";
 }
