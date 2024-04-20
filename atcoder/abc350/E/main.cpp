@@ -3,10 +3,15 @@ using namespace std;
 using ll = long long;
 
 int N, A, X, Y;
-map<int, double> cache;
+map<int, pair<int, double>> cache;
 
 pair<int, double> dp(int u) {
+    if (u == 0) {
+        return {0, 0};
+    }
+    if (cache.count(u)) {
 
+    }
 }
 
 #define cases 0
