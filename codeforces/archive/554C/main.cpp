@@ -20,5 +20,8 @@ int main() {
     ll K, sum = 0, res = 1;
     cin >> K;
     
-    
+    for (int i = 0; i < K; i++) {
+        ll c;
+        cin >> c;
+    }
 }
