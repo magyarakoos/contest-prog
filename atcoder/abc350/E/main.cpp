@@ -17,7 +17,7 @@ pair<int, double> dp(int u) {
     double value_a = (a.second + X) / (a.first + 1);
 
     double value_b = 0;
-    for (int i = 1; i <= 6; i++) {
+    for (int i = 2; i <= 6; i++) {
         pair<int, double> curr_b = dp(u )
     }
 }
