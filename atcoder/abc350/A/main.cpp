@@ -9,9 +9,7 @@ void solve() {
 
 #ifdef LOCAL
 ifstream fin("../input");
-ofstream fout("../output");
 #define cin fin
-#define cout fout
 #endif
 int main() {
     #ifndef LOCAL
