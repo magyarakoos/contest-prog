@@ -17,8 +17,8 @@ int main() {
         }
     }
 
-    int K, sum = 0;
-    cin >> K;
+    int K, sum;
+    cin >> K >> sum;
     vector<ll> dp(K);
     dp[1] = 1;
 
@@ -29,4 +29,6 @@ int main() {
         dp[i] = dp[i - 1] * choose[sum - 1][c - 1];
         dp[i] %= MOD;
     }
+
+    cout << dp[K - 1];
 }
