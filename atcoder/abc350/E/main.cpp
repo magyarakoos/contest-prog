@@ -14,9 +14,9 @@ pair<int, double> dp(int u) {
     }
 
     pair<int, double> a = dp(u / A);
-    a.first++; a.second += X;
+    double value_a = (a.second + X) / (a.first + 1);
 
-    int stepsB =
+    
 }
 
 #define cases 0
