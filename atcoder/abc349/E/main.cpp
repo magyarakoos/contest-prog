@@ -14,10 +14,8 @@ bool over() {
         d[1] == d[4] && d[4] == d[7] ||
         d[2] == d[5] && d[5] == d[8] ||
         d[0] == d[4] && d[4] == d[8] ||
-        d[2] == d[4] && d[5] 
+        d[2] == d[4] && d[4] == d[6] 
     ;
-    
-
 }
 
 ll backtrack(int x) {
@@ -30,7 +28,9 @@ ll backtrack(int x) {
             s.insert(i);
             d[i] = x;
 
-            
+            if (!over) {
+                
+            }            
 
             d[i] = i;
             s.erase(i);
