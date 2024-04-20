@@ -3,18 +3,15 @@ using namespace std;
 using ll = long long;
 
 int N, A, X, Y;
-map<int, pair<double, double>> cache;
+map<int, double> m;
 
-pair<double, double> dp(int u) {
-    if (u == 0) {
-        return {0, 0};
-    }
-    if (cache.count(u)) {
-        return cache[u];
+double dp(int u) {
+    if (u == 0) return 0;
+    if (m.count(u)) {
+        return m[u];
     }
 
-    pair<double, double> a = dp(u / A);
-    double value_a = (a.second + X) / (a.first + 1);
+    double a = X + dp(u / A);
 
     double value_b = 0, steps_b = 0;
     for (int i = 2; i <= 6; i++) {
