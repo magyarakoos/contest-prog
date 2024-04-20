@@ -11,19 +11,6 @@ void solve() {
         cin >> c;
         v[i] = c == '1';
     }
-    for (int i = 0; i < N; i++) {
-        if (v[i]) {
-            for (int j = 0; j < N; j++) {
-                if (abs(i - j) <= 1) continue;
-                if (v[j]) {
-                    v[i] = 0;
-                    v[j] = 0;
-                    break;
-                }
-            }
-        }
-    }
-    cout << (count(v.begin(), v.end(), 1) ? "NO\n" : "YES\n");
 }
 
 int main() {
