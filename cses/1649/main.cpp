@@ -25,7 +25,8 @@ ll query(int curr, int tl, int tr, int l, int r) {
     }
     int tmid = (tl + tr) / 2;
     return min(
-        query(curr * 2, )
+        query(curr * 2, tl, tmid, l, r),
+        query(curr * 2, tmid, tr, l, r)
     );
 }
 
