@@ -8,8 +8,9 @@ vector<int> sizeS;
 
 void dfs(int u) {
     vis[u] = 1;
+    sizeS.back()++;
     for (int v : g[u]) {
-        
+        if (!vis[v]) dfs(v);
     }
 }
 
@@ -28,7 +29,7 @@ void solve() {
     ll result = 0;
     for (int u = 1; u <= N; u++) {
         if (!vis[u]) {
-
+            sizeS.push_back(0);
         }
     }
 }
