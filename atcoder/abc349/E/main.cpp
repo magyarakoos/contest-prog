@@ -7,12 +7,12 @@ set<int> s;
 
 bool over() {
     for(int i = 0; i < 3; i++){
-        if (d[3 * i] == d[3 * i + 1] && d[3 * i + 1] == d[3 * i + 2]) return true;
-        if(d[i]==d[i+3] && d[i + 3] == d[i + 6]) return true;
+        if (d[3 * i] == d[3 * i + 1] && d[3 * i + 1] == d[3 * i + 2]) return 1;
+        if(d[i] == d[i + 3] && d[i + 3] == d[i + 6]) return 1;
     }
-    if(d[0]==d[4] && d[4]==d[8]) return true;
-    if(d[2]==d[4] && d[4]==d[6]) return true;
-    return false;
+    if (d[0] == d[4] && d[4] == d[8]) return 1;
+    if (d[2] == d[4] && d[4] == d[6]) return 1;
+    return 0;
 }
 
 ll backtrack(int x) {
