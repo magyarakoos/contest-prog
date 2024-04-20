@@ -16,7 +16,10 @@ pair<int, double> dp(int u) {
     pair<int, double> a = dp(u / A);
     double value_a = (a.second + X) / (a.first + 1);
 
-    
+    double value_b = 0;
+    for (int i = 1; i <= 6; i++) {
+        
+    }
 }
 
 #define cases 0
