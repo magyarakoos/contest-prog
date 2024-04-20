@@ -46,7 +46,7 @@ ll backtrack(int x) {
             s.erase(i);
         }
     }
-
+    
     return ans;
 }
 
