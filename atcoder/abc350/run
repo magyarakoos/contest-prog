@@ -1,4 +1,4 @@
 #!/bin/bash
-g++ -o main -O2 -DLOCAL -Wall "$1/main.cpp"
+g++ -o main "$1/main.cpp" -O2 -DLOCAL -Wall
 ./main
 rm main

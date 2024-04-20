@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-constexpr bool cases = 1;
+constexpr bool cases = true;
 void solve() {
     cout << "Hi mom\n";
 }
@@ -17,7 +17,7 @@ int main() {
     #ifndef LOCAl
     cin.tie(0), ios::sync_with_stdio(0);
     #endif
-    int T = 1;
+    int T = 10;
     if (cases) cin >> T;
     while (T--) solve();
 }
