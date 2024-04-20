@@ -4,7 +4,8 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    
+    int N;
+    cin >> N;
 }
 
 int main() {
