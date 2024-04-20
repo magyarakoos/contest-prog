@@ -19,7 +19,7 @@ void solve() {
             result.push_back({i, m[i]});
             A[m[i]] = A[i];
             A[i] = i;
-            m[i] = i;
+            m[A[m[i]]] = i;
         }
     }
     cout << result.size() << "\n";
