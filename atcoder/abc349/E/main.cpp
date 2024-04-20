@@ -48,8 +48,9 @@ ll backtrack(int x) {
     }
 
     if (inevitable_end) {
-        retrun
+        return x == 1 ? INF : -INF;
     }
+    return ans;
 }
 
 int main() {
