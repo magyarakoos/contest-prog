@@ -3,8 +3,13 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 2e5 + 1;
 
-ll tan[MAXN];
+ll t[MAXN];
 
+void build(const vector<int>& v, int curr, int tl, int tr) {
+    if (tl == tr) {
+        t[curr] = v[tl]
+    }
+}
 
 
 int main() {
