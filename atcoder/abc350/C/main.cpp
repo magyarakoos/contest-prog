@@ -7,9 +7,11 @@ void solve() {
     int N;
     cin >> N;
     vector<int> A(N);
-    for (int& x : A) cin >> x;
-    cout << result.size() << "\n";
-    for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+        A[i]--;
+    }
+#     for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
 }
 
 int main() {
