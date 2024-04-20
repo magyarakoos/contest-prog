@@ -36,5 +36,4 @@ int main() {
     int T = 1;
     if (cases) cin >> T;
     while (T--) solve();
-    cout << sizeof(ld) << " " << sizeof(double) << "\n";
 }
