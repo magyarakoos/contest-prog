@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
+using ld = long double;
 
 ll N, A, X, Y;
-map<ll, double> m;
+map<ll, ld> m;
 
 double dp(ll u) {
     if (u == 0) return 0;
@@ -11,10 +12,10 @@ double dp(ll u) {
         return m[u];
     }
 
-    double a = X + dp(u / A);
-    double b = 6 * Y;
+    ld a = X + dp(u / A);
+    ld b = 6 * Y;
 
-    for (int i = 2; i <= 6; i++) b += dp(u / i);
+    for (ll i = 2; i <= 6; i++) b += dp(u / i);
     b /= 5;
     
     m[u] = min(a, b);
