@@ -17,7 +17,7 @@ int main() {
     #ifndef LOCAl
     cin.tie(0), ios::sync_with_stdio(0);
     #endif
-    int T = 10;
+    int T = 1;
     if (cases) cin >> T;
     while (T--) solve();
 }
