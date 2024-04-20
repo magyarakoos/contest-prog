@@ -26,8 +26,12 @@ ll query(int curr, int tl, int tr, int l, int r) {
     int tmid = (tl + tr) / 2;
     return min(
         query(curr * 2, tl, tmid, l, min(r, tmid)),
-        query(curr * 2, tmid + 1, tr, max(l, tmid), r)
+        query(curr * 2, tmid + 1, tr, max(l, tmid + 1), r)
     );
+}
+
+void update(int curr, int tl, int tr, int pos, int x) {
+    
 }
 
 int main() {
