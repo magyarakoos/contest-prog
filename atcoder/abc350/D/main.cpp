@@ -6,8 +6,9 @@ using ll = long long;
 void solve() {
     int N, M;
     cin >> N >> M;
-    while (M--) {
-        
+    for (int i = 0; i < M; i++) {
+        int U, V;
+        cin >> U >> V;
     }
 }
 
