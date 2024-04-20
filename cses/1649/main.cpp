@@ -12,9 +12,13 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
         int tmid = (tl + tr) / 2;
         build(v, curr * 2, tl, tmid);
         build(v, curr * 2 + 1, tmid, tr);
+        t[curr] = min(t[curr * 2], t[curr * 2 + 1]);
     }
 }
 
+void query(int curr, int tl, int tr, int l, int r) {
+    
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
