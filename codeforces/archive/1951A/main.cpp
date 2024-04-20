@@ -9,9 +9,11 @@ void solve() {
     for (int i = 0; i < N; i++) {
         char c;
         cin >> c;
-        if (groupS.back() && c == '0') {
-            cout << groupS.back() << " ";
-            groupS.push_back(0);
+        if (c == '0') {
+            if (groupS.back()) {
+                groupS.push_back(0);
+                cout << groupS.back() << " ";
+            }
         } else {
             groupS.back()++;
         }
