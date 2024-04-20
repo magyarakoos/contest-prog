@@ -26,6 +26,6 @@ int main() {
         int c;
         cin >> c;
         sum += c;
-        
+        dp[i] = choose[sum - 1][c - 1];
     }
 }
