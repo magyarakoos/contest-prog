@@ -8,9 +8,9 @@ end
 
 over = () -> begin
     for i in 1:3:7 
-        if length(countmap(m[i:i+2])) == 1 return false end 
+        if length(countmap(d[i:i+2])) == 1 return false end 
     end
     return 
-        length(unique([m[1], m[5], m[9]])) > 1 && 
-        length(unique([m[3], m[5], m[7]])) > 1
+        length(unique([d[1], d[5], d[9]])) > 1 && 
+        length(unique([d[3], d[5], d[7]])) > 1
 end
