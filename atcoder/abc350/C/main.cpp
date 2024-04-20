@@ -13,6 +13,11 @@ void solve() {
         A[i]--;
         m[A[i]] = i;
     }
+    for (int i = 0; i < N; i++) {
+        if (A[i] != i) {
+            A[m[A[i]]]
+        }
+    }
 //     for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
 }
 
