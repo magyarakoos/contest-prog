@@ -27,5 +27,6 @@ for perm in permutations(collect(1:9))
         d[perm[i]] = i % 2 + 1
     end
     if over(d) continue end
-    tot 
+    for i in 1:2 tot[i] += scores[i] end
 end
+println(tot)
