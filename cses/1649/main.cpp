@@ -35,7 +35,9 @@ void update(int curr, int tl, int tr, int pos, ll x) {
         t[curr] = x;
     } else {
         int tmid = (tl + tr) / 2;
-        update(curr * 2, )
+        update(curr * 2, tl, tmid, pos, x);
+        update(curr * 2 + 1, tmid + 1, tr, pos, x);
+        t[curr] = min(t[curr * 2], t[curr * 2 + 1]);
     }
 }
 
