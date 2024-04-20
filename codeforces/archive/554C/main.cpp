@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 constexpr int MOD = 1e9 + 7, MAXN = 1001;
 
-int choose[MAXN][MAXN];
+ll choose[MAXN][MAXN];
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
@@ -26,6 +26,7 @@ int main() {
         int c;
         cin >> c;
         sum += c;
-        dp[i] = choose[sum - 1][c - 1];
+        dp[i] = dp[i - 1] * choose[sum - 1][c - 1];
+        dp[i] %= MOD;
     }
 }
