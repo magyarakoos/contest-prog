@@ -18,8 +18,8 @@ void solve() {
         if (A[i] != i) {
             result.push_back({i, m[i]});
             A[m[i]] = A[i];
-            A[i] = i;
-            m[A[m[i]]] = i;
+            A[i] = i; // pipa
+            m[m[i]] = i;
         }
     }
     cout << result.size() << "\n";
