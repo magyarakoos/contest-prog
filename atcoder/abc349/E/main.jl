@@ -17,6 +17,7 @@ over = () -> begin
 end
 
 for perm in permutations(collect(1:9))
+    scores = [0, 0]
     for i in 1:9
         
     end
