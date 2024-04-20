@@ -7,7 +7,10 @@ set<int> s;
 
 ll backtrack(int x) {
     if (s.size() == 9) return 0;
-    ll ans = (x == )
+
+    ll ans = x == 1 ? -INF : INF;
+
+    
 }
 
 int main() {
