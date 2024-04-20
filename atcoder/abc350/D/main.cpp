@@ -30,7 +30,6 @@ void solve() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
-    ll result = 0;
     for (int u = 1; u <= N; u++) {
         if (!vis[u]) {
             curr = 0;
