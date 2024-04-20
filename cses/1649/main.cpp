@@ -53,7 +53,9 @@ int main() {
         int T;
         cin >> T;
         if (T == 1) {
-
+            int K, U;
+            cin >> K >> U;
+            update()
         } else {
 
         }
