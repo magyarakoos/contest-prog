@@ -8,7 +8,7 @@ for i in 0:2
 end
 
 over = () -> begin
-    if countmap()
+    if length(countmap(m[1:3]))
     end 
 end
 
