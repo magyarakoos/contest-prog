@@ -33,7 +33,6 @@ ll backtrack(int x) {
                     ll e = backtrack(2);
                     if (abs(e) != INF) e += m[i];
                     ans = max(ans, e);
-                    if (s.size() == 9) cout << ans << " " << i << "\n";
                 } else {
                     ans = min(ans, backtrack(1));
                 }
@@ -54,5 +53,6 @@ int main() {
         cin >> m[i];
         sum += m[i];
     }
-    cout << (backtrack(1) + INF > (sum + INF * 2) / 2 ? "Takahashi" : "Aoki");
+    cout << backtrack(1) << "\n";
+    // cout << (backtrack(1) + INF > (sum + INF * 2) / 2 ? "Takahashi" : "Aoki");
 }
