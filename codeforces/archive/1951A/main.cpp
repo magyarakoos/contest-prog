@@ -11,6 +11,7 @@ void solve() {
         cin >> c;
         v[i] = c == '1';
     }
+    
 }
 
 int main() {
