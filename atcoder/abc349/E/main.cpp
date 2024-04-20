@@ -61,5 +61,5 @@ int main() {
         sum += m[i];
     }
     cout << backtrack(1) << "\n";
-    cout << (backtrack(1) + INF * 10 > (sum + INF * 20) / 2 ? "Takahashi" : "Aoki");
+    cout << (backtrack(1) + 10000000 > (sum + 20000000) / 2 ? "Takahashi" : "Aoki");
 }
