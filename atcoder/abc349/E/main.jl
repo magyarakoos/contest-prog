@@ -11,9 +11,11 @@ over = (d) -> begin
     for i in 1:3:7 
         if length(countmap(d[i:i+2])) == 1 return false end 
     end
-    return 
-        length(unique([d[1], d[5], d[9]])) > 1 && 
-        length(unique([d[3], d[5], d[7]])) > 1
+    if length(unique([d[1], d[5], d[9]])) == 1 || length(unique([d[3], d[5], d[7]])) == 1
+        return true
+    else
+        return false
+    end
 end
 
 for perm in permutations(collect(1:9))
