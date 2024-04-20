@@ -5,7 +5,7 @@ using ll = long long;
 vector<vector<int>> g;
 vector<bool> vis;
 vector<int> group_degS, degS;
-int curr;
+int group_size, group_edges;
 
 void dfs(int u) {
     vis[u] = 1;
@@ -35,7 +35,6 @@ void solve() {
             curr = 0;
             group_degS.push_back(0);
             dfs(u);
-            cout << curr << " " << group_degS.back() << "\n";
         }
     }
 }
