@@ -53,6 +53,5 @@ int main() {
         cin >> m[i];
         sum += m[i];
     }
-    cout << backtrack(1) << "\n";
-    // cout << (backtrack(1) + INF > (sum + INF * 2) / 2 ? "Takahashi" : "Aoki");
+    cout << (backtrack(1) + INF > (sum + INF * 2) / 2 ? "Takahashi" : "Aoki");
 }
