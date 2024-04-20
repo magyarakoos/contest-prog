@@ -23,7 +23,7 @@ void solve() {
             }
         }
     }
-    cout << ()
+    cout << (count(v.begin(), v.end(), 1) ? "NO\n" : "YES\n");
 }
 
 int main() {
