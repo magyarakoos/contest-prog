@@ -23,10 +23,13 @@ backtrack = (x) -> begin
     ans = (x == 1 ? -Int(1e10) : Int(1e10))
     for i in 1:9
         if i ∉ s
+            push!(s, i)
             if x == 1
-                ans = max(ans, backtracK())
+                ans = max(ans, backtrack(2))
             else
+                ans = min(ans, backtrack(1))
             end
+            delete!(s, i)
         end
     end
 end
