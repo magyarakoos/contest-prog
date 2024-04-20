@@ -36,7 +36,7 @@ void solve() {
             curr = 0;
             group_degS.push_back(0);
             dfs(u);
-            cout << curr << group_degS.back() << "\n";
+            cout << curr << " " << group_degS.back() << "\n";
         }
     }
 }
