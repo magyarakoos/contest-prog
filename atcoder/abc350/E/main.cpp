@@ -5,7 +5,7 @@ using ll = long long;
 ll N, A, X, Y;
 map<ll, double> m;
 
-double dp(int u) {
+double dp(ll u) {
     if (u == 0) return 0;
     if (m.count(u)) {
         return m[u];
@@ -24,7 +24,7 @@ double dp(int u) {
 #define cases 0
 void solve() {
     cin >> N >> A >> X >> Y;
-    cout << setprecision(15) << dp(N);
+    cout << setprecision(7) << dp(N);
 }
 
 int main() {
