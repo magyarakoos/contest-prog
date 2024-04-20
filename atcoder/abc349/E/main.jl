@@ -47,4 +47,4 @@ backtrack = (x) -> begin
     return ans
 end
 
-println(1(backtrack(1) + Int(1e10) > (sum(m) + Int(2e10)) / 2 ? "Takahashi" : "Aoki"))
+println((backtrack(1) + Int(1e10) > (sum(m) + Int(2e10)) / 2 ? "Takahashi" : "Aoki"))
