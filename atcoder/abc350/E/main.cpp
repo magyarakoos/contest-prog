@@ -23,8 +23,6 @@ pair<double, double> dp(int u) {
         steps_b += curr_b.first + 1;
     }
     value_b /= 6;
-
-
 }
 
 #define cases 0
