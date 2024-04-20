@@ -2,9 +2,9 @@
 using namespace std;
 using ll = long long;
 
-constexpr bool cases = true;
+#define cases true
 void solve() {
-    cout << "Hi mom\n";
+    
 }
 
 int main() {
