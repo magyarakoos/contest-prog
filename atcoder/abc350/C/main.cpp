@@ -4,7 +4,7 @@ using ll = long long;
 
 vector<array<int, 2>> insertion_sort(vector<int>& v) {
     vector<array<int, 2>> result;
-    for (int i = 0; i < v.size(); i++) {
+    for (size_t i = 0; i < v.size(); i++) {
         int ptr = i;
         while (ptr && v[ptr - 1] > v[ptr]) {
             result.push_back({ptr, ptr - 1});
