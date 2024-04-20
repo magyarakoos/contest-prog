@@ -46,8 +46,7 @@ ll backtrack(int x) {
             s.erase(i);
         }
     }
-    
-    return ans;
+    return (inevitable_end ? -ans : ans);
 }
 
 int main() {
