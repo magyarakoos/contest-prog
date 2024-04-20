@@ -5,7 +5,7 @@ using ll = long long;
 vector<vector<int>> g;
 vector<bool> vis;
 vector<int> degS;
-int group_size, group_edges;
+ll group_size, group_edges;
 
 void dfs(int u) {
     vis[u] = 1;
@@ -30,11 +30,13 @@ void solve() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
+    ll result = 0;
     for (int u = 1; u <= N; u++) {
         if (!vis[u]) {
             group_size = 0;
             group_edges = 0;
             dfs(u);
+            result += group_size
         }
     }
 }
