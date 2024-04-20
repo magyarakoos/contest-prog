@@ -5,17 +5,14 @@ using ll = long long;
 ll m[9], d[9], sum, INF = 1e10;
 set<int> s;
 
-bool over() {
-    return 
-        (d[0] == d[1] && d[1] == d[2]) ||
-        (d[3] == d[4] && d[4] == d[5]) ||
-        (d[6] == d[7] && d[7] == d[8]) ||
-        (d[0] == d[3] && d[3] == d[6]) ||
-        (d[1] == d[4] && d[4] == d[7]) ||
-        (d[2] == d[5] && d[5] == d[8]) ||
-        (d[0] == d[4] && d[4] == d[8]) ||
-        (d[2] == d[4] && d[4] == d[6]) 
-    ;
+bool over(int c) {
+    for(int i=0; i<3; i++){
+        if(c[3*i]==c[3*i+1] && c[3*i+1]==c[3*i+2]) return true;
+        if(c[i]==c[i+3] && c[i+3]==c[i+6]) return true;
+    }
+    if(c[0]==c[4] && c[4]==c[8]) return true;
+    if(c[2]==c[4] && c[4]==c[6]) return true;
+    return false;
 }
 
 ll backtrack(int x) {
