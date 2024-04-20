@@ -29,7 +29,7 @@ ll backtrack(int x) {
             s.insert(i);
             d[i] = x;
 
-            ok |= over();
+            ok = ok || over();
             if (!ok) {
                 if (x == 1) {
                     ll e = backtrack(2);
