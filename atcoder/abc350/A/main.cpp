@@ -4,7 +4,7 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-
+    cout << "Hi mom\n";
 }
 
 #ifdef LOCAL
