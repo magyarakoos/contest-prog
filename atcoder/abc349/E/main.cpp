@@ -55,5 +55,6 @@ int main() {
         cin >> m[i];
         sum += m[i];
     }
+    cout << backtrack(1) << "\n";
     cout << (backtrack(1) + INF * 10 > (sum + INF * 20) / 2 ? "Takahashi" : "Aoki");
 }
