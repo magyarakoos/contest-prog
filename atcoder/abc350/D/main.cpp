@@ -30,6 +30,7 @@ void solve() {
     for (int u = 1; u <= N; u++) {
         if (!vis[u]) {
             sizeS.push_back(0);
+            dfs(u);
         }
     }
 }
