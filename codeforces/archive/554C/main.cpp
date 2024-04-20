@@ -17,18 +17,8 @@ int main() {
         }
     }
 
-    int K, sum;
-    cin >> K >> sum;
-    vector<ll> dp(K);
-    dp[1] = 1;
-
-    for (int i = 1; i < K; i++) {
-        int c;
-        cin >> c;
-        sum += c;
-        dp[i] = dp[i - 1] * choose[sum - 1][c - 1];
-        dp[i] %= MOD;
-    }
-
-    cout << dp[K - 1];
+    ll K, sum = 0, res = 1;
+    cin >> K;
+    
+    
 }
