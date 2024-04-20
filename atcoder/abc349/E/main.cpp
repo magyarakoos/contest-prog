@@ -22,6 +22,7 @@ ll backtrack(int x) {
     if (s.size() == 9) return 0;
 
     ll ans = x == 1 ? -INF : INF;
+    bool inevitable_end = 1;
 
     for (int i = 0; i < 9; i++) {
         if (!s.count(i)) {
@@ -29,6 +30,7 @@ ll backtrack(int x) {
             d[i] = x;
 
             if (!over()) {
+                inevitable_end = 0;
                 if (x == 1) {
                     ll e = backtrack(2);
                     if (abs(e) != INF) {
