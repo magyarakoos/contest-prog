@@ -24,7 +24,7 @@ double dp(int u) {
 #define cases 0
 void solve() {
     cin >> N >> A >> X >> Y;
-    cout << setprecision(15) << dp(N);
+    cout << dp(N);
 }
 
 int main() {
