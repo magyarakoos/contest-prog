@@ -16,10 +16,11 @@ pair<double, double> dp(int u) {
     pair<double, double> a = dp(u / A);
     double value_a = (a.second + X) / (a.first + 1);
 
-    double value_b = 0;
+    double value_b = 0, steps_b = 0;
     for (int i = 2; i <= 6; i++) {
         pair<double, double> curr_b = dp(u / i);
         value_b += (curr_b.second + Y) / (curr_b.first + 1);
+        steps_b += 
     }
     value_b /= 6;
 
