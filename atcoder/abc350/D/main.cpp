@@ -2,6 +2,10 @@
 using namespace std;
 using ll = long long;
 
+vector<vector<int>> g;
+vector<bool> vis;
+vector<int> sizeS;
+
 #define cases 0
 void solve() {
     int N, M;
