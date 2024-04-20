@@ -12,8 +12,8 @@ pair<int, double> dp(int u) {
 #define cases 0
 void solve() {
     cin >> N >> A >> X >> Y;
-    auto []
-    cout << setprecision(15) << ;
+    auto [steps, cost] = dp(N);
+    cout << setprecision(15) << cost / steps;
 }
 
 int main() {
