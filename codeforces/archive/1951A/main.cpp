@@ -10,11 +10,13 @@ void solve() {
         char c;
         cin >> c;
         if (groupS.back() && c == '0') {
+            cout << groupS.back() << " ";
             groupS.push_back(0);
         } else {
             groupS.back()++;
         }
     }
+    cout << "\n";
 }
 
 int main() {
