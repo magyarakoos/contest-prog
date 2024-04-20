@@ -2,6 +2,16 @@
 using namespace std;
 using ll = long long;
 
+vector<array<int, 2>> insertion_sort(vector<int>& v) {
+    for (int i = 0; i < v.size(); i++) {
+        int ptr = i;
+        while (ptr && v[ptr - 1] > v[ptr]) {
+            swap(v[ptr], v[ptr - 1]);
+            ptr--;
+        }
+    }
+}
+
 #define cases 0
 void solve() {
     int N;
