@@ -16,9 +16,10 @@ void solve() {
     vector<array<int, 2>> result;
     for (int i = 0; i < N - 1; i++) {
         if (A[i] != i) {
+            result.push_back({i, m[i]});
             A[m[i]] = A[i];
             A[i] = i;
-            result.push_back({i, m[i]});
+            m[i] = i;
         }
     }
     cout << result.size() << "\n";
