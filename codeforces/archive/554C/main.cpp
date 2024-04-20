@@ -24,7 +24,7 @@ int main() {
         ll c; cin >> c;
 
         sum += c;
-        res *= sum * choose[sum - 1][c - 1];
+        res *= choose[sum - 1][c - 1];
         res %= MOD;
     }
 
