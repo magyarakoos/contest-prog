@@ -4,11 +4,11 @@ using ll = long long;
 
 vector<vector<int>> g;
 vector<bool> vis;
-vector<int> sizeS, degS;
+vector<int> group_degS, degS;
 
 void dfs(int u) {
     vis[u] = 1;
-    sizeS.back()++;
+    group_degS.back() += degS[u];
     for (int v : g[u]) {
         if (!vis[v]) dfs(v);
     }
@@ -31,7 +31,7 @@ void solve() {
     ll result = 0;
     for (int u = 1; u <= N; u++) {
         if (!vis[u]) {
-            sizeS.push_back(0);
+            group_degS.push_back(0);
             dfs(u);
         }
     }
