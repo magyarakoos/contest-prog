@@ -2,7 +2,10 @@
 using namespace std;
 using ll = long long;
 
-ll m[9], d[9], sum;
+ll m[9], d[9], sum, INF = 1e10;
+
+
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     for (int i = 0; i < 9; i++) {
@@ -11,5 +14,5 @@ int main() {
         sum += m[i];
     }
 
-    
+
 }
