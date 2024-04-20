@@ -18,6 +18,7 @@ over = (d) -> begin
     end
 end
 
+tot = [0, 0]
 for perm in permutations(collect(1:9))
     scores = [0, 0]
     d = collect(1:9)
@@ -26,4 +27,5 @@ for perm in permutations(collect(1:9))
         d[perm[i]] = i % 2 + 1
     end
     if over(d) continue end
+    tot 
 end
