@@ -1,53 +1,62 @@
 #include <bits/stdc++.h>
+
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
+#define size(v) (int)v.size()
+
 using namespace std;
 using ll = long long;
-constexpr ll MAXN = 2e5, INF = 1e18;
+constexpr int MAXN = 2e5;
 
-ll t[4 * MAXN + 1];
+int N;
+ll a[4 * MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
-        t[curr] = v[tl];
-    } else {
-        int tmid = (tl + tr) / 2;
-        build(v, curr * 2, tl, tmid);
-        build(v, curr * 2 + 1, tmid + 1, tr);
-        t[curr] = min(t[curr * 2], t[curr * 2 + 1]);
+        a[curr] = v[tl];
+        return;
     }
+
+    int tmid = (tl + tr) / 2;
+    build(v, curr * 2, tl, tmid);
+    build(v, curr * 2 + 1, tmid + 1, tr);
+    a[curr] = min(a[curr * 2], a[curr * 2 + 1]);
 }
 
 ll query(int curr, int tl, int tr, int l, int r) {
     if (l > r) {
-        return INF;
+        return 1e18;
     }
     if (l == tl && r == tr) {
-        return t[curr];
+        return a[curr];
     }
+    
     int tmid = (tl + tr) / 2;
-    return min(
-        query(curr * 2, tl, tmid, l, min(r, tmid)),
-        query(curr * 2, tmid + 1, tr, max(l, tmid + 1), r)
-    );
+    return 
+        query(curr * 2, tl, tmid, l, min(tmid, r)) +
+        query(curr * 2 + 1, tmid + 1, tr, max(tmid + 1, l), r)
+    ;
 }
 
-void update(int curr, int tl, int tr, int pos, ll x) {
+void update(int curr, int tl, int tr, int pos, int x) {
     if (tl == tr) {
-        t[curr] = x;
-    } else {
-        int tmid = (tl + tr) / 2;
-        if (pos <= tmid) {
-            update(curr * 2, tl, tmid, pos, x);
-        } else {
-            update(curr * 2 + 1, tmid + 1, tr, pos, x);
-        }
-        t[curr] = min(t[curr * 2], t[curr * 2 + 1]);
+        a[curr] = x;
+        return;
     }
+
+    int tmid = (tl + tr) / 2;
+    
+    if (pos <= tmid) {
+        update(curr * 2, tl, tmid, pos, x);
+    } else {
+        update(curr * 2 + 1, tmid + 1, tr, pos, x);
+    }
+    a[curr] = a[curr * 2] + a[curr * 2 + 1];
 }
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-
-    int N, Q;
+    int Q;
     cin >> N >> Q;
     vector<int> v(N);
     for (int& x : v) cin >> x;
@@ -55,9 +64,9 @@ int main() {
     build(v, 1, 0, N - 1);
 
     while (Q--) {
-        int T;
-        cin >> T;
-        if (T == 1) {
+        int type;
+        cin >> type;
+        if (type == 1) {
             int K, U;
             cin >> K >> U;
             update(1, 0, N - 1, K - 1, U);
