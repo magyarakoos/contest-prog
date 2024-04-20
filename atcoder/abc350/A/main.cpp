@@ -4,7 +4,9 @@ using ll = long long;
 
 #define cases true
 void solve() {
-    
+    int X;
+    cin >> X;
+    cout << X << "\n";
 }
 
 int main() {
