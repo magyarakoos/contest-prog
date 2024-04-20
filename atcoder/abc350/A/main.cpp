@@ -4,7 +4,11 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    
+    char c;
+    cin >> c >> c >> c;
+    int N;
+    cin >> N;
+    cout << (N >= 1 && N <= 349)
 }
 
 int main() {
