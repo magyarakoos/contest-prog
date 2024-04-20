@@ -4,7 +4,7 @@ using ll = long long;
 
 vector<vector<int>> g;
 vector<bool> vis;
-vector<int> sizeS;
+vector<int> sizeS, degS;
 
 void dfs(int u) {
     vis[u] = 1;
