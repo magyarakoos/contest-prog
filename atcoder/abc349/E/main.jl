@@ -23,7 +23,10 @@ backtrack = (x) -> begin
     ans = (x == 1 ? -Int(1e10) : Int(1e10))
     for i in 1:9
         if i ∉ s
-            
+            if x == 1
+                ans = max(ans, backtracK())
+            else
+            end
         end
     end
 end
