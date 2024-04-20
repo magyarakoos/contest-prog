@@ -42,6 +42,8 @@ ll backtrack(int x) {
             s.erase(i);
         }
     }
+
+    return ans;
 }
 
 int main() {
@@ -51,6 +53,5 @@ int main() {
         cin >> m[i];
         sum += m[i];
     }
-
-
+    cout << (backtrack(1) + INF)
 }
