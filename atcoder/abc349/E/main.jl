@@ -25,7 +25,10 @@ backtrack = (x) -> begin
         if i ∉ s
             push!(s, i)
             d[i] = x
-            
+
+            if over(d) 
+
+            if !over(d)
             if x == 1
                 e = backtrack(2)
                 if abs(e) != Int(1e10)
@@ -35,6 +38,7 @@ backtrack = (x) -> begin
             else
                 ans = min(ans, backtrack(1))
             end
+        end
 
             d[i] = i
             delete!(s, i)
