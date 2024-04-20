@@ -10,5 +10,5 @@ over = () -> begin
     for i in 1:3:7 
         if length(countmap(m[i:i+2])) == 1 return false end 
     end
-    
+    if length(unique([m[1]])) == 1
 end
