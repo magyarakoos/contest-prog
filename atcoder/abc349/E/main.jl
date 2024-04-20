@@ -27,7 +27,9 @@ backtrack = (x) -> begin
             if x == 1
                 e = backtrack(2)
                 if abs(e) != Int(1e10)
-                ans = max(ans, backtrack(2))
+                    e += m[i]
+                end
+                ans = max(ans, e)
             else
                 ans = min(ans, backtrack(1))
             end
