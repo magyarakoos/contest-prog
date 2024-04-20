@@ -16,6 +16,12 @@ int main() {
     for (int& x : v) cin >> x;
 
     while (Q--) {
-        
+        int T;
+        cin >> T;
+        if (T == 1) {
+
+        } else {
+            
+        }
     }
 }
