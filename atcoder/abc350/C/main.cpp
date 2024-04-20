@@ -17,10 +17,13 @@ void solve() {
     for (int i = 0; i < N; i++) {
         if (A[i] != i) {
             A[m[i]] = A[i];
+            A[i] = i;
             result.push_back({i, m[i]});
         }
     }
-//     for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
+    assert(result.size() < N);
+    cout << result.size() << "\n";
+    for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
 }
 
 int main() {
