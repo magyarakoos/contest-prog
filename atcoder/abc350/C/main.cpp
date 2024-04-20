@@ -2,17 +2,28 @@
 using namespace std;
 using ll = long long;
 
-vector<array<int, 2>> insertion_sort(vector<int>& v) {
-    vector<array<int, 2>> result;
-    for (size_t i = 0; i < v.size(); i++) {
-        int ptr = i;
-        while (ptr && v[ptr - 1] > v[ptr]) {
-            result.push_back({ptr, ptr - 1});
-            swap(v[ptr], v[ptr - 1]);
-            ptr--;
+int partition(vector<int>& v, int begin, int end) {
+    int pivot = v[end];
+    int i = begin - 1;
+
+    for (int j = begin; j < end; j++) {
+        if (v[j] < pivot) {
+            i++;
+            swap(v[i], v[j]);
         }
     }
-    return result;
+
+    swap(v[i + 1], v[end]);
+    return i + 1;
+}
+
+void quick_sort(vector<int>& v, int begin, int end) {
+    if (begin < end) {
+        int pivotI = partition(v, begin, end);
+
+        quick_sort(v, begin, pivotI - 1);
+        quick_sort(v, pivotI + 1, end);
+    }
 }
 
 #define cases 0
