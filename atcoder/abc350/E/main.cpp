@@ -18,7 +18,7 @@ pair<int, double> dp(int u) {
 
     double value_b = 0;
     for (int i = 1; i <= 6; i++) {
-        
+        pair<int, double> curr_b = dp(u )
     }
 }
 
