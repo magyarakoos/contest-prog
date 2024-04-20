@@ -5,9 +5,11 @@ using ll = long long;
 vector<vector<int>> g;
 vector<bool> vis;
 vector<int> group_degS, degS;
+int curr;
 
 void dfs(int u) {
     vis[u] = 1;
+    curr++;
     group_degS.back() += degS[u];
     for (int v : g[u]) {
         if (!vis[v]) dfs(v);
@@ -31,8 +33,10 @@ void solve() {
     ll result = 0;
     for (int u = 1; u <= N; u++) {
         if (!vis[u]) {
+            curr = 0;
             group_degS.push_back(0);
             dfs(u);
+            cout << curr << group_degS.back() << "\n";
         }
     }
 }
