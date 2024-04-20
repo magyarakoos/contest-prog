@@ -14,7 +14,7 @@ ofstream fout("../output");
 #define cout fout
 #endif
 int main() {
-    #ifndef LOCAl
+    #ifndef LOCAL
     cin.tie(0), ios::sync_with_stdio(0);
     #endif
     int T = 1;
