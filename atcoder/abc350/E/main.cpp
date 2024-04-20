@@ -6,6 +6,10 @@ using ld = long double;
 ll N, A, X, Y;
 map<ll, ld> m;
 
+// b = Y + 1/6 * (b + dp(x / 2) + ... + dp(x / 6))
+// 6b = 6Y + b + dp(x / 2) + ... dp(x / 6)
+// 5b = 6Y + dp(x / 2) + ... dp(x / 6)
+// b = (6Y + dp(x / 2) + ... dp(x / 6)) / 5
 double dp(ll x) {
     if (x == 0) return 0;
     if (m.count(x)) {
@@ -13,13 +17,8 @@ double dp(ll x) {
     }
 
     ld a = X + dp(x / A), b = Y * 6.0;
-    // b = Y + 1/6 * (b + dp(x / 2) + ... + dp(x / 6))
-    // 6b = 6Y + b + dp(x / 2) + ... dp(x / 6)
-    // 5b = 6Y + dp(x / 2) + ... dp(x / 6)
-    // b = (6Y + dp(x / 2) + ... dp(x / 6)) / 5
 
     for (int B = 2; B <= 6; B++) b += dp(x / B);
-
     b /= 5.0;
 
     m[x] = min(a, b);
