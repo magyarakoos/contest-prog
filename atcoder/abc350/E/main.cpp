@@ -14,8 +14,9 @@ double dp(ll u) {
 
     ld a = X + dp(u / A);
 
-    // b = Y + 1/6 * (dp(u / 2) + ... + dp(u / 6))
-    // 6b = 6Y + 
+    // b = Y + 1/6 * (b + dp(u / 2) + ... + dp(u / 6))
+    // 6b = 6Y + b + dp(u / 2) + ... dp(u / 6)
+    // 5b = 6
 }
 
 #define cases 0
