@@ -24,6 +24,7 @@ backtrack = (x) -> begin
     for i in 1:9
         if i ∉ s
             push!(s, i)
+            d[i] = x
             if x == 1
                 e = backtrack(2)
                 if abs(e) != Int(1e10)
@@ -33,6 +34,7 @@ backtrack = (x) -> begin
             else
                 ans = min(ans, backtrack(1))
             end
+            d[i] = i
             delete!(s, i)
         end
     end
