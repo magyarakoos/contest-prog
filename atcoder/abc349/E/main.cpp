@@ -28,8 +28,13 @@ ll backtrack(int x) {
             s.insert(i);
             d[i] = x;
 
-            if (!over) {
-                
+            if (!over()) {
+                if (x == 1) {
+                    ll e = backrack(2);
+                    if (abs(e) != INF)
+                } else {
+
+                }
             }            
 
             d[i] = i;
