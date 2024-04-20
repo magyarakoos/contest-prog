@@ -6,13 +6,16 @@ ll m[9], d[9], sum, INF = 1e10;
 set<int> s;
 
 bool over() {
-    for(int i = 0; i < 3; i++){
-        if (d[3 * i] == d[3 * i + 1] && d[3 * i + 1] == d[3 * i + 2]) return 1;
-        if(d[i] == d[i + 3] && d[i + 3] == d[i + 6]) return 1;
-    }
-    if (d[0] == d[4] && d[4] == d[8]) return 1;
-    if (d[2] == d[4] && d[4] == d[6]) return 1;
-    return 0;
+    return 
+        (d[0] == d[1] && d[1] == d[2]) ||
+        (d[3] == d[4] && d[4] == d[5]) ||
+        (d[6] == d[7] && d[7] == d[8]) ||
+        (d[0] == d[3] && d[3] == d[6]) ||
+        (d[1] == d[4] && d[4] == d[7]) ||
+        (d[2] == d[5] && d[5] == d[8]) ||
+        (d[0] == d[4] && d[4] == d[8]) ||
+        (d[2] == d[4] && d[4] == d[6]) 
+    ;
 }
 
 ll backtrack(int x) {
