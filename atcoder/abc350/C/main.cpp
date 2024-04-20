@@ -17,9 +17,8 @@ void solve() {
     for (int i = 0; i < N - 1; i++) {
         if (A[i] != i) {
             result.push_back({i, m[i]});
-            A[m[i]] = A[i];
-            A[i] = i; // pipa
-            m[m[i]] = i;
+            A[m[i]] = A[i]; // pipa
+            m[A[i]] = i;
         }
     }
     cout << result.size() << "\n";
