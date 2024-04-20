@@ -10,9 +10,13 @@ vector<int> sizeS;
 void solve() {
     int N, M;
     cin >> N >> M;
+    vis.resize(N + 1);
+    g.resize(N + 1);
     for (int i = 0; i < M; i++) {
         int U, V;
         cin >> U >> V;
+        g[U].push_back(V);
+        g[V].push_back(U);
     }
 }
 
