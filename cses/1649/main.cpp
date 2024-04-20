@@ -51,7 +51,7 @@ void update(int curr, int tl, int tr, int pos, int x) {
     } else {
         update(curr * 2 + 1, tmid + 1, tr, pos, x);
     }
-    a[curr] = a[curr * 2] + a[curr * 2 + 1];
+    a[curr] = min(a[curr * 2], a[curr * 2 + 1]);
 }
 
 int main() {
