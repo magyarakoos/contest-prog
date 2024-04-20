@@ -2,8 +2,8 @@
 using namespace std;
 using ll = long long;
 
-int N, A, X, Y;
-map<int, double> m;
+ll N, A, X, Y;
+map<ll, double> m;
 
 double dp(int u) {
     if (u == 0) return 0;
@@ -24,7 +24,7 @@ double dp(int u) {
 #define cases 0
 void solve() {
     cin >> N >> A >> X >> Y;
-    cout << dp(N);
+    cout << setprecision(15) << dp(N);
 }
 
 int main() {
