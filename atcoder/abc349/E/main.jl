@@ -1,3 +1,4 @@
+import Pkg; Pkg.add("StatsBase")
 using Combinatorics
 using StatsBase
 m = zeros(Int, 9)
