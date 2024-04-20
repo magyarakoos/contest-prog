@@ -2,11 +2,11 @@
 using namespace std;
 using ll = long long;
 
+#define cases 0
 void solve() {
 
 }
 
-#define cases 0
 #ifdef LOCAL
 ifstream cin("../input");
 ofstream cout("../output");
