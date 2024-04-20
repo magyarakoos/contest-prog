@@ -6,6 +6,13 @@ vector<vector<int>> g;
 vector<bool> vis;
 vector<int> sizeS;
 
+void dfs(int u) {
+    vis[u] = 1;
+    for (int v : g[u]) {
+        
+    }
+}
+
 #define cases 0
 void solve() {
     int N, M;
@@ -17,6 +24,12 @@ void solve() {
         cin >> U >> V;
         g[U].push_back(V);
         g[V].push_back(U);
+    }
+    ll result = 0;
+    for (int u = 1; u <= N; u++) {
+        if (!vis[u]) {
+
+        }
     }
 }
 
