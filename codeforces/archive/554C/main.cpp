@@ -19,7 +19,7 @@ int main() {
 
     int K, sum = 0;
     cin >> K;
-    vector<int> dp(K);
+    vector<ll> dp(K);
     dp[1] = 1;
 
     for (int i = 1; i < K; i++) {
