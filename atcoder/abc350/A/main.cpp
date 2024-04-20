@@ -8,10 +8,10 @@ void solve() {
 }
 
 #ifdef LOCAL
-#define cin fin
-#define cout fout
 ifstream fin("../input");
 ofstream fout("../output");
+#define cin fin
+#define cout fout
 #endif
 int main() {
     #ifndef LOCAl
