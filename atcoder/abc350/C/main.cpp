@@ -8,8 +8,14 @@ void solve() {
     cin >> N;
     map<int, int> m;
     vector<int> A(N);
-    for (int& x : A) cin >> x;
-
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+        m[A[i]] = i;
+    }
+    vector<array<int, 2>> result;
+    for (int i = 0; i < N; i++) {
+        
+    }
 }
 
 int main() {
