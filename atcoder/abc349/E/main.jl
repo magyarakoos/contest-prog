@@ -1,4 +1,3 @@
-using Combinatorics
 using StatsBase
 
 m = zeros(Int, 9)
@@ -18,15 +17,5 @@ over = (d) -> begin
     end
 end
 
-tot = [0, 0]
-for perm in permutations(collect(1:9))
-    scores = [0, 0]
-    d = collect(1:9)
-    for i in 1:9
-        scores[i % 2 + 1] += m[perm[i]]
-        d[perm[i]] = i % 2 + 1
-    end
-    if over(d) continue end
-    for i in 1:2 tot[i] += scores[i] end
-end
-println(tot)
+s = Set{Int}()
+
