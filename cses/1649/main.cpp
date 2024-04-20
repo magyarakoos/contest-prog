@@ -30,8 +30,13 @@ ll query(int curr, int tl, int tr, int l, int r) {
     );
 }
 
-void update(int curr, int tl, int tr, int pos, int x) {
-    
+void update(int curr, int tl, int tr, int pos, ll x) {
+    if (tl == tr) {
+        t[curr] = x;
+    } else {
+        int tmid = (tl + tr) / 2;
+        update(curr * 2, )
+    }
 }
 
 int main() {
