@@ -11,7 +11,14 @@ void solve() {
         cin >> c;
         v[i] = c == '1';
     }
-    
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (abs(i - j) <= 1) continue;
+            if (v[i] && v[j]) {
+                
+            }
+        }
+    }
 }
 
 int main() {
