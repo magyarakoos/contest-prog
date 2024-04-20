@@ -10,11 +10,15 @@ void solve() {
     vector<int> A(N);
     for (int i = 0; i < N; i++) {
         cin >> A[i];
+        A[i]--;
         m[A[i]] = i;
     }
     vector<array<int, 2>> result;
     for (int i = 0; i < N; i++) {
-        
+        if (A[i] != i) {
+            result.push_back({i, m[i]});
+            swap()
+        }
     }
 }
 
