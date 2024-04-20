@@ -2,7 +2,11 @@
 using namespace std;
 using ll = long long;
 
-#define cases = false
+void solve() {
+    
+}
+
+#define cases true
 #ifdef LOCAL
 ifstream cin("../input");
 ofstream cout("../output");
@@ -12,5 +16,6 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     #endif
     int T = 1;
-
+    if (cases) cin >> T;
+    while (T--) solve();
 }
