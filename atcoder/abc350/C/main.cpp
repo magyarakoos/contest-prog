@@ -17,9 +17,11 @@ void solve() {
     for (int i = 0; i < N; i++) {
         if (A[i] != i) {
             result.push_back({i, m[i]});
-            swap()
+            swap(A[i], A[m[i]]);
         }
     }
+    cout << result.size() << "\n";
+    for (auto [l, r] : result) cout << l << " " << r << "\n";
 }
 
 int main() {
