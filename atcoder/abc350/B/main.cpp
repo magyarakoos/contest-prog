@@ -8,7 +8,10 @@ void solve() {
     cin >> N >> Q;
     vector<bool> v(N, 1);
     while (Q--) {
-
+        int X;
+        cin >> X;
+        X--;
+        v[]
     }
 }
 
