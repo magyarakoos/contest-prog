@@ -18,9 +18,7 @@ void solve() {
         }
     }
     if (!groupS.back()) groupS.pop_back();
-
-    for (int x : groupS) cout << x << " ";
-    cout << "\n";
+    
 }
 
 int main() {
