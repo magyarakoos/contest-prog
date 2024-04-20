@@ -20,7 +20,7 @@ pair<double, double> dp(int u) {
     for (int i = 2; i <= 6; i++) {
         pair<double, double> curr_b = dp(u / i);
         value_b += (curr_b.second + Y) / (curr_b.first + 1);
-        steps_b += 
+        steps_b += curr_b.first + 1;
     }
     value_b /= 6;
 
