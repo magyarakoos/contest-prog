@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-ll m[9], d[9], sum, INF = 1e10;
+ll m[9], d[9], sum, INF = 1e11;
 set<int> s;
 
 bool over() {
