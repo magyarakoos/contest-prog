@@ -4,7 +4,12 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    
+    int N, Q;
+    cin >> N >> Q;
+    vector<bool> v(N, 1);
+    while (Q--) {
+
+    }
 }
 
 int main() {
