@@ -36,9 +36,7 @@ void solve() {
             group_size = 0;
             group_edges = 0;
             dfs(u);
-            cout << group_size << " " << group_edges << 
-                " " << group_size * (group_size + 1) / 2 - group_edges << "\n";
-            result += group_size * (group_size + 1) / 2 - group_edges;
+            result += group_size * (group_size - 1) / 2 - group_edges;
         }
     }
     cout << result;
