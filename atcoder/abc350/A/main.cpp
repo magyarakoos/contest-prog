@@ -8,9 +8,7 @@ void solve() {
 }
 
 int main() {
-    #ifndef LOCAL
     cin.tie(0), ios::sync_with_stdio(0);
-    #endif
     int T = 1;
     if (cases) cin >> T;
     while (T--) solve();
