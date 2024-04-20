@@ -11,7 +11,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
     } else {
         int tmid = (tl + tr) / 2;
         build(v, curr * 2, tl, tmid);
-        build(v, curr * 2 + 1, tmid, tr);
+        build(v, curr * 2 + 1, tmid + 1, tr);
         t[curr] = min(t[curr * 2], t[curr * 2 + 1]);
     }
 }
@@ -25,8 +25,8 @@ ll query(int curr, int tl, int tr, int l, int r) {
     }
     int tmid = (tl + tr) / 2;
     return min(
-        query(curr * 2, tl, tmid, l, r),
-        query(curr * 2, tmid, tr, l, r)
+        query(curr * 2, tl, tmid, l, min(r, tmid)),
+        query(curr * 2, tmid + 1, tr, max(l, tmid), r)
     );
 }
 
