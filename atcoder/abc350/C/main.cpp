@@ -21,7 +21,7 @@ void solve() {
             result.push_back({i, m[i]});
         }
     }
-    assert(result.size() < N);
+    assert(result.size() < (size_t)N);
     cout << result.size() << "\n";
     for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
 }
