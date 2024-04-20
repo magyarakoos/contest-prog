@@ -10,8 +10,10 @@ pair<int, double> dp(int u) {
         return {0, 0};
     }
     if (cache.count(u)) {
-
+        return cache[u];
     }
+
+    
 }
 
 #define cases 0
