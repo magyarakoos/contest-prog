@@ -14,13 +14,7 @@ void solve() {
         m[A[i]] = i;
     }
     vector<array<int, 2>> result;
-    for (int i = 0; i < N; i++) {
-        if (A[i] != i) {
-            result.push_back({i, m[i]});
-            swap(A[i], A[m[i]]);
-        }
-    }
-    cout << result.size() << "\n";
+    
     for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
 }
 
