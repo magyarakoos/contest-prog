@@ -10,7 +10,17 @@ ll backtrack(int x) {
 
     ll ans = x == 1 ? -INF : INF;
 
-    
+    for (int i = 0; i < 9; i++) {
+        if (!s.count(i)) {
+            s.insert(i);
+            d[i] = x;
+
+            
+
+            d[i] = i;
+            s.erase(i);
+        }
+    }
 }
 
 int main() {
