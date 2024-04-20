@@ -26,5 +26,4 @@ for perm in permutations(collect(1:9))
         d[perm[i]] = i % 2 + 1
     end
     if over(d) continue end
-    println("$(scores[2]) $(scores[1])")
 end
