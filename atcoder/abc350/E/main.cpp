@@ -13,13 +13,8 @@ double dp(ll u) {
     }
 
     ld a = X + dp(u / A);
-    ld b = 6.0 * Y;
 
-    for (ll i = 2; i <= 6; i++) b += dp(u / i);
-    b /= 5.0;
-    
-    m[u] = min(a, b);
-    return min(a, b);
+    // b = Y + 1/6()
 }
 
 #define cases 0
