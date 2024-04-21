@@ -16,6 +16,9 @@ int main() {
     cin >> N;
     vector<int> costS(N);
     for (int& x : costS) cin >> x;
+
     vector<array<string, 2>> v(N);
-    for ()
+    vector<array<ll, 2>> dp(N);
+
+    
 }
