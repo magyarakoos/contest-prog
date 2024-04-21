@@ -13,8 +13,8 @@ void solve() {
             break;
         }
     }
-    cout << res << " ";
-    for (int i = 1; i < N; i++) cout << 
+    cout << res;
+    for (int i = 1; i < N; i++) cout << " 0";
     cout << "\n";
 }
 
