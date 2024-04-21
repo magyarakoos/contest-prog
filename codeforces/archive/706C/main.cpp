@@ -37,7 +37,7 @@ int main() {
 
     ll result = 0;
 
-    for (const auto& v : groupS) {
+    for (auto& v : groupS) {
 
         vector<ll> dp(size(v), INF);
         dp[0] = 0;
@@ -54,5 +54,5 @@ int main() {
         result += dp[size(v) - 1];
     }
 
-    
+    cout << result << "\n";
 }
