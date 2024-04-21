@@ -11,5 +11,5 @@ int main() {
         result = min(result, sqrt(pow(abs(x - a), 2) + pow(abs(y - b), 2)) / v);
     }
     
-    cout << fixed << setprecision(15) << result;
+    cout << fixed << setprecision(20) << result;
 }
