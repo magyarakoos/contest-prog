@@ -34,12 +34,13 @@ int main() {
             cout << -1;
             exit(0);
         }
-        reverse(v.back()[1].begin(), v.back())
+        reverse(v.back().back()[1].begin(), v.back().back()[1].end());
     }
 
     ll result = 0;
-
-    for (auto& v : groupS) {
+    N = size(v);
+    
+    for (int i = 0; i < )
 
         N = size(v);
         vector<array<ll, 2>> dp(N, {INF, INF});
