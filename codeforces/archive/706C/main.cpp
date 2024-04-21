@@ -64,6 +64,10 @@ int main() {
             }
         }
 
+        for (int i = 0; i < M; i++) {
+            cout << "(" << 
+        }
+
         result += min(dp[M - 1][0], dp[M - 1][1]);
     }
 
