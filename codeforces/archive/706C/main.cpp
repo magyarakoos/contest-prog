@@ -49,6 +49,8 @@ int main() {
         dp[0] = {0, 0};
 
         for (int j = 1; j < M; j++) {
+            cout << v[i][j - 1][0] << " " << v[i][j - 1][1] << 
+
             if (v[i][j - 1][0] <= v[i][j][0]) {
                 dp[i][0] = min(dp[i][0], dp[i - 1][0]);
             }
