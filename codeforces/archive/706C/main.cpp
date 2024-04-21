@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+constexpr ll INF = 1e18;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -35,6 +37,9 @@ int main() {
 
     for (const auto& v : groupS) {
 
-        vector<ll> dp(size(v) + 1);
+        vector<ll> dp(size(v) + 1, INF);
+        dp[0] = 0;
+
+        
     }
 }
