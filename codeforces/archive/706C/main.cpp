@@ -18,7 +18,7 @@ int main() {
     for (int& x : costS) cin >> x;
 
     int maxl = 0;
-    vector<vector<pair<string, int>>> groupS;
+    vector<vector<array<string, 2>> groupS;
     for (int i = 0; i < N; i++) {
         string s;
         cin >> s;
@@ -44,7 +44,7 @@ int main() {
         dp[0] = {0, 0};
 
         for (int i = 1; i < N; i++) {
-            
+
         }
     }
 
