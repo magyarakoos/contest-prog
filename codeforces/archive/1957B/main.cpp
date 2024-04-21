@@ -6,22 +6,15 @@ using namespace std;
 void solve() {
     int N, K;
     cin >> N >> K;
-    vector<int> res;
-    int sum = 0;
+    int res = 0;
     for (int i = (1 << 30) ; i > 1; i /= 2) {
-        if (sum + i - 1 <= K) {
-            sum += i - 1;
-            res.push_back(i - 1);
+        if (i - 1 <= K) {
+            res = i - 1;
             break;
         }
     }
-    for (int i = 0; i < N; i++) {
-        if (i < size(res)) {
-            cout << res[i] << " ";
-        } else {
-            cout << "0 ";
-        }
-    }
+    cout << res << " ";
+    for (int i = 1; i < N; i++) cout << 
     cout << "\n";
 }
 
