@@ -17,6 +17,11 @@ int main() {
     int maxl = 0;
     vector<vector<string>> groupS;
     for (int i = 0; i < N; i++) {
-        if ()
+        string s;
+        cin >> s;
+        if (maxl < size(s)) {
+            maxl = size(s);
+            groupS.push_back({s});
+        } 
     }
 }
