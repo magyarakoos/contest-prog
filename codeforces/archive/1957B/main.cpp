@@ -8,8 +8,8 @@ void solve() {
     cin >> N >> K;
     vector<int> res;
     int sum = 0;
-    for (int i = (1 << 30) ;; i *= 2) {
-        if (sum + i <= K) {
+    for (int i = (1 << 30) ; i > 1; i /= 2) {
+        if (sum + (i) <= K) {
             sum += i;
             res.push_back(i);
         } else {
