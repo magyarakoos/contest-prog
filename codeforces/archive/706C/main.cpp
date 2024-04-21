@@ -17,7 +17,7 @@ int main() {
     for (int& x : costS) cin >> x;
 
     vector<array<string, 2>> v(N);
-    vector<array<ll, 2>> dp(N);
+    vector<array<ll, 2>> dp(N, {INF, INF});
 
     for (int i = 0; i < N; i++) {
         cin >> v[i][0];
@@ -44,5 +44,5 @@ int main() {
     }
 
     ll result = min(dp[N - 1][0], dp[N - 1][1]);
-    cout << (result >= INF)
+    cout << (result >= INF ? -1 : result) << "\n";
 }
