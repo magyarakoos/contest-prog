@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-constexpr ll INF = 1e18;
+constexpr ll INF = 1e15;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -63,11 +63,10 @@ int main() {
             if (v[i][j - 1][1] <= v[i][j][1]) {
                 dp[j][1] = min(dp[j][1], dp[j - 1][1] + costS[i][j]);
             }
+        }
 
-            if (dp[j][0] == INF && dp[j][1] == INF) {
-                cout << -1;
-                exit(0);
-            }
+        if (min(dp[M - 1][0], dp[M - 1][1]) >= INF) {
+            
         }
 
         result += min(dp[M - 1][0], dp[M - 1][1]);
