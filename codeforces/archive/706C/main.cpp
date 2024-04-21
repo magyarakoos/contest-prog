@@ -54,16 +54,16 @@ int main() {
 
             if (v[i][j - 1][0] <= v[i][j][0]) {
                 cout << "TAKE1\n";
-                dp[i][0] = min(dp[i][0], dp[i - 1][0]);
+                dp[j][0] = min(dp[j][0], dp[j - 1][0]);
             }
             if (v[i][j - 1][1] <= v[i][j][0]) {
                 cout << "TAKE2\n";
-                dp[i][0] = min(dp[i][0], dp[i - 1][1]);
+                dp[j][0] = min(dp[j][0], dp[j - 1][1]);
             }
 
             if (v[i][j - 1][0] <= v[i][j][1]) {
                 cout << "TAKE3\n";
-                dp[i][1] = min(dp[i][1], dp[i - 1][0] + costS[i][j]);
+                dp[j][1] = min(dp[i][1], dp[i - 1][0] + costS[i][j]);
             }
             if (v[i][j - 1][1] <= v[i][j][1]) {
                 cout << "TAKE4\n";
