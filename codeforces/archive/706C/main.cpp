@@ -14,21 +14,24 @@ int main() {
     cin >> N;
     vector<int> costS(N);
     for (int& x : costS) cin >> x;
+
     int maxl = 0;
-    vector<vector<string>> groupS;
+    vector<vector<pair<string, int>>> groupS;
     for (int i = 0; i < N; i++) {
         string s;
         cin >> s;
         if (maxl < size(s)) {
             maxl = size(s);
-            groupS.push_back({s});
+            groupS.push_back({{s, costS[i]}});
         }
         else if (maxl == size(s)) {
-            groupS.back().push_back(s);
+            groupS.back().push_back({s, costS[i]});
         }
         else {
             cout << -1;
             exit(0);
         }
     }
+
+    for (const )
 }
