@@ -17,8 +17,13 @@ void solve() {
         }
     }
     for (int i = 0; i < N; i++) {
-        if (i < size(rse))
+        if (i < size(res)) {
+            cout << res[i] << " ";
+        } else {
+            cout << "0 ";
+        }
     }
+    cout << "\n";
 }
 
 int main() {
