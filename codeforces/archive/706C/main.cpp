@@ -22,6 +22,13 @@ int main() {
         if (maxl < size(s)) {
             maxl = size(s);
             groupS.push_back({s});
-        } 
+        }
+        else if (maxl == size(s)) {
+            groupS.back().push_back(s);
+        }
+        else {
+            cout << -1;
+            exit(0);
+        }
     }
 }
