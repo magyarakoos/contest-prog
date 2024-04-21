@@ -46,6 +46,8 @@ int main() {
             if (v[i - 1].first <= v[i].first) {
                 dp[i] = dp[i - 1];
             } else {
+                if (v[i].second <= v[i - 1].second) }
+                
                 reverse(v[i].first.begin(), v[i].first.end());
                 dp[i] = dp[i - 1] + v[i].second;
             }
