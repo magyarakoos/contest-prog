@@ -14,17 +14,19 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> costS(N);
-    for (int& x : costS) cin >> x;
+    vector<int> C(N);
+    for (int& x : C) cin >> x;
 
     int maxl = 0;
-    vector<vector<array<string, 2>> groupS;
+    vector<vector<array<string, 2>>> v;
+    vector<vector<int>> costS;
     for (int i = 0; i < N; i++) {
         string s;
         cin >> s;
         if (maxl < size(s)) {
             maxl = size(s);
-            groupS.push_back({{s, costS[i]}});
+            v.push_back({s, s});
+            
         }
         else if (maxl == size(s)) {
             groupS.back().push_back({s, costS[i]});
