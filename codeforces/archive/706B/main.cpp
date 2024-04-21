@@ -12,6 +12,8 @@ int main() {
     sort(v.begin(), v.end());
     int Q;
     while (Q--) {
-        
+        int M;
+        cin >> M;
+        upper_bound()
     }
 }
