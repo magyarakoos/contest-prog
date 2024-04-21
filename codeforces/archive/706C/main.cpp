@@ -47,7 +47,7 @@ int main() {
         int M = size(v[i]);
         cout << M << "\n";
         vector<array<ll, 2>> dp(M, {INF, INF});
-        dp[0] = {0, 0};
+        dp[0] = {0, costS[i][0]};
 
         for (int j = 1; j < M; j++) {
             cout << v[i][j - 1][0] << " " << v[i][j - 1][1] << " " << v[i][j][0] << " " << v[i][j][1] << "\n";
