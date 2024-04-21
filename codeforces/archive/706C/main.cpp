@@ -25,16 +25,16 @@ int main() {
         cin >> s;
         if (maxl < size(s)) {
             maxl = size(s);
-            v.push_back({s, s});
-            
+            v.push_back({{s, s}});
         }
         else if (maxl == size(s)) {
-            groupS.back().push_back({s, costS[i]});
+            v.back().push_back({s, s});
         }
         else {
             cout << -1;
             exit(0);
         }
+        reverse(v.back()[1].begin(), v.back())
     }
 
     ll result = 0;
