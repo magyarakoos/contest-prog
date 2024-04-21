@@ -39,7 +39,10 @@ int main() {
             smin(dp[i][1], dp[i - 1][0] + costS[i]);
         }
         if (v[i - 1][1] <= v[i][1]) {
-            smin(dp[i][1], dp[i - 1][1])
+            smin(dp[i][1], dp[i - 1][1] + costS[i]);
         }
     }
+
+    ll result = min(dp[N - 1][0], dp[N - 1][1]);
+    cout << (result >= INF)
 }
