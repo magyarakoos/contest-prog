@@ -63,14 +63,14 @@ int main() {
             if (v[i][j - 1][1] <= v[i][j][1]) {
                 dp[j][1] = min(dp[j][1], dp[j - 1][1] + costS[i][j]);
             }
+
+            if (dp[j][0] == INF && dp[j][1] == INF) {
+                cout << -1;
+                exit(0);
+            }
         }
-        
-        ll tot = min(dp[M - 1][0], dp[M - 1][1]);
-        if (tot == INF) {
-            cout << -1;
-            exit(0);
-        }
-        result += tot;
+
+        result += min(dp[M - 1][0], dp[M - 1][1]);
     }
 
     cout << result << "\n";
