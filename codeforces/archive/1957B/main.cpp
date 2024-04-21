@@ -9,8 +9,8 @@ void solve() {
     vector<int> res;
     int sum = 0;
     for (int i = (1 << 30) ; i > 1; i /= 2) {
-        if (i - 1 <= K) {
-            
+        if (sum + i - 1 <= K) {
+            sum += i - 1;
         }
     }
     for (int i = 0; i < N; i++) {
