@@ -39,10 +39,13 @@ int main() {
 
     for (auto& v : groupS) {
 
-        vector<array<ll, 2>> dp(size(v), {INF, INF});
+        N = size(v);
+        vector<array<ll, 2>> dp(N, {INF, INF});
         dp[0] = {0, 0};
 
-        
+        for (int i = 1; i < N; i++) {
+            
+        }
     }
 
     cout << result << "\n";
