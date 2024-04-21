@@ -42,10 +42,12 @@ int main() {
 
     for (int i = 0; i < N; i++) {
 
-        vector<array<ll, 2>> dp(N, {INF, INF});
+        int M = size(v[i]);
+        vector<array<ll, 2>> dp(M, {INF, INF});
+        dp[0] = {0, 0};
 
-        for (int j = 1; j < N; j++) {
-            
+        for (int j = 1; j < M; j++) {
+            if (v[i][j - 1][0] <= )
         }
     }
 
