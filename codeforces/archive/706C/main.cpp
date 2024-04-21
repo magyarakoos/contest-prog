@@ -40,6 +40,8 @@ int main() {
         vector<ll> dp(size(v), INF);
         dp[0] = 0;
 
-
+        for (int i = 1; i < size(v); i++) {
+            if (v[i - 1] <= )
+        }
     }
 }
