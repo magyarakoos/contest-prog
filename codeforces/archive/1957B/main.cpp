@@ -2,7 +2,8 @@
 using namespace std;
 
 void solve() {
-    int 
+    int N, K;
+    cin >> N >> K;
 }
 
 int main() {
