@@ -35,6 +35,8 @@ int main() {
         }
     }
 
+    ll result = 0;
+
     for (const auto& v : groupS) {
 
         vector<ll> dp(size(v), INF);
@@ -45,8 +47,12 @@ int main() {
                 dp[i] = dp[i - 1];
             } else {
                 reverse(v[i].first.begin(), v[i].first.end());
-                
+                dp[i] = dp[i - 1] + v[i].second;
             }
         }
+
+        result += dp[size(v) - 1];
     }
+
+    
 }
