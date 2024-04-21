@@ -63,11 +63,11 @@ int main() {
 
             if (v[i][j - 1][0] <= v[i][j][1]) {
                 cout << "TAKE3\n";
-                dp[j][1] = min(dp[i][1], dp[i - 1][0] + costS[i][j]);
+                dp[j][1] = min(dp[j][1], dp[j - 1][0] + costS[i][j]);
             }
             if (v[i][j - 1][1] <= v[i][j][1]) {
                 cout << "TAKE4\n";
-                dp[i][1] = min(dp[i][1], dp[i - 1][1] + costS[i][j]);
+                dp[j][1] = min(dp[j][1], dp[j - 1][1] + costS[i][j]);
             }
         }
 
