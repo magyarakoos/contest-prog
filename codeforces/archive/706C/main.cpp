@@ -66,7 +66,8 @@ int main() {
         }
 
         if (min(dp[M - 1][0], dp[M - 1][1]) >= INF) {
-            
+            cout << -1;
+            exit(0);
         }
 
         result += min(dp[M - 1][0], dp[M - 1][1]);
