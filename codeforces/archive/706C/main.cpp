@@ -70,7 +70,7 @@ int main() {
             cout << -1;
             exit(0);
         }
-        result += ;
+        result += tot;
     }
 
     cout << result << "\n";
