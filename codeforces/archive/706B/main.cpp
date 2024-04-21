@@ -8,7 +8,9 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
     sort(v.begin(), v.end());
+    
     int Q;
+    cin >> Q;
     while (Q--) {
         int M;
         cin >> M;
