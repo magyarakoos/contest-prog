@@ -45,36 +45,25 @@ int main() {
     for (int i = 0; i < N; i++) {
 
         int M = size(v[i]);
-        cout << M << "\n";
         vector<array<ll, 2>> dp(M, {INF, INF});
         dp[0] = {0, costS[i][0]};
 
         for (int j = 1; j < M; j++) {
-            cout << v[i][j - 1][0] << " " << v[i][j - 1][1] << " " << v[i][j][0] << " " << v[i][j][1] << "\n";
 
             if (v[i][j - 1][0] <= v[i][j][0]) {
-                cout << "TAKE1\n";
                 dp[j][0] = min(dp[j][0], dp[j - 1][0]);
             }
             if (v[i][j - 1][1] <= v[i][j][0]) {
-                cout << "TAKE2\n";
                 dp[j][0] = min(dp[j][0], dp[j - 1][1]);
             }
 
             if (v[i][j - 1][0] <= v[i][j][1]) {
-                cout << "TAKE3\n";
                 dp[j][1] = min(dp[j][1], dp[j - 1][0] + costS[i][j]);
             }
             if (v[i][j - 1][1] <= v[i][j][1]) {
-                cout << "TAKE4\n";
                 dp[j][1] = min(dp[j][1], dp[j - 1][1] + costS[i][j]);
             }
         }
-
-        // for (int i = 0; i < M; i++) {
-        //     cout << "(" << dp[i][0] << "," << dp[i][1] << ") ";
-        // }
-        cout << "\n";
 
         result += min(dp[M - 1][0], dp[M - 1][1]);
     }
