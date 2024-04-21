@@ -12,6 +12,7 @@ void solve() {
         if (sum + i - 1 <= K) {
             sum += i - 1;
             res.push_back(i - 1);
+            break;
         }
     }
     for (int i = 0; i < N; i++) {
