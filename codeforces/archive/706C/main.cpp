@@ -39,21 +39,10 @@ int main() {
 
     for (auto& v : groupS) {
 
-        vector<ll> dp(size(v), INF);
-        dp[0] = 0;
+        vector<array<ll, 2>> dp(size(v), {INF, INF});
+        dp[0] = {0, 0};
 
-        for (int i = 1; i < size(v); i++) {
-            if (v[i - 1].first <= v[i].first) {
-                dp[i] = dp[i - 1];
-            } else {
-                if (v[i].second <= v[i - 1].second) }
-                
-                reverse(v[i].first.begin(), v[i].first.end());
-                dp[i] = dp[i - 1] + v[i].second;
-            }
-        }
-
-        result += dp[size(v) - 1];
+        
     }
 
     cout << result << "\n";
