@@ -29,7 +29,14 @@ int main() {
 
     for (int i = 1; i < N; i++) {
         if (v[i - 1][0] <= v[i][0]) {
-            
+            smin(dp[i][0], dp[i - 1][0]);
+        }
+        if (v[i - 1][1] <= v[i][0]) {
+            smin(dp[i][0], dp[i - 1][1]);
+        }
+
+        if (v[i - 1][0] <= v[i][1]) {
+            smin(dp[i][1], dp[i - 1][0]);
         }
     }
 }
