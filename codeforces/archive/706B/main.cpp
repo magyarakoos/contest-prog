@@ -7,5 +7,11 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int>
+    vector<int> v(N);
+    for (int& x : v) cin >> x;
+    sort(v.begin(), v.end());
+    int Q;
+    while (Q--) {
+        
+    }
 }
