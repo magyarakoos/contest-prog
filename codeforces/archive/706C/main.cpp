@@ -41,7 +41,12 @@ int main() {
         dp[0] = 0;
 
         for (int i = 1; i < size(v); i++) {
-            if (v[i - 1] <= )
+            if (v[i - 1].first <= v[i].first) {
+                dp[i] = dp[i - 1];
+            } else {
+                reverse(v[i].first.begin(), v[i].first.end());
+                
+            }
         }
     }
 }
