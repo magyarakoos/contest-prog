@@ -36,7 +36,10 @@ int main() {
         }
 
         if (v[i - 1][0] <= v[i][1]) {
-            smin(dp[i][1], dp[i - 1][0]);
+            smin(dp[i][1], dp[i - 1][0] + costS[i]);
+        }
+        if (v[i - 1][1] <= v[i][1]) {
+            smin(dp[i][1], dp[i - 1][1])
         }
     }
 }
