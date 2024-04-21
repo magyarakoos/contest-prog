@@ -26,10 +26,11 @@ int main() {
         if (maxl < size(s)) {
             maxl = size(s);
             v.push_back({{s, s}});
-            costS.push_back({})
+            costS.push_back({C[i]});
         }
         else if (maxl == size(s)) {
             v.back().push_back({s, s});
+            costS.back().push_back(C[i]);
         }
         else {
             cout << -1;
@@ -56,8 +57,9 @@ int main() {
             }
 
             if (v[i][j - 1][0] <= v[i][j][1]) {
-                dp[i][1] = min(dp[i][1], dp[i - 1][0] + cost);
+                dp[i][1] = min(dp[i][1], dp[i - 1][0] + costS[i][j]);
             }
+            if (v[i][j - 1][1] <= v[i][])
         }
     }
 
