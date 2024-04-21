@@ -20,5 +20,15 @@ int main() {
     vector<array<string, 2>> v(N);
     vector<array<ll, 2>> dp(N);
 
-    
+    for (int i = 0; i < N; i++) {
+        cin >> v[i][0];
+        v[i][1] = v[i][0];
+        reverse(all(v[i][1]));
+    }
+
+    dp[0] = {0, costS[0]};
+
+    for (int i = 1; i < N; i++) {
+        
+    }
 }
