@@ -39,12 +39,10 @@ int main() {
 
     ll result = 0;
     N = size(v);
-    
-    for (int i = 0; i < )
 
-        N = size(v);
+    for (int i = 0; i < N; i++) {
+
         vector<array<ll, 2>> dp(N, {INF, INF});
-        dp[0] = {0, 0};
 
         for (int i = 1; i < N; i++) {
 
