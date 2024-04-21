@@ -26,6 +26,7 @@ int main() {
         if (maxl < size(s)) {
             maxl = size(s);
             v.push_back({{s, s}});
+            costS.push_back({})
         }
         else if (maxl == size(s)) {
             v.back().push_back({s, s});
@@ -54,7 +55,9 @@ int main() {
                 dp[i][0] = min(dp[i][0], dp[i - 1][1]);
             }
 
-            if (v[i][j - 1][1] <=)
+            if (v[i][j - 1][0] <= v[i][j][1]) {
+                dp[i][1] = min(dp[i][1], dp[i - 1][0] + cost);
+            }
         }
     }
 
