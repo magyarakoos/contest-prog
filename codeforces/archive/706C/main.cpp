@@ -29,6 +29,8 @@ int main() {
     dp[0] = {0, costS[0]};
 
     for (int i = 1; i < N; i++) {
-        
+        if (v[i - 1][0] <= v[i][0]) {
+            
+        }
     }
 }
