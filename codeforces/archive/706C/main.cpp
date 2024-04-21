@@ -14,4 +14,9 @@ int main() {
     cin >> N;
     vector<int> costS(N);
     for (int& x : costS) cin >> x;
+    int maxl = 0;
+    vector<vector<string>> groupS;
+    for (int i = 0; i < N; i++) {
+        if ()
+    }
 }
