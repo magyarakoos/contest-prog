@@ -33,5 +33,8 @@ int main() {
         }
     }
 
-    for (const )
+    for (const auto& v : groupS) {
+
+        
+    }
 }
