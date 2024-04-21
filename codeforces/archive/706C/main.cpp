@@ -38,7 +38,7 @@ int main() {
     for (const auto& v : groupS) {
 
         vector<ll> dp(size(v) + 1, INF);
-        dp[0] = 0;
+        dp[0] = 0; dp[1] = 0;
 
         
     }
