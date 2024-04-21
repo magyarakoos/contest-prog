@@ -14,6 +14,11 @@ int main() {
     while (Q--) {
         int M;
         cin >> M;
-        upper_bound()
+        auto it = upper_bound(v.begin(), v.end(), M);
+        if (it == v.end()) {
+            cout << N << "\n";
+        } else {
+            cout << i
+        }
     }
 }
