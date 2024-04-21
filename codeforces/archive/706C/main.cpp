@@ -64,8 +64,13 @@ int main() {
                 dp[j][1] = min(dp[j][1], dp[j - 1][1] + costS[i][j]);
             }
         }
-
-        result += min(dp[M - 1][0], dp[M - 1][1]);
+        
+        ll tot = min(dp[M - 1][0], dp[M - 1][1]);
+        if (tot == INF) {
+            cout << -1;
+            exit(0);
+        }
+        result += ;
     }
 
     cout << result << "\n";
