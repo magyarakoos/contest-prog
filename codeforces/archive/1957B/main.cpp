@@ -11,6 +11,7 @@ void solve() {
     for (int i = (1 << 30) ; i > 1; i /= 2) {
         if (sum + i - 1 <= K) {
             sum += i - 1;
+            res.push_back(i - 1);
         }
     }
     for (int i = 0; i < N; i++) {
