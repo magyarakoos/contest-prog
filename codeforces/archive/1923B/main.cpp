@@ -15,6 +15,7 @@ void solve() {
     }
     int cleared = 0;
     for (int pos = 0; pos <= N; pos++) {
+        
         if (v[pos] > 0) {
             cout << "NO\n";
             return;
@@ -25,9 +26,12 @@ void solve() {
                 v[i] -= k;
                 break;
             }
-            
+            v[i] = 0;
+            cleared = i;
+            k -= v[i];
         }
     }
+    cout << "YES\n";
 }
 
 int main() {
