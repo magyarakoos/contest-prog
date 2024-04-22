@@ -8,12 +8,11 @@ void solve() {
     int N, K;
     cin >> N >> K;
 
-    int M = N * 2;
     while (K--) {
         int I, J;
         cin >> I >> J;
-        M--;
-        if (I != J) M--;
+        M -= 2;
+        if (I != J) M -= 2;
     }
 
     cerr << M << " ";
