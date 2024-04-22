@@ -5,25 +5,17 @@ using ll = long long;
 void solve() {
     int N, K;
     cin >> N >> K;
-    vector<int> hpS(N), v(N + 1);
-    for (int& x : hpS) cin >> x;
+    vector<ll> hpS(N), v(N + 1);
+    for (ll& x : hpS) cin >> x;
 
     for (int i = 0; i < N; i++) {
-        int X;
+        ll X;
         cin >> X;
         v[abs(X)] += hpS[i];
     }
 
-    ll sum = 0;
-    for (int i = 0; i <= N; i++) {
-        sum += v[i];
-        if (K * (i + 1) <= sum) {
-            cout << "NO\n";
-            return;
-        }
-    }
+    ll rem = 0;
     
-    cout << "YES\n";
 }
 
 int main() {
