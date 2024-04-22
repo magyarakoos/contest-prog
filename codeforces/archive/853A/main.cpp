@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-ll t;
+constexpr int MAXN = 3e5;
 
 
 
