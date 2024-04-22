@@ -75,5 +75,6 @@ int main() {
 		auto [c, i] = query(1, 0, N - 1, 0, t - 1);
 		result += (t - (i + 1)) * c;
 		timeS[i] = t;
+		update(1, 0, N - 1, i, INT_MIN);
 	}
 }
