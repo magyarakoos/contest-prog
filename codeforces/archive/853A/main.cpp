@@ -64,4 +64,6 @@ int main() {
 	cin >> N >> K;
 	vector<int> v(N);
 	for (int& x : v) cin >> x;
+
+	build(v, 1, 0, N - 1);
 }
