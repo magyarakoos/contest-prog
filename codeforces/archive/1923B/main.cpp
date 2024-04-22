@@ -14,19 +14,14 @@ void solve() {
         v[abs(X)] += hpS[i];
     }
 
-    int cleared = 0;
     for (int pos = 0; pos <= N; pos++) {
-        if (cleared == N) {
-            break;
-        }
-        
         if (v[pos] > 0) {
             cout << "NO\n";
             return;
         }
 
         int k = K;
-        for (int i = cleared + 1; i <= N; i++) {
+        for (int i = pos + 1; i <= N; i++) {
             if (k < v[i]) {
                 v[i] -= k;
                 break;
