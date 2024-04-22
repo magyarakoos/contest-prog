@@ -19,8 +19,11 @@ void solve() {
             cout << "NO\n";
             return;
         }
+        int k = K;
         for (int i = pos + 1; i <= N; i++) {
-            
+            if (k < v[i]) {
+                v[i] -= k;
+            }
         }
     }
 }
