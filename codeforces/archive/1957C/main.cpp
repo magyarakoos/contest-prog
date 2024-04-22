@@ -2,6 +2,8 @@
 using namespace std;
 using ll = long long;
 
+constexpr int MOD = 1e9 + 7;
+
 void solve() {
     int N, K;
     cin >> N >> K;
@@ -19,8 +21,10 @@ void solve() {
     dp[1] = 1;
 
     for (int i = 2; i <= M; i++) {
-        dp[i] = (dp[i - 1] + 2 * (i - 1));
+        dp[i] = (dp[i - 1] + 2 * (i - 1) * dp[i - 2]) % MOD;
     }
+
+    cout << dp[M] << "\n";
 }
 
 int main() {
