@@ -4,7 +4,6 @@ using namespace std;
 int main() {
     int N;
     cin >> N;
-    int mx = INT_MIN;
     map<string, int> scoreS;
     map<int, string> firstS;
     while (N--) {
@@ -16,8 +15,9 @@ int main() {
             firstS[scoreS[name]] = name;
         }
     }
-    
+    int mx = INT_MIN;
     for (const auto& [k, v] : scoreS) {
-
+        mx = max(mx, v);
     }
+    cout << firstS[mx];
 }
