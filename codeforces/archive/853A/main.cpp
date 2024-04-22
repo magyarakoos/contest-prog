@@ -6,7 +6,12 @@ constexpr int MAXN = 3e5;
 int t[4 * MAXN + 1];
 void build(const vector<int>& v, int curr, int tl, int tr) {
 	if (tl == tr) {
-		t[curr] = 
+		t[curr] = v[tl];
+	} else {
+		int tmid = (tl + tr) / 2;
+		build(v, curr * 2, tl, tmid);
+		build(v, curr * 2 + 1, tmid + 1, tr);
+		
 	}
 }
 
