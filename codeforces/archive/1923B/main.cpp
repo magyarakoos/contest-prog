@@ -32,6 +32,9 @@ void solve() {
                 v[i] -= k;
                 break;
             }
+            if (k == v[i]) {
+                
+            }
             v[i] = 0;
             k -= v[i];
         }
