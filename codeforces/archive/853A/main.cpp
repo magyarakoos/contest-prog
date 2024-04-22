@@ -57,16 +57,6 @@ void update(int curr, int tl, int tr, int pos, int x) {
 	}
 }
 
-void logme(int N) {
-	for (int i = 0; i < N; i++) {
-		for (int j = i; j < N; j++) {
-			auto q = query(1, 0, N - 1, i, j);
-			cout << i << " " << j << " (" << q[0] << "," << q[1] << ")\n";
-		}
-	}
-	cout << "\n";
-}
-
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
@@ -83,8 +73,6 @@ int main() {
 
 	while (flights_left--) {
 		auto [c, i] = query(1, 0, N - 1, 0, min(t, N - 1));
-		cout << t << " " << c << " " << i << "\n";
-		logme(N);
 		update(1, 0, N - 1, i, -1);
 		result += (t - i) * c;
 		timeS[i] = t++;
@@ -92,4 +80,5 @@ int main() {
 
 	cout << result << "\n";
 	for (int x : timeS) cout << x + 1 << " ";
+	cout << "\n";
 }
