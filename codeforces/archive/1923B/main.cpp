@@ -24,6 +24,7 @@ void solve() {
         for (int i = pos + 1; i <= N; i++) {
             if (k < v[i]) {
                 v[i] -= k;
+                pos = i - 2;
                 break;
             }
             if (k == v[i]) {
