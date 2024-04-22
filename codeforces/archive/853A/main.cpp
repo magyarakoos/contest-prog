@@ -66,4 +66,10 @@ int main() {
 	for (int& x : v) cin >> x;
 
 	build(v, 1, 0, N - 1);
+
+	for (int i = 0; i < N; i++) {
+		for (int j = i; j < N; j++) {
+			cout << i << " " << j << " " << query()
+		}
+	}
 }
