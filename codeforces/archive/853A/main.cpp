@@ -26,6 +26,8 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 	}
 	int tmid = (tl + tr) / 2;
 	
+	auto a = query(curr * 2, tl, tmid, l, min(tmid, r));
+	auto b = query(curr * 2 + 1, tmid + 1, tr,)
 }
 
 int main() {
