@@ -5,7 +5,7 @@ ll t;
 
 struct Cmp {
 bool operator()(array<int, 2> a, array<int, 2> b) {
-
+    if (a[1] >= t && )
 }};
 
 int main() {
