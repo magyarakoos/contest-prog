@@ -17,7 +17,6 @@ void solve() {
     ll sum = 0;
     for (int i = 0; i <= N; i++) {
         sum += v[i];
-        cout << sum << " " << K * (i + 1) << "\n";
         if (K * (i + 1) <= sum) {
             cout << "NO\n";
             return;
