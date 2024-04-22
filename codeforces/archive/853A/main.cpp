@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
+ll t;
+
+
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
@@ -16,7 +19,8 @@ int main() {
 		pq.push({C, i + 1});
 	}
 
-	ll result = 0, t = K + 1;
+	ll result = 0;
+    t = K + 1;
 	vector<int> timeS(N);
 
 	while (!pq.empty()) {
