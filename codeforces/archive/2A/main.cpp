@@ -11,6 +11,7 @@ int main() {
         int score;
         cin >> name >> score;
         scoreS[name] += score;
+        cout << name << " " << v << "\n";
         if (!firstS.count(scoreS[name])) {
             firstS[scoreS[name]] = name;
         }
@@ -18,7 +19,6 @@ int main() {
     cout << "\n";
     int mx = INT_MIN;
     for (const auto& [k, v] : scoreS) {
-        cout << k << " " << v << "\n";
         mx = max(mx, v);
     }
     cout << firstS[mx];
