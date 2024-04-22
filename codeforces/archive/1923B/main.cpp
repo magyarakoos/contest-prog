@@ -14,7 +14,7 @@ void solve() {
         v[abs(X)] += hpS[i];
     }
 ;
-    for (int pos = 1; pos <= N; pos++) {
+    for (int pos = 0; pos <= N; pos++) {
         if (v[pos] > 0) {
             cout << "NO\n";
             return;
