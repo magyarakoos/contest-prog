@@ -32,10 +32,9 @@ int main() {
 
 	while (!pq.empty()) {
         auto [c, i] = pq.top();
-        if (i >= tr)
 		pq.pop();
 		result += (t - i) * c;
-        timeS[i - 1] = t;
+		timeS[i - 1] = t;
 		t++;
 	}
 
