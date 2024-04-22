@@ -11,8 +11,9 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 		int tmid = (tl + tr) / 2;
 		build(v, curr * 2, tl, tmid);
 		build(v, curr * 2 + 1, tmid + 1, tr);
-		if (t[curr * 2][0] < t[curr * 2 + 1][0]) {
-			
+		
+		if (t[curr * 2][0] >= t[curr * 2 + 1][0]) {
+			t[curr] = t[curr * 2];
 		}
 	}
 }
