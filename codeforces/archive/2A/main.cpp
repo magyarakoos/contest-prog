@@ -15,6 +15,7 @@ int main() {
             firstS[scoreS[name]] = name;
         }
     }
+    cout << "\n";
     int mx = INT_MIN;
     for (const auto& [k, v] : scoreS) {
         cout << k << " " << v << "\n";
