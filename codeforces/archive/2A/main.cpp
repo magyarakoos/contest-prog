@@ -5,12 +5,13 @@ int main() {
     int N;
     cin >> N;
     int mx = INT_MIN;
-    map<string, int> scoreS, firstS;
+    map<string, int> scoreS;
+    map<int, string> firstS;
     while (N--) {
         string name;
         int score;
         cin >> name >> score;
         scoreS[name] += score;
-        if (!)
+        if (!firstS.count())
     }
 }
