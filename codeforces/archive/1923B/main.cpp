@@ -8,7 +8,13 @@ void solve() {
     vector<int> hpS(N);
     for (int& x : hpS) cin >> x;
     vector<int> v(N + 1);
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++) {
+        int X;
+        cin >> X;
+        v[abs(X)] += hpS[i];
+    }
+
+    
 }
 
 int main() {
