@@ -4,8 +4,9 @@ using ll = long long;
 ll t;
 
 struct Cmp {
+bool operator()(array<int, 2> a, array<int, 2> b) {
 
-};
+}};
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
