@@ -29,6 +29,10 @@ void solve() {
             v[i] = 0;
             k -= v[i];
         }
+
+        for (int i = 0; i < N; i++) {
+            
+        }
     }
     
     cout << "YES\n";
