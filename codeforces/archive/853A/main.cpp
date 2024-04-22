@@ -60,7 +60,8 @@ void update(int curr, int tl, int tr, int pos, int x) {
 void log(int N) {
 	for (int i = 0; i < N; i++) {
 		for (int j = i; j < N; j++) {
-			cout << "(" << 
+			auto q = query(1, 0, N - 1, )
+			cout << i << " " << j << " (" << q
 		}
 	}
 }
