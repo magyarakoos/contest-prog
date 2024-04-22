@@ -13,14 +13,9 @@ void solve() {
         cin >> X;
         v[abs(X)] += hpS[i];
     }
-;
+
+    int cleared = 0;
     for (int pos = 0; pos <= N; pos++) {
-        cout << pos << " | ";
-        for (int i = 0; i <= N; i++) {
-            cout << v[i] << " ";
-        }
-        cout << "\n";
-        
         if (v[pos] > 0) {
             cout << "NO\n";
             return;
@@ -33,7 +28,8 @@ void solve() {
                 break;
             }
             if (k == v[i]) {
-                
+                v[i] = 0;
+                break;
             }
             v[i] = 0;
             k -= v[i];
