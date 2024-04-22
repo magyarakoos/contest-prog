@@ -42,6 +42,9 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 
 void update(int curr, int tl, int tr, int pos, int x) {
 	if (tl == tr) {
+		t[curr][0] = x;
+	} else {
+		int tmid = (tl + tr) / 2;
 		
 	}
 }
