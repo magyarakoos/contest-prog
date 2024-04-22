@@ -3,6 +3,8 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 3e5;
 
+array<int, 2> t[4 * MAXN + 1];
+
 array<int, 2> max(array<int, 2> a, array<int, 2> b) {
 	if (a[0] >= b[0]) {
 		return a;
@@ -11,7 +13,6 @@ array<int, 2> max(array<int, 2> a, array<int, 2> b) {
 	}
 }
 
-array<int, 2> t[4 * MAXN + 1];
 void build(const vector<int>& v, int curr, int tl, int tr) {
 	if (tl == tr) {
 		t[curr] = {v[tl], tl};
@@ -45,7 +46,7 @@ void update(int curr, int tl, int tr, int pos, int x) {
 		t[curr][0] = x;
 	} else {
 		int tmid = (tl + tr) / 2;
-		
+
 		if (pos <= tmid) {
 			update(curr * 2, tl, tmid, pos, x);
 		} else {
@@ -65,22 +66,5 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		int C;
 		cin >> C;
-		pq.push({C, i + 1});
 	}
-
-	ll result = 0;
-    t = K + 1;
-	vector<int> timeS(N);
-
-	while (!pq.empty()) {
-        auto [c, i] = pq.top();
-		pq.pop();
-		result += (t - i) * c;
-		timeS[i - 1] = t;
-		t++;
-	}
-
-	cout << result << '\n';
-	for (int time : timeS) cout << time << ' ';
-	cout << '\n';
 }
