@@ -31,26 +31,10 @@ int main() {
 	vector<int> timeS(N);
 
 	while (!pq.empty()) {
-		vector<array<int, 2>> later;
-
-		while (!pq.empty()) {
-			auto [c, i] = pq.top();
-			pq.pop();
-		
-			if (t < i) {
-				later.push_back({c, i});
-			} else {
-				while (!later.empty()) {
-					pq.push(later.back());
-					later.pop_back();
-				}
-
-				result += (t - i) * c;
-				timeS[i - 1] = t;
-
-				break;
-			}
-		}
+        auto [c, i] = pq.top();
+        pq.pop();
+		result += (t - i) * c;
+        timeS[i - 1] = t;
 		t++;
 	}
 
