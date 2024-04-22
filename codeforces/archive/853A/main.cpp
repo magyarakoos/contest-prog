@@ -11,20 +11,22 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 		int tmid = (tl + tr) / 2;
 		build(v, curr * 2, tl, tmid);
 		build(v, curr * 2 + 1, tmid + 1, tr);
-		
+
 		if (t[curr * 2][0] >= t[curr * 2 + 1][0]) {
 			t[curr] = t[curr * 2];
+		} else {
+			t[curr] = t[curr * 2 + 1];
 		}
 	}
 }
+
+void query()
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
 	int N, K;
 	cin >> N >> K;
-
-	priority_queue<array<int, 2>, vector<array<int, 2>>, Cmp> pq;
 
 	for (int i = 0; i < N; i++) {
 		int C;
