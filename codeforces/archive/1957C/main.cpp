@@ -11,21 +11,18 @@ void solve() {
     while (K--) {
         int I, J;
         cin >> I >> J;
-        M -= 2;
-        if (I != J) M -= 2;
+        N -= 1 + (I != J);
     }
 
-    cerr << M << " ";
-
-    vector<ll> dp(M + 1);
+    vector<ll> dp(N + 1);
     dp[0] = 1;
     dp[1] = 1;
 
-    for (int i = 2; i <= M; i++) {
+    for (int i = 2; i <= N; i++) {
         dp[i] = (dp[i - 1] + 2 * (i - 1) * dp[i - 2]) % MOD;
     }
 
-    cout << dp[M] << "\n";
+    cout << dp[N] << "\n";
 }
 
 int main() {
