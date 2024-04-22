@@ -14,7 +14,7 @@ int main() {
         scoreS[name] += score;
         stateS.push_back({name, scoreS[name]});
     }
-    
+
     int mx = INT_MIN;
     vector<string> mxS;
     for (const auto& [k, v] : scoreS) {
@@ -28,4 +28,7 @@ int main() {
         }
     }
 
+    for (const auto& [name, score] : stateS) {
+        if ()
+    }
 }
