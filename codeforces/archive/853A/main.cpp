@@ -60,15 +60,14 @@ void update(int curr, int tl, int tr, int pos, int x) {
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
-	int N, K;
+	ll N, K;
 	cin >> N >> K;
 	vector<int> v(N);
 	for (int& x : v) cin >> x;
 
 	build(v, 1, 0, N - 1);
 
-	int t = K, flights_left = N;
-	ll result = 0;
+	ll t = K, flights_left = N, result = 0;
 	vector<int> timeS(N);
 
 	while (flights_left--) {
