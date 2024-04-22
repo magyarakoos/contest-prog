@@ -30,7 +30,6 @@ void solve() {
                 v[i] = 0;
                 break;
             }
-            pos = i - 1;
             v[i] = 0;
             k -= v[i];
         }
