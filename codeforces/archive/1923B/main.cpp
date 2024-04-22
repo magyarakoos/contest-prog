@@ -16,6 +16,10 @@ void solve() {
 
     for (int pos = 0; pos <= N; pos++) {
         if (v[pos] > 0) {
+            cout << "NO\n";
+            return;
+        }
+        for (int i = pos + 1; i <= N; i++) {
             
         }
     }
