@@ -30,8 +30,9 @@ void solve() {
             k -= v[i];
         }
 
-        for (int i = 0; i < N; i++) {
-            
+        cout << pos << " | ";
+        for (int i = 1; i <= N; i++) {
+            cout <<
         }
     }
     
