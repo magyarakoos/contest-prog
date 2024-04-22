@@ -24,13 +24,13 @@ void solve() {
         for (int i = pos + 1; i <= N; i++) {
             if (k < v[i]) {
                 v[i] -= k;
-                pos = i - 2;
                 break;
             }
             if (k == v[i]) {
                 v[i] = 0;
                 break;
             }
+            pos = i - 1;
             v[i] = 0;
             k -= v[i];
         }
