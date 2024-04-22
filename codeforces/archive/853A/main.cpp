@@ -21,9 +21,13 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 }
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {
+	if (l > r) {
+		return {INT_MIN, -1};
+	}
 	if (l == tl && r == tr) {
 		return t[curr];
 	}
+
 	int tmid = (tl + tr) / 2;
 	
 	auto a = query(curr * 2, tl, tmid, l, min(tmid, r));
@@ -37,7 +41,9 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 }
 
 void update(int curr, int tl, int tr, int pos, int x) {
-	
+	if (tl == tr) {
+		
+	}
 }
 
 int main() {
