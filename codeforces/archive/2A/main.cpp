@@ -13,7 +13,12 @@ int main() {
         scoreS[name] += score;
     }
     int mx = INT_MIN;
+    vector<string> mxS;
     for (const auto& [k, v] : scoreS) {
-        mx = max(mx, v);
+        if (mx < v) {
+            mx = v;
+            mxS.clear();
+            mxS.push_back(v);
+        }
     }
 }
