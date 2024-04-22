@@ -20,10 +20,12 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 	}
 }
 
-void query(int curr, int tl, int tr, int l, int r) {
+array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 	if (l == tl && r == tr) {
-		
+		return t[curr];
 	}
+	int tmid = (tl + tr) / 2;
+	
 }
 
 int main() {
