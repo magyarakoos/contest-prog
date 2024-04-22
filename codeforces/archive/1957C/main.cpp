@@ -15,7 +15,8 @@ void solve() {
     }
 
     if (N == 0) {
-        cout <<
+        cout << "1\n";
+        return;
     }
 
     vector<ll> dp(N + 1);
