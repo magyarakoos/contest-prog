@@ -77,7 +77,7 @@ int main() {
 
 	build(v, 1, 0, N - 1);
 
-	int t = K + 1, flights_left = N;
+	int t = K, flights_left = N;
 	ll result = 0;
 	vector<int> timeS(N);
 
@@ -86,7 +86,7 @@ int main() {
 		cout << t << " " << c << " " << i << "\n";
 		logme(N);
 		update(1, 0, N - 1, i, -1);
-		result += (t - (i + 1)) * c;
+		result += (t - i) * c;
 		timeS[i] = t++;
 	}
 
