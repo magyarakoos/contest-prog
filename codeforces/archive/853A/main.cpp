@@ -69,5 +69,7 @@ int main() {
 
 	int t = K + 1;
 	ll result = 0;
-	vector<int> timeS(N);
+	vector<int> timeS;
+
+	
 }
