@@ -73,7 +73,7 @@ int main() {
 	ll result = 0;
 	vector<int> timeS(N);
 
-	while (flights_left) {
+	while (flights_left--) {
 		auto [c, i] = query(1, 0, N - 1, 0, t - 1);
 		cout << t << " | ";
 		cout << c << " " << i << "\n";
