@@ -8,7 +8,7 @@ void solve() {
     int N, K;
     cin >> N >> K;
 
-    int M = N * 2;
+    int M = N;
     while (K--) {
         int I, J;
         cin >> I >> J;
