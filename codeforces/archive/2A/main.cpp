@@ -12,6 +12,12 @@ int main() {
         int score;
         cin >> name >> score;
         scoreS[name] += score;
-        if (!firstS.count())
+        if (!firstS.count(scoreS[name])) {
+            firstS[scoreS[name]] = name;
+        }
+    }
+    
+    for (const auto& [k, v] : scoreS) {
+
     }
 }
