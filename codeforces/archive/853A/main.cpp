@@ -28,7 +28,12 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 	
 	auto a = query(curr * 2, tl, tmid, l, min(tmid, r));
 	auto b = query(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r);
-	if (a[1] <)
+	
+	if (a[0] >= b[0]) {
+		return a;
+	} else {
+		return b;
+	}
 }
 
 int main() {
