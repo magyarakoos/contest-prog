@@ -26,8 +26,6 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 }
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {
-	cerr << curr << " " << tl << " " << tr << " " << l << " " << r << endl;
-	sleep(1);
 	if (l > r || tl > tr) {
 		return {-1, -1};
 	}
