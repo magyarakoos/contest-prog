@@ -57,6 +57,14 @@ void update(int curr, int tl, int tr, int pos, int x) {
 	}
 }
 
+void log(int N) {
+	for (int i = 0; i < N; i++) {
+		for (int j = i; j < N; j++) {
+			cout << "(" << 
+		}
+	}
+}
+
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
 
