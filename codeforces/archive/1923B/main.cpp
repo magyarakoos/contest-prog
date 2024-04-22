@@ -26,7 +26,6 @@ void solve() {
                 v[i] -= k;
                 break;
             }
-            cleared = i;
             if (k == v[i]) {
                 v[i] = 0;
                 break;
