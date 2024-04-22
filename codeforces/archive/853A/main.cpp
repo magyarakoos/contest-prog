@@ -79,5 +79,5 @@ int main() {
 	}
 
 	cout << result << "\n";
-	for (int x : timeS) cout << x << "\n";
+	for (int x : timeS) cout << x << " ";
 }
