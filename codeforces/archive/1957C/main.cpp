@@ -11,7 +11,7 @@ void solve() {
     int M = N * N;
     while (K--) {
         int I, J;
-        cin >> I >> K;
+        cin >> I >> J;
         M--;
         if (I != J) M--;
     }
