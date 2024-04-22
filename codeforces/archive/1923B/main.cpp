@@ -20,8 +20,11 @@ void solve() {
             cout << "NO\n";
             return;
         }
-        
+        rem += K;
+        rem -= v[i];
     }
+
+    cout << "YES\n";
 }
 
 int main() {
