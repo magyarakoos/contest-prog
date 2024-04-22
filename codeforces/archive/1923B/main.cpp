@@ -5,6 +5,8 @@ using ll = long long;
 void solve() {
     int N, K;
     cin >> N >> K;
+    vector<int> hpS(N);
+    for (int& x : hpS) cin >> x;
     vector<int> v(N + 1);
     
 }
