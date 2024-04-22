@@ -31,6 +31,9 @@ int main() {
     }
 
     for (const auto& [name, score] : stateS) {
-        if (score >= mx && mxS.find(all(mxS), name))
+        if (score >= mx && find(all(mxS), name) != mxS.end()) {
+            cout << name << "\n";
+            exit(0);
+        }
     }
 }
