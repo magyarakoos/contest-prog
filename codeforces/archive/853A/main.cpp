@@ -57,7 +57,7 @@ void update(int curr, int tl, int tr, int pos, int x) {
 	}
 }
 
-void log(int N) {
+void logme(int N) {
 	for (int i = 0; i < N; i++) {
 		for (int j = i; j < N; j++) {
 			auto q = query(1, 0, N - 1, i, j);
@@ -83,7 +83,8 @@ int main() {
 
 	while (flights_left--) {
 		auto [c, i] = query(1, 0, N - 1, 0, t - 1);
-		cout << t << 
+		cout << t << " " << c << " " << i << "\n";
+		logme(N);
 		update(1, 0, N - 1, i, -1);
 		result += (t - (i + 1)) * c;
 		timeS[i] = t++;
