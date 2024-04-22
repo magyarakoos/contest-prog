@@ -7,6 +7,7 @@ int main() {
     cin >> N;
     map<string, int> scoreS;
     map<int, string> firstS;
+    cout << "\n";
     while (N--) {
         string name;
         int score;
@@ -17,7 +18,6 @@ int main() {
             firstS[scoreS[name]] = name;
         }
     }
-    cout << "\n";
     int mx = INT_MIN;
     for (const auto& [k, v] : scoreS) {
         mx = max(mx, v);
