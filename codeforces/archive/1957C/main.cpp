@@ -16,6 +16,8 @@ void solve() {
         if (I != J) M--;
     }
 
+    cerr << M << " ";
+
     vector<ll> dp(M + 1);
     dp[0] = 1;
     dp[1] = 1;
