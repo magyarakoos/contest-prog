@@ -65,14 +65,14 @@ int main() {
 	vector<int> v(N);
 	for (int& x : v) cin >> x;
 
-	build(v, 1, 0, N);
+	build(v, 1, 0, N - 1);
 
 	int t = K + 1, flights_left = N;
 	ll result = 0;
 	vector<int> timeS(N);
 
 	while (flights_left--) {
-		auto [c, i] = query(1, 0, N, 0, t - 1);
+		auto [c, i] = query(1, 0, N - 1, 0, t - 1);
 		cout << t << " ";
 		cout << c << " " << i << "\n";
 		update(1, 0, N - 1, i, -1);
