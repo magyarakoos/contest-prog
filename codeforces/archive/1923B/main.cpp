@@ -19,6 +19,7 @@ void solve() {
         for (int i = 0; i <= N; i++) {
             cout << v[i] << " ";
         }
+        cout << "\n";
         
         if (v[pos] > 0) {
             cout << "NO\n";
@@ -35,7 +36,6 @@ void solve() {
             k -= v[i];
         }
 
-        cout << "\n";
     }
     
     cout << "YES\n";
