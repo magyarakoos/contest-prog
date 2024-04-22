@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+    cin.tie(0), ios::sync_with_stdio(0);
     int N;
     cin >> N;
     map<string, int> scoreS;
@@ -11,7 +12,7 @@ int main() {
         int score;
         cin >> name >> score;
         scoreS[name] += score;
-        cout << name << " " << v << "\n";
+        cout << name << " " << scoreS[name] << "\n";
         if (!firstS.count(scoreS[name])) {
             firstS[scoreS[name]] = name;
         }
