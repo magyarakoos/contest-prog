@@ -3,9 +3,9 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 3e5;
 
-array<int, 2> t[4 * MAXN + 1];
+array<ll, 2> t[4 * MAXN + 1];
 
-array<int, 2> max(array<int, 2> a, array<int, 2> b) {
+array<ll, 2> max(array<ll, 2> a, array<ll, 2> b) {
 	if (a[0] >= b[0]) {
 		return a;
 	} else {
@@ -25,7 +25,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 	}
 }
 
-array<int, 2> query(int curr, int tl, int tr, int l, int r) {
+array<ll, 2> query(int curr, int tl, int tr, int l, int r) {
 	if (l > r || tl > tr) {
 		return {-1, -1};
 	}
