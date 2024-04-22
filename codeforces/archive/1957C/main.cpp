@@ -14,6 +14,10 @@ void solve() {
         N -= 1 + (I != J);
     }
 
+    if (N == 0) {
+        cout <<
+    }
+
     vector<ll> dp(N + 1);
     dp[0] = 1;
     dp[1] = 1;
