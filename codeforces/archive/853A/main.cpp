@@ -4,12 +4,13 @@ using ll = long long;
 ll t;
 
 struct Cmp {
-bool operator()(array<int, 2> a, array<int, 2> b) {
-    if ((a[1] >= t && b[1] >= t) || (a[1] < t && b[1] < t)) {
-        return a[0] < b[0];
+    bool operator()(array<int, 2> a, array<int, 2> b) {
+        if ((a[1] >= t && b[1] >= t) || (a[1] < t && b[1] < t)) {
+            return a[0] < b[0];
+        }
+        return a[1] < t;
     }
-    if (a[])
-}};
+};
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
