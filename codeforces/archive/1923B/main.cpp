@@ -16,6 +16,7 @@ void solve() {
 
     ll rem = 0;
     for (int i = 0; i <= N; i++) {
+        cout << rem + K << " " << i << "\n";
         if (rem + K < v[i]) {
             cout << "NO\n";
             return;
