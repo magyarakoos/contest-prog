@@ -5,6 +5,8 @@ using ll = long long;
 void solve() {
     int N, K;
     cin >> N >> K;
+    vector<int> v(N + 1);
+    
 }
 
 int main() {
