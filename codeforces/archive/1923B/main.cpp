@@ -14,27 +14,7 @@ void solve() {
         v[abs(X)] += hpS[i];
     }
 
-    for (int pos = 0; pos <= N; pos++) {
-        if (v[pos] > 0) {
-            cout << "NO\n";
-            return;
-        }
-
-        int k = K;
-        for (int i = pos + 1; i <= N; i++) {
-            if (k < v[i]) {
-                v[i] -= k;
-                break;
-            }
-            if (k == v[i]) {
-                v[i] = 0;
-                break;
-            }
-            v[i] = 0;
-            k -= v[i];
-        }
-
-    }
+    ll sum = 0;
     
     cout << "YES\n";
 }
