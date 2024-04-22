@@ -6,11 +6,13 @@ int main() {
     int N;
     cin >> N;
     map<string, int> scoreS;
+    vector<pair<string, int>> stateS;
     while (N--) {
         string name;
         int score;
         cin >> name >> score;
         scoreS[name] += score;
+        stateS.push_back({name, scoreS[name]});
     }
     int mx = INT_MIN;
     vector<string> mxS;
