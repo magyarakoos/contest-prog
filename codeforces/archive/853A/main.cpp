@@ -62,9 +62,6 @@ int main() {
 
 	int N, K;
 	cin >> N >> K;
-
-	for (int i = 0; i < N; i++) {
-		int C;
-		cin >> C;
-	}
+	vector<int> v(N);
+	for (int& x : v) cin >> x;
 }
