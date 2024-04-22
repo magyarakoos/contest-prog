@@ -15,6 +15,10 @@ void solve() {
     }
 
     ll sum = 0;
+    for (int i = 0; i <= N; i++) {
+        sum += v[i];
+        if (K * (i + 1) <)
+    }
     
     cout << "YES\n";
 }
