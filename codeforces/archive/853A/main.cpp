@@ -4,7 +4,11 @@ using ll = long long;
 constexpr int MAXN = 3e5;
 
 array<int, 2> min(array<int, 2> a, array<int, 2> b) {
-	
+	if (a[0] >= a[1]) {
+		return 
+	} else {
+		t[curr] = t[curr * 2 + 1];
+	}
 }
 
 array<int, 2> t[4 * MAXN + 1];
