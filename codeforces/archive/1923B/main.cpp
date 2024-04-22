@@ -22,7 +22,7 @@ void solve() {
         }
 
         int k = K;
-        for (int i = cleared + 1; i <= N; i++) {
+        for (int i = pos + 1; i <= N; i++) {
             if (k < v[i]) {
                 v[i] -= k;
                 break;
