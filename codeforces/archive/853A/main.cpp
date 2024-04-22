@@ -27,7 +27,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 	if (l > r) {
-		return {INT_MIN, -1};
+		return {-1, -1};
 	}
 	if (l == tl && r == tr) {
 		return t[curr];
