@@ -73,6 +73,6 @@ int main() {
 
 	while (flights_left) {
 		auto [c, i] = query(1, 0, N - 1, 0, t - 1);
-		result += (t - (i + 1)) * c;
+		result += (t - i - 1) * c;
 	}
 }
