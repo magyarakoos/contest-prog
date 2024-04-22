@@ -18,7 +18,10 @@ int main() {
         if (mx < v) {
             mx = v;
             mxS.clear();
-            mxS.push_back(v);
+            mxS.push_back(k);
+        }
+        else if (mx == v) {
+            mxS.push_back(k);
         }
     }
 }
