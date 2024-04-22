@@ -4,10 +4,10 @@ using ll = long long;
 constexpr int MAXN = 3e5;
 
 array<int, 2> min(array<int, 2> a, array<int, 2> b) {
-	if (a[0] >= a[1]) {
-		return 
+	if (a[0] >= b[0]) {
+		return a;
 	} else {
-		t[curr] = t[curr * 2 + 1];
+		return b;
 	}
 }
 
@@ -20,11 +20,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 		build(v, curr * 2, tl, tmid);
 		build(v, curr * 2 + 1, tmid + 1, tr);
 
-		if (t[curr * 2][0] >= t[curr * 2 + 1][0]) {
-			t[curr] = t[curr * 2];
-		} else {
-			t[curr] = t[curr * 2 + 1];
-		}
+		t[curr] = min(t[curr * 2], t[curr * 2 + 1]);
 	}
 }
 
@@ -41,11 +37,7 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 	auto a = query(curr * 2, tl, tmid, l, min(tmid, r));
 	auto b = query(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r);
 	
-	if (a[0] >= b[0]) {
-		return a;
-	} else {
-		return b;
-	}
+	return min(a, b);
 }
 
 void update(int curr, int tl, int tr, int pos, int x) {
