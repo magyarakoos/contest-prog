@@ -3,7 +3,12 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 3e5;
 
-
+int t[4 * MAXN + 1];
+void build(const vector<int>& v, int curr, int tl, int tr) {
+	if (tl == tr) {
+		t[curr] = 
+	}
+}
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
