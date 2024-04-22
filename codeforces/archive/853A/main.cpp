@@ -76,7 +76,7 @@ int main() {
 		update(1, 0, N - 1, i, -1);
 		result += (t - (i + 1)) * c;
 		timeS[i] = t++;
-		cout << 
+		cout << c << " " << i << "\n";
 	}
 
 	cout << result << "\n";
