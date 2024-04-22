@@ -20,7 +20,11 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 	}
 }
 
-void query()
+void query(int curr, int tl, int tr, int l, int r) {
+	if (l == tl && r == tr) {
+		
+	}
+}
 
 int main() {
 	cin.tie(0), ios::sync_with_stdio(0);
