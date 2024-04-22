@@ -72,6 +72,6 @@ int main() {
 	vector<int> timeS;
 
 	while (flights_left) {
-		
+		auto q = query(1, 0, t - 1, )
 	}
 }
