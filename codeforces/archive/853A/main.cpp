@@ -3,6 +3,10 @@ using namespace std;
 using ll = long long;
 constexpr int MAXN = 3e5;
 
+array<int, 2> min(array<int, 2> a, array<int, 2> b) {
+	
+}
+
 array<int, 2> t[4 * MAXN + 1];
 void build(const vector<int>& v, int curr, int tl, int tr) {
 	if (tl == tr) {
@@ -50,7 +54,7 @@ void update(int curr, int tl, int tr, int pos, int x) {
 		} else {
 			update(curr * 2 + 1, tmid + 1, tr, pos, x);
 		}
-		
+
 	}
 }
 
