@@ -15,6 +15,11 @@ void solve() {
     }
 ;
     for (int pos = 0; pos <= N; pos++) {
+        cout << pos << " | ";
+        for (int i = 0; i <= N; i++) {
+            cout << v[i] << " ";
+        }
+        
         if (v[pos] > 0) {
             cout << "NO\n";
             return;
@@ -30,10 +35,6 @@ void solve() {
             k -= v[i];
         }
 
-        cout << pos << " | ";
-        for (int i = 0; i <= N; i++) {
-            cout << v[i] << " ";
-        }
         cout << "\n";
     }
     
