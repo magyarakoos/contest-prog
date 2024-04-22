@@ -69,10 +69,11 @@ int main() {
 
 	int t = K + 1, flights_left = N;
 	ll result = 0;
-	vector<int> timeS;
+	vector<int> timeS(N);
 
 	while (flights_left) {
 		auto [c, i] = query(1, 0, N - 1, 0, t - 1);
 		result += (t - i - 1) * c;
+		timeS[i] = t;
 	}
 }
