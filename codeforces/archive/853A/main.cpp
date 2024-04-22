@@ -82,7 +82,7 @@ int main() {
 	vector<int> timeS(N);
 
 	while (flights_left--) {
-		auto [c, i] = query(1, 0, N - 1, 0, t);
+		auto [c, i] = query(1, 0, N - 1, 0, min(t, N - 1));
 		cout << t << " " << c << " " << i << "\n";
 		logme(N);
 		update(1, 0, N - 1, i, -1);
