@@ -67,5 +67,5 @@ int main() {
 
 	build(v, 1, 0, N - 1);
 
-	
+	int t = K;
 }
