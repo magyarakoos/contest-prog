@@ -32,8 +32,9 @@ void solve() {
 
         cout << pos << " | ";
         for (int i = 1; i <= N; i++) {
-            cout <<
+            cout << v[i] << " ";
         }
+        cout << "\n";
     }
     
     cout << "YES\n";
