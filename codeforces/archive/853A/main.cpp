@@ -69,7 +69,8 @@ int main() {
 
 	for (int i = 0; i < N; i++) {
 		for (int j = i; j < N; j++) {
-			cout << i << " " << j << " " << query()
+			auto q = query(1, 0, N - 1, i, j);
+			cout << i << " " << j << " (" << q[0] << "," << q[1] << "\n";
 		}
 	}
 }
