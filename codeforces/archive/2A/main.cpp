@@ -17,6 +17,7 @@ int main() {
     }
     int mx = INT_MIN;
     for (const auto& [k, v] : scoreS) {
+        cout << k << " " << v << "\n";
         mx = max(mx, v);
     }
     cout << firstS[mx];
