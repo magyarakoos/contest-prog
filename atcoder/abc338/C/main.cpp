@@ -19,10 +19,9 @@ void solve() {
         mn_b = min(mn_b, BC[i]);
     }
 
-    
-    
-
     int res = 0;
+
+    
     
     cout << res;
 }
