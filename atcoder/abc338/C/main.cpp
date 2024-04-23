@@ -13,8 +13,10 @@ void solve() {
     
     int mn_a = INT_MAX;
     for (int i = 0; i < N; i++) {
-        AC[i] = Q[i] / A[i];
-        mn_a = min(mn_a, AC[i]);
+        if (A[i]) {
+            AC[i] = Q[i] / A[i];
+            mn_a = min(mn_a, AC[i]);
+        }
     }
 
     int res = 0;
@@ -26,8 +28,10 @@ void solve() {
         vector<int> BC(N);
         int mn_b = INT_MAX;
         for (int i = 0; i < N; i++) {
-            BC[i] = Q_left[i] / B[i];
-            mn_b = min(mn_b, BC[i]);
+            if (B[i]) {
+                BC[i] = Q_left[i] / B[i];
+                mn_b = min(mn_b, BC[i]);
+            }
         }
         res = max(res, curr_a + mn_b);
     }
