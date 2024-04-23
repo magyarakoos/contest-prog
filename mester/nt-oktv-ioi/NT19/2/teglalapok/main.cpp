@@ -19,7 +19,9 @@ int query(int curr, int tl, int tr, int l, int r) {
     ;
 }
  
-void update(int curr, int tl, int tr, int pos, int x) {
+void update(int curr, int tl, int tr, int l, int r, int x) {
+    
+    
     if (tl == tr) {
         t[curr] = x;
         return;
@@ -42,7 +44,7 @@ int main() {
     while (N--) {
         int P, D;
         cin >> P >> D;
-        update(1, 0, H - 1, P, P + K, D);
+        update(1, 0, H - 1, P, D);
         //cerr << endl;
     }
 }
