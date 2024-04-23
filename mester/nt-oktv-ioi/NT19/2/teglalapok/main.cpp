@@ -20,7 +20,9 @@ int query(int curr, int tl, int tr, int l, int r) {
 }
  
 void update(int curr, int tl, int tr, int l, int r, int x) {
-    
+    if (l > r || tl > tr) {
+        return;
+    }
     
     if (tl == tr) {
         t[curr] = x;
