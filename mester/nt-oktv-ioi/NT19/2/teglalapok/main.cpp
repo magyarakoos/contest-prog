@@ -2,24 +2,14 @@
 using namespace std;
 constexpr int MAXN = 1e6;
 
-void build(const vector<int>& v, int curr, int tl, int tr) {
-    if (tl == tr) {
-        a[curr] = v[tl];
-        return;
-    }
+int t[4 * MAXN + 1];
  
-    int tmid = (tl + tr) / 2;
-    build(v, curr * 2, tl, tmid);
-    build(v, curr * 2 + 1, tmid + 1, tr);
-    a[curr] = a[curr * 2] + a[curr * 2 + 1];
-}
- 
-ll query(int curr, int tl, int tr, int l, int r) {
+int query(int curr, int tl, int tr, int l, int r) {
     if (l > r) {
         return 0;
     }
     if (l == tl && r == tr) {
-        return a[curr];
+        return t[curr];
     }
     
     int tmid = (tl + tr) / 2;
@@ -31,7 +21,7 @@ ll query(int curr, int tl, int tr, int l, int r) {
  
 void update(int curr, int tl, int tr, int pos, int x) {
     if (tl == tr) {
-        a[curr] = x;
+        t[curr] = x;
         return;
     }
  
@@ -42,7 +32,7 @@ void update(int curr, int tl, int tr, int pos, int x) {
     } else {
         update(curr * 2 + 1, tmid + 1, tr, pos, x);
     }
-    a[curr] = a[curr * 2] + a[curr * 2 + 1];
+    t[curr] = t[curr * 2] + t[curr * 2 + 1];
 }
 
 int main() {
