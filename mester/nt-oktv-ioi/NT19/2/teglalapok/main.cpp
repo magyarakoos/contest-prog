@@ -9,6 +9,8 @@ int main() {
     int H, N, K;
     cin >> H >> N >> K;
     while (N--) {
-        int 
+        int P, D;
+        cin >> P >> D;
+        
     }
 }
