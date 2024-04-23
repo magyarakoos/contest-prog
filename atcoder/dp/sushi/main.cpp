@@ -29,8 +29,8 @@ double solve(vector<u8> v) {
     for (u8 x : v) cout << x << " ";
     cout << endl;
     sleep(1);
-    m[v] = a;
-    return a;
+    m[v] = b;
+    return b;
 }
 
 int main() {
