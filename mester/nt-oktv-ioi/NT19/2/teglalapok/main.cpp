@@ -13,7 +13,6 @@ void update(int curr, int tl, int tr, int l, int r, int val) {
         t[curr] = max(t[curr], val);
     } else {
         int tmid = (tl + tr) / 2;
-        cout << curr << endl;
         update(curr * 2, tl, tmid, l, min(tmid, r), val);
         update(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r, val);
     }
@@ -41,10 +40,4 @@ int main() {
         update(1, 0, H - 1, P, P + K, D);
         //cerr << endl;
     }
-    exit(0);
-    int mn = INT_MAX;
-    for (int i = 0; i < H; i++) {
-        mn = min(mn, query(1, 0, H - 1, i));
-    }
-    cout << mn << "\n";
 }
