@@ -13,8 +13,9 @@ double solve(vector<u8> v) {
         if (!v[i]) continue;
         v[i]--;
         a += solve(v) + 1;
-        v[i]
+        v[i]++;
     }
+    a /= size(v);
 }
 
 int main() {
