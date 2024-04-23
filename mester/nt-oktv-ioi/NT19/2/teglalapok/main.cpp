@@ -13,7 +13,8 @@ void update(int curr, int tl, int tr, int l, int r, int val) {
         t[curr] = max(t[curr], val);
     } else {
         int tmid = (tl + tr) / 2;
-        update(curr * 2, tl, tmid,)
+        update(curr * 2, tl, tmid, l, min(tmid, r), val);
+        update(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1),)
     }
 }
 
