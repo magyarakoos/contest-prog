@@ -2,7 +2,7 @@
 using namespace std;
 constexpr int MAXN = 1e6;
 
-int t[4 * MAXN + 1];
+int t[4 * MAXN + 2];
 
 void update(int curr, int tl, int tr, int l, int r, int val) {
     if (l > r || tl > tr) {
@@ -36,11 +36,11 @@ int main() {
     while (N--) {
         int P, D;
         cin >> P >> D;
-        update(1, 0, H - 1, P, P + K, D);
+        update(1, 0, H, P, P + K, D);
     }
     int mn = INT_MAX;
     for (int i = 1; i <= H; i++) {
-        mn = min(mn, query(1, 0, H - 1, i));
+        mn = min(mn, query(1, 0, H, i));
     }
     cout << mn << "\n";
 }
