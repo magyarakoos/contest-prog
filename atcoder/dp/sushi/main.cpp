@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using u8 = unsigned char;
+using u8 = int;
 #define sum(v) accumulate(v.begin(), v.end(), 0)
 #define size(v) (int)v.size()
 
@@ -16,7 +16,6 @@ double solve(vector<u8> v) {
         v[i]++;
     }
     cerr << a << " | ";
-    cout << size(v);
     for (u8 x : v) cout << x << " ";
     cout << endl;
     sleep(1);
