@@ -5,7 +5,13 @@ constexpr int MAXN = 1e6;
 int t[4 * MAXN + 1];
 
 void update(int curr, int tl, int tr, int l, int r, int val) {
+    if (l > r) {
+        return;
+    }
 
+    if (l == tl && r == tr) {
+        t[v] = max(t[v], val);
+    } 
 }
 
 int query(int curr, int tl, int tr, int pos) {
