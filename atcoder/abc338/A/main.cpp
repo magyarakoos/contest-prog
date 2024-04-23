@@ -12,7 +12,13 @@ void solve() {
     }
     string s;
     cin >> s;
-    for (char c : s) if (!islower(c)) 
+    for (char c : s) {
+        if (!islower(c)) {
+            cout << "No";
+            exit(0);
+        }
+    };
+    cout << "Yes";
 }
 
 int main() {
