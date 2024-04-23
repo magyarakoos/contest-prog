@@ -17,4 +17,8 @@ int main() {
         cin >> P >> D;
         update(1, 0, H - 1, P, P + K, D);
     }
+    int mn = INT_MAX;
+    for (int i = 0; i < H; i++) {
+        mn = min(mn, );
+    }
 }
