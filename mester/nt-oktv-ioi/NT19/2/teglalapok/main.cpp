@@ -4,6 +4,8 @@ constexpr int MAXN = 1e6;
 
 int t[4 * MAXN + 1];
 
+void update()
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int H, N, K;
