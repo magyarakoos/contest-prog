@@ -22,8 +22,12 @@ void solve() {
     int res = 0;
 
     for (int curr_a = 0; curr_a <= mn_a; curr_a++) {
+        vector<int> Q_left = Q;
+        for (int i = 0; i < N; i++) {
+            Q_left -=
+        }
+
         int curr = 0;
-        
         res = max(res, curr);
     }
     
