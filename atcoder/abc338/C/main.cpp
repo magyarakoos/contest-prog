@@ -22,7 +22,9 @@ void solve() {
     int res = 0;
 
     for (int curr_a = 0; curr_a <= mn_a; curr_a++) {
+        int curr = 0;
         
+        res = max(res, curr);
     }
     
     cout << res;
