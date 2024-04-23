@@ -8,7 +8,6 @@ void update(int curr, int tl, int tr, int l, int r, int val) {
     if (l > r) {
         return;
     }
-
     if (l == tl && r == tr) {
         t[curr] = max(t[curr], val);
     } else {
@@ -22,12 +21,11 @@ int query(int curr, int tl, int tr, int pos) {
     if (tl == tr) {
         return t[curr];
     }
-
     int tmid = (tl + tr) / 2;
     if (pos <= tmid) {
         return max(t[curr], query(curr * 2, tl, tmid, pos));
     } else {
-        return max(t[curr], )
+        return max(t[curr], query(curr * 2 + 1, tmid + 1, tr, pos));
     }
 }
 
