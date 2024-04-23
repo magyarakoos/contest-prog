@@ -10,8 +10,11 @@ void update(int curr, int tl, int tr, int l, int r, int val) {
     }
 
     if (l == tl && r == tr) {
-        t[v] = max(t[v], val);
-    } 
+        t[curr] = max(t[curr], val);
+    } else {
+        int tmid = (tl + tr) / 2;
+        update(curr * 2, tl, tmid,)
+    }
 }
 
 int query(int curr, int tl, int tr, int pos) {
