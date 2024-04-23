@@ -25,9 +25,9 @@ int query(int curr, int tl, int tr, int pos) {
 
     int tmid = (tl + tr) / 2;
     if (pos <= tmid) {
-        returm max()
+        return max(t[curr], query(curr * 2, tl, tmid, pos));
     } else {
-
+        return max(t[curr], )
     }
 }
 
