@@ -5,7 +5,6 @@ using u8 = unsigned char;
 #define size(v) (int)v.size()
 
 double solve(vector<u8> v) {
-    sort(v.begin(), v.end());
     if (!sum(v)) {
         return 0;
     }
@@ -26,5 +25,5 @@ int main() {
     cin >> N;
     vector<u8> v(N);
     for (u8& x : v) cin >> x;
-    cout << solve(v);
+    cout << fixed << setprecision(20) << solve(v);
 }
