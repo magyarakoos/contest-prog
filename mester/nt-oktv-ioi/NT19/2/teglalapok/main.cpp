@@ -40,6 +40,7 @@ int main() {
     }
     int mn = INT_MAX;
     for (int i = 1; i <= H; i++) {
+        cout << i << " " << query(1, 0, H, i) << "\n"; 
         mn = min(mn, query(1, 0, H, i));
     }
     cout << mn << "\n";
