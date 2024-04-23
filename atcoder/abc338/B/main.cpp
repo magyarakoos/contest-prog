@@ -4,23 +4,19 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    int N;
-    cin >> N;
-    vector<int> Q(N), A(N), B(N), AC(N), BC(N);
-    for (int& x : Q) cin >> x;
-    for (int& x : A) cin >> x;
-    for (int& x : B) cin >> x;
-    
-    int mn_a = INT_MAX, mn_b = INT_MAX;
-    for (int i = 0; i < N; i++) {
-        AC[i] = Q[i] / A[i];
-        BC[i] = Q[i] / B[i];
+    string s;
+    cin >> s;
+    map<char, int> m;
+    for (char c : s) m[c]++;
+    int mx = 0;
+    char mxc = '$';
+    for (auto [k, v] : m) {
+        if (mx < v) {
+            mx = v;
+            mxc = k;
+        }
     }
-    
-
-    int res = 0;
-    
-    cout << res;
+    cout << mxc;
 }
 
 int main() {

@@ -6,23 +6,25 @@ using ll = long long;
 void solve() {
     int N;
     cin >> N;
-    vector<int> A(N);
-    map<int, int> m;
+    vector<int> Q(N), A(N), B(N), AC(N), BC(N);
+    for (int& x : Q) cin >> x;
+    for (int& x : A) cin >> x;
+    for (int& x : B) cin >> x;
+    
+    int mn_a = INT_MAX, mn_b = INT_MAX;
     for (int i = 0; i < N; i++) {
-        cin >> A[i];
-        A[i]--;
-        m[A[i]] = i;
+        AC[i] = Q[i] / A[i];
+        BC[i] = Q[i] / B[i];
+        mn_a = min(mn_a, AC[i]);
+        mn_b = min(mn_b, BC[i]);
     }
-    vector<array<int, 2>> result;
-    for (int i = 0; i < N - 1; i++) {
-        if (A[i] != i) {
-            result.push_back({i, m[i]});
-            A[m[i]] = A[i];
-            m[A[i]] = m[i];
-        }
-    }
-    cout << result.size() << "\n";
-    for (auto [l, r] : result) cout << l + 1 << " " << r + 1 << "\n";
+
+    
+    
+
+    int res = 0;
+    
+    cout << res;
 }
 
 int main() {
