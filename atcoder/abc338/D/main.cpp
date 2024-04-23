@@ -2,24 +2,10 @@
 using namespace std;
 using ll = long long;
 
-vector<vector<int>> g;
-vector<bool> vis;
-vector<int> degS;
-ll group_size, group_edges;
-
-void dfs(int u) {
-    vis[u] = 1;
-    group_size++;
-    group_edges += degS[u];
-    for (int v : g[u]) {
-        if (!vis[v]) dfs(v);
-    }
-}
-
 #define cases 0
 void solve() {
     int N, M;
-
+    cin >> N >> M;
 }
 
 int main() {
