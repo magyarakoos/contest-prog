@@ -36,11 +36,11 @@ int main() {
     while (N--) {
         int P, D;
         cin >> P >> D;
-        update(1, 0, H, P + 1, P + K, D);
+        update(1, 0, H - 1, P + 1, P + K, D);
     }
     int mn = INT_MAX;
     for (int i = 1; i <= H; i++) {
-        mn = min(mn, query(1, 0, H, i));
+        mn = min(mn, query(1, 0, H - 1, i));
     }
     cout << mn << "\n";
 }
