@@ -18,7 +18,6 @@ void solve() {
     }
 
     int res = 0;
-
     for (int curr_a = 0; curr_a <= mn_a; curr_a++) {
         vector<int> Q_left = Q;
         for (int i = 0; i < N; i++) {
@@ -32,7 +31,6 @@ void solve() {
         }
         res = max(res, curr_a + mn_b);
     }
-    
     cout << res;
 }
 
