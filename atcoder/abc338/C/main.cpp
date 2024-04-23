@@ -11,7 +11,7 @@ void solve() {
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
     
-    int mn_a = INT_MAX, mn_b = INT_MAX;
+    int mn_a = INT_MAX;
     for (int i = 0; i < N; i++) {
         AC[i] = Q[i] / A[i];
         mn_a = min(mn_a, AC[i]);
@@ -25,6 +25,10 @@ void solve() {
             Q_left[i] -= curr_a * A[i];
         }
         vector<int> BC(N);
+        int mn_b = INT_MAX;
+        for (int i = 0; i < N; i++) {
+            BC[i] = 
+        }   
     }
     
     cout << res;
