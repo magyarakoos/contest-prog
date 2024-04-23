@@ -16,6 +16,7 @@ double solve(vector<u8> v) {
         v[i]++;
     }
     cerr << a << " | ";
+    cout << size(v);
     for (u8 x : v) cout << x << " ";
     cout << endl;
     sleep(1);
