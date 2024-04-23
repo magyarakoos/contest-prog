@@ -5,6 +5,7 @@ using u8 = unsigned char;
 #define size(v) (int)v.size()
 
 double solve(vector<u8> v) {
+    sort(v.begin(), v.end());
     if (!sum(v)) {
         return 0;
     }
@@ -16,6 +17,7 @@ double solve(vector<u8> v) {
         v[i]++;
     }
     a /= size(v);
+    return a;
 }
 
 int main() {
