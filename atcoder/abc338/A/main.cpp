@@ -4,10 +4,15 @@ using ll = long long;
 
 #define cases 0
 void solve() {
+    char c;
+    cin >> c;
+    if (!isupper(c)) {
+        cout << "No";
+        exit(0);
+    }
     string s;
     cin >> s;
-    cout << (s[0] >= 'A' && all_of(s.begin() + 1, s.end(), [](char c){return c <= 'z';}) ?
-    "Yes" : "No");
+    for (char c : s) if (!islower(c)) 
 }
 
 int main() {
