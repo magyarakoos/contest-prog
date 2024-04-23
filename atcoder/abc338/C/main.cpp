@@ -21,7 +21,9 @@ void solve() {
 
     int res = 0;
 
-    
+    for (int curr_a = 0; curr_a <= mn_a; curr_a++) {
+        
+    }
     
     cout << res;
 }
