@@ -14,12 +14,14 @@ void update(int curr, int tl, int tr, int l, int r, int val) {
     } else {
         int tmid = (tl + tr) / 2;
         update(curr * 2, tl, tmid, l, min(tmid, r), val);
-        update(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1),)
+        update(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r, val);
     }
 }
 
 int query(int curr, int tl, int tr, int pos) {
-    
+    if (tl == tr) {
+        return t[curr];
+    }
 }
 
 int main() {
