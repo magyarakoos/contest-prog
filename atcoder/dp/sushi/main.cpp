@@ -5,6 +5,7 @@ using u8 = int;
 #define size(v) (int)v.size()
 
 double solve(vector<u8> v) {
+    sort(v.begin(), v.end());
     if (!sum(v)) {
         return 0;
     }
