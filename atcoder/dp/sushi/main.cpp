@@ -15,7 +15,6 @@ double solve(vector<u8> v) {
         a += solve(v) + 1;
         v[i]++;
     }
-    a /= size(v);
     cerr << a << endl;
     sleep(1);
     return a;
