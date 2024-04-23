@@ -36,7 +36,7 @@ int main() {
     while (N--) {
         int P, D;
         cin >> P >> D;
-        update(1, 0, H, P, P + K, D);
+        update(1, 0, H, P + 1, P + K + 1, D);
     }
     int mn = INT_MAX;
     for (int i = 1; i <= H; i++) {
