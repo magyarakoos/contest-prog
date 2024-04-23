@@ -24,11 +24,8 @@ void solve() {
     for (int curr_a = 0; curr_a <= mn_a; curr_a++) {
         vector<int> Q_left = Q;
         for (int i = 0; i < N; i++) {
-            Q_left -=
+            Q_left[i] -= curr_a * A[i];
         }
-
-        int curr = 0;
-        res = max(res, curr);
     }
     
     cout << res;
