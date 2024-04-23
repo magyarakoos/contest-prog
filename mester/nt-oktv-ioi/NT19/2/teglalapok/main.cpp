@@ -25,5 +25,5 @@ int main() {
     for (int i = 0; i < H; i++) {
         mn = min(mn, query(1, 0, H - 1, i));
     }
-    cout << mn;
+    cout << mn << "\n";
 }
