@@ -5,8 +5,8 @@ constexpr int MAXN = 1e6;
 int t[4 * MAXN + 1];
 
 void update(int curr, int tl, int tr, int l, int r, int val) {
-    cerr << curr << " " << tl << " " << tr << " " << l << " " << r << " " << val << endl;
-    sleep(1);
+    //cerr << curr << " " << tl << " " << tr << " " << l << " " << r << " " << val << endl;
+    //sleep(1);
     if (l > r) {
         return;
     }
@@ -39,7 +39,7 @@ int main() {
         int P, D;
         cin >> P >> D;
         update(1, 0, H - 1, P, P + K, D);
-        cerr << endl;
+        //cerr << endl;
     }
     exit(0);
     int mn = INT_MAX;
