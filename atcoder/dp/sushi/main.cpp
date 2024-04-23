@@ -2,12 +2,15 @@
 using namespace std;
 using u8 = unsigned char;
 #define sum(v) accumulate(v.begin(), v.end(), 0)
+#define size(v) (int)v.size()
 
 double solve(vector<u8> v) {
     if (!sum(v)) {
         return 0;
     }
-    // a = (v[1] - 1)
+    for (int i = 0; i < size(v); i++) {
+        
+    }
 }
 
 int main() {
