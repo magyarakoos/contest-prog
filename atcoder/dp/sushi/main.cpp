@@ -4,11 +4,18 @@ using u8 = int;
 #define sum(v) accumulate(v.begin(), v.end(), 0)
 #define size(v) (int)v.size()
 
+map<vector<u8>, double> m;
+
 double solve(vector<u8> v) {
-    sort(v.begin(), v.end());
     if (!sum(v)) {
         return 0;
     }
+
+    sort(v.begin(), v.end());
+    if (m.count(v)) {
+        return m[v];
+    }
+
     double a = 0;
     for (int i = 0; i < size(v); i++) {
         if (!v[i]) continue;
@@ -20,6 +27,7 @@ double solve(vector<u8> v) {
     for (u8 x : v) cout << x << " ";
     cout << endl;
     sleep(1);
+    m[v] = a;
     return a;
 }
 
