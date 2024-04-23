@@ -8,8 +8,12 @@ double solve(vector<u8> v) {
     if (!sum(v)) {
         return 0;
     }
+    double a = 0;
     for (int i = 0; i < size(v); i++) {
-        
+        if (!v[i]) continue;
+        v[i]--;
+        a += solve(v) + 1;
+        v[i]
     }
 }
 
