@@ -5,7 +5,7 @@ constexpr int MAXN = 1e6;
 int t[4 * MAXN + 1];
 
 void update(int curr, int tl, int tr, int l, int r, int val) {
-    cerr << curr << " " << tl << " " << tr << " " << l << " " << r << " " << val << endl;
+    //cerr << curr << " " << tl << " " << tr << " " << l << " " << r << " " << val << endl;
     if (l > r) {
         return;
     }
@@ -13,6 +13,7 @@ void update(int curr, int tl, int tr, int l, int r, int val) {
         t[curr] = max(t[curr], val);
     } else {
         int tmid = (tl + tr) / 2;
+        cout << curr << endl;
         update(curr * 2, tl, tmid, l, min(tmid, r), val);
         update(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r, val);
     }
