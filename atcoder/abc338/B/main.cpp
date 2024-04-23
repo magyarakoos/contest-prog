@@ -6,10 +6,14 @@ using ll = long long;
 void solve() {
     int N;
     cin >> N;
-    vector<int> Q(N), A(N), B(N);
+    vector<int> Q(N), A(N), B(N), AC(N), BC(N);
     for (int& x : Q) cin >> x;
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
+    for (int i = 0; i < N; i++) {
+        AC[i] = Q[i] / A[i];
+        BC[i] = Q[i] / B[i];
+    }
     int res = 0;
     
     cout << res;
