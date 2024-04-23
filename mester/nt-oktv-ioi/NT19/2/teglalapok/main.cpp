@@ -3,40 +3,30 @@ using namespace std;
 constexpr int MAXN = 1e6;
 
 int t[4 * MAXN + 1];
- 
-int query(int curr, int tl, int tr, int l, int r) {
+
+void update(long long curr, int tl, int tr, int l, int r, int val) {
     if (l > r) {
-        return 0;
+        return;
     }
     if (l == tl && r == tr) {
+        t[curr] = max(t[curr], val);
+    } else {
+        int tmid = (tl + tr) / 2;
+        update(curr * 2, tl, tmid, l, min(tmid, r), val);
+        update(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r, val);
+    }
+}
+
+int query(int curr, int tl, int tr, int pos) {
+    if (tl == tr) {
         return t[curr];
     }
-    
     int tmid = (tl + tr) / 2;
-    return 
-        query(curr * 2, tl, tmid, l, min(tmid, r)) +
-        query(curr * 2 + 1, tmid + 1, tr, max(tmid + 1, l), r)
-    ;
-}
- 
-void update(int curr, int tl, int tr, int l, int r, int x) {
-    if (l > r || tl > tr) {
-        return;
-    }
-
-    if (tl == tr) {
-        t[curr] = x;
-        return;
-    }
- 
-    int tmid = (tl + tr) / 2;
-
     if (pos <= tmid) {
-        update(curr * 2, tl, tmid, pos, x);
+        return max(t[curr], query(curr * 2, tl, tmid, pos));
     } else {
-        update(curr * 2 + 1, tmid + 1, tr, pos, x);
+        return max(t[curr], query(curr * 2 + 1, tmid + 1, tr, pos));
     }
-    t[curr] = t[curr * 2] + t[curr * 2 + 1];
 }
 
 int main() {
@@ -46,7 +36,7 @@ int main() {
     while (N--) {
         int P, D;
         cin >> P >> D;
-        update(1, 0, H - 1, P, D);
+        update(1, 0, H - 1, P, P + K, D);
         //cerr << endl;
     }
 }
