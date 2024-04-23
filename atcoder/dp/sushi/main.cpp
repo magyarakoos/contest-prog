@@ -3,7 +3,7 @@ using namespace std;
 using u8 = unsigned char;
 
 double solve(vector<u8> v) {
-
+    if ()
 }
 
 int main() {
@@ -11,5 +11,6 @@ int main() {
     int N;
     cin >> N;
     vector<u8> v(N);
-    for (u)
+    for (u8& x : v) cin >> x;
+    cout << solve(v);
 }
