@@ -4,16 +4,18 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    int N, Q;
-    cin >> N >> Q;
-    vector<bool> v(N, 1);
-    while (Q--) {
-        int X;
-        cin >> X;
-        X--;
-        v[X] = v[X] ^ 1;
+    string s;
+    cin >> s;
+    map<char, int> m;
+    for (char c : s) m[c]++;
+    int mx = 0, mxc = '$';
+    for (auto [k, v] : m) {
+        if (mx < v) {
+            mx = v;
+            mxc = k;
+        }
     }
-    cout << count(v.begin(), v.end(), 1) << "\n";
+    cout << mxc;
 }
 
 int main() {
