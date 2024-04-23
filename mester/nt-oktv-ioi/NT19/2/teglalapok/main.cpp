@@ -39,6 +39,7 @@ int main() {
         int P, D;
         cin >> P >> D;
         update(1, 0, H - 1, P, P + K, D);
+        cerr << endl;
     }
     exit(0);
     int mn = INT_MAX;
