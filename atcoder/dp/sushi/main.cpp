@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 using u8 = unsigned char;
+#define sum(v) accumulate(v.begin(), v.end(), 0)
 
 double solve(vector<u8> v) {
-    if ()
+    if (!sum(v))
 }
 
 int main() {
