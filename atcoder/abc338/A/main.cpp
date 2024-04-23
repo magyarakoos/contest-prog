@@ -4,6 +4,9 @@ using ll = long long;
 
 #define cases 0
 void solve() {
+    string s;
+    cin >> s;
+    cout << (s[0] >= "A" && )
 }
 
 int main() {
