@@ -30,7 +30,7 @@ void solve() {
             BC[i] = Q_left[i] / B[i];
             mn_b = min(mn_b, BC[i]);
         }
-        
+        res = max(res, curr_a + mn_b);
     }
     
     cout << res;
