@@ -10,10 +10,14 @@ void solve() {
     for (int& x : Q) cin >> x;
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
+    
+    int mn_a = INT_MAX, mn_b = INT_MAX;
     for (int i = 0; i < N; i++) {
         AC[i] = Q[i] / A[i];
         BC[i] = Q[i] / B[i];
     }
+    
+
     int res = 0;
     
     cout << res;
