@@ -27,8 +27,10 @@ void solve() {
         vector<int> BC(N);
         int mn_b = INT_MAX;
         for (int i = 0; i < N; i++) {
-            BC[i] = 
-        }   
+            BC[i] = Q_left[i] / B[i];
+            mn_b = min(mn_b, BC[i]);
+        }
+        
     }
     
     cout << res;
