@@ -16,6 +16,8 @@ double solve(vector<u8> v) {
         v[i]++;
     }
     a /= size(v);
+    cout << a << "\n";
+    sleep(1);
     return a;
 }
 
