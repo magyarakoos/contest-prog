@@ -23,8 +23,9 @@ double solve(vector<u8> v) {
         a += solve(v) + 1;
         v[i]++;
     }
-    a /= size(v);
-    cerr << a << " | ";
+    double b = size(v);
+    b /= a;
+    cerr << b << " | ";
     for (u8 x : v) cout << x << " ";
     cout << endl;
     sleep(1);
