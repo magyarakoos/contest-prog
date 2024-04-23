@@ -4,8 +4,8 @@ constexpr int MAXN = 1e6;
 
 int t[4 * MAXN + 1];
 
-void update(long long curr, int tl, int tr, int l, int r, int val) {
-    if (l > r) {
+void update(int curr, int tl, int tr, int l, int r, int val) {
+    if (l > r || tl > tr) {
         return;
     }
     if (l == tl && r == tr) {
