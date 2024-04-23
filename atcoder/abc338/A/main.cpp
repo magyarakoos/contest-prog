@@ -6,7 +6,7 @@ using ll = long long;
 void solve() {
     string s;
     cin >> s;
-    cout << (s[0] >= "A" && all_of(s.begin() + 1, s.end(), [](char c){return c <= 'z';}) ?
+    cout << (s[0] >= 'A' && all_of(s.begin() + 1, s.end(), [](char c){return c <= 'z';}) ?
     "Yes" : "No");
 }
 
