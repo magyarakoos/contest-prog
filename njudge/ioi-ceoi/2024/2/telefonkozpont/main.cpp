@@ -12,22 +12,6 @@ void push(int curr) {
     lazy[curr] = 0;
 }
 
-void update(int curr, int tl, int tr, int l, int r) {
-    if (tr < tl || r < l) {
-        return;
-    }
-    if (tr == tl) {
-        t[curr]++;
-        lazy[curr]++;
-    } else {
-        push(curr);
-        int tmid = (tl + tr) / 2;
-        update(curr * 2, tl, tmid, l, min(tmid, r));
-        update(curr * 2 + 1, tmid + 1, tr, max(tmid + 1, l), r);
-        t[curr] = max(t[curr * 2], t[curr * 2 + 1]);
-    }
-}
-
 int query(int curr, int tl, int tr, int l, int r) {
     if (tr < tl || r < l) {
         return -INF;
