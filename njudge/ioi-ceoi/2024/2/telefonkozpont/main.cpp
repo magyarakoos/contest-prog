@@ -37,6 +37,11 @@ int main() {
     while (N--) {
         int B, E;
         cin >> B >> E;
-        
+        update(1, 0, M - 1, B - 1, E - 1);
+    }
+
+    while (Q--) {
+        int B, E;
+        cin >> B >> E;
     }
 }
