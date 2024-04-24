@@ -24,17 +24,22 @@ int main() {
                 if (dp[j][0] + 1 < dp[i][0]) {
                     dp[i][0] = dp[j][0] + 1;
                     dp[i][1] = dp[j][1] - dist + v[i][1];
+                    prv[i] = j;
                 }
                 else if (dp[j][0] + 1 == dp[i][0]) {
                     if (dp[i][1] < dp[j][1] - dist + v[i][1]) {
                         dp[i][1] = dp[j][1] - dist + v[i][1];
+                        prv[i] = j;
                     }
                 }
             }
         }
     }
 
-    for (int i = 0; i <= N; i++) {
-        cout << dp[i][0] << " " << dp[i][1] << "\n";
+    stack<int> path;
+    while (prv[N] != -1) {
+        path.push(prv[N]);
+        N = prv[N];
     }
+    
 }
