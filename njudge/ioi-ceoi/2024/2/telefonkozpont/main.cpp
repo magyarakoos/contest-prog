@@ -43,16 +43,12 @@ int main() {
 
     int M, N, Q;
     cin >> M >> N >> Q;
-    vector<int> v(M), ps(M);
+    vector<int> v(M);
     while (N--) {
         int B, E;
         cin >> B >> E;
         v[B - 1]++;
         v[E - 1]--;
-    }
-    ps[0] = v[0];
-    for (int i = 1; i < M; i++) {
-        ps[i] = ps[i - 1] + v[i];
     }
 
     build(ps, 1, 0, M - 1);
