@@ -37,7 +37,9 @@ int main() {
     }
 
     stack<int> path;
-    while (prv[N] != -1) {
+    while (prv[N]) {
+        cout << prv[N] << endl;
+        sleep(1);
         path.push(prv[N]);
         N = prv[N];
     }
