@@ -37,7 +37,7 @@ int main() {
     }
 
     for (int i = 0; i <= N; i++) {
-        cout << prv[i] << "\n";
+        cout << dp[i][0] << " " << dp[i][1] << " " << prv[i] << "\n";
     }
 
     stack<int> path;
