@@ -34,6 +34,6 @@ int main() {
     }
 
     for (int i = 0; i <= N; i++) {
-        
+        cout << dp[i][0] << " " << dp[i][1] << "\n";
     }
 }
