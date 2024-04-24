@@ -9,7 +9,9 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
         t[curr] = v[tl];
     } else {
         int tmid = (tl + tr) / 2;
-        build(v, )
+        build(v, curr * 2, tl, tmid);
+        build(v, curr * 2 + 1, tmid + 1, tr);
+        t[curr] = max(t[curr * 2], t[curr * 2 + 1]);
     }
 }
 
@@ -45,7 +47,6 @@ int main() {
     while (N--) {
         int B, E;
         cin >> B >> E;
-        update(1, 0, M - 1, B - 1, E - 1);
     }
 
     while (Q--) {
