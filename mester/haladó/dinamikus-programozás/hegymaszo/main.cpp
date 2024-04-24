@@ -11,4 +11,6 @@ int main() {
         cin >> v[i][0] >> v[i][1];
     }
 
+    vector<int> dp(N + 2,)
+
 }
