@@ -21,6 +21,8 @@ void update(int curr, int tl, int tr, int l, int r) {
         lazy[curr]++;
     } else {
         push(curr);
+        int tmid = (tl + tr) / 2;
+        update(curr * 2, tl, tmid, l, min())
     }
 }
 
