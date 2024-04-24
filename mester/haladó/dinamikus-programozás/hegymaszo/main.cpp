@@ -13,9 +13,10 @@ int main() {
     }
     v[N + 1] = {T, 0};
 
-    vector<int> dp(N + 2, INF);
-    dp[0] = 0;
-    dp[1] = 0;
+    vector<array<int, 2>> dp(N + 2, INF);
+    dp[0] = {0, 0};
 
-    
+    for (int i = 2; i <= N + 1; i++) {
+
+    }
 }
