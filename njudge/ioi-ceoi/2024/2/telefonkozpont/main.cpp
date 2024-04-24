@@ -7,6 +7,9 @@ int t[4 * MAXN + 1], lazy[4 * MAXN + 1];
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
         t[curr] = v[tl];
+    } else {
+        int tmid = (tl + tr) / 2;
+        build(v, )
     }
 }
 
