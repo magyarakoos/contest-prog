@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-constexpr int INF 
+constexpr int INF = 1e5;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -12,6 +12,8 @@ int main() {
         cin >> v[i][0] >> v[i][1];
     }
 
-    vector<int> dp(N + 2,)
+    vector<int> dp(N + 2, INF);
+    dp[0] = 0;
+    dp[1] = 0,
 
 }
