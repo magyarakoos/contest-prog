@@ -39,7 +39,7 @@ int query(int curr, int tl, int tr, int l, int r) {
     int tmid = (tl + tr) / 2;
     return max(
         query(curr * 2, tl, tmid, l, min(tmid, r)),
-        query(curr * 2 + 1, tmid + 1, tr, max())
+        query(curr * 2 + 1, tmid + 1, tr, max(l, tmid + 1), r)
     );
 }
 
@@ -58,5 +58,6 @@ int main() {
     while (Q--) {
         int B, E;
         cin >> B >> E;
+        
     }
 }
