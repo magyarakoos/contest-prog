@@ -58,6 +58,6 @@ int main() {
     while (Q--) {
         int B, E;
         cin >> B >> E;
-        
+        cout << query(1, 0, M - 1, B - 1, E - 1) << "\n";
     }
 }
