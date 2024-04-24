@@ -22,7 +22,9 @@ int main() {
                 if (dp[j][0] + 1 < dp[i][0]) {
 
                 }
-                else if ()
+                else if (dp[j][0] + 1 == dp[i][0]) {
+                    dp[i][1] = max(dp[i][1], dp[j][1] - ())
+                }
             }
         }
     }
