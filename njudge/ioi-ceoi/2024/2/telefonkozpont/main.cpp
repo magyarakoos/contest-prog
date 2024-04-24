@@ -22,7 +22,9 @@ void update(int curr, int tl, int tr, int l, int r) {
     } else {
         push(curr);
         int tmid = (tl + tr) / 2;
-        update(curr * 2, tl, tmid, l, min())
+        update(curr * 2, tl, tmid, l, min(tmid, r));
+        update(curr * 2 + 1, tmid + 1, tr, max(tmid + 1, l), r);
+        t[curr] = max(t[curr * 2], t[curr * 2 + 1]);
     }
 }
 
