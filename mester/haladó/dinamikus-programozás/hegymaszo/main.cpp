@@ -19,7 +19,9 @@ int main() {
     for (int i = 1; i <= N; i++) {
         for (int j = 0; j < i; j++) {
             if (v[i][0] - v[j][0] <= dp[j][1]) {
-                
+                if (dp[j][0] + 1 < dp[i][0]) {
+                    
+                }
             }
         }
     }
