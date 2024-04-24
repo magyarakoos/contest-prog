@@ -41,11 +41,11 @@ int main() {
     }
 
     stack<int> path;
-    while (prv[N]) {
-        path.push(prv[N]);
+    while (N) {
+        path.push(N);
         N = prv[N];
     }
-
+    cout << "\n";
     cout << dp[N][0] << "\n";
     while (!path.empty()) {
         cout << path.top() << " ";
