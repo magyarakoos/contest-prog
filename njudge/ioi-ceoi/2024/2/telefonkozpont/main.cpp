@@ -48,7 +48,7 @@ int main() {
         int B, E;
         cin >> B >> E;
         v[B - 1]++;
-        v[E - 1]--;
+        v[E]--;
     }
     for (int i = 1; i < M; i++) {
         v[i] += v[i - 1];
