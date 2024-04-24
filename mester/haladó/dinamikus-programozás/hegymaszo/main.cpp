@@ -41,5 +41,10 @@ int main() {
         path.push(prv[N]);
         N = prv[N];
     }
-    
+
+    cout << dp[N][0] << "\n";
+    while (!path.empty()) {
+        cout << path.top() << " ";
+    }
+    cout << "\n";
 }
