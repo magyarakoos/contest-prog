@@ -4,6 +4,12 @@ constexpr int MAXN = 2e5, INF = 1e9;
 
 int t[4 * MAXN + 1], lazy[4 * MAXN + 1];
 
+void build(const vector<int>& v, int curr, int tl, int tr) {
+    if (tl == tr) {
+        t[curr] = v[tl];
+    }
+}
+
 void push(int curr) {
     t[curr * 2] += lazy[curr];
     t[curr * 2 + 1] += lazy[curr];
