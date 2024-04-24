@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-constexpr int MAXN = 2e5;
+constexpr int MAXN = 2e5, INF = 1e9;
 
 int t[4 * MAXN + 1], lazy[4 * MAXN + 1];
 
@@ -26,6 +26,13 @@ void update(int curr, int tl, int tr, int l, int r) {
         update(curr * 2 + 1, tmid + 1, tr, max(tmid + 1, l), r);
         t[curr] = max(t[curr * 2], t[curr * 2 + 1]);
     }
+}
+
+int query(int curr, int tl, int tr, int l, int r) {
+    if (tr < tl || r < l) {
+        return -INF;
+    }
+    
 }
 
 int main() {
