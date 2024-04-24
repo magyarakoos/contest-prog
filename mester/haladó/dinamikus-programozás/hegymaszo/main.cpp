@@ -38,8 +38,6 @@ int main() {
 
     stack<int> path;
     while (prv[N]) {
-        cout << prv[N] << endl;
-        sleep(1);
         path.push(prv[N]);
         N = prv[N];
     }
@@ -47,6 +45,7 @@ int main() {
     cout << dp[N][0] << "\n";
     while (!path.empty()) {
         cout << path.top() << " ";
+        path.pop();
     }
     cout << "\n";
 }
