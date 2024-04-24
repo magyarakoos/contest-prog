@@ -14,6 +14,7 @@ int main() {
     v[N] = {T, 0};
 
     vector<array<int, 2>> dp(N + 1, {INF, INF});
+    vector<int> prv(N + 1, -1);
     dp[0] = {1, v[1][1]};
 
     for (int i = 1; i <= N; i++) {
