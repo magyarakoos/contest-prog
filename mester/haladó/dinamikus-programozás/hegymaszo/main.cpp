@@ -25,9 +25,15 @@ int main() {
                     dp[i][1] = dp[j][1] - dist + v[i][1];
                 }
                 else if (dp[j][0] + 1 == dp[i][0]) {
-                    dp[i][1] = max(dp[i][1], dp[j][1] - dist + v[i][1]);
+                    if (dp[i][1] < dp[j][1] - dist + v[i][1]) {
+                        dp[i][1] = dp[j][1] - dist + v[i][1];
+                    }
                 }
             }
         }
+    }
+
+    for (int i = 0; i <= N; i++) {
+        
     }
 }
