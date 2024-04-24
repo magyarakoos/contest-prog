@@ -36,6 +36,10 @@ int main() {
         }
     }
 
+    for (int i = 0; i <= N; i++) {
+        cout << prv[i] << "\n";
+    }
+
     stack<int> path;
     while (prv[N]) {
         path.push(prv[N]);
