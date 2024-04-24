@@ -32,7 +32,13 @@ int query(int curr, int tl, int tr, int l, int r) {
     if (tr < tl || r < l) {
         return -INF;
     }
-    
+    if (tl == l && tr == r) {
+        return t[curr];
+    }
+    push(curr);
+    return max(
+        query(curr * 2, tl, )
+    );
 }
 
 int main() {
