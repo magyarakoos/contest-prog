@@ -22,7 +22,7 @@ int main() {
             if (dist <= dp[j][1]) {
                 if (dp[j][0] + 1 < dp[i][0]) {
                     dp[i][0] = dp[j][0] + 1;
-                    
+                    dp[i][1] = dp[j][1] - dist + v[i][1];
                 }
                 else if (dp[j][0] + 1 == dp[i][0]) {
                     dp[i][1] = max(dp[i][1], dp[j][1] - dist + v[i][1]);
