@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-constexpr int INF = 1e5;
+constexpr int INF = 1e9;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
