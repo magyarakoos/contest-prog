@@ -7,13 +7,15 @@ int main() {
 
     int N, T, H;
     cin >> N >> T >> H;
-    vector<array<int, 2>> v(N + 1);
+    vector<array<int, 2>> v(N + 2);
     for (int i = 1; i <= N; i++) {
         cin >> v[i][0] >> v[i][1];
     }
+    v[N + 1] = {T, 0};
 
     vector<int> dp(N + 2, INF);
     dp[0] = 0;
-    dp[1] = 0,
+    dp[1] = 0;
 
+    
 }
