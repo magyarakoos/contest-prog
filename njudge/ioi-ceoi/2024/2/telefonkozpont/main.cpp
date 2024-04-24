@@ -36,8 +36,10 @@ int query(int curr, int tl, int tr, int l, int r) {
         return t[curr];
     }
     push(curr);
+    int tmid = (tl + tr) / 2;
     return max(
-        query(curr * 2, tl, )
+        query(curr * 2, tl, tmid, l, min(tmid, r)),
+        query(curr * 2 + 1, tmid + 1, tr, max())
     );
 }
 
