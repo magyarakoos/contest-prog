@@ -46,7 +46,7 @@ int main() {
         N = prv[N];
     }
     cout << "\n";
-    cout << dp[N][0] << "\n";
+    cout << path.size() << "\n";
     while (!path.empty()) {
         cout << path.top() << " ";
         path.pop();
