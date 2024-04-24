@@ -50,8 +50,11 @@ int main() {
         v[B - 1]++;
         v[E - 1]--;
     }
+    for (int i = 1; i < M; i++) {
+        v[i] += v[i - 1];
+    }
 
-    build(ps, 1, 0, M);
+    build(v, 1, 0, M - 1);
 
     while (Q--) {
         int B, E;
