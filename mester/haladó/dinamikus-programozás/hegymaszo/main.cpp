@@ -17,6 +17,8 @@ int main() {
     dp[0] = {1, v[1][1]};
 
     for (int i = 1; i <= N; i++) {
-        
+        for (int j = 0; j < i; j++) {
+            if (v[i][0] - v[] dp[j])
+        }
     }
 }
