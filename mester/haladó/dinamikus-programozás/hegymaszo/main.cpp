@@ -19,12 +19,13 @@ int main() {
     for (int i = 1; i <= N; i++) {
         for (int j = 0; j < i; j++) {
             int dist = v[i][0] - v[j][0];
-            if (v[i][0] - v[j][0 <= dp[j][1]) {
+            if (dist <= dp[j][1]) {
                 if (dp[j][0] + 1 < dp[i][0]) {
-
+                    dp[i][0] = dp[j][0] + 1;
+                    
                 }
                 else if (dp[j][0] + 1 == dp[i][0]) {
-                    dp[i][1] = max(dp[i][1], dp[j][1] - (v[i][0] - v[j][0]) + v[i][1]);
+                    dp[i][1] = max(dp[i][1], dp[j][1] - dist + v[i][1]);
                 }
             }
         }
