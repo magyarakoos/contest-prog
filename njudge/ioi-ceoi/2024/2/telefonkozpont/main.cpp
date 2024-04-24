@@ -43,7 +43,7 @@ int main() {
 
     int M, N, Q;
     cin >> M >> N >> Q;
-    vector<int> v(M);
+    vector<int> v(M + 1);
     while (N--) {
         int B, E;
         cin >> B >> E;
@@ -51,7 +51,7 @@ int main() {
         v[E - 1]--;
     }
 
-    build(ps, 1, 0, M - 1);
+    build(ps, 1, 0, M);
 
     while (Q--) {
         int B, E;
