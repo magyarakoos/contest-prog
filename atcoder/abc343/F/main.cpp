@@ -11,24 +11,23 @@ constexpr int MAXN = 2e5, INF = 2e9;
 struct Vertex {
     int mx;
     int occur;
+    int smx;
+    int soccur;
     Vertex() : mx(-1), occur(0) {}
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
-        // MAX algo ---
-        // if (a.mx < b.mx) {
-        //     mx = b.mx;
-        //     occur = b.occur;
-        // }
-        // else if (b.mx < a.mx) {
-        //     mx = a.mx;
-        //     occur = a.occur;
-        // }
-        // else {
-        //     mx = a.mx;
-        //     occur = a.occur + b.occur;
-        // }
-        // ------------
-    
+        if (a.mx < b.mx) {
+            mx = b.mx;
+            occur = b.occur;
+        }
+        else if (b.mx < a.mx) {
+            mx = a.mx;
+            occur = a.occur;
+        }
+        else {
+            mx = a.mx;
+            occur = a.occur + b.occur;
+        }
     }
 };
 
