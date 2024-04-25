@@ -58,6 +58,7 @@ int main() {
         }
 
         if (ccnt > L || hcnt > K) {
+            cout << sliceS[tmpS[l]] << "\n";
             if (sliceS[tmpS[l]] == -1) {
                 hcnt--;
             } else {
@@ -68,6 +69,7 @@ int main() {
         }
 
         r++;
+        cout << sliceS[tmpS[l]] << "\n";
         if (sliceS[tmpS[r]] == -1) {
             hcnt++;
         } else {
