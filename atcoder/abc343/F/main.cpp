@@ -42,7 +42,9 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
     t[curr] = {t[curr * 2], t[curr * 2 + 1]};
 }
 
-
+void update(int curr, int tl, int tr, int pos, int x) {
+    
+}
 
 int main() {
     int N, Q;
