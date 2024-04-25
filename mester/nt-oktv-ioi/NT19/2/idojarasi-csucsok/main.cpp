@@ -46,9 +46,12 @@ int main() {
         if (ccnt == L && hcnt == K) {
             result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
             r++;
+            if (tmp)
             continue;
         }
 
-        
+        if (ccnt > L || hcnt > K) {
+
+        }
     }
 }
