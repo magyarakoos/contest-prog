@@ -27,11 +27,10 @@ struct Vertex {
                 smx = b.smx;
                 soccur = b.soccur;
             }
-            else if (b.smx < a.smx) {
+            else {
                 smx = a.smx;
                 soccur = a.soccur;
             }
-            
         }
     }
 };
