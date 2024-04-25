@@ -48,14 +48,17 @@ int main() {
     int M = size(tmpS);
     int ccnt = 0, hcnt = 0, l = 0, r = 0;
     ll result = 0;
-    
+
+    if (sliceS[tmpS[0]] == -1) {
+        hcnt++;
+    } else {
+        ccnt++;
+    }
 
     while (r < M) {
         if (ccnt == L && hcnt == K) {
             result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
             r++;
-            cout << "A | ";
-            cout << sliceS[tmpS[r]] << "\n";
             if (sliceS[tmpS[r]] == -1) {
                 hcnt++;
             } else {
@@ -65,8 +68,6 @@ int main() {
         }
 
         if (ccnt > L || hcnt > K) {
-            cout << "B | ";
-            cout << sliceS[tmpS[l]] << "\n";
             if (sliceS[tmpS[l]] == -1) {
                 hcnt--;
             } else {
@@ -77,17 +78,11 @@ int main() {
         }
 
         r++;
-        cout << "C | ";
-        cout << sliceS[tmpS[r]] << "\n";
         if (sliceS[tmpS[r]] == -1) {
             hcnt++;
         } else {
             ccnt++;
         }
-
-        nxt:
-        cout << ccnt << " " << hcnt << " | ";
-        cout << l << " " << r << "\n";
     }
 
     cout << result;
