@@ -102,6 +102,7 @@ Vertex query(int curr, int tl, int tr, int l, int r) {
     }
 
     if (tl == l && tr == r) {
+        cout << t[curr].occur << " " << t[curr].soccur << " " << t[curr].mx << " " << t[curr].smx << "\n";
         return t[curr];
     }
 
