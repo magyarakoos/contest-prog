@@ -136,6 +136,7 @@ int main() {
     }
 
     for (int i = 0; i < N; i++) {
-        
+        Vertex q = t[i];
+        cout << q.mx << " " << q.smx << " " << q.occur << " " << q.soccur << "\n";
     }
 }
