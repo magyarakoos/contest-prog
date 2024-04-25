@@ -41,8 +41,9 @@ int main() {
     for (int x : tmpS) cout << x << " ";
     cout << "\n";
     for (int i = 0; i < size(sliceS); i++) {
-        cout << sliceS[i] << " " << posS[i];
+        cout << sliceS[i] << " " << posS[i] << "\n";
     }
+    cout << "\n";
 
     int M = size(tmpS);
     int ccnt = 0, hcnt = 0, l = 0, r = 0;
