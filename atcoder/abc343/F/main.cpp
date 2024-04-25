@@ -87,9 +87,11 @@ int main() {
         if (type == '1') {
             int P, X;
             cin >> P >> X;
+            update(1, 0, N - 1, P - 1, X);
         } else {
             int L, R;
             cin >> L >> R;
+            cout << query(1, 0, N - 1, L - 1, R - 1).occur << "\n";
         }
     }
 }
