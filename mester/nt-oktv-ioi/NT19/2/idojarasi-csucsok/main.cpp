@@ -55,7 +55,11 @@ int main() {
         }
 
         if (ccnt > L || hcnt > K) {
-
+            if (sliceS[tmpS[l]] == -1) {
+                hcnt--;
+            } else {
+                ccnt
+            }
         }
     }
 }
