@@ -14,6 +14,7 @@ struct Vertex {
     Vertex() : mx(-1), occur(0) {}
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
+        // MAX algo ---
         // if (a.mx < b.mx) {
         //     mx = b.mx;
         //     occur = b.occur;
@@ -26,6 +27,8 @@ struct Vertex {
         //     mx = a.mx;
         //     occur = a.occur + b.occur;
         // }
+        // ------------
+    
     }
 };
 
