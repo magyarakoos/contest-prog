@@ -23,9 +23,13 @@ struct Vertex {
                 smx = b.smx;
                 soccur = b.soccur;
             }
-            else {
+            else if (a.mx > b.smx) {
                 smx = a.mx;
                 soccur = a.occur;
+            }
+            else {
+                smx = a.mx;
+                soccur = b.soccur + a.occur;
             }
         }
         else if (b.mx < a.mx) {
@@ -35,7 +39,7 @@ struct Vertex {
                 smx = a.smx;
                 soccur = a.soccur;
             }
-            else {
+            else if (b.mx > a.smx) {
                 smx = b.mx;
                 soccur = b.occur;
             }
