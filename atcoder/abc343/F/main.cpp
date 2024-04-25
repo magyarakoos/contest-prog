@@ -13,7 +13,7 @@ struct Vertex {
     int occur;
     int smx;
     int soccur;
-    Vertex() : mx(-1), occur(0) {}
+    Vertex() : mx(0), occur(0) {}
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
         if (a.mx < b.mx) {
@@ -98,7 +98,7 @@ void update(int curr, int tl, int tr, int pos, int x) {
 
 Vertex query(int curr, int tl, int tr, int l, int r) {
     if (tr < tl || r < l) {
-        return {-1, 0};
+        return {0, 0};
     }
 
     if (tl == l && tr == r) {
