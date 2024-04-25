@@ -57,7 +57,11 @@ void update(int curr, int tl, int tr, int pos, int x) {
     t[curr] = {t[curr * 2], t[curr * 2 + 1]};
 }
 
-
+Vertex query(int curr, int tl, int tr, int l, int r) {
+    if (tr < tl || r < l) {
+        return {}
+    }
+}
 
 int main() {
     int N, Q;
