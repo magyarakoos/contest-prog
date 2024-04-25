@@ -11,6 +11,13 @@ constexpr int MAXN = 2e5;
 struct Vertex {
     int mx;
     int occur;
+    Vertex(int m, int o) : mx(m), occur(o) {}
+    Vertex(Vertex a, Vertex b) {
+        if (a.mx < b.mx) {
+            mx = b.mx;
+            occur = b.occur;
+        }
+    }
 };
 
 Vertex t[4 * MAXN + 1];
