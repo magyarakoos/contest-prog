@@ -17,22 +17,13 @@ struct Vertex {
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
         if (a.mx < b.mx) {
-            mx = b.mx;
-            occur = b.occur;
-            smx = a.mx;
-            soccur = a.occur;
         }
         else if (b.mx < a.mx) {
-            mx = a.mx;
-            occur = a.occur;
-            smx = b.mx;
-            soccur = b.occur;
         }
         else {
             mx = a.mx;
-            occur = a.occur + b.occur;
-            smx = -1;
-            soccur = 0;
+            occur = a.occur;
+            if (b.sm)
         }
     }
 };
