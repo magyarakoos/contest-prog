@@ -33,7 +33,11 @@ Vertex t[4 * MAXN + 1];
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
         t[curr] = {v[tl], 1};
+        return;
     }
+
+    int tmid = (tl + tr) / 2;
+    
 }
 
 int main() {
