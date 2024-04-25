@@ -11,6 +11,7 @@ constexpr int MAXN = 2e5, INF = 2e9;
 struct Vertex {
     int mx;
     int occur;
+    Vertex() : mx(-1), occur(0) {}
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
         if (a.mx < b.mx) {
