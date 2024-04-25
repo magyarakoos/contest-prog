@@ -14,8 +14,7 @@ int main() {
     }
     int res = 0;
     for (int i = 1; i < H; i++) {
-        v[i] += v[i - 1];
-        res = );
+        res = min(res, (v[i] += v[i - 1]));
     }
-
+    cout << res;
 }
