@@ -45,7 +45,12 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 void update(int curr, int tl, int tr, int pos, int x) {
     if (tl == tr) {
         t[curr] = {x, 1};
+        return;
     }
+
+    int tmid = (tl + tr) / 2;
+    update(curr * 2, tl, tmid, pos, x);
+    
 }
 
 int main() {
