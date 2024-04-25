@@ -39,4 +39,5 @@ int main() {
 
     int M = size(tmpS);
     int ccnt = 0, hcnt = 0, l = 0, r = 0;
+    
 }
