@@ -9,14 +9,15 @@ using ll = long long;
 constexpr int MAXN = 2e5;
 
 struct Vertex {
-
+    int mx;
+    int occur;
 };
 
 Vertex t[4 * MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
-        t[curr] = v[tl];
+        t[curr] = {v[tl], 1};
     }
 }
 
