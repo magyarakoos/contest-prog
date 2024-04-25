@@ -12,8 +12,10 @@ int main() {
         v[P - 1] += D;
         v[P + K] -= D;
     }
+    int res = 0;
     for (int i = 1; i < H; i++) {
         v[i] += v[i - 1];
+        res = );
     }
 
 }
