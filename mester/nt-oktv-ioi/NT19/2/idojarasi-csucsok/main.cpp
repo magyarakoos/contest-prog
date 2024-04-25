@@ -38,6 +38,8 @@ int main() {
     sliceS.push_back(N - posS.back() - 1);
     posS.push_back(N);
 
+    for ()
+
     int M = size(tmpS);
     int ccnt = 0, hcnt = 0, l = 0, r = 0;
     ll result = 0;
@@ -70,7 +72,7 @@ int main() {
 
         r++;
         cout << "C | ";
-        cout << sliceS[tmpS[l]] << "\n";
+        cout << sliceS[tmpS[r]] << "\n";
         if (sliceS[tmpS[r]] == -1) {
             hcnt++;
         } else {
