@@ -6,7 +6,7 @@ using ll = long long;
 #define rall(v) v.rbegin(), v.rend()
 #define size(v) (int)v.size()
 
-constexpr int MAXN = 2e5;
+constexpr int MAXN = 2e5, INF = 2e9;
 
 struct Vertex {
     int mx;
