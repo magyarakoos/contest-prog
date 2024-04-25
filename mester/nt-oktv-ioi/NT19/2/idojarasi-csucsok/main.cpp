@@ -37,5 +37,5 @@ int main() {
     sliceS.push_back(N - posS.back() - 1);
     posS.push_back(N);
 
-    
+    int M tmpS.size();
 }
