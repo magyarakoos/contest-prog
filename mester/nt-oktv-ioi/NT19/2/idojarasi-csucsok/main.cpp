@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 #define size(v) (int)v.size()
 
 int main() {
@@ -39,8 +40,11 @@ int main() {
 
     int M = size(tmpS);
     int ccnt = 0, hcnt = 0, l = 0, r = 0;
+    ll result = 0;
 
     while (r < M) {
-        if (ccnt == L && hcnt)
+        if (ccnt == L && hcnt == K) {
+
+        }
     }
 }
