@@ -31,5 +31,7 @@ int main() {
             posS.push_back(i);
         }
     }
-    for (int i = 0; i < size(sliceS);)
+    for (int i = 0; i < size(sliceS); i++) {
+        cout << sliceS[i] << " " << posS[i] << "\n";
+    }
 }
