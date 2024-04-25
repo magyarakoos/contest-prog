@@ -13,7 +13,7 @@ struct Vertex {
     int occur;
     int smx;
     int soccur;
-    Vertex() : mx(0), occur(0) {}
+    Vertex() : mx(0), occur(0), smx(0), soccur(0) {}
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
         if (a.mx < b.mx) {
@@ -120,7 +120,7 @@ int main() {
     vector<int> A(N);
     for (auto& e : A) cin >> e;
 
-    build(A, 1, 0, N);
+    build(A, 1, 0, N - 1);
 
     while (Q--) {
         char type;
@@ -128,11 +128,11 @@ int main() {
         if (type == '1') {
             int P, X;
             cin >> P >> X;
-            update(1, 0, N, P - 1, X);
+            update(1, 0, N - 1, P - 1, X);
         } else {
             int L, R;
             cin >> L >> R;
-            cout << query(1, 0, N, L - 1, R - 1).soccur << "\n";
+            cout << query(1, 0, N - 1, L - 1, R - 1).soccur << "\n";
         }
     }
 
