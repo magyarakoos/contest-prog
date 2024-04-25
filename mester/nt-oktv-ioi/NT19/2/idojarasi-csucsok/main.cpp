@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define size(v) (int)v.size()
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -30,5 +31,5 @@ int main() {
             posS.push_back(i);
         }
     }
-    for (int i = )
+    for (int i = 0; i < size(sliceS);)
 }
