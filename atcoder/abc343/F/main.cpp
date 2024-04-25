@@ -101,7 +101,7 @@ int main() {
             int L, R;
             cin >> L >> R;
             Vertex q = query(1, 0, N - 1, L - 1, R - 1);
-            cout << q.mx << " " << q.occur << " " << q.occur << "\n";
+            cout << q.mx << " " << q.occur << " " << q.smx << " " << q.soccur << "\n";
         }
     }
 }
