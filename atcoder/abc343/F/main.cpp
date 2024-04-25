@@ -20,10 +20,12 @@ struct Vertex {
             mx = b.mx;
             occur = b.occur;
             if (a.mx < b.smx) {
-
+                smx = b.smx;
+                soccur = b.soccur;
             }
             else {
-                
+                smx = a.mx;
+                soccur = a.occur;
             }
         }
         else if (b.mx < a.mx) {
