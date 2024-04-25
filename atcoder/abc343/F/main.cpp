@@ -98,12 +98,10 @@ void update(int curr, int tl, int tr, int pos, int x) {
 
 Vertex query(int curr, int tl, int tr, int l, int r) {
     if (tr < tl || r < l) {
-        return {0, 0};
+        return {0, 0, 0, 0};
     }
 
     if (tl == l && tr == r) {
-        cout << tl << " " << tr << " " << curr << " ";
-        cout << t[curr].occur << " " << t[curr].soccur << " " << t[curr].mx << " " << t[curr].smx << "\n";
         return t[curr];
     }
 
@@ -134,10 +132,5 @@ int main() {
             cin >> L >> R;
             cout << query(1, 0, N - 1, L - 1, R - 1).soccur << "\n";
         }
-    }
-
-    for (int i = 0; i <= N; i++) {
-        Vertex q = t[i];
-        cout << q.mx << " " << q.smx << " " << q.occur << " " << q.soccur << "\n";
     }
 }
