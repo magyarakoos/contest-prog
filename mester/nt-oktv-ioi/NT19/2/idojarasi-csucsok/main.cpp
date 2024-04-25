@@ -38,7 +38,11 @@ int main() {
     sliceS.push_back(N - posS.back() - 1);
     posS.push_back(N);
 
-    for ()
+    for (int x : tmpS) cout << x << " ";
+    cout << "\n";
+    for (int i = 0; i < size(sliceS); i++) {
+        cout << sliceS[i] << " " << posS[i];
+    }
 
     int M = size(tmpS);
     int ccnt = 0, hcnt = 0, l = 0, r = 0;
