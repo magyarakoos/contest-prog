@@ -6,7 +6,15 @@ using ll = long long;
 #define rall(v) v.rbegin(), v.rend()
 #define size(v) (int)v.size()
 
-constexpr int MAXN = 
+constexpr int MAXN = 2e5;
+
+struct Vertex {
+
+};
+
+Vertex t[4 * MAXN + 1];
+
+
 
 int main() {
     int N, Q;
