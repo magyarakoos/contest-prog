@@ -19,10 +19,14 @@ struct Vertex {
         if (a.mx < b.mx) {
             mx = b.mx;
             occur = b.occur;
+            smx = a.mx;
+            soccur = a.occur;
         }
         else if (b.mx < a.mx) {
             mx = a.mx;
             occur = a.occur;
+            smx = b.mx;
+            soccur = b.occur;
         }
         else {
             mx = a.mx;
