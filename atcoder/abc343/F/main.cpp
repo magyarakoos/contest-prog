@@ -14,7 +14,11 @@ struct Vertex {
 
 Vertex t[4 * MAXN + 1];
 
-
+void build(const vector<int>& v, int curr, int tl, int tr) {
+    if (tl == tr) {
+        t[curr] = v[tl];
+    }
+}
 
 int main() {
     int N, Q;
