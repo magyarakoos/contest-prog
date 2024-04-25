@@ -130,8 +130,7 @@ int main() {
         } else {
             int L, R;
             cin >> L >> R;
-            Vertex q = query(1, 0, N - 1, L - 1, R - 1);
-            cout << q.mx << " " << q.occur << " " << q.smx << " " << q.soccur << "\n";
+            cout << query(1, 0, N - 1, L - 1, R - 1).soccur << "\n";
         }
     }
 }
