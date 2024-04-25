@@ -10,7 +10,10 @@ int main() {
         int P, D;
         cin >> P >> D;
         v[P - 1] += D;
-        
+        v[P + K] -= D;
+    }
+    for (int i = 1; i < H; i++) {
+        v[i] += v[i - 1];
     }
 
 }
