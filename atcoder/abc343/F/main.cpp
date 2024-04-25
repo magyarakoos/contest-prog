@@ -14,18 +14,18 @@ struct Vertex {
     Vertex() : mx(-1), occur(0) {}
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
-        if (a.mx < b.mx) {
-            mx = b.mx;
-            occur = b.occur;
-        }
-        else if (b.mx < a.mx) {
-            mx = a.mx;
-            occur = a.occur;
-        }
-        else {
-            mx = a.mx;
-            occur = a.occur + b.occur;
-        }
+        // if (a.mx < b.mx) {
+        //     mx = b.mx;
+        //     occur = b.occur;
+        // }
+        // else if (b.mx < a.mx) {
+        //     mx = a.mx;
+        //     occur = a.occur;
+        // }
+        // else {
+        //     mx = a.mx;
+        //     occur = a.occur + b.occur;
+        // }
     }
 };
 
