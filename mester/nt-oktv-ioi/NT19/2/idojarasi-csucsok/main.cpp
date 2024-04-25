@@ -8,6 +8,7 @@ int main() {
     cin >> N >> K >> L;
     vector<int> v(N);
     for (int& x : v) cin >> x;
+
     vector<int> sliceS, posS, tmpS;
     for (int i = 1; i < N - 1; i++) {
         if (v[i] < v[i - 1] && v[i] < v[i + 1]) {
@@ -35,7 +36,6 @@ int main() {
     }
     sliceS.push_back(N - posS.back() - 1);
     posS.push_back(N);
-    for (int i = 0; i < size(sliceS); i++) {
-        cout << sliceS[i] << " " << posS[i] << "\n";
-    }
+
+    
 }
