@@ -38,13 +38,6 @@ int main() {
     sliceS.push_back(N - posS.back() - 1);
     posS.push_back(N);
 
-    for (int x : tmpS) cout << x << " ";
-    cout << "\n";
-    for (int i = 0; i < size(sliceS); i++) {
-        cout << sliceS[i] << " " << posS[i] << "\n";
-    }
-    cout << "\n";
-
     int M = size(tmpS);
     int ccnt = 0, hcnt = 0, l = 0, r = 0;
     ll result = 0;
@@ -56,17 +49,6 @@ int main() {
     }
 
     while (r < M) {
-        if (ccnt == L && hcnt == K) {
-            result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
-            r++;
-            if (sliceS[tmpS[r]] == -1) {
-                hcnt++;
-            } else {
-                ccnt++;
-            }
-            goto nxt;
-        }
-
         if (ccnt > L || hcnt > K) {
             if (sliceS[tmpS[l]] == -1) {
                 hcnt--;
@@ -74,7 +56,11 @@ int main() {
                 ccnt--;
             }
             l++;
-            goto nxt;
+            continue;
+        }
+
+        if (ccnt == L && hcnt == K) {
+            result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
         }
 
         r++;
