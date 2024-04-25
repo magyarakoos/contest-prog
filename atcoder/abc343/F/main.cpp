@@ -59,8 +59,14 @@ void update(int curr, int tl, int tr, int pos, int x) {
 
 Vertex query(int curr, int tl, int tr, int l, int r) {
     if (tr < tl || r < l) {
-        return {}
+        return {-INF, 0};
     }
+
+    if (tl == l && tr == r) {
+        return t[curr];
+    }
+
+    
 }
 
 int main() {
