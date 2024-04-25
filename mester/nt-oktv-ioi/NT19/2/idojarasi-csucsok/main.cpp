@@ -47,6 +47,7 @@ int main() {
             result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
             r++;
             cout << sliceS[tmpS[r]] << "\n";
+            
             if (sliceS[tmpS[r]] == -1) {
                 hcnt++;
             } else {
