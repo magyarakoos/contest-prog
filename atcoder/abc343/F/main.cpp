@@ -14,7 +14,7 @@ struct Vertex {
     int smx;
     int soccur;
     Vertex() : mx(0), occur(0), smx(0), soccur(0) {}
-    Vertex(int m, int o) : mx(m), occur(o) {}
+    Vertex(int m, int o, int sm, int so) : mx(m), occur(o), smx(sm), soccur(so) {}
     Vertex(Vertex a, Vertex b) {
         if (a.mx < b.mx) {
             mx = b.mx;
@@ -71,7 +71,7 @@ Vertex t[4 * MAXN + 1];
 
 void build(const vector<int>& v, int curr, int tl, int tr) {
     if (tl == tr) {
-        t[curr] = {v[tl], 1};
+        t[curr] = {v[tl], 1, 0, 0};
         return;
     }
 
@@ -83,7 +83,7 @@ void build(const vector<int>& v, int curr, int tl, int tr) {
 
 void update(int curr, int tl, int tr, int pos, int x) {
     if (tl == tr) {
-        t[curr] = {x, 1};
+        t[curr] = {x, 1, 0, 0};
         return;
     }
 
