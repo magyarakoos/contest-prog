@@ -23,7 +23,15 @@ struct Vertex {
         else {
             mx = a.mx;
             occur = a.occur;
-            if (b.sm)
+            if (a.smx < b.smx) {
+                smx = b.smx;
+                soccur = b.soccur;
+            }
+            else if (b.smx < a.smx) {
+                smx = a.smx;
+                soccur = a.soccur;
+            }
+            
         }
     }
 };
