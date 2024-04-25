@@ -8,9 +8,10 @@ int main() {
     cin >> N >> K >> L;
     vector<int> v(N);
     for (int& x : v) cin >> x;
-    vector<int> sliceS, posS;
+    vector<int> sliceS, posS, tmpS;
     for (int i = 1; i < N - 1; i++) {
         if (v[i] < v[i - 1] && v[i] < v[i + 1]) {
+            
             if (sliceS.empty()) {
                 sliceS.push_back(i);
             } else {
