@@ -29,6 +29,16 @@ struct Vertex {
             }
         }
         else if (b.mx < a.mx) {
+            mx = a.mx;
+            occur = a.occur;
+            if (b.mx < a.smx) {
+                smx = a.smx;
+                soccur = a.soccur;
+            }
+            else {
+                smx = b.mx;
+                soccur = b.occur;
+            }
         }
         else {
             mx = a.mx;
