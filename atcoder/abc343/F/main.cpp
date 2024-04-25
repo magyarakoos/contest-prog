@@ -31,6 +31,8 @@ struct Vertex {
         else {
             mx = a.mx;
             occur = a.occur + b.occur;
+            smx = -1;
+            soccur = 0;
         }
     }
 };
@@ -98,7 +100,8 @@ int main() {
         } else {
             int L, R;
             cin >> L >> R;
-            cout << query(1, 0, N - 1, L - 1, R - 1).occur << "\n";
+            Vertex q = query(1, 0, N - 1, L - 1, R - 1);
+            cout << q.mx << " " << q.occur << " " << q.occur << "\n";
         }
     }
 }
