@@ -17,6 +17,9 @@ struct Vertex {
     Vertex(int m, int o) : mx(m), occur(o) {}
     Vertex(Vertex a, Vertex b) {
         if (a.mx < b.mx) {
+            mx = b.mx;
+            occur = b.occur;
+            
         }
         else if (b.mx < a.mx) {
         }
