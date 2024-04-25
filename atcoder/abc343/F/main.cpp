@@ -134,4 +134,8 @@ int main() {
             cout << query(1, 0, N - 1, L - 1, R - 1).soccur << "\n";
         }
     }
+
+    for (int i = 0; i < N; i++) {
+        
+    }
 }
