@@ -43,8 +43,8 @@ int main() {
     ll result = 0;
 
     while (r < M) {
+        cout << l << " " << r << "\n";
         if (ccnt == L && hcnt == K) {
-            cout << tmpS[l] << " " << tmpS[r] << "\n";
             result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
             r++;
             if (sliceS[tmpS[r]] == -1) {
