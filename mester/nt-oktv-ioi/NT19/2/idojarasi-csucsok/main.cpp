@@ -44,7 +44,7 @@ int main() {
 
     while (r < M) {
         if (ccnt == L && hcnt == K) {
-            result += sliceS[tmpS[l] - 1]
+            result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
         }
     }
 }
