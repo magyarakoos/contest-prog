@@ -46,8 +46,8 @@ int main() {
         if (ccnt == L && hcnt == K) {
             result += (sliceS[tmpS[l] - 1] + 1) * (sliceS[tmpS[r] + 1] + 1);
             r++;
+            cout << "A | ";
             cout << sliceS[tmpS[r]] << "\n";
-            
             if (sliceS[tmpS[r]] == -1) {
                 hcnt++;
             } else {
@@ -57,6 +57,7 @@ int main() {
         }
 
         if (ccnt > L || hcnt > K) {
+            cout << "B | ";
             cout << sliceS[tmpS[l]] << "\n";
             if (sliceS[tmpS[l]] == -1) {
                 hcnt--;
@@ -68,6 +69,7 @@ int main() {
         }
 
         r++;
+        cout << "C | ";
         cout << sliceS[tmpS[l]] << "\n";
         if (sliceS[tmpS[r]] == -1) {
             hcnt++;
