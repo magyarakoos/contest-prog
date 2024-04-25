@@ -13,7 +13,7 @@ int main() {
         v[P + K + 1] -= D;
     }
     int res = 0;
-    for (int i = 1; i < H; i++) {
+    for (int i = 1; i <= H; i++) {
         res = min(res, (v[i] += v[i - 1]));
     }
     cout << res;
