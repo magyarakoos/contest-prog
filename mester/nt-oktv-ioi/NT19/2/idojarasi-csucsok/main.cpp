@@ -11,7 +11,6 @@ int main() {
     vector<int> sliceS, posS, tmpS;
     for (int i = 1; i < N - 1; i++) {
         if (v[i] < v[i - 1] && v[i] < v[i + 1]) {
-            
             if (sliceS.empty()) {
                 sliceS.push_back(i);
             } else {
@@ -20,6 +19,7 @@ int main() {
             sliceS.push_back(-2);
             posS.push_back(i);
             posS.push_back(i);
+            tmpS.push_back(size(sliceS) - 1);
         }
         if (v[i] > v[i - 1] && v[i] > v[i + 1]) {
             if (sliceS.empty()) {
@@ -30,6 +30,7 @@ int main() {
             sliceS.push_back(-1);
             posS.push_back(i);
             posS.push_back(i);
+            tmpS.push_back(size(sliceS) - 1);
         }
     }
     sliceS.push_back(N - posS.back() - 1);
