@@ -58,8 +58,17 @@ int main() {
             if (sliceS[tmpS[l]] == -1) {
                 hcnt--;
             } else {
-                ccnt
+                ccnt--;
             }
+            l++;
+            continue;
+        }
+
+        r++;
+        if (sliceS[tmpS[r]] == -1) {
+            hcnt++;
+        } else {
+            ccnt++;
         }
     }
 }
