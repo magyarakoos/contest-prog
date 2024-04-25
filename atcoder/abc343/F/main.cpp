@@ -120,7 +120,7 @@ int main() {
     vector<int> A(N);
     for (auto& e : A) cin >> e;
 
-    build(A, 1, 0, N - 1);
+    build(A, 1, 0, N);
 
     while (Q--) {
         char type;
@@ -128,15 +128,15 @@ int main() {
         if (type == '1') {
             int P, X;
             cin >> P >> X;
-            update(1, 0, N - 1, P - 1, X);
+            update(1, 0, N, P - 1, X);
         } else {
             int L, R;
             cin >> L >> R;
-            cout << query(1, 0, N - 1, L - 1, R - 1).soccur << "\n";
+            cout << query(1, 0, N, L - 1, R - 1).soccur << "\n";
         }
     }
 
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i <= N; i++) {
         Vertex q = t[i];
         cout << q.mx << " " << q.smx << " " << q.occur << " " << q.soccur << "\n";
     }
