@@ -79,6 +79,7 @@ int main() {
     vector<int> A(N);
     for (auto& e : A) cin >> e;
 
+    build(A, 1, 0, N - 1);
 
     while (Q--) {
         char type;
