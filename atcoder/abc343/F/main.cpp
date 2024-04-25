@@ -6,7 +6,7 @@ using ll = long long;
 #define rall(v) v.rbegin(), v.rend()
 #define size(v) (int)v.size()
 
-constexpr int MAXN = 2e5, INF = 2e9;
+constexpr int MAXN = 2e5;
 
 struct Vertex {
     int mx;
@@ -98,7 +98,7 @@ void update(int curr, int tl, int tr, int pos, int x) {
 
 Vertex query(int curr, int tl, int tr, int l, int r) {
     if (tr < tl || r < l) {
-        return {-INF, 0};
+        return {-1, 0};
     }
 
     if (tl == l && tr == r) {
