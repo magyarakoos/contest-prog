@@ -20,7 +20,10 @@ void solve() {
             continue;
         }
 
-        if (a[0] > X)
+        if (a[0] > X && a[1] > X) {
+            a[min_element(all(a)) - a.begin()] = X;
+            continue;
+        }
     }
 }
 
