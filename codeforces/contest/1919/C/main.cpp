@@ -3,15 +3,14 @@ using namespace std;
 #define all(v) v.begin(), v.end()
 
 void solve() {
-    vector<array<int, 2>> v;
-    v.push_back({INT_MAX, INT_MAX});
+    array<int, 2> a
     int N, res = 0;
     cin >> N;
     while (N--) {
         int X;
         cin >> X;
-        if (v.back()[0] < X && v.back()[1] < X) {
-            v[min_element(all(v.back())) - v.back().begin()]
+        if (a[0] < X && a[1] < X) {
+            a[min_element(all(a)) - a.begin()] = X;
         }
     }
 }
