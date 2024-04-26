@@ -20,9 +20,11 @@ void solve() {
         cout << "NO\n";
         return;
     }
-
-    ll rem = 2023 / prod;
     
+    cout << 2023 / prod;
+    K--;
+
+    while (K) cout << " 1";
 }
 
 int main() {
