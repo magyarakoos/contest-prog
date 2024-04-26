@@ -19,7 +19,7 @@ void solve() {
             t.insert(i);
         }
         set<int> diff;
-        set_difference()
+        set_difference(all(t), all(s), )
     }
 }
 
