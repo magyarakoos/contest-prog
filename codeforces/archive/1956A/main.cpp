@@ -5,14 +5,12 @@ using namespace std;
 void solve() {
     int K, Q;
     cin >> K >> Q;
-    set<int> s;
-    while (K--) {
-        int A;
-        cin >> A;
-        s.insert(A);
-    }
+    vector<int> A(K);
+    for (int& x : A) cin >> x;
     while (Q--) {
-        cout << min(N, )
+        int N;
+        cin >> N;
+        cout << min(N, A[0] - 1) << " ";
     }
     cout << "\n";
 }
