@@ -12,19 +12,7 @@ void solve() {
         s.insert(A);
     }
     while (Q--) {
-        size_t N;
-        cin >> N;
-        while (1) {
-            set<int> t;
-            for (size_t i = 1; i <= N; i++) {
-                t.insert(i);
-            }
-            set<int> diff;
-            set_difference(all(t), all(s), inserter(diff, diff.begin()));
-            if (N == size(diff)) break;
-            N = size(diff);
-        }
-        cout << N << " ";
+        cout << min(N, )
     }
     cout << "\n";
 }
