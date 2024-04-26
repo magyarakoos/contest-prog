@@ -8,7 +8,7 @@ void solve() {
     while (K--) {
         int A;
         cin >> A;
-        bs |= b
+        bs |= (1 << (A - 1))
     }
 }
 
