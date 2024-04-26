@@ -9,14 +9,18 @@ void solve() {
     while (N--) {
         int X;
         cin >> X;
+
+        if (a[0] == X || a[1] == X) {
+            continue;
+        }
+
         if (a[0] < X && a[1] < X) {
             a[min_element(all(a)) - a.begin()] = X;
             res++;
             continue;
         }
-        if (a[0] == X || a[1] == X) {
-            continue;
-        }
+
+        
     }
 }
 
