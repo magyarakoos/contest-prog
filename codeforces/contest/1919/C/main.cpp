@@ -20,7 +20,7 @@ void solve() {
             continue;
         }
 
-        
+        if (a[0] > X)
     }
 }
 
