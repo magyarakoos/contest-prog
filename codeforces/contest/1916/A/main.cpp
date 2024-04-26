@@ -12,6 +12,8 @@ using point = array<int, 2>;
 void solve() {
     int N, K;
     cin >> N >> K;
+    vector<int> v(N);
+    for (int& x : v) cin >> x;
     
 }
 
