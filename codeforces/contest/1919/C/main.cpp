@@ -2,12 +2,15 @@
 using namespace std;
 
 void solve() {
-    int N;
-    cin >> N;
-    vector<int> v(N);
-    for (int& x : v) cin >> x;
     vector<array<int, 2>> v;
     v.push_back({INT_MAX, INT_MAX});
+    int N, res = 0;
+    cin >> N;
+    while (N--) {
+        int X;
+        cin >> X;
+        if ()
+    }
 }
 
 int main() {
