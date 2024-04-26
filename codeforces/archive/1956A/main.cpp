@@ -10,6 +10,10 @@ void solve() {
         cin >> A;
         bs |= 1 << (101 - A);
     }
+    while (Q--) {
+        cin >> K;
+    }
+    cout << bs << "\n";
 }
 
 int main() {
