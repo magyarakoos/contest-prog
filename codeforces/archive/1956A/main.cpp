@@ -10,7 +10,7 @@ void solve() {
         cin >> A;
         bitset<100> bs2(1);
         bs2 <<= 100 - A;
-        bs |= 
+        bs |= bs2;
     }
     while (Q--) {
         cin >> K;
