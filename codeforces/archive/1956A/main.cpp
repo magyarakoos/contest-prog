@@ -16,7 +16,7 @@ void solve() {
         cin >> N;
         while (1) {
             set<int> t;
-            for (int i = 1; i <= N; i++) {
+            for (size_t i = 1; i <= N; i++) {
                 t.insert(i);
             }
             set<int> diff;
