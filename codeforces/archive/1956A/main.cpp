@@ -18,7 +18,7 @@ void solve() {
         bitset<100> bs2;
         bs2.set();
         while (1) {
-            
+            if (bs2 == (bs))
         }
         cout << __popcount(bs2) << " ";
     }
