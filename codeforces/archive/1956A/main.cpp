@@ -21,10 +21,12 @@ void solve() {
             }
             set<int> diff;
             set_difference(all(t), all(s), inserter(diff, diff.begin()));
-            if (N == size(diff))
+            if (N == size(diff)) break;
             N = size(diff);
         }
+        cout << N << " ";
     }
+    cout << "\n";
 }
 
 int main() {
