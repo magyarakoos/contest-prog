@@ -11,16 +11,6 @@ int main() {
     cin >> N >> K >> L;
     int M = N - K;
 
-    if (M == 0) {
-        ll result = K;
-        for (int i = 2; i <= L; i++) {
-            result *= K - 1;
-            result %= MOD;
-        }
-        cout << result;
-        exit(0);
-    }
-
     vector<array<ll, 2>> dp(L + 1);
 
     dp[1] = {M, K};
@@ -33,12 +23,9 @@ int main() {
         dp[i][1] %= MOD;
     }
 
+    for (int i = 1; i <= L; i++) {
+        cout << dp[i][0] << " " << dp[i][1] << "\n";
+    }
+
     cout << ((dp[L][0] + dp[L][1]) % MOD);
 }
-/*
-a bc
-aa
-ab
-ac
-
-*/
