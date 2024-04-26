@@ -9,7 +9,8 @@ void solve() {
     while (Q--) {
         int N;
         cin >> N;
-        auto a = 
+        auto a = A;
+        vector<int> b =
     }
 }
 
