@@ -36,7 +36,9 @@ int main() {
         dp[i][0] = (dp[i - 1][0] + dp[i - 1][1]) * M;
         dp[i][0] %= MOD;
 
-        dp[i][1] = dp[i - 1][0] * M;
+        dp[i][1] = dp[i - 1][0] * K;
         dp[i][1] %= MOD;
     }
+
+    ll res = dp[L][0]
 }
