@@ -20,11 +20,12 @@ void solve() {
         cout << "NO\n";
         return;
     }
-    
-    cout << 2023 / prod;
+
+    cout << "YES\n" << 2023 / prod;
     K--;
 
-    while (K) cout << " 1";
+    while (K--) cout << " 1";
+    cout << "\n";
 }
 
 int main() {
