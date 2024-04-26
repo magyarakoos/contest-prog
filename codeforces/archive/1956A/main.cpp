@@ -4,13 +4,18 @@ using namespace std;
 void solve() {
     int K, Q;
     cin >> K >> Q;
+    set<int> s;
     while (K--) {
         int A;
         cin >> A;
+        s.insert(A);
     }
     while (Q--) {
         int N;
         cin >> N;
+        for (int i = 1; i <= N; i++) {
+            
+        }
     }
 }
 
