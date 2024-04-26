@@ -6,6 +6,8 @@ void solve() {
     cin >> N;
     vector<int> v(N);
     for (int& x : v) cin >> x;
+    vector<array<int, 2>> subS;
+    subS.push_back({})
 }
 
 int main() {
