@@ -12,9 +12,14 @@ using point = array<int, 2>;
 void solve() {
     int N, K;
     cin >> N >> K;
-    vector<ll> v(N);
-    for (ll& x : v) cin >> x;
-    
+    ll prod = 1;
+    while (N--) {
+        ll x;
+        cin >> x;
+        prod *= x;
+        cout << prod << "\n";
+    }
+
     if (!prod || prod > 2023 || 2023 % prod) {
         cout << "NO\n";
         return;
