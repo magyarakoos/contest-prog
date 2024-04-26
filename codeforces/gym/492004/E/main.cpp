@@ -9,7 +9,7 @@
 using namespace std;
 using ll = long long;
 
-constexpr int MOD = 1e9 + 7;
+constexpr ll MOD = 1e9 + 7;
 
 int main() {
     ios::sync_with_stdio(0), cin.tie(0);
@@ -34,6 +34,6 @@ int main() {
 
     for (int i = 2; i <= L; i++) {
         dp[i][0] = (dp[i - 1][0] + dp[i - 1][1]) * M;
-        
+        dp[i][0]
     }
 }
