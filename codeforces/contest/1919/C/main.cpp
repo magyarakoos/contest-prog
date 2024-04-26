@@ -2,6 +2,10 @@
 using namespace std;
 
 void solve() {
+    int N;
+    cin >> N;
+    vector<int> v(N);
+    for (int& x : v) cin >> x;
     
 }
 
