@@ -15,8 +15,9 @@ void solve() {
     while (Q--) {
         int N;
         cin >> N;
-        bitset<100> bs2 = bs;
-        bitset<100
+        bitset<100> bs2;
+        bs2.set();
+        
     }
 }
 
