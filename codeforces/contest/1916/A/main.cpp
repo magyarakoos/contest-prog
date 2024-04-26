@@ -22,6 +22,7 @@ void solve() {
     }
 
     ll rem = 2023 / prod;
+    
 }
 
 int main() {
