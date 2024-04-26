@@ -8,7 +8,8 @@ void solve() {
     while (K--) {
         int A;
         cin >> A;
-        bs |= (__int128)1 << (101 - A);
+        
+        bs |= 
     }
     while (Q--) {
         cin >> K;
