@@ -8,7 +8,8 @@ void solve() {
     while (K--) {
         int A;
         cin >> A;
-        
+        bitset<100> bs2(1);
+        bs2 <<= 100 - A;
         bs |= 
     }
     while (Q--) {
