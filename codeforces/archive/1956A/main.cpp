@@ -4,16 +4,13 @@ using namespace std;
 void solve() {
     int K, Q;
     cin >> K >> Q;
-    vector<bool> v(100);
     while (K--) {
         int A;
         cin >> A;
-        v[A - 1] = 1;
     }
     while (Q--) {
         int N;
         cin >> N;
-        set<
     }
 }
 
