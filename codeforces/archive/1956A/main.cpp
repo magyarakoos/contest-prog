@@ -13,9 +13,12 @@ void solve() {
     while (Q--) {
         int N;
         cin >> N;
+        set<int> t;
         for (int i = 1; i <= N; i++) {
-            
+            t.insert(i);
         }
+        set<int> diff;
+        set_difference()
     }
 }
 
