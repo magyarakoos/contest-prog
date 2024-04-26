@@ -21,7 +21,7 @@ void solve() {
         return;
     }
 
-    ll rem = prod /
+    ll rem = 2023 / prod;
 }
 
 int main() {
