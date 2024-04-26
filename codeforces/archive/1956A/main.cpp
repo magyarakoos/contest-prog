@@ -21,8 +21,9 @@ void solve() {
             }
             set<int> diff;
             set_difference(all(t), all(s), inserter(diff, diff.begin()));
+            if (N == size(diff))
+            N = size(diff);
         }
-
     }
 }
 
