@@ -15,7 +15,7 @@ void solve() {
     vector<ll> v(N);
     for (ll& x : v) cin >> x;
     ll prod = accumulate(all(v), 1, multiplies<ll>());
-    
+    cerr << prod << "\n";
     if (!prod || prod > 2023 || 2023 % prod) {
         cout << "NO\n";
         return;
