@@ -17,8 +17,12 @@ void solve() {
         cin >> N;
         bitset<100> bs2;
         bs2.set();
-        while (1)
+        while (1) {
+            
+        }
+        cout << __popcount(bs2) << " ";
     }
+    cout << "\n";
 }
 
 int main() {
