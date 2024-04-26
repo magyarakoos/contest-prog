@@ -24,6 +24,13 @@ void solve() {
             a[min_element(all(a)) - a.begin()] = X;
             continue;
         }
+
+        if (a[0] > X) {
+            a[0] = X;
+            continue;
+        }
+
+        if (a[])
     }
 }
 
