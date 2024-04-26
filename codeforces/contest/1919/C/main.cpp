@@ -24,8 +24,6 @@ void solve() {
             a[min_element(all(a)) - a.begin()] = X;
             continue;
         }
-
-        if ()
     }
 }
 
