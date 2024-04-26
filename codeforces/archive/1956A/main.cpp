@@ -8,21 +8,13 @@ void solve() {
     while (K--) {
         int A;
         cin >> A;
-        vector<bool> v2;
-        bs2 <<= 100 - A;
-        bs |= bs2;
+        v[A - 1] = 1;
     }
     while (Q--) {
         int N;
         cin >> N;
-        bitset<100> bs2;
-        bs2.set();
-        while (bs2 != (bs2 ^ bs)) {
-            if (bs2 == (bs2 ^ bs))
-        }
-        cout << __popcount(bs2) << " ";
+
     }
-    cout << "\n";
 }
 
 int main() {
