@@ -35,3 +35,10 @@ int main() {
 
     cout << ((dp[L][0] + dp[L][1]) % MOD);
 }
+/*
+a bc
+aa
+ab
+ac
+
+*/
