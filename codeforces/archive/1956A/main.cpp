@@ -12,7 +12,7 @@ void solve() {
         s.insert(A);
     }
     while (Q--) {
-        int N;
+        size_t N;
         cin >> N;
         while (1) {
             set<int> t;
