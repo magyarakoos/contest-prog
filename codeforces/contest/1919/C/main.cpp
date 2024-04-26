@@ -30,8 +30,14 @@ void solve() {
             continue;
         }
 
-        if (a[])
+        if (a[1] > X) {
+            a[1] = X;
+            continue;
+        }
+
+        assert(0);
     }
+    cout << res << "\n";
 }
 
 int main() {
