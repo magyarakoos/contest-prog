@@ -16,10 +16,12 @@ void solve() {
     for (ll& x : v) cin >> x;
     ll prod = accumulate(all(v), 1, multiplies<ll>());
     
-    if (prod > 2023 || ) {
+    if (prod > 2023 || 2023 % prod) {
         cout << "NO\n";
         return;
     }
+
+    ll rem = prod /
 }
 
 int main() {
