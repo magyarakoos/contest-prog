@@ -13,7 +13,7 @@ void solve() {
     while (Q--) {
         int N;
         cin >> N;
-        vector<bool> v(N, 1)
+        set<
     }
 }
 
