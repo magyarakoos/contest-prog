@@ -40,7 +40,5 @@ int main() {
         dp[i][1] %= MOD;
     }
 
-    ll res = dp[L][0] + dp[L][1];
-    res %= MOD;
-    cout << res;
+    cout << ((dp[L][0] + dp[L][1]) % MOD);
 }
