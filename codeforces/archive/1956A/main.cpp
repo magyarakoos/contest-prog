@@ -4,7 +4,13 @@ using namespace std;
 void solve() {
     int K, Q;
     cin >> K >> Q;
-    
+    vector<int> A(K);
+    for (int& x : A) cin >> x;
+    while (Q--) {
+        int N;
+        cin >> N;
+        auto a = 
+    }
 }
 
 int main() {
