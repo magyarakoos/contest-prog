@@ -14,7 +14,8 @@ void solve() {
     cin >> N >> K;
     vector<ll> v(N);
     for (ll& x : v) cin >> x;
-    ll prod = accumulate(all(v), multiplies<ll>());
+    ll prod = accumulate(all(v), 1, multiplies<ll>());
+    
 }
 
 int main() {
