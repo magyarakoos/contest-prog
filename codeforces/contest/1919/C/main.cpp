@@ -9,7 +9,9 @@ void solve() {
     while (N--) {
         int X;
         cin >> X;
-        if ()
+        if (v.back()[0] < X && v.back()[1] < X) {
+            
+        }
     }
 }
 
