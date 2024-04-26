@@ -17,7 +17,7 @@ void solve() {
         cin >> N;
         bitset<100> bs2;
         bs2.set();
-        
+        while (1)
     }
 }
 
