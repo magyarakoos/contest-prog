@@ -28,16 +28,11 @@ int main() {
         exit(0);
     }
 
-    vector<array<int, 2>> dp(L + 1);
+    vector<array<ll, 2>> dp(L + 1);
 
     dp[1] = {M, K};
 
     for (int i = 2; i <= L; i++) {
-        dp[i] = {
-            (int)(((ll)(dp[i - 1][0] + dp[i - 1][1]) * M) % MOD), // sum(dp[i - 1]) * M
-            (int)(((ll)(dp[i - 1][0] + dp[i - 1][1] - 1) * K) % MOD) // dp[i - 1][0] * (N - 1)
-        };
+        
     }
-
-    cout << (dp[L][0] + dp[L][1]) % MOD;
 }
