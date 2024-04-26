@@ -32,15 +32,6 @@ int main() {
 
     dp[1] = {M, K};
 
-    // dp[1]
-    // dp[2]
-
-    // aaa baa caa aba cba aca bca
-    
-    // a b c
-    // aa ba ca ab cb ac bc
-    // 
-
     for (int i = 2; i <= L; i++) {
         dp[i] = {
             (int)(((ll)(dp[i - 1][0] + dp[i - 1][1]) * M) % MOD), // sum(dp[i - 1]) * M
