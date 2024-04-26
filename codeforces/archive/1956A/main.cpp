@@ -13,9 +13,11 @@ void solve() {
         bs |= bs2;
     }
     while (Q--) {
-        cin >> K;
+        int N;
+        cin >> N;
+        bitset<100> bs2 = bs;
+        
     }
-    cout << bs << "\n";
 }
 
 int main() {
