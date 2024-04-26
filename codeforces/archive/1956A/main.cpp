@@ -4,13 +4,11 @@ using namespace std;
 void solve() {
     int K, Q;
     cin >> K >> Q;
-    bitset<100> A;
-    A |= 0;
-    while (Q--) {
-        int N;
-        cin >> N;
-        auto a = A;
-        vector<int> b =
+    bitset<100> bs;
+    while (K--) {
+        int A;
+        cin >> A;
+        bs |= b
     }
 }
 
