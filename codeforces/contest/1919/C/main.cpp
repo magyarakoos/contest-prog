@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define all(v) v.begin(), v.end()
 
 void solve() {
     vector<array<int, 2>> v;
@@ -10,7 +11,7 @@ void solve() {
         int X;
         cin >> X;
         if (v.back()[0] < X && v.back()[1] < X) {
-            
+            v[min_element(all(v.back())) - v.back().begin()]
         }
     }
 }
