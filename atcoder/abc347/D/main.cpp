@@ -12,7 +12,6 @@ void solve() {
     int a, b, c;
     ll C, X = 0, Y = 0;
     cin >> a >> b >> C;
-    c = __popcount(C);
     for (int i = 0; i < 60; i++) {
         if ((C >> i) & 1) {
             if (a > 0) {
@@ -34,7 +33,7 @@ void solve() {
             }
         }
     }
-    cout << (!a && !b ? X + " " + Y : "-1")
+    cout << (!a && !b ? X + " " + Y : "-1");
 }
 
 int main() {
