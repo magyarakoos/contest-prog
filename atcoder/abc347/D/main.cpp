@@ -23,12 +23,7 @@ void solve() {
             }
         }
         else {
-            if (a > 0 && b > 0) {
-                a--;
-                b--;
-                X |= 1ULL << i;
-                Y |= 1ULL << i;
-            }
+            
         }
     }
     if (!a && !b) cout << X << " " << Y;
