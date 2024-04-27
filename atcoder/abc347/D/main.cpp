@@ -15,8 +15,8 @@ void solve() {
     ll d = a + b - cpc;
     if (d >= 0 && d % 2 == 0) {
         ll X = 0, Y = 0;
-        for (ull i = 0; i < 60; i++) {
-            bool curr = (C >> i) & 1;
+        for (ll i = 0; i < 60; i++) {
+            ll curr = (C >> i) & 1;
             if (curr) {
                 cpc--;
                 if (a < b) {
