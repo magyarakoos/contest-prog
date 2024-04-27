@@ -13,7 +13,9 @@ void solve() {
     cin >> a >> b >> C;
     c = __popcount(C);
     for (int ca = 0; ca <= c; ca++) {
-        int cb = 
+        int cb = c - ca;
+
+        if (a - ca >= 0 )
     }
 }
 
