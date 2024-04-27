@@ -19,7 +19,7 @@ void solve() {
                 a--;
                 X |= 1ULL << i;
             }
-            el
+            
         }
     }
     cout << -1;
