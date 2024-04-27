@@ -9,13 +9,16 @@ using ll = unsigned long long;
 
 #define cases 0
 void solve() {
-    ll a, b, c, C;
+    int a, b, c;
+    ll C;
     cin >> a >> b >> C;
     c = __popcount(C);
     for (int ca = 0; ca <= c; ca++) {
         int cb = c - ca;
 
-        if (a - ca >= 0 )
+        if (a - ca >= 0 && b - cb >= 0 && a - ca == b - cb) {
+            
+        }
     }
 }
 
