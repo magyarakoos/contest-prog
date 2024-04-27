@@ -18,9 +18,14 @@ void solve() {
             if (a > 0) {
                 a--;
                 X |= 1ULL << i;
+            } else {
+                b--;
+                Y |= 1ULL << i;
             }
-            
         }
+    }
+    for (int i = 0; i < 60; i++) {
+        if ()
     }
     cout << -1;
 }
