@@ -24,8 +24,10 @@ void solve() {
 
                 if ((C >> i) & 1) {
 
-                } else {
-                    
+                } 
+                else if (tr > 0) {
+                        tr--;
+                    }
                 }
             }
 
