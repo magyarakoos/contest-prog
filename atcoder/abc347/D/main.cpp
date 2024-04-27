@@ -9,6 +9,8 @@ using ll = unsigned long long;
 
 #define cases 0
 void solve() {
+    ll a, b, C;
+    cin >> a >> b >> C;
     
 }
 
