@@ -11,7 +11,7 @@ using ll = unsigned long long;
 void solve() {
     ll a, b, C;
     cin >> a >> b >> C;
-    
+    ll cpc = __popcount(C);
 }
 
 int main() {
