@@ -14,7 +14,7 @@ void solve() {
     cin >> a >> b >> C;
     for (int i = 0; i < 60; i++) {
         if ((C >> i) & 1) {
-            if (a > 0) {
+            if (b < a) {
                 a--;
                 X |= 1ULL << i;
             } else {
