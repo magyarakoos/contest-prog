@@ -29,7 +29,7 @@ void solve() {
                     } else {
                         Y |= 1ULL << j;
                     }
-                } 
+                }
                 else if (tr > 0) {
                     tr--;
                     X |= 1ULL << j;
