@@ -28,7 +28,11 @@ void solve() {
                 }
             } else {
                 if (cnpc > 0) {
-                    
+                    cnpc--;
+                    X |= curr << i;
+                    Y |= curr << i;
+                } else {
+                    cnpc--;
                 }
             }
         }
