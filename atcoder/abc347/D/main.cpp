@@ -25,9 +25,9 @@ void solve() {
                 if ((C >> j) & 1) {
                     if (cb > 0) {
                         cb--;
-                        X |= 1ULL << j;
-                    } else {
                         Y |= 1ULL << j;
+                    } else {
+                        X |= 1ULL << j;
                     }
                 }
                 else if (tr > 0) {
