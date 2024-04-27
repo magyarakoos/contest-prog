@@ -13,22 +13,24 @@ void solve() {
     ll C;
     cin >> a >> b >> C;
     c = __popcount(C);
-    for (int ca = 0; ca <= c; ca++) {
-        int cb = c - ca;
+    for (int i = 0; i <= c; i++) {
+        int ca = i, cb = c - i;
 
-        if (a - ca >= 0 && b - cb >= 0 && a - ca == b - cb) {
+        if (a - i >= 0 && b - cb >= 0 && a - i == b - cb) {
 
-            int tr = a - ca;
+            int tr = a - i;
             ll X = 0, Y = 0;
-            for (int i = 0; i < 60; i++) {
+            for (int j = 0; j < 60; j++) {
 
-                if ((C >> i) & 1) {
-
+                if ((C >> j) & 1) {
+                    if (ca > 0) {
+                        ca--;
+                    }
                 } 
                 else if (tr > 0) {
                     tr--;
-                    X |= 1ULL << i;
-                    Y |= 1ULL << i;
+                    X |= 1ULL << j;
+                    Y |= 1ULL << j;
                 }
             }
 
