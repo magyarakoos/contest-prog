@@ -12,6 +12,9 @@ void solve() {
     ll a, b, c, C;
     cin >> a >> b >> C;
     c = __popcount(C);
+    for (int ca = 0; ca <= c; ca++) {
+        int cb = 
+    }
 }
 
 int main() {
