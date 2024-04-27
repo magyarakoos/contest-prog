@@ -9,40 +9,9 @@ using ll = unsigned long long;
 
 #define cases 0
 void solve() {
-    ll a, b, C;
+    ll a, b, c, C;
     cin >> a >> b >> C;
-    ll cpc = __popcount(C), cnpc = 60 - cpc;
-    int d = a + b - cpc;
-    if (d >= 0 && d % 2 == 0) {
-        ll X = 0, Y = 0;
-        for (ll i = 0; i < 60; i++) {
-            if (!a || !b) break;
-            if ((C >> i) & 1) {
-                cpc--;
-                if (a < b) {
-                    b--;
-                    Y |= 1ULL << i;
-                } else {
-                    a--;
-                    X |= 1ULL << i;
-                }
-            } else {
-                if (cnpc > 0) {
-                    cnpc--;
-                    a--;
-                    b--;
-                    X |= 1ULL << i;
-                    Y |= 1ULL << i;
-                } else {
-                    cnpc--;
-                }
-            }
-        }
-        cout << bitset<16>(X) << " " << bitset<16>(Y) << "\n";
-        cout << X << " " << Y << "\n";
-    } else {
-        cout << "-1\n";
-    }
+    c = __popcount(C);
 }
 
 int main() {
