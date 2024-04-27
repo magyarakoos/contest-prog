@@ -26,12 +26,9 @@ void solve() {
                     X |= 1ULL << i;
                 }
             } else {
-                if (cnpc > 0 ||) {
-                    cnpc--;
+                if (cnpc-- > 0 && a && b) {
                     X |= 1ULL << i;
                     Y |= 1ULL << i;
-                } else {
-                    cnpc--;
                 }
             }
         }
