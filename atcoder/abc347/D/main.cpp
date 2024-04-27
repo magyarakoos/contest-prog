@@ -26,7 +26,12 @@ void solve() {
     }
     for (int i = 0; i < 60; i++) {
         if (!((C >> i) & 1)) {
-            
+            if (a > 0 && b > 0) {
+                a--;
+                b--;
+                X |= 1ULL << i;
+                Y |= 1ULL << i;
+            }
         }
     }
     cout << -1;
