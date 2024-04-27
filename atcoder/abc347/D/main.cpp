@@ -11,7 +11,7 @@ using ll = unsigned long long;
 void solve() {
     ll a, b, C;
     cin >> a >> b >> C;
-    ll cpc = __popcount(C);
+    ll cpc = __popcount(C), cnpc = 60 - cpc;
     ll d = a + b - cpc;
     if (d >= 0 && d % 2 == 0) {
         ll X = 0, Y = 0;
@@ -27,7 +27,9 @@ void solve() {
                     X |= curr << i;
                 }
             } else {
-
+                if (cnpc > 0) {
+                    
+                }
             }
         }
     } else {
