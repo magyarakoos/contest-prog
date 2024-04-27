@@ -20,7 +20,8 @@ void solve() {
 
             ll X = 0, Y = 0;
             for (int i = 0; i < 60; i++) {
-                bool curr = (C )
+                bool curr = ;
+                if (curr)
             }
 
             return;
