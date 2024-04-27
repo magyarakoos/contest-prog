@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
+using ll = unsigned long long;
 
 #define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
@@ -12,12 +12,11 @@ void solve() {
     ll a, b, C;
     cin >> a >> b >> C;
     ll cpc = __popcount(C), cnpc = 60 - cpc;
-    ll d = a + b - cpc;
+    int d = a + b - cpc;
     if (d >= 0 && d % 2 == 0) {
         ll X = 0, Y = 0;
         for (ll i = 0; i < 60; i++) {
-            ll curr = (C >> i) & 1;
-            if (curr) {
+            if ((C >> i) & 1) {
                 cpc--;
                 if (a < b) {
                     b--;
@@ -27,7 +26,7 @@ void solve() {
                     X |= 1ULL << i;
                 }
             } else {
-                if (cnpc > 0) {
+                if (cnpc-- > 0) {
                     X |= 1ULL << i;
                     Y |= 1ULL << i;
                 }
