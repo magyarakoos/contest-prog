@@ -16,7 +16,7 @@ void solve() {
     if (d >= 0 && d % 2 == 0) {
         ll X = 0, Y = 0;
         for (int i = 0; i < 60; i++) {
-            
+            bool curr = ()
         }
     } else {
         cout << "-1\n";
