@@ -21,18 +21,19 @@ void solve() {
                 cpc--;
                 if (a < b) {
                     b--;
-                    Y |= curr << i;
+                    Y |= 1ULL << i;
                 } else {
                     a--;
-                    X |= curr << i;
+                    X |= 1ULL << i;
                 }
             } else {
-                if (cnpc-- > 0) {
-                    X |= curr << i;
-                    Y |= curr << i;
+                if (cnpc > 0) {
+                    X |= 1ULL << i;
+                    Y |= 1ULL << i;
                 }
             }
         }
+        cout << bitset<16>(X) << " " << bitset<16>(Y) << "\n";
         cout << X << " " << Y << "\n";
     } else {
         cout << "-1\n";
