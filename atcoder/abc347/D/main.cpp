@@ -22,9 +22,7 @@ void solve() {
                 Y |= 1ULL << i;
             }
         }
-    }
-    for (int i = 0; i < 60; i++) {
-        if (!((C >> i) & 1)) {
+        else {
             if (a > 0 && b > 0) {
                 a--;
                 b--;
@@ -33,6 +31,7 @@ void solve() {
             }
         }
     }
+    
     cout << (!a && !b ? X + " " + Y : "-1");
 }
 
