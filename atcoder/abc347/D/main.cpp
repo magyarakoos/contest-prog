@@ -27,15 +27,13 @@ void solve() {
                     X |= curr << i;
                 }
             } else {
-                if (cnpc > 0) {
-                    cnpc--;
+                if (cnpc-- > 0) {
                     X |= curr << i;
                     Y |= curr << i;
-                } else {
-                    cnpc--;
                 }
             }
         }
+        cout << X << " " << Y << "\n";
     } else {
         cout << "-1\n";
     }
