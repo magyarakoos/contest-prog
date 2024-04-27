@@ -34,7 +34,7 @@ void solve() {
             }
         }
     }
-    cout << -1;
+    cout << (!a && !b ? X + " " + Y)
 }
 
 int main() {
