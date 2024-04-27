@@ -31,9 +31,9 @@ void solve() {
             }
         }
     }
+    if (!a && !b) cout << X << " " << Y;
+    else cout << -1;
     
-    cout << (!a && !b ? X + " " + Y : "-1");
-}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
