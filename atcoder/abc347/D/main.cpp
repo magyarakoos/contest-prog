@@ -12,6 +12,10 @@ void solve() {
     ll a, b, C;
     cin >> a >> b >> C;
     ll cpc = __popcount(C);
+    ll d = a + b - cpc;
+    if (d >= 0 && d % 2 == 0) {
+        cout <<
+    }
 }
 
 int main() {
