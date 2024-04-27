@@ -17,8 +17,9 @@ void solve() {
         if ((C >> i) & 1) {
             if (a > 0) {
                 a--;
-                
+                X |= 1ULL << i;
             }
+            el
         }
     }
     cout << -1;
