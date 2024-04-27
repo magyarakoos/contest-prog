@@ -17,9 +17,13 @@ void solve() {
         int cb = c - ca;
 
         if (a - ca >= 0 && b - cb >= 0 && a - ca == b - cb) {
+
             
+
+            return;
         }
     }
+    cout << -1;
 }
 
 int main() {
