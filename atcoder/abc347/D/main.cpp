@@ -18,9 +18,16 @@ void solve() {
         for (int i = 0; i < 60; i++) {
             bool curr = (C >> i) & 1;
             if (curr) {
-                
+                cpc--;
+                if (a < b) {
+                    b--;
+                    Y |= curr << i;
+                } else {
+                    a--;
+                    
+                }
             } else {
-                
+
             }
         }
     } else {
