@@ -16,6 +16,7 @@ void solve() {
     if (d >= 0 && d % 2 == 0) {
         ll X = 0, Y = 0;
         for (ll i = 0; i < 60; i++) {
+            if ()
             if ((C >> i) & 1) {
                 cpc--;
                 if (a < b) {
@@ -26,9 +27,12 @@ void solve() {
                     X |= 1ULL << i;
                 }
             } else {
-                if (cnpc-- > 0 && a && b) {
+                if (cnpc > 0) {
+                    cnpc--;
                     X |= 1ULL << i;
                     Y |= 1ULL << i;
+                } else {
+                    cnpc--;
                 }
             }
         }
