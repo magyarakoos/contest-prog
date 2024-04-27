@@ -13,18 +13,21 @@ void solve() {
     ll C;
     cin >> a >> b >> C;
     c = __popcount(C);
-    for (int i = 0; i <= c; i++) {
-        int ca = i, cb = c - i;
+    for (int ca = 0; ca <= c; ca++) {
+        int cb = c - ca;
 
-        if (a - i >= 0 && b - cb >= 0 && a - i == b - cb) {
+        if (a - ca >= 0 && b - cb >= 0 && a - ca == b - cb) {
 
-            int tr = a - i;
+            int tr = a - ca;
             ll X = 0, Y = 0;
             for (int j = 0; j < 60; j++) {
 
                 if ((C >> j) & 1) {
-                    if (ca > 0) {
-                        ca--;
+                    if (cb > 0) {
+                        cb--;
+                        X |= 1ULL << j;
+                    } else {
+                        Y |= 1ULL << j;
                     }
                 } 
                 else if (tr > 0) {
