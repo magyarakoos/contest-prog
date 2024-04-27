@@ -25,7 +25,9 @@ void solve() {
         }
     }
     for (int i = 0; i < 60; i++) {
-        if ()
+        if (!((C >> i) & 1)) {
+            
+        }
     }
     cout << -1;
 }
