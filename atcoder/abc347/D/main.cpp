@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = unsigned long long;
+using ll = long long;
 
 #define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
@@ -15,7 +15,7 @@ void solve() {
     ll d = a + b - cpc;
     if (d >= 0 && d % 2 == 0) {
         ll X = 0, Y = 0;
-        for (int i = 0; i < 60; i++) {
+        for (ull i = 0; i < 60; i++) {
             bool curr = (C >> i) & 1;
             if (curr) {
                 cpc--;
