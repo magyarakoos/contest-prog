@@ -30,7 +30,7 @@ void solve() {
                         X |= 1ULL << j;
                     }
                 }
-                else if (tr-- > 0) {
+                else if (tr > 0) {
                     tr--;
                     X |= 1ULL << j;
                     Y |= 1ULL << j;
