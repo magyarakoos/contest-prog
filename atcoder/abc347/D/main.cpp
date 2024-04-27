@@ -18,7 +18,10 @@ void solve() {
 
         if (a - ca >= 0 && b - cb >= 0 && a - ca == b - cb) {
 
-            
+            ll X = 0, Y = 0;
+            for (int i = 0; i < 60; i++) {
+                bool curr = (C )
+            }
 
             return;
         }
