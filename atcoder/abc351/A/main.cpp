@@ -2,6 +2,11 @@
 using namespace std;
 using ll = long long;
 
+#define sz(v) (int)v.size()
+#define all(v) v.begin(), v.end()
+#define smin(x, y) x = min(x, y)
+#define smax(x, y) x = max(x, y)
+
 #define cases 0
 void solve() {
 
