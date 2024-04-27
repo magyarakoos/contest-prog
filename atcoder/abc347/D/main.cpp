@@ -26,15 +26,15 @@ void solve() {
 
                 } 
                 else if (tr > 0) {
-                        tr--;
-                    }
+                    tr--;
+                    X |= 1ULL << i;
+                    Y |= 1ULL << i;
                 }
             }
 
             return;
         }
     }
-    cout << -1;
 }
 
 int main() {
