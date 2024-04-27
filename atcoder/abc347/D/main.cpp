@@ -24,7 +24,7 @@ void solve() {
         }
     }
     for (int i = 0; i < 60; i++) {
-        if (a > 0 && b > 0) {
+        if (!((C >> i) & 1) && a > 0 && b > 0) {
             a--;
             b--;
             X |= 1ULL << i;
