@@ -9,7 +9,7 @@ using ll = unsigned long long;
 
 #define cases 0
 void solve() {
-    int a, b, c;
+    int a, b;
     ll C, X = 0, Y = 0;
     cin >> a >> b >> C;
     for (int i = 0; i < 60; i++) {
