@@ -24,7 +24,7 @@ void solve() {
                     Y |= curr << i;
                 } else {
                     a--;
-                    
+                    X |= curr << i;
                 }
             } else {
 
