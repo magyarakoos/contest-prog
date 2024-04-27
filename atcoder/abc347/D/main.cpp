@@ -10,11 +10,16 @@ using ll = unsigned long long;
 #define cases 0
 void solve() {
     int a, b, c;
-    ll C;
+    ll C, X = 0, Y = 0;
     cin >> a >> b >> C;
     c = __popcount(C);
     for (int i = 0; i < 60; i++) {
-        if ()
+        if ((C >> i) & 1) {
+            if (a > 0) {
+                a--;
+                
+            }
+        }
     }
     cout << -1;
 }
