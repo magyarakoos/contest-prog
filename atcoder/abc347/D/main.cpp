@@ -14,7 +14,8 @@ void solve() {
     ll cpc = __popcount(C);
     ll d = a + b - cpc;
     if (d >= 0 && d % 2 == 0) {
-        cout << "YES\n";
+        ll X = 0, Y = 0;
+        
     } else {
         cout << "-1\n";
     }
