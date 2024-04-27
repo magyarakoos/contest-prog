@@ -36,7 +36,7 @@ void solve() {
                     Y |= 1ULL << j;
                 }
             }
-            cerr << bitset<60>(X) << "\n" << bitset<60>(Y) << "\n";
+            
             cout << X << " " << Y << "\n";
             return;
         }
