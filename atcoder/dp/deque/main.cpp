@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = llong;
 
 int N;
 vector<int> a;
-map<array<int, 3>, array<int, 2>> m;
+map<array<int, 3>, ll> m;
 
-array<int, 2> solve(int l, int r, int turn) {
+ll solve(int l, int r, int turn) {
     if (m.count({l, r, turn})) return m[{l, r, turn}];
 
     array<int, 2> res {0, 0};
