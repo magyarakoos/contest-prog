@@ -7,9 +7,8 @@ int N, W, v[100], w[100];
 int m[101][MAXN + 1];
 
 ll solve(int i, ll weight) {
-    auto [i, weight] = state;
 
-    if (m.count(state)) return m[state];
+    if (m[i][weight]) return m[i][weight];
     if (i == N) return 0;
     // don't take
     ll res = solve({i + 1, weight});
