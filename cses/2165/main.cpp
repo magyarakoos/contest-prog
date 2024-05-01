@@ -7,9 +7,15 @@
 using namespace std;
 using ll = long long;
 
-vector<int> a, b;
+vector<array<int, 2>> res;
 
+void put(int a, int b) {
+    res.push_back({a, b});
+}
 
+void hanoi() {
+
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -17,8 +23,6 @@ int main() {
     int N;
     cin >> N;
 
-    cout << sz(a) << "\n";
-    for (int i = 0; i < sz(a); i++) {
-        cout << a[i] << " " << b[i] << "\n";
-    }
+    cout << sz(res) << "\n";
+    for (auto [a, b] : res) cout << a << " " << b << "\n";
 }
