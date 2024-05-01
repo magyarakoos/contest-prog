@@ -25,7 +25,7 @@ int main() {
             placeS[i] = kidS[i][bit];
             countS[placeS[i] - 1]++;
 
-            if (++countS[placeS[i] - 1] > capS[placeS[i] - 1]) {
+            if (countS[placeS[i] - 1] > capS[placeS[i] - 1]) {
                 valid = 0;
                 for (int p : countS) cout << p << " ";
                 cout << "\n";
