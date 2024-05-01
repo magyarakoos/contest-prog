@@ -25,15 +25,9 @@ int main() {
             }
             else {
                 for (int m = l; m < r; m++) {
-                    smin(dp[l][r], dp[l][m] + dp[m + 1][r] + ps[r - 1] - ps[l]);
+                    smin(dp[l][r], dp[l][m] + dp[m + 1][r] + ps[r + 1] - ps[l]);
                 }
             }
-        }
-    }
-
-    for (int i = 0; i < N; i++) {
-        for (int j = i; j < N; j++) {
-            cerr << i << " " << j << " = " << dp[i][j] << "\n";
         }
     }
 
