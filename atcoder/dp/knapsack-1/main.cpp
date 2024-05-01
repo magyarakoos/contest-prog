@@ -4,12 +4,12 @@ using ll = long long;
 const int MAXN = 1e5;
 
 int N, W, v[100], w[100];
-map<pair<int, ll>, ll> m;
-int m[101][]
+int m[101][MAXN + 1];
 
-ll solve(pair<int, ll> state) {
-    if (m.count(state)) return m[state];
+ll solve(int i, ll weight) {
     auto [i, weight] = state;
+
+    if (m.count(state)) return m[state];
     if (i == N) return 0;
     // don't take
     ll res = solve({i + 1, weight});
