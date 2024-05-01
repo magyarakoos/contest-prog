@@ -9,7 +9,8 @@ using ll = long long;
 
 #define cases 1
 void solve() {
-    
+    ll N, K;
+    cin >> N >> K;
 }
 
 int main() {
