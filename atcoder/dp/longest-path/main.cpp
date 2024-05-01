@@ -8,7 +8,7 @@ vector<int> indegS, dp;
 void dfs(int u) {
     for (int v : g[u]) {
         dp[v] = max(dp[v], dp[u] + 1);
-        indegS[v]--;
+        if (!--indegS[v]) dfs(v);
     }
 }
 
@@ -33,5 +33,6 @@ int main() {
         g[0].push_back(u);
     }
 
-
+    dfs(0);
+    cout << *max_element(dp.begin(), dp.end()) - 1;
 }
