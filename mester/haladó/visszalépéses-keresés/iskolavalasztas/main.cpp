@@ -11,7 +11,6 @@ int main() {
     
     for (int mask = 0; mask < (1 << N); mask++) {
         cout << bitset<9>(mask) << "\n";
-        continue;
         bool valid = 1;
         vector<int> countS(M), placeS(N);
         for (int i = 0; i < N; i++) {
