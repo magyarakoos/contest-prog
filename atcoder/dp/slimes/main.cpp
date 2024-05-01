@@ -31,5 +31,11 @@ int main() {
         }
     }
 
+    for (int i = 0; i < N; i++) {
+        for (int j = i; j < N; j++) {
+            cerr << i << " " << j << " = " << dp[i][j] << "\n";
+        }
+    }
+
     cout << dp[0][N - 1];
 }
