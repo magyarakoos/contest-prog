@@ -14,7 +14,7 @@ int main() {
 
     int maxv = accumulate(v.begin(), v.end(), 0);
 
-    vector dp(N + 1, vector<ll>(maxv + 1, -1));
+    vector dp(N + 1, vector<ll>(maxv + 1, INF));
 
     dp[0][0] = 0;
 
@@ -24,7 +24,7 @@ int main() {
             if (j - v[i] >= 0) {
                 auto& choose = dp[i - 1][j - v[i]];
                 if (choose != -1 && choose + w[i] <= W) {
-                    dp[i][j] = min(dp[i][j], choose);
+                    dp[i][j] = min(dp[i][j], choose + w[i]);
                 }
             }
         }
