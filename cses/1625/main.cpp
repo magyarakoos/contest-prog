@@ -27,15 +27,18 @@ void backtrack(int i, int j, int steps) {
             continue;
         }
         grid[ni][nj] = 1;
-        s += "DURL"[k];
+        s[steps] = "DURL"[k];
         backtrack(ni, nj, steps + 1);
-        s.pop_back();
         grid[ni][nj] = 0;
     }
 }
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
+    
+    cin >> t;
+    s.assign(sz(t), '?');
+
     grid[0][0] = 1;
     backtrack(0, 0, 0);
     cout << result;
