@@ -9,7 +9,14 @@ using ll = long long;
 
 #define cases 1
 void solve() {
-
+    int N, C, D;
+    cin >> N >> C >> D;
+    set<int> s;
+    for (int i = 0; i < N * N; i++) {
+        int X;
+        cin >> X;
+        s.insert(X);
+    }
 }   
 
 int main() {
