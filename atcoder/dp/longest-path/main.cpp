@@ -5,6 +5,12 @@ const int INF = 1e9;
 vector<vector<int>> g;
 vector<int> indegS, dp;
 
+void dfs(int u) {
+    for (int v : g[u]) {
+        dp[v] = max(dp[v], dp[u] + 1);
+    }
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
