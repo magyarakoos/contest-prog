@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 int main() {
-    int N;
+    ll N;
     cin >> N;
     while (1) {
         cout << N << " ";
