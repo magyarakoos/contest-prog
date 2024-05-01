@@ -22,12 +22,14 @@ void backtrack(int i, int j, int steps) {
         return;
     }
     for (int k = 0; k < 4; k++) {
+        char step = "DURL"[k];
+
         int ni = i + di[k], nj = j + dj[k];
         if (ni < 0 || nj < 0 || ni >= SZ || nj >= SZ || grid[ni][nj]) {
             continue;
         }
         grid[ni][nj] = 1;
-        s[steps] = "DURL"[k];
+        s[steps] = step;
         backtrack(ni, nj, steps + 1);
         grid[ni][nj] = 0;
     }
