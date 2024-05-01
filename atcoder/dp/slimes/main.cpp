@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
+#define smin(x, y) x = min(x, y)
 
 const ll INF = 1e18;
 
@@ -21,6 +22,11 @@ int main() {
             }
             else if (l + 1 == r) {
                 dp[l][r] = v[l] + v[r];
+            }
+            else {
+                for (int m = l; m < r; m++) {
+                    smin(dp[l][r], dp[l][m] + dp[m + 1][r]);
+                }
             }
         }
     }
