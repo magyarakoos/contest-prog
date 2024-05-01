@@ -13,7 +13,10 @@ void solve() {
     cin >> N >> K;
     vector<int> v(N);
     for (int& x : v) cin >> x;
-    
+    int l = 0, r = N - 1;
+    while (l < r) {
+        
+    }
 }
 
 int main() {
