@@ -6,6 +6,7 @@ vector<int> indegS, dp;
 vector<bool> vis;
 
 void dfs(int u) {
+    vis[u] = 1;
     for (int v : g[u]) {
         dp[v] = max(dp[v], dp[u] + 1);
         if (!--indegS[v]) dfs(v);
@@ -22,7 +23,7 @@ int main() {
     indegS.resize(N + 1);
     dp.assign(N + 1, 0);
     vis.resize(N + 1);
-    
+
     while (M--) {
         int U, V;
         cin >> U >> V;
@@ -30,11 +31,11 @@ int main() {
         indegS[V]++;
     }
 
-    // magic starting node
     for (int u = 1; u <= N; u++) {
-        g[0].push_back(u);
+        if (!vis[u] && !indegS[u]) {
+            dfs(u);
+        }
     }
 
-    dfs(0);
-    cout << *max_element(dp.begin() + 1, dp.end());
+    cout << *max_element(dp.begin(), dp.end());
 }
