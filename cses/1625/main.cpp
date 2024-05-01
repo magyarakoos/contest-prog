@@ -11,16 +11,21 @@ int result;
 string s, t;
 bool grid[4][4];
 
+const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
+
 void backtrack(int i, int j, int steps) {
     if (i == 3 && j == 0 && steps == 48) {
         result++;
         return;
     }
+    for (int k = 0; k < 4; k++) {
+        int ni = i + di[k], nj = j + dj[k];
+    }
 }
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    cin >> s;
-    t.assign(sz(s), '?');
+    //cin >> s;
+    //t.assign(sz(s), '?');
     backtrack(0, 0, 0);
 }
