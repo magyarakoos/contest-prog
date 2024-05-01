@@ -10,7 +10,7 @@ using ll = long long;
 const int SZ = 4;
 
 int result;
-string s, t;
+string s;
 bool grid[SZ][SZ];
 
 const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
@@ -18,6 +18,7 @@ const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
 void backtrack(int i, int j, int steps) {
     if (i == SZ - 1 && j == 0 && steps == SZ * SZ - 1) {
         result++;
+        cout << s << "\n";
         return;
     }
     for (int k = 0; k < 4; k++) {
@@ -26,6 +27,7 @@ void backtrack(int i, int j, int steps) {
             continue;
         }
         grid[ni][nj] = 1;
+        s += "DURL"[k];
         backtrack(ni, nj, steps + 1);
         grid[ni][nj] = 0;
     }
@@ -33,8 +35,6 @@ void backtrack(int i, int j, int steps) {
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    //cin >> s;
-    //t.assign(sz(s), '?');
     backtrack(0, 0, 0);
     cout << result;
 }
