@@ -7,13 +7,20 @@ const ll MAXN = 1e5, INF = 1e18;
 int N, W;
 map<pair<int, ll>, ll> m;
 
+int v[101], w[MAXN + 1];
+
 ll solve(pair<int, ll> state) {
     if (m.count(state)) return m[state];
 
     auto [i, weight] = state;
-    if (i == N) return weight;
+    if (i + 1 == N) return weight;
 
-    
+    ll res = 0;
+
+    // take
+    if (weight + v[i + 1] <= W) {
+
+    }
 }
 
 int main() {
