@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+const int MAXV = 1e5;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -10,5 +11,5 @@ int main() {
         cin >> w[i] >> v[i];
     }
 
-    
+
 }
