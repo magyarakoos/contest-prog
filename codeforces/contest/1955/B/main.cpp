@@ -11,7 +11,7 @@ using ll = long long;
 void solve() {
     int N, C, D;
     cin >> N >> C >> D;
-    set<int> s;
+    multiset<int> s;
     for (int i = 0; i < N * N; i++) {
         int X;
         cin >> X;
@@ -24,6 +24,7 @@ void solve() {
             if (s.count(start + i * C + j * D)) {
                 s.erase(start + i * C + j * D);
             } else {
+                cout << i << " " << j << " " << start + i * C + j * D << "\n";
                 cout << "NO\n";
                 return;
             }
