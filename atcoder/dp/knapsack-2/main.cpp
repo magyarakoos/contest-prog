@@ -24,4 +24,11 @@ int main() {
             }
         }
     }
+
+    for (int j = maxv; j >= 0; j--) {
+        if (dp[j] <= W) {
+            cout << j;
+            exit(0);
+        }
+    }
 }
