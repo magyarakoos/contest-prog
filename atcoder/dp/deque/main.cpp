@@ -9,7 +9,9 @@ array<int, 2> solve(int l, int r, int turn) {
     if (m.count({l, r, turn})) return m[{l, r, turn}];
 
     if (l == r) {
-
+        array<int, 2> res {0, 0};
+        res[turn] += a[l];
+        return res;
     }
 }
 
