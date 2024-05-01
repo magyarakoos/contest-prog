@@ -13,7 +13,7 @@ int main() {
     
     g.resize(N + 1);
     indegS.resize(N + 1);
-    dp
+    dp.assign(N + 1, INF);
     while (M--) {
         int U, V;
         cin >> U >> V;
