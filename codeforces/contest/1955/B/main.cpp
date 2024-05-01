@@ -17,17 +17,17 @@ void solve() {
         cin >> X;
         s.insert(X);
     }
-    vector grid(N, vector<int>(N));
-    grid[0][0] = *s.begin();
-
+    int start = *s.begin();
+    cout << start << "\n";
+    return;
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
 
-            if (s.count(grid[0][0] + i * C + j + D)) {
-                s.erase(grid[0][0] + i * C + j + D);
+            if (s.count(start + i * C + j + D)) {
+                s.erase(start + i * C + j + D);
             } else {
-                cout << "NO\n";
-                return;
+                //cout << "NO\n";
+                //return;
             }
         }
     }
