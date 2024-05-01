@@ -15,6 +15,6 @@ int main() {
     int N;
     cin >> N;
     hanoi(1, 3, N);
-    cout << sz(res) << "\n";
+    cout << res.size() << "\n";
     for (auto [a, b] : res) cout << a << " " << b << "\n";
 }
