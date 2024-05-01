@@ -37,12 +37,17 @@ void backtrack(int i, int j, int steps, int prv_i, int prv_j) {
 
     int nk;
     for (int k = 0; k < 4; k++) {
+        int ni = i + di[k], nj = j + dj[k];
+
+        if (ni == prv_i && nj == prv_j) {
+            nk = k;
+        }
+        
         char step = "DURL"[k];
         if (t[steps] != '?' && t[steps] != step) {
             continue;
         }
 
-        int ni = i + di[k], nj = j + dj[k];
         if (ni < 0 || nj < 0 || ni >= SZ || nj >= SZ || grid[ni][nj]) {
             continue;
         }
