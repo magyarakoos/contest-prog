@@ -3,7 +3,7 @@ using namespace std;
 using ll = int64_t;
 
 int N;
-vector<int> a;
+vector<int> v;
 map<array<int, 3>, ll> m;
 
 ll solve(int l, int r, int turn) {
@@ -12,15 +12,19 @@ ll solve(int l, int r, int turn) {
     ll res = 0;
 
     if (l == r) {
-        res += a[l] * (turn ^ 1);
+        res += v[l] * (turn ^ 1);
     }
     else if (l < r) {
-        auto a = solve(l + 1, r, turn ^ 1),
-             b = solve(l, r - 1, turn ^ 1);
+        ll a = solve(l + 1, r, turn ^ 1),
+           b = solve(l, r - 1, turn ^ 1);
         if (turn) {
-
+            res = min(a, b);
         } else {
-
+            if (a < b) {
+                res = a + v[l];
+            } else {
+                res = b + v[r];
+            }
         }
     }
 
@@ -32,6 +36,6 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     cin >> N;
-    a.resize(N);
-    for (int i = 0; i < N; i++) cin >> a[i];
+    v.resize(N);
+    for (int i = 0; i < N; i++) cin >> v[i];
 }
