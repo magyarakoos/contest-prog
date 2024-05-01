@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> schoolS, capS;
-
 int main() {
     int N, M;
     cin >> N >> M;
-    schoolS.resize(M);
-    capS.resize(M);
-    for (int i = 0; i < M; i++) {
-        cin >> capS[i];
-    }
+    vector<array<int, 2>> kidS(N);
+    vector<int> capS(M);
+    for (auto& [a, b] : kidS) cin >> a >> b;
+    for (int& x : capS) cin >> x;
+    cout << "YAP;";
 }
