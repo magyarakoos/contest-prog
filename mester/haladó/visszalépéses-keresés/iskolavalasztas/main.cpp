@@ -12,7 +12,7 @@ int main() {
     for (int mask = 0; mask < (1 << N); mask++) {
         cout << bitset<9>(mask) << "\n";
         bool valid = 1;
-        vector<int> countS(M + 1), placeS(N);
+        vector<int> countS(M + 1), placeS(N + 1);
         for (int i = 0; i < N; i++) {
             bool bit = (mask << i) & 1;
 
