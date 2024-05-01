@@ -13,7 +13,8 @@ void put(int a, int b) {
     res.push_back({a, b});
 }
 
-void hanoi() {
+void hanoi(int a, int b, int cnt) {
+    if (cnt == 0) return;
 
 }
 
@@ -22,6 +23,7 @@ int main() {
 
     int N;
     cin >> N;
+    hanoi(1, 3, N);
 
     cout << sz(res) << "\n";
     for (auto [a, b] : res) cout << a << " " << b << "\n";
