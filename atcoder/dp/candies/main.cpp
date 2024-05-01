@@ -26,7 +26,8 @@ int main() {
         }
     }
 
-    for (int i = 1; i <= N; i++) {
-
+    for (int i = 1; i <= K; i++) {
+        dp[i] += dp[i - 1];
     }
+    cout << dp[K];
 }
