@@ -30,6 +30,7 @@ int main() {
         
         if (valid) {
             for (int p : placeS) cout << p << " ";
+            cout << "\n";
             exit(0);
         }
     }
