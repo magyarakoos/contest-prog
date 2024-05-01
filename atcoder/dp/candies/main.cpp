@@ -25,13 +25,13 @@ int main() {
         int A;
         cin >> A;
         vector v(K + 1, 0LL);
-        for (int k = K; k >= 0; k--) {
-            int L = k + 1;
-            int R = min(A, K - k);
+        for (int i = K; i >= 0; i--) {
+            int L = i + 1;
+            int R = i + min(A, K - i);
             if (L <= R) {
-                madd(v[L], dp[k]);
+                madd(v[L], dp[i]);
                 if (R + 1 <= K) {
-                    msub(v[R + 1], dp[k]);
+                    msub(v[R + 1], dp[i]);
                 }
             }
         }
