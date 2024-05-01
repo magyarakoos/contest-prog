@@ -3,12 +3,14 @@ using namespace std;
 
 int N;
 vector<int> a;
-map<array<int, 3>, bool> m;
+map<array<int, 3>, array<int, 2>> m;
 
-bool solve(int l, int r, int turn) {
+array<int, 2> solve(int l, int r, int turn) {
     if (m.count({l, r, turn})) return m[{l, r, turn}];
 
-    
+    if (l == r) {
+
+    }
 }
 
 int main() {
