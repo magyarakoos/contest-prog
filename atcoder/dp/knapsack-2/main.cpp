@@ -14,13 +14,14 @@ int main() {
 
     int maxv = accumulate(v.begin(), v.end(), 0);
 
-    vector dp(N + 1, vector<ll>(maxv + 1, INF));
+    vector dp(N + 1, vector<ll>(maxv + 1, -1));
 
     dp[0][0] = 0;
 
     for (int i = 1; i <= N; i++) {
         for (int j = 0; j <= maxv; j++) {
-            
+            dp[i][j] = dp[i - 1][j];
+            if (j - v[i])
         }
     }
 }
