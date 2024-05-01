@@ -36,6 +36,7 @@ void backtrack(int i, int j, int steps) {
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
+    grid[0][0] = 1
     backtrack(0, 0, 0);
     cout << result;
 }
