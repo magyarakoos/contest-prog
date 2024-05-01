@@ -8,11 +8,23 @@ map<array<int, 3>, array<int, 2>> m;
 array<int, 2> solve(int l, int r, int turn) {
     if (m.count({l, r, turn})) return m[{l, r, turn}];
 
+    array<int, 2> res {0, 0};
+
     if (l == r) {
-        array<int, 2> res {0, 0};
         res[turn] += a[l];
-        return res;
     }
+    else if (l < r) {
+        auto a = solve(l + 1, r, turn ^ 1),
+             b = solve(l, r - 1, turn ^ 1);
+        if (a[turn] - a[turn ^ 1] > b[turn] - b[turn ^ 1]) {
+            res = a;
+        } else {
+            res = b;
+        }
+    }
+
+    m[{l, r, turn}] = res;
+    return res;
 }
 
 int main() {
