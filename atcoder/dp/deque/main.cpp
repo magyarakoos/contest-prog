@@ -9,10 +9,12 @@ struct State {
 
 int N;
 vector<int> a;
-map<
+map<State, bool> m;
 
-bool solve(int l, int r, bool turn) {
+bool solve(State s) {
+    if (m.count(s)) return m[s];
 
+    
 }
 
 int main() {
