@@ -20,11 +20,10 @@ void solve() {
     int start = *s.begin();
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-
-            if (s.count(start + i * C + j * D)) {
-                s.erase(start + i * C + j * D);
+            auto it = s.find(start + i * C + j * D);
+            if (it != s.end()) {
+                s.erase(it);
             } else {
-                cout << i << " " << j << " " << start + i * C + j * D << "\n";
                 cout << "NO\n";
                 return;
             }
