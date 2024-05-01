@@ -26,5 +26,4 @@ int main() {
     }
 
     cout << dp[0][N - 1];
-    cout << "\n" << ((double)('M' - 26) / 26);
 }
