@@ -5,25 +5,21 @@ int main() {
     int N, M;
     cin >> N >> M;
     vector<array<int, 2>> kidS(N);
-    vector<int> capS(M);
+    vector<int> capS(M + 1);
     for (auto& [a, b] : kidS) cin >> a >> b;
-    for (int& x : capS) cin >> x;
+    for (int i = 1; i <= M; i++) cin >> capS[i];
     
     for (int mask = 0; mask < (1 << N); mask++) {
         cout << bitset<9>(mask) << "\n";
         bool valid = 1;
-        vector<int> countS(M), placeS(N);
+        vector<int> countS(M + 1), placeS(N);
         for (int i = 0; i < N; i++) {
             bool bit = (mask << i) & 1;
 
-            if (!kidS[i][bit]) {
-                valid = 0;
-            }
-
             placeS[i] = kidS[i][bit];
-            countS[placeS[i] - 1]++;
+            countS[placeS[i]]++;
 
-            if (countS[placeS[i] - 1] > capS[placeS[i] - 1]) {
+            if (countS[placeS[i]] > capS[placeS[i]]) {
                 valid = 0;
             }
         }
