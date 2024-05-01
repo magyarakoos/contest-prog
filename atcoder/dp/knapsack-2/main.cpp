@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-const ll INF = 1e15;
+const ll INF = 1e12;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
