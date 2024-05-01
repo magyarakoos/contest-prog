@@ -5,10 +5,10 @@ int N;
 vector<int> a;
 map<array<int, 3>, bool> m;
 
-bool solve(State s) {
-    if (m.count(s)) return m[s];
+bool solve(int l, int r, int turn) {
+    if (m.count({l, r, turn})) return m[{l, r, turn}];
 
-
+    
 }
 
 int main() {
