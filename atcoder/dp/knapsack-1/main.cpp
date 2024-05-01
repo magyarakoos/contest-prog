@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
+const int MAXN = 1e5;
 
 int N, W, v[100], w[100];
 map<pair<int, ll>, ll> m;
+int m[101][]
 
 ll solve(pair<int, ll> state) {
     if (m.count(state)) return m[state];
