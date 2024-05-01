@@ -17,9 +17,11 @@ int main() {
     dp[0][0] = 0;
 
     for (int i = 0; i < N; i++) {
-        for (int j = W; j >= 0; j--) {
+        for (int j = 0; j <= W; j++) {
             dp[i][j] = dp[i - 1][j];
-            if ()
+            if (j - w[i] >= 0) {
+                dp[i][j] = max(dp[i][j], dp[i - 1][j - w[i]] + v[i]);
+            }
         }
     }
 }
