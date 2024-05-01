@@ -9,6 +9,11 @@ int N, W;
 map<state, ll> m;
 
 ll solve(state s) {
+    if (m.count(s)) return m[s];
+
+    auto [i, weight] = s;
+    if (i == N) return weight;
+
     
 }
 
