@@ -32,10 +32,8 @@ int main() {
             msub(ps[R + 1], dp[k]);
         }
         for (int i = 1; i <= K; i++) {
-            ps[i] += ps[i - 1];
-            ps[i] %= MOD;
-            dp[i] += ps[i];
-            dp[i] %= MOD;
+            madd(ps[i], ps[i - 1]);
+            madd(dp[i], ps[i]);
         }
     }
 
