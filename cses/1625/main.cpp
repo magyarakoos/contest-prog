@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-const int SZ = 4;
+const int SZ = 6;
 
 int result;
 string s, t;
@@ -16,8 +16,10 @@ bool grid[SZ][SZ];
 const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
 
 void backtrack(int i, int j, int steps) {
-    if (i == SZ - 1 && j == 0 && steps == SZ * SZ - 1) {
-        result++;
+    if (i == SZ - 1 && j == 0) {
+        if (steps == SZ * SZ - 1) {
+            result++;
+        }
         return;
     }
     for (int k = 0; k < 4; k++) {
