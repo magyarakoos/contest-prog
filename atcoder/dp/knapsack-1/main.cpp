@@ -13,10 +13,7 @@ ll solve(pair<int, ll> state) {
     ll res = solve({i + 1, weight});
     // take
     if (weight + w[i] <= W) {
-        ll val = solve({i + 1, weight + w[i]}) + v[i];
-        if (res < val) {
-            res = val;
-        }
+        res = max(res, solve({i + 1, weight + w[i]}) + v[i]);
     }
     m[state] = res;
     return res;
