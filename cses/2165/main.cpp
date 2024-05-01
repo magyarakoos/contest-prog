@@ -15,7 +15,8 @@ void put(int a, int b) {
 
 void hanoi(int a, int b, int cnt) {
     if (cnt == 0) return;
-
+    int c = 6 - (a + b);
+    
 }
 
 int main() {
