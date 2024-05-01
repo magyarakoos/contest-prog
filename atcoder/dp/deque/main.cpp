@@ -11,6 +11,11 @@ int main() {
 
     vector dp(N, vector<ll>(N));
 
+    // l = r, answer is trivial
+    for (int l = 0; l < N; l++) {
+        dp[l][l] = v[l];
+    }
+
     for (int l = N - 1; l >= 0; l--) {
         for (int r = l + 1; r < N; r++) {
             dp[l][r] = max(
