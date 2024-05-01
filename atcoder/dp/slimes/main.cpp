@@ -25,7 +25,7 @@ int main() {
             }
             else {
                 for (int m = l; m < r; m++) {
-                    smin(dp[l][r], (dp[l][m] + dp[m + 1][r]) * 2);
+                    smin(dp[l][r], dp[l][m] + dp[m + 1][r]);
                 }
             }
         }
