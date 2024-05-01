@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-const ll INF = 1e18;
+const ll INF = 1e15;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -23,7 +23,7 @@ int main() {
             dp[i][j] = dp[i - 1][j];
             if (j - v[i] >= 0) {
                 auto& choose = dp[i - 1][j - v[i]];
-                if (choose != -1 && choose + w[i] <= W) {
+                if (choose + w[i] <= W) {
                     dp[i][j] = min(dp[i][j], choose + w[i]);
                 }
             }
