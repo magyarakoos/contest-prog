@@ -32,7 +32,7 @@ int main() {
 
     for (int j = maxv; j >= 0; j--) {
         if (dp[N][j] != -1) {
-            cout << maxv;
+            cout << j;
             exit(0);
         }
     }
