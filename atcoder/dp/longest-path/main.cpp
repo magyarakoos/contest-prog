@@ -8,6 +8,7 @@ vector<int> indegS, dp;
 void dfs(int u) {
     for (int v : g[u]) {
         dp[v] = max(dp[v], dp[u] + 1);
+        indegS[v]--;
     }
 }
 
