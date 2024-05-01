@@ -9,21 +9,7 @@ using ll = long long;
 
 #define cases 1
 void solve() {
-    int N;
-    cin >> N;
-    vector<int> A(N), B(N);
-    for (int& x : A) cin >> x;
-    for (int& x : B) cin >> x;
-    int a = 0, b = 0, res = 0;
-    while (b < N) {
-        if (A[a] <= B[b]) {
-            a++; b++;
-        } else {
-            res++;
-            b++;
-        }
-    }
-    cout << res << "\n";
+
 }
 
 int main() {
