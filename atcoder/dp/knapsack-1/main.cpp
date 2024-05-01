@@ -19,8 +19,11 @@ ll solve(pair<int, ll> state) {
 
     // take
     if (weight + v[i + 1] <= W) {
-
+        res = max(res, solve({i + 1, weight + v[i + 1]}));
     }
+
+    // don't take
+    res = max(res, solve({i + 1, weight}));
 }
 
 int main() {
