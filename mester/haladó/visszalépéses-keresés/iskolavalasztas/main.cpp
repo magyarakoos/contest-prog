@@ -5,19 +5,34 @@ int main() {
     int N, M;
     cin >> N >> M;
     vector<array<int, 2>> kidS(N);
-    vector<int> capS(M + 1);
+    vector<int> capS(M), currS(M);
     for (auto& [a, b] : kidS) cin >> a >> b;
-    for (int i = 1; i <= M; i++) cin >> capS[i];
+    for (int& x : capS) cin >> x;
     
-    int mask = 0b010101110;
+    for (int mask = 0; mask < (1 << N); mask++) {
+        bool valid = 1;
+        vector<int> countS(M), placeS(N);
+        for (int i = 0; i < N; i++) {
+            bool bit = (mask << i) & 1;
 
-    vector<int> countS(M + 1), placeS(N + 1);
-    for (int i = 0; i < N; i++) {
-        bool bit = (mask >> i) & 1;
+            if (!kidS[i][bit]) {
+                valid = 0;
+                break;
+            }
 
-        placeS[i] = kidS[i][bit];
-        countS[placeS[i]]++;
+            placeS[i] = kidS[i][bit];
 
+            if (++countS[placeS[i] - 1] > capS[placeS[i] - 1]) {
+                valid = 0;
+                break;
+            }
+        }
+        
+        if (valid) {
+            for (int p : placeS) cout << p << " ";
+            exit(0);
+        }
     }
 
+    assert(0);
 }
