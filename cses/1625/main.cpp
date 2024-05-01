@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-const int SZ = 7;
+const int SZ = 3;
 
 int result;
 string s;
@@ -18,8 +18,7 @@ const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
 void backtrack(int i, int j, int steps) {
     if (i == SZ - 1 && j == 0 && steps == SZ * SZ - 1) {
         result++;
-        cout << result << endl;
-        //cout << s << "\n";
+        cout << s << "\n";
         return;
     }
     for (int k = 0; k < 4; k++) {
