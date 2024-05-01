@@ -20,13 +20,11 @@ int main() {
             if (l == r) {
                 dp[l][r] = 0;
             }
-            else if (l + 1 == r) {
-                dp[l][r] = v[l] + v[r];
-            }
             else {
-                for (int m = l; m < r; m++) {
-                    smin(dp[l][r], dp[l][m] + dp[m + 1][r]);
-                }
+                dp[l][r] = min(
+                    v[l] + dp[l + 1][r],
+                    v[r] + dp[l][r - 1]
+                );
             }
         }
     }
