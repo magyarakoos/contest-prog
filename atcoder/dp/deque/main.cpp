@@ -20,7 +20,7 @@ ll solve(int l, int r, int turn) {
         if (turn) {
             res = min(a, b);
         } else {
-            if (a < b) {
+            if (a > b) {
                 res = a + v[l];
             } else {
                 res = b + v[r];
@@ -38,4 +38,5 @@ int main() {
     cin >> N;
     v.resize(N);
     for (int i = 0; i < N; i++) cin >> v[i];
+    cout << solve(0, N - 1, 0);
 }
