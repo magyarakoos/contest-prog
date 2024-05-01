@@ -19,7 +19,6 @@ int main() {
 
     for (int l = N - 1; l >= 0; l--) {
         for (int r = l; r < N; r++) {
-
             if (l == r) {
                 dp[l][r] = 0;
             }
