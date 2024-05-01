@@ -15,14 +15,15 @@ int main() {
     while (N--) {
         int A;
         cin >> A;
+        vector ps(K + 2, 0LL);
         for (int k = K; k >= 0; k--) {
             int tmp = dp[k];
             int L = k + 1;
             int R = min(A, K - k);
-            dp[L] += tmp;
-            dp[R] -= tmp;
-            dp[L] %= MOD;
-            dp[R] %= MOD;
+            ps[L] += tmp;
+            ps[R] -= tmp;
+            ps[L] %= MOD;
+            ps[R] %= MOD;
         }
     }
 
