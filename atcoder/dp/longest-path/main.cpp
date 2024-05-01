@@ -3,6 +3,7 @@ using namespace std;
 
 vector<vector<int>> g;
 vector<int> indegS, dp;
+vector<bool> vis;
 
 void dfs(int u) {
     for (int v : g[u]) {
@@ -20,6 +21,8 @@ int main() {
     g.resize(N + 1);
     indegS.resize(N + 1);
     dp.assign(N + 1, 0);
+    vis.resize(N + 1);
+    
     while (M--) {
         int U, V;
         cin >> U >> V;
@@ -33,5 +36,5 @@ int main() {
     }
 
     dfs(0);
-    cout << *max_element(dp.begin(), dp.end());
+    cout << *max_element(dp.begin() + 1, dp.end());
 }
