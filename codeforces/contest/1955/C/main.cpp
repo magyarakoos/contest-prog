@@ -15,7 +15,7 @@ void solve() {
     for (int& x : v) cin >> x;
     int l = 0, r = N - 1;
     int res = 0;
-    while (l <= r) {
+    while (l < r) {
         if (v[l] == v[r]) {
             res += 2;
             l++;
@@ -32,7 +32,7 @@ void solve() {
             res++;
         }
     }
-    cout << res;
+    cout << res << "\n";
 }
 
 int main() {
