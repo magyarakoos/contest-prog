@@ -1,10 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+struct State {
+    int l;
+    int r;
+    bool turn;
+};
+
 int N;
 vector<int> a;
+map<
 
 bool solve(int l, int r, bool turn) {
-    
+
 }
 
 int main() {
