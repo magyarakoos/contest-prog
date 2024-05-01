@@ -19,15 +19,18 @@ void solve() {
     }
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
+            cout << N + i * C + j + D << " ";
             if (s.count(N + i * C + j + D)) {
                 s.erase(N + i * C + j + D);
             } else {
-                cout << "NO\n";
-                return;
+                //cout << "NO\n";
+                //return;
             }
         }
+        cout << "\n";
     }
-    cout << "YES\n";
+    cout << "\n";
+    //cout << "YES\n";
 }   
 
 int main() {
