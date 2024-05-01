@@ -18,7 +18,6 @@ int main() {
 
             if (!kidS[i][bit]) {
                 valid = 0;
-                break;
             }
 
             placeS[i] = kidS[i][bit];
@@ -26,14 +25,12 @@ int main() {
 
             if (countS[placeS[i] - 1] > capS[placeS[i] - 1]) {
                 valid = 0;
-                for (int p : countS) cout << p << " ";
-                cout << "\n";
             }
         }
         
-        if (valid) {
-            for (int p : placeS) cout << p << " ";
-            exit(0);
+        if (!valid) {
+            for (int p : countS) cout << p << " ";
+            cout << "\n";
         }
     }
 
