@@ -3,6 +3,10 @@ using namespace std;
 int N;
 vector<int> a;
 
+bool solve(int l, int r, bool turn) {
+    
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
