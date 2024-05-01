@@ -19,7 +19,9 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         for (int j = maxv; j >= 0; j--) {
-            
+            if (j - v[i] >= 0) {
+                dp[j] = min(dp[j], dp[j - v[i]] + w[i]);
+            }
         }
     }
 }
