@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-const int SZ = 4;
+const int SZ = 6;
 
 int result;
 string s;
@@ -29,6 +29,7 @@ void backtrack(int i, int j, int steps) {
         grid[ni][nj] = 1;
         s += "DURL"[k];
         backtrack(ni, nj, steps + 1);
+        s.pop_back();
         grid[ni][nj] = 0;
     }
 }
