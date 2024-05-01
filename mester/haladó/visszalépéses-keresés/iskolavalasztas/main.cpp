@@ -24,6 +24,8 @@ int main() {
 
             if (++countS[placeS[i] - 1] > capS[placeS[i] - 1]) {
                 valid = 0;
+                for (int p : placeS) cout << p << " ";
+                cout << "\n";
                 break;
             }
         }
