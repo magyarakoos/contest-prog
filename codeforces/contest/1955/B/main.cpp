@@ -18,20 +18,20 @@ void solve() {
         s.insert(X);
     }
     vector grid(N, vector<int>(N));
+    grid[0][0] = *s.begin();
+
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            cout << N + i * C + j + D << " ";
-            if (s.count(N + i * C + j + D)) {
-                s.erase(N + i * C + j + D);
+
+            if (s.count(grid[0][0] + i * C + j + D)) {
+                s.erase(grid[0][0] + i * C + j + D);
             } else {
-                //cout << "NO\n";
-                //return;
+                cout << "NO\n";
+                return;
             }
         }
-        cout << "\n";
     }
-    cout << "\n";
-    //cout << "YES\n";
+    cout << "YES\n";
 }   
 
 int main() {
