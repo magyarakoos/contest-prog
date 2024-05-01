@@ -24,5 +24,5 @@ int main() {
         g[0].push_back(u);
     }
 
-
+    
 }
