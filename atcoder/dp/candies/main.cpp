@@ -21,9 +21,15 @@ int main() {
             int L = k + 1;
             int R = min(A, K - k);
             ps[L] += tmp;
-            ps[R] -= tmp;
             ps[L] %= MOD;
+            ps[R] -= tmp;
             ps[R] %= MOD;
+        }
+        for (int i = 1; i <= K; i++) {
+            ps[i] += ps[i - 1];
+            ps[i] %= MOD;
+            dp[i] += ps[i];
+            dp[i] %= MOD;
         }
     }
 
