@@ -18,19 +18,21 @@ int main() {
     int N, K;
     cin >> N >> K;
 
-    vector dp(K + 2, 0LL);
+    vector dp(K + 1, 0LL);
     dp[0] = 1;
 
     while (N--) {
         int A;
         cin >> A;
-        vector v(K + 2, 0LL);
+        vector v(K + 1, 0LL);
         for (int k = K; k >= 0; k--) {
             int L = k + 1;
             int R = min(A, K - k);
             if (L <= R) {
                 madd(v[L], dp[k]);
-                msub(v[R + 1], dp[k]);
+                if (R + 1 <= K) {
+                    msub(v[R + 1], dp[k]);
+                }
             }
         }
         ll ps = 0;
