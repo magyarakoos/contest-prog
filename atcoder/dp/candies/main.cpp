@@ -2,22 +2,27 @@
 using namespace std;
 using ll = int64_t;
 
+const int MOD = 1e9 + 7;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    
     int N, K;
     cin >> N >> K;
-    vector<int> v(N + 1);
-    for (int i = 1; i <= N; i++) {
-        cin >> v[i];
-    }
 
-    vector dp(N + 1, vector<ll>(K + 1));
-    dp[0][0] = 1;
+    vector dp(K + 2, 0LL);
+    dp[0] = 1;
 
-    for (int i = 1; i <= N; i++) {
-        for (int j = 0; j <= K; j++) {
-            
+    while (N--) {
+        int A;
+        cin >> A;
+        for (int k = K; k >= 0; k--) {
+            int tmp = dp[k];
+            int L = k + 1;
+            int R = min(A, K - k);
+            dp[L] += tmp * (R - L + 1);
+            dp[R] -= tmp * (R - L + 1);
+            dp[L] %= MOD;
+            dp[R] %= MOD;
         }
     }
 }
