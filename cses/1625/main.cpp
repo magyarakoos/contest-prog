@@ -55,10 +55,12 @@ void backtrack(int i, int j, int steps, int prv_i, int prv_j) {
         moveS[i] = {step, ni, nj};
         can[i] = 1;
     }
-    for (int k = 0; k < 4; k++) {
-        if (k == nk) continue;
-        if (!can[k] && can[l(k)] && can[r(k)]) {
-            return;
+    if (steps > 0) {
+        for (int k = 0; k < 4; k++) {
+            if (k == nk) continue;
+            if (!can[k] && can[l(k)] && can[r(k)]) {
+                return;
+            }
         }
     }
     for (auto [step, ni, nj] : moveS) {
@@ -78,6 +80,6 @@ int main() {
     s.assign(sz(t), '?');
 
     grid[0][0] = 1;
-    backtrack(0, 0, 0);
+    backtrack(0, 0, 0, 0, 0);
     cout << result;
 }
