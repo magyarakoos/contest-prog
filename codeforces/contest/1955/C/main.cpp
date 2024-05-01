@@ -11,6 +11,9 @@ using ll = long long;
 void solve() {
     ll N, K;
     cin >> N >> K;
+    vector<int> v(N);
+    for (int& x : v) cin >> x;
+    
 }
 
 int main() {
