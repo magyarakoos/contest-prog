@@ -21,7 +21,12 @@ int main() {
     for (int i = 1; i <= N; i++) {
         for (int j = 0; j <= maxv; j++) {
             dp[i][j] = dp[i - 1][j];
-            if (j - v[i])
+            if (j - v[i] >= 0) {
+                auto& choose = dp[i - 1][j - v[i]];
+                if (choose != -1 && choose + w[i] <= W) {
+                    dp[i][j] = min(dp[i][j], choose);
+                }
+            }
         }
     }
 }
