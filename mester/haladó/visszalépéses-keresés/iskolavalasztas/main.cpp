@@ -13,7 +13,7 @@ int main() {
         bool valid = 1;
         vector<int> countS(M), placeS(N);
         for (int i = 0; i < N; i++) {
-            bool bit = (mask << i) & 1;
+            bool bit = (mask >> i) & 1;
 
             if (!kidS[i][bit]) {
                 valid = 0;
