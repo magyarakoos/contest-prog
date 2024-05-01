@@ -36,9 +36,6 @@ int main() {
             madd(dp[i], ps[i]);
         }
     }
-
-    for (int i = 1; i <= K; i++) {
-        dp[i] += dp[i - 1];
-    }
+    
     cout << dp[K];
 }
