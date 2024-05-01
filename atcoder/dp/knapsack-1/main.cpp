@@ -13,15 +13,18 @@ ll solve(pair<int, ll> state) {
     auto [i, weight] = state;
     if (i == N) return weight;
 
-    ll res = 0;
+    // don't take
+    ll res = solve({i + 1, weight});
 
     // take
     if (weight + w[i] <= W) {
-        res = max(res, solve({i + 1, weight + w[i]}) + v[i]);
+        ll val = solve({i + 1, weight + w[i]}) + v[i];
+        if (res < val) {
+            res = val;
+            cout << "AT " << i << " CHOOSE\n";
+        }
     }
 
-    // don't take
-    res = max(res, solve({i + 1, weight}));
 
     cout << i << " " << weight << " : " << res << "\n";
     m[state] = res;
