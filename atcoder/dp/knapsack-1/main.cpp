@@ -1,12 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using state = struct { int i; ll curr; };
+using state = struct { int i; ll weight; };
 
 const ll MAXN = 1e5, INF = 1e18;
 
 int N, W;
-map<
+map<state, ll> m;
+
+ll solve(state s) {
+    
+}
 
 int main() {
 
