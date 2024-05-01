@@ -14,9 +14,25 @@ void solve() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
     int l = 0, r = N - 1;
-    while (l < r) {
-        
+    int res = 0;
+    while (l <= r) {
+        if (v[l] == v[r]) {
+            res += 2;
+            l++;
+            r--;
+        }
+        else if (v[l] < v[r]) {
+            v[r] -= v[l];
+            res++;
+            l++;
+        }
+        else {
+            v[l] -= v[r];
+            r--;
+            res++;
+        }
     }
+    cout << res;
 }
 
 int main() {
