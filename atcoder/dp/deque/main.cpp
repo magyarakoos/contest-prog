@@ -1,20 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct State {
-    int l;
-    int r;
-    bool turn;
-};
-
 int N;
 vector<int> a;
-map<State, bool> m;
+map<array<int, 3>, bool> m;
 
 bool solve(State s) {
     if (m.count(s)) return m[s];
 
-    
+
 }
 
 int main() {
