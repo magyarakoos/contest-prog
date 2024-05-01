@@ -7,20 +7,22 @@
 using namespace std;
 using ll = long long;
 
+const int SZ = 4;
+
 int result;
 string s, t;
-bool grid[4][4];
+bool grid[SZ][SZ];
 
 const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
 
 void backtrack(int i, int j, int steps) {
-    if (i == 3 && j == 0 && steps == 48) {
+    if (i == SZ - 1 && j == 0 && steps == SZ * SZ - 1) {
         result++;
         return;
     }
     for (int k = 0; k < 4; k++) {
         int ni = i + di[k], nj = j + dj[k];
-        if (ni < 0 || nj < 0 || ni >= 4 || nj >= 4 || grid[ni][nj]) {
+        if (ni < 0 || nj < 0 || ni >= SZ || nj >= SZ || grid[ni][nj]) {
             continue;
         }
         grid[ni][nj] = 1;
