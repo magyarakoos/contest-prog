@@ -25,7 +25,7 @@ int r(int i) {
     return i + 1;
 }
 
-void backtrack(int i, int j, int steps) {
+void backtrack(int i, int j, int steps, int prv_i, int prv_j) {
     if (i == SZ - 1 && j == 0) {
         if (steps == SZ * SZ - 1) {
             result++;
@@ -34,6 +34,8 @@ void backtrack(int i, int j, int steps) {
     }
     vector<tuple<char, int, int>> moveS(4, {'?', 0, 0});
     vector<bool> can(4);
+
+    int nk;
     for (int k = 0; k < 4; k++) {
         char step = "DURL"[k];
         if (t[steps] != '?' && t[steps] != step) {
@@ -49,6 +51,7 @@ void backtrack(int i, int j, int steps) {
         can[i] = 1;
     }
     for (int k = 0; k < 4; k++) {
+        if (k == nk) continue;
         if (!can[k] && can[l(k)] && can[r(k)]) {
             return;
         }
@@ -57,7 +60,7 @@ void backtrack(int i, int j, int steps) {
         if (step != '?') {
             grid[ni][nj] = 1;
             s[steps] = step;
-            backtrack(ni, nj, steps + 1);
+            backtrack(ni, nj, steps + 1, i, j);
             grid[ni][nj] = 0;
         }
     }
