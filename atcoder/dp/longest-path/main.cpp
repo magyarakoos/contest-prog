@@ -9,5 +9,16 @@ int main() {
     int N, M;
     cin >> N >> M;
     
+    g.resize(N + 1);
+    while (M--) {
+        int U, V;
+        cin >> U >> V;
+        g[U].push_back(V);
+        g[V].push_back(U);
+    }
 
+    // magic starting node
+    for (int u = 1; u <= N; u++) {
+        g[0].push_back(u);
+    }
 }
