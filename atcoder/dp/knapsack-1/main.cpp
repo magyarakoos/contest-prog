@@ -24,4 +24,6 @@ int main() {
             }
         }
     }
+
+    cout << *max_element(dp[N].begin(), dp[N].end());
 }
