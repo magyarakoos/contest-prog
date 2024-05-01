@@ -14,6 +14,8 @@ int main() {
         cin >> w[i] >> v[i];
     }
 
+    dp[0][0] = 0;
+
     for (int i = 0; i < N; i++) {
         for (int j = 0; j <= W; j++) {
 
