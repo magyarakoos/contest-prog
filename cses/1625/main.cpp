@@ -20,6 +20,9 @@ void backtrack(int i, int j, int steps) {
     }
     for (int k = 0; k < 4; k++) {
         int ni = i + di[k], nj = j + dj[k];
+        if (ni < 0 || nj < 0 || ni >= 4 || nj >= 4 || grid[ni][nj]) {
+            continue;
+        }
     }
 }
 
