@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = llong;
+using ll = int64_t;
 
 int N;
 vector<int> a;
@@ -36,6 +36,4 @@ int main() {
     cin >> N;
     a.resize(N);
     for (int i = 0; i < N; i++) cin >> a[i];
-    auto res = solve(0, N - 1, 0);
-    cout << res[0] << " " << res[1] << "\n";
 }
