@@ -22,6 +22,7 @@ void backtrack(int i, int j, int steps) {
         }
         return;
     }
+    vector<tuple<char, int, int>> moveS(4);
     for (int k = 0; k < 4; k++) {
         char step = "DURL"[k];
         if (t[steps] != '?' && t[steps] != step) {
@@ -32,10 +33,8 @@ void backtrack(int i, int j, int steps) {
         if (ni < 0 || nj < 0 || ni >= SZ || nj >= SZ || grid[ni][nj]) {
             continue;
         }
-        grid[ni][nj] = 1;
-        s[steps] = step;
-        backtrack(ni, nj, steps + 1);
-        grid[ni][nj] = 0;
+
+        moveS[i] = {step, ni, nj};
     }
 }
 
