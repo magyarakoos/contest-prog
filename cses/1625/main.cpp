@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-const int SZ = 6;
+const int SZ = 7;
 
 int result;
 string s, t;
