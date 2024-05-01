@@ -18,16 +18,14 @@ void solve() {
         s.insert(X);
     }
     int start = *s.begin();
-    cout << start << "\n";
-    return;
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
 
-            if (s.count(start + i * C + j + D)) {
-                s.erase(start + i * C + j + D);
+            if (s.count(start + i * C + j * D)) {
+                s.erase(start + i * C + j * D);
             } else {
-                //cout << "NO\n";
-                //return;
+                cout << "NO\n";
+                return;
             }
         }
     }
