@@ -2,31 +2,22 @@
 using namespace std;
 using ll = long long;
 
-int N, W;
+int N, W, v[100], w[100];
 map<pair<int, ll>, ll> m;
-
-int v[100], w[100];
 
 ll solve(pair<int, ll> state) {
     if (m.count(state)) return m[state];
-
     auto [i, weight] = state;
-    if (i == N) return weight;
-
+    if (i == N) return 0;
     // don't take
     ll res = solve({i + 1, weight});
-
     // take
     if (weight + w[i] <= W) {
         ll val = solve({i + 1, weight + w[i]}) + v[i];
         if (res < val) {
             res = val;
-            cout << "AT " << i << " CHOOSE\n";
         }
     }
-
-
-    cout << i << " " << weight << " : " << res << "\n";
     m[state] = res;
     return res;
 }
