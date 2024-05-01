@@ -8,7 +8,7 @@ int main() {
     cin >> N >> W;
 
     vector<int> w(N + 1), v(N + 1);
-    vector dp(N, vector<ll>(W + 1, -1));
+    vector dp(N + 1, vector<ll>(W + 1, -1));
 
     for (int i = 1; i <= N; i++) {
         cin >> w[i] >> v[i];
