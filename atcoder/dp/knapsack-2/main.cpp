@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int MAXV = 1e5;
+using ll = long long;
+const ll MAXV = 1e5, INF = 1e18;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -11,5 +12,5 @@ int main() {
         cin >> w[i] >> v[i];
     }
 
-
+    vector dp(N + 1, vector<ll>(MAXV, INF));
 }
