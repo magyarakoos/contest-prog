@@ -13,10 +13,12 @@ void put(int a, int b) {
     res.push_back({a, b});
 }
 
-void hanoi(int a, int b, int cnt) {
+void hanoi(int a, int c, int cnt) {
     if (cnt == 0) return;
-    int c = 6 - (a + b);
-    
+    int b = 6 - (a + c);
+    hanoi(a, b, cnt - 1);
+    put(a, c);
+    hanoi(b, c, cnt - 1);
 }
 
 int main() {
