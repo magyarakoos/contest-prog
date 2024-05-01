@@ -23,6 +23,9 @@ void backtrack(int i, int j, int steps) {
         if (ni < 0 || nj < 0 || ni >= 4 || nj >= 4 || grid[ni][nj]) {
             continue;
         }
+        grid[ni][nj] = 1;
+        backtrack(ni, nj, steps + 1);
+        grid[ni][nj] = 0;
     }
 }
 
@@ -31,4 +34,5 @@ int main() {
     //cin >> s;
     //t.assign(sz(s), '?');
     backtrack(0, 0, 0);
+    cout << result;
 }
