@@ -28,7 +28,6 @@ int main() {
                 valid = 0;
                 for (int p : countS) cout << p << " ";
                 cout << "\n";
-                break;
             }
         }
         
