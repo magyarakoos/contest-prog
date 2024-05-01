@@ -12,10 +12,10 @@ int main() {
 
     int N;
     cin >> N;
-    while (N != 1) {
+    do {
         cout << N << " ";
         if (N % 2) N /= 2;
         else N *= 3, N += 1;
-    }
+    } while (N != 1);
     cout << "\n";
 }
