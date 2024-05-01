@@ -9,20 +9,18 @@ map<array<int, 3>, ll> m;
 ll solve(int l, int r, int turn) {
     if (m.count({l, r, turn})) return m[{l, r, turn}];
 
-    array<int, 2> res {0, 0};
+    ll res = 0;
 
     if (l == r) {
-        res[turn] += a[l];
+        res += a[l] * (turn ^ 1);
     }
     else if (l < r) {
         auto a = solve(l + 1, r, turn ^ 1),
              b = solve(l, r - 1, turn ^ 1);
-        if ((a[turn] - a[turn ^ 1] > b[turn] - b[turn ^ 1]) ^ (turn ^ 1)) {
-            res = a;
-            res[turn] += a[l];
+        if (turn) {
+
         } else {
-            res = b;
-            res[turn] += a[r];
+
         }
     }
 
