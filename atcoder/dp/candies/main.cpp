@@ -24,18 +24,19 @@ int main() {
     while (N--) {
         int A;
         cin >> A;
-        vector ps(K + 2, 0LL);
+        vector v(K + 2, 0LL);
         for (int k = K; k >= 0; k--) {
             int L = k + 1;
             int R = min(A, K - k);
             if (L <= R) {
-                madd(ps[L], dp[k]);
-                msub(ps[R + 1], dp[k]);
+                madd(v[L], dp[k]);
+                msub(v[R + 1], dp[k]);
             }
         }
-        for (int i = 1; i <= K; i++) {
-            madd(ps[i], ps[i - 1]);
-            madd(dp[i], ps[i]);
+        ll ps = 0;
+        for (int i = 0; i <= K; i++) {
+            madd(ps, v[i]);
+            madd(dp[i], ps);
         }
     }
 
