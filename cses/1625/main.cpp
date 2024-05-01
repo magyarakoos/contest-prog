@@ -7,10 +7,10 @@
 using namespace std;
 using ll = long long;
 
-const int SZ = 3;
+const int SZ = 4;
 
 int result;
-string s;
+string s, t;
 bool grid[SZ][SZ];
 
 const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
