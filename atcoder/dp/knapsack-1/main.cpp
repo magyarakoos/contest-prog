@@ -23,6 +23,7 @@ ll solve(pair<int, ll> state) {
     // don't take
     res = max(res, solve({i + 1, weight}));
 
+    cout << i << " " << weight << " : " << res << "\n";
     m[state] = res;
     return res;
 }
