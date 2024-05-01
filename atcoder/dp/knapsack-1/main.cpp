@@ -16,8 +16,8 @@ ll solve(pair<int, ll> state) {
     ll res = 0;
 
     // take
-    if (weight + v[i + 1] <= W) {
-        res = max(res, solve({i + 1, weight + v[i + 1]}));
+    if (weight + w[i + 1] <= W) {
+        res = max(res, solve({i + 1, weight + w[i + 1]}) + v[i + 1]);
     }
 
     // don't take
@@ -33,5 +33,5 @@ int main() {
     for (int i = 0; i < N; i++) {
         cin >> v[i] >> w[i];
     }
-    cout << solve({0, 0});
+    cout << solve({-1, 0});
 }
