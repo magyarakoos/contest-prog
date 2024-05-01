@@ -11,7 +11,7 @@ using ll = long long;
 void solve() {
     int N, A, B;
     cin >> N >> A >> B;
-    cout << A + N / 2 * min(A * 2, B) << "\n";
+    cout << A * (N & 1) + N / 2 * min(A * 2, B) << "\n";
 }
 
 int main() {
