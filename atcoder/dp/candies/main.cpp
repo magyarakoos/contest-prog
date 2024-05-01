@@ -19,10 +19,14 @@ int main() {
             int tmp = dp[k];
             int L = k + 1;
             int R = min(A, K - k);
-            dp[L] += tmp * (R - L + 1);
-            dp[R] -= tmp * (R - L + 1);
+            dp[L] += tmp;
+            dp[R] -= tmp;
             dp[L] %= MOD;
             dp[R] %= MOD;
         }
+    }
+
+    for (int i = 1; i <= N; i++) {
+
     }
 }
