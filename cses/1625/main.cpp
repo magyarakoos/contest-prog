@@ -15,6 +15,16 @@ bool grid[SZ][SZ];
 
 const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
 
+int l(int i) {
+    if (i == 0) return 3;
+    return i - 1;
+}
+
+int r(int i) {
+    if (i == 3) return 0;
+    return i + 1;
+}
+
 void backtrack(int i, int j, int steps) {
     if (i == SZ - 1 && j == 0) {
         if (steps == SZ * SZ - 1) {
@@ -22,7 +32,8 @@ void backtrack(int i, int j, int steps) {
         }
         return;
     }
-    vector<tuple<char, int, int>> moveS(4);
+    vector<tuple<char, int, int>> moveS(4, {'?', 0, 0});
+    vector<bool> can(4);
     for (int k = 0; k < 4; k++) {
         char step = "DURL"[k];
         if (t[steps] != '?' && t[steps] != step) {
@@ -35,6 +46,17 @@ void backtrack(int i, int j, int steps) {
         }
 
         moveS[i] = {step, ni, nj};
+        can[i] = 1;
+    }
+    for (int k = 0; k < 4; k++) {
+        if (!can[k] && can[l(k)] && can[r(k)]) {
+            return;
+        }
+    }
+    for (auto [step, ni, nj] : moveS) {
+        if (step) {
+
+        }
     }
 }
 
