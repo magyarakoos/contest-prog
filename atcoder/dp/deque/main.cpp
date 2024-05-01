@@ -16,7 +16,7 @@ array<int, 2> solve(int l, int r, int turn) {
     else if (l < r) {
         auto a = solve(l + 1, r, turn ^ 1),
              b = solve(l, r - 1, turn ^ 1);
-        if ((a[turn] - a[turn ^ 1] > b[turn] - b[turn ^ 1]) ^ turn) {
+        if ((a[turn] - a[turn ^ 1] > b[turn] - b[turn ^ 1]) ^ (turn ^ 1)) {
             res = a;
             res[turn] += a[l];
         } else {
