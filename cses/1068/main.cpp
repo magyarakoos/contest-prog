@@ -10,4 +10,12 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
+    int N;
+    cin >> N;
+    while (N != 1) {
+        cout << N << " ";
+        if (N % 2) N /= 2;
+        else N *= 3, N += 1;
+    }
+    cout << "\n";
 }
