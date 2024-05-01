@@ -2,12 +2,10 @@
 using namespace std;
 using ll = long long;
 
-const ll MAXN = 1e5, INF = 1e18;
-
 int N, W;
 map<pair<int, ll>, ll> m;
 
-int v[101], w[MAXN + 1];
+int v[101], w[101];
 
 ll solve(pair<int, ll> state) {
     if (m.count(state)) return m[state];
@@ -24,8 +22,15 @@ ll solve(pair<int, ll> state) {
 
     // don't take
     res = max(res, solve({i + 1, weight}));
+
+    m[state] = res;
+    return res;
 }
 
 int main() {
-
+    cin.tie(0), ios::sync_with_stdio();
+    cin >> N >> W;
+    for (int i = 0; i < N; i++) {
+        cin >> v[i] >> w[i];
+    }
 }
