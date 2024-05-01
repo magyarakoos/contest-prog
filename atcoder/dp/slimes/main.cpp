@@ -9,8 +9,11 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int N;
     cin >> N;
-    vector v(N, 0LL);
+    vector v(N, 0LL), ps(N + 1, 0LL);
     for (ll& x : v) cin >> x;
+    for (int i = 1; i <= N; i++) {
+        ps[i] = ps[i - 1] + v[i - 1];
+    }
 
     vector dp(N, vector<ll>(N, INF));
 
@@ -22,7 +25,7 @@ int main() {
             }
             else {
                 for (int m = l; m < r; m++) {
-                    smin(dp[l][r], dp[l][m] + dp[m + 1][r]);
+                    smin(dp[l][r], dp[l][m] + dp[m + 1][r] + ps[r - 1] - ps[l]);
                 }
             }
         }
