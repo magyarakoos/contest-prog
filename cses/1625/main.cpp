@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-const int SZ = 7;
+const int SZ = 5;
 
 int result;
 string s, t;
@@ -54,8 +54,11 @@ void backtrack(int i, int j, int steps) {
         }
     }
     for (auto [step, ni, nj] : moveS) {
-        if (step) {
-
+        if (step != '?') {
+            grid[ni][nj] = 1;
+            s[steps] = step;
+            backtrack(ni, nj, steps + 1);
+            grid[ni][nj] = 0;
         }
     }
 }
