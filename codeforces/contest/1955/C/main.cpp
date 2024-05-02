@@ -21,6 +21,9 @@ void solve() {
             if (v[l] <= 0) res++;
             break;
         }
+        if (v[l] == v[r]) {
+            if ()
+        }
     }
 }
 
