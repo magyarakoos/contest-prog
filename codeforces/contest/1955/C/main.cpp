@@ -23,6 +23,7 @@ void solve() {
         }
         if (v[l] == v[r]) {
             if (K >= v[l] * 2) {
+                K -= v[l] * 2;
                 res += 2;
                 l++;
                 r--;
@@ -34,7 +35,11 @@ void solve() {
             break;
         }
         if (v[l] < v[r]) {
-            
+            if (K >= v[l] * 2) {
+                res++;
+                l++;
+                continue;
+            }
         }
     }
 }
