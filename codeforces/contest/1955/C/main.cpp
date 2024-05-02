@@ -44,7 +44,7 @@ void solve() {
                 continue;
             }
             if (K + 1 == v[l] * 2) {
-                
+                res++;
             }
         }
     }
