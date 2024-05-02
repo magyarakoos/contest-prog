@@ -22,6 +22,7 @@ void solve() {
         ll m = min(q.front(), q.back());
         if (K >= 2 * m) {
             res += 2;
+            K -= 2 * m;
             q.pop_front();
             q.pop_back();
         }
@@ -30,9 +31,9 @@ void solve() {
             K -= min(q.front() + q.back(), K);
             q.front() -= k / 2 + (k & 1);
             q.back() -= k / 2;
-            if (q.front() <= 0) q.pop_front(), res++;
-            if (q.back() <= 0) q.pop_back(), res++;
         }
+        if (q.front() <= 0) q.pop_front(), res++;
+        if (q.back() <= 0) q.pop_back(), res++;
     }
     if (!q.empty()) {
         res += q.back() <= K;
