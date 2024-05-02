@@ -49,17 +49,18 @@ void solve() {
             break;
         }
         if (v[r] < v[l]) {
-            if (K >= v[l] * 2) {
-                K -= v[l] * 2;
+            if (K >= v[r] * 2) {
+                K -= v[r] * 2;
                 res++;
-                l++;
+                r--;
                 continue;
             }
-            if (K + 1 == v[l] * 2) {
+            if (K + 1 == v[r] * 2) {
                 res++;
             }
             break;
         }
+        assert(0);
     }
 }
 
