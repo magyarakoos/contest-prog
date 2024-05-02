@@ -17,7 +17,9 @@ void solve() {
         cin >> X;
         q.push_back(X);
     }
-    while ()
+    while (q.size() >= 2) {
+        
+    }
 }
 
 int main() {
