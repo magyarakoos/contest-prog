@@ -14,7 +14,7 @@ void solve() {
     vector v(N, 0LL);
     for (ll& x : v) cin >> x;
 
-    
+    int l = 0, r = N - 1;
 }
 
 int main() {
