@@ -26,7 +26,9 @@ void solve() {
                 res += 2;
                 l++;
                 r--;
+                continue;
             }
+            if ()
         }
     }
 }
