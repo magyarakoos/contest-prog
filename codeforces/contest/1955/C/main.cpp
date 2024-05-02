@@ -11,7 +11,7 @@ using ll = long long;
 void solve() {
     ll N, K;
     cin >> N >> K;
-    deque<int> q;
+    deque<ll> q;
     while (N--) {
         int X;
         cin >> X;
@@ -19,7 +19,7 @@ void solve() {
     }
     int res = 0;
     while (q.size() >= 2) {
-        int m = min(q.front(), q.back());
+        ll m = min(q.front(), q.back());
         if (K >= 2 * m) {
             res += 2;
             q.pop_front();
@@ -27,7 +27,8 @@ void solve() {
         }
         else {
             int k = K;
-            K -= 
+            K -= min(q.front() + q.back(), K);
+            
         }
     }
 }
