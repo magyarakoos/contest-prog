@@ -62,6 +62,7 @@ void solve() {
         }
         assert(0);
     }
+    cout << res << "\n";
 }
 
 int main() {
