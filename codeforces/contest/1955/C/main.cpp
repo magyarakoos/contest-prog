@@ -15,7 +15,6 @@ void solve() {
     for (ll& x : v) cin >> x;
 
     int l = 0, r = N - 1, res = 0;
-    bool turn = 0;
     while (l <= r) {
         if (l == r) {
             v[l] -= K;
