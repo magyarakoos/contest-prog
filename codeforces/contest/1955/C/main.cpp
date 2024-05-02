@@ -28,7 +28,10 @@ void solve() {
                 r--;
                 continue;
             }
-            if ()
+            if (K + 1 == v[l] * 2) {
+                res++;
+                break;
+            }
         }
     }
 }
