@@ -26,7 +26,8 @@ void solve() {
             q.pop_back();
         }
         else {
-            
+            int k = K;
+            q.back() -= K / 
         }
     }
 }
