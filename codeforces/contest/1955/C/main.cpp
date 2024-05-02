@@ -25,6 +25,9 @@ void solve() {
             q.pop_front();
             q.pop_back();
         }
+        else {
+            
+        }
     }
 }
 
