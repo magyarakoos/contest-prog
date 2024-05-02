@@ -19,6 +19,8 @@ void solve() {
     }
     int res = 0;
     while (q.size() >= 2) {
+        assert(K >= 0);
+        if ()
         ll m = min(q.front(), q.back());
         if (K >= 2 * m) {
             K -= 2 * m;
