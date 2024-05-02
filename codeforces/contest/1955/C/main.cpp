@@ -28,7 +28,8 @@ void solve() {
         else {
             int k = K;
             K -= min(q.front() + q.back(), K);
-            
+            q.back() -= k / 2;
+            q.front() -= k / 2 + (K & 1);
         }
     }
 }
