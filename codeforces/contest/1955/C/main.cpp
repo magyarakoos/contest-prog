@@ -14,10 +14,12 @@ void solve() {
     vector v(N, 0LL);
     for (ll& x : v) cin >> x;
 
-    int l = 0, r = N - 1;
+    int l = 0, r = N - 1, res = 0;
     while (l <= r) {
         if (l == r) {
-            
+            v[l] -= K;
+            if (v[l] <= 0) res++;
+            break;
         }
     }
 }
