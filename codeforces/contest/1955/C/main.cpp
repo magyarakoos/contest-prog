@@ -16,6 +16,8 @@ void solve() {
 
     int l = 0, r = N - 1, res = 0;
     while (l <= r) {
+        assert(K >= 0);
+        if (K == 0) break;
         if (l == r) {
             v[l] -= K;
             if (v[l] <= 0) res++;
