@@ -27,7 +27,7 @@ void solve() {
         }
         else {
             int k = K;
-            q.back() -= K / 
+            K -= 
         }
     }
 }
