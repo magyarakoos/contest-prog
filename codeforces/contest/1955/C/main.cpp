@@ -11,7 +11,10 @@ using ll = long long;
 void solve() {
     ll N, K;
     cin >> N >> K;
-    vector<int> v(N)
+    vector v(N, 0LL);
+    for (ll& x : v) cin >> x;
+
+    
 }
 
 int main() {
