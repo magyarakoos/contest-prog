@@ -22,7 +22,11 @@ void solve() {
             break;
         }
         if (v[l] == v[r]) {
-            if ()
+            if (K >= v[l] * 2) {
+                res += 2;
+                l++;
+                r--;
+            }
         }
     }
 }
