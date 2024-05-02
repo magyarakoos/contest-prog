@@ -37,6 +37,7 @@ void solve() {
     if (!q.empty()) {
         res += q.back() <= K;
     }
+    cout << res << "\n";
 }
 
 int main() {
