@@ -17,8 +17,14 @@ void solve() {
         cin >> X;
         q.push_back(X);
     }
+    int res = 0;
     while (q.size() >= 2) {
-        
+        int m = min(q.front(), q.back());
+        if (K >= 2 * m) {
+            res += 2;
+            q.pop_front();
+            q.pop_back();
+        }
     }
 }
 
