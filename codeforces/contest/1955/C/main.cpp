@@ -34,7 +34,9 @@ void solve() {
             if (q.back() <= 0) q.pop_back(), res++;
         }
     }
-    cout << res + q.
+    if (!q.empty()) {
+        res += q.back() <= K;
+    }
 }
 
 int main() {
