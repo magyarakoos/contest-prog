@@ -21,10 +21,9 @@ void solve() {
     while (q.size() >= 2) {
         ll m = min(q.front(), q.back());
         if (K >= 2 * m) {
-            res += 2;
             K -= 2 * m;
-            q.pop_front();
-            q.pop_back();
+            q.front() -= m;
+            q.back() -= m;
         }
         else {
             int k = K;
