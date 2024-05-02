@@ -43,6 +43,9 @@ void solve() {
                 l++;
                 continue;
             }
+            if (K + 1 == v[l] * 2) {
+                
+            }
         }
     }
 }
