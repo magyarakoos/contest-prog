@@ -15,6 +15,11 @@ void solve() {
     for (ll& x : v) cin >> x;
 
     int l = 0, r = N - 1;
+    while (l <= r) {
+        if (l == r) {
+            
+        }
+    }
 }
 
 int main() {
