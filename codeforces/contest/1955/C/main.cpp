@@ -30,10 +30,11 @@ void solve() {
             K -= min(q.front() + q.back(), K);
             q.front() -= k / 2 + (k & 1);
             q.back() -= k / 2;
-            if (q.front() <= 0) q.pop_front();
-            if (q.back() <= 0) q.pop_back();
+            if (q.front() <= 0) q.pop_front(), res++;
+            if (q.back() <= 0) q.pop_back(), res++;
         }
     }
+    cout << res + q.
 }
 
 int main() {
