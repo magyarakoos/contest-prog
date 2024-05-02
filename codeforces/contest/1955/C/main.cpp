@@ -30,8 +30,11 @@ void solve() {
             }
             if (K + 1 == v[l] * 2) {
                 res++;
-                break;
             }
+            break;
+        }
+        if (v[l] < v[r]) {
+            
         }
     }
 }
