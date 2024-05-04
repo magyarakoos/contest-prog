@@ -5,5 +5,7 @@ using namespace std;
 signed main() {
     int N, C;
     cin >> N >> C;
-    vector<int> H(N + 1);
+    vector<int> H(N + 1), dp(N + 1), len(N + 1), mn(N + 1);
+    
+    
 }
