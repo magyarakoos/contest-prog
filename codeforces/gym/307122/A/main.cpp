@@ -9,7 +9,13 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    
+    string s;
+    int N;
+    cin >> N;
+    for (int i = 0; i < (int)2e5 / 4; i++) {
+        s += "aabb";
+    }
+    cout << s.substr(0, N);
 }
 
 int main() {
