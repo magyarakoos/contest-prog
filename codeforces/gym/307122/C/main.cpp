@@ -9,9 +9,22 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    int N, X, Y, Z;
-    cin >> N >> X >> Y >> Z;
-    cout << ((X <= Z && Y >= Z) || (Y <= Z && X >= Z) ? "Yes" : "No");
+    string s;
+    cin >> s;
+    bool hasH = 0, hasV = 0;
+    for (char c : s) {
+        if (c == '1') {
+            if (hasV) {
+                cout << "3 1\n";
+                hasV = 0;
+            } else {
+                cout << "1 1\n";
+                hasV = 1;
+            }
+        } else {
+
+        }
+    }
 }
 
 int main() {
