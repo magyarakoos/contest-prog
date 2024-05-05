@@ -9,9 +9,9 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    int N, X, Y, Z;
-    cin >> N >> X >> Y >> Z;
-    cout << ((X <= Z && Y >= Z) || (Y <= Z && X >= Z) ? "Yes" : "No");
+    for (int i = 0; i < 2229; i++) cout << "4";
+    cout << "5\n";
+    for (int i = 0; i < 2230; i++) cout << "5";
 }
 
 int main() {
