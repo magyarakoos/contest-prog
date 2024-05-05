@@ -22,7 +22,13 @@ void solve() {
                 hasV = 1;
             }
         } else {
-
+            if (hasH) {
+                cout << "4 1\n";
+                hasH = 0;
+            } else {
+                cout << "4 3\n";
+                hasH = 1;
+            }
         }
     }
 }
