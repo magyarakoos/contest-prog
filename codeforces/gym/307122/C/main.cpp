@@ -13,7 +13,7 @@ void solve() {
     cin >> s;
     bool hasH = 0, hasV = 0;
     for (char c : s) {
-        if (c == '1') {
+        if (c == '0') {
             if (hasV) {
                 cout << "3 1\n";
                 hasV = 0;
