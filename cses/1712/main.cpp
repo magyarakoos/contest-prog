@@ -25,8 +25,6 @@ int main() {
     while (T--) {
         ll A, B, C;
         cin >> A >> B >> C;
-        ll exp = mpow(B, C);
-        cout << mpow(A, exp) << "\n";
+        cout << mpow(A, mpow(B, C)) << "\n";
     }
-    return 0;
 }
