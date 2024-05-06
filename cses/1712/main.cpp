@@ -9,18 +9,8 @@ using ll = long long;
 
 const int MOD = 1e9 + 7;
 
-void madd(int& x, int y) {
-    x += y;
-    if (x >= MOD) x -= MOD;
-}
-
-void msub(int& x, int y) {
-    x -= y;
-    if (x < 0) x += MOD;
-}
-
 void mmul(int& x, int y) {
-    x = ((ll) x * y) % MOD;
+    x = (ll) x * y % MOD;
 }
 
 void mpow(int& x, int y) {
@@ -38,6 +28,7 @@ void mpow(int& x, int y) {
 void solve() {
     int A, B, C;
     cin >> A >> B >> C;
+    cout << A << " " << B << " " << C << " ";
     mpow(B, C);
     cout << B << " ";
     mpow(A, B);
