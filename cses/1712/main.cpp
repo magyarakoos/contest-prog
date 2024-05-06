@@ -1,4 +1,3 @@
-// O(log(C) + log(B^C))
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -9,13 +8,15 @@ ll mmul(ll a, ll b) {
 }
 
 ll mpow(ll a, ll b) {
-    if (b == 0) return 1;
-    ll res = mpow(a, b / 2);
-    if (b % 2) {
-        return mmul(mmul(res, res), a);
-    } else {
-        return mmul(res, res);
+    ll res = 1;
+    while (b > 0) {
+        if (b & 1) {
+            res = mmul(res, a);
+        }
+        a = mmul(a, a);
+        b >>= 1;
     }
+    return res;
 }
 
 int main() {
@@ -24,6 +25,8 @@ int main() {
     while (T--) {
         ll A, B, C;
         cin >> A >> B >> C;
-        cout << mpow(A, mpow(B, C)) << "\n";
+        ll exp = mpow(B, C);
+        cout << mpow(A, exp) << "\n";
     }
+    return 0;
 }
