@@ -8,14 +8,15 @@
 using namespace std;
 using ll = long long;
 
-const int MOD = 1e9 + 7;
+const ll MOD = 1e9 + 7;
 
-void mmul(int& x, int y) {
-    x = (ll) x * y % MOD;
+void mmul(ll& x, ll y) {
+    x *= y;
+    x %= MOD;
 }
 
-void mpow(int& x, int y) {
-    int res = 1;
+void mpow(ll& x, ll y) {
+    ll res = 1;
     while (y > 0) {
         if (y & 1) {
             mmul(res, x);
@@ -27,7 +28,7 @@ void mpow(int& x, int y) {
 }
 
 void solve() {
-    int A, B, C;
+    ll A, B, C;
     cin >> A >> B >> C;
     mpow(B, C);
     mpow(A, B);
