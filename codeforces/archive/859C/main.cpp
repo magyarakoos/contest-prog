@@ -18,5 +18,5 @@ int main() {
         suffix_sum += v[i];
     }
 
-    cout << suffix_sum - dp[0] << " " << "\n";
+    cout << suffix_sum - dp[0] << " " << dp[0] << "\n";
 }
