@@ -23,7 +23,7 @@ int main() {
 
     for (int i = N - 2; i >= 0; i--) {
         dp[i] = max(
-            ss[i] - dp[i + 1],
+            v[i] + (ss[i + 1] - dp[i + 1]),
             dp[i + 1] - v[i]
         );
     }
