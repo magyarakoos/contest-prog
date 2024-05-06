@@ -9,7 +9,7 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    int N, K, S;
+    ll N, K, S;
     cin >> N >> K >> S;
     if ((N - 1) * K < S || K > S) {
         cout << "NO\n";
