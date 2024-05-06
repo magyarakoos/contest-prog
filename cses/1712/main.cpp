@@ -20,7 +20,7 @@ void msub(int& x, int y) {
 }
 
 void mmul(int& x, int y) {
-    x = (ll) x * y % MOD;
+    x = ((ll) x * y) % MOD;
 }
 
 void mpow(int& x, int y) {
