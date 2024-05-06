@@ -16,24 +16,8 @@ void solve() {
         return;
     }
     cout << "YES\n";
-    ll pos = 1;
-    while (1) {
-        if (K == S) {
-            bool b = 1;
-            while (K--) {
-                cout << (b ? (pos == 1 ? pos + 1 : pos - 1) : pos) << " ";
-                b ^= 1;
-            }
-            cout << "\n";
-            return;
-        }
 
-        if (K >= S - (N - 1)) {
-            
-        }
-
-        K--;
-    }
+    
 }
 
 int main() {
