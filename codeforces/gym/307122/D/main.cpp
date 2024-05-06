@@ -9,12 +9,13 @@ using ll = long long;
 
 #define cases 0
 void solve() {
-    int N, K, S, pos = 1;
-    while (1) {
-        if (S - (N - 1) >= 0) {
-            
-        }
+    int N, K, S;
+    if ((N - 1) * K < S || K > S) {
+        cout << "NO\n";
+        return;
     }
+    cout << "YES\n";
+    
 }
 
 int main() {
