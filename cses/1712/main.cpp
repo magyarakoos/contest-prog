@@ -7,8 +7,40 @@
 using namespace std;
 using ll = long long;
 
+const int MOD = 1e9 + 7;
+
+void madd(int& x, int y) {
+    x += y;
+    if (x >= MOD) x -= MOD;
+}
+
+void msub(int& x, int y) {
+    x -= y;
+    if (x < 0) x += MOD;
+}
+
+void mmul(int& x, int y) {
+    x = (ll) x * y % MOD;
+}
+
+void mpow(int& x, int y) {
+    int res = 1;
+    while (y > 0) {
+        if (y % 1) {
+            mmul(res, x);
+        }
+        mmul(x, x);
+        y >>= 1;
+    }
+    x = res;
+}
+
 void solve() {
-    
+    int A, B, C;
+    cin >> A >> B >> C;
+    mpow(B, C);
+    mpow(A, B);
+    cout << A << "\n";
 }
 
 int main() {
