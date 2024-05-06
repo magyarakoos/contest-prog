@@ -1,13 +1,7 @@
 // O(log(C) + log(B^C))
 #include <bits/stdc++.h>
-
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define sz(v) (int)v.size()
-
 using namespace std;
 using ll = long long;
-
 const ll MOD = 1e9 + 7;
 
 void mmul(ll& x, ll y) {
