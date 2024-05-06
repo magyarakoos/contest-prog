@@ -17,16 +17,8 @@ void solve() {
     }
     cout << "YES\n";
 
-    ll pos = 1;
-    for (int i = 0; i < S / K; i++) {
-        if (pos == 1) {
-            cout << N << " ";
-            pos = N;
-        } else {
-            cout << "1 ";
-            pos = 1;
-        }
-    }
+    ll div = S / K, mod = S % K;
+    
 }
 
 int main() {
