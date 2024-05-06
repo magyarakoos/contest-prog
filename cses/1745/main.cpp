@@ -1,17 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define all(v) v.begin(), v.end()
-#define sz(v) (int)v.size()
-
-const int MAXN = 100 * 1000;
-
-int dp[MAXN];
+bool dp[(int)1e5 + 1];
 int main() {
     int N;
     cin >> N;
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
+    vector<int> result;
+    for (int i = 1; i <= N; i++) {
 
+    }
 }
