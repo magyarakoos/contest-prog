@@ -10,6 +10,7 @@ int main() {
     while (N--) {
         int X;
         cin >> X;
+        dp[X] = 1;
         for (int i = N; i >= X; i--) {
             if (dp[i - X]) dp[i] = 1;
         }
