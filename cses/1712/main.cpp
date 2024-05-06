@@ -39,6 +39,7 @@ void solve() {
     int A, B, C;
     cin >> A >> B >> C;
     mpow(B, C);
+    cout << B << " ";
     mpow(A, B);
     cout << A << "\n";
 }
