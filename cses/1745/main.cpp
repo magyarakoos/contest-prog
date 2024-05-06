@@ -11,12 +11,9 @@ int main() {
     while (N--) {
         int X;
         cin >> X;
-        dp[X] = 1;
         for (int i = MAXN; i >= X; i--) {
             if (dp[i - X]) dp[i] = 1;
         }
-        for (int i = 1; i <= 13; i++) cout << dp[i];
-        cout << "\n";
     }
 
     vector<int> result;
