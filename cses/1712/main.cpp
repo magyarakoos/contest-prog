@@ -16,11 +16,12 @@ void mmul(int& x, int y) {
 int mpow(int x, int y) {
     int res = 1;
     while (y > 0) {
-        cout << "AYE ";
         if (y % 1) {
-            mmul(res, x);
+            //mmul(res, x);
+            res *= x;
         }
-        mmul(x, x);
+        //mmul(x, x);
+        x *= x;
         y >>= 1;
     }
     cout << res << "\n";
