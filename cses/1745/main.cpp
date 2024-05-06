@@ -1,22 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define all(v) v.begin(), v.end()
+#define sz(v) (int)v.size()
+
 int main() {
     int N;
     cin >> N;
-    vector<int> v(N), dp(N);
+    vector<int> v(N), ps(N + 1);
     for (int& x : v) cin >> x;
+    partial_sum(all(v), ps.begin() + 1);
 
-    dp[N - 1] = v[N - 1];
-    int suffix_sum = v[N - 1];
-
-    for (int i = N - 2; i >= 0; i--) {
-        dp[i] = max(
-            dp[i + 1],
-            v[i] + suffix_sum - dp[i + 1]
-        );
-        suffix_sum += v[i];
+    set<int> s;
+    for (int r = 1; r <= N; r++) {
+        for (int l = 0; l < r; l++) {
+            s.insert(ps[r] - ps[l]);
+        }
     }
 
-    cout << suffix_sum - dp[0] << " " << dp[0] << "\n";
+    cout << sz(s) << "\n";
+    for (int x : s) cout << x << " ";
+    cout << "\n";
 }
