@@ -5,7 +5,7 @@ using ll = long long;
 const ll MOD = 1e9 + 7;
 
 void mmul(ll& x, ll y) {
-    x = (x % MOD) * (y % MOD) % MOD;
+    x = (x * y) % MOD;
 }
 
 void mpow(ll& x, ll y) {
