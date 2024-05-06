@@ -13,26 +13,24 @@ void mmul(int& x, int y) {
     x = (ll) x * y % MOD;
 }
 
-int mpow(int x, int y) {
+void mpow(int& x, int y) {
     int res = 1;
     while (y > 0) {
-        if (y % 1) {
-            //mmul(res, x);
-            res *= x;
+        if (y & 1) {
+            mmul(res, x);
         }
-        //mmul(x, x);
-        x *= x;
+        mmul(x, x);
         y >>= 1;
     }
-    cout << res << "\n";
-    return res;
+    x = res;
 }
 
 void solve() {
     int A, B, C;
     cin >> A >> B >> C;
-    B = mpow(B, C);
-    A = mpow(A, B);
+    mpow(B, C);
+    mpow(A, B);
+    cout << A << "\n";
 }
 
 int main() {
