@@ -2,13 +2,12 @@
 using namespace std;
 using ll = long long;
 
-void mmul(ll a, ll b, ll m) {
+void mmul(ll& a, ll b, ll m) {
     a = a * b % m;
 }
 
 ll mpow(ll a, ll b, ll m) {
     ll res = 1;
-    a %= m;
     while (b > 0) {
         if (b & 1) {
             mmul(res, a, m);
@@ -16,7 +15,7 @@ ll mpow(ll a, ll b, ll m) {
         mmul(a, a, m);
         b >>= 1;
     }
-    return res;
+    return res % m;
 }
 
 int main() {
