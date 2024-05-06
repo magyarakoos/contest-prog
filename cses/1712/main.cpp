@@ -4,18 +4,14 @@ using namespace std;
 using ll = long long;
 const ll MOD = 1e9 + 7;
 
-void mmul(ll& x, ll y) {
-    x = (x * y) % MOD;
-}
-
 void mpow(ll& x, ll y) {
     ll res = 1;
     x %= MOD;
     while (y > 0) {
         if (y & 1) {
-            mmul(res, x);
+            res = (res * x) % MOD;
         }
-        mmul(x, x);
+        x = (x * x) % MOD;
         y >>= 1;
     }
     x = res;
