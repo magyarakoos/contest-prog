@@ -4,25 +4,24 @@ using namespace std;
 using ll = long long;
 const ll MOD = 1e9 + 7;
 
-void mpow(ll& x, ll y) {
-    ll res = 1;
-    x %= MOD;
-    while (y > 0) {
-        if (y & 1) {
-            res = (res * x) % MOD;
-        }
-        x = (x * x) % MOD;
-        y >>= 1;
+ll mmul(ll a, ll b) {
+    return (a * b) % MOD;
+}
+
+ll mpow(ll a, ll b) {
+    if (b == 0) return 1;
+    ll res = mpow(a, b / 2);
+    if (b % 2) {
+        return mmul(mmul(res, res), a);
+    } else {
+        return mmul(res, res);
     }
-    x = res;
 }
 
 void solve() {
     ll A, B, C;
     cin >> A >> B >> C;
-    mpow(B, C);
-    mpow(A, B);
-    cout << A << "\n";
+    cout << mpow(A, mpow(B, C)) << "\n";
 }
 
 int main() {
