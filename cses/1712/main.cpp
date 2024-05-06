@@ -5,12 +5,12 @@ using ll = long long;
 const ll MOD = 1e9 + 7;
 
 void mmul(ll& x, ll y) {
-    x *= y;
-    x %= MOD;
+    x = (x % MOD) * (y % MOD) % MOD;
 }
 
 void mpow(ll& x, ll y) {
     ll res = 1;
+    x %= MOD;
     while (y > 0) {
         if (y & 1) {
             mmul(res, x);
