@@ -1,3 +1,4 @@
+// O(log(C) + log(B^C))
 #include <bits/stdc++.h>
 
 #define all(v) v.begin(), v.end()
