@@ -29,12 +29,12 @@ void solve() {
     }
 
     for (int i = 0; i < K - mod; i++) {
-        if (pos + div + 1 <= N) {
-            cout << pos + div + 1 << " ";
-            pos += div + 1;
+        if (pos + div <= N) {
+            cout << pos + div << " ";
+            pos += div;
         } else {
-            cout << pos - (div + 1) << " ";
-            pos -= div + 1;
+            cout << pos - div << " ";
+            pos -= div;
         }
     }
 
