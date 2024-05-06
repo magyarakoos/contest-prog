@@ -17,8 +17,28 @@ void solve() {
     }
     cout << "YES\n";
 
-    ll div = S / K, mod = S % K;
-    
+    ll div = S / K, mod = S % K, pos = 1;
+    for (int i = 0; i < mod; i++) {
+        if (pos == 1) {
+            cout << div + 2 << " ";
+            pos = div + 2;
+        } else {
+            cout << "1 ";
+            pos = 1;
+        }
+    }
+
+    for (int i = 0; i < K - mod; i++) {
+        if (pos + div + 1 <= N) {
+            cout << pos + div + 1 << " ";
+            pos += div + 1;
+        } else {
+            cout << pos - (div + 1) << " ";
+            pos -= div + 1;
+        }
+    }
+
+    cout << "\n";
 }
 
 int main() {
