@@ -18,15 +18,12 @@ ll mpow(ll a, ll b) {
     }
 }
 
-void solve() {
-    ll A, B, C;
-    cin >> A >> B >> C;
-    cout << mpow(A, mpow(B, C)) << "\n";
-}
-
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
     int T;
     cin >> T;
-    while (T--) solve();
+    while (T--) {
+        ll A, B, C;
+        cin >> A >> B >> C;
+        cout << mpow(A, mpow(B, C)) << "\n";
+    }
 }
