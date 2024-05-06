@@ -28,5 +28,14 @@ int main() {
         );
     }
 
+    for (int i = 0; i < N; i++) {
+        cout << dp[i] << " ";
+    }
+    cout << "\n";
+    for (int i = 0; i < N; i++) {
+        cout << ss[i] << " ";
+    }
+    cout << "\n";
+
     cout << dp[0] << " " << ss[0] - dp[0] << "\n";
 }
