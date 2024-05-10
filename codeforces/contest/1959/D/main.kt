@@ -7,8 +7,6 @@ fun main() {
         val N = A[0].toInt()
         val c = A[1][0]
         var s = readln()
-
-        // Append s to itself
         s += s
 
         val M = s.length
@@ -17,7 +15,7 @@ fun main() {
         var i = N
         while (i < M && s[i] != 'g') i++
 
-        for (j in M - 1 downTo 0) {
+        for (j in i downTo 0) {
             if (s[j] == 'g') {
                 fc[j] = j
             } else {
