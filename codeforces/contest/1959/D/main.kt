@@ -1,5 +1,3 @@
-import kotlin.math.*
-
 fun main() {
     val T = readln().toInt()
     repeat(T) {
