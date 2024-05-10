@@ -15,8 +15,10 @@ int main() {
         int M = s.size();
 
         vector<int> fc(M);
+
         int i = N;
         while (i < M && s[i] != 'g') i++;
+        
         for (; i >= 0; i--) {
             if (s[i] == 'g') {
                 fc[i] = i;
@@ -25,7 +27,13 @@ int main() {
             }
         }
 
-        for (int x : fc) cout << x << " ";
-        cout << "\n";
+        int res = 0;
+        for (int i = 0; i < N; i++) {
+            if (s[i] == c) {
+                res = max(res, fc[i] - i);
+            }
+        }
+
+        cout << res << "\n";
     }
 }
