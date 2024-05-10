@@ -19,3 +19,5 @@ def draw_circle(x0, y0, radius):
         if err > 0:
             x -= 1
             err -= 2*x + 1
+
+draw_circle(0, 0, 2)
