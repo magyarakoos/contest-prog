@@ -1,25 +1,25 @@
-#include <bits/stdc++.h>
-using namespace std;
+import java.util.*
 
-void solve() {
-    int N;
-    cin >> N;
-    vector<int> a(100);
-    while (N--) {
-        int X;
-        cin >> X;
-        a[X - 1]++;
+fun solve() {
+    val scanner = Scanner(System.`in`)
+    val N = scanner.nextInt()
+    val a = IntArray(100)
+    repeat(N) {
+        val X = scanner.nextInt()
+        a[X - 1]++
     }
-    for (int i = 0; i < 100; i++) {
+    for (i in 0 until 100) {
         if (a[i] == 1) {
-            cout << i + 1 << "\n";
-            return;
+            println(i + 1)
+            return
         }
     }
 }
 
-int main() {
-    int T;
-    cin >> T;
-    while (T--) solve();
+fun main() {
+    val scanner = Scanner(System.`in`)
+    val T = scanner.nextInt()
+    repeat(T) {
+        solve()
+    }
 }
