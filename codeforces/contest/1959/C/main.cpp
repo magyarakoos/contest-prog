@@ -21,7 +21,9 @@ int main() {
         for (int i = 0; i < 26; i++) {
             res += min(lC[i], uC[i]);
             diff_sum += abs(lC[i] - uC[i]) / 2;
+            cout << abs(lC[i] - uC[i]) / 2 << " ";
         }
+        cout << res << "\n";
         cout << res + min(diff_sum, K) * 2 << "\n";
     }
 }
