@@ -1,16 +1,16 @@
-import kotlin.math.abs
-import kotlin.math.min
+import kotlin.math.*
 
 fun main() {
-    val T = readLine()!!.toInt()
+    val T = readln().toInt()
     repeat(T) {
-        val (N, K) = readLine()!!.split(" ").map { it.toInt() }
+        val (N, K) = readln().split(" ").map { it.toInt() }
         val lC = IntArray(26)
         val uC = IntArray(26)
-        readLine()!!.forEach { c ->
+        readln().forEach { c ->
             if (c.isLowerCase()) {
                 lC[c - 'a']++
-            } else {
+            }
+            else if (c.isUpperCase()) {
                 uC[c - 'A']++
             }
         }
