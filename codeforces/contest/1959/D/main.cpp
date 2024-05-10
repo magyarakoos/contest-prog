@@ -12,6 +12,20 @@ int main() {
         cin >> s;
         s += s;
 
-        vector<int> fc(s.size());
+        int M = s.size();
+
+        vector<int> fc(M);
+        int i = N;
+        while (i < M && s[i] != 'g') i++;
+        for (; i >= 0; i--) {
+            if (s[i] == 'g') {
+                fc[i] = i;
+            } else {
+                fc[i] = fc[i + 1];
+            }
+        }
+
+        for (int x : fc) cout << x << " ";
+        cout << "\n";
     }
 }
