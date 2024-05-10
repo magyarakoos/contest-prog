@@ -3,7 +3,7 @@ import kotlin.math.*
 fun main() {
     val T = readln().toInt()
     repeat(T) {
-        val (N, K) = readln().split(" ").map { it.toInt() }
+        val K = readln().split(" ")[1].toInt()
         val lC = IntArray(26)
         val uC = IntArray(26)
         readln().forEach { c ->
