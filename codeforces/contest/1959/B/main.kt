@@ -1,7 +1,6 @@
 fun main() {
     var T = readln().toInt()
     repeat (T) {
-        readln()
         val A = readln().split(" ")
         println(A[0])
         println(A[1])
