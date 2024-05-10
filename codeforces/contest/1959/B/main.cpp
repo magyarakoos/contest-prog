@@ -41,10 +41,7 @@ int main() {
     while (T--) {
         string a, b;
         cin >> a >> b;
-        if (a == b) {
-            cout << "=\n";
-            continue;
-        }
-
+        int c = cmp(a, b);
+        cout << (c == 0 ? "=" : c == 1 ? "<" : ">") << "\n";
     }
 }
