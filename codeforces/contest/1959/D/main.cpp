@@ -18,7 +18,7 @@ int main() {
 
         int i = N;
         while (i < M && s[i] != 'g') i++;
-        
+
         for (; i >= 0; i--) {
             if (s[i] == 'g') {
                 fc[i] = i;
@@ -28,7 +28,7 @@ int main() {
         }
 
         int res = 0;
-        for (int i = 0; i < N; i++) {
+        for (i = 0; i < N; i++) {
             if (s[i] == c) {
                 res = max(res, fc[i] - i);
             }
