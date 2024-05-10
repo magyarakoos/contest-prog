@@ -19,5 +19,5 @@ fun solve() {
 fun main() {
     val scanner = Scanner(System.`in`)
     var T = scanner.nextInt()
-    for (i in 1 until T) solve()
+    for (i in 0 until T) solve()
 }
