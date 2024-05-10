@@ -16,9 +16,13 @@ int main(int argc, char* argv[]) {
         }
     }
 
+    ofstream fout("output.txt");
+
     for (size_t i = 2; i <= n; i++) {
         if (is_prime[i]) {
-            cout << i << "\n";
+            fout << i << "\n";
         }
     }
+
+    fout.close();
 }
