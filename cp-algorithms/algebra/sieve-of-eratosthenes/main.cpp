@@ -1,15 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-void sieve_of_eratosthenes(int n) {
-    
-}
- 
 int main(int argc, char* argv[]) {
-    int n = stoi(argv[1]);
+    ll n = stoll(argv[1]);
 
-    bool is_prime[n + 1];
-    memset(is_prime, 1, n + 1);
+    vector is_prime(n + 1, true);
 
     is_prime[0] = is_prime[1] = 0;
 
