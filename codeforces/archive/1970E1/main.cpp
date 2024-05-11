@@ -32,8 +32,6 @@ int main() {
             }
         }
     }
-    for (int j = 0; j < M; j++) {
-        cout << dp[N][j] << " ";
-    }
-    cout << "\n";
+    
+    cout << accumulate(all(dp[N]), 0);
 }
