@@ -16,9 +16,9 @@ void solve() {
     cin >> R;
 
     ll res = 0, mxh = R;
-    for (int X = 0; X <= R; X++) {
+    for (ll X = 0; X <= R; X++) {
         while (X * X + mxh * mxh >= (R + 1) * (R + 1)) mxh--;
-        for (int Y = mxh; Y > 0; Y--) {
+        for (ll Y = mxh; Y > 0; Y--) {
             if (X * X + Y * Y < R * R) break;
             res++;
         }
