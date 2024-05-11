@@ -32,6 +32,11 @@ int main() {
             }
         }
     }
-    
-    cout << accumulate(all(dp[N]), 0);
+
+    ll res = 0;
+    for (int j = 0; j < M; j++) {
+        res += dp[N][j];
+        res %= MOD;
+    }
+    cout << res;
 }
