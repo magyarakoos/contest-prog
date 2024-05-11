@@ -20,7 +20,7 @@ int main() {
     for (int& e : L) cin >> e;
 
     vector dp(N + 1, vector<ll>(M));
-    dp[0][1] = 1;
+    dp[0][0] = 1;
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
