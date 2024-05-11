@@ -19,14 +19,17 @@ int main() {
     for (int& e : S) cin >> e;
     for (int& e : L) cin >> e;
 
-    int S_sum = accumulate(all(S), 0),
-        L_sum = accumulate(all(L), 0);
+    ll S_sum = accumulate(all(S), 0),
+       L_sum = accumulate(all(L), 0);
     
-    int res = 0;
+    ll res = 0;
 
     for (int i = 0; i < N; i++) {
-        res += S_sum * S_sum;
+        res += (S[0] + L[0]) * S_sum;
         res %= MOD;
-
+        res += S[0] * L_sum;
+        res %= MOD;
     }
+
+    cout << res;
 }
