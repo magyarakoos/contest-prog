@@ -7,6 +7,12 @@
 using namespace std;
 using ll = long long;
 
+struct Item {
+    int index;
+    int balance;
+    char c;
+};
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     string s;
