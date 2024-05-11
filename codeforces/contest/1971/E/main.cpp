@@ -30,11 +30,9 @@ void solve() {
         }
 
         idx--;
-        int res = B[idx];
-        int delta_s = A[idx + 1] - A[idx];
-        int delta_t = B[idx + 1] - B[idx];
-        int velocity = delta_s / delta_t;
-        cout << res + (D - A[idx]) * delta_t / delta_s << " ";
+        ll delta_s = A[idx + 1] - A[idx];
+        ll delta_t = B[idx + 1] - B[idx];
+        cout << B[idx] + (D - A[idx]) * delta_t / delta_s << " ";
     }
     cout << "\n";
 }
