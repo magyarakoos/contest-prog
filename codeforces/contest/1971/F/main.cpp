@@ -12,7 +12,19 @@ const ll INF = 2e9, MAXN = 2e5, MOD = 1e9 + 7;
 
 #define cases 1
 void solve() {
+    ll R;
+    cin >> R;
 
+    ll res = 0, height = R;
+    for (int X = 0; X <= R; X++) {
+        while (X * X + height * height >= (R + 1) * (R + 1)) height--;
+        for (int Y = height; Y > 0; Y--) {
+            if (X * X + Y * Y < R * R) break;
+            res++;
+        }
+    }
+
+    cout << res * 4 << "\n";
 }
 
 int main() {
