@@ -25,9 +25,9 @@ int main() {
     for (int i = 1; i < N; i++) {
         for (int j = 0; j < M; j++) {
             for (int k = 0; k < M; k++) {
-                dp[i + 1][k] += (S[j] + L[j]) * S[k];
+                dp[i + 1][k] += dp[i][j] * (S[j] + L[j]) * S[k];
                 dp[i + 1][k] %= MOD;
-                dp[i + 1][k] += S[j] * L[k];   
+                dp[i + 1][k] += dp[i][j] * S[j] * L[k];   
                 dp[i + 1][k] %= MOD;
             }
         }
