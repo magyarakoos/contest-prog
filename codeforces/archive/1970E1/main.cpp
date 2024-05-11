@@ -22,12 +22,12 @@ int main() {
     ll S_sum = accumulate(all(S), 0),
        L_sum = accumulate(all(L), 0);
     
-    ll res = 0;
+    ll res = 1;
 
     for (int i = 0; i < N; i++) {
-        res += (S[0] + L[0]) * S_sum;
+        res *= (S[0] + L[0]) * S_sum % MOD;
         res %= MOD;
-        res += S[0] * L_sum;
+        res *= S[0] * L_sum % MOD;
         res %= MOD;
     }
 
