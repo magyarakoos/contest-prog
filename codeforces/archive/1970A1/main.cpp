@@ -18,8 +18,15 @@ int main() {
     string s;
     cin >> s;
     int N = sz(s);
-    vector<int> bal(N + 1);
-    for (int i = 1; i <= N; i++) {
+    vector<int> bal(N);
+    for (int i = 1; i < N; i++) {
         bal[i] = bal[i - 1] + (s[i - 1] == '(' ? 1 : -1);
     }
+    vector<Item> v(N);
+    for (int i = 0; i < N; i++) {
+        v[i] = {i, bal[i], s[i]};
+    }
+    sort(all(v), [](Item i) {
+        
+    });
 }
