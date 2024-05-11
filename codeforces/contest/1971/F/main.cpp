@@ -15,10 +15,10 @@ void solve() {
     ll R;
     cin >> R;
 
-    ll res = 0, height = R;
+    ll res = 0, mxh = R;
     for (int X = 0; X <= R; X++) {
-        while (X * X + height * height >= (R + 1) * (R + 1)) height--;
-        for (int Y = height; Y > 0; Y--) {
+        while (X * X + mxh * mxh >= (R + 1) * (R + 1)) mxh--;
+        for (int Y = mxh; Y > 0; Y--) {
             if (X * X + Y * Y < R * R) break;
             res++;
         }
