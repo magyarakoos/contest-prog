@@ -10,6 +10,12 @@ using ll = long long;
 void solve() {
     int N;
     cin >> N;
+    multiset<int> a, b, c;
+    for (int i = 0; i < N; i++) {
+        int X;
+        cin >> X;
+        a.insert(X);
+    }
 }
 
 int main() {
