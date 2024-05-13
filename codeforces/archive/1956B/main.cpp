@@ -16,6 +16,12 @@ void solve() {
         cin >> X;
         a.insert(X);
     }
+    for (int i = 0; i < N; i++) {
+        int cnt = 2 - a.count(i + 1);
+        for (int j = 0; j < cnt; j++) {
+            b.insert(i + 1);
+        }
+    }
 }
 
 int main() {
