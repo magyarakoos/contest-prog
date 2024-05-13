@@ -22,6 +22,11 @@ void solve() {
             b.insert(i + 1);
         }
     }
+    while (!a.empty()) {
+        for (int x : c) {
+            a.contains(x);
+        }
+    }
 }
 
 int main() {
