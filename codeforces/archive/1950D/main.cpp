@@ -11,7 +11,11 @@ const int MAXN = 1e5;
 vector<int> bindecS;
 
 bool isbindec(int x) {
-    return 0;
+    while (x) {
+        if (x % 10 > 1) return 0;
+        x /= 10;
+    }
+    return 1;
 }
 
 void solve() {
