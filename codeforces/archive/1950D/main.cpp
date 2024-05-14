@@ -40,6 +40,7 @@ int main() {
             bindecS.push_back(i);
         }
     }
+    DB(size(bindecS));
     int T;
     cin >> T;
     while (T--) solve();
