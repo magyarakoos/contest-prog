@@ -36,7 +36,7 @@ void solve() {
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    for (int i = MAXN; i >= 1; i--) {
+    for (int i = MAXN; i > 1; i--) {
         if (isbindec(i)) {
             bindecS.push_back(i);
         }
