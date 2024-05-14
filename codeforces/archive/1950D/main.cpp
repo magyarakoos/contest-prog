@@ -5,7 +5,7 @@
 
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
-#define size(v) (int)v.size()
+#define sz(v) (int)v.size()
 
 using namespace std;
 using ll = long long;
@@ -24,10 +24,11 @@ bool isbindec(int x) {
 void solve() {
     int N;
     cin >> N;
-    for (int x : bindecS) {
+    for (int i = 0; i < sz(bindecS); i++) {
         if (N == 1) break;
-        if (N % x == 0) {
-            N /= x;
+        if (N % bindecS[i] == 0) {
+            N /= bindecS[i];
+            i--;
         }
     }
     cout << (N == 1 ? "YES\n" : "NO\n");
