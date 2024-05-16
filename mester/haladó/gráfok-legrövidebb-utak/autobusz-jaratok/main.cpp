@@ -43,8 +43,9 @@ int main() {
     cout << abs(distS[E]) << "\n";
 
     stack<int> s;
-    while (E) {
+    while (1) {
         s.push(E);
+        if (S == E) break;
         E = prv[E];
     }
 
