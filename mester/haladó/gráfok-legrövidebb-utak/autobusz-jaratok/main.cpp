@@ -5,8 +5,7 @@
 #define size(v) (int)v.size()
 
 using namespace std;
-using ll = long long;
-using route = pair<ll, int>;
+typedef long long ll;
 
 const ll INF = 1e18;
 
@@ -26,7 +25,7 @@ int main() {
 
     vector<ll> distS(N + 1, INF);
     vector<int> prv(N + 1);
-    priority_queue<route, vector<route>, greater<route>> pq;
+    priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> pq;
 
     int S, E;
     cin >> S >> E;
