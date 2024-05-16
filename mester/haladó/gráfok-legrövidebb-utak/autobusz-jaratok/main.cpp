@@ -34,7 +34,7 @@ int main() {
         }
     }
 
-    cout << abs(distS[E]) << "\n";
+    cout << -distS[E] << "\n";
 
     stack<int> s;
     while (E) {
