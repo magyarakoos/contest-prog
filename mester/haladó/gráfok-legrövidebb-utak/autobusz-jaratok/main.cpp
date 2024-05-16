@@ -1,12 +1,6 @@
 #include <bits/stdc++.h>
-
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define size(v) (int)v.size()
-
 using namespace std;
 typedef long long ll;
-
 const ll INF = 1e18;
 
 int main() {
@@ -54,7 +48,7 @@ int main() {
         E = prv[E];
     }
 
-    cout << size(s) << "\n";
+    cout << s.size() << "\n";
     while (!s.empty()) {
         cout << s.top() << " ";
         s.pop();
