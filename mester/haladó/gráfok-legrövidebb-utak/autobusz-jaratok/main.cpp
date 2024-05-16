@@ -32,4 +32,33 @@ int main() {
     cin >> S >> E;
 
     distS[S] = 0;
+    pq.push({0, S});
+
+    while (!pq.empty()) {
+        auto [dist, u] = pq.top();
+        pq.pop();
+        if (dist != distS[u]) continue;
+        for (auto [v, w] : g[u]) {
+            if (dist + w < distS[v]) {
+                distS[v] = dist + w;
+                pq.push({dist + w, v});
+                prv[v] = u;
+            }
+        }
+    }
+
+    cout << distS[E] << "\n";
+
+    stack<int> s;
+    while (E) {
+        s.push(E);
+        E = prv[E];
+    }
+
+    cout << size(s) << "\n";
+    while (!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+    cout << "\n";
 }
