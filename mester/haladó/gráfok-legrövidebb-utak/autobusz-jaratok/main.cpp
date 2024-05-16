@@ -47,7 +47,7 @@ int main() {
         }
     }
 
-    cout << distS[E] << "\n";
+    cout << abs(distS[E]) << "\n";
 
     stack<int> s;
     while (E) {
