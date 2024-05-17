@@ -26,8 +26,7 @@ void solve() {
             a_sum++;
         }
     }
-    int res = 0;
-    if (a_sum >= K) res++;
+    int res = a_sum >= K;
     
     for (int i = M; i < N; i++) {
         ha[A[i - M]]--;
@@ -36,6 +35,7 @@ void solve() {
             ha[A[i]]++;
             a_sum++;
         }
+        res += a_sum >= K;
     }
 }
 
