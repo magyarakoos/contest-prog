@@ -32,7 +32,7 @@ void solve() {
     }
     cerr << "\n";
     for (int i = 1; i <= MAXN; i++) {
-        if (hb[i]) cerr << hb[i] << " ";
+        if (hb[i]) cerr << i << "," << hb[i] << " ";
     }
     cerr << "\n";
 
