@@ -33,12 +33,13 @@ void solve() {
     
     for (int i = M; i < N; i++) {
         if(ha[A[i - M]] > 0) ha[A[i - M]]--, a_sum--;
+        cerr << A[i - M] << "," << A[i] << ",";
         if (ha[A[i]] + 1 <= hb[A[i]]) {
             ha[A[i]]++;
             a_sum++;
         }
         res += a_sum >= K;
-        cout << a_sum << " ";
+        cerr << a_sum << " ";
     }
 
     cout << res << "\n";
