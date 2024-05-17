@@ -39,7 +39,7 @@ void solve() {
             a_sum++;
         }
         res += a_sum >= K;
-        cerr << a_sum << " ";
+        cerr << a_sum << "\n";
     }
 
     cout << res << "\n";
