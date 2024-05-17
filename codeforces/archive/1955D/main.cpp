@@ -28,7 +28,7 @@ void solve() {
     }
 
     for (int i = 1; i <= MAXN; i++) {
-        if (ha[i]) cerr << ha[i] << " ";
+        if (ha[i]) cerr << i << "," << ha[i] << " ";
     }
     cerr << "\n";
     for (int i = 1; i <= MAXN; i++) {
