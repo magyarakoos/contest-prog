@@ -37,6 +37,8 @@ void solve() {
         }
         res += a_sum >= K;
     }
+
+    cout << res << "\n";
 }
 
 int main() {
