@@ -28,6 +28,8 @@ void solve() {
     }
 
     int res = a_sum >= K;
+
+    cout << a_sum << " ";
     
     for (int i = M; i < N; i++) {
         if(ha[A[i - M]] > 0) ha[A[i - M]]--, a_sum--;
@@ -36,6 +38,7 @@ void solve() {
             a_sum++;
         }
         res += a_sum >= K;
+        cout << a_sum << " ";
     }
 
     cout << res << "\n";
