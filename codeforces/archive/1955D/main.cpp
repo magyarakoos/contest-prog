@@ -39,7 +39,11 @@ void solve() {
             a_sum++;
         }
         res += a_sum >= K;
-        cerr << a_sum << "\n";
+        cerr << a_sum << " | ";
+        for (int j = 1; j <= MAXN; j++) {
+            if (ha[j]) cout << ha[j] << "," << j << " ";
+        }
+        cout << "\n";
     }
 
     cout << res << "\n";
