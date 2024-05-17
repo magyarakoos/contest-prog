@@ -26,6 +26,16 @@ void solve() {
             a_sum++;
         }
     }
+
+    for (int i = 1; i <= MAXN; i++) {
+        if (ha[i]) cerr << ha[i] << " ";
+    }
+    cerr << "\n";
+    for (int i = 1; i <= MAXN; i++) {
+        if (hb[i]) cerr << hb[i] << " ";
+    }
+    cerr << "\n";
+
     int res = a_sum >= K;
     
     for (int i = M; i < N; i++) {
