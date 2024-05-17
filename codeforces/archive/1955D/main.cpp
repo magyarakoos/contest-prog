@@ -7,9 +7,36 @@
 using namespace std;
 using ll = long long;
 
+const int MAXN = 1e6;
+
 void solve() {
     int N, M, K;
     cin >> N >> M >> K;
+    vector<int> A(N), B(M);
+    for (int& x : A) cin >> x;
+    for (int& x : B) cin >> x;
+    vector<int> ha(MAXN + 1), hb(MAXN + 1);
+    for (int i = 0; i < M; i++) {
+        hb[B[i]]++;
+    }
+    int a_sum = 0;
+    for (int i = 0; i < M; i++) {
+        if (ha[A[i]] + 1 <= hb[A[i]]) {
+            ha[A[i]]++;
+            a_sum++;
+        }
+    }
+    int res = 0;
+    if (a_sum >= K) res++;
+    
+    for (int i = M; i < N; i++) {
+        ha[A[i - M]]--;
+        a_sum--;
+        if (ha[A[i]] + 1 <= hb[A[i]]) {
+            ha[A[i]]++;
+            a_sum++;
+        }
+    }
 }
 
 int main() {
