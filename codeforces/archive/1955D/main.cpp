@@ -30,8 +30,7 @@ void solve() {
     int res = a_sum >= K;
     
     for (int i = M; i < N; i++) {
-        ha[A[i - M]]--;
-        a_sum--;
+        if(ha[A[i - M]] > 0) ha[A[i - M]]--, a_sum--;
         if (ha[A[i]] + 1 <= hb[A[i]]) {
             ha[A[i]]++;
             a_sum++;
