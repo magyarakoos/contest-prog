@@ -27,15 +27,6 @@ void solve() {
         }
     }
 
-    for (int i = 1; i <= MAXN; i++) {
-        if (ha[i]) cerr << i << "," << ha[i] << " ";
-    }
-    cerr << "\n";
-    for (int i = 1; i <= MAXN; i++) {
-        if (hb[i]) cerr << i << "," << hb[i] << " ";
-    }
-    cerr << "\n";
-
     int res = a_sum >= K;
     
     for (int i = M; i < N; i++) {
@@ -46,9 +37,15 @@ void solve() {
             a_sum++;
         }
         res += a_sum >= K;
+
+        for (int j = 1; j <= MAXN; j++) {
+                if (ha[j]) cerr << j << "," << ha[j] << " ";
+        }
+        cerr << "\n";
     }
 
     cout << res << "\n";
+    cerr << "\n";
 }
 
 int main() {
