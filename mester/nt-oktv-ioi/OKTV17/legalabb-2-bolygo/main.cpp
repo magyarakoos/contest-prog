@@ -10,42 +10,27 @@ using ll = long long;
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int A, B, C;
+    int A, B, C, N;
     cin >> A >> B >> C;
+    N = A + B + C;
 
-    map<int, vector<int>> m;
+    map<int, int> m;
 
-    while (A--) {
+    while (N--) {
         int K, V;
         cin >> K >> V;
-        m[K].push_back(1);
-        m[V + 1].push_back(-1);
-    }
-    while (B--) {
-        int K, V;
-        cin >> K >> V;
-        m[K].push_back(1);
-        m[V + 1].push_back(-1);
-    }
-    while (C--) {
-        int K, V;
-        cin >> K >> V;
-        m[K].push_back(1);
-        m[V + 1].push_back(-1);
+        m[K]++;
+        m[V + 1]--;
     }
 
     int curr = 0, curr_K = 0;
     vector<array<int, 2>> res;
     for (const auto& [K, D] : m) {
-        int delta = 0;
-        for (int x : D) {
-            delta += x;
-        }
-        if (curr >= 2 && curr + delta < 2) {
+        if (curr >= 2 && curr + D < 2) {
             res.push_back({curr_K, K - 1});
         }
-        curr += delta;
-        curr_K = K;
+        curr += D;
+        curr_K = K - 1;
     }
     cout << size(res) << "\n";
     for (auto [K, V] : res) cout << K << " " << V << "\n";
