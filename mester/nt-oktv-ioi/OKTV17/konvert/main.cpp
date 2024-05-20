@@ -20,7 +20,7 @@ int main() {
     string s;
     cin >> s;
 
-    stack<array<string, 3>> st;
+    stack<Token> st;
 
     for (char c : s) {
         string ar = "+-*/";
