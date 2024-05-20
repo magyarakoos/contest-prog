@@ -18,7 +18,8 @@ int main() {
     for (char c : s) {
         string ar = "+-*/";
         if (ar.find(c) != ar.npos) {
-            
+            string b = st.top(); st.pop();
+            string a = st.top(); st.pop();
         } else {
             st.push(string(1, c));
         }
