@@ -14,10 +14,15 @@ struct Token {
     int precedence;
     Token() : a(""), b(""), op(""), precedence(-1) {}
     Token(string s) : a(""), b(""), op(s), precedence(-1) {}
-    Token operator +(Token t) {
-        
+    Token(string _a, string _b, string _op, int _prec) : a(_a), b(_b), op(_op), precedence(_prec) {}
+    string to_string() const {
+        return '(' + a + op + b + ')';
     }
 };
+
+Token combine(Token a, Token b, string op, int prec) {
+    return Token(a.to_string(), b.to_string(), op, prec);
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -38,5 +43,5 @@ int main() {
         }
     }
 
-    cout << st.top() << "\n";
+    cout << st.top().to_string() << "\n";
 }
