@@ -31,4 +31,11 @@ int main() {
         m[V].push_back(-1);
     }
 
+    int curr = 0;
+    for (const auto& [K, D] : m) {
+        for (int x : D) {
+            curr += x;
+        }
+        cout << curr << "\n";
+    }
 }
