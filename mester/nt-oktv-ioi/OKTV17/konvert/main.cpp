@@ -20,8 +20,8 @@ struct Token {
     string b;
     string op;
     int precedence;
-    Token() : a(""), b(""), op(""), precedence(-1) {}
-    Token(string s) : a(""), b(""), op(s), precedence(-1) {}
+    Token() : a(""), b(""), op(""), precedence(0) {}
+    Token(string s) : a(""), b(""), op(s), precedence(0) {}
     Token(string _a, string _b, string _op, int _prec) : a(_a), b(_b), op(_op), precedence(_prec) {}
     string to_string(bool par) const {
         return (par ? "(" : "") + a + op + b + (par ? ")" : "");
@@ -29,7 +29,7 @@ struct Token {
 };
 
 Token combine(Token a, Token b, string op, int prec) {
-    return Token(a.to_string(1), b.to_string(1), op, prec);
+    return Token(a.to_string(a.precedence > prec), b.to_string(b.precedence > prec), op, prec);
 }
 
 int main() {
