@@ -16,17 +16,11 @@ int main() {
     stack<string> st;
 
     for (char c : s) {
-        switch (c) {
-            case '+':
-                break;
-            case '-':
-                break;
-            case '*':
-                break;
-            case '/':
-                break;
-            default:
-                break;    
+        string ar = "+-*/";
+        if (ar.find(c) != ar.npos) {
+            
+        } else {
+            st.push(string(1, c));
         }
     }
 }
