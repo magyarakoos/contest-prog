@@ -39,7 +39,9 @@ int main() {
 
     bool busy = 0;
     int freeup = 0;
-    int mx_waiting = 0;
+    int mxcnt_w = 0;
+    int mxw_i = -1;
+    int mxw_t = 0;
     for (int i = 1; i < MAXT; i++) {
         for (Guy g : order[i]) {
             pq.push(g);
@@ -49,10 +51,14 @@ int main() {
             Guy curr = pq.top(); pq.pop();
             busy = 1;
             freeup = i + curr.T;
-            cout << curr.i << " " << curr.K << " | " << i << " " << i + curr.T << "\n";
+            int wait_time = i - curr.K;
+            if (mxw_t < wait_time) {
+                mxw_t = wait_time;
+                mxw_i = curr.i;
+            }
         }
-        mx_waiting = max(mx_waiting, size(pq));
+        mxcnt_w = max(mxcnt_w, size(pq));
     }
 
-    cout << 0 << "\n" << mx_waiting;
+    cout << mxw_i + 1 << "\n" << mxcnt_w;
 }
