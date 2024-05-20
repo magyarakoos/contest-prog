@@ -38,7 +38,6 @@ int main() {
     string s;
     cin >> s;
 
-
     stack<Token> st;
 
     for (char c : s) {
