@@ -7,6 +7,14 @@
 using namespace std;
 using ll = long long;
 
+const string ar = "+-*/";
+map<char, int> precS {
+    {'+', 2},
+    {'-', 2},
+    {'*', 1},
+    {'/', 1}
+};
+
 struct Token {
     string a;
     string b;
@@ -30,22 +38,16 @@ int main() {
     string s;
     cin >> s;
 
-    const string ar = "+-*/";
-    map<char, int> precS {
-        {'+', 2},
-        {'-', 2},
-        {'*', 1},
-        {'/', 1}
-    };
+
     stack<Token> st;
 
     for (char c : s) {
         if (ar.find(c) != ar.npos) {
             Token b = st.top(); st.pop();
             Token a = st.top(); st.pop();
-            st.push();
+            st.push(combine(a, b, string(1, c), precS[c]));
         } else {
-            st.push(string(1, c));
+            st.push({string(1, c)});
         }
     }
 
