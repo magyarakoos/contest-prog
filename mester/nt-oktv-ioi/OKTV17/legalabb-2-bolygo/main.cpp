@@ -34,7 +34,7 @@ int main() {
         m[V].push_back(-1);
     }
 
-    int curr = 0;
+    int curr = 0, curr_K = 0;
     for (const auto& [K, D] : m) {
         int delta = 0;
         for (int x : D) {
@@ -42,7 +42,9 @@ int main() {
         }
         if (curr >= 2 && curr + delta < 2) {
             cout << "INTERVAL FOUND MOTHERFUCKERS\n";
+            cout << curr_K << " " << K << "\n";
         }
         curr += delta;
+        curr_K = K;
     }
 }
