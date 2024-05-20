@@ -18,12 +18,9 @@ int main() {
 
     for (int i = N; i >= 1; i--) {
         for (int j = N; j >= i; j--) {
-            dp[i] += dp[j - i];
+            dp[j] += dp[j - i];
         }
     }
 
-    for (int i = 1; i <= N; i++) {
-        cout << dp[i] << " ";
-    }
-    cout << "\n";
+    cout << dp[N];
 }
