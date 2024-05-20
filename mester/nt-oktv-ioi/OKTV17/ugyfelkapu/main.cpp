@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+int MAXT = 5e4;
+
 struct Guy {
     int i;
     int K;
@@ -31,5 +33,9 @@ int main() {
         v[i].i = i;
     }
 
-    for (Guy g : v) cout << g.i << " " << g.K << " " << g.T << "\n";
+    vector<Guy*> order(MAXT);
+
+    for (int i = 1; i < MAXT; i++) {
+        
+    }
 }
