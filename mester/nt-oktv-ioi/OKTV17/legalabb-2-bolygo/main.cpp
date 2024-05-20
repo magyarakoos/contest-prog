@@ -30,8 +30,9 @@ int main() {
             res.push_back({curr_K, K - 1});
         }
         curr += D;
-        curr_K = K - 1;
+        curr_K = K;
     }
+    
     cout << size(res) << "\n";
     for (auto [K, V] : res) cout << K << " " << V << "\n";
 }
