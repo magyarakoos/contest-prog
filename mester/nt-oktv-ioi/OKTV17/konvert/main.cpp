@@ -25,4 +25,6 @@ int main() {
             st.push(string(1, c));
         }
     }
+
+    cout << st.top() << "\n";
 }
