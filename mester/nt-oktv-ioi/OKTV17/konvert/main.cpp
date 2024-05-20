@@ -10,8 +10,13 @@ using ll = long long;
 struct Token {
     string a;
     string b;
-    char op;
+    string op;
     int precedence;
+    Token() : a(""), b(""), op(""), precedence(-1) {}
+    Token(string s) : a(""), b(""), op(s), precedence(-1) {}
+    Token operator +(Token t) {
+        
+    }
 };
 
 int main() {
