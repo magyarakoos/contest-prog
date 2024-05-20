@@ -27,12 +27,15 @@ int main() {
     vector<array<int, 2>> res;
     for (const auto& [K, D] : m) {
         auto [DK, DV] = D;
+
         if (DV && curr >= 2 && curr + (DK - DV) < 2) {
             res.push_back({curr_K, K - 1});
         }
+
         if (DK && curr < 2 && curr + (DK - DV) >= 2) {
             curr_K = K;
         }
+        
         curr += DK - DV;
     }
 
