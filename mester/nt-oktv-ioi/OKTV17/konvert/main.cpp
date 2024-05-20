@@ -20,10 +20,10 @@ struct Token {
     string to_string(bool par) const {
         return (par ? "(" : "") + a + op + b + (par ? ")" : "");
     }
-};
+}; 
 
 Token combine(Token a, Token b, string op, int prec) {
-    return Token(a.to_string(a.precedence > prec), b.to_string(b.precedence > prec), op, prec);
+    return Token(a.to_string(a.precedence > prec), b.to_string(b.precedence > prec || (op == "-" && b.precedence == 2)), op, prec);
 }
 
 int main() {
