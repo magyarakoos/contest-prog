@@ -35,14 +35,14 @@ int main() {
     }
 
     int curr = 0, curr_K = 0;
+    vector<array<int, 2>> intvS;
     for (const auto& [K, D] : m) {
         int delta = 0;
         for (int x : D) {
             delta += x;
         }
         if (curr >= 2 && curr + delta < 2) {
-            cout << "INTERVAL FOUND MOTHERFUCKERS\n";
-            cout << curr_K << " " << K << "\n";
+            intvS.push_back({curr_K, K});
         }
         curr += delta;
         curr_K = K;
