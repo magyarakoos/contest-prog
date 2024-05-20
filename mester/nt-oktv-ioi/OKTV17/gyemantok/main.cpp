@@ -18,7 +18,7 @@ int main() {
 
     for (int i = N; i >= 1; i--) {
         for (int j = N; j >= i; j--) {
-            dp[i] += dp[j];
+            dp[i] += dp[j - i];
         }
     }
 
