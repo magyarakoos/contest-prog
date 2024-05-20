@@ -39,6 +39,7 @@ int main() {
 
     bool busy = 0;
     int freeup = 0;
+    int mx_waiting = 0;
     for (int i = 1; i < MAXT; i++) {
         for (Guy g : order[i]) {
             pq.push(g);
@@ -50,5 +51,8 @@ int main() {
             freeup = i + curr.T;
             cout << curr.i << " " << curr.K << " | " << i << " " << i + curr.T << "\n";
         }
+        mx_waiting = max(mx_waiting, size(pq));
     }
+
+    cout << 0 << "\n" << mx_waiting;
 }
