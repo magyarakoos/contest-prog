@@ -30,14 +30,20 @@ int main() {
     string s;
     cin >> s;
 
+    const string ar = "+-*/";
+    map<char, int> precS {
+        {'+', 2},
+        {'-', 2},
+        {'*', 1},
+        {'/', 1}
+    };
     stack<Token> st;
 
     for (char c : s) {
-        string ar = "+-*/";
         if (ar.find(c) != ar.npos) {
-            string b = st.top(); st.pop();
-            string a = st.top(); st.pop();
-            st.push('(' + a + c + b + ')');
+            Token b = st.top(); st.pop();
+            Token a = st.top(); st.pop();
+            st.push();
         } else {
             st.push(string(1, c));
         }
