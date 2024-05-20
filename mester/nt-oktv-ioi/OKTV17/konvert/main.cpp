@@ -1,11 +1,5 @@
 #include <bits/stdc++.h>
-
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define size(v) (int)v.size()
-
 using namespace std;
-using ll = long long;
 
 const string ar = "+-*/";
 map<char, int> precS {
@@ -37,7 +31,7 @@ int main() {
 
     string s;
     cin >> s;
-
+    
     stack<Token> st;
 
     for (char c : s) {
