@@ -28,14 +28,27 @@ int main() {
     int N;
     cin >> N;
     vector<Guy> v(N);
+    vector<vector<Guy>> order(MAXT);
     for (int i = 0; i < N; i++) {
         cin >> v[i].K >> v[i].T;
         v[i].i = i;
+        order[v[i].K].push_back(v[i]);
     }
 
-    vector<Guy*> order(MAXT);
+    priority_queue<Guy, vector<Guy>, Guy> pq;
 
+    bool busy = 0;
+    int freeup = 0;
     for (int i = 1; i < MAXT; i++) {
-        
+        for (Guy g : order[i]) {
+            pq.push(g);
+        }
+        if (i == freeup) busy = 0;
+        if (!busy && !pq.empty()) {
+            Guy curr = pq.top(); pq.pop();
+            busy = 1;
+            freeup = i + curr.T;
+            cout << i << " " << i + curr.T << "\n";
+        }
     }
 }
