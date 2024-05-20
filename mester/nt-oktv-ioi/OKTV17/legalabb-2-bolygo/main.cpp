@@ -47,4 +47,16 @@ int main() {
         curr += delta;
         curr_K = K;
     }
+    
+    vector<array<int, 2>> res;
+    for (int i = 0; i < size(intvS); i++) {
+        int K = intvS[i][0];
+        while (i + 1 < size(intvS) && intvS[i][1] + 1 == intvS[i + 1][0]) {
+            i++;
+        }
+        res.push_back({K, intvS[i][1]});
+    }
+
+    cout << size(res) << "\n";
+    for (auto [K, V] : res) cout << K << " " << V << "\n";
 }
