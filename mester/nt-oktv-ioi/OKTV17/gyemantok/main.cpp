@@ -12,4 +12,18 @@ int main() {
 
     int N;
     cin >> N;
+    
+    vector<ll> dp(N + 1);
+    dp[0] = 1;
+
+    for (int i = N; i >= 1; i--) {
+        for (int j = N; j >= i; j--) {
+            dp[i] += dp[j];
+        }
+    }
+
+    for (int i = 1; i <= N; i++) {
+        cout << dp[i] << " ";
+    }
+    cout << "\n";
 }
