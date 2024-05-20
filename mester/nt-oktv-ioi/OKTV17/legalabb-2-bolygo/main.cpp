@@ -19,19 +19,19 @@ int main() {
         int K, V;
         cin >> K >> V;
         m[K].push_back(1);
-        m[V].push_back(-1);
+        m[V + 1].push_back(-1);
     }
     while (B--) {
         int K, V;
         cin >> K >> V;
         m[K].push_back(1);
-        m[V].push_back(-1);
+        m[V + 1].push_back(-1);
     }
     while (C--) {
         int K, V;
         cin >> K >> V;
         m[K].push_back(1);
-        m[V].push_back(-1);
+        m[V + 1].push_back(-1);
     }
 
     int curr = 0, curr_K = 0;
@@ -42,12 +42,12 @@ int main() {
             delta += x;
         }
         if (curr >= 2 && curr + delta < 2) {
-            intvS.push_back({curr_K, K});
+            intvS.push_back({curr_K, K - 1});
         }
         curr += delta;
         curr_K = K;
     }
-    
+
     vector<array<int, 2>> res;
     for (int i = 0; i < size(intvS); i++) {
         int K = intvS[i][0];
