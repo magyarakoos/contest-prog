@@ -11,7 +11,10 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     int A, B, C;
+    cin >> A >> B >> C;
+
     map<int, vector<int>> m;
+    
     while (A--) {
         int K, V;
         cin >> K >> V;
