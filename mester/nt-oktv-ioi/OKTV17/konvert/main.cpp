@@ -7,13 +7,20 @@
 using namespace std;
 using ll = long long;
 
+struct Token {
+    string a;
+    string b;
+    char op;
+    int precedence;
+};
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     string s;
     cin >> s;
 
-    stack<string> st;
+    stack<array<string, 3>> st;
 
     for (char c : s) {
         string ar = "+-*/";
