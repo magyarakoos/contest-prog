@@ -48,7 +48,7 @@ int main() {
             Guy curr = pq.top(); pq.pop();
             busy = 1;
             freeup = i + curr.T;
-            cout << i << " " << i + curr.T << "\n";
+            cout << curr.i << " " << i << " " << i + curr.T << "\n";
         }
     }
 }
