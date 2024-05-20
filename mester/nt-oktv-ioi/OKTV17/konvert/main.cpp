@@ -20,6 +20,7 @@ int main() {
         if (ar.find(c) != ar.npos) {
             string b = st.top(); st.pop();
             string a = st.top(); st.pop();
+            st.push('(' + a + c + b + ')');
         } else {
             st.push(string(1, c));
         }
