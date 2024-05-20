@@ -14,7 +14,7 @@ int main() {
     cin >> A >> B >> C;
 
     map<int, vector<int>> m;
-    
+
     while (A--) {
         int K, V;
         cin >> K >> V;
@@ -36,9 +36,13 @@ int main() {
 
     int curr = 0;
     for (const auto& [K, D] : m) {
+        int delta = 0;
         for (int x : D) {
-            curr += x;
+            delta += x;
         }
-        cout << curr << "\n";
+        if (curr >= 2 && curr + delta < 2) {
+            cout << "INTERVAL FOUND MOTHERFUCKERS\n";
+        }
+        curr += delta;
     }
 }
