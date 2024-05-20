@@ -15,5 +15,18 @@ int main() {
 
     stack<string> st;
 
-    
+    for (char c : s) {
+        switch (c) {
+            case '+':
+                break;
+            case '-':
+                break;
+            case '*':
+                break;
+            case '/':
+                break;
+            default:
+                break;    
+        }
+    }
 }
