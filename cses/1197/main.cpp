@@ -15,14 +15,14 @@ int main() {
     for (auto& [U, V, W] : edgeS) cin >> U >> V >> W;
 
     vector distS(N + 1, INF);
-    vector<int> prv(N + 1);
+    vector<int> nxt(N + 1);
 
     distS[1] = 0;
 
     for (int i = 0; i < N - 1; i++) {
         for (auto [u, v, w] : edgeS) {
             if (distS[u] + w < distS[v]) {
-                prv[v] = u;
+                nxt[u] = v;
                 distS[v] = distS[u] + w;
             }
         }
@@ -32,11 +32,10 @@ int main() {
         if (distS[u] + w < distS[v]) {
             cout << "YES\n";
             int curr = u;
-            DB(curr, v);
             sleep(1);
             do {
                 cout << curr << " ";
-                curr = prv[curr];
+                curr = nxt[curr];
             } while (curr && curr != u);
             cout << v << "\n";
             exit(0);
