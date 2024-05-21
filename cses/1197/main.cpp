@@ -34,7 +34,7 @@ int main() {
             do {
                 cout << curr << " ";
                 curr = prv[curr];
-            } while (curr != v);
+            } while (curr && curr != v);
             cout << v << "\n";
             exit(0);
         }
