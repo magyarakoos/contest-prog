@@ -20,7 +20,7 @@ int main() {
         ll U, V, W;
         cin >> U >> V >> W;
         distS[U][V] = min(W, distS[U][V]);
-        distS[V][U] = min(W, distS[U][V]);
+        distS[V][U] = min(W, distS[V][U]);
     }
 
     for (int i = 1; i <= N; i++) {
