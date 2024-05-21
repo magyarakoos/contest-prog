@@ -32,26 +32,37 @@ int main() {
         FW[i][i] = 0;
     }
 
-    vector<int> res;
+    stack<ll> res;
+    vector<bool> used(N + 1);
 
     for (int x : order) {
+        used[x] = 1;
         for (int i = 1; i <= N; i++) {
             FW[x][i] = distS[x][i];
             FW[i][x] = distS[i][x];
         }
-        int curr = 0;
+
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
                 if (FW[i][x] + FW[x][j] < FW[i][j]) {
                     FW[i][j] = FW[i][x] + FW[x][j];
                 }
-                if (FW[i][j] != INF) {
-                    curr += FW[i][j];
-                }
-                cout << FW[i][j] << " ";
             }
-            cout << "\n";
         }
-        cout << curr << "\n";
+        
+        res.push(0);
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= N; j++) {
+                if (used[i] && used[j]) {
+                    res.top() += FW[i][j];
+                }
+            }
+        }
     }
+
+    while (!res.empty()) {
+        cout << res.top() << " ";
+        res.pop();
+    }
+    cout << "\n";
 }
