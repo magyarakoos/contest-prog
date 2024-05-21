@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <magyarakoos-debug.h>
 using namespace std;
 using ll = long long;
 
@@ -32,7 +33,8 @@ int main() {
             cout << "YES\n";
             int curr = v;
             do {
-                cout << curr << " ";
+                DB(curr);
+                sleep(1);
                 v = prv[curr];
             } while (curr != v);
             cout << "\n";
