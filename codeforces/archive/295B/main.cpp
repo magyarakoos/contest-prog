@@ -28,12 +28,24 @@ int main() {
     reverse(all(order));
 
     vector FW(N + 1, vector<ll>(N + 1, INF));
+    for (int i = 1; i <= N; i++) {
+        FW[i][i] = 0;
+    }
+
+    vector<int> res;
 
     for (int x : order) {
+        int curr = 0;
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
-
+                if (FW[i][x] + FW[x][j] < FW[i][j]) {
+                    FW[i][j] = FW[i][x] + FW[x][j];
+                }
+                if (FW[i][j] != INF) {
+                    curr += FW[i][j];
+                }
             }
         }
+        cout << curr << "\n";
     }
 }
