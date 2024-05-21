@@ -15,10 +15,9 @@ int main() {
     for (auto& [U, V, W] : edgeS) cin >> U >> V >> W;
 
     vector distS(N + 1, INF);
-    vector<int> nxt(N + 1);
+    vector<int> nxt(N + 1, 1);
 
     distS[1] = 0;
-    nxt[1] = 1;
 
     for (int i = 0; i < N - 1; i++) {
         for (auto [u, v, w] : edgeS) {
@@ -35,9 +34,7 @@ int main() {
             int curr = u;
             do {
                 curr = nxt[curr];
-                DB(curr);
-                sleep(1);
-                //cout << " " << curr;
+                cout << " " << curr;
             } while (curr != u);
             exit(0);
         }
