@@ -28,9 +28,9 @@ int main() {
     reverse(all(order));
 
     vector FW(N + 1, vector<ll>(N + 1, INF));
-    for (int i = 1; i <= N; i++) {
-        FW[i][i] = 0;
-    }
+    // for (int i = 1; i <= N; i++) {
+    //     FW[i][i] = 0;
+    // }
 
     vector<int> res;
 
