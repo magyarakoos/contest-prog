@@ -18,7 +18,7 @@ vector<int> path(int u, const vector<int>& prv) {
         res.push_back(curr);
         if (m.contains(curr)) {
             reverse(res.begin(), res.end());
-            return vector<int>(res.begin() + m[curr], res.end());
+            return vector<int>(res.begin() + m[curr], res.end() - 1);
         }
         m[curr] = res.size() - 1;
         curr = prv[curr];
