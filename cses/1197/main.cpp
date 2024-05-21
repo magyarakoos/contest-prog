@@ -1,4 +1,9 @@
 #include <bits/stdc++.h>
+#ifdef LOCAL
+#include <magyarakoos-debug.h>
+#else
+#define DB(...)
+#endif
 using namespace std;
 using ll = long long;
 
