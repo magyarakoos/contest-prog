@@ -28,20 +28,15 @@ int main() {
         }
     }
 
-    for (int i = 1; i <= N; i++) {
-        DB(i, prv[i]);
-    }
-
     for (auto [u, v, w] : edgeS) {
         if (distS[u] + w < distS[v]) {
             cout << "YES\n";
             int curr = v;
             do {
-                DB(curr);
-                sleep(1);
+                cout << curr << " ";
                 curr = prv[curr];
             } while (curr != v);
-            cout << "\n";
+            cout << v << "\n";
             exit(0);
         }
     }
