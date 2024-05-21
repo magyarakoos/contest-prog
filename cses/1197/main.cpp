@@ -18,6 +18,7 @@ int main() {
     vector<int> nxt(N + 1);
 
     distS[1] = 0;
+    nxt[1] = 1;
 
     for (int i = 0; i < N - 1; i++) {
         for (auto [u, v, w] : edgeS) {
@@ -35,7 +36,7 @@ int main() {
             do {
                 curr = nxt[curr];
                 cout << " " << curr;
-            } while (curr && curr != u);
+            } while (curr != u);
             exit(0);
         }
     }
