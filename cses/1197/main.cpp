@@ -31,7 +31,7 @@ int main() {
     for (auto [u, v, w] : edgeS) {
         if (distS[u] + w < distS[v]) {
             cout << "YES\n";
-            int curr = u;
+            int curr = v;
             sleep(1);
             do {
                 cout << curr << " ";
