@@ -31,13 +31,12 @@ int main() {
     for (auto [u, v, w] : edgeS) {
         if (distS[u] + w < distS[v]) {
             cout << "YES\n";
-            int curr = v;
-            sleep(1);
+            int curr = u;
             do {
                 cout << curr << " ";
+                if (curr == u) break;
                 curr = nxt[curr];
-            } while (curr && curr != u);
-            cout << v << "\n";
+            } while (curr);
             exit(0);
         }
     }
