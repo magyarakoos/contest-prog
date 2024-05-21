@@ -28,6 +28,10 @@ int main() {
         }
     }
 
+    for (int i = 1; i <= N; i++) {
+        DB(i, prv[i]);
+    }
+
     for (auto [u, v, w] : edgeS) {
         if (distS[u] + w < distS[v]) {
             cout << "YES\n";
