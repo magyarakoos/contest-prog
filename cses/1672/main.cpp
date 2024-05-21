@@ -17,10 +17,10 @@ int main() {
     }
 
     while (M--) {
-        int U, V, W;
+        ll U, V, W;
         cin >> U >> V >> W;
-        distS[U][V] = W;
-        distS[V][U] = W;
+        distS[U][V] = min(W, distS[U][V]);
+        distS[V][U] = min(W, distS[U][V]);
     }
 
     for (int i = 1; i <= N; i++) {
