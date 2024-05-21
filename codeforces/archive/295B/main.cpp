@@ -16,7 +16,6 @@ int main() {
     cin >> N;
 
     vector distS(N + 1, vector<int>(N + 1));
-
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j <= N; j++) {
             cin >> distS[i][j];
@@ -27,30 +26,17 @@ int main() {
     for (int& x : order) cin >> x;
     reverse(all(order));
 
-    vector FW(N + 1, vector<ll>(N + 1, INF));
-    for (int i = 1; i <= N; i++) {
-        FW[i][i] = 0;
-    }
-
     stack<ll> res;
     vector<bool> vis(N + 1);
 
     for (int x : order) {
         vis[x] = 1;
-        
-        for (int i = 1; i <= N; i++) {
-            FW[x][i] = distS[x][i];
-            FW[i][x] = distS[i][x];
-        }
-
         res.push(0);
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
-                if (FW[i][x] + FW[x][j] < FW[i][j]) {
-                    FW[i][j] = FW[i][x] + FW[x][j];
-                }
+                distS[i][j] = min(distS[i][j], distS[i][x] + distS[x][j]);
                 if (vis[i] && vis[j]) {
-                    res.top() += FW[i][j];
+                    res.top() += distS[i][j];
                 }
             }
         }
