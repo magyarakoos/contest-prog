@@ -39,7 +39,7 @@ int main() {
             do {
                 DB(curr);
                 sleep(1);
-                v = prv[curr];
+                curr = prv[curr];
             } while (curr != v);
             cout << "\n";
             exit(0);
