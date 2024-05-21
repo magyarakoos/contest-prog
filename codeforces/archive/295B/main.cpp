@@ -48,7 +48,9 @@ int main() {
                 if (FW[i][j] != INF) {
                     curr += FW[i][j];
                 }
+                cout << FW[i][j] << " ";
             }
+            cout << "\n";
         }
         cout << curr << "\n";
     }
