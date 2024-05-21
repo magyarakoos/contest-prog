@@ -30,13 +30,12 @@ int main() {
 
     for (auto [u, v, w] : edgeS) {
         if (distS[u] + w < distS[v]) {
-            cout << "YES\n";
+            cout << "YES\n" << u;
             int curr = u;
             do {
-                cout << curr << " ";
-                if (curr == u) break;
                 curr = nxt[curr];
-            } while (curr);
+                cout << " " << curr;
+            } while (curr && curr != u);
             exit(0);
         }
     }
