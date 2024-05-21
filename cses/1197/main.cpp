@@ -10,7 +10,7 @@ using ll = long long;
 const ll INF = 1e18;
 
 vector<int> path(int u, const vector<int>& prv) {
-    vector<int> res({u});
+    vector<int> res;
 
     int curr = prv[u];
     do {
