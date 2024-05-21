@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <magyarakoos-debug.h>
 using namespace std;
 using ll = long long;
 
@@ -34,7 +35,9 @@ int main() {
             int curr = u;
             do {
                 curr = nxt[curr];
-                cout << " " << curr;
+                DB(curr);
+                sleep(1);
+                //cout << " " << curr;
             } while (curr != u);
             exit(0);
         }
