@@ -16,11 +16,7 @@ vector<int> path(int u, const vector<int>& prv) {
     do {
         res.push_back(curr);
         curr = prv[curr];
-        DB(res.front());
-        DB(res.back());
-        DB("");
-        sleep(1);
-    } while(res.front() != res.back());
+    } while(res.size() == 1 || res.front() != res.back());
 
     reverse(res.begin(), res.end());
     return res;
