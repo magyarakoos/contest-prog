@@ -20,4 +20,8 @@ int main() {
             cin >> distS[i][j];
         }
     }
+
+    vector<int> order(N);
+    for (int& x : order) cin >> x;
+    reverse(all(order));
 }
