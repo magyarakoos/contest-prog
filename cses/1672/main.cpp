@@ -1,60 +1,38 @@
 #include <bits/stdc++.h>
-#define speed cin.tie(0); ios::sync_with_stdio(0)
-
 using namespace std;
-using ll = unsigned long long;
+using ll = long long;
 
-struct Route {
-public:
-    int node;
-    ll length;
-    bool operator()(Route a, Route b) {
-        return a.length > b.length;
-    }
-};
+const ll INF = 1e18;
 
 int main() {
-    speed;
-    int N, M;
-    cin >> N >> M;
+    cin.tie(0), ios::sync_with_stdio(0);
+    
+    int N, M, Q;
+    cin >> N >> M >> Q;
 
-    vector<vector<Route>> neighborS(N + 1);
-
-    while (M--) {
-        int U, V;
-        ll L;
-        cin >> U >> V >> L;
-        neighborS[U].push_back({V, L});
+    vector distS(N + 1, vector<ll>(N + 1, INF));
+    
+    for (int i = 1; i <= N; i++) {
+        distS[i][i] = 0;
     }
 
-    vector<ll> distanceS(N + 1, ULLONG_MAX);
+    while (M--) {
+        int U, V, W;
+        distS[U][V] = W;
+        distS[V][U] = W;
+    }
 
-    priority_queue<Route, vector<Route>, Route> pq;
-
-    pq.push({1, 0});
-    distanceS[1] = 0;
-
-    while (!pq.empty()) {
-        Route next = pq.top(); 
-        pq.pop();
-
-        // already found a shorter way to get to the 'next' node,
-        // so it's pointless to check any further
-        if (next.length != distanceS[next.node]) continue;
-
-        for (const Route& neighbor : neighborS[next.node]) {
-
-            ll dist = distanceS[next.node] + neighbor.length;
-
-            if (dist < distanceS[neighbor.node]) {
-
-                distanceS[neighbor.node] = dist;
-                pq.push({neighbor.node, dist});
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= N; j++) {
+            for (int k = 1; k <= N; k++) {
+                distS[i][j] = min(distS[i][j], distS[i][k] + distS[k][j]);
             }
         }
     }
 
-    for (int i = 1; i <= N; i++) {
-        cout << distanceS[i] << ' ';
+    while (Q--) {
+        int U, V;
+        cin >> U >> V;
+        cout << (distS[U][V] == INF ? -1 : distS[U][V]) << "\n";
     }
 }
