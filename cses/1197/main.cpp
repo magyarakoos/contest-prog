@@ -53,7 +53,9 @@ int main() {
         if (distS[u] + w < distS[v]) {
             prv[v] = u;
             cout << "YES\n";
-            for (int x : path(v, prv)) cout << x << " ";
+            auto p = path(v, prv);
+            reverse(p.begin(), p.end());
+            for (int x : p) cout << x << " ";
             cout << "\n";
             exit(0);
         }
