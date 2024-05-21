@@ -35,6 +35,10 @@ int main() {
     vector<int> res;
 
     for (int x : order) {
+        for (int i = 1; i <= N; i++) {
+            FW[x][i] = distS[x][i];
+            FW[i][x] = distS[i][x];
+        }
         int curr = 0;
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
