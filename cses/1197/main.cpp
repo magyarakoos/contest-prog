@@ -1,12 +1,6 @@
 #include <bits/stdc++.h>
-#ifdef LOCAL
-#include <magyarakoos-debug.h>
-#else
-#define DB(...)
-#endif
 using namespace std;
 using ll = long long;
-
 const ll INF = 1e18;
 
 vector<int> path(int u, const vector<int>& prv) {
