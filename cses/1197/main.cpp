@@ -27,5 +27,18 @@ int main() {
         }
     }
 
-    
+    for (auto [u, v, w] : edgeS) {
+        if (distS[u] + w < distS[v]) {
+            cout << "YES\n";
+            int curr = v;
+            do {
+                cout << curr << " ";
+                v = prv[curr];
+            } while (curr != v);
+            cout << "\n";
+            exit(0);
+        }
+    }
+
+    cout << "NO\n";
 }
