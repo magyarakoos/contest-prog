@@ -11,17 +11,20 @@ const ll INF = 1e18;
 
 vector<int> path(int u, const vector<int>& prv) {
     vector<int> res;
+    map<int, int> m;
 
     int curr = prv[u];
     do {
         res.push_back(curr);
+        if (m.contains(curr)) {
+            reverse(res.begin(), res.end());
+            return vector<int>(res.begin() + m[curr], res.end());
+        }
+        m[curr] = res.size() - 1;
         curr = prv[curr];
-        DB(res.front(), res.back(), "");
-        sleep(1);
-    } while(res.size() == 1 || res.front() != res.back());
+    } while(1);
 
-    reverse(res.begin(), res.end());
-    return res;
+    return {};
 }
 
 int main() {
