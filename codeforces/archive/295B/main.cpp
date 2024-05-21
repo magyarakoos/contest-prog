@@ -7,6 +7,8 @@
 using namespace std;
 using ll = long long;
 
+const ll INF = 1e18;
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -24,4 +26,14 @@ int main() {
     vector<int> order(N);
     for (int& x : order) cin >> x;
     reverse(all(order));
+
+    vector FW(N + 1, vector<ll>(N + 1, INF));
+
+    for (int x : order) {
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= N; j++) {
+
+            }
+        }
+    }
 }
