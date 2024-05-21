@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <magyarakoos-debug.h>
 using namespace std;
 using ll = long long;
 
@@ -31,8 +32,11 @@ int main() {
         if (distS[u] + w < distS[v]) {
             cout << "YES\n";
             int curr = v;
+            DB(curr, v);
+            sleep(1);
             do {
                 cout << curr << " ";
+                sleep(1);
                 curr = prv[curr];
             } while (curr && curr != v);
             cout << v << "\n";
