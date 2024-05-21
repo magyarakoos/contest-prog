@@ -18,6 +18,7 @@ int main() {
 
     while (M--) {
         int U, V, W;
+        cin >> U >> V >> W;
         distS[U][V] = W;
         distS[V][U] = W;
     }
