@@ -30,7 +30,7 @@ void solve() {
         res += m_12[{v[i], v[i + 1]}]++;
         res += m_13[{v[i], v[i + 2]}]++;
         res += m_23[{v[i + 1], v[i + 2]}]++;
-űasdas        res -= m_123[{v[i], v[i + 1], v[i + 2]}] * 3;
+        res -= m_123[{v[i], v[i + 1], v[i + 2]}] * 3;
         m_123[{v[i], v[i + 1], v[i + 2]}]++;
     }
 
@@ -42,5 +42,5 @@ int main() {
     int T = 1;
     if (cases) cin >> T;
     while (T--) solve();
-}alksnalkndaálskdáawlhdaálskxnas
-asldkansdlakan
+}
+
