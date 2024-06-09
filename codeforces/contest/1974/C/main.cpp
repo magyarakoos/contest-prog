@@ -43,4 +43,3 @@ int main() {
     if (cases) cin >> T;
     while (T--) solve();
 }
-
