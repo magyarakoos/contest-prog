@@ -17,7 +17,7 @@ typedef tree<
 vector<ll> less_cnt(const vector<int>& v) {
 	ordered_set os;
 	vector<ll> result(v.size());
-	for (int i = 0; i < v.size(); i++) {
+	for (size_t i = 0; i < v.size(); i++) {
 		result[i] = os.order_of_key(v[i] - 1);
 		os.insert(v[i]);
 	}
@@ -45,6 +45,7 @@ int main() {
 	auto lcnt = less_cnt(v), mcnt = more_cnt(v);
 	for (int i = 0; i < N; i++) {
 		result += lcnt[i] * mcnt[i];
+		cout << i << " " << lcnt[i] << " " << mcnt[i] << "\n";
 	}
 	cout << result << "\n";
 }
