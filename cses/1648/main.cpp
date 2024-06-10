@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 
 struct BIT {
-    vector<ll> t;  // binary indexed tree
+    vector<ll> t;
     int n;
 
     BIT(int n) {
