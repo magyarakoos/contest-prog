@@ -18,7 +18,7 @@ vector<ll> less_cnt(const vector<int>& v) {
 	ordered_set os;
 	vector<ll> result(v.size());
 	for (size_t i = 0; i < v.size(); i++) {
-		result[i] = os.order_of_key(v[i] - 1);
+		result[i] = os.size() - os.order_of_key(v[i] + 1);
 		os.insert(v[i]);
 	}
 	return result;
@@ -28,7 +28,7 @@ vector<ll> more_cnt(const vector<int>& v) {
 	ordered_set os;
 	vector<ll> result(v.size());
 	for (int i = v.size() - 1; ~i; i--) {
-		result[i] = os.size() - os.order_of_key(v[i] + 1);
+		result[i] = os.order_of_key(v[i] - 1);
 		os.insert(v[i]);
 	}
 	return result;
