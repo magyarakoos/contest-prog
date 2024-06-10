@@ -1,67 +1,48 @@
 #include <bits/stdc++.h>
-
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define size(v) (int)v.size()
-
 using namespace std;
 using ll = long long;
-constexpr int MAXN = 2e5;
 
-int N;
-ll a[4 * MAXN + 1];
+struct FenwickTree {
+    vector<ll> bit;  // binary indexed tree
+    int n;
 
-void build(const vector<int>& v, int curr, int tl, int tr) {
-    if (tl == tr) {
-        a[curr] = v[tl];
-        return;
+    FenwickTree(int n) {
+        this->n = n;
+        bit.assign(n, 0);
     }
 
-    int tmid = (tl + tr) / 2;
-    build(v, curr * 2, tl, tmid);
-    build(v, curr * 2 + 1, tmid + 1, tr);
-    a[curr] = a[curr * 2] + a[curr * 2 + 1];
-}
-
-ll query(int curr, int tl, int tr, int l, int r) {
-    if (l > r) {
-        return 0;
-    }
-    if (l == tl && r == tr) {
-        return a[curr];
-    }
-    
-    int tmid = (tl + tr) / 2;
-    return 
-        query(curr * 2, tl, tmid, l, min(tmid, r)) +
-        query(curr * 2 + 1, tmid + 1, tr, max(tmid + 1, l), r)
-    ;
-}
-
-void update(int curr, int tl, int tr, int pos, int x) {
-    if (tl == tr) {
-        a[curr] = x;
-        return;
+    FenwickTree(vector<int> const &a) : FenwickTree(a.size()) {
+        for (int i = 0; i < n; i++) {
+            bit[i] += a[i];
+            int r = i | (i + 1);
+            if (r < n) bit[r] += bit[i];
+        }
     }
 
-    int tmid = (tl + tr) / 2;
-    
-    if (pos <= tmid) {
-        update(curr * 2, tl, tmid, pos, x);
-    } else {
-        update(curr * 2 + 1, tmid + 1, tr, pos, x);
+    ll sum(int r) {
+        ll ret = 0;
+        for (; r >= 0; r = (r & (r + 1)) - 1)
+            ret += bit[r];
+        return ret;
     }
-    a[curr] = a[curr * 2] + a[curr * 2 + 1];
-}
+
+    ll sum(int l, int r) {
+        return sum(r) - sum(l - 1);
+    }
+
+    void add(int idx, int delta) {
+        for (; idx < n; idx = idx | (idx + 1))
+            bit[idx] += delta;
+    }
+};
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    int Q;
+    int N, Q;
     cin >> N >> Q;
     vector<int> v(N);
     for (int& x : v) cin >> x;
-
-    build(v, 1, 0, N - 1);
+    FenwickTree bit {v};
 
     while (Q--) {
         int type;
@@ -69,11 +50,12 @@ int main() {
         if (type == 1) {
             int K, U;
             cin >> K >> U;
-            update(1, 0, N - 1, K - 1, U);
+            bit.add(K - 1, U - v[K - 1]);
+            v[K - 1] = U;
         } else {
             int L, R;
             cin >> L >> R;
-            cout << query(1, 0, N - 1, L - 1, R - 1) << "\n";
+            cout << bit.sum(L - 1, R - 1) << "\n";
         }
     }
 }
