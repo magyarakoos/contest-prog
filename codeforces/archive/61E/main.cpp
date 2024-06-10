@@ -41,6 +41,8 @@ int main() {
 	cin >> N;
 	vector<int> v(N);
 	for (int& x : v) cin >> x;
+	for (int x : v) cout << x << " ";
+	cout << "\n";
 	ll result = 0;
 	auto lcnt = less_cnt(v), mcnt = more_cnt(v);
 	for (int i = 0; i < N; i++) {
