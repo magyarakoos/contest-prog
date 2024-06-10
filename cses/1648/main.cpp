@@ -2,27 +2,27 @@
 using namespace std;
 using ll = long long;
 
-struct FenwickTree {
-    vector<ll> bit;  // binary indexed tree
+struct BIT {
+    vector<ll> t;  // binary indexed tree
     int n;
 
-    FenwickTree(int n) {
+    BIT(int n) {
         this->n = n;
-        bit.assign(n, 0);
+        t.assign(n, 0);
     }
 
-    FenwickTree(vector<int> const &a) : FenwickTree(a.size()) {
+    BIT(const vector<int>& a) : BIT(a.size()) {
         for (int i = 0; i < n; i++) {
-            bit[i] += a[i];
+            t[i] += a[i];
             int r = i | (i + 1);
-            if (r < n) bit[r] += bit[i];
+            if (r < n) t[r] += t[i];
         }
     }
 
     ll sum(int r) {
         ll ret = 0;
         for (; r >= 0; r = (r & (r + 1)) - 1)
-            ret += bit[r];
+            ret += t[r];
         return ret;
     }
 
@@ -32,7 +32,7 @@ struct FenwickTree {
 
     void add(int idx, int delta) {
         for (; idx < n; idx = idx | (idx + 1))
-            bit[idx] += delta;
+            t[idx] += delta;
     }
 };
 
@@ -42,7 +42,7 @@ int main() {
     cin >> N >> Q;
     vector<int> v(N);
     for (int& x : v) cin >> x;
-    FenwickTree bit {v};
+    BIT bit {v};
 
     while (Q--) {
         int type;
