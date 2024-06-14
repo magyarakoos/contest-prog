@@ -5,7 +5,9 @@ using ll = long long;
 vector<int> lnk, crd;
 
 int find(int u) {
-    while (u != lnk[u]) u = lnk[u];
+    if (lnk[u] != u) {
+        lnk[u] = find(lnk[u]);
+    }
     return lnk[u];
 }
 
@@ -48,5 +50,13 @@ int main() {
         }
     }
 
-    cout << result << "\n";
+    int repr = find(1);
+    for (int i = 2; i <= N; i++) {
+        if (find(i) != repr) {
+            cout << "IMPOSSIBLE";
+            exit(0);
+        }
+    }
+
+    cout << result;
 }
