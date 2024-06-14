@@ -4,13 +4,13 @@ using ll = long long;
 
 vector<int> lnk, crd;
 
-bool same(int u, int v) {
-    return lnk[u] == lnk[v];
-}
-
 int find(int u) {
     while (u != lnk[u]) u = lnk[u];
     return lnk[u];
+}
+
+bool same(int u, int v) {
+    return find(u) == find(v);
 }
 
 void unite(int u, int v) {
@@ -28,8 +28,10 @@ int main() {
     cin >> N >> M;
 
     vector<array<int, 3>> edgeS(M);
+
     lnk.resize(N + 1);
-    crd.resize(N + 1);
+    iota(lnk.begin(), lnk.end(), 0);
+    crd.assign(N + 1, 1);
 
     for (int i = 0; i < M; i++) {
         cin >> edgeS[i][1] >> edgeS[i][2] >> edgeS[i][0];
