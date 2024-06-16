@@ -12,26 +12,10 @@ struct BIT2D {
         this->m = m;
     }
 
-    BIT2D(int n, int m, const vector<vector<int>>& a) : BIT2D(n, m) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                add(i, j, a[i][j]);
-            }
-        }
-    }
-
-    void add(int i, int j, int delta) {
-        while (i < n) {
-            add_j(i, j, delta);
-            i += (i & -i);
-        }
-    }
-
-    int sum(int i, int j) {
+    int sum(int x, int y) {
         int ret = 0;
-        for (; ~i; i--) {
-            ret += read_j(i, j);
-        }
+        for (int i = x; i >= 0; i = (i & (i + 1)) - 1)
+            for (int j = y; j >= 0; j = (j & (j + 1)) - 1) ret += t[i][j];
         return ret;
     }
 
@@ -39,21 +23,9 @@ struct BIT2D {
         return sum(i2, j2) - sum(i2, j1 - 1) - sum(i1 - 1, j2) + sum(i1, j1);
     }
 
-   private:
-    void add_j(int i, int j, int delta) {
-        while (j < m) {
-            t[i][j] += delta;
-            j += (j & -j);
-        }
-    }
-
-    int read_j(int i, int j) {
-        int ret = 0;
-        while (j >= 0) {
-            ret += t[i][j];
-            j -= (j & -j);
-        }
-        return ret;
+    void add(int x, int y, int delta) {
+        for (int i = x; i < n; i = i | (i + 1))
+            for (int j = y; j < m; j = j | (j + 1)) t[i][j] += delta;
     }
 };
 
@@ -63,17 +35,19 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    vector grid(N, vector<int>(N));
+    vector grid(N, vector<bool>(N));
+    BIT2D bit{N, N};
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             char c;
             cin >> c;
-            grid[i][j] = c == '*';
+            if (c == '*') {
+                bit.add(i, j, 1);
+                grid[i][j] = 1;
+            }
         }
     }
-
-    BIT2D bit{N, N, grid};
 
     while (Q--) {
         int type;
@@ -82,6 +56,7 @@ int main() {
             int i, j;
             cin >> i >> j;
             bit.add(i - 1, j - 1, grid[i][j] ? -1 : 1);
+            grid[i][j] = !grid[i][j];
         } else {
             int i1, j1, i2, j2;
             cin >> i1 >> j1 >> i2 >> j2;
