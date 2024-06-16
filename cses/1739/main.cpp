@@ -20,7 +20,7 @@ struct BIT2D {
     }
 
     int sum(int i1, int j1, int i2, int j2) {
-        return sum(i2, j2) - sum(i2, j1 - 1) - sum(i1 - 1, j2) + sum(i1, j1);
+        return sum(i2, j2) - sum(i2, j1 - 1) - sum(i1 - 1, j2) + sum(i1 - 1, j1 - 1);
     }
 
     void add(int x, int y, int delta) {
@@ -35,8 +35,8 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    vector grid(N, vector<bool>(N));
-    BIT2D bit{N, N};
+    vector grid(N, vector<int>(N));
+    BIT2D bit(N, N);
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -55,8 +55,8 @@ int main() {
         if (type == 1) {
             int i, j;
             cin >> i >> j;
-            bit.add(i - 1, j - 1, grid[i][j] ? -1 : 1);
-            grid[i][j] = !grid[i][j];
+            bit.add(i - 1, j - 1, grid[i - 1][j - 1] ? -1 : 1);
+            grid[i - 1][j - 1] = !grid[i - 1][j - 1];
         } else {
             int i1, j1, i2, j2;
             cin >> i1 >> j1 >> i2 >> j2;
