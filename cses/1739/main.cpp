@@ -15,9 +15,7 @@ struct BIT2D {
     BIT2D(int n, int m, const vector<vector<int>>& a) : BIT2D(n, m) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                t[i][j] += a[i][j];
-                int r = j | (j + 1);
-                if (r < m) t[i][r] += t[i][j];
+                add(i, j, a[i][j]);
             }
         }
     }
@@ -51,7 +49,7 @@ struct BIT2D {
 
     int read_j(int i, int j) {
         int ret = 0;
-        while (j > 0) {
+        while (j >= 0) {
             ret += t[i][j];
             j -= (j & -j);
         }
