@@ -20,7 +20,8 @@ struct BIT2D {
     }
 
     int sum(int i1, int j1, int i2, int j2) {
-        return sum(i2, j2) - sum(i2, j1 - 1) - sum(i1 - 1, j2) + sum(i1 - 1, j1 - 1);
+        return sum(i2, j2) - sum(i2, j1 - 1) - sum(i1 - 1, j2) +
+               sum(i1 - 1, j1 - 1);
     }
 
     void add(int x, int y, int delta) {
