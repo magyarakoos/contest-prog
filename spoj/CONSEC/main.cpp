@@ -12,9 +12,9 @@ struct DSU {
 
     int find(int x) {
         if (x != lnk[x]) {
-            x = find(lnk[x]);
+            lnk[x] = find(lnk[x]);
         }
-        return x;
+        return lnk[x];
     }
 
     bool same(int x, int y) { return find(x) == find(y); }
