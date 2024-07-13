@@ -13,7 +13,7 @@ int main() {
         int x;
         cin >> x;
         while (!s.empty() && s.top()[0] >= x) s.pop();
-        cout << s.top()[1] << " ";
+        cout << (!s.empty() ? s.top()[1] + 1 : 0) << " ";
         s.push({x, i});
     }
     cout << "\n";
