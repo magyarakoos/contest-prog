@@ -57,9 +57,11 @@ void solve() {
     for (int i = Q - 1; i >= 0; i--) {
         auto [type, j] = queryS[i];
         if (type == 1) {
-            result.push(dsu.rnk[j]);
+            cout << s << "\n";
+            result.push(dsu.rnk[dsu.find(j)]);
         } else {
             char c = type;
+            s[j] = c;
             if (j == 0) {
                 if (c == s[1]) {
                     dsu.unite(0, 1);
