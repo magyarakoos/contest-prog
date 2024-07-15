@@ -47,8 +47,8 @@ int main() {
     result = LLONG_MAX;
     sort(a.begin(), a.end());
     do {
+        sort(b.begin(), b.end());
         do {
-            sort(b.begin(), b.end());
             backtrack(a, b);
         } while (next_permutation(b.begin(), b.end()));
     } while (next_permutation(a.begin(), a.end()));
