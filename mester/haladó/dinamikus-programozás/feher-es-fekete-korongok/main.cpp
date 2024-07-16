@@ -25,5 +25,7 @@ int main() {
         }
     }
 
-    cout << (accumulate(a.begin(), a.end(), 0) - dp[0][N - 1]) / 2 + dp[0][N - 1] << "\n";
+    cout << (accumulate(a.begin(), a.end(), 0) - dp[0][N - 1]) / 2 +
+                dp[0][N - 1]
+         << "\n";
 }
