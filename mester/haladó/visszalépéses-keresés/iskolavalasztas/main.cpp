@@ -1,4 +1,3 @@
-#include <cassert>
 #include <iostream>
 #include <utility>
 #include <vector>
@@ -38,5 +37,6 @@ int main() {
         continue;
     }
 
-    assert(0);
+    for (int i = 0; i < N; i++) cout << "0 ";
+    cout << "\n";
 }
