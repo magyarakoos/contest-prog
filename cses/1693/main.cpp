@@ -32,7 +32,7 @@ int main() {
     g.resize(N + 1);
     in.resize(N + 1);
     out.resize(N + 1);
-    
+
     for (int i = 0; i < M; i++) {
         int U, V;
         cin >> U >> V;
