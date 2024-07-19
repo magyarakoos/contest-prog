@@ -4,7 +4,6 @@
 using namespace std;
 using ll = long long;
 
-ll g[21][21], dp[21][1 << 20];
 const ll MOD = 1e9 + 7;
 
 int main() {
@@ -13,10 +12,12 @@ int main() {
     int N, M;
     cin >> N >> M;
 
+    vector g(N, vector<ll>(N)), dp(N, vector<ll>(1 << N));
+
     while (M--) {
         int U, V;
         cin >> U >> V;
-        g[--U][--V]++;
+        g[U - 1][V - 1]++;
     }
 
     dp[N - 1][1 << (N - 1)] = 1;
@@ -25,13 +26,12 @@ int main() {
         for (int u = 0; u < N; u++) {
             if (!(mask >> u & 1)) continue;
             for (int v = 0; v < N; v++) {
-                if (v == u) continue;
-                if (mask & (1 << v)) {
-                    dp[u][mask] += dp[v][mask - (1 << u)] * g[u][v];
-                    dp[u][mask] %= MOD;
-                }
+                if (!(mask >> v & 1)) continue;
+                dp[u][mask] += dp[v][mask ^ (1 << u)] * g[u][v];
+                dp[u][mask] %= MOD;
             }
         }
     }
+
     cout << dp[0][(1 << N) - 1];
 }
