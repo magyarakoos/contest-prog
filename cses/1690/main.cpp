@@ -2,13 +2,10 @@
 #include <vector>
 
 using namespace std;
+using ll = long long;
 
-const int MOD = 1e9 + 7;
-
-void madd(int& x, int y) {
-    x += y;
-    if (x >= MOD) x -= MOD;
-}
+ll g[21][21], dp[21][1 << 20];
+const ll MOD = 1e9 + 7;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -16,27 +13,25 @@ int main() {
     int N, M;
     cin >> N >> M;
 
-    vector<vector<int>> g(N);
-
     while (M--) {
         int U, V;
         cin >> U >> V;
-        g[V - 1].push_back(U - 1);
+        g[--U][--V]++;
     }
 
-    vector dp(1 << N, vector<int>(N));
+    dp[N - 1][1 << (N - 1)] = 1;
 
-    dp[1][0] = 1;
-
-    for (int mask = 1; mask < 1 << N; mask++) {
-        for (int u = 0; u < N - 1; u++) {
+    for (int mask = 1 << (N - 1); mask < 1 << N; mask++) {
+        for (int u = 0; u < N; u++) {
             if (!(mask >> u & 1)) continue;
-            for (int v : g[u]) {
-                if (!(mask >> v & 1)) continue;
-                madd(dp[mask][u], dp[mask ^ (1 << u)][v]);
+            for (int v = 0; v < N; v++) {
+                if (v == u) continue;
+                if (mask & (1 << v)) {
+                    dp[u][mask] += dp[v][mask - (1 << u)] * g[u][v];
+                    dp[u][mask] %= MOD;
+                }
             }
         }
     }
-
-    cout << dp[(1 << N) - 1][N - 1];
+    cout << dp[0][(1 << N) - 1];
 }
