@@ -20,6 +20,16 @@ bool has_tour() {
             return 0;
         }
     }
+
+    if (st == -1) { // Eulerian circuit
+        for (int u = 0; u < 26; u++) {
+            if (out[u]) {
+                st = u;
+                break;
+            }
+        }
+    }
+
     return 1;
 }
 
