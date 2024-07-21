@@ -18,7 +18,7 @@ int main() {
     for (auto& [b, a] : movieS) cin >> a >> b;
     sort(movieS.begin(), movieS.end());
 
-    while (K--) memberS.insert(K);
+    while (K--) memberS.insert(0);
 
     int result = 0;
 
