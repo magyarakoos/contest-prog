@@ -3,15 +3,14 @@ using namespace std;
 constexpr int MOD = 1e9 + 7;
 vector<vector<int>> g;
 vector<bool> vis;
-vector<int> dp;
-stack<int> s;
+vector<int> dp, order;
 
 void dfs(int u) {
     vis[u] = 1;
     for (int v : g[u]) {
         if (!vis[v]) dfs(v);
     }
-    s.push(u);
+    order.push_back(u);
 }
 
 int main() {
@@ -26,8 +25,15 @@ int main() {
         g[U].push_back(V);
     }
     dfs(1);
-    vector<int> order;
-    while (!s.empty()) order.push_back(s.top()), s.pop();
-    for (int x : order) cout << x << " ";
-    cout << "\n";
+
+    dp[N] = 1;
+
+    for (int u : order) {
+        for (int v : g[u]) {
+            dp[u] += dp[v];
+            dp[u] %= MOD;
+        }
+    }
+
+    cout << dp[1] << "\n";
 }
