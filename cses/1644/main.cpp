@@ -14,7 +14,7 @@ vector<ll> sliding_min(const vector<ll>& a, int N, int K) {
 
     for (int i = 0; i < N; i++) {
         while (!dq.empty() && dq.front()[1] <= i - K) dq.pop_front();
-        while (!dq.empty() && dq.back()[0]  >=  a[i]) dq.pop_back();
+        while (!dq.empty() && dq.back()[0] >= a[i]) dq.pop_back();
 
         dq.push_back({a[i], i});
         result.push_back(dq.front()[0]);
@@ -31,10 +31,9 @@ int main() {
 
     partial_sum(a.begin(), a.end(), ps.begin() + 1);
 
-
     vector<ll> slmn = sliding_min(ps, N, B - A + 1);
 
-    ll result = INT_MIN;
+    ll result = LLONG_MIN;
 
     for (int i = A - 1; i < N; i++) {
         result = max(result, ps[i + 1] - slmn[i - A + 1]);
