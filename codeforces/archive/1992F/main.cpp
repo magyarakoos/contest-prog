@@ -1,39 +1,36 @@
+#include <algorithm>
 #include <iostream>
+#include <set>
 #include <vector>
 
 using namespace std;
 
 void solve() {
-    vector<int> divS;
+    set<int> divS;
 
     int N, X;
     cin >> N >> X;
 
-    int result = 0;
+    int result = 1;
 
     while (N--) {
         int a;
         cin >> a;
         if (X % a) continue;
 
-        int sz = divS.size();
-        while (sz--) {
-            if ((long long)divS[sz] * a <= X) {
-                divS.push_back(divS[sz] * a);
-            }
-        }
-        divS.push_back(a);
-
-        for (int d : divS) {
-            if (d == X) {
+        for (int d : vector<int>(divS.begin(), divS.end())) {
+            if (d * a > X) continue;
+            if (d * a == X) {
                 result++;
-                divS = {a};
+                divS.clear();
                 break;
             }
+            divS.insert(d * a);
         }
+        divS.insert(a);
     }
 
-    cout << result + !divS.empty() << "\n";
+    cout << result << "\n";
 }
 
 int main() {
