@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <iostream>
 #include <set>
 #include <vector>
@@ -17,16 +16,16 @@ void solve() {
         int a;
         cin >> a;
         if (X % a) continue;
-
-        for (int d : vector<int>(divS.begin(), divS.end())) {
-            if (d * a > X) continue;
-            if (d * a == X) {
-                result++;
-                divS.clear();
-                break;
-            }
-            divS.insert(d * a);
+        if (divS.count(X / a)) {
+            divS = {a};
+            result++;
+            continue;
         }
+
+        vector<int> buffer = {a};
+        for (int b : divS)
+            if ((long long)a * b < X) buffer.push_back(a * b);
+        for (int b : buffer) divS.insert(b);
         divS.insert(a);
     }
 
