@@ -15,7 +15,7 @@ void solve() {
     while (N--) {
         int a;
         cin >> a;
-        if (X % a) continue;
+        if (X % a || a == 1) continue;
         if (divS.count(X / a)) {
             divS = {a};
             result++;
