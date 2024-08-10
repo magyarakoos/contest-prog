@@ -10,7 +10,6 @@
 using namespace std;
 
 int main() {
-    /* bemenet beolvasása */
     int N = 0;
     int Q = 0;
 
