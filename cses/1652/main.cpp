@@ -30,7 +30,7 @@ int main() {
      * db_eddig[i][j]: az erdő 'i'-edik sorának 'j'-edik
      * oszlopáig ennyi fa található
      */
-    vector<vector<int>> db_eddig(N, vector<int>(N, 0));
+    vector<vector<int>> db_eddig(N + 1, vector<int>(N + 1, 0));
 
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j <= N; j++) {
