@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 #ifdef LOCAL
-#include <magyarakoos-debug.h>
+#include <debug.h>
 #else
 #define DB(...)
 #endif
