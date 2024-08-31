@@ -18,7 +18,6 @@ const ll INF = 2e9, MAXN = 2e5, MOD = 1e9 + 7;
 void solve() {
     int Y;
     cin >> Y;
-
     if (Y % 400 == 0) {
         cout << "366\n";
     } else if (Y % 100 == 0) {
