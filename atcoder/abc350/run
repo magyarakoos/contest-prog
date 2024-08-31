@@ -1,0 +1,4 @@
+#!/bin/bash
+g++ -o main "$1/main.cpp" -O2 -Wall -fsanitize=undefined
+./main < input
+rm main
