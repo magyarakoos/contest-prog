@@ -16,7 +16,9 @@ const ll INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
 
 vector<array<int, 2>> t;
 
-array<int, 2> combine(array<int, 2> a, array<int, 2> b) {}
+array<int, 2> combine(array<int, 2> a, array<int, 2> b) {
+    return a[0] < b[0] ? b : a;
+}
 
 void update(int curr, int tl, int tr, int p, array<int, 2> a) {}
 
@@ -41,7 +43,7 @@ void solve() {
 
     for (int i = 0; i < N; i++) {
         auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
-        update(1, 0, N - 1, m[i], {mx + 1, i});
+        update(1, 0, N - 1, m[a[i]], {mx + 1, i});
     }
 }
 
