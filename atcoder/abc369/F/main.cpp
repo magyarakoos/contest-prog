@@ -42,6 +42,10 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
                    query(curr * 2 + 1, tm + 1, tr, max(tm + 1, l), r));
 }
 
+string path(array<int, 2> a, array<int, 2> b) {
+    return string(b[0] - a[0], 'D') + string(b[1] - a[1], 'R');
+}
+
 #define cases 0
 void solve() {
     int H, W, N;
