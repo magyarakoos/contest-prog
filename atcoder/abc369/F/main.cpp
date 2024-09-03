@@ -66,10 +66,12 @@ void solve() {
     for (int i = 0; i < N; i++) {
         auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
         update(1, 0, N - 1, m[a[i]], {mx + 1, i});
-        tc[m[a[i]]] = {mx + 1, i, j};
+        tc[m[a[i]]] = {mx + 1, i, mx ? j : -1};
     }
 
     DB(tc);
+
+    int i = H - 1, j = W - 1;
 }
 
 int main() {
