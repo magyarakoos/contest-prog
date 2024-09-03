@@ -61,22 +61,11 @@ void solve() {
     map<array<int, 2>, int> m;
     for (int i = 0; i < N; i++) { m[{b[i][1], b[i][0]}] = i; }
 
+    int mx_i = 0;
+
     for (int i = 0; i < N; i++) {
         auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
         update(1, 0, N - 1, m[a[i]], {mx + 1, i});
-        cout << query(1, 0, N - 1, m[a[i]], m[a[i]])[0] << "\n";
-
-        if (j == -1) {
-            cout << "0 0";
-        } else {
-            cout << a[j][0] << " " << a[j][1];
-        }
-        cout << " -> " << a[i][0] << " " << a[i][1] << "\n";
-        for (int i = 0; i < N; i++) {
-            cout << query(1, 0, N - 1, i, i)[0] << " ";
-        }
-        cout << "\n";
-        cout << i << " " << m[a[i]] << "\n\n";
     }
 }
 
