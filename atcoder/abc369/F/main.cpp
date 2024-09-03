@@ -48,6 +48,8 @@ void solve() {
     int H, W, N;
     cin >> H >> W >> N;
 
+    t.resize(4 * N + 4);
+
     vector<array<int, 2>> a(N), b(N);
     for (int i = 0; i < N; i++) {
         cin >> a[i][0] >> a[i][1];
