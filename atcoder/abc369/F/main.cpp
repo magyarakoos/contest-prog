@@ -20,6 +20,7 @@ vector<array<int, 2>> t;
 void solve() {
     int H, W, N;
     cin >> H >> W >> N;
+
     vector<array<int, 2>> a(N), b(N);
     for (int i = 0; i < N; i++) {
         cin >> a[i][0] >> a[i][1];
