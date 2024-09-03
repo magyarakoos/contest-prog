@@ -83,13 +83,14 @@ void solve() {
 
     nxt = tc[nxt][2];
 
-    return;
     while (nxt != -1) {
         int ni = a[tc[nxt][1]][0], nj = a[tc[nxt][1]][1];
         p += path({ni, nj}, {i, j});
         i = ni, j = nj;
         nxt = tc[nxt][2];
     }
+
+    p += path({0, 0}, {i, j});
 
     cout << result << "\n" << p;
 }
