@@ -36,6 +36,7 @@ void update(int curr, int tl, int tr, int p, array<int, 2> a) {
 }
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {
+    cout << curr << endl;
     if (tr < tl || r < l) { return {-1, -1}; }
     if (tl == l && tr == r) { return t[curr]; }
     int tm = (tl + tr) / 2;
