@@ -81,8 +81,6 @@ void solve() {
     int i = a[tc[nxt][1]][0], j = a[tc[nxt][1]][1];
     string p = path({i, j}, {H - 1, W - 1});
 
-    return;
-
     nxt = tc[nxt][2];
 
     while (nxt != -1) {
