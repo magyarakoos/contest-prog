@@ -74,6 +74,7 @@ void solve() {
             cout << query(1, 0, N - 1, i, i)[0] << " ";
         }
         cout << "\n";
+        cout << i << " " << m[a[i]] << "\n\n";
         update(1, 0, N - 1, m[a[i]], {mx + 1, i});
     }
 }
