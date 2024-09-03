@@ -20,7 +20,13 @@ array<int, 2> combine(array<int, 2> a, array<int, 2> b) {
     return a[0] < b[0] ? b : a;
 }
 
-void update(int curr, int tl, int tr, int p, array<int, 2> a) {}
+void update(int curr, int tl, int tr, int p, array<int, 2> a) {
+    if (tr < tl) return;
+    if (tl == tr) {
+        t[curr] = a;
+        return;
+    }
+}
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {}
 
