@@ -77,14 +77,17 @@ void solve() {
     DB(tc);
 
     int nxt = max_element(all(tc)) - tc.begin();
+    int result = tc[nxt][0];
     int i = a[tc[nxt][1]][0], j = a[tc[nxt][1]][1];
     string p = path({i, j}, {H - 1, W - 1});
 
+    nxt = tc[nxt][2];
+
     while (nxt != -1) {
-        nxt = tc[nxt][2];
-        int ni = 0, nj = 0;
+        int ni = a[tc[nxt][1]][0], nj = a[tc[nxt][1]][1];
         p += path({ni, nj}, {i, j});
         i = ni, j = nj;
+        nxt = tc[nxt][2];
     }
 }
 
