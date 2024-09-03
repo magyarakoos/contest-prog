@@ -14,6 +14,8 @@ using ll = long long;
 
 const ll INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
 
+vector<array<int, 2>> t;
+
 #define cases 0
 void solve() {
     int H, W, N;
@@ -23,8 +25,10 @@ void solve() {
         cin >> a[i][0] >> a[i][1];
         b[i] = {a[i][1], a[i][0]};
     }
+
     sort(all(a));
     sort(all(b));
+
     map<array<int, 2>, int> m;
     for (int i = 0; i < N; i++) { m[b[i]] = i; }
 }
