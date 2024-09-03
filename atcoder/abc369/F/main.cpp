@@ -16,6 +16,12 @@ const ll INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
 
 vector<array<int, 2>> t;
 
+array<int, 2> combine(array<int, 2> a, array<int, 2> b) {}
+
+void update(int curr, int tl, int tr, int p, int x) {}
+
+array<int, 2> query(int curr, int tl, int tr, int l, int r) {}
+
 #define cases 0
 void solve() {
     int H, W, N;
@@ -32,6 +38,8 @@ void solve() {
 
     map<array<int, 2>, int> m;
     for (int i = 0; i < N; i++) { m[b[i]] = i; }
+
+    for (int i = 0; i < N; i++) {}
 }
 
 int main() {
