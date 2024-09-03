@@ -75,10 +75,14 @@ void solve() {
         tc[m[a[i]]] = {mx + 1, i, mx ? j : -1};
     }
 
+    DB(tc);
+
     int nxt = max_element(all(tc)) - tc.begin();
     int result = tc[nxt][0];
     int i = a[tc[nxt][1]][0], j = a[tc[nxt][1]][1];
-    string p = path({i, j}, {H - 1, W - 1});
+    string p;
+    if (i == H - 1 && j == W - 1) { result++ }
+    string p = /* path({i, j}, {H - 1, W - 1}); */;
 
     nxt = tc[nxt][2];
 
