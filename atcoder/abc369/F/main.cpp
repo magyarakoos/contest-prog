@@ -74,8 +74,6 @@ void solve() {
         tc[m[a[i]]] = {mx + 1, i, mx ? j : -1};
     }
 
-    DB(tc);
-
     int nxt = max_element(all(tc)) - tc.begin();
     int result = tc[nxt][0];
     int i = a[tc[nxt][1]][0], j = a[tc[nxt][1]][1];
@@ -91,6 +89,7 @@ void solve() {
     }
 
     p += path({0, 0}, {i, j});
+    reverse(all(p));
 
     cout << result << "\n" << p;
 }
