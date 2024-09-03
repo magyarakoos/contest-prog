@@ -60,7 +60,7 @@ void solve() {
     sort(all(b));
 
     map<array<int, 2>, int> m;
-    for (int i = 0; i < N; i++) { m[b[i]] = i; }
+    for (int i = 0; i < N; i++) { m[{b[i][1], b[i][0]}] = i; }
 
     for (int i = 0; i < N; i++) {
         auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
