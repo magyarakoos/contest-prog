@@ -88,8 +88,7 @@ void solve() {
     int nxt = max_element(all(tc)) - tc.begin();
     int result = tc[nxt][0];
     int i = a[tc[nxt][1]][0], j = a[tc[nxt][1]][1];
-    string p;
-    if (i != H - 1 || j != W - 1) { p = path({i, j}, {H - 1, W - 1}); }
+    string p = path({i, j}, {H - 1, W - 1});
 
     nxt = tc[nxt][2];
 
@@ -100,7 +99,7 @@ void solve() {
         nxt = tc[nxt][2];
     }
 
-    // if (i || j) { p += path({0, 0}, {i, j}); }
+    p += path({0, 0}, {i, j});
     reverse(all(p));
 
     cout << result << "\n" << p;
