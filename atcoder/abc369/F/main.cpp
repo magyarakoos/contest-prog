@@ -23,6 +23,8 @@ void solve() {
         cin >> a[i][0] >> a[i][1];
         b[i] = {a[i][1], a[i][0]};
     }
+    sort(all(a));
+    sort(all(b));
 }
 
 int main() {
