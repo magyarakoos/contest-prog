@@ -25,6 +25,8 @@ void solve() {
     }
     sort(all(a));
     sort(all(b));
+    map<array<int, 2>, int> m;
+    for (int i = 0; i < N; i++) { m[b[i]] = i; }
 }
 
 int main() {
