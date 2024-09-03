@@ -68,6 +68,8 @@ void solve() {
         update(1, 0, N - 1, m[a[i]], {mx + 1, i});
         tc[m[a[i]]] = {mx + 1, i};
     }
+
+    DB(tc);
 }
 
 int main() {
