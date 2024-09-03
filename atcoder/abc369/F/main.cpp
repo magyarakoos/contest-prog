@@ -31,7 +31,7 @@ void solve() {
     vector<array<int, 2>> lis;
 
     for (auto p : a) {
-        auto it = upper_bound(all(lis), p, cmp);
+        auto it = lower_bound(all(lis), p, cmp);
         if (it == lis.end()) {
             lis.push_back(p);
         } else {
