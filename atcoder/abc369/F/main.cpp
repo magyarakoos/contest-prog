@@ -83,7 +83,7 @@ void solve() {
     while (nxt != -1) {
         nxt = tc[nxt][2];
         int ni = 0, nj = 0;
-        p = path({ni, nj}, {i, j}) + p;
+        p += path({ni, nj}, {i, j});
         i = ni, j = nj;
     }
 }
