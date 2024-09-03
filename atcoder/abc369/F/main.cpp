@@ -43,8 +43,16 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 }
 
 string path(array<int, 2> a, array<int, 2> b) {
-    return (b[0] - a[0] > 0 ? string(b[0] - a[0], 'D') : 0) +
-           (b[1] - a[1] > 0 ? string(b[1] - a[1], 'R') : "");
+    string result = "";
+    while (b[0] > a[0]) {
+        b[0]--;
+        result += 'D';
+    }
+    while (b[1] > a[1]) {
+        b[1]--;
+        result += 'R';
+    }
+    return result;
 }
 
 #define cases 0
