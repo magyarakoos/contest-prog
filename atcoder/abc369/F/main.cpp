@@ -14,6 +14,10 @@ using ll = long long;
 
 const ll INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
 
+bool cmp(array<int, 2> a, array<int, 2> b) { // a < b
+    return a[0] <= b[0] && a[1] <= b[1];
+}
+
 #define cases 0
 void solve() {
     int H, W, N;
