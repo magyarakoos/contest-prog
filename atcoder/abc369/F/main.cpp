@@ -26,6 +26,13 @@ void update(int curr, int tl, int tr, int p, array<int, 2> a) {
         t[curr] = a;
         return;
     }
+    int tm = (tl + tr) / 2;
+    if (p <= tm) {
+        update(curr * 2, tl, tm, p, a);
+    } else {
+        update(curr * 2 + 1, tm + 1, tr, p, a);
+    }
+    t[curr] = combine(t[curr * 2], t[curr * 2 + 1]);
 }
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {}
