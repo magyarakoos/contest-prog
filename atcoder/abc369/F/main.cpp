@@ -36,6 +36,7 @@ void update(int curr, int tl, int tr, int p, array<int, 2> a) {
 }
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {
+    cout << tl << " " << tr << "\n";
     if (tr < tl || r < l) { return {-1, -1}; }
     if (tl == l && tr == r) { return t[curr]; }
     int tm = (tl + tr) / 2;
@@ -63,8 +64,7 @@ void solve() {
     for (int i = 0; i < N; i++) { m[b[i]] = i; }
 
     for (int i = 0; i < N; i++) {
-        // auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
-        j = 0;
+        auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
         cout << a[j][0] << " " << a[j][1] << " -> " << a[i][0] << " " << a[i][1]
              << "\n";
         // update(1, 0, N - 1, m[a[i]], {mx + 1, i});
