@@ -39,7 +39,10 @@ void solve() {
     map<array<int, 2>, int> m;
     for (int i = 0; i < N; i++) { m[b[i]] = i; }
 
-    for (int i = 0; i < N; i++) { auto [mx, i] = query(1, 0, N - 1, 0, i - 1); }
+    for (int i = 0; i < N; i++) {
+        auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
+        update(1, 0, N - 1, i, mx + 1);
+    }
 }
 
 int main() {
