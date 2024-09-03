@@ -64,6 +64,8 @@ void solve() {
 
     for (int i = 0; i < N; i++) {
         auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
+        update(1, 0, N - 1, m[a[i]], {mx + 1, i});
+
         if (j == -1) {
             cout << "0 0";
         } else {
@@ -75,7 +77,6 @@ void solve() {
         }
         cout << "\n";
         cout << i << " " << m[a[i]] << "\n\n";
-        update(1, 0, N - 1, m[a[i]], {mx + 1, i});
     }
 }
 
