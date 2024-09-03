@@ -39,7 +39,8 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
     if (tr < tl || r < l) { return {-1, -1}; }
     if (tl == l && tr == r) { return t[curr]; }
     int tm = (tl + tr) / 2;
-    return combine(query(), query());
+    return combine(query(curr * 2, tl, tm, l, min(tm, r)),
+                   query(curr * 2 + 1, tm + 1, tr, max(tm + 1, l), r));
 }
 
 #define cases 0
