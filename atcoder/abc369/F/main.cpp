@@ -64,7 +64,7 @@ void solve() {
         auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
         cout << a[j][0] << " " << a[j][1] << " -> " << a[i][0] << " " << a[i][1]
              << "\n";
-        update(1, 0, N - 1, m[a[i]], {mx + 1, i});
+        // update(1, 0, N - 1, m[a[i]], {mx + 1, i});
     }
 }
 
