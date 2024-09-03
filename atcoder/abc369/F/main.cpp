@@ -21,7 +21,7 @@ void solve() {
     vector<array<int, 2>> a(N), b(N);
     for (int i = 0; i < N; i++) {
         cin >> a[i][0] >> a[i][1];
-        b[i] = a[i];
+        b[i] = {a[i][1], a[i][0]};
     }
 }
 
