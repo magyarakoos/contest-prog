@@ -43,7 +43,8 @@ array<int, 2> query(int curr, int tl, int tr, int l, int r) {
 }
 
 string path(array<int, 2> a, array<int, 2> b) {
-    return string(b[0] - a[0], 'D') + string(b[1] - a[1], 'R');
+    return (b[0] - a[0] > 0 ? string(b[0] - a[0], 'D') : 0) +
+           (b[1] - a[1] > 0 ? string(b[1] - a[1], 'R') : "");
 }
 
 #define cases 0
@@ -88,7 +89,7 @@ void solve() {
         nxt = tc[nxt][2];
     }
 
-    p += path({0, 0}, {i, j});
+    // p += path({0, 0}, {i, j});
     reverse(all(p));
 
     cout << result << "\n" << p;
