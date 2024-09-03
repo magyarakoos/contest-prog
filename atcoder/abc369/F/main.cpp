@@ -75,7 +75,8 @@ void solve() {
 
     DB(tc);
 
-    int i = H - 1, j = W - 1;
+    int i = 0, j = 0;
+    string p = path({i, j}, {H - 1, W - 1});
 }
 
 int main() {
