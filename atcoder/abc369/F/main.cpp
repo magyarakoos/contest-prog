@@ -39,6 +39,8 @@ void solve() {
         }
     }
 
+    DB(lis)
+
     cout << sz(lis);
 }
 
