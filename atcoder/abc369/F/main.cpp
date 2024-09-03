@@ -71,7 +71,7 @@ void solve() {
             cout << a[j][0] << " " << a[j][1];
         }
         cout << " -> " << a[i][0] << " " << a[i][1] << "\n";
-        for (int i = 0; i <= N; i++) {
+        for (int i = 0; i < N; i++) {
             cout << query(1, 0, N - 1, i, i)[0] << " ";
         }
         cout << "\n";
