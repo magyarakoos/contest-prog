@@ -21,7 +21,6 @@ array<int, 2> combine(array<int, 2> a, array<int, 2> b) {
 }
 
 void update(int curr, int tl, int tr, int p, array<int, 2> a) {
-    if (tr < tl) return;
     if (tl == tr) {
         t[curr] = a;
         return;
