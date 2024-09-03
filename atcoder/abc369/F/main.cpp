@@ -33,11 +33,13 @@ void solve() {
     for (auto p : a) {
         auto it = upper_bound(all(lis), p, cmp);
         if (it == lis.end()) {
-            list.push_back(p);
+            lis.push_back(p);
         } else {
-            list[it - lis.begin()] = p;
+            lis[it - lis.begin()] = p;
         }
     }
+
+    cout << sz(lis);
 }
 
 int main() {
