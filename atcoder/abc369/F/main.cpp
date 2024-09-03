@@ -18,7 +18,7 @@ vector<array<int, 2>> t;
 
 array<int, 2> combine(array<int, 2> a, array<int, 2> b) {}
 
-void update(int curr, int tl, int tr, int p, int x) {}
+void update(int curr, int tl, int tr, int p, array<int, 2> a) {}
 
 array<int, 2> query(int curr, int tl, int tr, int l, int r) {}
 
@@ -41,7 +41,7 @@ void solve() {
 
     for (int i = 0; i < N; i++) {
         auto [mx, j] = query(1, 0, N - 1, 0, i - 1);
-        update(1, 0, N - 1, i, mx + 1);
+        update(1, 0, N - 1, m[i], {mx + 1, i});
     }
 }
 
