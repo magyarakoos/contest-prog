@@ -18,9 +18,11 @@ const ll INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
 void solve() {
     int H, W, N;
     cin >> H >> W >> N;
-    vector<array<int, 2>> a(N);
-    for (auto& [i, j] : a) cin >> i >> j;
-    sort(all(a));
+    vector<array<int, 2>> a(N), b(N);
+    for (int i = 0; i < N; i++) {
+        cin >> a[i][0] >> a[i][1];
+        b[i] = a[i];
+    }
 }
 
 int main() {
