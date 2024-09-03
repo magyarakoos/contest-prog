@@ -27,6 +27,10 @@ void solve() {
     for (auto& [i, j] : a) cin >> i >> j;
 
     sort(all(a));
+
+    vector<array<int, 2>> lis;
+
+    for (auto p : a) {}
 }
 
 int main() {
