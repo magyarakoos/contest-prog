@@ -35,7 +35,12 @@ void update(int curr, int tl, int tr, int p, array<int, 2> a) {
     t[curr] = combine(t[curr * 2], t[curr * 2 + 1]);
 }
 
-array<int, 2> query(int curr, int tl, int tr, int l, int r) {}
+array<int, 2> query(int curr, int tl, int tr, int l, int r) {
+    if (tr < tl || r < l) { return {-1, -1}; }
+    if (tl == l && tr == r) { return t[curr]; }
+    int tm = (tl + tr) / 2;
+    return combine(query(), query());
+}
 
 #define cases 0
 void solve() {
