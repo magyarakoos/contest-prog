@@ -29,5 +29,5 @@ int main() {
         insert(s);
     }
 
-    dfs(1, 1);
+    for (int i = 0; i < 26; i++) { dfs(i, 1); }
 }
