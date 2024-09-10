@@ -17,7 +17,12 @@ void insert(const string& s) {
     }
 }
 
-bool dfs(int i) {}
+bool dfs(int i, int d) {
+    bool result = 0;
+    for (int j = 0; j < 26; j++) {
+        if (trie[i][j]) {}
+    }
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
