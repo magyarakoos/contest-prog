@@ -6,4 +6,5 @@ int main() {
     cin >> N >> K;
     vector<string> a(N);
     for (string& s : a) cin >> s;
+    sort(all(a));
 }
