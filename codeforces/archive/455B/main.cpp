@@ -17,7 +17,7 @@ void insert(const string& s) {
     }
 }
 
-void dfs(int i, int j) {}
+bool dfs(int i, int j) {}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -32,7 +32,5 @@ int main() {
     }
 
     bool w = 0;
-    for (int i = 0; i < 26; i++) {
-        if (dfs(1, i)) {}
-    }
+    for (int i = 0; i < 26; i++) { w = w || dfs(1, i); }
 }
