@@ -10,7 +10,9 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         for (int j = i + 1; j < N; j++) {
-            if (s[j - 1] + s[j] >= s[j] + s[j - 1]) { swap(s[j - 1], s[j]); }
+            if (a[j - 1] + a[j] >= a[j] + a[j - 1]) { swap(a[j - 1], a[j]); }
         }
     }
+
+    DB(a);
 }
