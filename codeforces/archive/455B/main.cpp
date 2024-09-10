@@ -28,6 +28,7 @@ bool dfs(int i, int d = 0) {
             }
         }
     }
+    return result;
 }
 
 int main() {
@@ -44,5 +45,5 @@ int main() {
 
     bool w = dfs(1);
 
-    cout << w;
+    cout << (K & 1 ? w : !w);
 }
