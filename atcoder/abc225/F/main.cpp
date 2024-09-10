@@ -7,6 +7,8 @@ int main() {
     cin >> N >> K;
     vector<string> a(N);
     for (string& s : a) cin >> s;
+    sort(a.begin(), a.end(),
+         [](const string& s, const string& t) { return s + t > t + s; });
 
     bool swapped = 0;
     do {
@@ -16,6 +18,5 @@ int main() {
                 swapped = 1;
             }
         }
-        DB(a);
     } while (swapped);
 }
