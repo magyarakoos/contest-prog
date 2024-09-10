@@ -18,7 +18,7 @@ void insert(const string& s) {
 }
 
 bool dfs(int i, int d = 0) {
-    bool result = 1;
+    bool result = 0;
     for (int j = 0; j < 26; j++) {
         if (trie[i][j]) {
             if (d & 1) {
