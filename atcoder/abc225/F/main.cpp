@@ -8,9 +8,15 @@ int main() {
     vector<string> a(N);
     for (string& s : a) cin >> s;
 
-    for (int j = 0; j < N; j++) {
-        if (a[j - 1] + a[j] >= a[j] + a[j - 1]) { swap(a[j - 1], a[j]); }
-    }
+    bool swapped = 0;
+    do {
+        for (int j = 0; j < N - 1; j++) {
+            if (a[j - 1] + a[j] >= a[j] + a[j - 1]) {
+                swap(a[j - 1], a[j]);
+                swapped = 1;
+            }
+        }
+    } while (swapped);
 
     while (N > K) a.pop_back(), N--;
 
