@@ -11,7 +11,7 @@ int main() {
          [](const string& s, const string& t) { return s + t > t + s; });
 
     // knapsack
-    vector<string> dp(K + 1, string(50, '['));
+    vector<string> dp(K + 1, string(1, char('z' + 1)));
     dp[0] = "";
 
     for (string& s : a) {
