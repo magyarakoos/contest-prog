@@ -10,7 +10,7 @@ int main() {
 
     bool swapped = 0;
     do {
-        for (int j = 0; j < N - 1; j++) {
+        for (int j = 1; j < N; j++) {
             if (a[j - 1] + a[j] >= a[j] + a[j - 1]) {
                 swap(a[j - 1], a[j]);
                 swapped = 1;
