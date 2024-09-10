@@ -31,5 +31,8 @@ int main() {
         insert(s);
     }
 
-    for (int i = 0; i < 26; i++) { dfs(1, i); }
+    bool w = 0;
+    for (int i = 0; i < 26; i++) {
+        if (dfs(1, i)) {}
+    }
 }
