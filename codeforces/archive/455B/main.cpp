@@ -8,7 +8,7 @@ int trie[MAXN][26], cnt[MAXN], node_count = 1;
 bool dp[MAXN][26];
 
 void insert(const string& s) {
-    int node = 0;
+    int node = 1;
     for (char c : s) {
         int a = c - 'a';
         if (!trie[node][a]) { trie[node][a] = ++node_count; }
@@ -18,7 +18,7 @@ void insert(const string& s) {
 }
 
 bool dfs(int i, int d = 0) {
-    bool result = 0;
+    bool result = 1;
     for (int j = 0; j < 26; j++) {
         if (trie[i][j]) {
             if (d & 1) {
