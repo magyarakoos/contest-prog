@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <debug.h>
 using namespace std;
 
 int main() {
@@ -10,11 +9,7 @@ int main() {
     sort(a.begin(), a.end(),
          [](const string& s, const string& t) { return s + t > t + s; });
 
-    vector dp(K, vector<string>(K));
+    vector<string> dp(K, string(50, 'z'));
 
-    dp[K - 1][1][]
-
-        for (int i = K - 2; ~i; i--) {
-        for (int j = 0; j < K; j++) {}
-    }
+    // knapsack
 }
