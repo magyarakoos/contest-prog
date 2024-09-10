@@ -17,7 +17,7 @@ void insert(const string& s) {
     }
 }
 
-bool dfs(int i, int j) {}
+bool dfs(int i) {}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -31,6 +31,7 @@ int main() {
         insert(s);
     }
 
-    bool w = 0;
-    for (int i = 0; i < 26; i++) { w = w || dfs(1, i); }
+    bool w = dfs(1);
+
+    cout << w;
 }
