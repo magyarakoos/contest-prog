@@ -16,9 +16,6 @@ int main() {
                 swapped = 1;
             }
         }
+        DB(a);
     } while (swapped);
-
-    while (N > K) a.pop_back(), N--;
-
-    DB(a);
 }
