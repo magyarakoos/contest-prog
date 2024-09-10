@@ -7,12 +7,10 @@ int main() {
     cin >> N >> K;
     vector<string> a(N);
     for (string& s : a) cin >> s;
-    sort(a.begin(), a.end());
 
-    while (K < N) {
-        N--;
-        a.pop_back();
+    for (int i = 0; i < N; i++) {
+        for (int j = i + 1; j < N; j++) {
+            if (s[j - 1] + s[j] >= s[j] + s[j - 1]) { swap(s[j - 1], s[j]); }
+        }
     }
-
-    DB(a);
 }
