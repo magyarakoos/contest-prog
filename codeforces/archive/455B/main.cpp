@@ -43,7 +43,10 @@ int main() {
         insert(s);
     }
 
-    bool w = dfs(1);
+    bool w = 0;
+    for (int i = 0; i < 26; i++) {
+        if (dfs(trie[1][i])) w = 1;
+    }
 
     cout << (K & 1 ? w : !w);
 }
