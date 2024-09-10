@@ -1,3 +1,4 @@
+#include "debug.h"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -16,6 +17,7 @@ int main() {
 
     for (string& s : a) {
         for (int i = K; i > 0; i--) { dp[i] = min(dp[i], s + dp[i - 1]); }
+        DB(dp);
     }
 
     cout << dp[K];
