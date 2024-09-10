@@ -17,6 +17,8 @@ void insert(const string& s) {
     }
 }
 
+void dfs(int i, int j) {}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -29,5 +31,5 @@ int main() {
         insert(s);
     }
 
-    for (int i = 0; i < 26; i++) { dfs(i, 1); }
+    for (int i = 0; i < 26; i++) { dfs(1, i); }
 }
