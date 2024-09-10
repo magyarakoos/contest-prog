@@ -21,7 +21,11 @@ bool dfs(int i, int d = 0) {
     bool result = 0;
     for (int j = 0; j < 26; j++) {
         if (trie[i][j]) {
-            if (d & 1) { result |= 1; }
+            if (d & 1) {
+                result |= !dfs(trie[i][j], d + 1);
+            } else {
+                result |= dfs(trie[i][j], d + 1);
+            }
         }
     }
 }
