@@ -29,5 +29,5 @@ int main() {
         insert(s);
     }
 
-    dfs()
+    dfs(1, 1);
 }
