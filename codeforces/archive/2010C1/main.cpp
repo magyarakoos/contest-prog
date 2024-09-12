@@ -11,8 +11,10 @@ int main() {
 
     for (int m = N - 1; m >= 0; m--) {
         if (t.substr(0, m) == t.substr(N - m)) {
-            cout << "YES\n" << t.substr(0, m);
+            cout << "Yes\n" << t.substr(0, m);
             exit(0);
+        } else {
+            cout << t.substr(0, m) << " " << t.substr(N - m) << "\n";
         }
     }
     cout << "NO\n";
