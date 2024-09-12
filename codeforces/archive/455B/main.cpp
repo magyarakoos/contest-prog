@@ -55,5 +55,7 @@ int main() {
         } else {
             cout << (K & 1 ? "First\n" : "Second\n");
         }
+    } else {
+        cout << (K & 1 ? "Second\n" : "First\n");
     }
 }
