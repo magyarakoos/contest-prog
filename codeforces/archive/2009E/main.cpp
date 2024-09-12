@@ -24,9 +24,10 @@ void solve() {
             r = m2;
         }
     }
-    cout << f(l) << "\n";
+    cout << min(f(l), f(l + 1), f(r))
 
-    for (int i = K; i < K + N; i++) cout << f(i) << " ";
+                for (int i = K; i < K + N; i++) cout
+         << f(i) << " ";
     cout << "\n";
 }
 
