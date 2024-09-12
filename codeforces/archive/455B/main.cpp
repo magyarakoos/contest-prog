@@ -43,6 +43,11 @@ int main() {
     }
 
     dfs(1);
+    win[1] = lose[1] = 0;
+    for (int i = 0; i < 26; i++) {
+        win[i] |= win[trie[1][i]];
+        lose[i] |= lose[trie[1][i]];
+    }
 
     cout << win[1] << " " << lose[1] << "\n";
 }
