@@ -3,7 +3,7 @@
 using namespace std;
 using ll = long long;
 
-ll sum(ll a, ll b) {}
+ll sum(ll a, ll b) { return b * (b + 1) / 2 - a * (a - 1) / 2; }
 
 void solve() {
     ll N, K;
