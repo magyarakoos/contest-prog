@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 
 using namespace std;
@@ -24,10 +25,7 @@ void solve() {
             r = m2;
         }
     }
-    cout << min({f(l), f(l + 1), f(r)});
-
-    for (int i = K; i < K + N; i++) cout << f(i) << " ";
-    cout << "\n";
+    cout << min({f(l), f(l + 1), f(r)}) << "\n";
 }
 
 int main() {
