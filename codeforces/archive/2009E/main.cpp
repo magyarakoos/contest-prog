@@ -11,7 +11,7 @@ void solve() {
         return b * (b + 1) / 2 - a * (a - 1) / 2;
     };
 
-    auto f = [&](ll i) -> ll { return 0; };
+    auto f = [&](ll i) -> ll { return sum(N, i) - sum(i + 1, N + K - 1); };
 
     ll l = N, r = N + K - 1;
     while (r - l > 2) {
