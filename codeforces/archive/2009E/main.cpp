@@ -22,7 +22,7 @@ void solve() {
             r = m2;
         }
     }
-    cout << f(l);
+    cout << f(l) << "\n";
 }
 
 int main() {
