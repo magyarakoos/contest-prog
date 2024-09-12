@@ -27,7 +27,7 @@ void dfs(int i) {
             lose[i] |= !lose[trie[i][j]];
         }
     }
-    if (!has_ch) lose[i] = 1;
+    if (!has_ch) win[i] = 1;
 }
 
 int main() {
