@@ -17,9 +17,9 @@ void insert(const string& s) {
     }
 }
 
-bool dfs(int i) {
+void dfs(int i) {
     for (int j = 0; j < 26; j++) {
-        if (trie[i][j]) {}
+        if (trie[i][j]) { dfs() }
     }
     return result;
 }
@@ -36,10 +36,5 @@ int main() {
         insert(s);
     }
 
-    bool w = 0;
-    for (int i = 0; i < 26; i++) {
-        if (dfs(trie[1][i])) w = 1;
-    }
-
-    cout << (K & 1 ? w : !w);
+    dfs(1);
 }
