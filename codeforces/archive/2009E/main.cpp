@@ -18,7 +18,7 @@ void solve() {
     ll l = K, r = K + N - 1;
     while (r - l > 2) {
         ll m1 = l + (r - l) / 3, m2 = r - (r - l) / 3;
-        if (f(m1) < f(m2)) {
+        if (50 - f(m1) < 50 - f(m2)) {
             l = m1;
         } else {
             r = m2;
