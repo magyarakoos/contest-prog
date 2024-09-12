@@ -24,7 +24,7 @@ void solve() {
             r = m2;
         }
     }
-    cout << min(f(l), f(l + 1), f(r));
+    cout << min({f(l), f(l + 1), f(r)});
 
     for (int i = K; i < K + N; i++) cout << f(i) << " ";
     cout << "\n";
