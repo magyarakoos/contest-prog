@@ -10,6 +10,7 @@ void solve() {
     cin >> N >> K;
 
     ll l = N, r = N + K - 1;
+    while (r - l > 1) { ll m1 = 0, m2 = 0; }
 }
 
 int main() {
