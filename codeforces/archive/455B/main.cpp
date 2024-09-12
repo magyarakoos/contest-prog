@@ -19,7 +19,10 @@ void insert(const string& s) {
 
 void dfs(int i) {
     for (int j = 0; j < 26; j++) {
-        if (trie[i][j]) { dfs() }
+        if (trie[i][j]) {
+            dfs(trie[i][j]);
+            win[i][j] |= !win[trie[i][j]][j];
+        }
     }
     return result;
 }
