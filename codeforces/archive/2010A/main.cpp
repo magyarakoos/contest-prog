@@ -9,6 +9,10 @@ int main() {
     while (T--) {
         int N, x, i = 0, res = 0;
         cin >> N;
-        while (N--) { int x; }
+        while (N--) {
+            cin >> x;
+            res += x * (i++ & 1 ? 1 : -1);
+        }
+        cout << res << "\n";
     }
 }
