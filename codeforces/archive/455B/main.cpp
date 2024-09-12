@@ -1,7 +1,5 @@
 #include <iostream>
 
-#define ANS(x) cout << (x ? "First" : "Second") << "\n";
-
 using namespace std;
 
 const int MAXN = 1e5 + 5;
@@ -46,5 +44,7 @@ int main() {
 
     dfs(1);
 
-    if (K == 1) ANS(win[1]);
+    if (win[1] && lose[1]) cout << "First\n";
+    if (win[1] && !lose[1]) cout << (K & 1 ? "First\n" : "Second\n");
+    if (!win[1]) cout << "Second\n";
 }
