@@ -7,5 +7,7 @@ int main() {
 
     string t;
     cin >> t;
-    int N = t.size(), M = N;
+    int N = t.size();
+
+    for (int m = N - 1; m >= 0; m--) { if (t.substr(0, m) ==) }
 }
