@@ -49,13 +49,5 @@ int main() {
         lose[i] |= lose[trie[1][i]];
     }
 
-    if (win[1]) {
-        if (lose[1]) {
-            cout << "First\n";
-        } else {
-            cout << (K & 1 ? "First\n" : "Second\n");
-        }
-    } else {
-        cout << (K & 1 ? "Second\n" : "First\n");
-    }
+    cout << (win[1] && lose[1] ? "First" : (K & 1 ? "First\n" : "Second\n"));
 }
