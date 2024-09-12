@@ -9,7 +9,7 @@ int main() {
     cin >> t;
     int N = t.size();
 
-    for (int m = N - 1; m >= N / 2 + 1; m--) {
+    for (int m = N - 1; m > N / 2; m--) {
         if (t.substr(0, m) == t.substr(N - m)) {
             cout << "YES\n" << t.substr(0, m);
             exit(0);
