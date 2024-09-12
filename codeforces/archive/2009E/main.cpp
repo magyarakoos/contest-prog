@@ -13,21 +13,18 @@ void solve() {
         return b * (b + 1) / 2 - a * (a - 1) / 2;
     };
 
-    auto f = [&](ll i) -> ll { return abs(sum(N, i) - sum(i + 1, K + N - 1)); };
+    auto f = [&](ll i) -> ll { return abs(sum(K, i) - sum(i + 1, K + N - 1)); };
 
-    for (int i = K; i < K + N; i++) cout << f(i) << " ";
-    cout << "\n";
-
-    // ll l = K, r = K + N - 1;
-    // while (r - l > 2) {
-    //     ll m1 = l + (r - l) / 3, m2 = r - (r - l) / 3;
-    //     if (INF - f(m1) < INF - f(m2)) {
-    //         l = m1;
-    //     } else {
-    //         r = m2;
-    //     }
-    // }
-    // cout << f(l) << "\n";
+    ll l = K, r = K + N - 1;
+    while (r - l > 2) {
+        ll m1 = l + (r - l) / 3, m2 = r - (r - l) / 3;
+        if (INF - f(m1) < INF - f(m2)) {
+            l = m1;
+        } else {
+            r = m2;
+        }
+    }
+    cout << f(l) << "\n";
 }
 
 int main() {
