@@ -1,3 +1,4 @@
+#include <array>
 #include <iostream>
 
 using namespace std;
@@ -17,10 +18,10 @@ void insert(const string& s) {
     }
 }
 
-void dfs(int i) {
+array<int, 2> dfs(int i) {
     for (int j = 0; j < 26; j++) {
         if (trie[i][j]) {
-            dfs(trie[i][j]);
+            auto [w, l] = dfs(trie[i][j]);
             win[i][j] |= !win[trie[i][j]][j];
         }
     }
