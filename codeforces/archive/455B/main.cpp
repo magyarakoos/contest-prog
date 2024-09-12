@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAXN = 2e6;
+const int MAXN = 1e5 + 5;
 
 int trie[MAXN][26], cnt[MAXN], node_count = 1;
 bool win[MAXN][26], lose[MAXN][26];
@@ -17,16 +17,9 @@ void insert(const string& s) {
     }
 }
 
-bool dfs(int i, int d = 0) {
-    bool result = 0;
+bool dfs(int i) {
     for (int j = 0; j < 26; j++) {
-        if (trie[i][j]) {
-            if (d & 1) {
-                result |= !dfs(trie[i][j], d + 1);
-            } else {
-                result |= dfs(trie[i][j], d + 1);
-            }
-        }
+        if (trie[i][j]) {}
     }
     return result;
 }
