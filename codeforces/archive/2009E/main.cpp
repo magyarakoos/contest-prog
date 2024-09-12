@@ -15,16 +15,8 @@ void solve() {
 
     auto f = [&](ll i) -> ll { return abs(sum(N, i) - sum(i + 1, N + K - 1)); };
 
-    ll l = N, r = N + K - 1;
-    while (r - l > 2) {
-        ll m1 = l + (r - l) / 3, m2 = r - (r - l) / 3;
-        if (f(m1) < f(m2)) {
-            l = m1;
-        } else {
-            r = m2;
-        }
-    }
-    cout << f(l) << "\n";
+    for (int i = N; i < N + K; i++) { cout << f(i) << " "; }
+    cout << "\n";
 }
 
 int main() {
