@@ -18,13 +18,16 @@ void insert(const string& s) {
 }
 
 void dfs(int i) {
+    bool has_ch = 0;
     for (int j = 0; j < 26; j++) {
         if (trie[i][j]) {
+            has_ch = 1;
             dfs(trie[i][j]);
             win[i] |= !win[trie[i][j]];
             lose[i] |= !lose[trie[i][j]];
         }
     }
+    if (!has_ch) lose[i] = 1;
 }
 
 int main() {
