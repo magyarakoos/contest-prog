@@ -11,7 +11,7 @@ int main() {
         cin >> N;
         while (N--) {
             cin >> x;
-            res += x * (i++ & 1 ? 1 : -1);
+            res += x * (++i & 1 ? 1 : -1);
         }
         cout << res << "\n";
     }
