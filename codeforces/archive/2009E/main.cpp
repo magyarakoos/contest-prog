@@ -3,11 +3,15 @@
 using namespace std;
 using ll = long long;
 
-ll sum(ll a, ll b) { return b * (b + 1) / 2 - a * (a - 1) / 2; }
-
 void solve() {
     ll N, K;
     cin >> N >> K;
+
+    auto sum = [](ll a, ll b) -> ll {
+        return b * (b + 1) / 2 - a * (a - 1) / 2;
+    };
+
+    auto f = [&](ll i) -> ll { return 0; };
 
     ll l = N, r = N + K - 1;
     while (r - l > 2) {
