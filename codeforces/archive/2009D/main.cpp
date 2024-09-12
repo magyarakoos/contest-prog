@@ -4,8 +4,7 @@ using namespace std;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-
-    string t;
-    cin >> t;
-    int N = t.size();
+    int T;
+    cin >> T;
+    while (T--) solve();
 }
