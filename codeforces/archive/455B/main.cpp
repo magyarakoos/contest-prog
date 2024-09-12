@@ -5,7 +5,7 @@ using namespace std;
 const int MAXN = 2e6;
 
 int trie[MAXN][26], cnt[MAXN], node_count = 1;
-bool dp[MAXN][26];
+bool win[MAXN][26], lose[MAXN][26];
 
 void insert(const string& s) {
     int node = 1;
