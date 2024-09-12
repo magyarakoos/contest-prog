@@ -20,6 +20,13 @@ void solve() {
     for (int x = 0; x <= N; x++) {
         if (a[x][0] && a[x][1]) { result += N - 2; }
     }
+
+    for (int x = 2; x <= N; x++) {
+        result += (a[x - 2][0] && a[x - 1][1] && a[x][0]) +
+                  (a[x - 2][1] && a[x - 1][0] && a[x][1]);
+    }
+
+    cout << result << "\n";
 }
 
 int main() {
