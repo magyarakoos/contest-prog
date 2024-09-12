@@ -28,7 +28,7 @@ void dfs(int i) {
             lose[i] |= !lose[trie[i][j]];
         }
     }
-    if (!has_ch) win[i] = 1;
+    if (!has_ch) lose[i] = 1;
 }
 
 int main() {
@@ -54,6 +54,5 @@ int main() {
 
     if (win[1] && lose[1]) cout << "First\n";
     if (win[1] && !lose[1]) cout << (K & 1 ? "First\n" : "Second\n");
-    if (!win[1] && lose[1]) cout << "Second\n";
-    if (!win[1] && !lose[1]) assert(0);
+    if (!win[1]) cout << "Second\n";
 }
