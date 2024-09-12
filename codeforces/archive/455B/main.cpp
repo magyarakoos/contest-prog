@@ -1,4 +1,3 @@
-#include <array>
 #include <iostream>
 
 using namespace std;
@@ -6,7 +5,7 @@ using namespace std;
 const int MAXN = 1e5 + 5;
 
 int trie[MAXN][26], cnt[MAXN], node_count = 1;
-bool win[MAXN][26], lose[MAXN][26];
+bool win[MAXN], lose[MAXN];
 
 void insert(const string& s) {
     int node = 1;
@@ -18,14 +17,14 @@ void insert(const string& s) {
     }
 }
 
-array<int, 2> dfs(int i) {
+void dfs(int i) {
     for (int j = 0; j < 26; j++) {
         if (trie[i][j]) {
-            auto [w, l] = dfs(trie[i][j]);
-            win[i][j] |= !win[trie[i][j]][j];
+            dfs(trie[i][j]);
+            win[i] |= !win[trie[i][j]];
+            lose[i] |= !lose[trie[i][j]];
         }
     }
-    return result;
 }
 
 int main() {
@@ -41,4 +40,6 @@ int main() {
     }
 
     dfs(1);
+
+    cout << win[1] << " " << lose[1] << "\n";
 }
