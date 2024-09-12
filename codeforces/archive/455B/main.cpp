@@ -1,3 +1,4 @@
+#include <cassert>
 #include <iostream>
 
 using namespace std;
@@ -51,7 +52,6 @@ int main() {
 
     if (win[1] && lose[1]) cout << "First\n";
     if (win[1] && !lose[1]) cout << (K & 1 ? "First\n" : "Second\n");
-    if (!win[1] && lose[1])
-        ;
+    if (!win[1] && lose[1]) cout << (K & 1 ? "Second\n" : "First\n");
     if (!win[1] && !lose[1]) assert(0);
 }
