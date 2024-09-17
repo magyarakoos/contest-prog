@@ -11,4 +11,6 @@ int main() {
     vector<int> P(N), Q(N);
     for (int& x : P) cin >> x;
     for (int& x : Q) cin >> x;
+
+    vector<int> v;
 }
