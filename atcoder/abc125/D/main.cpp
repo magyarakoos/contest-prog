@@ -1,12 +1,9 @@
 #include <algorithm>
 #include <iostream>
-#include <numeric>
 #include <vector>
 
 using namespace std;
 using ll = long long;
-
-const ll INF = 1e18;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -14,12 +11,13 @@ int main() {
     int N;
     cin >> N;
     vector<int> a(N);
-    for (int& x : a) cin >> x;
-
-    int abs_mn = *min_element(a.begin(), a.end(),
-                              [](int x, int y) { return abs(x) < abs(y); });
-
-    int sum = accumulate(a.begin(), a.end(), 0LL);
+    ll sum = 0, abs_mn = 1e18;
+    int neg_cnt = 0;
+    for (int& x : a) {
+        cin >> x;
+        neg_cnt += x < 0;
+        abs_mn = min(abs_mn, abs(x));
+    }
 
     int neg_cnt = count_if(a.begin(), a.end(), [](int x) { return x < 0; });
 
@@ -29,3 +27,4 @@ int main() {
         cout << sum;
     }
 }
+
