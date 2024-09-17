@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <numeric>
 #include <vector>
 
 using namespace std;
@@ -17,4 +18,6 @@ int main() {
 
     int abs_mn = *min_element(a.begin(), a.end(),
                               [](int x, int y) { return abs(x) < abs(y); });
+
+    int sum = accumulate(a.begin(), a.end(), 0LL);
 }
