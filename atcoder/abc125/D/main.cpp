@@ -11,15 +11,13 @@ int main() {
     int N;
     cin >> N;
     vector<int> a(N);
-    ll sum = 0, abs_mn = 1e18;
-    int neg_cnt = 0;
+    ll sum = 0;
+    int neg_cnt = 0, abs_mn = 0;
     for (int& x : a) {
         cin >> x;
         neg_cnt += x < 0;
         abs_mn = min(abs_mn, abs(x));
     }
-
-    int neg_cnt = count_if(a.begin(), a.end(), [](int x) { return x < 0; });
 
     if (neg_cnt & 1) {
         cout << sum - abs_mn;
