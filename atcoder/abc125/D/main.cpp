@@ -17,4 +17,9 @@ int main() {
 
     vector<array<ll, 2>> dp(N + 1);
     dp[0] = {0, -INF};
+
+    for (int i = 1; i <= N; i++) {
+        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1]) + a[i];
+        dp[i][1] = max(-dp[i - 1][0], -dp[i - 1][1])
+    }
 }
