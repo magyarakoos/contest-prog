@@ -1,3 +1,4 @@
+#include <array>
 #include <iostream>
 #include <vector>
 
@@ -9,5 +10,9 @@ int main() {
     int N;
     cin >> N;
     vector<int> a(N + 1);
-    for (int& x : a) cin >> x;
+    for (int i = 1; i <= N; i++) cin >> a[i];
+
+    vector<array<int, 2>> dp(N + 1);
+
+    dp[0] = { 0, -1e18 }
 }
