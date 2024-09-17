@@ -20,4 +20,12 @@ int main() {
                               [](int x, int y) { return abs(x) < abs(y); });
 
     int sum = accumulate(a.begin(), a.end(), 0LL);
+
+    int neg_cnt = count_if(a.begin(), a.end(), [](int x) { return x < 0; });
+
+    if (neg_cnt & 1) {
+        cout << sum - abs_mn;
+    } else {
+        cout << sum;
+    }
 }
