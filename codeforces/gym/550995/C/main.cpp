@@ -13,5 +13,14 @@ int main() {
     for (int x = 0; (1 << x) + P <= N; x++) { a.push_back((1 << x) + P); }
     int M = a.size();
 
-    for (int mask = 0; mask < (1 << M); mask++) {}
+    int result = INT_MAX;
+
+    for (int mask = 0; mask < (1 << M); mask++) {
+        long long curr = 0;
+        for (int i = 0; i < M; i++) {
+            if (mask >> i & 1) curr += a[i];
+        }
+    }
+
+    cout << (result == INT_MAX ? -1 : result);
 }
