@@ -1,14 +1,16 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
+#include <debug.h>
 
-const int MAXN = 1e9;
+using namespace std;
 
 int main() {
     int N, P;
     cin >> N >> P;
 
     vector<int> a;
-    for (int x = 0; (1 << x) + P <= MAXN; x++) {}
+    for (int x = 0; (1 << x) + P <= N; x++) { a.push_back((1 << x) + P); }
+
+    DB(a);
 }
