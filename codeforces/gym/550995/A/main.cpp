@@ -2,8 +2,15 @@
 
 using namespace std;
 
+int N, prv, x;
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> x;
+        if (prv && x != prv) {
+            cout << 1;
+            exit(0);
+        }
+    }
+    cout << N;
 }
