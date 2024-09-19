@@ -8,12 +8,13 @@ void solve() {
     for (int i = 0; i < N; i++) {
         cin >> x;
         if (prv && x != prv) {
-            cout << 1;
+            cout << "1\n";
             return;
         }
+        prv = x;
     }
 
-    cout << N;
+    cout << N << "\n";
 }
 
 int main() {
