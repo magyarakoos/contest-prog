@@ -1,12 +1,14 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 void solve() {
-    int N, x, prv = 0;
+    int N;
     cin >> N;
+    vector<int> a(N);
+    for (int& x : a) cin >> x;
 
-    for (int i = 0; i < N; i++) {
-        cin >> x;
+    for (int x : a) {
         if (prv && x != prv) {
             cout << "1\n";
             return;
