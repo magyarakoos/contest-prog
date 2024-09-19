@@ -10,4 +10,5 @@ int main() {
     cin >> N >> P;
 
     vector<int> a;
-    for () }
+    for (int x = 0; (1 << x) + P <= MAXN; x++) {}
+}
