@@ -10,9 +10,7 @@ int main() {
     cin >> N >> P;
 
     vector<int> a;
-    for (int x = 0; (1 << x) + P <= (int)1e9; x++) {
-        a.push_back((1 << x) + P);
-    }
+    for (int x = 0; (1 << x) + P <= 5 * N; x++) { a.push_back((1 << x) + P); }
     int M = a.size();
 
     int result = INT_MAX;
