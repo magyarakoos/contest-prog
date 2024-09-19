@@ -15,14 +15,5 @@ int main() {
 
     int result = INT_MAX;
 
-    for (int mask = 0; mask < (1 << M); mask++) {
-        long long curr = 0;
-        for (int i = 0; i < M; i++) {
-            if (mask >> i & 1) curr += a[i];
-        }
-        DB(curr);
-        if (curr == N) result = min(result, __builtin_popcount(mask));
-    }
-
     cout << (result == INT_MAX ? -1 : result);
 }
