@@ -20,6 +20,8 @@ int main() {
         for (int i = 0; i < M; i++) {
             if (mask >> i & 1) curr += a[i];
         }
+        DB(curr);
+        if (curr == N) result = min(result, __builtin_popcount(mask));
     }
 
     cout << (result == INT_MAX ? -1 : result);
