@@ -3,9 +3,14 @@
 #include <vector>
 
 using namespace std;
+
 struct Point {
     int x, y, i;
     bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
+};
+
+struct Triangle {
+    Point a, b, c;
 };
 
 int turn();
@@ -26,10 +31,10 @@ int main() {
 
     sort(ptS.begin(), ptS.end());
 
-    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
+    Triangle tri = {ptS[0], ptS[1], ptS[2]};
     for (int i = 2; i < N; i++) {
         if (ptS[i].x > ptS[0].x) {
-            tri[2] = ptS[i];
+            tri.c = ptS[i];
             break;
         }
     }
