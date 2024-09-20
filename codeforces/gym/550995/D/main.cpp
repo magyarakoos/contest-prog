@@ -9,10 +9,6 @@ struct Point {
     bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
-struct Triangle {
-    Point a, b, c;
-};
-
 int turn();
 
 bool in_triangle(vector<Point> tri, Point p) { return 0; }
@@ -31,10 +27,10 @@ int main() {
 
     sort(ptS.begin(), ptS.end());
 
-    Triangle tri = {ptS[0], ptS[1], ptS[2]};
+    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
     for (int i = 2; i < N; i++) {
         if (ptS[i].x > ptS[0].x) {
-            tri.c = ptS[i];
+            tri[2] = ptS[i];
             break;
         }
     }
@@ -42,7 +38,7 @@ int main() {
     for (int i = 3; i < N - 1; i++) {
         if (in_triangle(tri, ptS[i])) {
             sort(tri.begin(), tri.end());
-            tri[0] = ptS[i];
+            tri[2] = ptS[i];
         }
     }
 
