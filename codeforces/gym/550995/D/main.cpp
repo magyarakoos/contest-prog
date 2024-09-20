@@ -5,7 +5,9 @@
 #include <vector>
 
 using namespace std;
-using Point = array<int, 2>;
+using Point = struct {
+    int x, y, i;
+};
 
 int turn();
 
@@ -27,8 +29,8 @@ int main() {
 
     vector<Point> tri = {ptS[0].first, ptS[1].first, ptS[2].first};
     for (int i = 2; i < N; i++) {
-        if (ptS[i][0] > ptS[0][0]) {
-            tri[2] = ptS[i];
+        if (ptS[i].first[0] > ptS[0].first[0]) {
+            tri[2] = ptS[i].first;
             break;
         }
     }
