@@ -1,11 +1,14 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+using llong = long long;
+using ll = llong;
 
 using namespace std;
 
 struct Point {
-    long long x, y, i;
+    long long x, y;
+    int i;
     bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
