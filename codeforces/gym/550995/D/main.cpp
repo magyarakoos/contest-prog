@@ -4,6 +4,9 @@
 #include <vector>
 
 using namespace std;
+using point;
+
+int turn();
 
 bool in_triangle(vector<array<int, 2>> tri, array<int, 2> p) {}
 
