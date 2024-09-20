@@ -23,7 +23,7 @@ int main() {
     for (int i = 2; i < N - 1; i++) {
         if (in_triangle(tri, ptS[i])) {
             sort(tri.begin(), tri.end());
-            x;
+            tri[0] = ptS[i];
         }
     }
 }
