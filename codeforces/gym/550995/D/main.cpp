@@ -20,12 +20,12 @@ int main() {
 
     vector<array<int, 2>> tri = {ptS[0], ptS[1], ptS[2]};
 
-    for (int i = 2; i < N - 1; i++) {
-        if (in_triangle(tri, ptS[i])) {
-            sort(tri.begin(), tri.end());
-            tri[0] = ptS[i];
-        }
-    }
+    // for (int i = 2; i < N - 1; i++) {
+    //     if (in_triangle(tri, ptS[i])) {
+    //         sort(tri.begin(), tri.end());
+    //         tri[0] = ptS[i];
+    //     }
+    // }
 
     for (int i = 0; i < 3; i++) {
         cout << find(ptS.begin(), ptS.end(), tri[i]) - ptS.begin() + 1 << " ";
