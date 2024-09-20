@@ -11,8 +11,10 @@ int main() {
     int N;
     cin >> N;
 
-    vector<array<int, 2>> a(N);
-    for (auto& [x, y] : a) cin >> x >> y;
+    vector<array<int, 2>> ptS(N);
+    for (auto& [x, y] : ptS) cin >> x >> y;
 
-    sort(a.begin(), a.end());
+    sort(ptS.begin(), ptS.end());
+
+    array<int, 2> a = ptS[0], b = ptS.back(), c;
 }
