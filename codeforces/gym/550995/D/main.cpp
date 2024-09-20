@@ -5,11 +5,14 @@
 using namespace std;
 
 struct Point {
-    int x, y, i;
+    long long x, y, i;
     bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
-int turn();
+int turn(Point& a, Point& b, Point& c) {
+    long long r = (a.x - c.x) * (b.y - c.y) - (a.y - c.y) * (b.x - c.x);
+    return (r > 0) - (r < 0);
+}
 
 bool in_triangle(vector<Point> tri, Point p) { return 0; }
 
