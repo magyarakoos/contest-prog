@@ -3,9 +3,11 @@
 using namespace std;
 
 int dcnt(int x) {
+    int result = 0;
     for (int d = 2; d <= x && x > 0; d++) {
-        while (x > 0) {}
+        while (x > 0 && x % d == 0) x /= d, result++;
     }
+    return result;
 }
 
 int main() {
