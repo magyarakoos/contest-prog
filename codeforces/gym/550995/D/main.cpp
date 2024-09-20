@@ -26,4 +26,8 @@ int main() {
             tri[0] = ptS[i];
         }
     }
+
+    for (int i = 0; i < 3; i++) {
+        cout << find(ptS.begin(), ptS.end(), tri[0]) - ptS.begin() + 1 << " "
+    }
 }
