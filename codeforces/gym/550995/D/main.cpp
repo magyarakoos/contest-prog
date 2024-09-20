@@ -19,6 +19,12 @@ int main() {
     sort(ptS.begin(), ptS.end());
 
     vector<array<int, 2>> tri = {ptS[0], ptS[1], ptS[2]};
+    for (int i = 2; i < N; i++) {
+        if (ptS[i][0] > ptS[0][0]) {
+            tri[2] = ptS[i];
+            break;
+        }
+    }
 
     for (int i = 3; i < N - 1; i++) {
         if (in_triangle(tri, ptS[i])) {
