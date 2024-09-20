@@ -7,17 +7,24 @@ using ll = llong;
 using namespace std;
 
 struct Point {
-    long long x, y;
+    ll x, y;
     int i;
     bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn(Point& a, Point& b, Point& c) {
-    long long r = (a.x - c.x) * (b.y - c.y) - (a.y - c.y) * (b.x - c.x);
+    ll r = (a.x - c.x) * (b.y - c.y) - (a.y - c.y) * (b.x - c.x);
     return (r > 0) - (r < 0);
 }
 
-bool in_triangle(vector<Point> tri, Point p) { return 0; }
+bool on_line(Point a, Point b, Point c) {
+    return !turn(a, b, c) && min(a.x, b.x) <= c.x && c.x <= max(a.x, b.x);
+}
+
+bool in_triangle(vector<Point> tri, Point p) {
+    int a = turn(tri[0],tri[1],p)+turn(tri[1],tri[2],p)+turn(tri[0],tri[1],p);
+    return a == -3 || a == 3;
+}
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
