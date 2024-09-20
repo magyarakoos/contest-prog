@@ -18,7 +18,8 @@ int turn(Point& a, Point& b, Point& c) {
 }
 
 bool on_line(Point a, Point b, Point c) {
-    return !turn(a, b, c) && min(a.x, b.x) <= c.x && c.x <= max(a.x, b.x);
+    return !turn(a, b, c) && min(a.x, b.x) <= c.x && c.x <= max(a.x, b.x) &&
+           min(a.y, b.y) <= c.y && c.y <= max(a.y, b.y);
 }
 
 bool in_triangle(vector<Point> tri, Point p) {
