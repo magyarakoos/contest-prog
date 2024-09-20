@@ -7,9 +7,10 @@ int main() {
     cin >> N >> P;
 
     for (int x = 0; x <= N; x++) {
-        if (__builtin_popcount(N - x * P) == x) {
+        if (N - x * P >= 0 && __builtin_popcount(N - x * P) == x) {
             cout << x;
             exit(0);
         }
     }
+    cout << -1;
 }
