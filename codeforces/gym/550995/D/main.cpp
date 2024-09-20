@@ -19,18 +19,18 @@ int main() {
     int N;
     cin >> N;
 
-    vector<pair<Point, int>> ptS(N);
+    vector<Point> ptS(N);
     for (int i = 0; i < N; i++) {
-        cin >> ptS[i].first[0] >> ptS[i].first[1];
-        ptS[i].second = i;
+        cin >> ptS[i].x >> ptS[i].y;
+        ptS[i].i = i;
     }
 
     sort(ptS.begin(), ptS.end());
 
-    vector<Point> tri = {ptS[0].first, ptS[1].first, ptS[2].first};
+    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
     for (int i = 2; i < N; i++) {
-        if (ptS[i].first[0] > ptS[0].first[0]) {
-            tri[2] = ptS[i].first;
+        if (ptS[i].x > ptS[0].x) {
+            tri[2] = ptS[i];
             break;
         }
     }
