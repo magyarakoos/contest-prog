@@ -28,6 +28,6 @@ int main() {
     }
 
     for (int i = 0; i < 3; i++) {
-        cout << find(ptS.begin(), ptS.end(), tri[0]) - ptS.begin() + 1 << " "
+        cout << find(ptS.begin(), ptS.end(), tri[i]) - ptS.begin() + 1 << " ";
     }
 }
