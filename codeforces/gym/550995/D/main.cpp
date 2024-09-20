@@ -56,4 +56,6 @@ int main() {
             tri[2] = ptS[i];
         }
     }
+
+    cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
 }
