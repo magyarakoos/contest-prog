@@ -1,8 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-using llong = long long;
-using ll = llong;
+using ll = long long;
 
 using namespace std;
 
