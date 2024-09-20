@@ -1,17 +1,16 @@
 #include <algorithm>
-#include <array>
 #include <iostream>
-#include <utility>
 #include <vector>
 
 using namespace std;
-using Point = struct {
+struct Point {
     int x, y, i;
+    bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn();
 
-bool in_triangle(vector<Point> tri, Point p) {}
+bool in_triangle(vector<Point> tri, Point p) { return 0; }
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
