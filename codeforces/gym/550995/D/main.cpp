@@ -2,6 +2,8 @@
 #include <iostream>
 #include <vector>
 
+#include <debug.h>
+
 using namespace std;
 using ll = long long;
 using Point = struct {
