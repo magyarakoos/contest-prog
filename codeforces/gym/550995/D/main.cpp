@@ -40,7 +40,9 @@ int main() {
         bool oa = on_line(tri[0], tri[1], ptS[i]),
              ob = on_line(tri[1], tri[2], ptS[i]),
              oc = on_line(tri[0], tri[2], ptS[i]);
-        if (in_triangle(tri, ptS[i])) {}
+        if (in_triangle(tri, ptS[i]) || oa || ob || oc) {
+            tri[!oa ? 2 : !ob ? 0 : 1] = ptS[i];
+        }
     }
 
     cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
