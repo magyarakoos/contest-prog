@@ -8,7 +8,10 @@ using namespace std;
 using ll = long long;
 struct Point {
     ll x, y, i;
-    friend std::ostream& operator<<(std::ostream& os, const Point& person);
+    friend std::ostream& operator<<(std::ostream& os, const Point& p) {
+        os << "(" << p.x << ", " << p.y << " | " << p.i << ")";
+        return os;
+    }
 };
 
 int turn(Point& a, Point& b, Point& c) {
