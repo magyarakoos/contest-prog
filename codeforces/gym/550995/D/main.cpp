@@ -1,12 +1,14 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-
-using namespace std;
 using ll = long long;
 
+using namespace std;
+
 struct Point {
-    ll x, y, i;
+    ll x, y;
+    int i;
+    bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn(Point& a, Point& b, Point& c) {
@@ -20,11 +22,15 @@ bool on_line(Point a, Point b, Point c) {
 }
 
 bool in_triangle(vector<Point> tri, Point p) {
-    return abs(turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
-               turn(tri[0], tri[2], p)) == 3;
+    int a = turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
+            turn(tri[0], tri[2], p);
+    return abs(a) == 3 || on_line(tri[0], tri[1], p) ||
+           on_line(tri[1], tri[2], p) || on_line(tri[0], tri[2], p);
 }
 
 int main() {
+    cin.tie(0), ios::sync_with_stdio(0);
+
     int N;
     cin >> N;
 
@@ -34,22 +40,23 @@ int main() {
         ptS[i].i = i;
     }
 
-    vector<Point> tri{ptS[0], ptS[0], ptS[0]};
+    sort(ptS.begin(), ptS.end());
 
-    while (!turn(tri[0], tri[1], tri[2]))
-
-        for (Point p : ptS) {
-            if (any_of(tri.begin(), tri.end(),
-                       [&](Point q) { return p.i == q.i; })) {
-                continue;
-            }
-            bool oa = on_line(tri[0], tri[1], p),
-                 ob = on_line(tri[1], tri[2], p),
-                 oc = on_line(tri[0], tri[2], p);
-            if (in_triangle(tri, p) || oa || ob || oc) {
-                tri[!oa ? 2 : !ob ? 0 : 1] = p;
-            }
+    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
+    int i = 2;
+    for (; i < N; i++) {
+        if (ptS[i].x > ptS[0].x) {
+            tri[2] = ptS[i];
+            break;
         }
+    }
+
+    for (; i < N; i++) {
+        if (in_triangle(tri, ptS[i])) {
+            sort(tri.begin(), tri.end());
+            tri[2] = ptS[i];
+        }
+    }
 
     cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
 }
