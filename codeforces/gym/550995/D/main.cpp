@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cassert>
 #include <iostream>
 #include <vector>
 
@@ -65,6 +66,7 @@ int main() {
                 tri[1] = p;
                 continue;
             }
+            assert(0);
         }
     }
 
