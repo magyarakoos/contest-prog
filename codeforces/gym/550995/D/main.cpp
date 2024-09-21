@@ -16,18 +16,6 @@ int turn(Point& a, Point& b, Point& c) {
     return (r > 0) - (r < 0);
 }
 
-bool on_line(Point a, Point b, Point c) {
-    return !turn(a, b, c) && min(a.x, b.x) <= c.x && c.x <= max(a.x, b.x) &&
-           min(a.y, b.y) <= c.y && c.y <= max(a.y, b.y);
-}
-
-bool in_triangle(vector<Point> tri, Point p) {
-    return abs(turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
-               turn(tri[0], tri[2], p)) == 3 ||
-           on_line(tri[0], tri[1], p) || on_line(tri[1], tri[2], p) ||
-           on_line(tri[0], tri[2], p);
-}
-
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -42,5 +30,6 @@ int main() {
 
     sort(ptS.begin() + 2, ptS.end());
 
-    cout << ptS[0].i + 1 << " " << ptS[1].i + 1 << " ";
+    cout << ptS[0].i + 1 << " " << ptS[1].i + 1 << " "
+         << (*find_if(ptS.begin() + 2, ptS.end(), []() {})).i;
 }
