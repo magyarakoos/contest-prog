@@ -39,8 +39,6 @@ int main() {
 
     vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
 
-    exit(0);
-
     int i = 2;
     for (; i < N; i++) {
         if (!on_line(tri[0], tri[1], ptS[i])) {
