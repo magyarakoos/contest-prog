@@ -1,8 +1,8 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-using ll = long long;
 
+using ll = long long;
 using namespace std;
 
 struct Point {
@@ -22,10 +22,10 @@ bool on_line(Point a, Point b, Point c) {
 }
 
 bool in_triangle(vector<Point> tri, Point p) {
-    int a = turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
-            turn(tri[0], tri[2], p);
-    return abs(a) == 3 || on_line(tri[0], tri[1], p) ||
-           on_line(tri[1], tri[2], p) || on_line(tri[0], tri[2], p);
+    return abs(turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
+               turn(tri[0], tri[2], p)) == 3 ||
+           on_line(tri[0], tri[1], p) || on_line(tri[1], tri[2], p) ||
+           on_line(tri[0], tri[2], p);
 }
 
 int main() {
