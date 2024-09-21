@@ -53,8 +53,18 @@ int main() {
     for (Point p : ptS) {
         if (p.i == tri[0].i || p.i == tri[1].i || p.i == tri[2].i) continue;
         if (in_triangle(tri, p)) {
-            sort(tri.begin(), tri.end());
-            tri[2] = p;
+            if (turn(tri[0], tri[1], p)) {
+                tri[2] = p;
+                continue;
+            }
+            if (turn(tri[1], tri[2], p)) {
+                tri[2] = p;
+                continue;
+            }
+            if (turn(tri[0], tri[2], p)) {
+                tri[2] = p;
+                continue;
+            }
         }
     }
 
