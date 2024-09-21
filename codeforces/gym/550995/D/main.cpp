@@ -2,16 +2,10 @@
 #include <iostream>
 #include <vector>
 
-#include <debug.h>
-
 using namespace std;
 using ll = long long;
-struct Point {
+using Point = struct {
     ll x, y, i;
-    friend std::ostream& operator<<(std::ostream& os, const Point& p) {
-        os << "(" << p.x << ", " << p.y << " | " << p.i << ")";
-        return os;
-    }
 };
 
 int turn(Point& a, Point& b, Point& c) {
@@ -41,13 +35,12 @@ int main() {
 
     vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
 
-    for (int i = 3; i < N - 1; i++) {
+    for (int i = 3; i < N; i++) {
         bool oa = on_line(tri[0], tri[1], ptS[i]),
              ob = on_line(tri[1], tri[2], ptS[i]),
              oc = on_line(tri[0], tri[2], ptS[i]);
         if (in_triangle(tri, ptS[i]) || oa || ob || oc) {
             tri[!oa ? 2 : !ob ? 0 : 1] = ptS[i];
-            DB(tri);
         }
     }
 
