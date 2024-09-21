@@ -42,7 +42,7 @@ int main() {
     int i = 2;
     for (; i < N; i++) {
         if (!on_line(tri[0], tri[1], ptS[i])) {
-            tri[2] = ptS[i];
+            tri.push_back(ptS[i]);
             break;
         }
     }
