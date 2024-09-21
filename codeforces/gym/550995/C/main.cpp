@@ -9,7 +9,7 @@ int main() {
     for (long long x = 0; x <= 5; x++) {
         cout << x << " " << x * P << " " << N - x * P << " "
              << __popcount(N - x * P) << "\n";
-        if (N >= x * P && N - x * P <= x) {
+        if (N >= x * P && __popcount(N - x * P) <= x) {
             cout << x;
             exit(0);
         }
