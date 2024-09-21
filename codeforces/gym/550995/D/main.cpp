@@ -8,6 +8,7 @@ using namespace std;
 struct Point {
     ll x, y;
     int i;
+    bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn(Point& a, Point& b, Point& c) {
@@ -39,30 +40,7 @@ int main() {
         ptS[i].i = i;
     }
 
-    vector<Point> tri;
-    for (int i = 2; i < N; i++) {
-        if (turn(ptS[0], ptS[1], ptS[i])) {
-            tri = {ptS[0], ptS[1], ptS[i]};
-            break;
-        }
-    }
+    sort(ptS.begin() + 2, ptS.end());
 
-    for (Point p : ptS) {
-        if (in_triangle(tri, p)) {
-            if (turn(tri[0], tri[1], p)) {
-                tri[2] = p;
-                continue;
-            }
-            if (turn(tri[1], tri[2], p)) {
-                tri[0] = p;
-                continue;
-            }
-            if (turn(tri[0], tri[2], p)) {
-                tri[1] = p;
-                continue;
-            }
-        }
-    }
-
-    cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
+    cout << ptS[0].i + 1 << " " << ptS[1].i + 1 << " ";
 }
