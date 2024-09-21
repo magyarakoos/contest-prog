@@ -31,5 +31,7 @@ int main() {
     sort(ptS.begin() + 2, ptS.end());
 
     cout << ptS[0].i + 1 << " " << ptS[1].i + 1 << " "
-         << (*find_if(ptS.begin() + 2, ptS.end(), []() {})).i;
+         << (*find_if(ptS.begin() + 2, ptS.end(), [&](Point p) {
+                return turn(ptS[0], ptS[1], p);
+            })).i;
 }
