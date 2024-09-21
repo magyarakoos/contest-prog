@@ -6,7 +6,7 @@ int main() {
     int N, P;
     cin >> N >> P;
 
-    for (long long x = 0; x * P <= 1e7; x++) {
+    for (long long x = 0; x <= 5; x++) {
         if (N >= x * P && N - x * P <= x) {
             cout << x;
             exit(0);
