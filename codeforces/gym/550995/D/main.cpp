@@ -27,12 +27,10 @@ int main() {
 
     sort(ptS.begin(), ptS.end());
 
-    cout << ptS[0].i + 1 << " " << ptS[1].i + 1 << " ";
-    for (int i = 2; i < N; i++) {
-        if (turn(ptS[0], ptS[1], ptS[i])) {
-            cout << i << " " << ptS[i].x << " " << ptS[i].y << "\n";
-            cout << ptS[i].i;
-            break;
-        }
-    }
+    cout << ptS[0].i + 1 << " " << ptS[1].i + 1 << " "
+         << (*find_if(ptS.begin() + 2, ptS.end(),
+                      [&](Point p) { return turn(ptS[0], ptS[1], p); }))
+                    .i +
+                1
+         << "\n";
 }
