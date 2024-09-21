@@ -41,6 +41,7 @@ int main() {
              oc = on_line(tri[0], tri[2], ptS[i]);
         if (in_triangle(tri, ptS[i]) || oa || ob || oc) {
             tri[!oa ? 2 : !ob ? 0 : 1] = ptS[i];
+            DB(tri);
         }
     }
 
