@@ -1,3 +1,4 @@
+#include "debug.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -25,7 +26,9 @@ int main() {
         ptS[i].i = i;
     }
 
-    sort(ptS.begin() + 2, ptS.end());
+    sort(ptS.begin(), ptS.end());
+
+    DB(ptS);
 
     cout << ptS[0].i + 1 << " " << ptS[1].i + 1 << " "
          << (*find_if(ptS.begin() + 2, ptS.end(), [&](Point p) {
