@@ -39,15 +39,17 @@ int main() {
 
     vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
 
+    exit(0);
+
     int i = 2;
     for (; i < N; i++) {
         if (!on_line(tri[0], tri[1], ptS[i])) {
-            tri[2] = ptS[i++];
+            tri[2] = ptS[i];
             break;
         }
     }
 
-    for (; i < N; i++) {
+    for (i++; i < N; i++) {
         bool oa = on_line(tri[0], tri[1], ptS[i]),
              ob = on_line(tri[1], tri[2], ptS[i]),
              oc = on_line(tri[0], tri[2], ptS[i]);
