@@ -1,9 +1,7 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
-using ll = long long;
 using namespace std;
+using ll = long long;
 
 struct Point {
     ll x, y;
@@ -11,9 +9,8 @@ struct Point {
     bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
-int turn(Point& a, Point& b, Point& c) {
-    ll r = (a.x - c.x) * (b.y - c.y) - (a.y - c.y) * (b.x - c.x);
-    return (r > 0) - (r < 0);
+bool turn(Point& a, Point& b, Point& c) {
+    return (a.x - c.x) * (b.y - c.y) - (a.y - c.y) * (b.x - c.x);
 }
 
 int main() {
