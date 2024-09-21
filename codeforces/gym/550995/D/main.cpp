@@ -52,7 +52,6 @@ int main() {
     }
 
     for (Point p : ptS) {
-        if (p.i == tri[0].i || p.i == tri[1].i || p.i == tri[2].i) continue;
         if (in_triangle(tri, p)) {
             if (turn(tri[0], tri[1], p)) {
                 tri[2] = p;
