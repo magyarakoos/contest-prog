@@ -6,8 +6,9 @@
 
 using namespace std;
 using ll = long long;
-using Point = struct {
+struct Point {
     ll x, y, i;
+    friend std::ostream& operator<<(std::ostream& os, const Point& person);
 };
 
 int turn(Point& a, Point& b, Point& c) {
