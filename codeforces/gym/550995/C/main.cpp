@@ -5,9 +5,8 @@ using namespace std;
 int main() {
     int N, P;
     cin >> N >> P;
-
     for (long long x = 0; x <= 1e6; x++) {
-        if (N >= x * P && __popcount(N - x * P) <= x) {
+        if (N >= x * P && __popcount(N - x * P) <= x && N - x * P > 0) {
             cout << x;
             exit(0);
         }
