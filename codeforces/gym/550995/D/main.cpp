@@ -4,8 +4,10 @@
 
 using namespace std;
 using ll = long long;
-using Point = struct {
+
+struct Point {
     ll x, y, i;
+    bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn(Point& a, Point& b, Point& c) {
@@ -33,9 +35,11 @@ int main() {
         ptS[i].i = i;
     }
 
-    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
+    sort(ptS.begin(), ptS.end());
 
-    for (int i = 3; i < N; i++) {
+    vector<Point> tri = {ptS[0], ptS[1], ptS.back()};
+
+    for (int i = 2; i < N - 1; i++) {
         bool oa = on_line(tri[0], tri[1], ptS[i]),
              ob = on_line(tri[1], tri[2], ptS[i]),
              oc = on_line(tri[0], tri[2], ptS[i]);
