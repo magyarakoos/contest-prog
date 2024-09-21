@@ -19,9 +19,8 @@ bool on_line(Point a, Point b, Point c) {
 }
 
 bool in_triangle(vector<Point> tri, Point p) {
-    int a = turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
-            turn(tri[0], tri[2], p);
-    return abs(a) == 3;
+    return abs(turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
+               turn(tri[0], tri[2], p)) == 3;
 }
 
 int main() {
