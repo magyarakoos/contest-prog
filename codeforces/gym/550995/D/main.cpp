@@ -39,10 +39,10 @@ int main() {
         ptS[i].i = i;
     }
 
-    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
+    vector<Point> tri;
     for (int i = 2; i < N; i++) {
-        if (turn(tri[0], tri[1], ptS[i])) {
-            tri[2] = ptS[i];
+        if (turn(ptS[0], ptS[1], ptS[i])) {
+            tri = {ptS[0], ptS[1], ptS[i]};
             break;
         }
     }
