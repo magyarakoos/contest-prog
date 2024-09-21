@@ -51,10 +51,10 @@ int main() {
         }
     }
 
-    for (; i < N; i++) {
-        if (in_triangle(tri, ptS[i])) {
+    for (Point p : ptS) {
+        if (in_triangle(tri, p)) {
             sort(tri.begin(), tri.end());
-            tri[2] = ptS[i];
+            tri[2] = p;
         }
     }
 
