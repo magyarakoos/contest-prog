@@ -34,10 +34,9 @@ int main() {
         ptS[i].i = i;
     }
 
-    vector<Point> tri = {ptS[0], ptS[1],
-                         *find_if(ptS.begin() + 2, ptS.end(), [&](Point p) {
-                             return turn(ptS[0], ptS[1], p);
-                         })};
+    vector<Point> tri {
+        {0, 0, 0}, { 0, 0 }
+    }
 
     for (Point p : ptS) {
         if (any_of(tri.begin(), tri.end(),
