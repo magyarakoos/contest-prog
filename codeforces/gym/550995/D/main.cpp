@@ -44,7 +44,7 @@ int main() {
 
     vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
     for (int i = 2; i < N; i++) {
-        if (ptS[i].x > ptS[0].x) {
+        if (turn(tri[0], tri[1], ptS[i])) {
             tri[2] = ptS[i];
             break;
         }
