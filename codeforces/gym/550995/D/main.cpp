@@ -58,11 +58,11 @@ int main() {
                 continue;
             }
             if (turn(tri[1], tri[2], p)) {
-                tri[2] = p;
+                tri[0] = p;
                 continue;
             }
             if (turn(tri[0], tri[2], p)) {
-                tri[2] = p;
+                tri[1] = p;
                 continue;
             }
         }
