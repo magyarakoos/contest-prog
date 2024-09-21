@@ -35,9 +35,9 @@ int main() {
         ptS[i].i = i;
     }
 
-    sort(ptS.begin(), ptS.end());
+    sort(ptS.begin() + 2, ptS.end());
 
-    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
+    vector<Point> tri = {ptS[0], ptS[1]};
 
     int i = 2;
     for (; i < N; i++) {
