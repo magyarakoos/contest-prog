@@ -39,5 +39,10 @@ int main() {
                              return turn(ptS[0], ptS[1], p);
                          })};
 
+    for (Point p : ptS) {
+        if (any_of(tri.begin(), tri.end(), []() {})) continue;
+        cout << "AIIII\n";
+    }
+
     cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
 }
