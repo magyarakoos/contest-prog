@@ -7,7 +7,6 @@ using ll = long long;
 
 struct Point {
     ll x, y, i;
-    bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn(Point& a, Point& b, Point& c) {
@@ -22,9 +21,7 @@ bool on_line(Point a, Point b, Point c) {
 
 bool in_triangle(vector<Point> tri, Point p) {
     return abs(turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
-               turn(tri[0], tri[2], p)) == 3 ||
-           on_line(tri[0], tri[1], p) || on_line(tri[1], tri[2], p) ||
-           on_line(tri[0], tri[2], p);
+               turn(tri[0], tri[2], p)) == 3;
 }
 
 int main() {
@@ -37,21 +34,10 @@ int main() {
         ptS[i].i = i;
     }
 
-    sort(ptS.begin() + 2, ptS.end());
-
-    vector<Point> tri = {ptS[0], ptS[1]};
-
-    int i = 2;
-    for (; i < N; i++) {
-        if (!on_line(tri[0], tri[1], ptS[i])) {
-            tri.push_back(ptS[i]);
-            break;
-        }
-    }
-
-    for (i++; i < N; i++) {
-        if (in_triangle(tri, ptS[i])) { tri[!oa ? 2 : !ob ? 0 : 1] = ptS[i]; }
-    }
+    vector<Point> tri = {ptS[0], ptS[1],
+                         *find_if(ptS.begin() + 2, ptS.end(), [&](Point p) {
+                             return turn(ptS[0], ptS[1], p);
+                         })};
 
     cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
 }
