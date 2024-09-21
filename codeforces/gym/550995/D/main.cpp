@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <cassert>
 #include <iostream>
 #include <vector>
 
@@ -9,7 +8,6 @@ using namespace std;
 struct Point {
     ll x, y;
     int i;
-    bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn(Point& a, Point& b, Point& c) {
@@ -41,8 +39,6 @@ int main() {
         ptS[i].i = i;
     }
 
-    sort(ptS.begin(), ptS.end());
-
     vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
     for (int i = 2; i < N; i++) {
         if (turn(tri[0], tri[1], ptS[i])) {
@@ -65,7 +61,6 @@ int main() {
                 tri[1] = p;
                 continue;
             }
-            assert(0);
         }
     }
 
