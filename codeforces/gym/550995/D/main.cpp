@@ -34,21 +34,22 @@ int main() {
         ptS[i].i = i;
     }
 
-    vector<Point> tri {
-        {0, 0, 0}, { 0, 0 }
-    }
+    vector<Point> tri{ptS[0], ptS[0], ptS[0]};
 
-    for (Point p : ptS) {
-        if (any_of(tri.begin(), tri.end(),
-                   [&](Point q) { return p.i == q.i; })) {
-            continue;
+    while (!turn(tri[0], tri[1], tri[2]))
+
+        for (Point p : ptS) {
+            if (any_of(tri.begin(), tri.end(),
+                       [&](Point q) { return p.i == q.i; })) {
+                continue;
+            }
+            bool oa = on_line(tri[0], tri[1], p),
+                 ob = on_line(tri[1], tri[2], p),
+                 oc = on_line(tri[0], tri[2], p);
+            if (in_triangle(tri, p) || oa || ob || oc) {
+                tri[!oa ? 2 : !ob ? 0 : 1] = p;
+            }
         }
-        bool oa = on_line(tri[0], tri[1], p), ob = on_line(tri[1], tri[2], p),
-             oc = on_line(tri[0], tri[2], p);
-        if (in_triangle(tri, p) || oa || ob || oc) {
-            tri[!oa ? 2 : !ob ? 0 : 1] = p;
-        }
-    }
 
     cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
 }
