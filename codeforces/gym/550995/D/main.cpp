@@ -43,8 +43,7 @@ int main() {
     sort(ptS.begin(), ptS.end());
 
     vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
-    int i = 2;
-    for (; i < N; i++) {
+    for (int i = 2; i < N; i++) {
         if (ptS[i].x > ptS[0].x) {
             tri[2] = ptS[i];
             break;
@@ -52,6 +51,7 @@ int main() {
     }
 
     for (Point p : ptS) {
+        if (p.i == tri[0].i || p.i == tri[1].i || p.i == tri[2].i) continue;
         if (in_triangle(tri, p)) {
             sort(tri.begin(), tri.end());
             tri[2] = p;
