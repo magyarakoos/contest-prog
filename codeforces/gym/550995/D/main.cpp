@@ -40,7 +40,10 @@ int main() {
                          })};
 
     for (Point p : ptS) {
-        if (any_of(tri.begin(), tri.end(), []() {})) continue;
+        if (any_of(tri.begin(), tri.end(),
+                   [&](Point q) { return p.i == q.i; })) {
+            continue;
+        }
         cout << "AIIII\n";
     }
 
