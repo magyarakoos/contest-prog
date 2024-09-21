@@ -4,11 +4,13 @@
 using ll = long long;
 
 using namespace std;
+using Point = struct {
+    ll x, y, i;
+}
 
 struct Point {
     ll x, y;
     int i;
-    bool operator<(Point p) { return x == p.x ? y < p.y : x < p.x; }
 };
 
 int turn(Point& a, Point& b, Point& c) {
@@ -24,8 +26,7 @@ bool on_line(Point a, Point b, Point c) {
 bool in_triangle(vector<Point> tri, Point p) {
     int a = turn(tri[0], tri[1], p) + turn(tri[1], tri[2], p) +
             turn(tri[0], tri[2], p);
-    return abs(a) == 3 || on_line(tri[0], tri[1], p) ||
-           on_line(tri[1], tri[2], p) || on_line(tri[0], tri[2], p);
+    return abs(a) == 3;
 }
 
 int main() {
@@ -51,10 +52,10 @@ int main() {
     }
 
     for (int i = 3; i < N - 1; i++) {
-        if (in_triangle(tri, ptS[i])) {
-            sort(tri.begin(), tri.end());
-            tri[2] = ptS[i];
-        }
+        bool oa = on_line(tri[0], tri[1], ptS[i]),
+             ob = on_line(tri[1], tri[2], ptS[i]),
+             oc = on_line(tri[0], tri[2], ptS[i]);
+        if (in_triangle(tri, ptS[i])) {}
     }
 
     cout << tri[0].i + 1 << " " << tri[1].i + 1 << " " << tri[2].i + 1 << "\n";
