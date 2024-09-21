@@ -37,9 +37,17 @@ int main() {
 
     sort(ptS.begin(), ptS.end());
 
-    vector<Point> tri = {ptS[0], ptS[1], ptS.back()};
+    vector<Point> tri = {ptS[0], ptS[1], ptS[2]};
 
-    for (int i = 2; i < N - 1; i++) {
+    int i = 2;
+    for (; i < N; i++) {
+        if (!on_line(tri[0], tri[1], ptS[i])) {
+            tri[2] = ptS[i++];
+            break;
+        }
+    }
+
+    for (; i < N; i++) {
         bool oa = on_line(tri[0], tri[1], ptS[i]),
              ob = on_line(tri[1], tri[2], ptS[i]),
              oc = on_line(tri[0], tri[2], ptS[i]);
