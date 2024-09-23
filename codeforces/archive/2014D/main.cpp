@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
+
+const int INF = 1e9;
 
 void solve() {
     int N, D, K;
@@ -13,6 +14,15 @@ void solve() {
         a[R + 1]--;
     }
     for (int i = 2; i <= N; i++) { a[i] += a[i - 1]; }
+
+    int mn = INF, mx = -INF;
+    for (int i = D; i <= N; i++) {
+        int x = a[i] - a[i - D];
+        mn = min(mn, x);
+        mx = max(mx, x);
+    }
+
+    cout << mx << " " << mn << "\n";
 }
 
 int main() {
