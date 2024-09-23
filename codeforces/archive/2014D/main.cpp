@@ -16,6 +16,7 @@ void solve() {
     for (int i = 2; i <= N; i++) { a[i] += a[i - 1]; }
 
     int mn = INF, mx = -INF;
+    int ra, rb;
     for (int i = 1; i <= N - D + 1; i++) {
         int x = a[i];
         mn = min(mn, x);
