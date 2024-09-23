@@ -16,7 +16,7 @@ void solve() {
         return;
     }
 
-    auto f = [&](int x) -> bool { return a[N / 2] * N < sum + x; };
+    auto f = [&](int x) -> bool { return a[N / 2] * 2 * N < sum + x; };
     int l = -1, r = 1e9;
     while (r - l > 1) {
         int m = (l + r) / 2;
