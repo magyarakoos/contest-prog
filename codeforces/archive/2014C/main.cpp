@@ -13,11 +13,17 @@ void solve() {
     }
 
     sort(a.begin(), a.end());
-    int mx = a.back();
-
     int rp = a[N / 2];
 
     int l = -1, r = 1e9;
+    while (r - l > 1) {
+        int m = (l + r) / 2;
+        if (f(m)) {
+            r = m;
+        } else {
+            l = m;
+        }
+    }
 }
 
 int main() {
