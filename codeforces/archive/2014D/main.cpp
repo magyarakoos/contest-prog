@@ -19,8 +19,8 @@ void solve() {
     int ra = 0, rb = 0;
     for (int i = 1; i <= N - D + 1; i++) {
         int x = a[i];
-        if (x < mn) mn = x, rb = i - D + 1;
-        if (mx < x) mx = x, ra = i - D + 1;
+        if (x < mn) mn = x, rb = i;
+        if (mx < x) mx = x, ra = i;
     }
 
     cout << ra << " " << rb << "\n";
