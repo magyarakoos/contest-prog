@@ -10,7 +10,7 @@ void solve() {
     while (K--) {
         int L, R;
         cin >> L >> R;
-        a[L]++;
+        a[max(1, L - D + 1)]++;
         a[R + 1]--;
     }
     for (int i = 2; i <= N; i++) { a[i] += a[i - 1]; }
