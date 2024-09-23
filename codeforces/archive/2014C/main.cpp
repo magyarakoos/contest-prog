@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-    int N;
+    ll N;
     cin >> N;
     vector<int> a(N);
     for (int& x : a) cin >> x;
@@ -16,7 +16,7 @@ void solve() {
         return;
     }
 
-    auto f = [&](int i) -> bool { return a[N / 2] * N < sum; };
+    auto f = [&](int x) -> bool { return a[N / 2] * N < sum + x; };
     int l = -1, r = 1e9;
     while (r - l > 1) {
         int m = (l + r) / 2;
@@ -26,6 +26,8 @@ void solve() {
             l = m;
         }
     }
+
+    cout << (r == 1e9 ? -1 :)
 }
 
 int main() {
