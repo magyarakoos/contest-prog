@@ -16,16 +16,17 @@ void solve() {
         return;
     }
 
-    auto f = [&](int x) -> bool { return a[N / 2] * 2 * N < sum + x; };
     int l = -1, r = 1e9;
     while (r - l > 1) {
         int m = (l + r) / 2;
-        if (f(m)) {
+        if (a[N / 2] * 2 * N < sum + m) {
             r = m;
         } else {
             l = m;
         }
     }
+
+    auto it = lower_bound(-1, 1, 0, [](int x, int y) { return 1; });
 
     cout << (r == 1e9 ? -1 : r) << "\n";
 }
