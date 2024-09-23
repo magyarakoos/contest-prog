@@ -8,7 +8,7 @@ void solve() {
         int x;
         cin >> x;
         if (x >= K) cash += x;
-        if (x == 0) cash--, result++;
+        if (x == 0 && cash) cash--, result++;
     }
     cout << result << "\n";
 }
