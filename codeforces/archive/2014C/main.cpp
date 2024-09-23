@@ -1,19 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 void solve() {
     int N;
     cin >> N;
     vector<int> a(N);
     for (int& x : a) cin >> x;
+    sort(a.begin(), a.end());
 
     if (N == 1) {
         cout << "-1\n";
         return;
     }
 
-    sort(a.begin(), a.end());
-    int rp = a[N / 2];
+    auto f = [&](int i) -> bool {};
 
     int l = -1, r = 1e9;
     while (r - l > 1) {
