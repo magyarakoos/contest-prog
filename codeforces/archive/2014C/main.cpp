@@ -11,7 +11,7 @@ void solve() {
     sort(a.begin(), a.end());
     ll sum = accumulate(a.begin(), a.end(), 0LL);
 
-    if (N == 1) {
+    if (N / 2 == N - 1) {
         cout << "-1\n";
         return;
     }
