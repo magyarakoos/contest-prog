@@ -26,8 +26,6 @@ void solve() {
         }
     }
 
-    auto it = lower_bound(-1, 1, 0, [](int x, int y) { return 1; });
-
     cout << (r == 1e9 ? -1 : r) << "\n";
 }
 
