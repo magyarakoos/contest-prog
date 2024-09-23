@@ -16,14 +16,14 @@ void solve() {
     for (int i = 2; i <= N; i++) { a[i] += a[i - 1]; }
 
     int mn = INF, mx = -INF;
-    int ra, rb;
+    int ra = 0, rb = 0;
     for (int i = 1; i <= N - D + 1; i++) {
         int x = a[i];
-        mn = min(mn, x);
-        mx = max(mx, x);
+        if (x < mn) mn = x, rb = i - D + 1;
+        if (mx < x) mx = x, ra = i - D + 1;
     }
 
-    cout << mx << " " << mn << "\n";
+    cout << ra << " " << rb << "\n";
 }
 
 int main() {
