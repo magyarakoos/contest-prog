@@ -6,6 +6,12 @@ void solve() {
     cin >> N;
     vector<int> a(N);
     for (int& x : a) cin >> x;
+
+    if (N == 1) {
+        cout << "-1\n";
+        return;
+    }
+
     sort(a.begin(), a.end());
     int mx = a.back();
 
