@@ -27,7 +27,7 @@ void solve() {
         }
     }
 
-    cout << (r == 1e9 ? -1 :)
+    cout << (r == 1e9 ? -1 : r) << "\n";
 }
 
 int main() {
