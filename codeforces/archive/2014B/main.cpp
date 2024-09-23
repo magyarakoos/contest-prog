@@ -4,7 +4,9 @@ using namespace std;
 void solve() {
     int N, K;
     cin >> N >> K;
-    cout << ((K + (K % 2)) / 2 % 2 ? "NO" : "YES") << "\n";
+    cout << (K % 2 ? ((K + N % 2) / 2 % 2 ? "NO" : "YES")
+                   : (K / 2 % 2 ? "NO" : "YES"))
+         << "\n";
 }
 
 int main() {
