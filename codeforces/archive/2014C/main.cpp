@@ -16,7 +16,7 @@ void solve() {
         return;
     }
 
-    ll l = -1, r = 1e9;
+    ll l = -1, r = 4e11;
     while (r - l > 1) {
         int m = (l + r) / 2;
         if (a[N / 2] * 2 * N < sum + m) {
