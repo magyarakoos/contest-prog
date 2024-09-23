@@ -2,6 +2,8 @@
 using namespace std;
 using ll = long long;
 
+const ll INF = 1e17;
+
 void solve() {
     ll N;
     cin >> N;
@@ -16,7 +18,7 @@ void solve() {
         return;
     }
 
-    int l = -1, r = 1e9;
+    ll l = -1, r = INF;
     while (r - l > 1) {
         int m = (l + r) / 2;
         if (a[N / 2] * 2 * N < sum + m) {
