@@ -5,14 +5,14 @@ using ll = long long;
 void solve() {
     int N, D, K;
     cin >> N >> D >> K;
-    vector<int> a(N + 1);
+    vector<int> a(N + 2);
     while (K--) {
         int L, R;
         cin >> L >> R;
-        a[L - 1]++;
-        a[R]--;
+        a[L]++;
+        a[R + 1]--;
     }
-    for (int i = 1; i < N; i++) { a[i] += a[i - 1]; }
+    for (int i = 2; i <= N; i++) { a[i] += a[i - 1]; }
 }
 
 int main() {
