@@ -1,9 +1,13 @@
 #include <iostream>
-
 using namespace std;
 
+int N, result, prv, x;
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-
+    cin >> N >> prv;
+    while (--N) {
+        cin >> x;
+        result += x <= prv;
+        prv = x;
+    }
+    cout << result;
 }
