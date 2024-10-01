@@ -13,8 +13,8 @@ int solve(int l, int r) {
     if (l == r) return 1;
     if (l > r) return 0;
 
-    return dp[l][r] = max({(a[l] == a[r]) * (solve(l + 1, r - 1) + 2),
-                           solve(l, r - 1), solve(l + 1, r)});
+    dp[l][r] = min(1 + solve(l + 1, r),
+                   (1 + solve(l + 2, r)) * (a[l] == a[l + 1]));
 }
 
 int main() {
