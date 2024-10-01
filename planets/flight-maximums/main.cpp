@@ -1,10 +1,15 @@
+#include <bit>
 #include <cmath>
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-int st[20][100005];
+int log2_floor(unsigned i) {
+    return bit_width(i) - 1;
+}
+
+int st[25][100005];
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -15,7 +20,7 @@ int main() {
     for (int& x : H) cin >> x;
 
     copy(H.begin(), H.end(), st[0]);
-    for (int i = 1; i < 20; i++) {
+    for (int i = 1; i < 25; i++) {
         for (int j = 0; j + (1 << i) <= N; j++) {
             st[i][j] =
                 max(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
