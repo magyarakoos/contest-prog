@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <array>
 #include <iostream>
 #include <vector>
 
@@ -9,12 +8,14 @@ int main() {
     int N;
     cin >> N;
 
-    vector<array<int, 2>> lis;
-
+    vector<int> lis;
     for (int i = 0; i < N; i++) {
         int a;
         cin >> a;
-        auto it = lower_bound(lis.begin(), lis.end(), a - i);
+        int j =
+            lower_bound(lis.begin(), lis.end(), a - i) - lis.begin();
+        if (j == N) lis.push_back(0);
+        lis[j] = a;
     }
 
     cout << N - lis.size();
