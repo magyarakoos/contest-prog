@@ -1,24 +1,39 @@
-#include "debug.h"
-#include <algorithm>
+#include <array>
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int main() {
     int N;
     cin >> N;
 
-    vector<int> lis;
+    vector<array<int, 2>> lis;
+
     for (int i = 0; i < N; i++) {
         int a;
         cin >> a;
-        int j = lower_bound(lis.begin(), lis.end(), a - i + 1) -
-                lis.begin();
-        if (j == lis.size()) lis.push_back(0);
-        lis[j] = a;
-    }
 
-    DB(lis);
+        auto f = [&](int x) -> bool {
+            return i - lis[x][1] >= a - lis[x][0];
+        };
+
+        int l = -1, r = lis.size();
+        while (r - l > 1) {
+            int m = (l + r) / 2;
+            if (f(m)) {
+                r = m;
+            } else {
+                l = m;
+            }
+        }
+
+        if (r == lis.size()) {
+            lis.push_back({a, i});
+        } else {
+            lis[r] = {a, i};
+        }
+    }
 
     cout << N - lis.size();
 }
