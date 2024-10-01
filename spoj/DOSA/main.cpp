@@ -2,6 +2,8 @@
 #include <iostream>
 #include <vector>
 
+#include <debug.h>
+
 using namespace std;
 
 int main() {
@@ -15,7 +17,7 @@ int main() {
         cin >> a;
 
         auto f = [&](int x) -> bool {
-            return i - lis[x][1] <= a - lis[x][0];
+            return i - lis[x][1] >= a - lis[x][0];
         };
 
         int l = -1, r = lis.size();
@@ -34,6 +36,8 @@ int main() {
             lis[r] = {a, i};
         }
     }
+
+    DB(lis);
 
     cout << N - lis.size();
 }
