@@ -8,6 +8,13 @@ vector<int> a;
 vector<vector<int>> dp;
 
 int solve(int l, int r) {
+    if (dp[l][r]) return dp[l][r];
+    if (l == r) return 1;
+    if (l > r) return 0;
+
+    dp[l][r] = max({(a[l] == a[r]) * solve(l + 1, r - 1),
+                    solve(l, r - 1), solve(l + 1, r)});
+
     return 0;
 }
 
