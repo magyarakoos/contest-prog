@@ -1,17 +1,17 @@
+#include <algorithm>
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int N, result, prv, x;
 int main() {
-    cin >> N >> prv;
-    while (--N) {
+    int N;
+    cin >> N;
+
+    vector<int> lis;
+
+    for (int i = 0; i < N; i++) {
+        int x;
         cin >> x;
-        if (x <= prv) {
-            result++;
-            prv++;
-        } else {
-            prv = x;
-        }
+        auto it = lower_bound(lis.begin(), lis.end(), x, []() {});
     }
-    cout << result;
 }
