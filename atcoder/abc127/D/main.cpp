@@ -10,7 +10,7 @@ int main() {
     int N, M;
     cin >> N >> M;
 
-    while (N--) {
+    for (int i = 0; i < N; i++) {
         int A;
         cin >> A;
         m[-A]++;
