@@ -1,3 +1,4 @@
+#include <array>
 #include <iostream>
 #include <vector>
 
@@ -7,15 +8,15 @@ int main() {
     int N;
     cin >> N;
 
-    vector<int> lis;
+    vector<array<int, 2>> lis;
 
     for (int i = 0; i < N; i++) {
         int a;
         cin >> a;
 
-        auto f = [&](int x) -> bool { return 0; };
+        auto f = [&](int x) -> bool { return; };
 
-        int l = -1, r = lis.size() - 1;
+        int l = -1, r = lis.size();
         while (r - l > 1) {
             int m = (l + r) / 2;
             if (f(m)) {
