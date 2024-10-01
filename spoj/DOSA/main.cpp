@@ -12,10 +12,12 @@ int main() {
     for (int i = 0; i < N; i++) {
         int a;
         cin >> a;
-        int j =
-            lower_bound(lis.begin(), lis.end(), a - i) - lis.begin();
-        if (j == lis.size()) lis.push_back(0);
-        lis[j] = a - i;
+        if (a - i > 0) {
+            int j = lower_bound(lis.begin(), lis.end(), a - i) -
+                    lis.begin();
+            if (j == lis.size()) lis.push_back(0);
+            lis[j] = a - i;
+        }
     }
 
     cout << N - lis.size();
