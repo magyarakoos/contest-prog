@@ -1,7 +1,7 @@
+#include "debug.h"
 #include <algorithm>
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 int main() {
@@ -17,6 +17,8 @@ int main() {
         if (j == lis.size()) lis.push_back(0);
         lis[j] = a;
     }
+
+    DB(lis);
 
     cout << N - lis.size();
 }
