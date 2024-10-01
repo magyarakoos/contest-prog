@@ -14,7 +14,7 @@ int main() {
         cin >> a;
         int j =
             lower_bound(lis.begin(), lis.end(), a - i) - lis.begin();
-        if (j == N) lis.push_back(0);
+        if (j == lis.size()) lis.push_back(0);
         lis[j] = a;
     }
 
