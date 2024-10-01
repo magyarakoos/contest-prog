@@ -13,8 +13,10 @@ int solve(int l, int r) {
     if (l > r) return 0;
     if (dp[l][r]) return dp[l][r];
 
-    dp[l][r] = min(1 + solve(l + 1, r),
-                   (1 + solve(l + 2, r)) * (a[l] == a[l + 1]));
+    dp[l][r] = 1 + solve(l + 1, r);
+    if (a[l] == a[l + 1]) {
+        dp[l][r] = min(dp[l][r], 1 + solve(l + 2, r));
+    }
 
     // for (int m = l + 2; m < r; m++) {
     //     dp[l][r] =
