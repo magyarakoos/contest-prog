@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -12,10 +13,8 @@ int solve(int l, int r) {
     if (l == r) return 1;
     if (l > r) return 0;
 
-    dp[l][r] = max({(a[l] == a[r]) * solve(l + 1, r - 1),
-                    solve(l, r - 1), solve(l + 1, r)});
-
-    return 0;
+    return dp[l][r] = max({(a[l] == a[r]) * solve(l + 1, r - 1),
+                           solve(l, r - 1), solve(l + 1, r)});
 }
 
 int main() {
