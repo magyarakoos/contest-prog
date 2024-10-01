@@ -6,8 +6,12 @@ int main() {
     cin >> N >> prv;
     while (--N) {
         cin >> x;
-        result += x <= prv;
-        prv = x;
+        if (x <= prv) {
+            result++;
+            prv++;
+        } else {
+            prv = x;
+        }
     }
     cout << result;
 }
