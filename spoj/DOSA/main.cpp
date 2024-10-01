@@ -14,7 +14,7 @@ int main() {
         int a;
         cin >> a;
 
-        auto f = [&](int x) -> bool { return; };
+        auto f = [&](int x) -> bool { return abs(lis[x][0] - a); };
 
         int l = -1, r = lis.size();
         while (r - l > 1) {
