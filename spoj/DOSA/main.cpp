@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <array>
 #include <iostream>
 #include <vector>
@@ -13,26 +14,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         int a;
         cin >> a;
-
-        auto f = [&](int x) -> bool {
-            return i - lis[x][1] >= a - lis[x][0];
-        };
-
-        int l = -1, r = lis.size();
-        while (r - l > 1) {
-            int m = (l + r) / 2;
-            if (f(m)) {
-                r = m;
-            } else {
-                l = m;
-            }
-        }
-
-        if (r == lis.size()) {
-            lis.push_back({a, i});
-        } else {
-            lis[r] = {a, i};
-        }
+        auto it = lower_bound(lis.begin(), lis.end(), a - i);
     }
 
     cout << N - lis.size();
