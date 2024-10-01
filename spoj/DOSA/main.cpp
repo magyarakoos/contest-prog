@@ -34,4 +34,6 @@ int main() {
             lis[r] = {a, i};
         }
     }
+
+    cout << N - lis.size();
 }
