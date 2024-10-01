@@ -31,5 +31,8 @@ int main() {
         int S, K;
         cin >> S >> K;
         int L = S - 1, R = S + (1 << K) - 2;
+
+        int i = log2_floor(R - L + 1);
+        cout << max(st[i][L], st[i][R - (1 << i) + 1]) << "\n";
     }
 }
