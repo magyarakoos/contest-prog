@@ -17,7 +17,7 @@ int solve(int l, int r) {
                    (1 + solve(l + 2, r)) * (a[l] == a[l + 1]));
 
     for (int m = l + 2; m < r; m++) {
-        dp[l][r] = min(dp[l][r], dp[l][m - 1] + dp[m + 1][r]);
+        dp[l][r] = min(dp[l][r], solve(l, m - 1) + solve(m + 1, r));
     }
 
     return dp[l][r];
