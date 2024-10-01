@@ -15,7 +15,7 @@ int main() {
         int j =
             upper_bound(lis.begin(), lis.end(), a - i) - lis.begin();
         if (j == lis.size()) lis.push_back(0);
-        lis[j] = a;
+        lis[j] = a - i;
     }
 
     cout << N - lis.size();
