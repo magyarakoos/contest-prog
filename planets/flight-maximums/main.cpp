@@ -30,5 +30,6 @@ int main() {
     while (Q--) {
         int S, K;
         cin >> S >> K;
+        int L = S - 1, R = S + (1 << K) - 2;
     }
 }
