@@ -13,7 +13,7 @@ int main() {
         int a;
         cin >> a;
         int j =
-            upper_bound(lis.begin(), lis.end(), a - i) - lis.begin();
+            lower_bound(lis.begin(), lis.end(), a - i) - lis.begin();
         if (j == lis.size()) lis.push_back(0);
         lis[j] = a - i;
     }
