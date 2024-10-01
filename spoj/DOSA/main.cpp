@@ -27,5 +27,11 @@ int main() {
                 l = m;
             }
         }
+
+        if (r == lis.size()) {
+            lis.push_back({a, i});
+        } else {
+            lis[r] = {a, i};
+        }
     }
 }
