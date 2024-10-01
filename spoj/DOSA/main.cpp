@@ -14,7 +14,9 @@ int main() {
         int a;
         cin >> a;
 
-        auto f = [&](int x) -> bool { return abs(lis[x][0] - a); };
+        auto f = [&](int x) -> bool {
+            return i - lis[x][1] <= a - lis[x][0];
+        };
 
         int l = -1, r = lis.size();
         while (r - l > 1) {
