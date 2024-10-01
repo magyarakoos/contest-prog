@@ -18,6 +18,7 @@ int main() {
 
     while (M--) {
         int B, C;
+        cin >> B >> C;
         m[-C] += B;
     }
 
@@ -25,6 +26,7 @@ int main() {
     for (auto [key, value] : m) {
         if (value >= N) {
             result += N * -key;
+            break;
         } else {
             result += value * -key;
             N -= value;
