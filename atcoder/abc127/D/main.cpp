@@ -2,11 +2,10 @@
 #include <map>
 
 using namespace std;
+using ll = long long;
 
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-    map<int, int> m;
+    map<ll, int> m;
     int N, M;
     cin >> N >> M;
 
@@ -22,7 +21,7 @@ int main() {
         m[-C] += B;
     }
 
-    int result = 0;
+    ll result = 0;
     for (auto [key, value] : m) {
         if (value >= N) {
             result += N * -key;
