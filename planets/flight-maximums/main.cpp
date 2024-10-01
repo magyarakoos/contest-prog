@@ -4,6 +4,7 @@
 
 using namespace std;
 
+int st[20][100005];
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -13,15 +14,16 @@ int main() {
     vector<int> H(N);
     for (int& x : H) cin >> x;
 
+    copy(H.begin(), H.end(), st[0]);
+    for (int i = 1; i <= K; i++) {
+        for (int j = 0; j + (1 << i) <= N; j++) {
+            st[i][j] =
+                max(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+        }
+    }
+
     while (Q--) {
         int S, K;
         cin >> S >> K;
-
-        int result = H[S - 1];
-        for (int i = 0; i < K; i++) {
-            result = max(result, H[S + pow(2, i) - 1] - 1);
-        }
-
-        cout << result << "\n";
     }
 }
