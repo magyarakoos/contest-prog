@@ -9,17 +9,17 @@ vector<int> a;
 vector<vector<int>> dp;
 
 int solve(int l, int r) {
-    if (dp[l][r]) return dp[l][r];
     if (l == r) return 1;
     if (l > r) return 0;
+    if (dp[l][r]) return dp[l][r];
 
     dp[l][r] = min(1 + solve(l + 1, r),
                    (1 + solve(l + 2, r)) * (a[l] == a[l + 1]));
 
-    for (int m = l + 2; m < r; m++) {
-        dp[l][r] =
-            min(dp[l][r], solve(l + 1, m - 1) + solve(m + 1, r));
-    }
+    // for (int m = l + 2; m < r; m++) {
+    //     dp[l][r] =
+    //         min(dp[l][r], solve(l + 1, m - 1) + solve(m + 1, r));
+    // }
 
     return dp[l][r];
 }
