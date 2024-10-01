@@ -2,8 +2,6 @@
 #include <iostream>
 #include <vector>
 
-#include <debug.h>
-
 using namespace std;
 
 int main() {
@@ -36,8 +34,6 @@ int main() {
             lis[r] = {a, i};
         }
     }
-
-    DB(lis);
 
     cout << N - lis.size();
 }
