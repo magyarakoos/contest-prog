@@ -1,5 +1,4 @@
-#include "debug.h"
-#include <array>
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -9,34 +8,16 @@ int main() {
     int N;
     cin >> N;
 
-    vector<array<int, 2>> lis;
-
+    vector<int> lis;
     for (int i = 0; i < N; i++) {
         int a;
         cin >> a;
-
-        auto f = [&](int x) -> bool {
-            return i - lis[x][1] >= a - lis[x][0];
-        };
-
-        int l = -1, r = lis.size();
-        while (r - l > 1) {
-            int m = (l + r) / 2;
-            if (f(m)) {
-                r = m;
-            } else {
-                l = m;
-            }
-        }
-
-        if (r == lis.size()) {
-            lis.push_back({a, i});
-        } else {
-            lis[r] = {a, i};
-        }
+        int j =
+            upper_bound(lis.begin(), lis.end(), a - i) - lis.begin();
+        if (j == lis.size()) lis.push_back(0);
+        lis[j] = a;
     }
-
-    DB(lis);
 
     cout << N - lis.size();
 }
+
