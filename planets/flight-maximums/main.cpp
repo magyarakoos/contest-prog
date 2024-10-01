@@ -15,7 +15,7 @@ int main() {
     for (int& x : H) cin >> x;
 
     copy(H.begin(), H.end(), st[0]);
-    for (int i = 1; i <= K; i++) {
+    for (int i = 1; i < 20; i++) {
         for (int j = 0; j + (1 << i) <= N; j++) {
             st[i][j] =
                 max(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
