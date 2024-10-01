@@ -20,4 +20,16 @@ int main() {
         int B, C;
         m[-C] += B;
     }
+
+    int result = 0;
+    for (auto [key, value] : m) {
+        if (value >= N) {
+            result += N * -key;
+        } else {
+            result += value * -key;
+            N -= value;
+        }
+    }
+
+    cout << result << "\n";
 }
