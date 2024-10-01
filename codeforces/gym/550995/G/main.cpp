@@ -18,9 +18,9 @@ int solve(int l, int r) {
         dp[l][r] = min(dp[l][r], 1 + solve(l + 2, r));
     }
 
-    for (int m = l + 2; m < r; m++) {
+    for (int m = l + 2; m <= r; m++) {
         dp[l][r] =
-            min(dp[l][r], solve(l + 1, m - 1) + solve(m + 1, r));
+            min(dp[l][r], solve(l + 2, m - 1) + solve(m + 1, r));
     }
 
     return dp[l][r];
