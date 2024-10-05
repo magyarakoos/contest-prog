@@ -33,7 +33,7 @@ void solve() {
             ll v = j * Q;
             ll need = w - j * B;
             if (need > 0) v += (need + A - 1) / A * P;
-            res = min(res, v);
+            result = min(result, v);
         }
         return result;
     };
