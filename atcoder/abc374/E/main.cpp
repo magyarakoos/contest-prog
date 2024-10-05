@@ -29,7 +29,7 @@ void solve() {
             swap(P, Q);
         }
         ll result = 1e18;
-        for (ll incl = 0; incl < 200 && B * incl <= w; incl++) {
+        for (ll incl = 0; incl <= 100; incl++) {
             ll rem = (w - B * incl);
             result = min(result,
                          Q * incl + (rem / A + (bool)(rem % A)) * P);
