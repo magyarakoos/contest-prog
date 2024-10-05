@@ -29,10 +29,11 @@ void solve() {
             swap(P, Q);
         }
         ll result = 1e18;
-        for (ll incl = 0; incl <= 100; incl++) {
-            ll rem = (w - B * incl);
-            result = min(result,
-                         Q * incl + (rem / A + (bool)(rem % A)) * P);
+        for (ll j = 0; j <= 100; j++) {
+            ll v = j * Q;
+            ll need = w - j * B;
+            if (need > 0) v += (need + A - 1) / A * P;
+            res = min(res, v);
         }
         return result;
     };
