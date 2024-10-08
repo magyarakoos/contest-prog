@@ -61,4 +61,6 @@ int main() {
     }
 
     cout << result;
+
+    cout << f(0, 1) << "\n";
 }
