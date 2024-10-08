@@ -19,7 +19,10 @@ int main() {
 
     for (int i = 0; i < M; i++) {
         for (int j = 1; j < 25; j++) {
-            for (int k = 0; k + (1 << j) <= N; k++) {}
+            for (int k = 0; k + (1 << j) <= N; k++) {
+                st[i][j][k] = max(st[i][j - 1][k],
+                                  st[i][j - 1][k + (1 << (j - 1))]);
+            }
         }
     }
 
