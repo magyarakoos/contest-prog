@@ -49,7 +49,7 @@ void solve() {
         int l = fp[right_mx] - 1, r = i - 1;
         while (r - l > 1) {
             int m = (l + r) / 2;
-            if (1) {
+            if (rmn(m, i - 1) >= right_mx) {
                 r = m;
             } else {
                 l = m;
@@ -57,7 +57,10 @@ void solve() {
         }
         if (l == fp[right_mx] - 1) continue;
 
+        cout << rmx(0, r - 1) << " " << rmn(r, i - 1) << " "
+             << rmx(i, N - 1) << "\n";
         cout << r << " " << i - r << " " << N - i << "\n";
+        cout << "\n";
     }
 }
 
