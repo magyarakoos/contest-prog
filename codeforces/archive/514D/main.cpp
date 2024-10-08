@@ -18,7 +18,7 @@ int main() {
     for (int i = 2; i <= MAXN; i++) { lg[i] = lg[i / 2] + 1; }
 
     for (int i = 0; i < M; i++) {
-        for (int j = 0; i < N; j++) { st[i][j][0] = droids[j][i]; }
+        for (int j = 0; i < N; j++) { st[i][0][j] = droids[j][i]; }
     }
 
     for (int i = 0; i < M; i++) {
