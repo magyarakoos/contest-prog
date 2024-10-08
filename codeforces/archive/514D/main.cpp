@@ -57,7 +57,10 @@ int main() {
                 l = m;
             }
         }
-        if (f(r, i) && len < i - r + 1) { len = i - r + 1; }
+        if (f(r, i) && len < i - r + 1) {
+            len = i - r + 1;
+            for (int j = 0; j < M; j++) result[j] = rmq(j, r, i);
+        }
     }
 
     cout << len;
