@@ -34,7 +34,11 @@ int main() {
     auto f = [&](int l, int r) -> bool {
         if (l > r) return 1;
         int result = 0;
-        for (int i = 0; i < M; i++) { result += rmq(i, l, r); }
+        for (int i = 0; i < M; i++) {
+            int tmp = rmq(i, l, r);
+            cout << tmp << " ";
+            result += tmp;
+        }
         return result <= K;
     };
 
