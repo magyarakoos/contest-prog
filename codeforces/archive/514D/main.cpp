@@ -18,6 +18,10 @@ int main() {
     for (int i = 2; i <= MAXN; i++) { lg[i] = lg[i / 2] + 1; }
 
     for (int i = 0; i < M; i++) {
+        for (int j = 0; i < N; j++) { st[i][j][0] = droids[j][i]; }
+    }
+
+    for (int i = 0; i < M; i++) {
         for (int j = 1; j < 25; j++) {
             for (int k = 0; k + (1 << j) <= N; k++) {
                 st[i][j][k] = max(st[i][j - 1][k],
