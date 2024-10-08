@@ -21,7 +21,7 @@ int main() {
             }
             mn = min(mn, j);
         }
-        cout << mn << " ";
+        cout << mn << " " << i << "  ";
         result = min(result, i - mn + 1);
     }
 
