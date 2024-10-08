@@ -7,7 +7,9 @@ int lg[MAXN + 1];
 void preproc(int N, vector<vector<int>>& st,
              function<int(int, int)> f) {
     for (int i = 1; i < 25; i++) {
-        for (int j = 0; j + (1 << i) <= N; j++) { st[i][j] = }
+        for (int j = 0; j + (1 << i) <= N; j++) {
+            st[i][j] = f(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+        }
     }
 }
 
