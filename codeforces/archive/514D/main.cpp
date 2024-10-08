@@ -40,6 +40,7 @@ int main() {
         int result = 0;
         for (int i = 0; i < M; i++) {
             int tmp = rmq(i, l, r);
+            cout << tmp << " ";
             result += tmp;
         }
         return result <= K;
