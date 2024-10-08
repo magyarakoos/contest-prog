@@ -57,7 +57,7 @@ void solve() {
         }
         if (r - 1 <= 0) continue;
 
-        cout << rmx(0, r - 1) << " " << rmn(r, i - 1) << " "
+        cout << rmx(0, r - 2) << " " << rmn(r - 1, i - 1) << " "
              << rmx(i, N - 1) << "\n";
         cout << r << " " << i - r << " " << N - i << "\n";
         cout << "\n";
