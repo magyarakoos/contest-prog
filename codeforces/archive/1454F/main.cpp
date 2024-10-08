@@ -40,7 +40,10 @@ void solve() {
 
     for (int i = 2; i < N; i++) {
         int right_mx = rmx(i, N - 1);
-        int p = fp[right_mx];
+
+        int l = fp[right_mx] - 1, r = i - 1;
+
+        if (l >= r) continue;
     }
 }
 
