@@ -40,10 +40,8 @@ int main() {
         int result = 0;
         for (int i = 0; i < M; i++) {
             int tmp = rmq(i, l, r);
-            cout << tmp << " ";
             result += tmp;
         }
-        cout << "\n";
         return result <= K;
     };
 
@@ -58,6 +56,7 @@ int main() {
                 l = m;
             }
         }
+        cout << i << " " << r << "\n";
         result = max(result, i - r + 1);
     }
 
