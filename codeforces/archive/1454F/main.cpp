@@ -51,6 +51,8 @@ void solve() {
             }
         }
         if (l == fp[right_mx] - 1) continue;
+
+        // TODO [0 r - 1] [r i - 1] [i N - 1]
     }
 }
 
