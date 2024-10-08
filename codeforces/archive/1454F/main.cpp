@@ -28,6 +28,10 @@ void solve() {
 
     preproc(N, stmn, [](int a, int b) { return a < b ? a : b; });
     preproc(N, stmx, [](int a, int b) { return a > b ? a : b; });
+
+    auto rmn = [&](int l, int r) -> int {
+
+    };
 }
 
 int main() {
