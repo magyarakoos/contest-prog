@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 const int MAXN = 1e5;
 
@@ -29,14 +30,15 @@ int main() {
     };
 
     auto f = [&](int l, int r) -> bool {
-
+        int result = 0;
+        for (int i = 0; i < M; i++) { if (result > K) }
     };
 
     for (int i = 0; i < N; i++) {
         int l = 0, r = i + 1;
         while (r - l > 1) {
             int m = (l + r) / 2;
-            if (f(m)) {
+            if (f(m, i)) {
                 r = m;
             } else {
                 l = m;
