@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+const int MAXN = 2e5;
+int lg[MAXN + 1];
+
+void preproc();
+
 void solve() {
     int N;
     cin >> N;
@@ -13,9 +18,7 @@ void solve() {
 
     for (int i = 2; i <= N; i++) { lg[i] = lg[i / 2] + 1; }
 
-    copy()
-
-        for (int i = 1; i < 25; i++) {
+    for (int i = 1; i < 25; i++) {
         for (int j = 0; j + (1 << i) <= N; j++) {}
     }
 }
