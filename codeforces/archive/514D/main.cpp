@@ -57,8 +57,8 @@ int main() {
                 l = m;
             }
         }
-        if (f(r, i)) { result = max(result, i - r + 1); }
+        if (f(r, i) && len < i - r + 1) { len = i - r + 1; }
     }
 
-    cout << result;
+    cout << len;
 }
