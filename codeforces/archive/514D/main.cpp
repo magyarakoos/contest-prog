@@ -43,6 +43,7 @@ int main() {
             cout << tmp << " ";
             result += tmp;
         }
+        cout << "\n";
         return result <= K;
     };
 
@@ -57,11 +58,10 @@ int main() {
                 l = m;
             }
         }
-        cout << r << "\n";
         result = max(result, i - r + 1);
     }
 
-    cout << result;
+    // cout << result;
 
     cout << f(0, 1) << "\n";
 }
