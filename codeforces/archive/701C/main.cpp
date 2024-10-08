@@ -13,10 +13,10 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         last[s[i]] = i;
-        int mn = i + 1;
+        int mn = -N;
         for (auto [_, j] : last) {
             if (j == -1) {
-                mn = i + 1;
+                mn = -N;
                 break;
             }
             mn = min(mn, j);
