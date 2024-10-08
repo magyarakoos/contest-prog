@@ -40,12 +40,12 @@ int main() {
         int result = 0;
         for (int i = 0; i < M; i++) {
             int tmp = rmq(i, l, r);
-            cout << tmp << " ";
             result += tmp;
         }
         return result <= K;
     };
 
+    int result = 0;
     for (int i = 0; i < N; i++) {
         int l = 0, r = i + 1;
         while (r - l > 1) {
@@ -56,6 +56,9 @@ int main() {
                 l = m;
             }
         }
-        cout << r << "\n";
+        cout << i - r + 1 << "\n";
+        result = max(result, i - r + 1);
     }
+
+    cout << result;
 }
