@@ -35,8 +35,14 @@ void solve() {
     preproc(N, stmx, [](int a, int b) { return a > b ? a : b; });
 
     // TODO: implement these
-    auto rmn = [&](int l, int r) -> int { return 0; };
-    auto rmx = [&](int l, int r) -> int { return 0; };
+    auto rmn = [&](int l, int r) -> int {
+        int i = lg[r - l + 1];
+        return 0;
+    };
+    auto rmx = [&](int l, int r) -> int {
+        int i = lg[r - l + 1];
+        return 0;
+    };
 
     for (int i = 2; i < N; i++) {
         int right_mx = rmx(i, N - 1);
