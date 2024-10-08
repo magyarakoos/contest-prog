@@ -26,5 +26,5 @@ int main() {
     auto rmq = [&](int l, int r) -> int {
         int i = lg[r - l + 1];
         return min(st[i][l], st[i][r - (1 << i) + 1]);
-    }
+    };
 }
