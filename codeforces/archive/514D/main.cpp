@@ -30,8 +30,10 @@ int main() {
     };
 
     auto f = [&](int l, int r) -> bool {
+        if (l > r) return 1;
         int result = 0;
-        for (int i = 0; i < M; i++) { if (result > K) }
+        for (int i = 0; i < M; i++) {}
+        return result <= K;
     };
 
     for (int i = 0; i < N; i++) {
