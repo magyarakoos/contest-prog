@@ -47,7 +47,7 @@ int main() {
 
     int result = 0;
     for (int i = 0; i < N; i++) {
-        int l = 0, r = i + 1;
+        int l = -1, r = i;
         while (r - l > 1) {
             int m = (l + r) / 2;
             if (f(m, i)) {
