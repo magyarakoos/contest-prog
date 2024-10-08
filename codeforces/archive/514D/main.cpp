@@ -48,5 +48,6 @@ int main() {
                 l = m;
             }
         }
+        cout << r << "\n";
     }
 }
