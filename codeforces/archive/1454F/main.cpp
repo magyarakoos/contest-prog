@@ -21,7 +21,12 @@ void solve() {
     vector<vector<int>> stmn(25, vector<int>(N)),
         stmx(25, vector<int>(N));
 
-    for (int& x : a) cin >> x;
+    map<int, int> fp;
+
+    for (int i = 0; i < N; i++) {
+        cin >> a[i];
+        if (!fp.count(a[i])) fp[a[i]] = i;
+    }
 
     copy(a.begin(), a.end(), stmn[0].begin());
     copy(a.begin(), a.end(), stmx[0].begin());
@@ -29,8 +34,11 @@ void solve() {
     preproc(N, stmn, [](int a, int b) { return a < b ? a : b; });
     preproc(N, stmx, [](int a, int b) { return a > b ? a : b; });
 
+    // TODO: implement these
     auto rmn = [&](int l, int r) -> int { return 0; };
     auto rmx = [&](int l, int r) -> int { return 0; };
+
+    for (int i = 2; i < N; i++) {}
 }
 
 int main() {
