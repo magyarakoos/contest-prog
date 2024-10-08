@@ -14,12 +14,12 @@ int main() {
     for (int i = 0; i < N; i++) {
         last[s[i]] = i;
         int mn = i + 1;
-        for (int j = 0; j < 52; j++) {
-            if (last[j] == -1) {
+        for (auto [_, j] : last) {
+            if (j == -1) {
                 mn = i + 1;
                 break;
             }
-            mn = min(mn, last[j]);
+            mn = min(mn, j);
         }
         result = min(result, i - mn + 1);
     }
