@@ -22,4 +22,9 @@ int main() {
                 max(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
         }
     }
+
+    auto rmq = [&](int l, int r) -> int {
+        int i = lg[r - l + 1];
+        return min(st[i][l], st[i][r - (1 << i) + 1]);
+    }
 }
