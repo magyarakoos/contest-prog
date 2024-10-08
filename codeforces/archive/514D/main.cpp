@@ -63,5 +63,6 @@ int main() {
         }
     }
 
-    cout << len;
+    for (int x : result) cout << x << " ";
+    cout << "\n";
 }
