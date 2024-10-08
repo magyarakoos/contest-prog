@@ -38,7 +38,10 @@ void solve() {
     auto rmn = [&](int l, int r) -> int { return 0; };
     auto rmx = [&](int l, int r) -> int { return 0; };
 
-    for (int i = 2; i < N; i++) {}
+    for (int i = 2; i < N; i++) {
+        int right_mx = rmx(i, N - 1);
+        int p = fp[right_mx];
+    }
 }
 
 int main() {
