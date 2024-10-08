@@ -56,7 +56,7 @@ int main() {
                 l = m;
             }
         }
-        cout << i - r + 1 << "\n";
+        cout << r << "\n";
         result = max(result, i - r + 1);
     }
 
