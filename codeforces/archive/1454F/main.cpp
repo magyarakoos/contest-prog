@@ -4,7 +4,7 @@ using namespace std;
 const int MAXN = 2e5;
 int lg[MAXN + 1];
 
-void preproc(vector<vector<int>>& st, function<int, int(bool)> cmp);
+void preproc(vector<vector<int>>& st, function<bool(int, int)> cmp);
 
 void solve() {
     int N;
@@ -16,11 +16,7 @@ void solve() {
 
     for (int& x : a) cin >> x;
 
-    for (int i = 2; i <= N; i++) { lg[i] = lg[i / 2] + 1; }
-
-    for (int i = 1; i < 25; i++) {
-        for (int j = 0; j + (1 << i) <= N; j++) {}
-    }
+    preproc(stmn, [](int a, int b) { return a < b; });
 }
 
 int main() {
