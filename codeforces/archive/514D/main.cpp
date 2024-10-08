@@ -27,4 +27,9 @@ int main() {
         int i = lg[r - l + 1];
         return min(st[i][l], st[i][r - (1 << i) + 1]);
     };
+
+    for (int i = 0; i < N; i++) {
+        int l = 0, r = i + 1;
+        while (r - l > 1) {}
+    }
 }
