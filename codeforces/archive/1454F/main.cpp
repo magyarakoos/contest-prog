@@ -34,14 +34,13 @@ void solve() {
     preproc(N, stmn, [](int a, int b) { return a < b ? a : b; });
     preproc(N, stmx, [](int a, int b) { return a > b ? a : b; });
 
-    // TODO: implement these
     auto rmn = [&](int l, int r) -> int {
         int i = lg[r - l + 1];
-        return 0;
+        return min(stmn[i][l], stmn[i][r - (1 << i) + 1]);
     };
     auto rmx = [&](int l, int r) -> int {
         int i = lg[r - l + 1];
-        return 0;
+        return max(stmn[i][l], stmn[i][r - (1 << i) + 1]);
     };
 
     for (int i = 2; i < N; i++) {
@@ -58,7 +57,6 @@ void solve() {
         }
         if (l == fp[right_mx] - 1) continue;
 
-        // FIXME: [0 r - 1] [r i - 1] [i N - 1]
         cout << r << " " << i - r << " " << N - i << "\n";
     }
 }
