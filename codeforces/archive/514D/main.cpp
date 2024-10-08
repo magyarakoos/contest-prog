@@ -47,19 +47,19 @@ int main() {
         return result <= K;
     };
 
-    // // int result = 0;
-    // // for (int i = 0; i < N; i++) {
-    // //     int l = -1, r = i;
-    // //     while (r - l > 1) {
-    // //         int m = (l + r) / 2;
-    // //         if (f(m, i)) {
-    // //             r = m;
-    // //         } else {
-    // //             l = m;
-    // //         }
-    // //     }
-    // //     result = max(result, i - r + 1);
-    // // }
-    //
-    // // cout << result;
+    int result = 0;
+    for (int i = 0; i < N; i++) {
+        int l = -1, r = i;
+        while (r - l > 1) {
+            int m = (l + r) / 2;
+            if (f(m, i)) {
+                r = m;
+            } else {
+                l = m;
+            }
+        }
+        result = max(result, i - r + 1);
+    }
+
+    cout << result;
 }
