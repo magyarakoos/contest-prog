@@ -25,12 +25,12 @@ int main() {
 
     auto rmq = [&](int l, int r) -> int {
         int i = lg[r - l + 1];
-        return min(st[i][l], st[i][r - (1 << i) + 1]);
+        return max(st[i][l], st[i][r - (1 << i) + 1]);
     };
 
-    auto f = [&](int i) -> bool {
+    auto f = [&](int l, int r) -> bool {
 
-    }
+    };
 
     for (int i = 0; i < N; i++) {
         int l = 0, r = i + 1;
