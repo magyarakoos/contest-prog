@@ -13,7 +13,7 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         last[s[i]] = i;
-        int mn = -1;
+        int mn = N;
         for (auto [_, j] : last) {
             if (j == -1) {
                 mn = -1;
@@ -21,10 +21,7 @@ int main() {
             }
             mn = min(mn, j);
         }
-        if (mn >= 0) {
-            cout << mn << " " << i << "  ";
-            result = min(result, i - mn + 1);
-        }
+        if (mn >= 0) result = min(result, i - mn + 1);
     }
 
     cout << result << "\n";
