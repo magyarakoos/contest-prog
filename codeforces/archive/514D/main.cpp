@@ -45,7 +45,8 @@ int main() {
         return result <= K;
     };
 
-    int result = 0;
+    vector<int> result(M);
+    int len = 0;
     for (int i = 0; i < N; i++) {
         int l = -1, r = i;
         while (r - l > 1) {
@@ -56,8 +57,7 @@ int main() {
                 l = m;
             }
         }
-        cout << i << " " << r << "\n";
-        result = max(result, i - r + 1);
+        if (f(r, i)) { result = max(result, i - r + 1); }
     }
 
     cout << result;
