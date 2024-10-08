@@ -28,8 +28,19 @@ int main() {
         return min(st[i][l], st[i][r - (1 << i) + 1]);
     };
 
+    auto f = [&](int i) -> bool {
+
+    }
+
     for (int i = 0; i < N; i++) {
         int l = 0, r = i + 1;
-        while (r - l > 1) {}
+        while (r - l > 1) {
+            int m = (l + r) / 2;
+            if (f(m)) {
+                r = m;
+            } else {
+                l = m;
+            }
+        }
     }
 }
