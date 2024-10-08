@@ -42,8 +42,15 @@ void solve() {
         int right_mx = rmx(i, N - 1);
 
         int l = fp[right_mx] - 1, r = i - 1;
-
         if (l >= r) continue;
+        while (r - l > 1) {
+            int m = (l + r) / 2;
+            if (1) {
+                r = m;
+            } else {
+                l = m;
+            }
+        }
     }
 }
 
