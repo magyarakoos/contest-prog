@@ -17,7 +17,7 @@ int main() {
             int Y, X;
             cin >> Y >> X;
             p[1][X] = Y;
-            // TODO: add logN parents
+            p[2][X] = p[1][p[1][X]];
         }
         if (type == 1) {
             int X;
