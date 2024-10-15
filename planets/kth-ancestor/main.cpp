@@ -24,5 +24,10 @@ int main() {
             cin >> X;
             for (int i = 1; i < 20; i++) p[i][X] = 0;
         }
+        if (type == 2) {
+            int X, K;
+            cin >> X >> K;
+            cout << p[K][X] << "\n";
+        }
     }
 }
