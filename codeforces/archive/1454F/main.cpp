@@ -24,9 +24,9 @@ void solve() {
 
     for (int& x : a) cin >> x;
 
-    auto rmn = [&](int l, int r) -> int {
+    auto rmq = [&](int l, int r) -> int {
         int i = lg[r - l + 1];
-        return min(stmn[i][l], stmn[i][r - (1 << i) + 1]);
+        return min(st[i][l], st[i][r - (1 << i) + 1]);
     };
 
     for (int i = 2; i < N; i++) {
