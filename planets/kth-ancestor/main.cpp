@@ -1,4 +1,3 @@
-#include "debug.h"
 #include <iostream>
 #include <vector>
 
@@ -31,8 +30,8 @@ int main() {
         if (type == 2) {
             int X, K;
             cin >> X >> K;
-            // cout << p[K][X] << "\n";
+            cout << p[K][X] << "\n";
         }
-        DB(p);
     }
 }
+
