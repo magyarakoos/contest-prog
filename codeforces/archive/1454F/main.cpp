@@ -18,8 +18,7 @@ void solve() {
     cin >> N;
 
     vector<int> lg(N + 1), a(N);
-    vector<vector<int>> stmn(25, vector<int>(N)),
-        stmx(25, vector<int>(N));
+    vector<vector<int>> stmn(25, vector<int>(N));
 
     map<int, int> fp;
 
