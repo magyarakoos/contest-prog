@@ -17,6 +17,12 @@ int main() {
             int Y, X;
             cin >> Y >> X;
             p[1][X] = Y;
+            // TODO: add logN parents
+        }
+        if (type == 1) {
+            int X;
+            cin >> X;
+            for (int i = 1; i < 20; i++) p[i][X] = 0;
         }
     }
 }
