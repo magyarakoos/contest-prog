@@ -2,6 +2,7 @@
 #include <vector>
 
 using namespace std;
+const int MAXK = 20;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -9,20 +10,19 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    vector<vector<int>> p(20, vector<int>(N + 1, 0));
+    vector<vector<int>> p(MAXK, vector<int>(N + 1, 0));
     while (Q--) {
         int type;
         cin >> type;
         if (type == 0) {
             int Y, X;
             cin >> Y >> X;
-            p[1][X] = Y;
-            p[2][X] = p[1][p[1][X]];
+            for (int i = 0; (1 << i) < MAXK; i++) {}
         }
         if (type == 1) {
             int X;
             cin >> X;
-            for (int i = 1; i < 20; i++) p[i][X] = 0;
+            for (int i = 1; i < MAXK; i++) p[i][X] = 0;
         }
         if (type == 2) {
             int X, K;
