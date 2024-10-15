@@ -1,3 +1,4 @@
+#include "debug.h"
 #include <iostream>
 #include <vector>
 
@@ -17,7 +18,10 @@ int main() {
         if (type == 0) {
             int Y, X;
             cin >> Y >> X;
-            for (int i = 0; (1 << i) < MAXK; i++) {}
+            p[1][X] = Y;
+            for (int i = 1; (1 << i) < MAXK; i++) {
+                p[1 << i][X] = p[1 << (i - 1)][p[1 << (i - 1)][X]];
+            }
         }
         if (type == 1) {
             int X;
@@ -27,7 +31,8 @@ int main() {
         if (type == 2) {
             int X, K;
             cin >> X >> K;
-            cout << p[K][X] << "\n";
+            // cout << p[K][X] << "\n";
         }
+        DB(p);
     }
 }
