@@ -9,5 +9,14 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    vector<vector<int>> p(18, vector<int>(N, 0));
+    vector<vector<int>> p(20, vector<int>(N + 1, 0));
+    while (Q--) {
+        int type;
+        cin >> type;
+        if (type == 0) {
+            int Y, X;
+            cin >> Y >> X;
+            p[1][X] = Y;
+        }
+    }
 }
