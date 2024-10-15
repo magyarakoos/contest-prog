@@ -9,5 +9,5 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    vector<vector<int>> anc(ceil(log2(2e5)), vector<int>(N, 0));
+    vector<vector<int>> p(18, vector<int>(N, 0));
 }
