@@ -18,28 +18,15 @@ void solve() {
     cin >> N;
 
     vector<int> lg(N + 1), a(N);
-    vector<vector<int>> stmn(25, vector<int>(N));
+    vector<vector<int>> st(25, vector<int>(N));
 
     map<int, int> fp;
 
-    for (int i = 0; i < N; i++) {
-        cin >> a[i];
-        if (!fp.count(a[i])) fp[a[i]] = i;
-    }
-
-    copy(a.begin(), a.end(), stmn[0].begin());
-    copy(a.begin(), a.end(), stmx[0].begin());
-
-    preproc(N, stmn, [](int a, int b) { return a < b ? a : b; });
-    preproc(N, stmx, [](int a, int b) { return a > b ? a : b; });
+    for (int& x : a) cin >> x;
 
     auto rmn = [&](int l, int r) -> int {
         int i = lg[r - l + 1];
         return min(stmn[i][l], stmn[i][r - (1 << i) + 1]);
-    };
-    auto rmx = [&](int l, int r) -> int {
-        int i = lg[r - l + 1];
-        return max(stmn[i][l], stmn[i][r - (1 << i) + 1]);
     };
 
     for (int i = 2; i < N; i++) {
