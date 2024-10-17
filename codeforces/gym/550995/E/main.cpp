@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -13,7 +14,11 @@ int main() {
         for (int j = 1; j <= M; j++) {
             if (s[i - 1] == s[j - 1]) {
                 dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
             }
         }
     }
+
+    cout << dp[N][M];
 }
