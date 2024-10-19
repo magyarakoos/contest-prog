@@ -2,8 +2,15 @@
 using namespace std;
 
 bool can_finish(const array<int, 26>& h, int j) {
-    int sum = 0;
-    for (int i = 0; i < 26; i++) { sum += h[i]; }
+    int sum = 0, mx = 0;
+    for (int i = 0; i < 26; i++) {
+        sum += h[i];
+        mx = max(mx, h[i]);
+    }
+    if (sum % 2 == 0) {
+
+    } else {
+    }
 }
 
 int main() {
