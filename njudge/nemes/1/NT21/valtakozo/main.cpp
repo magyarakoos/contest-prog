@@ -24,7 +24,7 @@ int main() {
     for (int i = 0; i < s.size(); i++) {
         for (int j = 0; j < 26; j++) {
             h[j]--;
-            if (h[j] > 0 && can_finish(h, j) &&
+            if (h[j] >= 0 && can_finish(h, j) &&
                 (result.empty() || result.back() != j + 'a')) {
                 result += j + 'a';
                 break;
