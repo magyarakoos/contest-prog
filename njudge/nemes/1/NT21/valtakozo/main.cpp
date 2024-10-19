@@ -33,5 +33,5 @@ int main() {
         }
     }
 
-    cout << result;
+    cout << (result.size() == s.size() ? result : "-1");
 }
