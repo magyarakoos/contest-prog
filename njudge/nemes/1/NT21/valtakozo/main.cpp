@@ -11,11 +11,14 @@ int main() {
     string result;
     for (int i = 0; i < s.size(); i++) {
         for (int j = 0; j < 26; j++) {
-            if (result.empty() || result.back() != j + 'a') {
+            if (h[j] > 0 &&
+                (result.empty() || result.back() != j + 'a')) {
                 result += j + 'a';
                 h[j]--;
                 break;
             }
         }
     }
+
+    cout << result;
 }
