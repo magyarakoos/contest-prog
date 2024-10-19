@@ -10,6 +10,7 @@ bool can_finish(const array<int, 26>& h, int j) {
             mxi = i;
         }
     }
+    return mx <= sum / 2 + (sum % 2 != 0 && j != mxi);
 }
 
 int main() {
