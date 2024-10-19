@@ -1,4 +1,3 @@
-#include "debug.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -13,7 +12,12 @@ int main() {
         cin >> c;
         na[i] = !(a[i] = c == '1');
     }
+
     partial_sum(a.begin(), a.end(), po.begin());
     partial_sum(na.rbegin(), na.rend(), sz.rbegin());
-    DB(a, na, po, sz);
+
+    ll result = min(po.back(), sz.front());
+    for (int i = 1; i < N - 1; i++) {
+        result = min(result, po[i - 1] + sz[i]);
+    }
 }
