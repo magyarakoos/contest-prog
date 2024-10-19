@@ -19,4 +19,6 @@ int main() {
         g[U].push_back({V, W});
         g[V].push_back({U, W});
     }
+
+    dfs(1);
 }
