@@ -10,6 +10,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         char c;
         cin >> c;
-        po[i] = (a[i] = c == '1');
+        a[i] = c == '1';
     }
+    for (int i = N - 1; ~i; i--) { sz }
 }
