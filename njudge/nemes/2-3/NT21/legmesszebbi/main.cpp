@@ -11,4 +11,16 @@ int main() {
     for (int i = 1; i < N; i++) {
         pmx[i] = max(pmx[i - 1], a[i]);
     }
+
+    for (int i = 1; i < N; i++) {
+        int l = -1, r = i - 1;
+        while (r - l > 1) {
+            int m = (r + l) / 2;
+            if (f(m)) {
+                r = m;
+            } else {
+                l = m;
+            }
+        }
+    }
 }
