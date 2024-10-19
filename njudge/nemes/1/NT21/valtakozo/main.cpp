@@ -11,7 +11,7 @@ int main() {
     string result;
     for (int i = 0; i < s.size(); i++) {
         for (int j = 0; j < 26; j++) {
-            if (h[j] > 0 &&
+            if (h[j] > 0 && can_finish(h, j) &&
                 (result.empty() || result.back() != j + 'a')) {
                 result += j + 'a';
                 h[j]--;
