@@ -10,7 +10,6 @@ bool can_finish(const array<int, 26>& h, int j) {
             mxi = i;
         }
     }
-    return mx <= sum / 2 + (sum % 2 != 0 && j != mxi);
 }
 
 int main() {
@@ -23,12 +22,13 @@ int main() {
     string result;
     for (int i = 0; i < s.size(); i++) {
         for (int j = 0; j < 26; j++) {
+            h[j]--;
             if (h[j] > 0 && can_finish(h, j) &&
                 (result.empty() || result.back() != j + 'a')) {
                 result += j + 'a';
-                h[j]--;
                 break;
             }
+            h[j]++;
         }
     }
 
