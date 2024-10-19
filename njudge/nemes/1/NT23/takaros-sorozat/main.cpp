@@ -1,3 +1,4 @@
+#include "debug.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -13,5 +14,6 @@ int main() {
         na[i] = !(a[i] = c == '1');
     }
     partial_sum(a.begin(), a.end(), po.begin());
-    partial_sum(na.rbegin(), na.rend(), sz.begin());
+    partial_sum(na.rbegin(), na.rend(), sz.rbegin());
+    DB(a, na, po, sz);
 }
