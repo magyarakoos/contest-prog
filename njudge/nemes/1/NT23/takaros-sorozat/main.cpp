@@ -12,5 +12,5 @@ int main() {
         cin >> c;
         a[i] = c == '1';
     }
-    for (int i = N - 1; ~i; i--) { sz }
+    partial_sum(a.begin(), a.end(), po.begin());
 }
