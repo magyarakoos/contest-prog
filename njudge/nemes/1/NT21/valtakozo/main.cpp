@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool can_finish(const array<int, 26>& h, int j) {
+    int sum = 0;
+    for (int i = 0; i < 26; i++) { sum += h[i]; }
+}
+
 int main() {
     string s;
     cin >> s;
