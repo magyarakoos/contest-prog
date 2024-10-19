@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-using ll = long long;
 
 int main() {
     int N;
@@ -16,8 +14,10 @@ int main() {
     partial_sum(a.begin(), a.end(), po.begin());
     partial_sum(na.rbegin(), na.rend(), sz.rbegin());
 
-    ll result = min(po.back(), sz.front());
+    int result = min(po.back(), sz.front());
     for (int i = 1; i < N - 1; i++) {
         result = min(result, po[i - 1] + sz[i]);
     }
+
+    cout << result;
 }
