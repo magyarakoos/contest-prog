@@ -8,8 +8,15 @@ int main() {
     for (int& x : a) cin >> x;
 
     pmx[0] = a[0];
+    bool mon = 1;
     for (int i = 1; i < N; i++) {
+        if (a[i - 1] > a[i]) mon = 0;
         pmx[i] = max(pmx[i - 1], a[i]);
+    }
+
+    if (mon) {
+        cout << "-1";
+        exit(0);
     }
 
     for (int i = 1; i < N; i++) {
