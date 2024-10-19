@@ -16,11 +16,12 @@ int main() {
         int l = -1, r = i - 1;
         while (r - l > 1) {
             int m = (r + l) / 2;
-            if (f(m)) {
+            if (pmx[m] > a[i]) {
                 r = m;
             } else {
                 l = m;
             }
         }
+        cout << r << "\n";
     }
 }
