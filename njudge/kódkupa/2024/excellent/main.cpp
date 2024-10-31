@@ -6,18 +6,18 @@ int main() {
     cin >> N;
 
     if (N == 1) {
-        cout << "-1";
+        cout << "-1\n";
         exit(0);
     }
 
-    switch (N % 3) {
-    case 0:
-        for (int i = 0; i < N; i++) { cout << "1"; }
-        break;
-    case 1:
-        cout << "111";
-        for (int i = 0; i < N - 3; i += 2) { cout << "15"; }
+    if (N % 2 == 0) {
+        for (int i = 0; i < N; i += 2) { cout << "15"; }
+        cout << "\n";
+        exit(0);
     }
+
+    cout << "111";
+    for (int i = 0; i < N - 3; i += 2) { cout << "15"; }
     cout << "\n";
 }
 
