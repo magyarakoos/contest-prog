@@ -11,10 +11,6 @@ int main() {
     while (T--) {
         int A, B;
         cin >> A >> B;
-        if (A <= B) {
-            cout << "-1 -1\n";
-            continue;
-        }
         int ro = A / 11;
         int rem = A % 11;
         vector<array<int, 2>> result;
@@ -22,6 +18,17 @@ int main() {
             int bsc = min(10, B);
             B -= bsc;
             result.push_back({11, bsc});
+        }
+        result.push_back({rem, B});
+
+        int wcnt = 0;
+        for (auto [ac, bc] : result) { wcnt += ac > bc; }
+        if (wcnt * 2 <= result.size()) {
+            cout << "-1 -1\n";
+        } else {
+            for (auto [ac, bc] : result) {
+                cout << ac << " " << bc << "\n";
+            }
         }
     }
 }
