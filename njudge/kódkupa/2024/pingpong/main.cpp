@@ -23,8 +23,9 @@ int main() {
             result.push_back({11, bsc});
         }
 
-        if (B < 0) {
+        if (B != 0) {
             cout << "-1 -1\n";
+            cerr << endl;
             continue;
         }
 
