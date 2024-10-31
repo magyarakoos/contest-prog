@@ -19,7 +19,7 @@ int main() {
             B -= bsc;
             result.push_back({11, bsc});
         }
-        result.push_back({rem, B});
+        if (rem) { result.push_back({rem, B}); }
 
         int wcnt = 0;
         for (auto [ac, bc] : result) { wcnt += ac > bc; }
