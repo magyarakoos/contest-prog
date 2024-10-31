@@ -25,7 +25,6 @@ int main() {
 
         if (B != 0) {
             cout << "-1 -1\n";
-            cerr << endl;
             continue;
         }
 
@@ -40,6 +39,5 @@ int main() {
                 cout << ac << " " << bc << "\n";
             }
         }
-        cerr << endl;
     }
 }
