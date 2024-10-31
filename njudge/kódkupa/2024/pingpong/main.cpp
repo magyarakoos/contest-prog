@@ -30,5 +30,6 @@ int main() {
                 cout << ac << " " << bc << "\n";
             }
         }
+        cerr << endl;
     }
 }
