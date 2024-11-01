@@ -15,8 +15,8 @@ int main() {
     vector<int> a(N);
     for (int& x : a) cin >> x;
 
-    for (int x : a) cout << x << " ";
-    cout << "\n\n";
+    // for (int x : a) cout << x << " ";
+    // cout << "\n\n";
 
     unordered_set<int> s;
     s.insert(a[0]);
@@ -34,19 +34,19 @@ int main() {
 
             to_add[j++] = x - a[i];
             pathS[i][x - a[i]] = x;
-            cout << x + a[i] << " " << x - a[i] << "\n";
+            // cout << x + a[i] << " " << x - a[i] << "\n";
         }
-        for (int k = 0; k < j; k++) { s.insert(to_add[k]); }
+        s.insert(to_add.begin(), to_add.begin() + j);
     }
-    cout << "\n";
+    // cout << "\n";
 
-    for (int i = 0; i < N; i++) {
-        cout << i << ":\n";
-        for (auto [k, v] : pathS[i]) {
-            cout << k << " " << v << "\n";
-        }
-        cout << "\n";
-    }
+    // for (int i = 0; i < N; i++) {
+    //     cout << i << ":\n";
+    //     for (auto [k, v] : pathS[i]) {
+    //         cout << k << " " << v << "\n";
+    //     }
+    //     cout << "\n";
+    // }
 
     for (int x : s) {
         if (!x) {
@@ -54,6 +54,7 @@ int main() {
             for (int i = N - 1; i >= 0; i--) {
                 x = result[i] = pathS[i][x];
             }
+            result.push_back(0);
             for (int x : result) cout << x << " ";
             cout << "\n";
             exit(0);
