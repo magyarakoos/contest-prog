@@ -31,30 +31,18 @@ int main() {
         }
     }
 
-    // for (int i = 0; i < N; i++) {
-    //     cout << i << ":\n";
-    //     for (auto [k, v] : pathS[i]) {
-    //         cout << k << " " << v << "\n";
-    //     }
-    //     cout << "\n";
-    // }
-
-    for (int x : s) {
-        if (!x) {
-            vector<int> result(N);
-            for (int i = N - 1; i >= 0; i--) {
-                result[i] = x - pathS[i][x];
-                x = pathS[i][x];
-            }
-
-            for (int x : result) {
-                cout << string(abs(x), "()"[x < 0]);
-            }
-            cout << "\n";
-
-            exit(0);
+    if (dp[N - 1][0]) {
+        vector<int> result(N);
+        for (int i = N - 1, x = 0; i >= 0; i--) {
+            result[i] = x - pathS[i][x];
+            x = pathS[i][x];
         }
-    }
 
-    cout << "-1\n";
+        for (int x : result) {
+            cout << string(abs(x), "()"[x < 0]);
+        }
+        cout << "\n";
+    } else {
+        cout << "-1\n";
+    }
 }
