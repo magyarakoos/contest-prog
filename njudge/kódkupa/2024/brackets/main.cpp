@@ -29,6 +29,7 @@ int main() {
         int j = 0;
         for (int x : s) {
             to_add[j++] = x + a[i];
+            pathS[i][x + a[i]] = x;
             if (x - a[i] >= 0) { to_add[j++] = x - a[i]; }
         }
         s.insert(to_add.begin(), to_add.begin() + j);
