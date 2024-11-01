@@ -40,6 +40,8 @@ void solve() {
     for (int i = 1; i < N; i++) {
         dp[i][0] = dp[i - 1][score(dp[i - 1][0]) <
                              score(dp[i - 1][1])];
+        auto ada = advance(dp[i - 1][0]),
+             adb = advance(dp[i - 1][1]);
     }
 }
 
