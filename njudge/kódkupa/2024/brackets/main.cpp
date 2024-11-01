@@ -22,13 +22,11 @@ int main() {
 
     for (int i = 1; i < N; i++) {
         for (int j = 0; j < MAXM; j++) {
-            if (j + a[i] < MAXM && dp[i - 1][j + a[i]]) {
-                dp[i][j] = 1;
-                pathS[i][j] = j + a[i];
-            }
+            dp[i][j] =
+                (j + a[i] < MAXM && dp[i - 1][j + a[i]]);
+
             if (j - a[i] >= 0 && dp[i - 1][j - a[i]]) {
                 dp[i][j] = 1;
-                pathS[i][j] = j - a[i];
             }
         }
     }
@@ -39,6 +37,9 @@ int main() {
             result[i] = x - pathS[i][x];
             x = pathS[i][x];
         }
+
+        for (int x : result) cout << x << " ";
+        cout << "\n";
 
         for (int x : result) {
             cout << string(abs(x), "()"[x < 0]);
