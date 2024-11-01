@@ -15,19 +15,14 @@ int main() {
     vector<int> a(N);
     for (int& x : a) cin >> x;
 
-    vector dp(N, vector<bool>(MAXM)),
-        pathS(N, vector<bool>(MAXM));
-
+    vector dp(N, vector<bool>(MAXM));
     dp[0][a[0]] = 1;
 
     for (int i = 1; i < N; i++) {
         for (int j = 0; j < MAXM; j++) {
             dp[i][j] =
-                (j + a[i] < MAXM && dp[i - 1][j + a[i]]);
-
-            if (j - a[i] >= 0 && dp[i - 1][j - a[i]]) {
-                dp[i][j] = 1;
-            }
+                (j + a[i] < MAXM && dp[i - 1][j + a[i]]) ||
+                (j - a[i] >= 0 && dp[i - 1][j - a[i]]);
         }
     }
 
