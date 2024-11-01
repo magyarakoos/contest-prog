@@ -1,11 +1,11 @@
 #include <cassert>
 #include <iostream>
-#include <unordered_map>
-#include <unordered_set>
 #include <vector>
 
 using namespace std;
 using ll = long long;
+
+const int MAXM = 50005;
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -15,11 +15,8 @@ int main() {
     vector<int> a(N);
     for (int& x : a) cin >> x;
 
-    unordered_set<int> s;
-    s.insert(a[0]);
-
-    vector<unordered_map<int, int>> pathS(N);
-    pathS[0][a[0]] = 0;
+    vector dp(N, vector<int>(MAXM)),
+        pathS(N, vector<int>(MAXM));
 
     for (int i = 1; i < N; i++) {
         unordered_set<int> ns;
