@@ -16,9 +16,11 @@ void solve() {
             int pos = NAREK.find(c);
             if (pos != NAREK.npos) {
                 if (curr[1] == pos) {
-                    curr[0]++;
-                    curr[0] %= 5;
                     curr[1]++;
+                    if (curr[1] == 5) {
+                        curr[1] = 0;
+                        curr[0]++;
+                    }
                 } else {
                     curr[2]++;
                 }
