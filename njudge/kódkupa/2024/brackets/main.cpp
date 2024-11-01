@@ -13,7 +13,7 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> a(N), ss(N);
+    vector<int> a(N), ss(N + 1);
     for (int& x : a) cin >> x;
 
     partial_sum(a.rbegin(), a.rend(), ss.rbegin());
