@@ -51,19 +51,19 @@ int main() {
         if (!x) {
             vector<int> result(N);
             for (int i = N - 1; i >= 0; i--) {
-                result[i] = pathS[i][x] - x;
+                result[i] = x - pathS[i][x];
                 x = pathS[i][x];
             }
 
             for (int x : result) cout << x << " ";
             cout << "\n";
 
-            for (int i = 1; i <= N; i++) {
-                int d = result[i] - result[i - 1];
-                assert(d != 0);
-                cout << string(abs(d), "()"[d < 0]);
-            }
-            cout << "\n";
+            // for (int i = 1; i <= N; i++) {
+            //     int d = result[i] - result[i - 1];
+            //     assert(d != 0);
+            //     cout << string(abs(d), "()"[d < 0]);
+            // }
+            // cout << "\n";
 
             exit(0);
         }
