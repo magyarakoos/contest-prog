@@ -28,10 +28,7 @@ int main() {
 
     if (dp[N - 1][0]) {
         vector<int> result(N);
-        for (int i = N - 1, x = 0; i >= 0; i--) {
-            result[i] = x - pathS[i][x];
-            x = pathS[i][x];
-        }
+        for (int i = N - 2, x = 0; i >= 0; i--) {}
 
         for (int x : result) cout << x << " ";
         cout << "\n";
