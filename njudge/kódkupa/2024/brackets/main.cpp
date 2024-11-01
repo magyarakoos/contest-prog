@@ -59,9 +59,12 @@ int main() {
             }
             result.push_back(0);
 
+            for (int x : result) cout << x << " ";
+            cout << "\n";
+
             for (int i = 1; i <= N; i++) {
                 int d = result[i] - result[i - 1];
-                assert(d != 0);
+                // assert(d != 0);
                 cout << string(abs(d), "()"[d < 0]);
             }
             cout << "\n";
