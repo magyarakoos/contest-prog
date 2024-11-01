@@ -55,7 +55,8 @@ int main() {
         if (!x) {
             vector<int> result(N);
             for (int i = N - 1; i >= 0; i--) {
-                x = result[i] = pathS[i][x];
+                result[i] = x;
+                x = pathS[i][x];
             }
             result.push_back(0);
 
