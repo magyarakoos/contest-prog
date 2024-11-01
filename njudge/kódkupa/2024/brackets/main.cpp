@@ -30,7 +30,10 @@ int main() {
         for (int x : s) {
             to_add[j++] = x + a[i];
             pathS[i][x + a[i]] = x;
-            if (x - a[i] >= 0) { to_add[j++] = x - a[i]; }
+            if (x - a[i] >= 0) {
+                to_add[j++] = x - a[i];
+                pathS[i][x - a[i]] = x;
+            }
         }
         s.insert(to_add.begin(), to_add.begin() + j);
     }
@@ -38,6 +41,11 @@ int main() {
     for (int x : s) {
         if (!x) {
             cout << "POSSIBLE\n";
+            vector<int> result(N);
+            for (int i = N - 1; i >= 0; i++) {
+                result[i] = pathS[i][x];
+                x = result[i];
+            }
             exit(0);
         }
     }
