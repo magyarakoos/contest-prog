@@ -12,8 +12,8 @@ void solve() {
     vector<string> a(N);
     for (string& s : a) cin >> s;
 
-    auto score = [&](int i,
-                     array<int, 3> curr) -> array<int, 3> {
+    auto append = [&](int i,
+                      array<int, 3> curr) -> array<int, 3> {
         for (char c : a[i]) {
             int pos = NAREK.find(c);
             if (pos != NAREK.npos) {
@@ -29,9 +29,13 @@ void solve() {
         return curr;
     };
 
+    auto score = [](array<int, 3> x) -> int {
+        return x[0] - x[2];
+    };
+
     vector<array<array<int, 3>, 2>> dp(N);
     dp[0][0] = {0, 0, 0};
-    dp[0][1] = score(0, {0, 0, 0});
+    dp[0][1] = append(0, {0, 0, 0});
 
     for (int i = 1; i < N; i++) {}
 }
