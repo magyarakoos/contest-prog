@@ -25,24 +25,19 @@ int main() {
     vector<unordered_map<int, int>> pathS(N);
     pathS[0][a[0]] = 0;
 
-    vector<int> to_add(500 * 5e4 + 5);
-
     for (int i = 1; i < N; i++) {
-        int j = 0;
+        unordered_set<int> ns;
         for (int x : s) {
-            to_add[j++] = x + a[i];
+            ns.insert(x + a[i]);
             pathS[i][x + a[i]] = x;
 
             if (x - a[i] >= 0) {
-                to_add[j++] = x - a[i];
+                ns.insert(x - a[i]);
                 pathS[i][x - a[i]] = x;
             }
-            cout << x << " ";
         }
-        cout << "\n";
-        s.insert(to_add.begin(), to_add.begin() + j);
+        swap(s, ns);
     }
-    cout << "\n";
 
     // for (int i = 0; i < N; i++) {
     //     cout << i << ":\n";
@@ -66,7 +61,7 @@ int main() {
 
             for (int i = 1; i <= N; i++) {
                 int d = result[i] - result[i - 1];
-                // assert(d != 0);
+                assert(d != 0);
                 cout << string(abs(d), "()"[d < 0]);
             }
             cout << "\n";
