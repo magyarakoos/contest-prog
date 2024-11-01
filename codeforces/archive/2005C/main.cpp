@@ -1,8 +1,11 @@
 #include <array>
 #include <iostream>
+#include <map>
 #include <vector>
 
 using namespace std;
+
+const string NAREK = "narek";
 
 void solve() {
     int N, M;
@@ -12,7 +15,8 @@ void solve() {
 
     auto score = [&](int i) -> array<int, 3> {
         array<int, 3> result = {0, 0, 0};
-        return {0, 0, 0};
+        vector<bool> used(M);
+        for (int j = 0; j < M; j++) { int pos = "narek }
     };
 
     vector<array<array<int, 3>, 2>> dp(N);
