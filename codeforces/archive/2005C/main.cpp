@@ -10,7 +10,12 @@ void solve() {
     vector<string> a(N);
     for (string& s : a) cin >> s;
 
+    auto score = [&](int i) -> array<int, 3> {
+
+    };
+
     vector<array<array<int, 3>, 2>> dp(N);
+    dp[0] = {{0, 0, 0}, score(0)};
 }
 
 int main() {
