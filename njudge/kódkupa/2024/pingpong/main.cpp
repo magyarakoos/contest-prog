@@ -12,34 +12,28 @@ void solve() {
     int A, B;
     cin >> A >> B;
 
+    // 3 - 0
     if (A == 33 && B <= 30) {
-        for (int i = 0; i < 3; i++) {
-            cout << "11 " << min(10, B) << "\n";
-            B -= min(10, B);
-        }
-        continue;
+        win_a(B);
+        return;
     }
 
+    // 3 - 1
     if (A >= 33 && A <= 43 && B >= 11 && B <= 41) {
         A -= 33;
         B -= 11;
         cout << A << " 11\n";
-        for (int i = 0; i < 3; i++) {
-            cout << "11 " << min(10, B) << "\n";
-            B -= min(10, B);
-        }
-        continue;
+        win_a(B);
+        return;
     }
 
+    // 3 - 2
     if (A >= 44 && A <= 53 && B >= 22 && B <= 52) {
         A -= 43;
         B -= 22;
         cout << "10 11\n" << A << " 11\n";
-        for (int i = 0; i < 3; i++) {
-            cout << "11 " << min(10, B) << "\n";
-            B -= min(10, B);
-        }
-        continue;
+        win_a(B);
+        return;
     }
 
     cout << "-1 -1\n";
