@@ -28,7 +28,12 @@ int main() {
 
     if (dp[N - 1][0]) {
         vector<int> result(N);
-        for (int i = N - 2, x = 0; i >= 0; i--) {}
+        for (int i = N - 2, x = 0; i >= 0; i--) {
+            result[i] =
+                (x + a[i + 1] < MAXM && dp[i][x + a[i + 1]]
+                     ? 1
+                     : -1);
+        }
 
         for (int x : result) cout << x << " ";
         cout << "\n";
