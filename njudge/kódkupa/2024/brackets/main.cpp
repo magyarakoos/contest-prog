@@ -27,7 +27,7 @@ int main() {
     }
 
     if (dp[N - 1][0]) {
-        vector<int> result(N);
+        vector<int> result(N, -1);
         for (int i = N - 2, x = 0; i >= 0; i--) {
             result[i] =
                 (x + a[i + 1] < MAXM && dp[i][x + a[i + 1]]
