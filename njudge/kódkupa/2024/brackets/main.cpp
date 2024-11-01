@@ -27,14 +27,13 @@ int main() {
     }
 
     if (dp[N - 1][0]) {
-        vector<int> result(N, -1);
-        for (int i = N - 2, x = 0; i >= 0; i--) {
-            if (x + a[i + 1] < MAXM &&
-                dp[i][x + a[i + 1]]) {
-                x += a[i + 1];
+        vector<int> result(N, 1);
+        for (int i = N - 1, x = 0; i > 0; i--) {
+            if (x + a[i] < MAXM && dp[i][x + a[i]]) {
+                x += a[i];
                 result[i] = -1;
             } else {
-                x -= a[i + 1];
+                x -= a[i];
                 result[i] = 1;
             }
         }
