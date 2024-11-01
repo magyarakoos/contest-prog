@@ -29,4 +29,13 @@ int main() {
         }
         s.insert(to_add.begin(), to_add.begin() + j);
     }
+
+    for (int x : s) {
+        if (!x) {
+            cout << "POSSIBLE\n";
+            exit(0);
+        }
+    }
+
+    cout << "IMPOSSIBLE\n";
 }
