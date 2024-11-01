@@ -15,22 +15,24 @@ int main() {
     vector<int> a(N);
     for (int& x : a) cin >> x;
 
-    vector dp(N, vector<int>(MAXM)),
-        pathS(N, vector<int>(MAXM));
+    vector dp(N, vector<bool>(MAXM)),
+        pathS(N, vector<bool>(MAXM));
 
     for (int i = 1; i < N; i++) {
-        unordered_set<int> ns;
-        for (int x : s) {
-            if (x + a[i] <= 50005) {
-                ns.insert(x + a[i]);
-                pathS[i][x + a[i]] = x;
-            }
-            if (x - a[i] <= 50005 && x - a[i] >= 0) {
-                ns.insert(x - a[i]);
-                pathS[i][x - a[i]] = x;
-            }
+        for (int j = 0; j < MAXM; j++) {
+            if (j + a[i] < MAXM) {}
         }
-        swap(s, ns);
+        // for (int x : s) {
+        //     if (x + a[i] <= 50005) {
+        //         ns.insert(x + a[i]);
+        //         pathS[i][x + a[i]] = x;
+        //     }
+        //     if (x - a[i] <= 50005 && x - a[i] >= 0) {
+        //         ns.insert(x - a[i]);
+        //         pathS[i][x - a[i]] = x;
+        //     }
+        // }
+        // swap(s, ns);
     }
 
     // for (int i = 0; i < N; i++) {
