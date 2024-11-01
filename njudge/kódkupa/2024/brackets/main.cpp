@@ -31,17 +31,14 @@ int main() {
         for (int i = N - 1, x = 0; i > 0; i--) {
             if (x + a[i] < MAXM && dp[i - 1][x + a[i]]) {
                 x += a[i];
-                result[i] = 1;
+                result[i] = 0;
             } else {
                 x -= a[i];
-                result[i] = 0;
+                result[i] = 1;
             }
         }
 
-        for (int i = 0; i < N; i++) {
-            cout << result[i] << " ";
-            // cout << string(a[i], "()"[result[i]]);
-        }
+        for (int x : result) cout << x << " ";
 
         cout << "\n";
     } else {
