@@ -33,7 +33,9 @@ int main() {
             cout << A << " 11\n";
             for (int i = 0; i < 3; i++) {
                 cout << "11 " << min(10, B) << "\n";
+                B -= min(10, B);
             }
+            continue;
         }
     }
 }
