@@ -32,7 +32,7 @@ void solve() {
             cout << min(10, A) << " 11\n";
             A -= min(10, A);
         }
-        win_a(B);
+        win_a(B - 22);
         return;
     }
 
