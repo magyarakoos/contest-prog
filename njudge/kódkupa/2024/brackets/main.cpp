@@ -1,5 +1,6 @@
 #include <iostream>
 #include <numeric>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
@@ -18,6 +19,9 @@ int main() {
 
     unordered_set<int> s;
     s.insert(a[0]);
+
+    vector<unordered_map<int, int>> pathS(N);
+    pathS[0][a[0]] = -1;
 
     vector<int> to_add(500 * 5e4 + 5);
 
