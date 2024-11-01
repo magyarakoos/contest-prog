@@ -15,6 +15,9 @@ int main() {
     vector<int> a(N);
     for (int& x : a) cin >> x;
 
+    for (int x : a) cout << x << " ";
+    cout << "\n\n";
+
     unordered_set<int> s;
     s.insert(a[0]);
 
@@ -49,8 +52,7 @@ int main() {
         if (!x) {
             vector<int> result(N);
             for (int i = N - 1; i >= 0; i--) {
-                result[i] = x;
-                x = pathS[i][x];
+                x = result[i] = pathS[i][x];
             }
             for (int x : result) cout << x << " ";
             cout << "\n";
