@@ -28,4 +28,12 @@ int main() {
         cout << "1\n";
         exit(0);
     }
+
+    for (int i = 0; i < N; i++) {
+        avg -= p[i] - 1;
+        if (avg <= goal) {
+            cout << i + 1 << "\n";
+            exit(0);
+        }
+    }
 }
