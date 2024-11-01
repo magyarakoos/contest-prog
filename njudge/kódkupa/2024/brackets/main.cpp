@@ -40,12 +40,12 @@ int main() {
 
     for (int x : s) {
         if (!x) {
-            cout << "POSSIBLE\n";
             vector<int> result(N);
-            for (int i = N - 1; i >= 0; i++) {
-                result[i] = pathS[i][x] - x;
-                x = pathS[i][x];
+            for (int i = N - 1; i >= 0; i--) {
+                x = result[i] = pathS[i][x];
             }
+            for (int x : result) cout << x << " ";
+            cout << "\n";
             exit(0);
         }
     }
