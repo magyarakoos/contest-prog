@@ -16,5 +16,11 @@ int main() {
     for (ll& x : p) cin >> x;
     sort(p.rbegin(), p.rend());
 
-    int avg = accumulate(p.begin(), p.end(), 0LL);
+    ll avg = accumulate(p.begin(), p.end(), 0LL),
+       goal = K * N;
+
+    if (avg == goal) {
+        cout << "0\n";
+        exit(0);
+    }
 }
