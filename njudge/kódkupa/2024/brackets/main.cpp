@@ -1,3 +1,4 @@
+#include <cassert>
 #include <iostream>
 #include <numeric>
 #include <unordered_map>
@@ -60,7 +61,10 @@ int main() {
 
             for (int i = 1; i <= N; i++) {
                 int d = result[i] - result[i - 1];
+                assert(d != 0);
+                cout << string(abs(d), "()"[d < 0]);
             }
+            cout << "\n";
 
             exit(0);
         }
