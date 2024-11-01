@@ -29,7 +29,8 @@ int main() {
     if (dp[N - 1][0]) {
         vector<int> result(N, 1);
         for (int i = N - 1, x = 0; i > 0; i--) {
-            if (x + a[i] < MAXM && dp[i][x + a[i]]) {
+            assert(x >= 0);
+            if (x + a[i] < MAXM && dp[i - 1][x + a[i]]) {
                 x += a[i];
                 result[i] = -1;
             } else {
