@@ -13,19 +13,20 @@ int main() {
         cin >> A >> B;
         int ro = A / 11;
         int rem = A % 11;
-        vector<array<int, 2>> result;
+
+        if (!ro || (rem && B < 11)) {
+            cout << "-1 -1\n";
+            continue;
+        }
 
         if (rem) { B -= 11; }
+
+        vector<array<int, 2>> result;
 
         for (int i = 0; i < ro; i++) {
             int bsc = min(10, B);
             B -= bsc;
             result.push_back({11, bsc});
-        }
-
-        if (B != 0) {
-            cout << "-1 -1\n";
-            continue;
         }
 
         if (rem) { result.push_back({rem, 11}); }
