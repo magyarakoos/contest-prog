@@ -19,7 +19,7 @@ void solve() {
                     curr[1]++;
                     if (curr[1] == 5) {
                         curr[1] = 0;
-                        curr[0]++;
+                        curr[0] += 5;
                     }
                 } else {
                     curr[2]++;
