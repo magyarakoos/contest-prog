@@ -12,26 +12,28 @@ void solve() {
     vector<string> a(N);
     for (string& s : a) cin >> s;
 
-    auto score = [&](int i) -> array<int, 3> {
-        array<int, 3> result = {0, 0, 0};
+    auto score = [&](int i,
+                     array<int, 3> curr) -> array<int, 3> {
         for (char c : a[i]) {
             int pos = NAREK.find(c);
             if (pos != NAREK.npos) {
-                if (result[1] == pos) {
-                    result[0]++;
-                    result[0] %= 5;
-                    result[1]++;
+                if (curr[1] == pos) {
+                    curr[0]++;
+                    curr[0] %= 5;
+                    curr[1]++;
                 } else {
-                    result[2]++;
+                    curr[2]++;
                 }
             }
         }
-        return result;
+        return curr;
     };
 
     vector<array<array<int, 3>, 2>> dp(N);
     dp[0][0] = {0, 0, 0};
-    dp[0][1] = score(0);
+    dp[0][1] = score(0, {0, 0, 0});
+
+    for (int i = 1; i < N; i++) {}
 }
 
 int main() {
