@@ -21,5 +21,12 @@ int main() {
 
     vector<int> to_add(500 * 5e4 + 5);
 
-    for (int i = 1; i < N; i++) {}
+    for (int i = 1; i < N; i++) {
+        int j = 0;
+        for (int x : s) {
+            to_add[j++] = x + a[i];
+            if (x - a[i] >= 0) { to_add[j++] = x - a[i]; }
+        }
+        s.insert(to_add.begin(), to_add.begin() + j);
+    }
 }
