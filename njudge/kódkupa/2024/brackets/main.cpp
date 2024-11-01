@@ -37,6 +37,14 @@ int main() {
         s.insert(to_add.begin(), to_add.begin() + j);
     }
 
+    for (int i = 0; i < N; i++) {
+        cout << i << ":\n";
+        for (auto kvp : pathS) {
+            cout << k << " " << v << "\n";
+        }
+        cout << "\n";
+    }
+
     for (int x : s) {
         if (!x) {
             vector<int> result(N);
