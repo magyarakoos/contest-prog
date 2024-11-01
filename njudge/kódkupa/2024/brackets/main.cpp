@@ -39,7 +39,7 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         cout << i << ":\n";
-        for (auto kvp : pathS) {
+        for (auto [k, v] : pathS[i]) {
             cout << k << " " << v << "\n";
         }
         cout << "\n";
