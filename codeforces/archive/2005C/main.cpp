@@ -40,8 +40,9 @@ void solve() {
     for (int i = 1; i < N; i++) {
         dp[i][0] = dp[i - 1][score(dp[i - 1][0]) <
                              score(dp[i - 1][1])];
-        auto ada = append(i - 1, dp[i - 1][0]),
-             adb = append(i - 1, dp[i - 1][1]);
+        auto ada = append(i, dp[i - 1][0]),
+             adb = append(i, dp[i - 1][1]);
+        dp[i][1] = (score(ada) < score(adb) ? adb : ada);
     }
 }
 
