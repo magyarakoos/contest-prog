@@ -52,15 +52,16 @@ int main() {
 
     for (int x : s) {
         if (!x) {
-
             vector<int> result(N);
             for (int i = N - 1; i >= 0; i--) {
                 x = result[i] = pathS[i][x];
             }
             result.push_back(0);
 
-            for (int x : result) cout << x << " ";
-            cout << "\n";
+            for (int i = 1; i <= N; i++) {
+                int d = result[i] - result[i - 1];
+            }
+
             exit(0);
         }
     }
