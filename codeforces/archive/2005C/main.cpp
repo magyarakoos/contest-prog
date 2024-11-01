@@ -10,7 +10,7 @@ void solve() {
     vector<string> a(N);
     for (string& s : a) cin >> s;
 
-    vector<array<int, 2>> dp(N);
+    vector<array<array<int, 3>, 2>> dp(N);
 }
 
 int main() {
