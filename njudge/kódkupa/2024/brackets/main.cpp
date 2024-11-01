@@ -49,6 +49,8 @@ int main() {
 
     for (int x : s) {
         if (!x) {
+            cout << "POSSIBLE\n";
+            exit(0);
             vector<int> result(N);
             for (int i = N - 1; i >= 0; i--) {
                 result[i] = x - pathS[i][x];
