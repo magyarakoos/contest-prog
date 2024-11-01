@@ -30,8 +30,10 @@ void solve() {
     // 3 - 2
     if (A >= 33 && A <= 53 && B >= 22 && B <= 52) {
         A -= 43;
-        B -= 22;
-        cout << "10 11\n" << A << " 11\n";
+        for (int i = 0; i < 2; i++) {
+            cout << min(10, A) << " 11\n";
+            A -= min(10, A);
+        }
         win_a(B);
         return;
     }
