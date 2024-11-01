@@ -43,7 +43,8 @@ int main() {
             cout << "POSSIBLE\n";
             vector<int> result(N);
             for (int i = N - 1; i >= 0; i++) {
-                x = result[i] = pathS[i][x];
+                result[i] = pathS[i][x] - x;
+                x = pathS[i][x];
             }
             exit(0);
         }
