@@ -14,37 +14,10 @@ int main() {
 
         int ro = A / 11;
         int rem = A % 11;
-        vector<array<int, 2>> result;
 
-        if (!ro || (rem && B < 11)) {
+        if (ro < 3) {
             cout << "-1 -1\n";
             continue;
-        }
-
-        if (rem) {
-            B -= 11;
-            result.push_back({rem, 11});
-        }
-
-        for (int i = 0; i < ro; i++) {
-            int bsc = min(10, B);
-            result.push_back({11, bsc});
-            B -= bsc;
-        }
-
-        if (B > 0) {
-            cout << "-1 -1\n";
-            continue;
-        }
-
-        int wcnt = 0;
-        for (auto [ac, bc] : result) { wcnt += ac > bc; }
-        if (wcnt * 2 <= result.size()) {
-            cout << "-1 -1\n";
-        } else {
-            for (auto [ac, bc] : result) {
-                cout << ac << " " << bc << "\n";
-            }
         }
     }
 }
