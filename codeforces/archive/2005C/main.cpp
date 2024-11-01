@@ -31,7 +31,7 @@ void solve() {
     };
 
     auto score = [](array<int, 3> x) -> int {
-        return x[0] - x[2];
+        return x[0] - x[1] - x[2];
     };
 
     vector<array<array<int, 3>, 2>> dp(N);
