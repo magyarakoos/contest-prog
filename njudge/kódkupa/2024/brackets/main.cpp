@@ -35,7 +35,9 @@ int main() {
                 ns.insert(x - a[i]);
                 pathS[i][x - a[i]] = x;
             }
+            cout << x << " ";
         }
+        cout << "\n";
         swap(s, ns);
     }
 
