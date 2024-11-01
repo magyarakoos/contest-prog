@@ -37,7 +37,10 @@ void solve() {
     dp[0][0] = {0, 0, 0};
     dp[0][1] = append(0, {0, 0, 0});
 
-    for (int i = 1; i < N; i++) {}
+    for (int i = 1; i < N; i++) {
+        dp[i][0] = dp[i - 1][score(dp[i - 1][0]) <
+                             score(dp[i - 1][1])];
+    }
 }
 
 int main() {
