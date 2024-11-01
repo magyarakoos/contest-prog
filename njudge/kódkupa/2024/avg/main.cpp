@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <numeric>
 #include <vector>
 
 using namespace std;
@@ -14,4 +15,6 @@ int main() {
     vector<ll> p(N);
     for (ll& x : p) cin >> x;
     sort(p.rbegin(), p.rend());
+
+    int avg = accumulate(p.begin(), p.end(), 0LL);
 }
