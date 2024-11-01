@@ -1,11 +1,16 @@
+#include <array>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 void solve() {
     int N, M;
     cin >> N >> M;
-    vector<string> a(N, string(M, '$'));
+    vector<string> a(N);
+    for (string& s : a) cin >> s;
+
+    vector<array<int, 2>> dp(N);
 }
 
 int main() {
