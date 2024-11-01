@@ -19,5 +19,18 @@ int main() {
             cout << "-1 -1\n";
             continue;
         }
+
+        vector<array<int, 2>> result;
+
+        if (rem) {
+            if (B < 11) {
+                cout << "-1 -1\n";
+                continue;
+            }
+            if (rem == 1) {
+                result.push_back({rem, 11});
+            } else {
+            }
+        }
     }
 }
