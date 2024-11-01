@@ -1,4 +1,5 @@
 #include <iostream>
+#include <numeric>
 #include <unordered_set>
 #include <vector>
 
@@ -10,8 +11,10 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> a(N);
+    vector<int> a(N), ss(N);
     for (int& x : a) cin >> x;
+
+    partial_sum(ss.rbegin(), ss.rend(), a.rbegin());
 
     unordered_set<int> s;
     s.insert(a[0]);
