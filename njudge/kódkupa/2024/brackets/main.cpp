@@ -18,4 +18,8 @@ int main() {
 
     unordered_set<int> s;
     s.insert(a[0]);
+
+    vector<int> to_add(500 * 5e4 + 5);
+
+    for (int i = 1; i < N; i++) {}
 }
