@@ -12,10 +12,9 @@ int main() {
         int A, B;
         cin >> A >> B;
 
-        int ro = A / 11;
         int rem = A % 11;
 
-        if (ro < 3) {
+        if (A < 33 || A > 53) {
             cout << "-1 -1\n";
             continue;
         }
@@ -33,7 +32,13 @@ int main() {
             } else {
                 result.push_back({1, 11});
                 result.push_back({rem - 1, 11});
+                B -= 22;
             }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            int bsc = min(10, B);
+            result.push_back()
         }
     }
 }
