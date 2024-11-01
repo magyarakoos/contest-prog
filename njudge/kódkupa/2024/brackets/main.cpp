@@ -37,11 +37,12 @@ int main() {
                 to_add[j++] = x - a[i];
                 pathS[i][x - a[i]] = x;
             }
-            // cout << x + a[i] << " " << x - a[i] << "\n";
+            cout << x << " ";
         }
+        cout << "\n";
         s.insert(to_add.begin(), to_add.begin() + j);
     }
-    // cout << "\n";
+    cout << "\n";
 
     // for (int i = 0; i < N; i++) {
     //     cout << i << ":\n";
