@@ -1,5 +1,6 @@
 #include <cassert>
 #include <iostream>
+#include <numeric>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -12,11 +13,10 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> a(N);
+    vector<int> a(N), ss(N);
     for (int& x : a) cin >> x;
 
-    // for (int x : a) cout << x << " ";
-    // cout << "\n\n";
+    partial_sum(a.rbegin(), a.rend(), ss.rbegin());
 
     unordered_set<int> s;
     s.insert(a[0]);
