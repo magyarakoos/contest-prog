@@ -27,9 +27,12 @@ int main() {
                 cout << "-1 -1\n";
                 continue;
             }
-            if (rem == 1) {
+            if (rem == 1 || B < 22) {
                 result.push_back({rem, 11});
+                B -= 11;
             } else {
+                result.push_back({1, 11});
+                result.push_back({rem - 1, 11});
             }
         }
     }
