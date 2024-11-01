@@ -20,19 +20,15 @@ int main() {
 
     for (int i = 1; i < N; i++) {
         for (int j = 0; j < MAXM; j++) {
-            if (j + a[i] < MAXM) {}
+            if (j + a[i] < MAXM && dp[i - 1][j + a[i]]) {
+                dp[i][j] = 1;
+                pathS[i][j] = j + a[i];
+            }
+            if (j - a[i] >= 0 && dp[i - 1][j - a[i]]) {
+                dp[i][j] = 1;
+                pathS[i][j] = j - a[i];
+            }
         }
-        // for (int x : s) {
-        //     if (x + a[i] <= 50005) {
-        //         ns.insert(x + a[i]);
-        //         pathS[i][x + a[i]] = x;
-        //     }
-        //     if (x - a[i] <= 50005 && x - a[i] >= 0) {
-        //         ns.insert(x - a[i]);
-        //         pathS[i][x - a[i]] = x;
-        //     }
-        // }
-        // swap(s, ns);
     }
 
     // for (int i = 0; i < N; i++) {
