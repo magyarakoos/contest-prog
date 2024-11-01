@@ -1,6 +1,4 @@
-#include <array>
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -44,6 +42,14 @@ void solve() {
              adb = append(i, dp[i - 1][1]);
         dp[i][1] = (score(ada) < score(adb) ? adb : ada);
     }
+
+    int result = 0;
+    for (int i = 0; i < N; i++) {
+        result =
+            max({result, score(dp[i][0]), score(dp[i][1])});
+    }
+
+    cout << result << "\n";
 }
 
 int main() {
