@@ -1,6 +1,5 @@
 #include <cassert>
 #include <iostream>
-#include <numeric>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -13,10 +12,8 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> a(N), ss(N + 1);
+    vector<int> a(N);
     for (int& x : a) cin >> x;
-
-    partial_sum(a.rbegin(), a.rend(), ss.rbegin());
 
     unordered_set<int> s;
     s.insert(a[0]);
@@ -27,11 +24,11 @@ int main() {
     for (int i = 1; i < N; i++) {
         unordered_set<int> ns;
         for (int x : s) {
-            if (x + a[i] <= ss[i + 1]) {
+            if (x + a[i] <= 50005) {
                 ns.insert(x + a[i]);
                 pathS[i][x + a[i]] = x;
             }
-            if (x - a[i] <= ss[i + 1] && x - a[i] >= 0) {
+            if (x - a[i] <= 50005 && x - a[i] >= 0) {
                 ns.insert(x - a[i]);
                 pathS[i][x - a[i]] = x;
             }
