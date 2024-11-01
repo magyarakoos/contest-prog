@@ -18,15 +18,19 @@ int main() {
     vector dp(N, vector<bool>(MAXM)),
         pathS(N, vector<bool>(MAXM));
 
+    dp[0][0] = 0;
+
     for (int i = 1; i < N; i++) {
         for (int j = 0; j < MAXM; j++) {
             if (j + a[i] < MAXM && dp[i - 1][j + a[i]]) {
                 dp[i][j] = 1;
                 pathS[i][j] = j + a[i];
+                cout << i << " " << j << "\n";
             }
             if (j - a[i] >= 0 && dp[i - 1][j - a[i]]) {
                 dp[i][j] = 1;
                 pathS[i][j] = j - a[i];
+                cout << i << " " << j << "\n";
             }
         }
     }
