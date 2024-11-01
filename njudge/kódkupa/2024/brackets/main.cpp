@@ -1,6 +1,5 @@
 #include <cassert>
 #include <iostream>
-#include <numeric>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -55,15 +54,10 @@ int main() {
                 x = pathS[i][x];
             }
 
-            for (int x : result) cout << x << " ";
+            for (int x : result) {
+                cout << string(abs(x), "()"[x < 0]);
+            }
             cout << "\n";
-
-            // for (int i = 1; i <= N; i++) {
-            //     int d = result[i] - result[i - 1];
-            //     assert(d != 0);
-            //     cout << string(abs(d), "()"[d < 0]);
-            // }
-            // cout << "\n";
 
             exit(0);
         }
