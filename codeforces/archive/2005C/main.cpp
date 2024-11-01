@@ -1,4 +1,3 @@
-#include "debug.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -51,7 +50,6 @@ void solve() {
         result =
             max({result, score(dp[i][0]), score(dp[i][1])});
     }
-    DB(dp);
 
     cout << result << "\n";
 }
