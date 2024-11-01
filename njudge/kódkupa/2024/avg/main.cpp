@@ -23,4 +23,9 @@ int main() {
         cout << "0\n";
         exit(0);
     }
+
+    if (avg < goal) {
+        cout << "1\n";
+        exit(0);
+    }
 }
