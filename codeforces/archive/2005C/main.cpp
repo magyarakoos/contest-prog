@@ -14,10 +14,17 @@ void solve() {
 
     auto score = [&](int i) -> array<int, 3> {
         array<int, 3> result = {0, 0, 0};
-        vector<bool> used(M);
-        for (int j = 0; j < M; j++) {
-            int pos = NAREK.find(a[i][j]);
-            if (pos != NAREK.npos) {}
+        for (char c : a[i]) {
+            int pos = NAREK.find(c);
+            if (pos != NAREK.npos) {
+                if (result[1] == pos) {
+                    result[0]++;
+                    result[0] %= 5;
+                    result[1]++;
+                } else {
+                    result[2]++;
+                }
+            }
         }
         return result;
     };
