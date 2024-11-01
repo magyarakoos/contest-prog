@@ -27,10 +27,11 @@ int main() {
     for (int i = 1; i < N; i++) {
         unordered_set<int> ns;
         for (int x : s) {
-            ns.insert(x + a[i]);
-            pathS[i][x + a[i]] = x;
-
-            if (x - a[i] >= 0) {
+            if (x + a[i] <= ss[i + 1]) {
+                ns.insert(x + a[i]);
+                pathS[i][x + a[i]] = x;
+            }
+            if (x - a[i] <= ss[i + 1] && x - a[i] >= 0) {
                 ns.insert(x - a[i]);
                 pathS[i][x - a[i]] = x;
             }
