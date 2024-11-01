@@ -12,10 +12,8 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> a(N), ss(N);
+    vector<int> a(N);
     for (int& x : a) cin >> x;
-
-    partial_sum(ss.rbegin(), ss.rend(), a.rbegin());
 
     unordered_set<int> s;
     s.insert(a[0]);
@@ -33,9 +31,8 @@ int main() {
 
             to_add[j++] = x - a[i];
             pathS[i][x - a[i]] = x;
-            cout << x << " ";
+            cout << x + a[i] << " " << x - a[i] << "\n";
         }
-        cout << "\n";
         for (int k = 0; k < j; k++) { s.insert(to_add[k]); }
     }
     cout << "\n";
