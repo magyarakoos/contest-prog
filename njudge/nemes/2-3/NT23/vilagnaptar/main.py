@@ -9,4 +9,4 @@ if Y % 4 == 0:
 else:
     pass
 
-print(sum(NDL), sum(LDL), sum(WDL))
+print(sum(DL), sum(LDL), sum(WDL), sum(WLDL))
