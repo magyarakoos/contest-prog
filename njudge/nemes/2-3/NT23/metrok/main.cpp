@@ -7,73 +7,56 @@ int main() {
     int N, M, Ind, Erk;
     cin >> N >> M >> Ind >> Erk;
 
-    vector<vector<int>> stopS(M + 1);
-    int ind_line = 0, erk_line = 0;
-
-    for (int i = 1, K, stop; i <= N; i++) {
-        cin >> K;
-        vector<int> line(K);
-
-        for (int j = 0; j < K; j++) {
-            cin >> line[j];
-            stopS[line[j]].push_back(i);
-            if (line[j] == Ind) ind_line = i;
-            if (line[j] == Erk) erk_line = i;
-        }
-
-        if (ind_line == i && erk_line == i) {
-            cout << "1\n" << i << "\n";
-            exit(0);
+    vector<vector<int>> station_to_lines(M + 1);
+    vector<vector<int>> line_to_stations(N + 1);
+    for (int i = 1; i <= N; i++) {
+        int A;
+        cin >> A;
+        while (A--) {
+            int stop;
+            cin >> stop;
+            line_to_stations[i].push_back(stop);
+            station_to_lines[stop].push_back(i);
         }
     }
 
-    if (!ind_line || !erk_line) {
-        cout << "-1\n";
-        exit(0);
-    }
-
-    vector m(N + 1, vector<bool>(N + 1));
-
-    for (int stop = 1; stop <= M; stop++) {
-        for (int i = 0; i < stopS[stop].size(); i++) {
-            for (int j = 0; j < i; j++) {
-                m[stopS[stop][i]][stopS[stop][j]] = 1;
-                m[stopS[stop][j]][stopS[stop][i]] = 1;
-            }
-        }
-    }
-
-    vector<int> distS(N + 1, -1), prv(N + 1);
-    queue<int> q({ind_line});
-
-    distS[ind_line] = 1;
+    vector<bool> used_line(N + 1);
+    vector<int> prev_station(M + 1);
+    vector<int> reached_with_line(M + 1);
+    vector<int> dist(M + 1, -1);
+    dist[Ind] = 0;
+    queue<int> q;
+    q.push(Ind);
 
     while (!q.empty()) {
-        int u = q.front();
+        int curr_station = q.front();
         q.pop();
-        if (u == erk_line) break;
-        for (int v = 1; v <= N; v++) {
-            if (m[u][v] && distS[v] == -1) {
-                prv[v] = u;
-                distS[v] = distS[u] + 1;
-                q.push(v);
+        for (int line : station_to_lines[curr_station]) {
+            if (used_line[line]) continue;
+            used_line[line] = 1;
+            for (int next_station :
+                 line_to_stations[line]) {
+                if (dist[next_station] != -1) continue;
+                dist[next_station] = dist[curr_station] + 1;
+                prev_station[next_station] = curr_station;
+                reached_with_line[next_station] = line;
+                q.push(next_station);
             }
         }
     }
 
-    if (distS[erk_line] == -1) {
-        cout << "-1\n";
-        exit(0);
-    }
+    cout << dist[Erk] << '\n';
+    if (dist[Erk] == -1) return 0;
 
-    deque<int> path;
-    while (1) {
-        path.push_front(erk_line);
-        if (erk_line == ind_line) break;
-        erk_line = prv[erk_line];
+    stack<int> res;
+    int curr_station = Erk;
+    while (curr_station != Ind) {
+        res.push(reached_with_line[curr_station]);
+        curr_station = prev_station[curr_station];
     }
-
-    cout << path.size() << "\n";
-    for (int x : path) cout << x << " ";
-    cout << "\n";
+    while (!res.empty()) {
+        cout << res.top() << ' ';
+        res.pop();
+    }
 }
+
