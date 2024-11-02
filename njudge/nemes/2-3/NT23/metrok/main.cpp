@@ -52,8 +52,12 @@ int main() {
         int u = q.front();
         q.pop();
         if (u == erk_line) break;
-        for (int v : g[u]) {
-            if (!vis[v]) { prv[v] = u; }
+        for (int v = 1; v <= N; v++) {
+            if (!m[u][v] || vis[v]) continue;
+            vis[v] = 1;
+            prv[v] = u;
+            distS[v] = distS[u] + 1;
+            q.push(v);
         }
     }
 }
