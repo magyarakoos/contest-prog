@@ -31,12 +31,12 @@ int main() {
         for (int v : stopS[u]) {
             if (vis[v]) continue;
             vis[v] = 1;
-            for (int next_station : lineS[v]) {
-                if (distS[next_station] != -1) continue;
-                distS[next_station] = distS[u] + 1;
-                prv_stop[next_station] = u;
-                prv_line[next_station] = v;
-                q.push(next_station);
+            for (int l : lineS[v]) {
+                if (distS[l] != -1) continue;
+                distS[l] = distS[u] + 1;
+                prv_stop[l] = u;
+                prv_line[l] = v;
+                q.push(l);
             }
         }
     }
