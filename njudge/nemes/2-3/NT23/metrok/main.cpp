@@ -53,4 +53,10 @@ int main() {
         q.push(u);
         distS[u] = 0;
     }
+
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+        for (int v : g[u]) {}
+    }
 }
