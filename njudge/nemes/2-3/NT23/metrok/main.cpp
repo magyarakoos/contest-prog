@@ -1,7 +1,6 @@
 #include <climits>
 #include <iostream>
 #include <queue>
-#include <set>
 #include <vector>
 
 using namespace std;
@@ -27,7 +26,7 @@ int main() {
         }
     }
 
-    if (!ind_line || erk_line) {
+    if (!ind_line || !erk_line) {
         cout << "-1\n";
         exit(0);
     }
@@ -46,7 +45,9 @@ int main() {
     vector<int> distS(N + 1, INT_MAX), vis(N + 1),
         prv(N + 1);
     queue<int> q({ind_line});
+
     vis[ind_line] = 1;
+    distS[ind_line] = 0;
 
     while (!q.empty()) {
         int u = q.front();
@@ -60,4 +61,6 @@ int main() {
             q.push(v);
         }
     }
+
+    cout << distS[erk_line] << "\n";
 }
