@@ -3,4 +3,7 @@ T = int(input())
 for _ in range(T):
     N = int(input())
     P = list(map(int, input().split()))
-    print("Champion" if sum([S[min(x - 1, 10)] for x in P]) >= 18 * P.count(1) + 25 * (N - P.count(1)) else "Practice harder")
+    print("Champion" if
+          sum([S[min(x - 1, 10)] for x in P]) >=
+          18 * P.count(1) + 25 * (N - P.count(1))
+          else "Practice harder")
