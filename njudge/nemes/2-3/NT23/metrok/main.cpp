@@ -14,21 +14,21 @@ int main() {
 
     vector<vector<int>> stopS(M + 1), g(M + 1);
     vector<int> ind_nodeS, erk_nodeS;
+    int ind_line = 0, erk_line = 0;
 
     for (int i = 1, K, stop; i <= N; i++) {
         cin >> K;
         vector<int> line(K);
-        bool ind_line = 0, erk_line = 0;
 
         for (int j = 0; j < K; j++) {
             cin >> line[j];
             stopS[line[j]].push_back(i);
-            if (line[i] == Ind) ind_line = 1;
-            if (line[i] == Erk) erk_line = 1;
+            if (line[i] == Ind) ind_line = i;
+            if (line[i] == Erk) erk_line = i;
         }
 
-        if (ind_line) { ind_nodeS = line; }
-        if (erk_line) { erk_nodeS = line; }
+        if (ind_line == i) { ind_nodeS = line; }
+        if (erk_line == i) { erk_nodeS = line; }
     }
 
     if (ind_nodeS.empty() || erk_nodeS.empty()) {
@@ -53,4 +53,6 @@ int main() {
         q.push(u);
         distS[u] = 0;
     }
+
+    while (!q.empty()) {}
 }
