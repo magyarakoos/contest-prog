@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -7,4 +8,11 @@ int main() {
 
     int N, M, Ind, Erk;
     cin >> N >> M >> Ind >> Erk;
+
+    vector<vector<int>> stopS(M + 1);
+
+    for (int i = 0, K; i < N; i++) {
+        cin >> K;
+        while (K--) {}
+    }
 }
