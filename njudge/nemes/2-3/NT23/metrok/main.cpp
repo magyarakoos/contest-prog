@@ -20,6 +20,11 @@ int main() {
             if (line[j] == Ind) ind_line = i;
             if (line[j] == Erk) erk_line = i;
         }
+
+        if (ind_line == i && erk_line == i) {
+            cout << "1\n" << i << "\n";
+            exit(0);
+        }
     }
 
     if (!ind_line || !erk_line) {
