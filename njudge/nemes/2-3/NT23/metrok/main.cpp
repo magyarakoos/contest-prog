@@ -1,4 +1,6 @@
+#include <climits>
 #include <iostream>
+#include <queue>
 #include <set>
 #include <vector>
 
@@ -44,5 +46,11 @@ int main() {
     }
 
     set<int> erk_set(erk_nodeS.begin(), erk_nodeS.end());
-    queue<int> q(ind_nodeS.begin(), ind_nodeS.end());
+    vector<int> distS(M + 1, INT_MAX);
+    queue<int> q;
+
+    for (int u : ind_nodeS) {
+        q.push(u);
+        distS[u] = 0;
+    }
 }
