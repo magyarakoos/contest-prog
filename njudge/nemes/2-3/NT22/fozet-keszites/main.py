@@ -1,4 +1,4 @@
-R = set(())
+R = set()
 
 T = int(input())
 for _ in range(T):
