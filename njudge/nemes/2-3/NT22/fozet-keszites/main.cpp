@@ -1,3 +1,6 @@
+// huge if works
+#pragma GCC optimize("Ofast,unroll-loops")
+
 #include <bits/stdc++.h>
 using namespace std;
 
