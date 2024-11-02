@@ -20,4 +20,13 @@ int main() {
     }
 
     vector<vector<int>> g(M + 1);
+
+    for (int stop = 1; stop <= M; stop++) {
+        for (int i = 0; i < stopS[stop].size(); i++) {
+            for (int j = 0; j < i; j++) {
+                g[stopS[stop][i]].push_back(
+                    g[stopS[stop][i]]);
+            }
+        }
+    }
 }
