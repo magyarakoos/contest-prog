@@ -44,4 +44,5 @@ int main() {
     }
 
     set<int> erk_set(erk_nodeS.begin(), erk_nodeS.end());
+    queue<int> q(ind_nodeS.begin(), ind_nodeS.end());
 }
