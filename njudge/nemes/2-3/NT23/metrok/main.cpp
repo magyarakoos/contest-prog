@@ -32,11 +32,13 @@ int main() {
         exit(0);
     }
 
+    vector m(N + 1, vector<bool>(N + 1));
+
     for (int stop = 1; stop <= M; stop++) {
         for (int i = 0; i < stopS[stop].size(); i++) {
             for (int j = 0; j < i; j++) {
-                g[stopS[stop][i]].push_back(stopS[stop][j]);
-                g[stopS[stop][j]].push_back(stopS[stop][i]);
+                m[stopS[stop][i]][stopS[stop][j]] = 1;
+                m[stopS[stop][j]][stopS[stop][i]] = 1;
             }
         }
     }
