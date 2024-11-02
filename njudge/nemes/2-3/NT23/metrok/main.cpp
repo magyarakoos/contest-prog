@@ -11,8 +11,13 @@ int main() {
 
     vector<vector<int>> stopS(M + 1);
 
-    for (int i = 0, K; i < N; i++) {
+    for (int i = 0, K, stop; i < N; i++) {
         cin >> K;
-        while (K--) {}
+        while (K--) {
+            cin >> stop;
+            stopS[stop].push_back(i);
+        }
     }
+
+    vector<vector<int>> g(M + 1);
 }
