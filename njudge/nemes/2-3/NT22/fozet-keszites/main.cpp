@@ -5,9 +5,9 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     vector dp(501, vector<int>(501));
-    for (int i = 0; i < 25; i++) {
-        for (int j = 0; j < 25; j++) {
-            if (gcd(i, j) != 1) continue;
+    for (int i = 0; i < 32; i++) {
+        for (int j = 0; j < 32; j++) {
+            if (gcd(i, j) > 1) continue;
             for (int k = 500; k >= i; k--) {
                 for (int l = 500; l >= j; l--) {
                     dp[k][l] =
