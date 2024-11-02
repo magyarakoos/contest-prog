@@ -51,12 +51,11 @@ int main() {
 
     deque<int> path;
     while (Erk != Ind) {
-        res.push(reached_with_line[curr_station]);
-        curr_station = prv[curr_station];
+        path.push_front(reached_with_line[Erk]);
+        Erk = prv[Erk];
     }
-    while (!res.empty()) {
-        cout << res.top() << ' ';
-        res.pop();
-    }
+
+    for (int x : path) cout << x << " ";
+    cout << "\n";
 }
 
