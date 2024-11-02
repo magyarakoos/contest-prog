@@ -47,7 +47,7 @@ int main() {
     queue<int> q({ind_line});
 
     vis[ind_line] = 1;
-    distS[ind_line] = 0;
+    distS[ind_line] = 1;
 
     while (!q.empty()) {
         int u = q.front();
