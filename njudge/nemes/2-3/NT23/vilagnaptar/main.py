@@ -10,9 +10,4 @@ for i in range(12):
         D -= B[i]
     else:
         break
-if M == 6 and D == 31:
-    print(Y, M, "SZN")
-elif M == 12 and D == 31:
-    print(Y, M, "VN")
-else:
-    print(Y, M, D)
+print(Y, M, "SZN" if M == 6 and D == 31 else "VN" if M == 12 and D == 31 else D)
