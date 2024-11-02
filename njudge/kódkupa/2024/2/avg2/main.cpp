@@ -23,6 +23,8 @@ int32_t main() {
     auto f = [&](int c) -> bool {
         if (goal == avg) { return 1; }
         if (goal > avg) { return avg + N * c >= goal; }
+        int d = 0;
+        for (int x : p) { d += min(x - 1, c); }
     };
 
     int l = -1, r = 1e18;
