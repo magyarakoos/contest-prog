@@ -17,6 +17,8 @@ int main() {
         while (K--) {
             cin >> stop;
             stopS[stop].push_back(i);
+            if (stop == Ind) { IndLine = i; }
+            if (stop == Erk) { ErkLine = i; }
         }
     }
 
