@@ -15,6 +15,7 @@ int main() {
         cin >> K;
         while (K--) {
             cin >> stop;
+            lineS[i].push_back(stop);
             stopS[stop].push_back(i);
         }
     }
