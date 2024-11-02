@@ -9,7 +9,7 @@ if Y % 4 == 0:
 else:
     for i in range(M - 1):
         D += DL[i]
-    wm = 0
+    wm = 1
     for i in range(12):
         if WDL[i] < D:
             wm += 1
