@@ -12,7 +12,7 @@ int main() {
     int N, M, Ind, Erk;
     cin >> N >> M >> Ind >> Erk;
 
-    vector<vector<int>> stopS(M + 1), g(M + 1);
+    vector<vector<int>> stopS(M + 1), g(N + 1);
     vector<int> ind_nodeS, erk_nodeS;
     int ind_line = 0, erk_line = 0;
 
