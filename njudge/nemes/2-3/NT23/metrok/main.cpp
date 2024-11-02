@@ -20,39 +20,37 @@ int main() {
         }
     }
 
-    vector<bool> used_line(N + 1);
-    vector<int> prev_station(M + 1);
+    vector<int> prv(M + 1), distS(M + 1, -1), vis(N + 1);
     vector<int> reached_with_line(M + 1);
-    vector<int> dist(M + 1, -1);
-    dist[Ind] = 0;
-    queue<int> q;
-    q.push(Ind);
+    queue<int> q({Ind});
+
+    distS[Ind] = 0;
 
     while (!q.empty()) {
-        int curr_station = q.front();
+        int u = q.front();
         q.pop();
-        for (int line : station_to_lines[curr_station]) {
-            if (used_line[line]) continue;
-            used_line[line] = 1;
+        for (int line : station_to_lines[u]) {
+            if (vis[line]) continue;
+            vis[line] = 1;
             for (int next_station :
                  line_to_stations[line]) {
-                if (dist[next_station] != -1) continue;
-                dist[next_station] = dist[curr_station] + 1;
-                prev_station[next_station] = curr_station;
+                if (distS[next_station] != -1) continue;
+                distS[next_station] = distS[u] + 1;
+                prv[next_station] = u;
                 reached_with_line[next_station] = line;
                 q.push(next_station);
             }
         }
     }
 
-    cout << dist[Erk] << '\n';
-    if (dist[Erk] == -1) return 0;
+    cout << distS[Erk] << '\n';
+    if (distS[Erk] == -1) return 0;
 
     stack<int> res;
     int curr_station = Erk;
     while (curr_station != Ind) {
         res.push(reached_with_line[curr_station]);
-        curr_station = prev_station[curr_station];
+        curr_station = prv[curr_station];
     }
     while (!res.empty()) {
         cout << res.top() << ' ';
