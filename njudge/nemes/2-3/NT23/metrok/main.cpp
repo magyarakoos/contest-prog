@@ -41,8 +41,10 @@ int main() {
         }
     }
 
-    vector<int> distS(N + 1, INT_MAX), prv(N + 1);
+    vector<int> distS(N + 1, INT_MAX), vis(N + 1),
+        prv(N + 1);
     queue<int> q({ind_line});
+    vis[ind_line] = 1;
 
     while (!q.empty()) {
         int u = q.front();
