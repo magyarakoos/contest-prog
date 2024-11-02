@@ -1,4 +1,5 @@
 #include <iostream>
+#include <set>
 #include <vector>
 
 using namespace std;
@@ -41,4 +42,6 @@ int main() {
             }
         }
     }
+
+    set<int> erk_set(erk_nodeS.begin(), erk_nodeS.end());
 }
