@@ -17,8 +17,8 @@ int32_t main() {
     int avg = accumulate(p.begin(), p.end(), 0LL);
 
     auto f = [&](int c) -> bool {
-        if (goal == avg) { return 1; }
-        if (goal > avg) { return avg + N * c >= goal; }
+        if (avg == goal) { return 1; }
+        if (avg < goal) { return avg + N * c >= goal; }
         int d = 0;
         for (int x : p) { d += min(x - 1, c); }
         return avg - d <= goal;
