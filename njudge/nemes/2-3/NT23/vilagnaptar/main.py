@@ -7,6 +7,9 @@ Y, M, D = map(int, input().split())
 if Y % 4 == 0:
     pass
 else:
-    pass
+    for i in range(M - 1):
+        D += DL[i]
+
+
 
 print(sum(DL), sum(LDL), sum(WDL), sum(WLDL))
