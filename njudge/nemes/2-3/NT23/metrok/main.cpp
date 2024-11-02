@@ -22,6 +22,11 @@ int main() {
         }
     }
 
+    if (!IndLine || !ErkLine) {
+        cout << "-1\n";
+        exit(0);
+    }
+
     for (int stop = 1; stop <= M; stop++) {
         for (int i = 0; i < stopS[stop].size(); i++) {
             for (int j = 0; j < i; j++) {
