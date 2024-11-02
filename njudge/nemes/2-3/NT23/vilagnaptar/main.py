@@ -16,5 +16,7 @@ else:
             D -= WDL[i]
         else:
             break
-    print(Y, wm, D)
-
+    if wm == 12 and D == 31:
+        print(Y, wm, "VN")
+    else:
+        print(Y, wm, D)
