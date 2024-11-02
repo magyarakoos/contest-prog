@@ -58,6 +58,11 @@ int main() {
         }
     }
 
+    if (distS[erk_line] == INT_MAX) {
+        cout << "-1\n";
+        exit(0);
+    }
+
     deque<int> path;
     while (1) {
         path.push_front(erk_line);
