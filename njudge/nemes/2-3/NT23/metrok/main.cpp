@@ -16,17 +16,19 @@ int main() {
         cin >> K;
         vector<int> line(K);
         bool ind_line = 0, erk_line = 0;
+
         for (int j = 0; j < K; j++) {
             cin >> line[j];
             stopS[line[j]].push_back(i);
             if (line[i] == Ind) ind_line = 1;
             if (line[i] == Erk) erk_line = 1;
         }
+
         if (ind_line) { ind_nodeS = line; }
         if (erk_line) { erk_nodeS = line; }
     }
 
-    if (!IndLine || !ErkLine) {
+    if (ind_nodeS.empty() || erk_nodeS.empty()) {
         cout << "-1\n";
         exit(0);
     }
