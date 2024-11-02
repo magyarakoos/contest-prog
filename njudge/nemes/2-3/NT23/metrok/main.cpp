@@ -9,13 +9,13 @@ int main() {
     int N, M, Ind, Erk;
     cin >> N >> M >> Ind >> Erk;
 
-    vector<vector<int>> stopS(M + 1), lineS(N), g(M + 1);
+    vector<vector<int>> stopS(M + 1), g(M + 1);
+    int IndLine = 0, ErkLine = 0;
 
-    for (int i = 0, K, stop; i < N; i++) {
+    for (int i = 1, K, stop; i <= N; i++) {
         cin >> K;
         while (K--) {
             cin >> stop;
-            lineS[i].push_back(stop);
             stopS[stop].push_back(i);
         }
     }
