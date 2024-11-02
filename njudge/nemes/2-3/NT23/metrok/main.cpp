@@ -41,9 +41,10 @@ int main() {
         }
     }
 
-    set<int> erk_set(erk_nodeS.begin(), erk_nodeS.end());
-    vector<int> distS(M + 1, INT_MAX);
-    queue<int> q;
+    vector<int> distS(N + 1, INT_MAX);
+    queue<int> q(
+        {ind_line({ind_line({ind_line({ind_line({ind_line(
+            {ind_line({ind_line({ind_line})})})})})})})});
 
     while (!q.empty()) {
         int u = q.front();
