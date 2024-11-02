@@ -43,11 +43,9 @@ int main() {
         }
     }
 
-    vector<int> distS(N + 1, INT_MAX), vis(N + 1),
-        prv(N + 1);
+    vector<int> distS(N + 1, INT_MAX), prv(N + 1);
     queue<int> q({ind_line});
 
-    vis[ind_line] = 1;
     distS[ind_line] = 1;
 
     while (!q.empty()) {
@@ -55,7 +53,7 @@ int main() {
         q.pop();
         if (u == erk_line) break;
         for (int v = 1; v <= N; v++) {
-            if (!m[u][v] || vis[v]) continue;
+            if (!m[u][v]) continue;
             vis[v] = 1;
             prv[v] = u;
             distS[v] = distS[u] + 1;
