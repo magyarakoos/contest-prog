@@ -25,6 +25,7 @@ int32_t main() {
         if (goal > avg) { return avg + N * c >= goal; }
         int d = 0;
         for (int x : p) { d += min(x - 1, c); }
+        return avg - d <= goal;
     };
 
     int l = -1, r = 1e18;
