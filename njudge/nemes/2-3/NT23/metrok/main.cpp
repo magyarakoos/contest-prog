@@ -9,7 +9,7 @@ int main() {
     int N, M, Ind, Erk;
     cin >> N >> M >> Ind >> Erk;
 
-    vector<vector<int>> stopS(M + 1);
+    vector<vector<int>> stopS(M + 1), lineS(N), g(M + 1);
 
     for (int i = 0, K, stop; i < N; i++) {
         cin >> K;
@@ -18,8 +18,6 @@ int main() {
             stopS[stop].push_back(i);
         }
     }
-
-    vector<vector<int>> g(M + 1);
 
     for (int stop = 1; stop <= M; stop++) {
         for (int i = 0; i < stopS[stop].size(); i++) {
