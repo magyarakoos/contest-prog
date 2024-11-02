@@ -7,6 +7,7 @@ using namespace std;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
+
     int N, K;
     cin >> N >> K;
     vector<int> p(N);
@@ -14,11 +15,6 @@ int32_t main() {
 
     int goal = N * K;
     int avg = accumulate(p.begin(), p.end(), 0LL);
-
-    if (goal == avg) {
-        cout << "0\n";
-        exit(0);
-    }
 
     auto f = [&](int c) -> bool {
         if (goal == avg) { return 1; }
@@ -28,7 +24,7 @@ int32_t main() {
         return avg - d <= goal;
     };
 
-    int l = -1, r = 1e18;
+    int l = -1, r = 2e9;
     while (r - l > 1) {
         int m = (r + l) / 2;
         if (f(m)) {
