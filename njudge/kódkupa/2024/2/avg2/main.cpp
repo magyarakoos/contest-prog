@@ -21,4 +21,14 @@ int32_t main() {
     }
 
     int l = 0, r = 1e18;
+    while (r - l > 1) {
+        int m = (r + l) / 2;
+        if (f(m)) {
+            r = m;
+        } else {
+            l = m;
+        }
+    }
+
+    cout << r << "\n";
 }
