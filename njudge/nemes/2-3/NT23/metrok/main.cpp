@@ -1,8 +1,4 @@
-#include <climits>
-#include <iostream>
-#include <queue>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -70,4 +66,6 @@ int main() {
     }
 
     cout << path.size() << "\n";
+    for (int x : path) cout << x << " ";
+    cout << "\n";
 }
