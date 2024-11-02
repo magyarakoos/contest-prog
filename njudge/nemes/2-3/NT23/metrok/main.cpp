@@ -7,8 +7,8 @@ int main() {
     int N, M, Ind, Erk;
     cin >> N >> M >> Ind >> Erk;
 
-    vector<vector<int>> station_to_lines(M + 1);
-    vector<vector<int>> line_to_stations(N + 1);
+    vector<vector<int>> station_to_lines(M + 1),
+        line_to_stations(N + 1);
     for (int i = 1; i <= N; i++) {
         int A;
         cin >> A;
@@ -20,8 +20,8 @@ int main() {
         }
     }
 
-    vector<int> prv(M + 1), distS(M + 1, -1), vis(N + 1);
-    vector<int> reached_with_line(M + 1);
+    vector<int> prv_node(M + 1), prv_line(M + 1),
+        distS(M + 1, -1), vis(N + 1);
     queue<int> q({Ind});
 
     distS[Ind] = 0;
@@ -35,8 +35,8 @@ int main() {
             for (int next_station : line_to_stations[v]) {
                 if (distS[next_station] != -1) continue;
                 distS[next_station] = distS[u] + 1;
-                prv[next_station] = u;
-                reached_with_line[next_station] = v;
+                prv_node[next_station] = u;
+                prv_line[next_station] = v;
                 q.push(next_station);
             }
         }
@@ -51,8 +51,8 @@ int main() {
 
     deque<int> path;
     while (Erk != Ind) {
-        path.push_front(reached_with_line[Erk]);
-        Erk = prv[Erk];
+        path.push_front(prv_line[Erk]);
+        Erk = prv_node[Erk];
     }
 
     for (int x : path) cout << x << " ";
