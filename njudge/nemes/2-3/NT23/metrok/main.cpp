@@ -48,6 +48,8 @@ int main() {
 
     distS[ind_line] = 1;
 
+    exit(0);
+
     while (!q.empty()) {
         int u = q.front();
         q.pop();
