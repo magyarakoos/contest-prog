@@ -14,12 +14,14 @@ int main() {
 
     for (int i = 1, K, stop; i <= N; i++) {
         cin >> K;
-        while (K--) {
-            cin >> stop;
-            stopS[stop].push_back(i);
-            if (stop == Ind) { IndLine = i; }
-            if (stop == Erk) { ErkLine = i; }
-        }
+        vector<int> line(K);
+        // while (K--) {
+        //     cin >> stop;
+        //     stopS[stop].push_back(i);
+        //     if (stop == Ind) { IndLine = i; }
+        //     if (stop == Erk) { ErkLine = i; }
+        // }
+        for (int j = 0; j < K; j++) {}
     }
 
     if (!IndLine || !ErkLine) {
