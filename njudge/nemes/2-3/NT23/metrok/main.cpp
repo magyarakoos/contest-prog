@@ -43,7 +43,7 @@ int main() {
         }
     }
 
-    vector<int> distS(N + 1, INT_MAX), prv(N + 1);
+    vector<int> distS(N + 1, -1), prv(N + 1);
     queue<int> q({ind_line});
 
     distS[ind_line] = 1;
@@ -53,15 +53,15 @@ int main() {
         q.pop();
         if (u == erk_line) break;
         for (int v = 1; v <= N; v++) {
-            if (!m[u][v]) continue;
-            vis[v] = 1;
-            prv[v] = u;
-            distS[v] = distS[u] + 1;
-            q.push(v);
+            if (m[u][v] && distS[v] == -1) {
+                prv[v] = u;
+                distS[v] = distS[u] + 1;
+                q.push(v);
+            }
         }
     }
 
-    if (distS[erk_line] == INT_MAX) {
+    if (distS[erk_line] == -1) {
         cout << "-1\n";
         exit(0);
     }
