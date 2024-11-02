@@ -42,12 +42,15 @@ int main() {
         }
     }
 
-    cout << distS[Erk] << "\n";
-    if (distS[Erk] == -1) exit(0);
+    if (distS[Erk] == -1) {
+        cout << "-1\n";
+        exit(0);
+    }
 
-    stack<int> res;
-    int curr_station = Erk;
-    while (curr_station != Ind) {
+    cout << distS[Erk] << "\n";
+
+    deque<int> path;
+    while (Erk != Ind) {
         res.push(reached_with_line[curr_station]);
         curr_station = prv[curr_station];
     }
