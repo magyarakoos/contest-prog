@@ -10,7 +10,7 @@ for i in range(25):
             continue
         for k in range(i, 501):
             for l in range(j, 501):
-                dp[k][l] = min(dp[k][l], )
+                dp[k][l] = min(dp[k][l], dp[k - i][l - j] + 1)
 
 T = int(input())
 for _ in range(T):
