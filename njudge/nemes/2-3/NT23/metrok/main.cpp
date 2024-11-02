@@ -12,7 +12,7 @@ int main() {
     int N, M, Ind, Erk;
     cin >> N >> M >> Ind >> Erk;
 
-    vector<vector<int>> stopS(M + 1), g(N + 1);
+    vector<vector<int>> stopS(M + 1);
     int ind_line = 0, erk_line = 0;
 
     for (int i = 1, K, stop; i <= N; i++) {
@@ -50,6 +50,8 @@ int main() {
         int u = q.front();
         q.pop();
         if (u == erk_line) break;
-        for (int v : g[u]) {}
+        for (int v : g[u]) {
+            if (!vis[v]) { prv[v] = u; }
+        }
     }
 }
