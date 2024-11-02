@@ -29,22 +29,21 @@ int main() {
     while (!q.empty()) {
         int u = q.front();
         q.pop();
-        for (int line : station_to_lines[u]) {
-            if (vis[line]) continue;
-            vis[line] = 1;
-            for (int next_station :
-                 line_to_stations[line]) {
+        for (int v : station_to_lines[u]) {
+            if (vis[v]) continue;
+            vis[v] = 1;
+            for (int next_station : line_to_stations[v]) {
                 if (distS[next_station] != -1) continue;
                 distS[next_station] = distS[u] + 1;
                 prv[next_station] = u;
-                reached_with_line[next_station] = line;
+                reached_with_line[next_station] = v;
                 q.push(next_station);
             }
         }
     }
 
-    cout << distS[Erk] << '\n';
-    if (distS[Erk] == -1) return 0;
+    cout << distS[Erk] << "\n";
+    if (distS[Erk] == -1) exit(0);
 
     stack<int> res;
     int curr_station = Erk;
