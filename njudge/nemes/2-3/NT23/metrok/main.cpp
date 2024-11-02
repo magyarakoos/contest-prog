@@ -23,8 +23,8 @@ int main() {
         for (int j = 0; j < K; j++) {
             cin >> line[j];
             stopS[line[j]].push_back(i);
-            if (line[i] == Ind) ind_line = i;
-            if (line[i] == Erk) erk_line = i;
+            if (line[j] == Ind) ind_line = i;
+            if (line[j] == Erk) erk_line = i;
         }
 
         if (ind_line == i) { ind_nodeS = line; }
@@ -53,6 +53,4 @@ int main() {
         q.push(u);
         distS[u] = 0;
     }
-
-    while (!q.empty()) {}
 }
