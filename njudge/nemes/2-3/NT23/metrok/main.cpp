@@ -41,14 +41,13 @@ int main() {
         }
     }
 
-    vector<int> distS(N + 1, INT_MAX);
-    queue<int> q(
-        {ind_line({ind_line({ind_line({ind_line({ind_line(
-            {ind_line({ind_line({ind_line})})})})})})})});
+    vector<int> distS(N + 1, INT_MAX), prv(N + 1);
+    queue<int> q({ind_line});
 
     while (!q.empty()) {
         int u = q.front();
         q.pop();
+        if (u == erk_line) break;
         for (int v : g[u]) {}
     }
 }
