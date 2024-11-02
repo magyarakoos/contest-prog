@@ -20,7 +20,12 @@ int32_t main() {
         exit(0);
     }
 
-    int l = 0, r = 1e18;
+    auto f = [&](int c) -> bool {
+        if (goal == avg) { return 1; }
+        if (goal > avg) { return avg + N * c >= goal; }
+    };
+
+    int l = -1, r = 1e18;
     while (r - l > 1) {
         int m = (r + l) / 2;
         if (f(m)) {
