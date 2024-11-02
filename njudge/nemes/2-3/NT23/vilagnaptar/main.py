@@ -9,7 +9,12 @@ if Y % 4 == 0:
 else:
     for i in range(M - 1):
         D += DL[i]
+    wm = 0
+    for i in range(12):
+        if WDL[i] < D:
+            wm += 1
+            D -= WDL[i]
+        else:
+            break
+    print(Y, wm, D)
 
-
-
-print(sum(DL), sum(LDL), sum(WDL), sum(WLDL))
