@@ -22,6 +22,8 @@ int main() {
             if (line[i] == Ind) ind_line = 1;
             if (line[i] == Erk) erk_line = 1;
         }
+        if (ind_line) { ind_nodeS = line; }
+        if (erk_line) { erk_nodeS = line; }
     }
 
     if (!IndLine || !ErkLine) {
