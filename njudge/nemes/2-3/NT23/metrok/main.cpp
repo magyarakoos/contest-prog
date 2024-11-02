@@ -63,9 +63,11 @@ int main() {
     }
 
     deque<int> path;
-    do {
+    while (1) {
         path.push_front(erk_line);
+        if (erk_line == ind_line) break;
         erk_line = prv[erk_line];
-    } while (erk_line != ind_line);
-    cout << distS[erk_line] << "\n";
+    }
+
+    cout << path.size() << "\n";
 }
