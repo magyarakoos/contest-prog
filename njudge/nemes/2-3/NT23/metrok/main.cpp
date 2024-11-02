@@ -10,17 +10,17 @@ int main() {
     cin >> N >> M >> Ind >> Erk;
 
     vector<vector<int>> stopS(M + 1), g(M + 1);
-    int IndLine = 0, ErkLine = 0;
     vector<int> ind_nodeS, erk_nodeS;
 
     for (int i = 1, K, stop; i <= N; i++) {
         cin >> K;
         vector<int> line(K);
+        bool ind_line = 0, erk_line = 0;
         for (int j = 0; j < K; j++) {
             cin >> line[j];
             stopS[line[j]].push_back(i);
-            if (line[i] == Ind) IndLine = i;
-            if (line[i] == Erk) ErkLine = i;
+            if (line[i] == Ind) ind_line = 1;
+            if (line[i] == Erk) erk_line = 1;
         }
     }
 
