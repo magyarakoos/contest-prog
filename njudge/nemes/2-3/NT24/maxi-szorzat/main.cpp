@@ -35,7 +35,16 @@ int main() {
     // use all K increments)
     if (B == neg.size() && pq.empty()) {
         for (int i = 0; i < B; i++) { pq.push(neg[i]); }
-        while (K--) {}
+
+        while (K--) {
+            ll mn = pq.top();
+            pq.pop();
+            if (mn + 1 >= 0) {
+                cout << "-1\n";
+                exit(0);
+            }
+            pq.push(mn + 1);
+        }
 
         exit(0);
     }
