@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -43,4 +44,9 @@ int main() {
     }
 
     K -= negsum;
+
+    priority_queue<ll, vector<ll>, greater<ll>> pq;
+    for (int i = 0; i < pos.size(); i++) {
+        pq.push(pos[i]);
+    }
 }
