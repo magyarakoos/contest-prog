@@ -46,6 +46,15 @@ int main() {
             pq.push(mn + 1);
         }
 
+        ll result = 1;
+        while (!pq.empty()) {
+            ll mn = pq.top();
+            pq.pop();
+            result *= -mn;
+            result %= MOD;
+        }
+
+        cout << result << "\n";
         exit(0);
     }
 
