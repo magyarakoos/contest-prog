@@ -33,7 +33,7 @@ int main() {
 
     // This fucking edge case: only B negatives (you have to
     // use all K increments)
-    if (B == neg.size() && pq.empty()) {
+    if (B == N) {
         for (int i = 0; i < B; i++) { pq.push(neg[i]); }
 
         while (K--) {
