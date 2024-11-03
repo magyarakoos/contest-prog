@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cassert>
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -49,12 +50,13 @@ int main() {
 
     exit(0);
 
+    if (!pq.empty() && pq.top() < 0) {
+        cout << "-1\n";
+        exit(0);
+    }
+
     while (!pq.empty()) {
         int mn = pq.top();
-        if (mn < 0) {
-            cout << "-1\n";
-            exit(0);
-        }
         pq.pop();
         result *= mn;
     }
