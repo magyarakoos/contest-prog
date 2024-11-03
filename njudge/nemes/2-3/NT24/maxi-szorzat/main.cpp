@@ -26,4 +26,9 @@ int main() {
     }
 
     sort(neg.rbegin(), neg.rend());
+    ll result = 1;
+    for (int i = 0; i < B; i++) {
+        result *= neg.back();
+        neg.pop_back();
+    }
 }
