@@ -49,4 +49,18 @@ int main() {
     for (int i = 0; i < pos.size(); i++) {
         pq.push(pos[i]);
     }
+
+    for (int i = 0; i < K; i++) {
+        int mn = pq.top();
+        pq.pop();
+        pq.push(mn + 1);
+    }
+
+    while (!pq.empty()) {
+        int mn = pq.top();
+        pq.pop();
+        result *= mn;
+    }
+
+    cout << result << "\n";
 }
