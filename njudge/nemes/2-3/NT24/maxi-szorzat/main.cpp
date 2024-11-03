@@ -49,6 +49,10 @@ int main() {
 
     while (!pq.empty()) {
         int mn = pq.top();
+        if (mn < 0) {
+            cout << "-1\n";
+            exit(0);
+        }
         pq.pop();
         result *= mn;
     }
