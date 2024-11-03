@@ -61,6 +61,7 @@ int main() {
             int mn = pq.top();
             pq.pop();
             result *= mn;
+            result %= MOD;
         }
     }
 
