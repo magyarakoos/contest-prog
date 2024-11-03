@@ -42,23 +42,23 @@ int main() {
         pq.push(neg[i]);
     }
 
-    exit(0);
+    if (!pq.empty()) {
+        for (int i = 0; i < K; i++) {
+            int mn = pq.top();
+            pq.pop();
+            pq.push(mn + 1);
+        }
 
-    for (int i = 0; i < K; i++) {
-        int mn = pq.top();
-        pq.pop();
-        pq.push(mn + 1);
-    }
+        if (pq.top() < 0) {
+            cout << "-1\n";
+            exit(0);
+        }
 
-    if (!pq.empty() && pq.top() < 0) {
-        cout << "-1\n";
-        exit(0);
-    }
-
-    while (!pq.empty()) {
-        int mn = pq.top();
-        pq.pop();
-        result *= mn;
+        while (!pq.empty()) {
+            int mn = pq.top();
+            pq.pop();
+            result *= mn;
+        }
     }
 
     cout << result << "\n";
