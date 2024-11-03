@@ -49,17 +49,19 @@ int main() {
         exit(0);
     }
 
-    while (K--) {
-        ll mn = pq.top();
-        pq.pop();
-        pq.push((mn + 1) % MOD);
-    }
+    if (!pq.empty()) {
+        while (K--) {
+            ll mn = pq.top();
+            pq.pop();
+            pq.push((mn + 1) % MOD);
+        }
 
-    while (!pq.empty()) {
-        ll mn = pq.top();
-        pq.pop();
-        result *= mn;
-        result %= MOD;
+        while (!pq.empty()) {
+            ll mn = pq.top();
+            pq.pop();
+            result *= mn;
+            result %= MOD;
+        }
     }
 
     cout << result << "\n";
