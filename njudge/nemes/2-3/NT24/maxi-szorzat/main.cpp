@@ -29,42 +29,16 @@ int main() {
         exit(0);
     }
 
-    sort(neg.rbegin(), neg.rend());
     ll result = 1;
     for (int i = 0; i < B; i++) {
-        result *= -neg.back();
+        result *= -neg[i];
         result %= MOD;
-        neg.pop_back();
     }
+    for (int i = B; i < neg.size(); i++) { K += neg[i]; }
 
-    priority_queue<ll, vector<ll>, greater<ll>> pq;
-    for (int i = 0; i < pos.size(); i++) {
-        pq.push(pos[i]);
+    if (K < 0) {
+        cout << "-1\n";
+        exit(0);
     }
-    for (int i = 0; i < neg.size(); i++) {
-        pq.push(neg[i]);
-    }
-
-    if (!pq.empty()) {
-        for (int i = 0; i < K; i++) {
-            ll mn = pq.top();
-            pq.pop();
-            pq.push(mn + 1);
-        }
-
-        if (pq.top() < 0) {
-            cout << "-1\n";
-            exit(0);
-        }
-
-        while (!pq.empty()) {
-            ll mn = pq.top();
-            pq.pop();
-            result *= mn;
-            result %= MOD;
-        }
-    }
-
-    cout << result << "\n";
 }
 
