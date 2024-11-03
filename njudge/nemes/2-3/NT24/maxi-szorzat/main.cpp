@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -23,4 +24,6 @@ int main() {
         cout << "-1\n";
         exit(0);
     }
+
+    sort(neg.rbegin(), neg.rend());
 }
