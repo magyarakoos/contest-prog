@@ -1,62 +1,60 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 const string NAREK = "narek";
 
-void solve() {
-    int N, M;
-    cin >> N >> M;
-    vector<string> a(N);
-    for (string& s : a) cin >> s;
-
-    auto append = [&](int i,
-                      array<int, 3> curr) -> array<int, 3> {
-        for (char c : a[i]) {
-            int pos = NAREK.find(c);
-            if (pos != NAREK.npos) {
-                if (curr[1] == pos) {
-                    curr[1]++;
-                    if (curr[1] == 5) {
-                        curr[1] = 0;
-                        curr[0] += 5;
-                    }
-                } else {
-                    curr[2]++;
-                }
-            }
-        }
-        return curr;
-    };
-
-    auto score = [](array<int, 3> x) -> int {
-        return x[0] - x[1] - x[2];
-    };
-
-    vector<array<array<int, 3>, 2>> dp(N);
-    dp[0][0] = {0, 0, 0};
-    dp[0][1] = append(0, {0, 0, 0});
-
-    for (int i = 1; i < N; i++) {
-        dp[i][0] = dp[i - 1][score(dp[i - 1][0]) <
-                             score(dp[i - 1][1])];
-        auto ada = append(i, dp[i - 1][0]),
-             adb = append(i, dp[i - 1][1]);
-        dp[i][1] = (score(ada) < score(adb) ? adb : ada);
-    }
-
-    int result = 0;
-    for (int i = 0; i < N; i++) {
-        result =
-            max({result, score(dp[i][0]), score(dp[i][1])});
-    }
-
-    cout << result << "\n";
-}
-
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-    int T;
-    cin >> T;
-    while (T--) solve();
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n, m;
+        cin >> n >> m;
+
+        vector<string> s(n);
+        for (int i = 0; i < n; i++) cin >> s[i];
+
+        vector<int> dp(5, int(-1e9)), ndp;
+        dp[0] = 0;
+
+        for (int i = 0; i < n; i++) {
+            ndp = dp; // overwriting dp
+
+            for (int j = 0; j < 5; j++) {
+                if (dp[j] == int(-1e9)) continue;
+
+                int counted_score = 0, next = j;
+
+                for (int k = 0; k < m; k++) {
+                    int ind = narek.find(s[i][k]);
+
+                    if (ind == -1)
+                        continue; // if s[i][k] is not a
+                                  // letter of "narek"
+
+                    if (next == ind) { // if s[i][k] is the
+                                       // next letter
+                        next = (next + 1) % 5;
+                        counted_score++;
+                    } else
+                        counted_score--;
+                }
+
+                ndp[next] =
+                    max(ndp[next], dp[j] + counted_score);
+            }
+
+            dp = ndp; // overwriting dp back
+        }
+
+        int ans = 0;
+        for (int i = 0; i < 5; i++)
+            ans = max(
+                ans, dp[i] - 2 * i); // checking all letters
+
+        cout << ans << "\n";
+    }
 }
