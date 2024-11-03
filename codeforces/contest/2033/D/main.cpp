@@ -11,6 +11,7 @@ using ll = long long;
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 #define sz(v) (int)v.size()
+#define int long long
 
 const ll INF = 2e9, MAXN = 2e5, MOD = 1e9 + 7;
 
@@ -39,7 +40,7 @@ void solve() {
     cout << dp[N] << "\n";
 }
 
-int main() {
+int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int T = 1;
     if (cases) cin >> T;
