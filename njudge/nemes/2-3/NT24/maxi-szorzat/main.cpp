@@ -34,9 +34,6 @@ int main() {
         neg.pop_back();
     }
 
-    cout << result << "\n";
-    exit(0);
-
     priority_queue<ll, vector<ll>, greater<ll>> pq;
     for (int i = 0; i < pos.size(); i++) {
         pq.push(pos[i]);
@@ -45,13 +42,13 @@ int main() {
         pq.push(neg[i]);
     }
 
+    exit(0);
+
     for (int i = 0; i < K; i++) {
         int mn = pq.top();
         pq.pop();
         pq.push(mn + 1);
     }
-
-    exit(0);
 
     if (!pq.empty() && pq.top() < 0) {
         cout << "-1\n";
