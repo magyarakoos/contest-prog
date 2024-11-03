@@ -2,6 +2,7 @@
 using namespace std;
 
 const string NAREK = "narek";
+const int INF = 2e9;
 
 void solve() {
     int N, M;
@@ -10,24 +11,23 @@ void solve() {
     vector<string> s(N);
     for (int i = 0; i < N; i++) cin >> s[i];
 
-    vector<int> dp(5, int(-1e9)), ndp;
+    vector<int> dp(5, -INF);
     dp[0] = 0;
 
     for (int i = 0; i < N; i++) {
-        ndp = dp;
+        auto ndp = dp;
         for (int j = 0; j < 5; j++) {
-            if (dp[j] == int(-1e9)) continue;
+            if (dp[j] == -INF) continue;
             int score = 0, nxt = j;
             for (int k = 0; k < M; k++) {
                 int pos = NAREK.find(s[i][k]);
-
                 if (pos == -1) continue;
-                if (nxt == pos) { // if s[i][k] is the
-                                  // next letter
+                if (nxt == pos) {
                     nxt = (nxt + 1) % 5;
                     score++;
-                } else
+                } else {
                     score--;
+                }
             }
 
             ndp[nxt] = max(ndp[nxt], dp[j] + score);
