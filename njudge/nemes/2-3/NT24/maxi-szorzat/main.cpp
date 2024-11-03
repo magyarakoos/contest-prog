@@ -31,12 +31,18 @@ int main() {
         exit(0);
     }
 
+    sort(neg.begin(), neg.end());
     ll result = 1;
+
     for (int i = 0; i < B; i++) {
         result *= -neg[i];
         result %= MOD;
     }
-    for (int i = B; i < neg.size(); i++) { K += neg[i]; }
+
+    for (int i = B; i < neg.size(); i++) {
+        K += neg[i];
+        pq.push(0);
+    }
 
     if (K < 0) {
         cout << "-1\n";
