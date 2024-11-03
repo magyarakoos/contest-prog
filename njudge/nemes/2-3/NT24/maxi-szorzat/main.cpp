@@ -33,8 +33,6 @@ int main() {
         neg.pop_back();
     }
 
-    exit(0);
-
     priority_queue<ll, vector<ll>, greater<ll>> pq;
     for (int i = 0; i < pos.size(); i++) {
         pq.push(pos[i]);
@@ -48,6 +46,8 @@ int main() {
         pq.pop();
         pq.push(mn + 1);
     }
+
+    exit(0);
 
     while (!pq.empty()) {
         int mn = pq.top();
