@@ -13,14 +13,16 @@ int main() {
     ll N, K, B;
     cin >> N >> K >> B;
 
-    vector<ll> neg, pos;
+    vector<ll> neg;
+    priority_queue<ll, vector<ll>, greater<ll>> pq;
+
     for (int i = 0; i < N; i++) {
         ll x;
         cin >> x;
         if (x < 0) {
             neg.push_back(x);
         } else {
-            pos.push_back(x);
+            pq.push(x);
         }
     }
 
