@@ -31,4 +31,16 @@ int main() {
         result *= neg.back();
         neg.pop_back();
     }
+
+    ll negsum = 0;
+    for (int i = 0; i < neg.size(); i++) {
+        negsum += -neg[i];
+    }
+
+    if (negsum > K) {
+        cout << "-1\n";
+        exit(0);
+    }
+
+    K -= negsum;
 }
