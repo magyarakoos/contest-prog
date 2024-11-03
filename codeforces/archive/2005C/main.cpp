@@ -9,16 +9,17 @@ void solve() {
     cin >> N >> M;
 
     vector<string> s(N);
-    for (int i = 0; i < N; i++) cin >> s[i];
+    for (string& si : s) cin >> si;
 
     vector<int> dp(5, -INF);
     dp[0] = 0;
 
     for (int i = 0; i < N; i++) {
-        auto ndp = dp;
+        auto dp_nxt = dp;
         for (int j = 0; j < 5; j++) {
             if (dp[j] == -INF) continue;
             int score = 0, nxt = j;
+
             for (int k = 0; k < M; k++) {
                 int pos = NAREK.find(s[i][k]);
                 if (pos == -1) continue;
@@ -29,11 +30,9 @@ void solve() {
                     score--;
                 }
             }
-
-            ndp[nxt] = max(ndp[nxt], dp[j] + score);
+            dp_nxt[nxt] = max(dp_nxt[nxt], dp[j] + score);
         }
-
-        dp = ndp;
+        dp = dp_nxt;
     }
 
     int ans = 0;
