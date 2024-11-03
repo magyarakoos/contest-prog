@@ -33,21 +33,12 @@ int main() {
         neg.pop_back();
     }
 
-    ll negsum = 0;
-    for (int i = 0; i < neg.size(); i++) {
-        negsum += -neg[i];
-    }
-
-    if (negsum > K) {
-        cout << "-1\n";
-        exit(0);
-    }
-
-    K -= negsum;
-
     priority_queue<ll, vector<ll>, greater<ll>> pq;
     for (int i = 0; i < pos.size(); i++) {
         pq.push(pos[i]);
+    }
+    for (int i = 0; i < neg.size(); i++) {
+        pq.push(neg[i]);
     }
 
     for (int i = 0; i < K; i++) {
