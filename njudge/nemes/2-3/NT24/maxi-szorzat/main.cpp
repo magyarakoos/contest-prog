@@ -34,6 +34,9 @@ int main() {
         neg.pop_back();
     }
 
+    cout << result << "\n";
+    exit(0);
+
     priority_queue<ll, vector<ll>, greater<ll>> pq;
     for (int i = 0; i < pos.size(); i++) {
         pq.push(pos[i]);
