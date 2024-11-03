@@ -1,7 +1,4 @@
 Q, M = map(int, input().split())
 for _ in range(Q):
     A, X, B, Y = map(int, input().split())
-    A = (A - 1) * 24 + X
-    B = (B - 1) * 24 + Y
-    print(A, B)
-    print((B - A - 1) // M)
+    print((((B - 1) * 24 + Y) - ((A - 1) * 24 + X) - 1) // M)
