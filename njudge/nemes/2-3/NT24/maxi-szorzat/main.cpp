@@ -15,7 +15,7 @@ int main() {
 
     vector<ll> neg, pos;
     for (int i = 0; i < N; i++) {
-        int x;
+        ll x;
         cin >> x;
         if (x < 0) {
             neg.push_back(x);
@@ -47,7 +47,7 @@ int main() {
 
     if (!pq.empty()) {
         for (int i = 0; i < K; i++) {
-            int mn = pq.top();
+            ll mn = pq.top();
             pq.pop();
             pq.push(mn + 1);
         }
@@ -58,7 +58,7 @@ int main() {
         }
 
         while (!pq.empty()) {
-            int mn = pq.top();
+            ll mn = pq.top();
             pq.pop();
             result *= mn;
             result %= MOD;
