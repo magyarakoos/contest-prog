@@ -26,10 +26,14 @@ int main() {
         }
     }
 
-    if (neg.size() < B) {
+    if (B > neg.size()) {
         cout << "-1\n";
         exit(0);
     }
+
+    // This fucking edge case: only B negatives (you have to
+    // use all K increments)
+    if (B == neg.size() && pq.empty()) {}
 
     sort(neg.begin(), neg.end());
     ll result = 1;
