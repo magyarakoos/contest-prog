@@ -48,5 +48,11 @@ int main() {
         cout << "-1\n";
         exit(0);
     }
+
+    while (K--) {
+        ll mn = pq.top();
+        pq.pop();
+        pq.push((mn + 1) % MOD);
+    }
 }
 
