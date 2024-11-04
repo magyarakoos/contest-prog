@@ -1,6 +1,5 @@
 #include <iostream>
 #include <queue>
-#include <set>
 #include <vector>
 
 using namespace std;
@@ -40,22 +39,16 @@ int main() {
         }
 
         vector<int> order(K);
-        set<int> values;
+        set<int> valueS;
         for (int i = 0; i < K; i++) {
-            values.insert(order[i] = vis[a[i]]);
+            order[i] = vis[a[i]];
+            valueS.insert(order[i]);
         }
 
         bool ok = 1;
         for (int i = 1; i < K; i++) {
             int d = order[i] - order[i - 1];
             ok = ok && (d == 0 || d == 1);
-        }
-
-        if (!ok) continue;
-
-        values.erase(*values.begin());
-        if (!values.empty()) {
-            values.erase(*values.rbegin());
         }
     }
 
