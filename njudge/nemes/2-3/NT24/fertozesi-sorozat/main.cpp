@@ -63,8 +63,8 @@ int main() {
         orderSet.erase(*orderSet.rbegin());
 
         for (int u = 1; u <= N; u++) {
-            ok = ok &&
-                 !(!aSet.count(u) && orderSet.count(u));
+            ok = ok && !(!aSet.count(u) &&
+                         orderSet.count(vis[u]));
         }
 
         if (ok) { result.push_back(start); }
