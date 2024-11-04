@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -21,7 +22,22 @@ int main() {
     }
 
     vector<int> result;
-    for (int start = 1; start <= N; start++) {}
+    for (int start = 1; start <= N; start++) {
+        vector<int> vis(N + 1);
+        vis[start] = 1;
+        queue<int> q({start});
+
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
+            for (int v : g[u]) {
+                if (!vis[v]) {
+                    vis[v] = vis[u] + 1;
+                    q.push(v);
+                }
+            }
+        }
+    }
 
     cout << result.size() << "\n";
     for (int x : result) cout << x << " ";
