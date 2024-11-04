@@ -37,6 +37,11 @@ int main() {
                 }
             }
         }
+
+        vector<int> order(K);
+        for (int i = 0; i < K; i++) {
+            order[i] = vis[a[i]];
+        }
     }
 
     cout << result.size() << "\n";
