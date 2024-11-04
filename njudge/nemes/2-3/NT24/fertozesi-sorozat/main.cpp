@@ -13,7 +13,7 @@ int main() {
 
     vector<int> a(K);
     for (int& x : a) cin >> x;
-    set<int> as(a.begin(), a.end());
+    set<int> aSet(a.begin(), a.end());
 
     vector<vector<int>> g(N + 1);
     while (M--) {
@@ -41,9 +41,9 @@ int main() {
         }
 
         vector<int> order(K);
-        set<int> valueS;
+        set<int> orderSet;
         for (int i = 0; i < K; i++) {
-            valueS.insert(order[i] = vis[a[i]]);
+            orderSet.insert(order[i] = vis[a[i]]);
         }
 
         bool ok = 1;
@@ -52,13 +52,14 @@ int main() {
             ok = ok && (d == 0 || d == 1);
         }
 
-        valueS.erase(valueS.begin());
-        if (!valueS.empty()) {
-            valueS.erase(*valueS.rbegin());
+        orderSet.erase(orderSet.begin());
+        if (!orderSet.empty()) {
+            orderSet.erase(*orderSet.rbegin());
         }
 
         for (int u = 1; u <= N; u++) {
-            ok = ok && !(!as.count(u) && valueS.count(u));
+            ok = ok &&
+                 !(!aSet.count(u) && orderSet.count(u));
         }
 
         if (ok) { result.push_back(start); }
