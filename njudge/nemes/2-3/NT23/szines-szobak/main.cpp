@@ -11,7 +11,7 @@ int main() {
     vector<int> d(K + 1);
     vector<deque<int>> personS(K + 1);
 
-    for (int i = 0; i < K; i++) {
+    for (int i = 1; i <= K; i++) {
         int C;
         cin >> C;
         personS[C].push_back(i);
@@ -22,5 +22,9 @@ int main() {
         int C, X;
         cin >> C >> X;
         d[C] += X;
-        while () }
+        while (!personS[C].empty() &&
+               personS[C].front() + d[C] <= 0) {
+            personS[C].pop_front();
+        }
+    }
 }
