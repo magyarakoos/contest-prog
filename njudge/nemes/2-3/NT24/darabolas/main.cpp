@@ -15,4 +15,16 @@ int main() {
     priority_queue<array<ll, 2>, vector<array<ll, 2>>,
                    greater<array<ll, 2>>>
         pq;
+
+    for (int i = 0; i < M - 1; i++) {
+        ll x;
+        cin >> x;
+        pq.push({0, x});
+    }
+
+    for (int i = 0; i < N - 1; i++) {
+        ll x;
+        cin >> x;
+        pq.push({1, x});
+    }
 }
