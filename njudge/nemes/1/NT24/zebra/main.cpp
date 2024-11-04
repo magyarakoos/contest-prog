@@ -25,7 +25,7 @@ int main() {
         int curr = 0;
         for (int j = i; j > 0; j--) {
             cnt[a[j][1]]++;
-            curr += i - a[j][0];
+            curr += a[i][0] - a[j][0];
             if (cnt[0] && cnt[1]) {
                 dp[i] = min(dp[i], dp[j - 1] + curr);
             }
