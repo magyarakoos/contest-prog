@@ -53,9 +53,9 @@ int main() {
 
         if (!ok) continue;
 
-        values.erase(values.begin());
+        values.erase(*values.begin());
         if (!values.empty()) {
-            values.erase(values.rbegin());
+            values.erase(*values.rbegin());
         }
     }
 
