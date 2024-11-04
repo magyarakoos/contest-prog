@@ -16,18 +16,18 @@ int main() {
     for (int i = 0; i < M - 1; i++) {
         ll x;
         cin >> x;
-        pq.push({0, x});
+        pq.push({x, 0});
     }
 
     for (int i = 0; i < N - 1; i++) {
         ll x;
         cin >> x;
-        pq.push({1, x});
+        pq.push({x, 1});
     }
 
     ll result = 0;
     while (!pq.empty()) {
-        auto [axis, value] = pq.top();
+        auto [value, axis] = pq.top();
         pq.pop();
         if (axis) {
             result += value * Mdb;
