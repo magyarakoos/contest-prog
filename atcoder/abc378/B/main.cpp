@@ -13,11 +13,7 @@ int main() {
     while (Q--) {
         int T, D;
         cin >> T >> D;
-        int m = M[T - 1], r = R[T - 1];
-        if (D / m * m + r >= D) {
-            cout << D / m * m + r << "\n";
-        } else {
-            cout << D / m * m + r + m << "\n";
-        }
+        int fi = D / M[T - 1] * M[T - 1] + R[T - 1];
+        cout << fi + M[T - 1] * (fi < D) << "\n";
     }
 }
