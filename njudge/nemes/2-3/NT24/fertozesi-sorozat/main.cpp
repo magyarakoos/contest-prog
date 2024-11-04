@@ -52,15 +52,10 @@ int main() {
             ok = ok && (d == 0 || d == 1);
         }
 
-        if (!ok) continue;
-
-        if (orderSet.size() <= 2) {
-            if (ok) { result.push_back(start); }
-            continue;
-        }
-
         orderSet.erase(orderSet.begin());
-        orderSet.erase(*orderSet.rbegin());
+        if (!orderSet.empty()) {
+            orderSet.erase(*orderSet.rbegin());
+        }
 
         for (int u = 1; u <= N; u++) {
             ok = ok && !(!aSet.count(u) &&
@@ -74,3 +69,4 @@ int main() {
     for (int x : result) cout << x << " ";
     cout << "\n";
 }
+
