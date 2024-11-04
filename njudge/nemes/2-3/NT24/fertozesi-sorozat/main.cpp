@@ -52,6 +52,9 @@ int main() {
             ok = ok && (d == 0 || d == 1);
         }
 
+        if (orderSet.size() == 1) {
+            if (ok) { result.push_back(start); }
+        }
         orderSet.erase(orderSet.begin());
         if (!orderSet.empty()) {
             orderSet.erase(*orderSet.rbegin());
