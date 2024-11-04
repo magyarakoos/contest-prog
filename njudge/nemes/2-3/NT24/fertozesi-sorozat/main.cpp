@@ -45,10 +45,8 @@ int main() {
 
         bool ok = 1;
         for (int i = 1; i < K; i++) {
-            if (order[i - 1] > order[i]) {
-                ok = 0;
-                break;
-            }
+            int d = order[i] - order[i - 1];
+            ok = ok && (d == 0 || d == 1);
         }
 
         if (ok) result.push_back(start);
