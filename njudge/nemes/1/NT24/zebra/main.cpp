@@ -1,9 +1,12 @@
 #include <algorithm>
 #include <array>
+#include <cassert>
 #include <iostream>
 #include <vector>
 
 using namespace std;
+
+const int INF = 2e9;
 
 int main() {
     int N;
@@ -14,7 +17,7 @@ int main() {
     for (int i = 1; i <= N; i++) cin >> a[i][0];
     sort(a.begin(), a.end());
 
-    vector<int> dp(N + 1, 2e9);
+    vector<int> dp(N + 1, INF);
     dp[0] = 0;
 
     for (int i = 1; i <= N; i++) {
@@ -28,4 +31,8 @@ int main() {
             }
         }
     }
+
+    assert(dp[N] != INF);
+
+    cout << dp[N] << "\n";
 }
