@@ -58,6 +58,13 @@ int main() {
         if (!valueS.empty()) {
             valueS.erase(*valueS.rbegin());
         }
+
+        set<int> as(a.begin(), a.end());
+        for (int i = 1; i <= N; i++) {
+            ok = ok && !(!as.count(i) && valueS.count(i));
+        }
+
+        if (ok) { result.push_back(start); }
     }
 
     cout << result.size() << "\n";
