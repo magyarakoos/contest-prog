@@ -1,3 +1,4 @@
+#include "debug.h"
 #include <deque>
 #include <iostream>
 #include <vector>
@@ -16,6 +17,8 @@ int main() {
         cin >> C;
         personS[C].push_back(i);
     }
+
+    DB(personS);
 
     int result = 0;
     while (M--) {
