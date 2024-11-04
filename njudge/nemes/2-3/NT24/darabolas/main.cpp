@@ -27,4 +27,14 @@ int main() {
         cin >> x;
         pq.push({1, x});
     }
+
+    ll result = 0;
+    while (!pq.empty()) {
+        auto [axis, value] = pq.top();
+        pq.pop();
+        if (axis) {
+
+        } else {
+        }
+    }
 }
