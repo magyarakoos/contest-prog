@@ -1,7 +1,6 @@
 #include <array>
 #include <iostream>
 #include <queue>
-#include <vector>
 
 using namespace std;
 using ll = long long;
@@ -12,9 +11,7 @@ int main() {
     ll M, N, Mdb = 1, Ndb = 1;
     cin >> M >> N;
 
-    priority_queue<array<ll, 2>, vector<array<ll, 2>>,
-                   greater<array<ll, 2>>>
-        pq;
+    priority_queue<array<ll, 2>> pq;
 
     for (int i = 0; i < M - 1; i++) {
         ll x;
@@ -33,8 +30,13 @@ int main() {
         auto [axis, value] = pq.top();
         pq.pop();
         if (axis) {
-
+            result += value * Mdb;
+            Ndb++;
         } else {
+            result += value * Ndb;
+            Mdb++;
         }
     }
+
+    cout << result << "\n";
 }
