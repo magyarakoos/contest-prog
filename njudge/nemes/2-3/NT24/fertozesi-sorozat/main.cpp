@@ -19,4 +19,11 @@ int main() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
+
+    vector<int> result;
+    for (int start = 1; start <= N; start++) {}
+
+    cout << result.size() << "\n";
+    for (int x : result) cout << x << " ";
+    cout << "\n";
 }
