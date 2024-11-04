@@ -23,8 +23,16 @@ int main() {
         cin >> C >> X;
         d[C] += X;
         while (!personS[C].empty() &&
-               personS[C].front() + d[C] <= 0) {
+               personS[C].front() + d[C] == 0) {
             personS[C].pop_front();
+            result++;
+        }
+        while (!personS[C].empty() &&
+               personS[C].back() + d[C] == N + 1) {
+            personS[C].pop_back();
+            result++;
         }
     }
+
+    cout << result << "\n";
 }
