@@ -13,6 +13,7 @@ int main() {
 
     vector<int> a(K);
     for (int& x : a) cin >> x;
+    set<int> as(a.begin(), a.end());
 
     vector<vector<int>> g(N + 1);
     while (M--) {
@@ -42,8 +43,7 @@ int main() {
         vector<int> order(K);
         set<int> valueS;
         for (int i = 0; i < K; i++) {
-            order[i] = vis[a[i]];
-            valueS.insert(order[i]);
+            valueS.insert(order[i] = vis[a[i]]);
         }
 
         bool ok = 1;
@@ -52,16 +52,13 @@ int main() {
             ok = ok && (d == 0 || d == 1);
         }
 
-        if (!ok) continue;
-
         valueS.erase(valueS.begin());
         if (!valueS.empty()) {
             valueS.erase(*valueS.rbegin());
         }
 
-        set<int> as(a.begin(), a.end());
-        for (int i = 1; i <= N; i++) {
-            ok = ok && !(!as.count(i) && valueS.count(i));
+        for (int u = 1; u <= N; u++) {
+            ok = ok && !(!as.count(u) && valueS.count(u));
         }
 
         if (ok) { result.push_back(start); }
