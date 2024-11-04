@@ -43,6 +43,7 @@ int main() {
             order[i] = vis[a[i]];
         }
 
+        set<int> values;
         bool ok = 1;
         for (int i = 1; i < K; i++) {
             int d = order[i] - order[i - 1];
