@@ -17,6 +17,7 @@ int main() {
     vector<int> dp(N + 1);
 
     for (int i = 1; i <= N; i++) {
-        for (int j = 0; j < i; j++) {}
+        array<int, 2> cnt = {0, 0};
+        for (int j = i; j >= 0; j--) {}
     }
 }
