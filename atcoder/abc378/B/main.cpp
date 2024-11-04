@@ -1,4 +1,3 @@
-#include <array>
 #include <iostream>
 #include <vector>
 
@@ -15,6 +14,10 @@ int main() {
         int T, D;
         cin >> T >> D;
         int m = M[T - 1], r = R[T - 1];
-        // D / Q
+        if (D / m * m + r >= D) {
+            cout << D / m * m + r << "\n";
+        } else {
+            cout << D / m * m + r + m << "\n";
+        }
     }
 }
