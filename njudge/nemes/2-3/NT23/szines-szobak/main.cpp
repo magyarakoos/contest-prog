@@ -12,7 +12,7 @@ int main() {
     vector<int> d(K + 1);
     vector<deque<int>> personS(K + 1);
 
-    for (int i = 1; i <= K; i++) {
+    for (int i = 1; i <= N; i++) {
         int C;
         cin >> C;
         personS[C].push_back(i);
