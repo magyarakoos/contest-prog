@@ -42,6 +42,16 @@ int main() {
         for (int i = 0; i < K; i++) {
             order[i] = vis[a[i]];
         }
+
+        bool ok = 1;
+        for (int i = 1; i < K; i++) {
+            if (order[i - 1] > order[i]) {
+                ok = 0;
+                break;
+            }
+        }
+
+        if (ok) result.push_back(start);
     }
 
     cout << result.size() << "\n";
