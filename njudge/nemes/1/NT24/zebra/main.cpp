@@ -30,6 +30,7 @@ int main() {
                 dp[i] = min(dp[i], dp[j - 1] + curr);
             }
         }
+        cout << dp[i] << " ";
     }
 
     assert(dp[N] != INF);
