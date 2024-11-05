@@ -3,8 +3,6 @@
 #include <numeric>
 #include <vector>
 
-#include "debug.h"
-
 using namespace std;
 using ll = long long;
 
@@ -16,11 +14,13 @@ void solve() {
         ll F, K;
         char C;
         cin >> F >> C >> K;
+
         if (C >= 'a') {
             C -= 'a';
         } else {
             C = C - 'A' + 26;
         }
+        h[C] += F;
 
         auto nh = h;
         sort(nh.begin(), nh.end());
@@ -42,7 +42,6 @@ void solve() {
         for (int i = 0; i < 52; i++) {
             result += nh[i] * (sum - nh[i]);
         }
-        DB(nh);
 
         cout << result / 2 << "\n";
     }
