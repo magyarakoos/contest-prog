@@ -33,15 +33,14 @@ void solve() {
             }
         }
 
-        DB(nh);
-
         ll sum = accumulate(nh.begin(), nh.end(), 0LL),
            result = 0;
+        DB(nh, sum);
         for (int i = 0; i < 52; i++) {
-            result += h[i] * (sum - nh[i]);
+            result += nh[i] * (sum - nh[i]);
         }
 
-        cout << result << "\n";
+        cout << result / 2 << "\n";
     }
 }
 
