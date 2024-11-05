@@ -35,7 +35,6 @@ void solve() {
 
         ll sum = accumulate(nh.begin(), nh.end(), 0LL),
            result = 0;
-        DB(nh, sum);
         for (int i = 0; i < 52; i++) {
             result += nh[i] * (sum - nh[i]);
         }
