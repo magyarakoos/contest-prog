@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <iostream>
-#include <queue>
+#include <numeric>
 #include <vector>
 
 using namespace std;
@@ -28,6 +28,14 @@ void solve() {
                 K -= nh[i];
             }
         }
+
+        ll sum = accumulate(nh.begin(), nh.end(), 0LL),
+           result = 0;
+        for (int i = 0; i < 52; i++) {
+            result += h[i] * (sum - nh[i]);
+        }
+
+        cout << result << "\n";
     }
 }
 
