@@ -1,4 +1,6 @@
+#include <algorithm>
 #include <iostream>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -15,9 +17,18 @@ void solve() {
         C -= "aA"[C < 'a'];
 
         h[C] += F;
-        priority_queue<ll, vector<ll>, greater<ll>> pq(
-            h.begin(), h.end());
-        for (int i = 0; i < K && !pq.empty(); i++) { if () }
+
+        priority_queue<ll, vector<ll>, greater<ll>> pq;
+        int mxi =
+            max_element(h.begin(), h.end()) - h.begin();
+        for (int i = 0; i < 52; i++) {
+            if (i == mxi) continue;
+            pq.push(h[i]);
+        }
+        ll mx = h[mxi];
+        for (int i = 0; i < K && !pq.empty(); i++) {
+            while (!pq.empty() && !pq.top()) pq.pop();
+        }
     }
 }
 
