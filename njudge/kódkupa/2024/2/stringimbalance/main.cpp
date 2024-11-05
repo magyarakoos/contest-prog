@@ -18,22 +18,8 @@ void solve() {
 
         h[C] += F;
 
-        priority_queue<ll, vector<ll>, greater<ll>> pq;
-        int mxi =
-            max_element(h.begin(), h.end()) - h.begin();
-        for (int i = 0; i < 52; i++) {
-            if (i == mxi) continue;
-            pq.push(h[i]);
-        }
-        ll mx = h[mxi];
-        for (int i = 0; i < K; i++) {
-            while (!pq.empty() && !pq.top()) pq.pop();
-            if (pq.empty()) break;
-            ll mn = pq.top();
-            pq.pop();
-            pq.push(mn - 1);
-            mx++;
-        }
+        auto nh = h;
+        sort(nh.begin(), nh.end());
     }
 }
 
