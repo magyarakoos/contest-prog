@@ -14,7 +14,7 @@ void solve() {
         ll F, K;
         char C;
         cin >> F >> C >> K;
-        h[C - "a"[C < 'a']] += F;
+        h[C - "aA"[C < 'a']] += F;
 
         auto nh = h;
         sort(nh.begin(), nh.end());
