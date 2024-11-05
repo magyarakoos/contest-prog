@@ -38,6 +38,7 @@ void solve() {
         for (int i = 0; i < 52; i++) {
             result += nh[i] * (sum - nh[i]);
         }
+        DB(nh);
 
         cout << result / 2 << "\n";
     }
