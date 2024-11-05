@@ -18,8 +18,6 @@ void solve() {
         cin >> F >> C >> K;
         h[C - "aA"[C < 'a']] += F;
 
-        DB(h);
-
         auto nh = h;
         sort(nh.begin(), nh.end());
 
@@ -34,6 +32,8 @@ void solve() {
                 nh[i] = 0;
             }
         }
+
+        DB(nh);
 
         ll sum = accumulate(nh.begin(), nh.end(), 0LL),
            result = 0;
