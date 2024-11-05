@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <iostream>
-#include <numeric>
 #include <vector>
 
 using namespace std;
@@ -10,6 +9,7 @@ void solve() {
     vector<ll> h(52);
     int Q;
     cin >> Q;
+    ll sum = 0;
     while (Q--) {
         ll F, K;
         char C;
@@ -21,6 +21,7 @@ void solve() {
             C = C - 'A' + 26;
         }
         h[C] += F;
+        sum += F;
 
         auto nh = h;
         sort(nh.begin(), nh.end());
@@ -37,8 +38,7 @@ void solve() {
             }
         }
 
-        ll sum = accumulate(nh.begin(), nh.end(), 0LL),
-           result = 0;
+        ll result = 0;
         for (int i = 0; i < 52; i++) {
             result += nh[i] * (sum - nh[i]);
         }
