@@ -2,35 +2,35 @@
 using namespace std;
 using ll = long long;
 
-int main() {
-    int n, m;
-    cin >> n >> m;
+const int INF = LLONG_MAX;
 
-    vector<ll> d(n + 1, LLONG_MIN);
+int main() {
+    int N, M;
+    cin >> N >> M;
+
+    vector<ll> d(N + 1, -INF);
     d[1] = 0;
 
-    vector<array<ll, 3>> edgeS(m);
+    vector<array<ll, 3>> edgeS(M);
     for (auto& [u, v, w] : edgeS) { cin >> u >> v >> w; }
 
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= N; i++) {
         for (auto [u, v, w] : edgeS) {
-            if (d[u] != LLONG_MIN) {
+            if (d[u] != -INF) {
                 d[v] = max(d[v], d[u] + w);
             }
         }
     }
 
-    ll tav = d[n];
+    ll dN = d[N];
 
     for (auto [u, v, w] : edgeS) {
-        if (d[u] != LLONG_MIN) {
-            d[v] = max(d[v], d[u] + w);
-        }
+        if (d[u] != -INF) { d[v] = max(d[v], d[u] + w); }
     }
 
-    if (d[n] > tav) {
+    if (d[N] > dN) {
         cout << "inf\n";
     } else {
-        cout << tav << "\n";
+        cout << dN << "\n";
     }
 }
