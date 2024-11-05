@@ -16,7 +16,11 @@ void solve() {
         ll F, K;
         char C;
         cin >> F >> C >> K;
-        h[C - "aA"[C < 'a']] += F;
+        if (C >= 'a') {
+            C -= 'a';
+        } else {
+            C = C - 'A' + 26;
+        }
 
         auto nh = h;
         sort(nh.begin(), nh.end());
