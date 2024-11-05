@@ -1,36 +1,62 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
 
-const int INF = LLONG_MAX;
+const int MAXK = 20;
+
+vector<vector<int>> sz, p;
+vector<int> tin, tout;
+int t;
+
+void dfs(int cs) {
+    tin[cs] = t++;
+    for (int i = 1; i <= MAXK; i++) {
+        p[cs][i] = p[p[cs][i - 1]][i - 1];
+    }
+    for (int x : sz[cs]) { dfs(x); }
+    tout[cs] = t++;
+}
 
 int main() {
-    int N, M;
-    cin >> N >> M;
+    ios::sync_with_stdio(0);
+    cin.tie(0);
 
-    vector<ll> d(N + 1, -INF);
-    d[1] = 0;
+    int n, q;
+    cin >> n >> q;
 
-    vector<array<ll, 3>> edgeS(M);
-    for (auto& [u, v, w] : edgeS) { cin >> u >> v >> w; }
+    sz.resize(n + 1);
+    p.resize(n + 1, vector<int>(MAXK + 1, 1));
+    tin.resize(n + 1);
+    tout.resize(n + 1);
 
-    for (int i = 1; i <= N; i++) {
-        for (auto [u, v, w] : edgeS) {
-            if (d[u] != -INF) {
-                d[v] = max(d[v], d[u] + w);
-            }
+    for (int i = 2; i <= n; i++) {
+        cin >> p[i][0];
+        sz[p[i][0]].push_back(i);
+    }
+
+    dfs(1);
+
+    auto is_parent = [&](int u, int v) {
+        return (tin[u] <= tin[v] && tout[v] <= tout[u]);
+    };
+
+    while (q--) {
+        int a, b;
+        cin >> a >> b;
+
+        if (is_parent(a, b)) {
+            cout << a << "\n";
+            continue;
         }
-    }
+        if (is_parent(b, a)) {
+            cout << b << "\n";
+            continue;
+        }
 
-    ll dN = d[N];
+        for (int i = MAXK; i >= 0; i--) {
+            if (!is_parent(p[a][i], b)) { a = p[a][i]; }
+        }
 
-    for (auto [u, v, w] : edgeS) {
-        if (d[u] != -INF) { d[v] = max(d[v], d[u] + w); }
-    }
-
-    if (d[N] > dN) {
-        cout << "inf\n";
-    } else {
-        cout << dN << "\n";
+        cout << p[a][0] << "\n";
     }
 }
+
