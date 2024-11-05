@@ -3,6 +3,8 @@
 #include <numeric>
 #include <vector>
 
+#include "debug.h"
+
 using namespace std;
 using ll = long long;
 
@@ -16,16 +18,20 @@ void solve() {
         cin >> F >> C >> K;
         h[C - "aA"[C < 'a']] += F;
 
+        DB(h);
+
         auto nh = h;
         sort(nh.begin(), nh.end());
 
         for (int i = 0; i < 51; i++) {
             if (K <= nh[i]) {
                 nh[51] += K;
+                nh[i] -= K;
                 break;
             } else {
                 nh[51] += nh[i];
                 K -= nh[i];
+                nh[i] = 0;
             }
         }
 
