@@ -13,7 +13,11 @@ void solve() {
         char C;
         cin >> F >> C >> K;
         C -= "aA"[C < 'a'];
+
         h[C] += F;
+        priority_queue<ll, vector<ll>, greater<ll>> pq(
+            h.begin(), h.end());
+        for (int i = 0; i < K && !pq.empty(); i++) { if () }
     }
 }
 
