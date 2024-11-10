@@ -13,10 +13,12 @@ int main() {
     vector<int> result;
 
     for (int i = 0; i < N; i++) {
+        // ha a jelenlegi pont már része egy elérési pont
+        // hatósugarának sem
         if (right + H < v[i]) {
-            // átugorjuk azokat a pontokat, amiket a
-            // legjobboldalabbi elérési pontpból még el
-            // lehet érni és azokat is,
+            // átugorjuk azokat a pontokat, amelyek a
+            // következő elérési pontból még elérhetőek
+            // lesznek
             int j = i;
             while (j + 1 < N && v[j + 1] <= v[i] + H) {
                 j++;
