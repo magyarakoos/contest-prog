@@ -7,12 +7,13 @@ int main() {
     vector<int> v(N);
     for (int& x : v) cin >> x;
 
-    int right = -H - 1; // a legjobboldalabbi elérési pont pozíciója
+    int right =
+        -H - 1; // a legjobboldalabbi elérési pont pozíciója
 
     vector<int> result;
 
     for (int i = 0; i < N; i++) {
-        if (right < v[i] - H) {
+        if (right + H < v[i]) {
             int j = i;
             while (j + 1 < N && v[j + 1] - H <= v[i]) {
                 j++;
