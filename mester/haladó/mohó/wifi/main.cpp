@@ -25,11 +25,13 @@ int main() {
             }
 
             i = j;
+            // ha most i-hez lerakunk egy elérési pontot,
+            // akkor az az összes korábbi házat lefedi
             result.push_back(i);
             right = v[i];
         }
     }
 
-    cout << result.size() << '\n';
-    for (int x : result) cout << x + 1 << ' ';
+    cout << result.size() << "\n";
+    for (int x : result) cout << x + 1 << "\n";
 }
