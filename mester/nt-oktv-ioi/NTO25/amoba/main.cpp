@@ -14,7 +14,10 @@ int main() {
 
     cout << "+-+-+-+\n";
     for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {}
-        cout << "+-+-+-+\n";
+        cout << "|";
+        for (int j = 0; j < 3; j++) {
+            cout << " OX"[board[i][j]] << "|";
+        }
+        cout << "\n+-+-+-+\n";
     }
 }
