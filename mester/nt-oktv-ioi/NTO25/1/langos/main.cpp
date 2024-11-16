@@ -19,7 +19,7 @@ int main() {
         return 0;
     };
 
-    ll l = 0, r = 1e18;
+    ll l = -1, r = 1e18;
     while (r - l > 1) {
         ll m = l + (r - l) / 2;
         if (f(m)) {
