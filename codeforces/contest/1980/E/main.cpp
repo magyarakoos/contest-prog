@@ -17,23 +17,21 @@ void solve() {
     cin >> N >> M;
     auto A = read(N, M), B = read(N, M);
 
-    vector<int> posi(N * M), posci(N * M), posj(N * M),
-        poscj(N * M);
+    vector<int> pai(N * M), pbi(N * M), paj(N * M),
+        pbj(N * M);
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
-            posi[A[i][j]] = posci[B[i][j]] = i;
-            posj[A[i][j]] = poscj[B[i][j]] = j;
+            pai[A[i][j]] = pbi[B[i][j]] = i;
+            paj[A[i][j]] = pbj[B[i][j]] = j;
         }
     }
 
     vector<set<int>> pi(N * M), pj(N * M);
 
     for (int x = 0; x < N * M; x++) {
-        int i1 = posi[x], i2 = posci[x];
-        int j1 = posj[x], j2 = poscj[x];
-        pi[i1].insert(i2);
-        pj[j1].insert(j2);
+        pi[pai[x]].insert(pbi[x]);
+        pj[paj[x]].insert(pbj[x]);
     }
 
     for (int x = 0; x < N * M; ++x) {
