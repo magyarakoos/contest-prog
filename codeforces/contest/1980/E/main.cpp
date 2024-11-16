@@ -4,21 +4,25 @@ using namespace std;
 vector<vector<int>> read(int N, int M) {
     vector a(N, vector<int>(M));
     for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++) { cin >> a[i][j]; }
+        for (int j = 0; j < M; j++) {
+            cin >> a[i][j];
+            a[i][j]--;
+        }
     }
     return a;
 }
 
 void solve() {
-    int n, m;
-    cin >> n >> m;
+    int N, M;
+    cin >> N >> M;
     auto A = read(N, M), B = read(N, M);
-    int nm = n * m;
-    vi pos1i(nm), pos2i(nm), pos1j(nm), pos2j(nm);
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
-            int x = a[i][j] - 1;
-            int y = b[i][j] - 1;
+
+    vector<int> pos1i(N * M), pos2i(N * M), pos1j(N * M),
+        pos2j(N * M);
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            int x = A[i][j];
+            int y = B[i][j];
             pos1i[x] = pos2i[y] = i;
             pos1j[x] = pos2j[y] = j;
         }
