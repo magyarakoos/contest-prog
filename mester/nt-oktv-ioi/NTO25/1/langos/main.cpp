@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -29,5 +30,6 @@ int main() {
         }
     }
 
-    cout << r << "\n";
+    cout << r << " ";
+    cout << r + *min_element(T.begin(), T.end()) << "\n";
 }
