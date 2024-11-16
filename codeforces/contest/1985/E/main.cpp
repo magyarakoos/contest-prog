@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #ifdef LOCAL
-#include <magyarakoos-debug.h>
+#include <debug.h>
 #else
 #define DB(...)
 #endif
