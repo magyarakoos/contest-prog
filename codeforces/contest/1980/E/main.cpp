@@ -1,26 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef vector<vi> vvi;
-
-vi read_ints(int n) {
-    vi res(n);
-    for (int i = 0; i < n; ++i) { cin >> res[i]; }
-    return res;
-}
-
-vvi read_matrix(int n, int m) {
-    vvi res(n);
-    for (int i = 0; i < n; ++i) { res[i] = read_ints(m); }
-    return res;
+vector<vector<int>> read(int N, int M) {
+    vector a(N, vector<int>(M));
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) { cin >> a[i][j]; }
+    }
+    return a;
 }
 
 void solve() {
     int n, m;
     cin >> n >> m;
-    vvi a = read_matrix(n, m), b = read_matrix(n, m);
+    auto A = read(N, M), B = read(N, M);
     int nm = n * m;
     vi pos1i(nm), pos2i(nm), pos1j(nm), pos2j(nm);
     for (int i = 0; i < n; ++i) {
