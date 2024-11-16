@@ -13,8 +13,8 @@ int main() {
     auto f = [&](ll x) -> bool {
         ll result = 0;
         for (int i = 0; i < N; i++) {
+            if (x / T[i] > M - result) return 1;
             result += x / T[i];
-            if (result > M) return 1;
         }
         return 0;
     };
