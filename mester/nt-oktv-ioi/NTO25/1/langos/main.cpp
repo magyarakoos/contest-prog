@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -15,7 +14,7 @@ int main() {
         ll result = 0;
         for (int i = 0; i < N; i++) {
             result += x / T[i];
-            if (result >= M) return 1;
+            if (result > M) return 1;
         }
         return 0;
     };
@@ -30,6 +29,5 @@ int main() {
         }
     }
 
-    cout << r << " ";
-    cout << r + *min_element(T.begin(), T.end()) << "\n";
+    cout << r << "\n";
 }
