@@ -20,14 +20,14 @@ int main() {
     };
 
     ll l = 0, r = 1e18;
-    while (r - l > 1) {
+    while (l < r) {
         ll m = l + (r - l) / 2;
         if (f(m)) {
             r = m;
         } else {
-            l = m;
+            l = m + 1;
         }
     }
 
-    cout << r << "\n";
+    cout << l << "\n";
 }
