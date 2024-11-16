@@ -10,6 +10,17 @@ int main() {
     while (N--) {
         int K;
         cin >> K;
-        while (K--) {}
+        while (K--) {
+            int P;
+            cin >> P;
+            a[P - 1] = 1;
+        }
     }
+    for (int i = 0; i < M; i++) {
+        if (!a[i]) {
+            cout << "NEM\n";
+            exit(0);
+        }
+    }
+    cout << "IGEN\n";
 }
