@@ -21,7 +21,7 @@ int main() {
 
     ll l = 0, r = 1e15;
     while (r - l > 1) {
-        ll m = (l + r) / 2;
+        ll m = l + (r - l) / 2;
         if (f(m)) {
             r = m;
         } else {
