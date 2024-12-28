@@ -26,3 +26,7 @@ Tens ← ≡◇⧻ {"twenty"
             "eighty"
             "ninety"}
 Hundred ← ⧻ "hundredand"
+
+1
+
+-1⊗0≥ⁿ:10⇡3
