@@ -40,5 +40,4 @@ F ← |1 ⨬0(
 
 ⍜-₁⇡1000
 /+≡F
-
-# +⧻"onethousand"
++⧻"onethousand"
