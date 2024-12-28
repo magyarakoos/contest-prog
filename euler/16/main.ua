@@ -1,2 +1,2 @@
 # Experimental!
-~ /home/akos/repos/uiua-projects/big-int/main.ua ~ BigInt
+~ "/home/akos/repos/uiua-projects/big-int/main.ua" ~ BigInt
