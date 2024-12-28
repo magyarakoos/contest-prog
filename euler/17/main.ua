@@ -39,5 +39,5 @@ F ← |1 ⨬0(
 )⊸±
 
 ⍜-₁⇡100
-/+≡F
-+⧻"onethousand"
+≡F
+# +⧻"onethousand"
