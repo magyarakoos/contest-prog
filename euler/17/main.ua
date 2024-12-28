@@ -26,6 +26,7 @@ Tens ← ≡◇⧻ {"twenty"
             "eighty"
             "ninety"}
 Hundred ← ⧻ "hundred"
+And     ← ⧻ "and"
 
 100
 
@@ -37,3 +38,5 @@ Hundred ← ⧻ "hundred"
 # | ⊡:Teens-10)
 
 ◌
+
+⊃÷◿100
