@@ -1,3 +1,3 @@
 # Experimental!
-10
-base10
+⊂1⊚15
+⌝base2
