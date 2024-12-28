@@ -25,14 +25,15 @@ Tens ← ≡◇⧻ {"twenty"
             "seventy"
             "eighty"
             "ninety"}
-Hundred ← ⧻ "hundredand"
+Hundred ← ⧻ "hundred"
 
-20
+100
 
 ⌊⊸ₙ₁₀
 # ⊡:Ones-1
-◌
 
-⊸<20
-⨬(+⊓(⊡:Tens-2)⋅0⊃÷◿10
-| ⊡:Teens-10)
+# ⊸<20
+# ⨬(+⊓(⊡:Tens-2)⋅0⊃÷◿10 # gap0 is F
+# | ⊡:Teens-10)
+
+◌
