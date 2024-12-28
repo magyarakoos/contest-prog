@@ -34,5 +34,5 @@ Hundred ← ⧻ "hundredand"
 
 ⊸<20
 ◌
--2⊃÷◿10
+⊓(⊡:Tens-2|∘)⊃÷◿10
 # ⊡:Teens-10
