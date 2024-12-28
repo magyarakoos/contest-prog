@@ -19,15 +19,16 @@
 "eighteen"
 "nineteen"
 
-["twenty"
- "thirty"
- "forty"
- "fifty"
- "sixty"
- "seventy"
- "eighty"
- "ninety"
- ∩₁₀₀⧻
-]
+{
+  "twenty"
+  "thirty"
+  "forty"
+  "fifty"
+  "sixty"
+  "seventy"
+  "eighty"
+  "ninety"
+}
+≡◇⧻
 
 Hundred ← ⧻"hundredand"
