@@ -27,11 +27,12 @@ Tens ← ≡◇⧻ {"twenty"
             "ninety"}
 Hundred ← ⧻ "hundredand"
 
-15
+20
 ⌊⊸ₙ₁₀
 # ⊡:Ones-1
 ◌
 
 ⊸<20
 ◌
-⊡:Teens-10
+-2⊃÷◿10
+# ⊡:Teens-10
