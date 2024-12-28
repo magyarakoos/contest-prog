@@ -1,3 +1,2 @@
 # Experimental!
-⊂⊚15 1
-⌝base2
+~ /home/akos/repos/uiua-projects/big-int/main.ua ~ BigInt
