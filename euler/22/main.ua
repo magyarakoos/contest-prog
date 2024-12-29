@@ -1,5 +1,2 @@
-&fras"names.txt"
-⍆⊢°csv
-⊃(+1⇡⧻)⊸≡◇(/+-@A)
-
-⊙⊙(⊗□"COLIN")
+⍆⊢°csv &fras"names.txt"
+/+×+1⇡⊃⧻≡◇(/++1-@A)
