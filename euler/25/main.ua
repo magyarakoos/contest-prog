@@ -1,3 +1,2 @@
 ~ "/home/akos/repos/uiua-projects/big-int/main.ua" ~ BigInt
-{⍥⊃BigInt~Add⊙∘⊙"1"⊙"0"}5000
-+1⊗1≥1000 ≡◇⧻⇌
+{⍢(⊃BigInt~Add⊙∘|<1000⧻)"1""0"}
