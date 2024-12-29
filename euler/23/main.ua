@@ -7,3 +7,4 @@ IsAbundant ← </+↘₋₁⊸Divisors
 ◴≡/+⧅₂≤
 
 ▽⊸⤚≥
+⊚
