@@ -1,7 +1,6 @@
-Divisors   ← ◴⊂⊃÷⇌ ▽=0⊸⊃◿÷ +1⇡⌊⊸√
-IsAbundant ← </+↘₋₁⊸Divisors
+Divisors ← ◴⊂⊃÷⇌ ▽=0⊸⊃◿÷ +1⇡⌊⊸√
 
 +1⊸⇡28123
-+1⊚≡IsAbundant
++1⊚≡(</+↘₋₁⊸Divisors)
 ◴≡/+⧅₂≤
-⍜°⊚¬ ▽⊸⤚≥
+/+ ⍜°⊚¬ ▽⤚≥
