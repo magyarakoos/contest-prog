@@ -4,6 +4,4 @@ IsAbundant ← </+↘₋₁⊸Divisors
 +1⊸⇡28123
 
 +1⊚≡IsAbundant
-
-# ♭⊞+.
-≡/+⧅₂≤
+◴≡/+⧅₂≤
