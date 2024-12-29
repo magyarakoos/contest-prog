@@ -5,3 +5,5 @@ IsAbundant ← </+↘₋₁⊸Divisors
 
 +1⊚≡IsAbundant
 ◴≡/+⧅₂≤
+
+⊸≥
