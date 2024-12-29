@@ -8,4 +8,3 @@ IsAbundant ← </+↘₋₁⊸Divisors
 
 ⊓▽(+1⇡)⊃⊸⤚>
 +1⊚¬∊
-/+
