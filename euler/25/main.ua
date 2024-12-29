@@ -1,4 +1,4 @@
 ~ "/home/akos/repos/uiua-projects/big-int/main.ua" ~ BigInt
 °⋕⇡2
 
-⊣⇌{◌⍥(⊃(□₂°⋕⋕)⋅∘⊃⊣/◇BigInt~Add)2000}
+⊣⇌{◌⍥(⊃(□₂°⋕⋕)⋅∘⊃⊣/◇BigInt~Add)1475}
