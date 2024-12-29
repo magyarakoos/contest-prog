@@ -1,4 +1,4 @@
 Divisors ← ◴⊂⊃÷⇌ ▽=0⊸⊃◿÷ +1⇡⌊⊸√
 
 ⍜-₁⇡10000
-/+▽↧⊸≡⊃(=⊸⍥₂(/+Divisors)|≠/+⊸Divisors)
+/+▽↧⊸≡⊃(=⊸⍥₂(/+°⊣Divisors)|≠/+⊸Divisors)
