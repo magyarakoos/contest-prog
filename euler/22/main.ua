@@ -1,2 +1,3 @@
 &fras"names.txt"
-⊢°csv
+⍆⊢°csv
+⊃(+1⇡⧻|≡◇(/+-@A))
