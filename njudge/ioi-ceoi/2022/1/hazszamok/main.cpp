@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int MAXW = 12;
+const int MAXW = 18;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -21,6 +21,7 @@ int32_t main() {
             int div = (n - (pw[i - 1] - 1)) / pw[i],
                 rem = max((int)0, n - (pw[i - 1] - 1)) %
                       pw[i];
+            if (!div && !rem) break;
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
                 req[j] += min(rem, pw[i - 1]);
