@@ -21,7 +21,7 @@ int32_t main() {
             int div = (n - (pw[i - 1] - 1)) / pw[i],
                 rem = max((int)0, n - (pw[i - 1] - 1)) %
                       pw[i];
-            if (!div && !rem) break;
+            if (!div && !rem) return 1;
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
                 req[j] += min(rem, pw[i - 1]);
