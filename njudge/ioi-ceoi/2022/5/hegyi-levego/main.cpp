@@ -107,10 +107,12 @@ int32_t main() {
         return st[0][a[0]][a[1]];
     };
 
+    dfs({0, 0}, {-1, -1});
+
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
             cout << i * 2 << " " << j * 2 << "\n";
-            for (auto [ni, nj, w] : m[i][j]) {
+            for (auto [ni, nj] : m[i][j]) {
                 cout << (i * 2 + ni * 2) / 2 << " "
                      << (j * 2 + nj * 2) / 2 << "\n";
             }
