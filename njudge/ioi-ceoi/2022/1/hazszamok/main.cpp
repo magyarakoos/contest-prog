@@ -23,7 +23,7 @@ int32_t main() {
                 req[j] += min(rem, pw[i - 1]);
                 rem -= min(rem, pw[i - 1]);
             }
-            req[0] -= min(req[0], pw[i - 1]);
+            /*req[0] -= min(req[0], pw[i - 1]);*/
         }
         for (int x : req) cout << x << " ";
         cout << "\n";
