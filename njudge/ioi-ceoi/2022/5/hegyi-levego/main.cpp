@@ -2,6 +2,8 @@
 using namespace std;
 #define int int64_t
 
+const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
+
 int32_t main() {
     int N, M, Q;
     cin >> N >> M >> Q;
@@ -9,6 +11,22 @@ int32_t main() {
     vector H(N, vector<int>(M));
     for (auto& row : H) {
         for (int& x : row) cin >> x;
+    }
+
+    vector<tuple<int, array<int, 2>, array<int, 2>>> edgeS;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int k = 0; k < 4; k++) {
+                int ni = i + di[k], nj = j + dj[k];
+                if (ni < 0 || nj < 0 || ni >= N ||
+                    nj >= M) {
+                    continue;
+                }
+                edgeS.push_back({max(H[i][j], H[ni][nj]),
+                                 {i, j},
+                                 {ni, nj}});
+            }
+        }
     }
 
     auto h = [&](array<int, 2> a) -> int { return 0; };
