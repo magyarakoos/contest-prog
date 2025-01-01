@@ -76,20 +76,20 @@ int32_t main() {
                         N, vector<array<int, 2>>(M)));
     vector tin(N, vector<int>(M)), tout(N, vector<int>(M));
 
-    int timer = 0;
-    auto dfs = [&](const auto& self, array<int, 2> u,
-                   array<int, 2> p) {
-        tin[u[0]][u[1]] = ++timer;
-        st[0][u[0]][u[1]] = p;
-        for (int i = 1; i < MAXK; i++) {
-            array<int, 2> up = st[i - 1][u[0]][u[1]];
-            st[i][u[0]][u[1]] = st[i - 1][up[0]][up[1]];
-        }
-        for (auto v : m[u[0]][u[1]]) {
-            if (v != p) self(v, u);
-        }
-        tout[u[0]][u[1]] = ++timer;
-    };
+    int timer;
+    function<void(array<int, 2>, array<int, 2>)> dfs =
+        [&](array<int, 2> u, array<int, 2> p) {
+            tin[u[0]][u[1]] = ++timer;
+            st[0][u[0]][u[1]] = p;
+            for (int i = 1; i < MAXK; i++) {
+                array<int, 2> up = st[i - 1][u[0]][u[1]];
+                st[i][u[0]][u[1]] = st[i - 1][up[0]][up[1]];
+            }
+            for (auto v : m[u[0]][u[1]]) {
+                if (v != p) dfs(v, u);
+            }
+            tout[u[0]][u[1]] = ++timer;
+        };
 
     auto h = [&](array<int, 2> a) -> int { return 0; };
     auto is_anc = [&](array<int, 2> a,
@@ -107,6 +107,7 @@ int32_t main() {
         return st[0][a[0]][a[1]];
     };
 
+    timer = 0;
     dfs({0, 0}, {-1, -1});
 
     for (int i = 0; i < N; i++) {
