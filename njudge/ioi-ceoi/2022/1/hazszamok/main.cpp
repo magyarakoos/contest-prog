@@ -9,6 +9,9 @@ int32_t main() {
     vector<int> a(K);
     for (int& x : a) cin >> x;
 
+    vector<int> pw(13, 1);
+    for (int i = 2; i <= 12; i++) pw[i] = pw[i - 1] * K;
+
     auto f = [&](int n) -> bool { return 0; };
 
     int l = 0, r = 1e18;
