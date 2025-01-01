@@ -38,7 +38,6 @@ int32_t main() {
 
     function<array<int, 2>(array<int, 2>)> find =
         [&](array<int, 2> a) -> array<int, 2> {
-        cout << format("{} {} {} {}\n", a[0], a[1],
         if (a == par[a[0]][a[1]]) return a;
         return par[a[0]][a[1]] = find(par[a[0]][a[1]]);
     };
