@@ -69,10 +69,17 @@ int32_t main() {
         }
     }
 
-    vector st(MAXK, vector<vector<int>>(N, vector<int>(M)));
+    vector st(MAXK, vector<vector<array<int, 2>>>(
+                        N, vector<array<int, 2>>(M)));
+    vector vis(N, vector<bool>(M));
+    vector tin(N, vector<int>(M)), tout(N, vector<int>(M));
 
-    auto dfs = [&](const auto& self, array<int, 2> a) {
-
+    int timer = 0;
+    auto dfs = [&](const auto& self, array<int, 2> u,
+                   array<int, 2> p) {
+        tin[u[0]][u[1]] = ++timer;
+        st[0][u[0]][u[1]] = p;
+        tout[u[0]][u[1]] = ++timer;
     };
 
     auto h = [&](array<int, 2> a) -> int { return 0; };
