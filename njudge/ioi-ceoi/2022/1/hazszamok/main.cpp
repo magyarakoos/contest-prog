@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define int int64_t
+#define int __int128
 
 const int MAXW = 18;
 
