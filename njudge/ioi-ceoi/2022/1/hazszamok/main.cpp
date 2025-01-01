@@ -12,7 +12,7 @@ int32_t main() {
     for (int& x : a) cin >> x;
 
     vector<int> pw(MAXW + 1, 1);
-    for (int i = 2; i <= MAXW; i++) pw[i] = pw[i - 1] * K;
+    for (int i = 1; i <= MAXW; i++) pw[i] = pw[i - 1] * K;
 
     auto f = [&](int n) -> bool {
         for (int i = 1; i <= MAXW; i++) {
