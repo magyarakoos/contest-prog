@@ -31,7 +31,7 @@ int32_t main() {
         return 1;
     };
 
-    int l = 0, r = 1e14;
+    int l = 0, r = 1e18;
     while (r - l > 1) {
         int m = (r + l) / 2;
         if (!f(m)) {
