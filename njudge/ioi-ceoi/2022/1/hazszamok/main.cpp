@@ -16,7 +16,7 @@ int32_t main() {
 
     auto f = [&](int n) -> bool {
         for (int i = 1; i <= MAXW; i++) {
-            int div = n / pw[i], rem = n % pw[i];
+            int div = n / pw[i - 1], rem = n % pw[i - 1];
             cout << div << " " << rem << "\n";
         }
         cout << "\n";
