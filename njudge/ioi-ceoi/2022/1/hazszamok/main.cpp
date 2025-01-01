@@ -15,10 +15,14 @@ int32_t main() {
     for (int i = 1; i <= MAXW; i++) pw[i] = pw[i - 1] * K;
 
     auto f = [&](int n) -> bool {
+        vector<int> req(K);
         for (int i = 1; i <= MAXW; i++) {
             int div = (n - (pw[i - 1] - 1)) / pw[i],
                 rem = max((int)0, n - (pw[i - 1] - 1)) %
                       pw[i];
+            for (int j = 0; j < K; j++) {
+                req[j] += div * pw[i - 1];
+            }
             cout << div << " " << rem << "\n";
         }
         cout << "\n";
