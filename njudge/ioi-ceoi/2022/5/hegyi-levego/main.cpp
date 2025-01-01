@@ -46,7 +46,17 @@ int32_t main() {
         return find(a) == find(b);
     };
     auto unite = [&](array<int, 2> a,
-                     array<int, 2> b) -> void {};
+                     array<int, 2> b) -> void {
+        a = find(a);
+        b = find(b);
+        if (a != b) {
+            if (rnk[a[0]][a[1]] < rnk[b[0]][b[1]]) {
+                swap(a, b);
+            }
+            rnk[a[0]][a[1]] += rnk[b[0]][b[1]];
+            par[b[0]][b[1]] = a;
+        }
+    };
 
     vector m(N, vector<vector<array<int, 3>>>(M));
 
