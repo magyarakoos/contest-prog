@@ -9,8 +9,7 @@ int32_t main() {
     int K;
     cin >> K;
     vector<int> a(K);
-    cin >> a[K - 1];
-    for (int i = 0; i < K - 1; i++) cin >> a[i];
+    for (int& x : a) cin >> x;
 
     vector<int> pw(MAXW + 1, 1);
     for (int i = 1; i <= MAXW; i++) pw[i] = pw[i - 1] * K;
@@ -18,8 +17,7 @@ int32_t main() {
     auto f = [&](int n) -> bool {
         vector<int> req(K);
         for (int i = 1; i <= MAXW; i++) {
-            int num = max((int)0, n - (pw[i - 1] - 1));
-            int div = num / pw[i], rem = num % pw[i];
+            int div = n / pw[i], rem = n % pw[i];
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
                 req[j] += min(rem, pw[i - 1]);
