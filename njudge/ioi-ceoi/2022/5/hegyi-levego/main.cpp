@@ -75,6 +75,7 @@ int32_t main() {
 
     vector st(MAXK, vector<vector<array<int, 2>>>(
                         N, vector<array<int, 2>>(M)));
+    vector dp(MAXK, vector<vector<int>>(M));
     vector tin(N, vector<int>(M)), tout(N, vector<int>(M));
     vector height(N, vector<int>(M));
 
