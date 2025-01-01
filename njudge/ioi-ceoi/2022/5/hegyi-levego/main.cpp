@@ -113,6 +113,7 @@ int32_t main() {
                    array<int, 2> b) -> array<int, 2> {
         if (is_anc(a, b)) return a;
         if (is_anc(b, a)) return b;
+        cout << "AYE" << endl;
         for (int i = MAXK - 1; i >= 0; i--) {
             if (!is_anc(a, b)) a = st[i][a[0]][a[1]];
         }
@@ -139,8 +140,8 @@ int32_t main() {
         cin >> i1 >> j1 >> i2 >> j2;
         i1--, j1--, i2--, j2--;
         cout << h({i1, j1}) + h({i2, j2}) << "\n";
-        /*cout << h({i1, j1}) + h({i2, j2}) -*/
-        /*            2 * h(lca({i1, j1}, {i2, j2}))*/
-        /*     << "\n";*/
+        cout << h({i1, j1}) + h({i2, j2}) -
+                    2 * h(lca({i1, j1}, {i2, j2}))
+             << "\n";
     }
 }
