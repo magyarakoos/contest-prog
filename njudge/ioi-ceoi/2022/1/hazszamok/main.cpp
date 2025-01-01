@@ -9,7 +9,8 @@ int32_t main() {
     int K;
     cin >> K;
     vector<int> a(K);
-    for (int& x : a) cin >> x;
+    cin >> a[K - 1];
+    for (int i = 1; i < K - 1; i++) cin >> a[i];
 
     vector<int> pw(MAXW + 1, 1);
     for (int i = 1; i <= MAXW; i++) pw[i] = pw[i - 1] * K;
@@ -20,16 +21,13 @@ int32_t main() {
             int div = (n - (pw[i - 1] - 1)) / pw[i],
                 rem = max((int)0, n - (pw[i - 1] - 1)) %
                       pw[i];
-
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
                 req[j] += min(rem, pw[i - 1]);
-                /*if (req[j] > a[j]) return 0;*/
+                if (req[j] > a[j]) return 0;
                 rem -= min(rem, pw[i - 1]);
             }
         }
-        for (int i = 0; i < K; i++) cout << req[i] << " ";
-        cout << "\n";
         return 1;
     };
 
