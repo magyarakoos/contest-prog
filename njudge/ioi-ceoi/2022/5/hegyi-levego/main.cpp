@@ -81,7 +81,7 @@ int32_t main() {
     function<void(array<int, 2>, array<int, 2>)> dfs =
         [&](array<int, 2> u, array<int, 2> p) {
             cout << u[0] << " " << u[1] << endl;
-            /*tin[u[0]][u[1]] = ++timer;*/
+            tin[u[0]][u[1]] = ++timer;
             /*st[0][u[0]][u[1]] = p;*/
             /*for (int i = 1; i < MAXK; i++) {*/
             /*    array<int, 2> up = st[i -
@@ -133,12 +133,12 @@ int32_t main() {
     /*    cout << "\n";*/
     /*}*/
 
-    while (Q--) {
-        int i1, j1, i2, j2;
-        cin >> i1 >> j1 >> i2 >> j2;
-        i1--, j1--, i2--, j2--;
-        cout << h({i1, j1}) + h({i2, j2}) -
-                    2 * h(lca({i1, j1}, {i2, j2}))
-             << "\n";
-    }
+    /*while (Q--) {*/
+    /*    int i1, j1, i2, j2;*/
+    /*    cin >> i1 >> j1 >> i2 >> j2;*/
+    /*    i1--, j1--, i2--, j2--;*/
+    /*    cout << h({i1, j1}) + h({i2, j2}) -*/
+    /*                2 * h(lca({i1, j1}, {i2, j2}))*/
+    /*         << "\n";*/
+    /*}*/
 }
