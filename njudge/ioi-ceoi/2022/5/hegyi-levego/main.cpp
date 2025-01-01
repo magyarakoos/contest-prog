@@ -85,6 +85,7 @@ int32_t main() {
             st[0][u[0]][u[1]] = p;
             for (int i = 1; i < MAXK; i++) {
                 array<int, 2> up = st[i - 1][u[0]][u[1]];
+                cout << up[0] << " " << up[1] << "\n";
                 /*st[i][u[0]][u[1]] = st[i -
                  * 1][up[0]][up[1]];*/
             }
