@@ -44,6 +44,15 @@ int32_t main() {
     auto unite = [&](array<int, 2> a,
                      array<int, 2> b) -> void {};
 
+    vector m(N, vector<array<int, 3>>(M));
+
+    for (auto [w, i1, i2, j1, j2] : edgeS) {
+        if (!same({i1, j1}, {i2, j2})) {
+            unite({i1, j1}, {i2, j2});
+            m[{i1, j1}] = {i2, j2, w};
+        }
+    }
+
     auto h = [&](array<int, 2> a) -> int { return 0; };
     auto lca = [&](array<int, 2> a,
                    array<int, 2> b) -> array<int, 2> {
