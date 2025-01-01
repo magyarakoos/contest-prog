@@ -72,9 +72,8 @@ int32_t main() {
         }
     }
 
-    vector st(MAXK,
-              vector<vector<array<int, 2>>>(
-                  N, vector<array<int, 2>>(M, {-1, -1})));
+    vector st(MAXK, vector<vector<array<int, 2>>>(
+                        N, vector<array<int, 2>>(M)));
     vector tin(N, vector<int>(M)), tout(N, vector<int>(M));
     vector height(N, vector<int>(M));
 
@@ -85,10 +84,7 @@ int32_t main() {
             st[0][u[0]][u[1]] = p;
             for (int i = 1; i < MAXK; i++) {
                 array<int, 2> up = st[i - 1][u[0]][u[1]];
-                if (up[0] != -1) {
-                    st[i][u[0]][u[1]] =
-                        st[i - 1][up[0]][up[1]];
-                }
+                st[i][u[0]][u[1]] = st[i - 1][up[0]][up[1]];
             }
             for (int i = 0; i < m[u[0]][u[1]].size(); i++) {
                 auto v = m[u[0]][u[1]][i];
@@ -113,7 +109,6 @@ int32_t main() {
                    array<int, 2> b) -> array<int, 2> {
         if (is_anc(a, b)) return a;
         if (is_anc(b, a)) return b;
-        cout << "AYE" << endl;
         for (int i = MAXK - 1; i >= 0; i--) {
             if (!is_anc(a, b)) a = st[i][a[0]][a[1]];
         }
@@ -121,7 +116,7 @@ int32_t main() {
     };
 
     timer = 0;
-    dfs({0, 0}, {-1, -1});
+    dfs({0, 0}, {0, 0});
 
     /*for (int i = 0; i < N; i++) {*/
     /*    for (int j = 0; j < M; j++) {*/
