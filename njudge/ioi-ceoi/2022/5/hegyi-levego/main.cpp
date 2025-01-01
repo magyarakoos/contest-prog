@@ -64,6 +64,10 @@ int32_t main() {
         return {};
     };
 
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {}
+    }
+
     while (Q--) {
         int i1, j1, i2, j2;
         cin >> i1 >> j1 >> i2 >> j2;
