@@ -16,5 +16,8 @@ int32_t main() {
         cin >> i1 >> j1 >> i2 >> j2;
         i1--, j1--, i2--, j2--;
         cout << format("{} {} {} {}\n", i1, j1, i2, j2);
+        cout << h(i1, j1) + h(i2, j2) -
+                    2 * lca(i1, j1, i2, j2)
+             << "\n";
     }
 }
