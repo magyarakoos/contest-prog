@@ -97,7 +97,6 @@ int32_t main() {
             }
             tout[u[0]][u[1]] = ++timer;
         };
-
     auto h = [&](array<int, 2> a) -> int {
         return height[a[0]][a[1]];
     };
