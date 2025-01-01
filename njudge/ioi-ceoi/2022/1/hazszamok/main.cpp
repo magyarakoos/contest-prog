@@ -9,13 +9,12 @@ int32_t main() {
     vector<int> a(K);
     for (int& x : a) cin >> x;
 
-    vector<int> pw(60, 1);
-    for (int i = 1; i < 60; i++) pw[i] = pw[i - 1] * K;
+    vector<int> pw(63, 1);
+    for (int i = 1; i < 63; i++) pw[i] = pw[i - 1] * K;
 
     auto f = [&](int n) -> bool {
         vector<int> req(K);
         for (int i = 1; n / pw[i - 1]; i++) {
-            cout << i << endl;
             int div = n / pw[i], rem = n % pw[i];
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
@@ -33,7 +32,6 @@ int32_t main() {
     int l = 0, r = 1e17;
     while (r - l > 1) {
         int m = (r + l) / 2;
-        cout << m << endl;
         if (!f(m + 1)) {
             r = m;
         } else {
