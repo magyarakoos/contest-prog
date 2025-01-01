@@ -21,18 +21,17 @@ int32_t main() {
                 rem = max((int)0, n - (pw[i - 1] - 1)) %
                       pw[i];
 
-            cout << div << " " << rem << "\n";
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
                 req[j] += min(rem, pw[i - 1]);
+                /*if (req[j] > a[j]) return 0;*/
                 rem -= min(rem, pw[i - 1]);
             }
         }
-        cout << "\n";
-        return 0;
+        return 1;
     };
 
-    f(4);
+    cout << f(4) << "\n";
 
     /*int l = 0, r = 1e18;*/
     /*while (r - l > 1) {*/
