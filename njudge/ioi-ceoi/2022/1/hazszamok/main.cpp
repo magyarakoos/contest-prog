@@ -32,6 +32,7 @@ int32_t main() {
     int l = 0, r = 1e17;
     while (r - l > 1) {
         int m = (r + l) / 2;
+        cout << m << endl;
         if (!f(m + 1)) {
             r = m;
         } else {
