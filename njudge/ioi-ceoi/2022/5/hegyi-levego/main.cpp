@@ -2,7 +2,8 @@
 using namespace std;
 #define int int64_t
 
-const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
+const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1},
+          MAXK = 25;
 
 int32_t main() {
     int N, M, Q;
@@ -68,7 +69,7 @@ int32_t main() {
         }
     }
 
-    auto dfs = [&](auto&& self, array<int, 2> a) {
+    auto dfs = [&](const auto& self, array<int, 2> a) {
 
     };
 
