@@ -1,4 +1,4 @@
-// holy fucking fuck this was so fucking tedious
+// doesn't work yet, will have to do range maximums on paths
 #include <bits/stdc++.h>
 using namespace std;
 #define int int64_t
@@ -130,6 +130,6 @@ int32_t main() {
         int i1, j1, i2, j2;
         cin >> i1 >> j1 >> i2 >> j2;
         i1--, j1--, i2--, j2--;
-        cout << max(h({i1, j1}), h({i2, j2})) << "\n";
+        /*cout << max(h({i1, j1}), h({i2, j2})) << "\n";*/
     }
 }
