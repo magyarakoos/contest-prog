@@ -80,6 +80,7 @@ int32_t main() {
     int timer;
     function<void(array<int, 2>, array<int, 2>)> dfs =
         [&](array<int, 2> u, array<int, 2> p) {
+            cout << u[0] << " " << u[1] << endl;
             tin[u[0]][u[1]] = ++timer;
             st[0][u[0]][u[1]] = p;
             for (int i = 1; i < MAXK; i++) {
