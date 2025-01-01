@@ -34,11 +34,11 @@ int32_t main() {
     int l = 0, r = 1e14;
     while (r - l > 1) {
         int m = (r + l) / 2;
-        cout << m << " " << f(m) << "\n";
-        if (f(m)) {
+        if (!f(m)) {
             r = m;
         } else {
             l = m;
         }
     }
+    cout << l << "\n";
 }
