@@ -82,13 +82,12 @@ int32_t main() {
         [&](array<int, 2> u, array<int, 2> p) {
             cout << u[0] << " " << u[1] << endl;
             tin[u[0]][u[1]] = ++timer;
-            /*st[0][u[0]][u[1]] = p;*/
-            /*for (int i = 1; i < MAXK; i++) {*/
-            /*    array<int, 2> up = st[i -
-             * 1][u[0]][u[1]];*/
-            /*    st[i][u[0]][u[1]] = st[i -
-             * 1][up[0]][up[1]];*/
-            /*}*/
+            st[0][u[0]][u[1]] = p;
+            for (int i = 1; i < MAXK; i++) {
+                array<int, 2> up = st[i - 1][u[0]][u[1]];
+                /*st[i][u[0]][u[1]] = st[i -
+                 * 1][up[0]][up[1]];*/
+            }
             for (int i = 0; i < m[u[0]][u[1]].size(); i++) {
                 auto v = m[u[0]][u[1]][i];
                 if (v != p) {
