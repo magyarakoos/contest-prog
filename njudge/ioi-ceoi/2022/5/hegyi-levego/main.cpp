@@ -118,12 +118,12 @@ int32_t main() {
     timer = 0;
     dfs({0, 0}, {0, 0});
 
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++) {
-            cout << setw(2) << h({i, j}) << " ";
-        }
-        cout << "\n";
-    }
+    /*for (int i = 0; i < N; i++) {*/
+    /*    for (int j = 0; j < M; j++) {*/
+    /*        cout << setw(2) << h({i, j}) << " ";*/
+    /*    }*/
+    /*    cout << "\n";*/
+    /*}*/
 
     while (Q--) {
         int i1, j1, i2, j2;
