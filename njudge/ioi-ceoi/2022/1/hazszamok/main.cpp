@@ -21,22 +21,22 @@ int32_t main() {
                 req[j] += min(rem, pw[i - 1]);
                 rem -= min(rem, pw[i - 1]);
             }
-            req[0] -= min(req[0], pw[i - 1]);
+            req[0] -= pw[i - 1];
         }
-        for (int x : req) cout << x << " ";
-        cout << "\n";
+        for (int i = 0; i < K; i++) {
+            if (req[i] > a[i]) return 0;
+        }
         return 1;
     };
 
-    f(5);
-    /*int l = 0, r = 1e17;*/
-    /*while (r - l > 1) {*/
-    /*    int m = (r + l) / 2;*/
-    /*    if (!f(m)) {*/
-    /*        r = m;*/
-    /*    } else {*/
-    /*        l = m;*/
-    /*    }*/
-    /*}*/
-    /*cout << l << "\n";*/
+    int l = 0, r = 1e17;
+    while (r - l > 1) {
+        int m = (r + l) / 2;
+        if (!f(m + 1)) {
+            r = m;
+        } else {
+            l = m;
+        }
+    }
+    cout << l << "\n";
 }
