@@ -48,13 +48,13 @@ int32_t main() {
     auto unite = [&](array<int, 2> a,
                      array<int, 2> b) -> void {};
 
-    vector m(N, vector<array<int, 3>>(M));
+    vector m(N, vector<vector<array<int, 3>>>(M));
 
     for (auto [w, i1, j1, i2, j2] : edgeS) {
         if (!same({i1, j1}, {i2, j2})) {
             unite({i1, j1}, {i2, j2});
-            m[i1][j1] = {i2, j2, w};
-            m[i2][j2] = {i1, j1, w};
+            m[i1][j1].push_back({i2, j2, w});
+            m[i2][j2].push_back({i1, j1, w});
         }
     }
 
@@ -67,9 +67,10 @@ int32_t main() {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
             cout << i * 2 << " " << j * 2 << "\n";
-            /*cout << (i * 2 + m[i][j][0] * 2) / 2 << " "*/
-            /*     << (j * 2 + m[i][j][1] * 2) / 2 <<
-             * "\n";*/
+            for (auto [ni, nj, w] : m[i][j]) {
+                cout << (i * 2 + ni * 2) / 2 << " "
+                     << (j * 2 + nj * 2) / 2 << "\n";
+            }
         }
     }
 
