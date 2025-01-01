@@ -92,8 +92,7 @@ int32_t main() {
                 auto v = m[u[0]][u[1]][i];
                 if (v != p) {
                     height[v[0]][v[1]] =
-                        max(height[u[0]][u[1]],
-                            weightS[u[0]][u[1]][i]);
+                        height[u[0]][u[1]] + 1;
                     dfs(v, u);
                 }
             }
