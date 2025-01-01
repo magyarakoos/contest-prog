@@ -49,7 +49,8 @@ int32_t main() {
     for (auto [w, i1, i2, j1, j2] : edgeS) {
         if (!same({i1, j1}, {i2, j2})) {
             unite({i1, j1}, {i2, j2});
-            m[{i1, j1}] = {i2, j2, w};
+            m[i1][j1] = {i2, j2, w};
+            m[i2][j2] = {i1, j1, w};
         }
     }
 
