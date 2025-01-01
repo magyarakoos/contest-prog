@@ -28,6 +28,8 @@ int32_t main() {
                 rem -= min(rem, pw[i - 1]);
             }
         }
+        for (int i = 0; i < K; i++) cout << req[i] << " ";
+        cout << "\n";
         return 1;
     };
 
