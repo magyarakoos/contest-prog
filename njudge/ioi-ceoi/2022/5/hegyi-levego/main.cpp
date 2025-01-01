@@ -118,23 +118,17 @@ int32_t main() {
     timer = 0;
     dfs({0, 0}, {0, 0});
 
-    /*for (int i = 0; i < N; i++) {*/
-    /*    for (int j = 0; j < M; j++) {*/
-    /*        cout << setw(2) << h({i, j}) << " ";*/
-    /*        cout << i * 2 << " " << j * 2 << "\n";*/
-    /*        for (auto [ni, nj] : m[i][j]) {*/
-    /*            cout << (i * 2 + ni * 2) / 2 << " "*/
-    /*                 << (j * 2 + nj * 2) / 2 << "\n";*/
-    /*        }*/
-    /*    }*/
-    /*    cout << "\n";*/
-    /*}*/
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            cout << setw(2) << h({i, j}) << " ";
+        }
+        cout << "\n";
+    }
 
     while (Q--) {
         int i1, j1, i2, j2;
         cin >> i1 >> j1 >> i2 >> j2;
         i1--, j1--, i2--, j2--;
-        cout << h({i1, j1}) + h({i2, j2}) << "\n";
         cout << h({i1, j1}) + h({i2, j2}) -
                     2 * h(lca({i1, j1}, {i2, j2}))
              << "\n";
