@@ -129,8 +129,6 @@ int32_t main() {
         int i1, j1, i2, j2;
         cin >> i1 >> j1 >> i2 >> j2;
         i1--, j1--, i2--, j2--;
-        cout << h({i1, j1}) + h({i2, j2}) -
-                    2 * h(lca({i1, j1}, {i2, j2}))
-             << "\n";
+        cout << max(h({i1, j1}), h({i2, j2})) << "\n";
     }
 }
