@@ -18,13 +18,15 @@ int32_t main() {
         vector<int> req(K);
         for (int i = 1; i <= MAXW; i++) {
             int div = n / pw[i], rem = n % pw[i];
-            cout << div << " " << rem << "\n";
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
                 req[j] += min(rem, pw[i - 1]);
                 rem -= min(rem, pw[i - 1]);
             }
+            req[0] -= min(req[0], pw[i - 1]);
         }
+        for (int x : req) cout << x << " ";
+        cout << "\n";
         return 1;
     };
 
