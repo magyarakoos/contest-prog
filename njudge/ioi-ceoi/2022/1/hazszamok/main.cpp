@@ -10,7 +10,7 @@ int32_t main() {
     cin >> K;
     vector<int> a(K);
     cin >> a[K - 1];
-    for (int i = 1; i < K - 1; i++) cin >> a[i];
+    for (int i = 0; i < K - 1; i++) cin >> a[i];
 
     vector<int> pw(MAXW + 1, 1);
     for (int i = 1; i <= MAXW; i++) pw[i] = pw[i - 1] * K;
@@ -31,15 +31,14 @@ int32_t main() {
         return 1;
     };
 
-    cout << f(4) << "\n";
-
-    /*int l = 0, r = 1e18;*/
-    /*while (r - l > 1) {*/
-    /*    int m = (r + l) / 2;*/
-    /*    if (f(m)) {*/
-    /*        r = m;*/
-    /*    } else {*/
-    /*        l = m;*/
-    /*    }*/
-    /*}*/
+    int l = 0, r = 1e14;
+    while (r - l > 1) {
+        int m = (r + l) / 2;
+        if (f(m)) {
+            r = m;
+        } else {
+            l = m;
+        }
+    }
+    cout << r << "\n";
 }
