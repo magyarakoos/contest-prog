@@ -59,19 +59,21 @@ int32_t main() {
         }
     };
 
-    vector m(N, vector<vector<array<int, 3>>>(M));
+    vector m(N, vector<vector<array<int, 2>>>(M));
+    vector weightS(N, vector<vector<int>>(M));
 
     for (auto [w, i1, j1, i2, j2] : edgeS) {
         if (!same({i1, j1}, {i2, j2})) {
             unite({i1, j1}, {i2, j2});
-            m[i1][j1].push_back({i2, j2, w});
-            m[i2][j2].push_back({i1, j1, w});
+            m[i1][j1].push_back({i2, j2});
+            weightS[i1][j1].push_back(w);
+            m[i2][j2].push_back({i1, j1});
+            weightS[i2][j2].push_back(w);
         }
     }
 
     vector st(MAXK, vector<vector<array<int, 2>>>(
                         N, vector<array<int, 2>>(M)));
-    vector vis(N, vector<bool>(M));
     vector tin(N, vector<int>(M)), tout(N, vector<int>(M));
 
     int timer = 0;
@@ -82,6 +84,9 @@ int32_t main() {
         for (int i = 1; i < MAXK; i++) {
             array<int, 2> up = st[i - 1][u[0]][u[1]];
             st[i][u[0]][u[1]] = st[i - 1][up[0]][up[1]];
+        }
+        for (auto v : m[u[0]][u[1]]) {
+            if (v != p) self(v, u);
         }
         tout[u[0]][u[1]] = ++timer;
     };
