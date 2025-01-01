@@ -75,6 +75,7 @@ int32_t main() {
     vector st(MAXK, vector<vector<array<int, 2>>>(
                         N, vector<array<int, 2>>(M)));
     vector tin(N, vector<int>(M)), tout(N, vector<int>(M));
+    vector height(N, vector<int>(M));
 
     int timer;
     function<void(array<int, 2>, array<int, 2>)> dfs =
@@ -85,7 +86,9 @@ int32_t main() {
                 array<int, 2> up = st[i - 1][u[0]][u[1]];
                 st[i][u[0]][u[1]] = st[i - 1][up[0]][up[1]];
             }
-            for (auto v : m[u[0]][u[1]]) {
+            for (int i = 0; i < m[u[0]][u[1]].size(); i++) {
+                auto v = m[u[0]][u[1]][i];
+
                 if (v != p) dfs(v, u);
             }
             tout[u[0]][u[1]] = ++timer;
