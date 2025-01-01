@@ -92,6 +92,11 @@ int32_t main() {
     };
 
     auto h = [&](array<int, 2> a) -> int { return 0; };
+    auto is_anc = [&](array<int, 2> a,
+                      array<int, 2> b) -> bool {
+        return tin[a[0]][a[1]] <= tin[b[0]][b[1]] &&
+               tout[b[0]][b[1]] <= tout[a[0]][a[1]];
+    };
     auto lca = [&](array<int, 2> a,
                    array<int, 2> b) -> array<int, 2> {
         return {};
