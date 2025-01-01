@@ -16,9 +16,9 @@ int32_t main() {
 
     auto f = [&](int n) -> bool {
         vector<int> req(K);
-        for (int i = 1; i <= MAXW; i++) {
+        for (int i = 1; i <= MAXW && i <= 3; i++) {
             int div = n / pw[i], rem = n % pw[i];
-            req[0] -= min(req[0], min(rem, pw[i - 1]));
+            /*req[0] -= min(req[0], min(rem, pw[i - 1]));*/
             for (int j = 0; j < K; j++) {
                 req[j] += div * pw[i - 1];
                 req[j] += min(rem, pw[i - 1]);
