@@ -69,6 +69,8 @@ int32_t main() {
         }
     }
 
+    vector st(MAXK, vector<vector<int>>(N, vector<int>(M)));
+
     auto dfs = [&](const auto& self, array<int, 2> a) {
 
     };
