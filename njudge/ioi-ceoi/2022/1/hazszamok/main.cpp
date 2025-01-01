@@ -1,32 +1,13 @@
 #include <bits/stdc++.h>
-
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define size(v) (int)v.size()
-
 using namespace std;
-using ll = long long;
+#define int int64_t
 
-int main() {
+int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
-
     int K;
     cin >> K;
-    vector<ll> v(K);
-    ll mn = 1e12 + 1;
-    for (int i = 0; i < K; i++) {
-        cin >> v[i];
-        mn = min(mn, v[i]);
-    }
+    vector<int> a(K);
+    for (int& x : a) cin >> x;
 
-    int iter = 0;
-    ll curr = K - 1;
-    while (curr < mn) {
-        cerr << curr << "\n";
-        curr += (1 << ++iter);
-    }
-
-    cerr << curr << "\n";
-
-    cerr << iter << "\n";
+    auto f = [&](int n) -> bool { return 0; };
 }
