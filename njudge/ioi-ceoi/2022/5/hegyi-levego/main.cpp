@@ -5,7 +5,7 @@ using namespace std;
 const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
 
 int32_t main() {
-    int N, M, Q;
+    int N, M, Q, K = 0;
     cin >> N >> M >> Q;
 
     vector H(N, vector<int>(M));
@@ -13,7 +13,7 @@ int32_t main() {
         for (int& x : row) cin >> x;
     }
 
-    vector<tuple<int, array<int, 2>, array<int, 2>>> edgeS;
+    vector<array<int, 5>> edgeS;
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             for (int k = 0; k < 4; k++) {
@@ -22,12 +22,13 @@ int32_t main() {
                     nj >= M) {
                     continue;
                 }
-                edgeS.push_back({max(H[i][j], H[ni][nj]),
-                                 {i, j},
-                                 {ni, nj}});
+                edgeS.push_back({max(H[i][j], H[ni][nj]), i,
+                                 j, ni, nj});
+                K++;
             }
         }
     }
+    sort(edgeS.begin(), edgeS.end());
 
     auto h = [&](array<int, 2> a) -> int { return 0; };
     auto lca = [&](array<int, 2> a,
