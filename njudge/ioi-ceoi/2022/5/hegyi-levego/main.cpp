@@ -36,17 +36,19 @@ int32_t main() {
         for (int j = 0; j < M; j++) { par[i][j] = {i, j}; }
     }
 
-    auto same = [&](array<int, 2> a,
-                    array<int, 2> b) -> bool { return 0; };
     auto find = [&](array<int, 2> a) -> array<int, 2> {
         return a;
+    };
+    auto same = [&](array<int, 2> a,
+                    array<int, 2> b) -> bool {
+        return find(a) == find(b);
     };
     auto unite = [&](array<int, 2> a,
                      array<int, 2> b) -> void {};
 
     vector m(N, vector<array<int, 3>>(M));
 
-    for (auto [w, i1, i2, j1, j2] : edgeS) {
+    for (auto [w, i1, j1, i2, j2] : edgeS) {
         if (!same({i1, j1}, {i2, j2})) {
             unite({i1, j1}, {i2, j2});
             m[i1][j1] = {i2, j2, w};
