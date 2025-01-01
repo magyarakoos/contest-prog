@@ -68,6 +68,10 @@ int32_t main() {
         }
     }
 
+    auto dfs = [&](auto&& self, array<int, 2> a) {
+
+    };
+
     auto h = [&](array<int, 2> a) -> int { return 0; };
     auto lca = [&](array<int, 2> a,
                    array<int, 2> b) -> array<int, 2> {
