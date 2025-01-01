@@ -65,7 +65,11 @@ int32_t main() {
     };
 
     for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {}
+        for (int j = 0; j < M; j++) {
+            cout << i << " " << j << "\n";
+            cout << (i * 2 + m[i][j][0] * 2) / 2 << " "
+                 << (j * 2 + m[i][j][1] * 2) / 2 << "\n";
+        }
     }
 
     while (Q--) {
