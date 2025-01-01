@@ -88,13 +88,19 @@ int32_t main() {
             }
             for (int i = 0; i < m[u[0]][u[1]].size(); i++) {
                 auto v = m[u[0]][u[1]][i];
-
-                if (v != p) dfs(v, u);
+                if (v != p) {
+                    height[v[0]][v[1]] +=
+                        height[u[0]][u[1]] +
+                        weightS[u[0]][u[1]][i];
+                    dfs(v, u);
+                }
             }
             tout[u[0]][u[1]] = ++timer;
         };
 
-    auto h = [&](array<int, 2> a) -> int { return 0; };
+    auto h = [&](array<int, 2> a) -> int {
+        return height[a[0]][a[1]];
+    };
     auto is_anc = [&](array<int, 2> a,
                       array<int, 2> b) -> bool {
         return tin[a[0]][a[1]] <= tin[b[0]][b[1]] &&
