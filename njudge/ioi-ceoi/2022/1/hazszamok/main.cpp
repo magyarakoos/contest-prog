@@ -10,4 +10,14 @@ int32_t main() {
     for (int& x : a) cin >> x;
 
     auto f = [&](int n) -> bool { return 0; };
+
+    int l = 0, r = 1e18;
+    while (r - l > 1) {
+        int m = (r + l) / 2;
+        if (f(m)) {
+            r = m;
+        } else {
+            l = m;
+        }
+    }
 }
