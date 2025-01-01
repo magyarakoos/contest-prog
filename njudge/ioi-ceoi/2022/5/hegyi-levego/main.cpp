@@ -99,7 +99,12 @@ int32_t main() {
     };
     auto lca = [&](array<int, 2> a,
                    array<int, 2> b) -> array<int, 2> {
-        return {};
+        if (is_anc(a, b)) return a;
+        if (is_anc(b, a)) return b;
+        for (int i = MAXK - 1; i >= 0; i--) {
+            if (!is_anc(a, b)) a = st[i][a[0]][a[1]];
+        }
+        return st[0][a[0]][a[1]];
     };
 
     for (int i = 0; i < N; i++) {
