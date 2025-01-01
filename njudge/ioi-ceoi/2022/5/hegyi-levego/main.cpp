@@ -36,9 +36,12 @@ int32_t main() {
         for (int j = 0; j < M; j++) { par[i][j] = {i, j}; }
     }
 
-    auto find = [&](array<int, 2> a) -> array<int, 2> {
-        return a;
-    };
+    function<array<int, 2>(array<int, 2>)> find =
+        [&](array<int, 2> a) {
+            if (a != par[a[0]][a[1]]) {
+                par[a[0]][a[1]] = find(par[a[0]][a[1]]);
+            }
+        };
     auto same = [&](array<int, 2> a,
                     array<int, 2> b) -> bool {
         return find(a) == find(b);
