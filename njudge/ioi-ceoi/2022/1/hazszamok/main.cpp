@@ -30,14 +30,15 @@ int32_t main() {
         return 1;
     };
 
-    int l = 0, r = 1e17;
-    while (r - l > 1) {
-        int m = (r + l) / 2;
-        if (!f(m)) {
-            r = m;
-        } else {
-            l = m;
-        }
-    }
-    cout << l << "\n";
+    f(4);
+    /*int l = 0, r = 1e17;*/
+    /*while (r - l > 1) {*/
+    /*    int m = (r + l) / 2;*/
+    /*    if (!f(m)) {*/
+    /*        r = m;*/
+    /*    } else {*/
+    /*        l = m;*/
+    /*    }*/
+    /*}*/
+    /*cout << l << "\n";*/
 }
