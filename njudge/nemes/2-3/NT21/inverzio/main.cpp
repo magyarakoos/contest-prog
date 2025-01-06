@@ -15,5 +15,9 @@ int main() {
         if (mn_i > i) mn_i = i;
         mx_j = max(mx_j, i);
     }
-    cout << (mx_j - mn_i > 0 ? mx_j - mn_i : -1);
+    if (mx_j - mn_i > 0) {
+        cout << mn_i << " " << mx_j << "\n";
+    } else {
+        cout << "-1\n";
+    }
 }
