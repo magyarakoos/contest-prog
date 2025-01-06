@@ -12,11 +12,14 @@ int main() {
     sort(a.rbegin(), a.rend());
     int mx_j = -1, result_i = 1e9, result_j = -1;
     for (auto [x, i] : a) {
-        if (mn_i > i) mn_i = i;
+        if (result_j - result_i < mx_j - i) {
+            result_i = i;
+            result_j = mx_j;
+        }
         mx_j = max(mx_j, i);
     }
-    if (mx_j - mn_i > 0) {
-        cout << mn_i + 1 << " " << mx_j + 1 << "\n";
+    if (result_j - result_i > 0) {
+        cout << result_i + 1 << " " << result_j + 1 << "\n";
     } else {
         cout << "-1\n";
     }
