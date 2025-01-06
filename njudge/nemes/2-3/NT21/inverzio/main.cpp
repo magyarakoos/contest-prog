@@ -10,13 +10,13 @@ int main() {
         a[i][1] = i;
     }
     sort(a.rbegin(), a.rend());
-    int mx_j = -1, mn_i = -1;
+    int mx_j = -1, mn_i = 1e9;
     for (auto [x, i] : a) {
         if (mn_i > i) mn_i = i;
         mx_j = max(mx_j, i);
     }
     if (mx_j - mn_i > 0) {
-        cout << mn_i << " " << mx_j << "\n";
+        cout << mn_i + 1 << " " << mx_j + 1 << "\n";
     } else {
         cout << "-1\n";
     }
