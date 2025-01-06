@@ -12,7 +12,8 @@ int main() {
     sort(a.rbegin(), a.rend());
     int mx_j = -1, result = -1;
     for (auto [x, i] : a) {
-        if (result > i) { result = i; }
+        if (result > i) result = i;
         mx_j = max(mx_j, i);
     }
+    if (mx_j - result > 0) {}
 }
