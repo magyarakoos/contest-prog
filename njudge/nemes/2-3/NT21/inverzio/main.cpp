@@ -9,7 +9,7 @@ int main() {
         cin >> a[i][0];
         a[i][1] = i;
     }
-    sort(a.rbegin(), a.rend());
+    sort(a.begin(), a.end());
     int mx_j = -1, result_i = 1e9, result_j = -1;
     for (auto [x, i] : a) {
         if (result_j - result_i < mx_j - i) {
