@@ -13,8 +13,8 @@ int main() {
     int mx_j = -1, result_i = 1e9, result_j = -1;
     for (auto [x, i] : a) {
         if (result_j - result_i < mx_j - i) {
-            result_i = i;
             result_j = mx_j;
+            result_i = i;
         }
         mx_j = max(mx_j, i);
     }
