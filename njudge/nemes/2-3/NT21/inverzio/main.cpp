@@ -10,10 +10,10 @@ int main() {
         a[i][1] = i;
     }
     sort(a.rbegin(), a.rend());
-    int mx_j = -1, result = -1;
+    int mx_j = -1, mn_i = -1;
     for (auto [x, i] : a) {
-        if (result > i) result = i;
+        if (mn_i > i) mn_i = i;
         mx_j = max(mx_j, i);
     }
-    if (mx_j - result > 0) {}
+    cout << (mx_j - mn_i > 0 ? mx_j - mn_i : -1);
 }
