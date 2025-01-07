@@ -10,27 +10,13 @@ int32_t main() {
     int N, Q;
     cin >> N >> Q;
 
-    vector<vector<int>> groupS(MAXN + 1);
-
     vector<int> a(N);
-    for (int i = 0; i < N; i++) {
-        cin >> a[i];
-        groupS[a[i]].push_back(i);
-    }
+    for (int& x : a) cin >> x;
 
     // transition: maximal profit where dp[i][j] (i < j)
     // means a pair (V, E)
     vector dp(MAXN + 1, vector<int>(MAXN + 1));
     for (int V = 1; V <= 500; V++) {
-        for (int E = V + 1; E <= 500; E++) {
-            vector<array<int, 2>> eventS;
-            for (int i : groupS[V]) {
-                eventS.push_back({i, 1});
-            }
-            for (int i : groupS[E]) {
-                eventS.push_back({i, 0});
-            }
-            sort(eventS.begin(), eventS.end());
-        }
+        for (int E = V + 1; E <= 500; E++) {}
     }
 }
