@@ -24,15 +24,7 @@ int32_t main() {
     vector dp(M + 1, vector<int>(K + 1, INF));
     dp[0][0] = 0;
 
-    vector<int> psA(M + 1), psB(M + 1);
-    partial_sum(sideA.begin(), sideA.end(),
-                psA.begin() + 1);
-    partial_sum(sideB.begin(), sideB.end(),
-                psB.begin() + 1);
-
-    auto f = [&](int i, int j, int k, int l) {
-
-    };
+    auto f = [&](int i, int j, int k, int l) { return 0; };
 
     for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= K; j++) {
