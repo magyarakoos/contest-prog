@@ -24,24 +24,23 @@ int32_t main() {
     vector dp(M + 1, vector<int>(K + 1, INF));
     dp[0][0] = 0;
 
-    cout << M << " " << K << "\n";
-
     for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= K; j++) {
             int curr_k = 0;
             for (int k = i - 1; k >= 0; k--) {
-                curr_k += sideA[i] - sideA[k + 1];
+                curr_k +=
+                    max(sideA[i], sideB[j]) - sideA[k + 1];
                 int curr_l = 0;
                 for (int l = j - 1; l >= 0; l--) {
-                    curr_l += sideB[j] - sideB[l + 1];
+                    curr_l += max(sideA[i], sideB[j]) -
+                              sideB[l + 1];
                     dp[i][j] =
                         min(dp[i][j],
                             dp[k][l] + curr_k + curr_l);
                 }
             }
-            cout << dp[i][j];
         }
     }
 
-    cout << dp[M][K];
+    cout << dp[M][K] << "\n";
 }
