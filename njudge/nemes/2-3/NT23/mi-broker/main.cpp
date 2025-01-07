@@ -16,7 +16,5 @@ int32_t main() {
     // transition: maximal profit where dp[i][j] (i < j)
     // means a pair (V, E)
     vector dp(MAXN + 1, vector<int>(MAXN + 1));
-    for (int V = 1; V <= 500; V++) {
-        for (int E = V + 1; E <= 500; E++) {}
-    }
+    for (int V = 1; V <= 500; V++) {}
 }
