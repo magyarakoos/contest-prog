@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int INF = 1e9;
+const int INF = 1e12;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -32,9 +32,11 @@ int32_t main() {
                 int curr_l = 0;
                 for (int l = j - 1; l >= 0; l--) {
                     l += sideB[j] - sideB[l];
-                    dp[i][j] =
-                        min(dp[i][j],
-                            dp[k][l] + curr_k + curr_l);
+                    if (dp[i][j] <
+                        dp[k][l] + curr_k + curr_l) {
+                        dp[i][j] =
+                            dp[k][l] + curr_k + curr_l;
+                    }
                 }
             }
             cout << dp[i][j] << " " << flush;
