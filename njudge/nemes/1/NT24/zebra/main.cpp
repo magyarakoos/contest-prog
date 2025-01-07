@@ -48,5 +48,7 @@ int32_t main() {
         }
     }
 
+    assert(dp[M][K] != INF);
+
     cout << dp[M][K] << "\n";
 }
