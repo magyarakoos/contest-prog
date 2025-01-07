@@ -19,9 +19,10 @@ int32_t main() {
     for (int i = 1; i <= N; i++) {
         (a[i][1] ? sideB : sideA).push_back(a[i][0]);
     }
+    int M = sideA.size(), K = sideB.size();
 
-    vector dp(N + 1, {INF, INF});
-    dp[0] = {0, 0};
+    vector dp(M + 1, vector<int>(K + 1, INF));
+    dp[0][0] = 0;
 
     for (int i = 1; i <= N; i++) {
         for (int j = 0; j < i; j++) {}
