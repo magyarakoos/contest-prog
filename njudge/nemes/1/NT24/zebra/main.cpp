@@ -34,8 +34,9 @@ int32_t main() {
                 int curr_l = 0;
                 for (int l = j - 1; l >= 0; l--) {
                     l += sideB[j] - sideB[l];
-                    dp[i][j] = min(
-                        dp[i][j], dp[k][l] + f(i, j, k, l));
+                    dp[i][j] =
+                        min(dp[i][j],
+                            dp[k][l] + curr_k + curr_l);
                 }
             }
         }
