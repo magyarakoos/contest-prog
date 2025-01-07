@@ -15,4 +15,8 @@ int32_t main() {
 
     vector<array<int, 2>> dp(N + 1, {INF, INF});
     dp[0] = {0, 0};
+
+    for (int i = 1; i <= N; i++) {
+        for (int j = 0; j < i; j++) {}
+    }
 }
