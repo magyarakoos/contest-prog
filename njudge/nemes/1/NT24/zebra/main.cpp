@@ -28,8 +28,8 @@ int32_t main() {
 
     for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= K; j++) {
-            for (int k = 0; k < i; k++) {
-                for (int l = 0; l < j; l++) {
+            for (int k = i - 1; k >= 0; k--) {
+                for (int l = j - 1; l >= 0; l--) {
                     dp[i][j] = min(
                         dp[i][j], dp[k][l] + f(i, j, k, l));
                 }
