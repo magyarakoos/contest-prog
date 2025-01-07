@@ -22,6 +22,15 @@ int32_t main() {
     // means a pair (V, E)
     vector dp(MAXN + 1, vector<int>(MAXN + 1));
     for (int V = 1; V <= 500; V++) {
-        for (int E = V + 1; E <= 500; E++) {}
+        for (int E = V + 1; E <= 500; E++) {
+            vector<array<int, 2>> eventS;
+            for (int i : groupS[V]) {
+                eventS.push_back({i, 1});
+            }
+            for (int i : groupS[E]) {
+                eventS.push_back({i, 0});
+            }
+            sort(eventS.begin(), eventS.end());
+        }
     }
 }
