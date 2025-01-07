@@ -24,8 +24,6 @@ int32_t main() {
     vector dp(M + 1, vector<int>(K + 1, INF));
     dp[0][0] = 0;
 
-    auto f = [&](int i, int j, int k, int l) { return 0; };
-
     for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= K; j++) {
             int curr_k = 0;
@@ -39,6 +37,8 @@ int32_t main() {
                             dp[k][l] + curr_k + curr_l);
                 }
             }
+            cout << dp[i][j] << " ";
         }
+        cout << "\n";
     }
 }
