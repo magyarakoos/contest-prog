@@ -28,8 +28,12 @@ int32_t main() {
 
     for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= K; j++) {
+            int curr_k = 0;
             for (int k = i - 1; k >= 0; k--) {
+                curr_k += sideA[i] - sideA[k];
+                int curr_l = 0;
                 for (int l = j - 1; l >= 0; l--) {
+                    l += sideB[j] - sideB[l];
                     dp[i][j] = min(
                         dp[i][j], dp[k][l] + f(i, j, k, l));
                 }
