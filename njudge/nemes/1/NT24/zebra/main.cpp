@@ -21,6 +21,12 @@ int32_t main() {
     }
     int M = sideA.size() - 1, K = sideB.size() - 1;
 
+    // transition: at dp[i][j] we walk on the zebra
+    // which means a time of max(sideA[i], sideB[j])
+    // and we can choose any previous point for the last
+    // time the zebra has been used, possibly dp[0][0]
+    // which would mean that this is the first time the
+    // zebra is used
     vector dp(M + 1, vector<int>(K + 1, INF));
     dp[0][0] = 0;
 
