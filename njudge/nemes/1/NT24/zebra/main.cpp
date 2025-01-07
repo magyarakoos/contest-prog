@@ -10,6 +10,8 @@ int32_t main() {
     int N;
     cin >> N;
 
+    cout << "RED N" << endl;
+
     vector<array<int, 2>> a(N + 1);
     for (int i = 1; i <= N; i++) cin >> a[i][1];
     for (int i = 1; i <= N; i++) cin >> a[i][0];
@@ -37,7 +39,7 @@ int32_t main() {
                             dp[k][l] + curr_k + curr_l);
                 }
             }
-            cout << dp[i][j] << " ";
+            cout << dp[i][j] << " " << flush;
         }
         cout << "\n";
     }
