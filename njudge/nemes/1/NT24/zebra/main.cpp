@@ -24,6 +24,8 @@ int32_t main() {
     vector dp(M + 1, vector<int>(K + 1, INF));
     dp[0][0] = 0;
 
+    cout << M << " " << K << "\n";
+
     for (int i = 1; i <= M; i++) {
         for (int j = 1; j <= K; j++) {
             int curr_k = 0;
