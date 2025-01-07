@@ -10,8 +10,13 @@ int32_t main() {
     int N, Q;
     cin >> N >> Q;
 
+    vector<vector<int>> groupS(MAXN + 1);
+
     vector<int> a(N);
-    for (int& x : a) cin >> x;
+    for (int i = 0; i < N; i++) {
+        cin >> a[i];
+        groupS[a[i]].push_back(i);
+    }
 
     // transition: maximal profit where dp[i][j] (i < j)
     // means a pair (V, E)
