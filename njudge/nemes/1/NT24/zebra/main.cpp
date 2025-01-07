@@ -10,8 +10,6 @@ int32_t main() {
     int N;
     cin >> N;
 
-    cout << "RED N" << endl;
-
     vector<array<int, 2>> a(N + 1);
     for (int i = 1; i <= N; i++) cin >> a[i][1];
     for (int i = 1; i <= N; i++) cin >> a[i][0];
