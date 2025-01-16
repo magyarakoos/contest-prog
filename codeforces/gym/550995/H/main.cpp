@@ -20,9 +20,11 @@ int dp(int mask) {
             if (find(norder.begin(), norder.end(), i) ==
                 norder.end()) {
                 for (int j = 0; j < norder.size(); j++) {
-                    cost_a +=
-                        (adj[i][j] + adj[j][i]) * (j + 1);
-                    cost_b += (adj[i][j] + adj[j][i]) *
+                    cost_a += (adj[i][norder[j]] +
+                               adj[norder[j]][i]) *
+                              (j + 1);
+                    cost_b += (adj[i][norder[j]] +
+                               adj[norder[j]][i]) *
                               (norder.size() - j);
                 }
                 if (cost_a < cost_b) {
