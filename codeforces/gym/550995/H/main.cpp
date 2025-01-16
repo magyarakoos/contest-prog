@@ -1,15 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int N, M;
 map<array<char, 2>, int> adj;
 map<int, int> cache;
 
-int dp(int mask) {}
+int dp(int mask) {
+    if (cache.count(mask)) return cache[mask];
+    if (mask == 0) return cache[mask] = 0;
+
+    for (int i = 0;) }
 
 int main() {
-    int N, M;
     string s;
     cin >> N >> M >> s;
-
     for (int i = 1; i < N; i++) adj[{s[i - 1], s[i]}]++;
 }
