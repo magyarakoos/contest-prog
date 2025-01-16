@@ -12,7 +12,8 @@ int dp(int mask) {
     int result = INT_MAX;
     for (int i = 0; i < M; i++) {
         if (mask >> i & 1) {
-            cache[mask] = min(cache[mask])
+            cache[mask] =
+                min(cache[mask], dp(mask & ~(1 << i)));
         }
     }
     return cache[mask] = result;
