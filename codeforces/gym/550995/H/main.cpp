@@ -26,6 +26,7 @@ int dp(int mask) {
             } else {
                 norder.insert(norder.end(), i);
             }
+            int cost = min(cost_a, cost_b);
         }
     }
     return cache[mask] = result;
