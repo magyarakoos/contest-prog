@@ -4,6 +4,7 @@ using namespace std;
 int N, M;
 int adj[26][26];
 map<int, int> cache;
+map<int, vector<int>> order;
 
 int dp(int mask) {
     if (cache.count(mask)) return cache[mask];
@@ -13,8 +14,8 @@ int dp(int mask) {
     for (int i = 0; i < M; i++) {
         if (mask >> i & 1) {
             int cost = 0;
-            cache[mask] = min(cache[mask],
-                              dp(mask & ~(1 << i)) + cost);
+
+            int nmask = mask & ~(1 << i);
         }
     }
     return cache[mask] = result;
