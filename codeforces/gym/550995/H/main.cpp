@@ -12,9 +12,9 @@ int dp(int mask) {
     int result = INT_MAX;
     for (int i = 0; i < M; i++) {
         if (mask >> i & 1) {
-            cache[mask] =
-                min(cache[mask],
-                    dp(mask & ~(1 << i)) + cost(mask));
+            int cost = 0;
+            cache[mask] = min(cache[mask],
+                              dp(mask & ~(1 << i)) + cost);
         }
     }
     return cache[mask] = result;
@@ -23,6 +23,7 @@ int dp(int mask) {
 int main() {
     string s;
     cin >> N >> M >> s;
-    for (int i = 1; i < N; i++) adj[s[i - 1]][s[i]
-}]++;
+    for (int i = 1; i < N; i++) {
+        adj[s[i - 1] - 'a'][s[i] - 'a']++;
+    }
 }
