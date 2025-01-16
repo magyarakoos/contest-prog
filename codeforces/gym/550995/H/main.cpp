@@ -49,5 +49,11 @@ int main() {
     for (int i = 1; i < N; i++) {
         adj[s[i - 1] - 'a'][s[i] - 'a']++;
     }
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < M; j++) {
+            cout << adj[i][j] << " ";
+        }
+        cout << "\n";
+    }
     cout << dp((1 << M) - 1);
 }
