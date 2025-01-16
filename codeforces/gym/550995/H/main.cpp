@@ -4,7 +4,7 @@ using namespace std;
 int N, M;
 int adj[26][26];
 map<int, int> cache;
-map<int, vector<int>> order;
+map<int, deque<int>> order;
 
 int dp(int mask) {
     if (cache.count(mask)) return cache[mask];
@@ -16,7 +16,7 @@ int dp(int mask) {
             int nmask = mask & ~(1 << i);
             int cost_a = dp(nmask), cost_b = cost_a;
 
-            vector<int> norder = order[nmask];
+            deque<int> norder = order[nmask];
             if (find(norder.begin(), norder.end(), i) ==
                 norder.end()) {
                 for (int j = 0; j < norder.size(); j++) {
@@ -45,6 +45,7 @@ int dp(int mask) {
 }
 
 int main() {
+    cin.tie(0), ios::sync_with_stdio(0);
     string s;
     cin >> N >> M >> s;
     for (int i = 1; i < N; i++) {
