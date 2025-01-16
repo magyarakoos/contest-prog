@@ -21,6 +21,11 @@ int dp(int mask) {
                 cost_b += (adj[i][j] + adj[j][i]) *
                           (norder.size() - j);
             }
+            if (cost_a < cost_b) {
+                norder.insert(norder.begin(), i);
+            } else {
+                norder.insert(norder.end(), i);
+            }
         }
     }
     return cache[mask] = result;
