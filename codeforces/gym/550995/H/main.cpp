@@ -16,6 +16,10 @@ int dp(int mask) {
             int nmask = mask & ~(1 << i);
             vector<int> norder = order[nmask];
             int cost_a = 0, cost_b = 0;
+            for (int j = 0; j < norder.size(); j++) {
+                cost_a += adj[i][j] * (j + 1);
+                cost_b += adj[i][j] * (norder.size() - j);
+            }
         }
     }
     return cache[mask] = result;
