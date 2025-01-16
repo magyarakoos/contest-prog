@@ -9,7 +9,14 @@ int dp(int mask) {
     if (cache.count(mask)) return cache[mask];
     if (mask == 0) return cache[mask] = 0;
 
-    for (int i = 0;) }
+    int result = INT_MAX;
+    for (int i = 0; i < M; i++) {
+        if (mask >> i & 1) {
+            cache[mask] = min(cache[mask])
+        }
+    }
+    return cache[mask] = result;
+}
 
 int main() {
     string s;
