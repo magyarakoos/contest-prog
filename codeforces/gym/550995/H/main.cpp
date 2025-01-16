@@ -2,7 +2,7 @@
 using namespace std;
 
 int N, M;
-map<array<char, 2>, int> adj;
+int adj[26][26];
 map<int, int> cache;
 
 int dp(int mask) {
@@ -13,7 +13,8 @@ int dp(int mask) {
     for (int i = 0; i < M; i++) {
         if (mask >> i & 1) {
             cache[mask] =
-                min(cache[mask], dp(mask & ~(1 << i)));
+                min(cache[mask],
+                    dp(mask & ~(1 << i)) + cost(mask));
         }
     }
     return cache[mask] = result;
@@ -22,5 +23,6 @@ int dp(int mask) {
 int main() {
     string s;
     cin >> N >> M >> s;
-    for (int i = 1; i < N; i++) adj[{s[i - 1], s[i]}]++;
+    for (int i = 1; i < N; i++) adj[s[i - 1]][s[i]
+}]++;
 }
