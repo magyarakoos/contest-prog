@@ -28,9 +28,9 @@ int dp(int mask) {
                               (norder.size() - j);
                 }
                 if (cost_a < cost_b) {
-                    norder.insert(norder.begin(), i);
+                    norder.push_front(i);
                 } else {
-                    norder.insert(norder.end(), i);
+                    norder.push_back(i);
                 }
             }
 
