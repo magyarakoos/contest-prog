@@ -39,7 +39,9 @@ int dp(int mask) {
             }
         }
     }
-    cout << bitset<3>(mask) << " " << result << "\n";
+    cout << bitset<3>(mask) << " " << result << " | ";
+    for (int x : order[mask]) cout << x << " ";
+    cout << "\n";
     return cache[mask] = result;
 }
 
