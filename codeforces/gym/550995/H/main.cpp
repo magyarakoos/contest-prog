@@ -17,8 +17,9 @@ int dp(int mask) {
             vector<int> norder = order[nmask];
             int cost_a = 0, cost_b = 0;
             for (int j = 0; j < norder.size(); j++) {
-                cost_a += adj[i][j] * (j + 1);
-                cost_b += adj[i][j] * (norder.size() - j);
+                cost_a += (adj[i][j] + adj[j][i]) * (j + 1);
+                cost_b += (adj[i][j] + adj[j][i]) *
+                          (norder.size() - j);
             }
         }
     }
