@@ -35,6 +35,7 @@ int dp(int mask) {
             }
         }
     }
+    cout << bitset<3>(mask) << " " << result << "\n";
     return cache[mask] = result;
 }
 
