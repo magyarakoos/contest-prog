@@ -14,8 +14,9 @@ int dp(int mask) {
     for (int i = 0; i < M; i++) {
         if (mask >> i & 1) {
             int nmask = mask & ~(1 << i);
+            int cost_a = dp(nmask), cost_b = cost_a;
+
             vector<int> norder = order[nmask];
-            int cost_a = 0, cost_b = 0;
             for (int j = 0; j < norder.size(); j++) {
                 cost_a += (adj[i][j] + adj[j][i]) * (j + 1);
                 cost_b += (adj[i][j] + adj[j][i]) *
@@ -26,7 +27,12 @@ int dp(int mask) {
             } else {
                 norder.insert(norder.end(), i);
             }
+
             int cost = min(cost_a, cost_b);
+            if (cost < result) {
+                result = cost;
+                order[mask] = norder;
+            }
         }
     }
     return cache[mask] = result;
