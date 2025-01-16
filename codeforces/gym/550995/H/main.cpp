@@ -41,9 +41,6 @@ int dp(int mask) {
             }
         }
     }
-    cout << bitset<3>(mask) << " " << result << " | ";
-    for (int x : order[mask]) cout << x << " ";
-    cout << "\n";
     return cache[mask] = result;
 }
 
@@ -52,12 +49,6 @@ int main() {
     cin >> N >> M >> s;
     for (int i = 1; i < N; i++) {
         adj[s[i - 1] - 'a'][s[i] - 'a']++;
-    }
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < M; j++) {
-            cout << adj[i][j] << " ";
-        }
-        cout << "\n";
     }
     cout << dp((1 << M) - 1);
 }
