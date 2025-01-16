@@ -17,15 +17,19 @@ int dp(int mask) {
             int cost_a = dp(nmask), cost_b = cost_a;
 
             vector<int> norder = order[nmask];
-            for (int j = 0; j < norder.size(); j++) {
-                cost_a += (adj[i][j] + adj[j][i]) * (j + 1);
-                cost_b += (adj[i][j] + adj[j][i]) *
-                          (norder.size() - j);
-            }
-            if (cost_a < cost_b) {
-                norder.insert(norder.begin(), i);
-            } else {
-                norder.insert(norder.end(), i);
+            if (find(norder.begin(), norder.end(), i) ==
+                norder.end()) {
+                for (int j = 0; j < norder.size(); j++) {
+                    cost_a +=
+                        (adj[i][j] + adj[j][i]) * (j + 1);
+                    cost_b += (adj[i][j] + adj[j][i]) *
+                              (norder.size() - j);
+                }
+                if (cost_a < cost_b) {
+                    norder.insert(norder.begin(), i);
+                } else {
+                    norder.insert(norder.end(), i);
+                }
             }
 
             int cost = min(cost_a, cost_b);
