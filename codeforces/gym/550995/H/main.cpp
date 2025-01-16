@@ -13,9 +13,9 @@ int dp(int mask) {
     int result = INT_MAX;
     for (int i = 0; i < M; i++) {
         if (mask >> i & 1) {
-            int cost = 0;
-
             int nmask = mask & ~(1 << i);
+            vector<int> norder = order[nmask];
+            int cost_a = 0, cost_b = 0;
         }
     }
     return cache[mask] = result;
