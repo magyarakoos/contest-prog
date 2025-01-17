@@ -2,23 +2,19 @@
 #include <iostream>
 using namespace std;
 
-// inline constexpr int MAXN = 7368790;
-const int MAXN = 100;
+inline constexpr int MAXN = 7368790;
 
 int a[MAXN];
 int main() {
-    memset(a, 1, sizeof(a));
-    for (int i = 0; i < MAXN; i++) { cout << a[i] << "\n"; }
-    return 0;
-    a[0] = a[1] = 0;
+    a[0] = a[1] = 1;
     for (int i = 2; i < MAXN; i++) {
-        if (a[i]) {
+        if (!a[i]) {
             for (int j = 2 * i; j < MAXN; j += i) {
-                a[j] = 0;
+                a[j] = 1;
             }
         }
     }
     int result = 0;
-    for (int i = 2; i < MAXN; i++) { result += a[i]; }
+    for (int i = 2; i < MAXN; i++) { result += !a[i]; }
     cout << result << "\n";
 }
