@@ -1,10 +1,9 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 const int MAXN = 1000;
 
-vector<int> a(MAXN, 1);
+int a[MAXN] = {1};
 int main() {
     a[0] = a[1] = 0;
     for (int i = 2; i < MAXN; i++) {
@@ -14,7 +13,7 @@ int main() {
             }
         }
     }
-    for (int i = 2; i < MAXN; i++) {
-        if (a[i]) cout << i << "\n";
-    }
+    int result = 0;
+    for (int i = 2; i < MAXN; i++) result += a[i];
+    cout << result;
 }
