@@ -9,13 +9,11 @@ int main() {
 
     multiset<int> adultS;
     for (int i = 0; i < N; i++) {
-        for (int x : adultS) cout << x << " ";
-        cout << "\n";
-
         adultS.insert(A[i]);
         while (!adultS.empty() && *adultS.begin() < i + 1) {
             adultS.erase(adultS.begin());
         }
-        adultS.insert(adultS.size());
+        A[i] += adultS.size();
+        adultS.insert(A[i]);
     }
 }
