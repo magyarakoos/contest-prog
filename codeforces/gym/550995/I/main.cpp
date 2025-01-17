@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-const int MAXN = 10;
+const int MAXN = 1000;
 
 vector<int> a(MAXN, 1);
 int main() {
@@ -10,7 +10,7 @@ int main() {
     for (int i = 2; i < MAXN; i++) {
         if (a[i]) {
             for (int j = 2 * i; j < MAXN; j += i) {
-                a[i] = 0;
+                a[j] = 0;
             }
         }
     }
