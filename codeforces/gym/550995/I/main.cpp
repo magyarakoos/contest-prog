@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-const int MAXN = 7.37000e6;
+const int MAXN = 7368790;
 
 vector<int> a(MAXN, 1);
 int main() {
