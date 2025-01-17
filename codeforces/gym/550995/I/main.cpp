@@ -4,8 +4,9 @@ using namespace std;
 
 inline constexpr int MAXN = 7368790;
 
-int a[MAXN] = {1};
+int a[MAXN];
 int main() {
+    memset(a, 1, MAXN);
     a[0] = a[1] = 0;
     for (int i = 2; i < MAXN; i++) {
         if (a[i]) {
