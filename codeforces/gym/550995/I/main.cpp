@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-inline constexpr int MAXN = 7368790, MAXK = 5e6;
+inline constexpr int MAXN = 7368790, MAXK = 5e5;
 
 vector<int> create(int n) {
     vector<int> a(n, 1);
@@ -27,4 +27,6 @@ void io(const vector<int>& primes) {
     }
 }
 
-int main() {}
+int main() {
+    vector<int> a = create(10000);
+}
