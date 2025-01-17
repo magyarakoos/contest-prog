@@ -7,7 +7,7 @@ const int MAXN = 100;
 
 int a[MAXN];
 int main() {
-    memset(a, 1, MAXN * sizeof(int));
+    memset(a, 1, sizeof(a));
     for (int i = 0; i < MAXN; i++) { cout << a[i] << "\n"; }
     return 0;
     a[0] = a[1] = 0;
