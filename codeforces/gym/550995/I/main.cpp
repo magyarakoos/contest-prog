@@ -2,9 +2,9 @@
 #include <vector>
 using namespace std;
 
-const int MAXN = 7368790;
+inline constexpr int MAXN = 7368790;
 
-vector<int> a(MAXN, 1);
+int a[MAXN] = {1};
 int main() {
     a[0] = a[1] = 0;
     for (int i = 2; i < MAXN; i++) {
