@@ -28,5 +28,6 @@ void io(const vector<int>& primes) {
 }
 
 int main() {
-    vector<int> a = create(10000);
+    const int stage_a = 1e4;
+    vector<int> a = create(stage_a);
 }
