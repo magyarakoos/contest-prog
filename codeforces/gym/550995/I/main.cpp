@@ -15,6 +15,6 @@ int main() {
             }
             b[bp++] = i;
         }
-        cout << a[i];
+        cout << !a[i];
     }
 }
