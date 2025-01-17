@@ -8,6 +8,8 @@ const int MAXN = 100;
 int a[MAXN];
 int main() {
     memset(a, 1, MAXN * sizeof(int));
+    for (int i = 0; i < MAXN; i++) { cout << a[i] << "\n"; }
+    return 0;
     a[0] = a[1] = 0;
     for (int i = 2; i < MAXN; i++) {
         if (a[i]) {
