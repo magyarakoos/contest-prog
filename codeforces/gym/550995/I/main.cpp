@@ -6,6 +6,7 @@ inline constexpr int MAXN = 7368790, MAXK = 5e6;
 
 int a[MAXN], b[MAXK], bp = 0;
 int main() {
+    ios::sync_with_stdio(0);
     a[0] = a[1] = 1;
     int result = 0;
     for (int i = 2; i < MAXN; i++) {
@@ -21,7 +22,6 @@ int main() {
     while (Q--) {
         int K;
         cin >> K;
-        cout << K << "\n";
-        // cout << b[K - 1];
+        cout << b[K - 1] << "\n";
     }
 }
