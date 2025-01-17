@@ -3,6 +3,8 @@ using namespace std;
 
 inline constexpr int MAXN = 7368790, MAXK = 5e6;
 
+int stage_a = 1000;
+
 int a[MAXN], b[MAXK], bp = 0;
 int main() {
     cin.tie(0);
