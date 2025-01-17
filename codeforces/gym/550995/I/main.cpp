@@ -15,12 +15,6 @@ int main() {
             }
             b[bp++] = i;
         }
-    }
-    int Q;
-    cin >> Q;
-    while (Q--) {
-        int K;
-        cin >> K;
-        cout << b[K - 1] << "\n";
+        cout << a[i];
     }
 }
