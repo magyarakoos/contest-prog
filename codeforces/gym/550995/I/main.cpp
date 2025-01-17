@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int MAXN = 1e8;
+const int MAXN = 1000;
 
 int a[MAXN] = {1};
 int main() {
