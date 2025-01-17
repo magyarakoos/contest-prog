@@ -1,9 +1,19 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 inline constexpr int MAXN = 7368790, MAXK = 5e6;
 
-int stage_a = 1000;
+vector<int> create(int n) {
+    vector<int> a(n, 1);
+    a[0] = a[1] = 0;
+    for (int i = 2; i < n; i++) {
+        if (a[i]) {
+            for (int j = 2 * i; j < n; j += i) a[j] = 0;
+        }
+    }
+    return a;
+}
 
 int a[MAXN], b[MAXK], bp = 0;
 int main() {
@@ -19,6 +29,7 @@ int main() {
             b[bp++] = i;
         }
     }
+    solve();
     int Q;
     cin >> Q;
     while (Q--) {
