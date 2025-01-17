@@ -2,9 +2,9 @@
 #include <iostream>
 using namespace std;
 
-inline constexpr int MAXN = 7368790;
+inline constexpr int MAXN = 7368790, MAXK = 5e6;
 
-int a[MAXN];
+int a[MAXN], b[MAXK], bp = 0;
 int main() {
     a[0] = a[1] = 1;
     int result = 0;
@@ -13,10 +13,15 @@ int main() {
             for (int j = 2 * i; j < MAXN; j += i) {
                 a[j] = 1;
             }
-            result++;
+            b[bp++] = i;
         }
     }
-    // int result = 0;
-    // for (int i = 2; i < MAXN; i++) { result += !a[i]; }
-    cout << result << "\n";
+    int Q;
+    cin >> Q;
+    while (Q--) {
+        int K;
+        cin >> K;
+        cout << K << "\n";
+        // cout << b[K - 1];
+    }
 }
