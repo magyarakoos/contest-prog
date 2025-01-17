@@ -13,4 +13,7 @@ int main() {
             }
         }
     }
+    for (int i = 2; i < 1000; i++) {
+        if (a[i]) cout << i << "\n";
+    }
 }
