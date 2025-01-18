@@ -13,8 +13,8 @@ int main() {
             for (int j = 2 * i; j < MAXN; j += i) {
                 a[j] = 1;
             }
+            if (bp % 20 == 0) cout << i << ",";
             b[bp++] = i;
-            if ((i - 2) % 20 == 0) { cout << i << ","; }
         }
     }
 }
