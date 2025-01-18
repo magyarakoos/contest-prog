@@ -13,6 +13,7 @@ int32_t main() {
     cin >> Q;
     while (Q--) {
         cin >> A >> B >> C;
+        cout << mpow(B, C, 1e9 + 6) << "\n";
         cout << mpow(A, mpow(B, C, 1e9 + 6), 1e9 + 7)
              << "\n";
     }
