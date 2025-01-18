@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
+using point = array<int, 2>;
 
-bool polar(array<int, 2> a, array<int, 2> b) {
-    return a < b;
+int turn(point a, point b) {
+    int p = 0;
+    return (p > 0) - (p < 0);
 }
 
 int main() {
@@ -12,7 +14,6 @@ int main() {
     cin >> N;
     vector<array<int, 2>> a(N);
     for (auto& [x, y] : a) cin >> x >> y;
-    sort(a.begin(), a.end(), polar);
     sort(a.begin(), a.end(),
          [](array<int, 2> a, array<int, 2> b) {
              return a < b;
