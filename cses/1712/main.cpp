@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <iomanip>
 using namespace std;
+#define int int64_t
 
 int mpow(int a, int b, int mod) {
     if (!a || !b) return 1;
@@ -8,13 +8,12 @@ int mpow(int a, int b, int mod) {
            mod;
 }
 
-int main() {
+int32_t main() {
     int Q, A, B, C;
     cin >> Q;
     while (Q--) {
         cin >> A >> B >> C;
-        cout << mpow(A, B, 1e9 + 7) << "\n";
-        // cout << mpow(A, mpow(B, C, 1e9 + 6), 1e9 + 7)
-        //      << "\n";
+        cout << mpow(A, mpow(B, C, 1e9 + 6), 1e9 + 7)
+             << "\n";
     }
 }
