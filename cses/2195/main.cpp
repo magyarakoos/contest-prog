@@ -26,4 +26,6 @@ int main() {
     });
 
     a.insert(a.begin(), p);
+
+    for (auto [x, y] : a) cout << x << " " << y << "\n";
 }
