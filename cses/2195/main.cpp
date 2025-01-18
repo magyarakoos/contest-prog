@@ -13,19 +13,22 @@ int main() {
     ios::sync_with_stdio(0);
     int N;
     cin >> N;
-    vector<point> a(N);
-    for (auto& [x, y] : a) cin >> x >> y;
+    vector<pair<point, int>> a(N);
+    for (int i = 0; i < N; i++) {
+        cin >> a[i].first[0] >> a[i].first[1];
+        a[i].second = i;
+    }
     sort(a.begin(), a.end());
 
-    point p = a.front();
+    auto p = a.front();
     a.erase(a.begin());
 
     sort(a.begin(), a.end(), [&](auto b, auto c) {
-        int t = turn(p, b, c);
+        int t = turn(p.first, b.first, c.first);
         return (t != 0 ? t == 1 : b < c);
     });
 
     a.insert(a.begin(), p);
 
-    for (auto [x, y] : a) cout << x << " " << y << "\n";
+    for (auto [xy, i] : a) cout << i + 1 << "\n";
 }
