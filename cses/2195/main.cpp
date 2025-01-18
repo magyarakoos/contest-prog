@@ -20,6 +20,8 @@ int main() {
     point p = a.front();
     a.erase(a.begin());
 
-    sort(a.begin(), a.end(),
-         [&](auto a, auto b) { return 0; });
+    // sort(a.begin(), a.end(),
+    //      [&](auto a, auto b) {
+    //
+    //      });
 }
