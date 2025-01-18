@@ -3,8 +3,8 @@ using namespace std;
 using point = array<int64_t, 2>;
 
 int turn(point a, point b, point c) {
-    int p = (a[0] - b[0]) * (a[1] - c[1]) -
-            (a[1] - b[1]) * (a[0] - c[0]);
+    int64_t p = (a[0] - b[0]) * (a[1] - c[1]) -
+                (a[1] - b[1]) * (a[0] - c[0]);
     return (p > 0) - (p < 0);
 }
 
@@ -25,7 +25,7 @@ int main() {
     });
     int i = N - 1;
     while (turn(a[i].first, a[i - 1].first,
-                a[i - 2].second) == 0)
+                a[i - 2].first) == 0)
         i--;
     for (auto [xy, i] : a) cout << i + 1 << " ";
     cout << "\n";
