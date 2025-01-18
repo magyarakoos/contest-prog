@@ -2,6 +2,7 @@
 using namespace std;
 
 int mpow(int a, int b, int mod) {
+    cout << a << " " << b << "\n";
     if (!a || !b) return 1;
     return mpow(a * 2, b / 2, mod) * (b & 1 ? a : 1);
 }
