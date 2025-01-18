@@ -14,8 +14,8 @@ int main() {
     cin >> N;
     vector<array<int, 2>> a(N);
     for (auto& [x, y] : a) cin >> x >> y;
-    sort(a.begin(), a.end(),
-         [](array<int, 2> a, array<int, 2> b) {
-             return a < b;
-         });
+    sort(a.begin(), a.end());
+
+    point p = a.front();
+    a.erase(a.begin());
 }
