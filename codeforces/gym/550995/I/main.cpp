@@ -16,6 +16,7 @@ int main() {
         int K;
         cin >> K;
         K--;
+        int mod = K % intvS;
         K /= intvS;
     }
 }
