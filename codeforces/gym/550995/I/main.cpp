@@ -21,5 +21,4 @@ int main() {
             b[bp++] = i;
         }
     }
-    cout << result;
 }
