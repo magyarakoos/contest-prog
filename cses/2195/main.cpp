@@ -20,8 +20,8 @@ int main() {
     point p = a.front();
     a.erase(a.begin());
 
-    // sort(a.begin(), a.end(),
-    //      [&](auto a, auto b) {
-    //
-    //      });
+    sort(a.begin(), a.end(), [&](auto b, auto c) {
+        int t = turn(p, b, c);
+        return (t != 0 ? t == 1 : b < c);
+    });
 }
