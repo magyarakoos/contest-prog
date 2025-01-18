@@ -15,5 +15,7 @@ int main() {
     while (Q--) {
         int K;
         cin >> K;
+        K--;
+        K /= 100;
     }
 }
