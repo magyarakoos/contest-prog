@@ -24,9 +24,6 @@ int main() {
         return (t != 0 ? t == 1 : b < c);
     });
     int i = N - 1;
-    while (turn(a[i].first, a[i - 1].first,
-                a[i - 2].first) == 0)
-        i--;
     for (auto [xy, i] : a) cout << i + 1 << " ";
     cout << "\n";
 }
