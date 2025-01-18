@@ -12,6 +12,7 @@ int main() {
     cin >> N;
     vector<array<int, 2>> a(N);
     for (auto& [x, y] : a) cin >> x >> y;
+    sort(a.begin(), a.end(), polar);
     sort(a.begin(), a.end(),
          [](array<int, 2> a, array<int, 2> b) {
              return a < b;
