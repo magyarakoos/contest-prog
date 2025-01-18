@@ -23,5 +23,6 @@ int main() {
         int t = turn(a[0].first, b.first, c.first);
         return (t != 0 ? t == 1 : b < c);
     });
-    for (auto [xy, i] : a) cout << i + 1 << "\n";
+    for (auto [xy, i] : a) cout << i + 1 << " ";
+    cout << "\n";
 }
