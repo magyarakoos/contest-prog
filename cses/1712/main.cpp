@@ -4,6 +4,8 @@ using namespace std;
 
 int mpow(int a, int b, int mod) {
     if (!b) return 1;
+    cout << mpow(a * a, b / 2, mod) * (b & 1 ? a : 1) % mod
+         << "\n";
     return mpow(a * a, b / 2, mod) * (b & 1 ? a : 1) % mod;
 }
 
