@@ -16,6 +16,6 @@ int main() {
         int K;
         cin >> K;
         K--;
-        K /= 100;
+        K /= intvS;
     }
 }
