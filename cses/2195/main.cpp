@@ -3,7 +3,8 @@ using namespace std;
 using point = array<int64_t, 2>;
 
 int turn(point a, point b, point c) {
-    int p = 0;
+    int p = (b[0] - a[0]) * (c[1] - a[1]) -
+            (b[1] - a[1]) * (c[0] - a[0]);
     return (p > 0) - (p < 0);
 }
 
