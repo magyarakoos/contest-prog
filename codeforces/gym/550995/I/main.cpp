@@ -18,5 +18,6 @@ int main() {
         K--;
         int mod = K % intvS;
         K /= intvS;
+        cout << K << " " << mod << "\n";
     }
 }
