@@ -2,11 +2,10 @@
 using namespace std;
 #define int int64_t
 
-int pc;
 int mpow(int a, int b, int mod) {
     if (!b) return 1;
-    pc++;
-    return mpow(a * a, b / 2, mod) * (b & 1 ? a : 1) % mod;
+    return mpow(a * a % mod, b / 2, mod) * (b & 1 ? a : 1) %
+           mod;
 }
 
 int32_t main() {
@@ -17,5 +16,4 @@ int32_t main() {
         cout << mpow(A, mpow(B, C, 1e9 + 6), 1e9 + 7)
              << "\n";
     }
-    cout << pc << "\n";
 }
