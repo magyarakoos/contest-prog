@@ -19,16 +19,9 @@ int main() {
         a[i].second = i;
     }
     sort(a.begin(), a.end());
-
-    auto p = a.front();
-    a.erase(a.begin());
-
-    sort(a.begin(), a.end(), [&](auto b, auto c) {
-        int t = turn(p.first, b.first, c.first);
+    sort(a.begin() + 1, a.end(), [&](auto b, auto c) {
+        int t = turn(a[0].first, b.first, c.first);
         return (t != 0 ? t == 1 : b < c);
     });
-
-    a.insert(a.begin(), p);
-
     for (auto [xy, i] : a) cout << i + 1 << "\n";
 }
