@@ -24,4 +24,6 @@ int main() {
         int t = turn(p, b, c);
         return (t != 0 ? t == 1 : b < c);
     });
+
+    a.insert(a.begin(), p);
 }
