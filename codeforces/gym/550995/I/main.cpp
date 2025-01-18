@@ -8,13 +8,18 @@ int main() {
     cin.tie(0);
     ios::sync_with_stdio(0);
     a[0] = a[1] = 1;
+    int result = 0;
     for (int i = 2; i < MAXN; i++) {
         if (!a[i]) {
             for (int j = 2 * i; j < MAXN; j += i) {
                 a[j] = 1;
             }
-            if (bp % 20 == 0) cout << i << ",";
+            if (bp % 100 == 0) {
+                cout << i << ",";
+                result++;
+            }
             b[bp++] = i;
         }
     }
+    cout << result;
 }
