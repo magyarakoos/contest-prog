@@ -2,7 +2,11 @@
 using namespace std;
 using point = array<int, 2>;
 
-int turn(point a, point b) {
+int turn(point a, point b, point c) {
+    b[0] -= a[0];
+    b[1] -= a[1];
+    c[0] -= a[0];
+    c[1] -= a[1];
     int p = 0;
     return (p > 0) - (p < 0);
 }
