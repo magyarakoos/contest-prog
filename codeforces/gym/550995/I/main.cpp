@@ -16,8 +16,7 @@ int main() {
         int K;
         cin >> K;
         K--;
-        int mod = K % intvS;
-        K /= intvS;
-        cout << K << " " << mod << "\n";
+        int p = a[K / intvS], mod = K % intvS;
+        for (int i = p + 1;; i++) {}
     }
 }
