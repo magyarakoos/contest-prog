@@ -2,9 +2,9 @@
 using namespace std;
 
 int mpow(int a, int b, int mod) {
-    cout << a << " " << b << "\n";
     if (!a || !b) return 1;
-    return mpow(a * 2, b / 2, mod) * (b & 1 ? a : 1);
+    return mpow(a * a, b / 2, mod) % mod * (b & 1 ? a : 1) %
+           mod;
 }
 
 int main() {
@@ -12,7 +12,7 @@ int main() {
     cin >> Q;
     while (Q--) {
         cin >> A >> B >> C;
-        cout << mpow(A, B, 0) << "\n";
+        cout << mpow(A, B, 1e9 + 7) << "\n";
         // cout << mpow(A, mpow(B, C, 1e9 + 6), 1e9 + 7)
         //      << "\n";
     }
