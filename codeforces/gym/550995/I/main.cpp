@@ -15,7 +15,6 @@ int main() {
     while (Q--) {
         int K;
         cin >> K;
-        K--;
         int mod = K % intvS;
         K /= intvS;
         cout << K << " " << mod << "\n";
