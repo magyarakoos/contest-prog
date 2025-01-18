@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAXP = 7'368'788;
-const int MAXK = 500'000;
+inline constexpr int MAXP = 7'368'788, MAXK = 500'000;
 
-bool sieve[MAXP];
+bitset<MAXP> sieve;
 int primes[MAXK];
 
 void generate_primes() {
@@ -34,5 +33,4 @@ int main() {
         cin >> a;
         cout << primes[a - 1] << '\n';
     }
-    return 0;
 }
