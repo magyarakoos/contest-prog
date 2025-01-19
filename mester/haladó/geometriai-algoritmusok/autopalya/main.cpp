@@ -46,4 +46,8 @@ int32_t main() {
         hull.push_back(P[i]);
         K++;
     }
+
+    for (node A : hull) {
+        cout << A[1][0] << " " << A[1][1] << "\n";
+    }
 }
