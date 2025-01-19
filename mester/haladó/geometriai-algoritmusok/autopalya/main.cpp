@@ -5,6 +5,12 @@ using namespace std;
 using point = array<int, 2>;
 using node = array<point, 2>;
 
+int turn(point A, point B, point C) {
+    int s = (B[0] - A[0]) * (C[1] - A[1]) -
+            (B[1] - A[1]) * (C[0] - A[0]);
+    return (s > 0) - (s < 0);
+}
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
@@ -24,6 +30,7 @@ int32_t main() {
     P.resize(N + M);
 
     sort(P.begin(), P.end());
-    sort(P.begin() + 1, P.end(),
-         [&](auto A, auto B) { return 0; });
+    sort(P.begin() + 1, P.end(), [&](node A, node B) {
+        int t = turn(P[0][0], A[0], B[0]);
+    });
 }
