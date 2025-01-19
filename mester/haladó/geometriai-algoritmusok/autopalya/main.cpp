@@ -24,7 +24,7 @@ int32_t main() {
     cin >> M;
     for (int i = 0; i < M; i++) {
         cin >> P[i + N][0][0] >> P[i + N][0][1];
-        P[i + N][1] = {1, i - N};
+        P[i + N][1] = {1, i};
     }
     P.resize(N + M);
 
