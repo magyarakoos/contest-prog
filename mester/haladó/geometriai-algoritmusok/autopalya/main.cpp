@@ -6,9 +6,8 @@ using point = array<int, 2>;
 using node = array<point, 2>;
 
 int turn(point A, point B, point C) {
-    int s = (B[0] - A[0]) * (C[1] - A[1]) -
-            (B[1] - A[1]) * (C[0] - A[0]);
-    return (s > 0) - (s < 0);
+    return (B[0] - A[0]) * (C[1] - A[1]) -
+           (B[1] - A[1]) * (C[0] - A[0]);
 }
 
 int32_t main() {
