@@ -33,4 +33,8 @@ int32_t main() {
         int t = turn(P[0][0], A[0], B[0]);
         return t ? t > 0 : A[0] < B[0];
     });
+
+    for (node A : P) {
+        cout << A[0][0] << " " << A[0][1] << "\n";
+    }
 }
