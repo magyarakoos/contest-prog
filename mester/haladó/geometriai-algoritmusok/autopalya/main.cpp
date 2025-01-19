@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int int64_t
+
 using point = array<int, 2>;
+using node = array<point, 2>;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
