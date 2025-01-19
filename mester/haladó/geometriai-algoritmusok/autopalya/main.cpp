@@ -32,5 +32,6 @@ int32_t main() {
     sort(P.begin(), P.end());
     sort(P.begin() + 1, P.end(), [&](node A, node B) {
         int t = turn(P[0][0], A[0], B[0]);
+        return t ? t > 0 : A[0] < B[0];
     });
 }
