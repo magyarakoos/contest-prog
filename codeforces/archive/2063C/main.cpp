@@ -15,18 +15,17 @@ void solve() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
-    if (N == 5) {
-        cout << 3 << "\n";
-        return;
-    }
     int mx = *max_element(degS.begin(), degS.end());
     int result = 0;
     for (int i = 1; i <= N; i++) {
-        int curr = degS[i];
-        for (auto v : g[i]) { degS[v]--; }
-        curr += *max_element(degS.begin(), degS.end()) - 1;
-        for (auto v : g[i]) { degS[v]++; }
-        result = max(result, curr);
+        if (degS[i] == mx) {
+            int curr = degS[i];
+            for (auto v : g[i]) { degS[v]--; }
+            curr +=
+                *max_element(degS.begin(), degS.end()) - 1;
+            for (auto v : g[i]) { degS[v]++; }
+            result = max(result, curr);
+        }
     }
     cout << result << "\n";
 }
