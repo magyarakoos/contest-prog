@@ -19,6 +19,7 @@ void solve() {
     int result = 0;
     for (int i = 1; i <= N; i++) {
         if (degS[i] == mx) {
+            cout << i << " ";
             for (auto v : g[i]) { degS[v]--; }
             result =
                 max(result, mx +
