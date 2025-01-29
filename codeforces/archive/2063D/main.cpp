@@ -15,6 +15,15 @@ void solve() {
         int la = ar - al + 1, lb = br - bl + 1;
         bool can_a = la >= 2 && lb >= 1,
              can_b = lb >= 2 && la >= 1;
+        if (can_a && can_b) {
+            if (la > lb) {
+                result.push_back(result.back() + la);
+                al++, ar--;
+            } else {
+                result.push_back(result.back() + lb);
+                bl++, br--;
+            }
+        }
     }
 }
 
