@@ -23,6 +23,16 @@ void solve() {
                 result.push_back(result.back() + lb);
                 bl++, br--;
             }
+        } else if (can_a && !can_b) {
+            result.push_back(result.back() + la);
+            al++, ar--;
+        } else if (!can_a && can_b) {
+            result.push_back(result.back() + lb);
+            bl++, br--;
+        } else if (!can_a && !can_b) {
+
+        } else {
+            assert(0);
         }
     }
 }
