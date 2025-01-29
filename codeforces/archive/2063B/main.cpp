@@ -10,7 +10,7 @@ int32_t main() {
         int N, L, R;
         cin >> N >> L >> R;
         vector<int> a, b, c;
-        for (int i = 0; i < L; i++) {
+        for (int i = 0; i < L - 1; i++) {
             int x;
             cin >> x;
             a.push_back(x);
