@@ -15,6 +15,8 @@ void solve() {
         g[U].push_back(V);
         g[V].push_back(U);
     }
+    int mxi = max_element(degS.begin(), degS.end()) -
+              degS.begin();
 }
 
 int32_t main() {
