@@ -34,5 +34,14 @@ int32_t main() {
              i++) {
             curr += b[i] - a[i];
         }
+        result = max(result, curr);
+        curr = 0;
+
+        for (int i = 0;
+             i < c.size() && i < b.size() && c[i] < b[i];
+             i++) {
+            curr += b[i] - c[i];
+        }
+        cout << max(result, curr) << "\n";
     }
 }
