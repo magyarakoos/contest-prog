@@ -19,8 +19,8 @@ void solve() {
         cout << 3 << "\n";
         return;
     }
-    int mxi = max_element(degS.begin(), degS.end()) -
-              degS.begin();
+    int mx = *max_element(degS.begin(), degS.end());
+
     int result = degS[mxi];
     degS[mxi] = 0;
     for (auto v : g[mxi]) { degS[v]--; }
