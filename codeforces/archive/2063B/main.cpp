@@ -28,5 +28,11 @@ int32_t main() {
         sort(a.begin(), a.end());
         sort(b.rbegin(), b.rend());
         sort(c.begin(), c.end());
-        for (int i = 0; i <) }
+        int curr = 0, result = 0;
+        for (int i = 0;
+             i < a.size() && i < b.size() && a[i] < b[i];
+             i++) {
+            curr += b[i] - a[i];
+        }
+    }
 }
