@@ -17,8 +17,10 @@ void solve() {
     }
     int mx = *max_element(degS.begin(), degS.end());
     int result = 0;
+    int pc = 0;
     for (int i = 1; i <= N; i++) {
         if (degS[i] == mx) {
+            if (pc++ >= 100) break;
             for (auto v : g[i]) { degS[v]--; }
             degS[i] = 0;
             result =
