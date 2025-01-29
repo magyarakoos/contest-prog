@@ -14,23 +14,23 @@ int32_t main() {
             int x;
             cin >> x;
             a.push_back(x);
-            cout << x << " ";
+            // cout << x << " ";
         }
-        cout << " | ";
+        // cout << " | ";
         for (int i = 0; i < R - L + 1; i++) {
             int x;
             cin >> x;
             b.push_back(x);
-            cout << x << " ";
+            // cout << x << " ";
         }
-        cout << " | ";
+        // cout << " | ";
         for (int i = R; i < N; i++) {
             int x;
             cin >> x;
             c.push_back(x);
-            cout << x << " ";
+            // cout << x << " ";
         }
-        cout << " | ";
+        // cout << " | ";
         sort(a.begin(), a.end());
         sort(b.rbegin(), b.rend());
         sort(c.begin(), c.end());
@@ -48,6 +48,8 @@ int32_t main() {
              i++) {
             curr += b[i] - c[i];
         }
-        cout << max(result, curr) << "\n";
+        cout << accumulate(b.begin(), b.end(), (int)0) -
+                    max(result, curr)
+             << "\n";
     }
 }
