@@ -8,6 +8,8 @@ void solve() {
     vector<int> A(N), B(M);
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end());
 
     vector<int> result(1);
     int al = 0, ar = N - 1, bl = 0, br = M - 1;
@@ -30,7 +32,10 @@ void solve() {
             result.push_back(result.back() + lb);
             bl++, br--;
         } else if (!can_a && !can_b) {
-
+            if (la == 0 && lb == 0) {
+                break;
+            } else if (la == 1 && lb == 1) {
+            }
         } else {
             assert(0);
         }
