@@ -8,6 +8,10 @@ void solve() {
     vector<int> A(N), B(M);
     for (int& x : A) cin >> x;
     for (int& x : B) cin >> x;
+
+    vector<int> result(1);
+    int al = 0, ar = N - 1, bl = 0, br = M - 1;
+    while (1) { int la = ar - al + 1, lb = br - bl + 1; }
 }
 
 int32_t main() {
