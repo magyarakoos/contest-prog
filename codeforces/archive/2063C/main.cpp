@@ -20,14 +20,15 @@ void solve() {
         return;
     }
     int mx = *max_element(degS.begin(), degS.end());
+    int result = 0;
     for (int i = 1; i <= N; i++) {
-        int result = degS[i];
-        for (auto v : g[mxi]) { degS[v]--; }
-        mxi = max_element(degS.begin(), degS.end()) -
-              degS.begin();
-        result += degS[mxi] - 1;
-        cout << result << "\n";
+        int curr = degS[i];
+        for (auto v : g[i]) { degS[v]--; }
+        curr += *max_element(degS.begin(), degS.end()) - 1;
+        for (auto v : g[i]) { degS[v]++; }
+        result = max(result, curr);
     }
+    cout << result << "\n";
 }
 
 int32_t main() {
