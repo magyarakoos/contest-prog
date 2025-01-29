@@ -12,18 +12,21 @@ void solve() {
     sort(B.begin(), B.end());
 
     vector<int> result(1);
-    int al = 0, ar = N - 1, bl = 0, br = M - 1;
+    int al = 0, ar = N - 1, bl = 0, br = M - 1, ca = 0,
+        cb = 0;
     while (1) {
-        int la = ar - al + 1, lb = br - bl + 1;
+        int la = ar - al + 1 + ca, lb = br - bl + 1 + cb;
         bool can_a = la >= 2 && lb >= 1,
              can_b = lb >= 2 && la >= 1;
         if (can_a && can_b) {
             if (la > lb) {
                 result.push_back(result.back() + la);
                 al++, ar--;
+                cb++;
             } else {
                 result.push_back(result.back() + lb);
                 bl++, br--;
+                ca++;
             }
         } else if (can_a && !can_b) {
             result.push_back(result.back() + la);
@@ -32,9 +35,12 @@ void solve() {
             result.push_back(result.back() + lb);
             bl++, br--;
         } else if (!can_a && !can_b) {
-            if (la == 0 && lb == 0) {
+            if (la == 0 && lb >= 3) {
+
+            } else if (la >= 3 && lb == 0) {
+
+            } else {
                 break;
-            } else if (la == 1 && lb == 1) {
             }
         } else {
             assert(0);
