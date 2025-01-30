@@ -36,9 +36,9 @@ void solve() {
             bl++, br--;
         } else if (!can_a && !can_b) {
             if (la == 0 && lb >= 3) {
-
+                al--, ar++;
             } else if (la >= 3 && lb == 0) {
-
+                bl--, br++;
             } else {
                 break;
             }
@@ -46,6 +46,10 @@ void solve() {
             assert(0);
         }
     }
+    cout << result.size() - 1 << "\n";
+    for (int i = 1; i < result.size(); i++)
+        cout << result[i] << " ";
+    cout << "\n";
 }
 
 int32_t main() {
