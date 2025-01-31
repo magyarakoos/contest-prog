@@ -20,11 +20,13 @@ void solve() {
              can_b = lb >= 2 && la >= 1;
         if (can_a && can_b) {
             if (la > lb) {
-                result.push_back(result.back() + la);
+                result.push_back(result.back() +
+                                 (A[ar] - A[al] + 1));
                 al++, ar--;
                 cb++;
             } else {
-                result.push_back(result.back() + lb);
+                result.push_back(result.back() +
+                                 (B[br] - B[bl] + 1));
                 bl++, br--;
                 ca++;
             }
