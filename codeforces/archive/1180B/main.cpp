@@ -12,9 +12,8 @@ int32_t main() {
         if (x >= 0) { x = -x - 1; }
     }
     if (N % 2 == 1) {
-        int mxi =
-            max_element(a.begin(), a.end()) - a.begin();
-        a[mxi] = -a[mxi] - 1;
+        int i = min_element(a.begin(), a.end()) - a.begin();
+        a[i] = -a[i] - 1;
     }
     for (int x : a) cout << x << " ";
     cout << "\n";
