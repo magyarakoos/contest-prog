@@ -23,16 +23,20 @@ int32_t main() {
             negS[0][0] = -negS[0][0] - 1;
         } else {
             posS.back()[0] = -posS.back()[0] - 1;
-            for (int i = posS.size() - 1; i > 0; i -= 2) {
+            for (int i = posS.size() - 2; i > 0; i -= 2) {
                 posS[i][0] = -posS[i][0] - 1;
                 posS[i - 1][0] = -posS[i - 1][0] - 1;
             }
         }
     } else {
-
-        for (int i = posS.size() - 2; i > 0; i -= 2) {
+        for (int i = posS.size() - 1; i > 0; i -= 2) {
             posS[i][0] = -posS[i][0] - 1;
             posS[i - 1][0] = -posS[i - 1][0] - 1;
         }
     }
+    vector<int> result(N);
+    for (auto [x, i] : posS) result[i] = x;
+    for (auto [x, i] : negS) result[i] = x;
+    for (int x : result) cout << x << " ";
+    cout << "\n";
 }
