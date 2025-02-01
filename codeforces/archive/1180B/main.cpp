@@ -12,8 +12,10 @@ int32_t main() {
         cin >> x;
         if (x > 0)
             posS.push_back({x, i});
-        else
+        else if (x < 0)
             negS.push_back({x, i});
+        else
+            negS.push_back({-1, i});
     }
     sort(posS.begin(), posS.end());
     sort(negS.begin(), negS.end());
