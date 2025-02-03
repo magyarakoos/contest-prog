@@ -14,14 +14,10 @@ void solve() {
         int suf = 0;
         for (int j = N - 1; j >= 0; j--) {
             if (A[i][j] != 1) break;
-            cout << format("({}, {}, {}) ", i, j,
-                           A.at(i).at(j));
             suf += A[i][j];
         }
-        cout << suf << " | ";
         s.insert(suf);
     }
-    cout << "\n";
     int result = 1;
     while (!s.empty()) {
         int x = *s.begin();
