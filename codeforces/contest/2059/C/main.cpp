@@ -13,8 +13,8 @@ void solve() {
     for (int i = 0; i < N; i++) {
         int suf = 0;
         for (int j = N - 1; j >= 0; j--) {
-            cout << A[i][j] << " ";
             if (A[i][j] != 1) break;
+            cout << A.at(i).at(j) << " ";
             suf += A[i][j];
         }
         cout << suf << " | ";
