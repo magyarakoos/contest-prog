@@ -21,6 +21,7 @@ void solve() {
     int result = 1;
     while (!s.empty()) {
         int x = *s.begin();
+        cout << x << " ";
         if (x >= result) result++;
         s.erase(x);
     }
