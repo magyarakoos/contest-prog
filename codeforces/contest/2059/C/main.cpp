@@ -9,12 +9,22 @@ void solve() {
     for (auto& row : A) {
         for (int& x : row) cin >> x;
     }
-    multiset<array<int, 2>> ms;
+    multiset<int> s;
     for (int i = 0; i < N; i++) {
         int suf = 0;
-        ms.insert({0, i});
-        for (int j = N - 1; j >= 0; j--) {}
+        for (int j = N - 1; j >= 0; j--) {
+            if (A[i][j] != 1) break;
+            suf += A[i][j];
+        }
+        s.insert(suf);
     }
+    int result = 1;
+    while (!s.empty()) {
+        int x = *s.begin();
+        if (x >= result) x++;
+        s.erase(x);
+    }
+    cout << result << "\n";
 }
 
 int32_t main() {
