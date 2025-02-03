@@ -13,15 +13,17 @@ void solve() {
     for (int i = 0; i < N; i++) {
         int suf = 0;
         for (int j = N - 1; j >= 0; j--) {
+            cout << A[i][j] << " ";
             if (A[i][j] != 1) break;
             suf += A[i][j];
         }
+        cout << suf << " | ";
         s.insert(suf);
     }
+    cout << "\n";
     int result = 1;
     while (!s.empty()) {
         int x = *s.begin();
-        cout << x << " ";
         if (x >= result) result++;
         s.erase(x);
     }
