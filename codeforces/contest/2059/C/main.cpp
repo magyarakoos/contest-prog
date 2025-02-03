@@ -20,12 +20,9 @@ void solve() {
     }
     int result = 1;
     while (!s.empty()) {
-        cout << s.size() << " ";
         int x = *s.begin();
-        if (x >= result) x++;
+        if (x >= result) result++;
         s.erase(x);
-        cout << s.size() << endl;
-        sleep(1);
     }
     cout << result << "\n";
 }
