@@ -8,10 +8,7 @@ void solve() {
     vector A(N, vector<int>(N));
     for (auto& row : A) {
         for (int& x : row) cin >> x;
-        for (int x : row) cout << x << " ";
-        cout << "\n";
     }
-    return;
     multiset<int> s;
     for (int i = 0; i < N; i++) {
         int suf = 0;
@@ -23,9 +20,12 @@ void solve() {
     }
     int result = 1;
     while (!s.empty()) {
+        cout << s.size() << " ";
         int x = *s.begin();
         if (x >= result) x++;
         s.erase(x);
+        cout << s.size() << endl;
+        sleep(1);
     }
     cout << result << "\n";
 }
