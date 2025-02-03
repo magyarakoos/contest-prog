@@ -22,7 +22,7 @@ void solve() {
     while (!s.empty()) {
         int x = *s.begin();
         if (x >= result) result++;
-        s.erase(x);
+        s.extract(x);
     }
     cout << min(result, N) << "\n";
 }
