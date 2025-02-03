@@ -18,7 +18,7 @@ void solve() {
         }
         s.insert(suf);
     }
-    int result = 0;
+    int result = 1;
     while (!s.empty()) {
         int x = *s.begin();
         if (x >= result) result++;
