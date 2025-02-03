@@ -9,6 +9,10 @@ void solve() {
     for (auto& row : A) {
         for (int& x : row) cin >> x;
     }
+    if (N == 1) {
+        cout << "1\n";
+        return;
+    }
     multiset<int> s;
     for (int i = 0; i < N; i++) {
         int suf = 0;
