@@ -9,10 +9,6 @@ void solve() {
     for (auto& row : A) {
         for (int& x : row) cin >> x;
     }
-    if (N == 1) {
-        cout << "1\n";
-        return;
-    }
     multiset<int> s;
     for (int i = 0; i < N; i++) {
         int suf = 0;
@@ -28,7 +24,7 @@ void solve() {
         if (x >= result) result++;
         s.erase(x);
     }
-    cout << result << "\n";
+    cout << min(result, N) << "\n";
 }
 
 int32_t main() {
