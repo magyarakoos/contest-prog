@@ -16,7 +16,11 @@ int32_t main() {
     vector<int> ng(2 * N + 1);
     ng[2 * N] = 2 * N;
     for (int i = 2 * N - 1; i >= 0; i--) {
-        ng[i] = ng[i + 1];
+        if (P[i + 1] > P[i]) {
+            ng[i] = i + 1;
+        } else {
+            ng[i] = ng[i + 1];
+        }
         while (P[i] > P[ng[i]]) { ng[i] = ng[ng[i]]; }
     }
     for (int i = 0; i < 2 * N; i++) { cout << P[i] << " "; }
