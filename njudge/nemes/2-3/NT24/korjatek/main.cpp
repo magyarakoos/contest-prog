@@ -22,12 +22,13 @@ int32_t main() {
 
     vector<int> result(N);
     for (int j = N - 1; j >= 0; j--) {
+        swap(pos[j], pos[N - 1]);
         int curr = 0;
         for (int i = 0; i < N - 1; i++) {
             curr += d(pos[i], pos[i + 1]);
         }
         result[opos[j]] = curr;
-        swap(j, N - 1);
+        swap(pos[j], pos[N - 1]);
     }
 
     for (int x : result) cout << x << " ";
