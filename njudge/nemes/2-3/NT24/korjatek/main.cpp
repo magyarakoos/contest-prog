@@ -19,12 +19,16 @@ int32_t main() {
         return i <= j ? j - i : N + j - i;
     };
 
+    vector<int> result(N);
     for (int j = N - 1; j >= 0; j--) {
-        int result = 0;
+        int curr = 0;
         for (int i = 0; i < N - 1; i++) {
-            result += d(pos[i], pos[i + 1]);
+            curr += d(pos[i], pos[i + 1]);
         }
+        result[j] = curr;
         swap(pos[j + 1], pos[j]);
-        cout << result << "\n";
     }
+
+    for (int x : result) cout << x << " ";
+    cout << "\n";
 }
