@@ -14,19 +14,20 @@ int32_t main() {
         P[i]--;
         pos[P[i]] = i;
     }
+    auto opos = pos;
 
     auto d = [&](int i, int j) {
         return i <= j ? j - i : N + j - i;
     };
 
     vector<int> result(N);
-    for (int j = N - 1; j > 0; j--) {
+    for (int j = N - 1; j >= 0; j--) {
         int curr = 0;
         for (int i = 0; i < N - 1; i++) {
             curr += d(pos[i], pos[i + 1]);
         }
-        result[pos[j]] = curr;
-        swap(pos[j], pos[j - 1]);
+        result[opos[j]] = curr;
+        if (j > 0) swap(pos[j], pos[j - 1]);
     }
 
     for (int x : result) cout << x << " ";
