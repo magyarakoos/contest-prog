@@ -14,6 +14,7 @@ int32_t main() {
     P.push_back(INF);
 
     vector<int> ng(2 * N + 1);
+    ng[2 * N] = 2 * N;
     for (int i = 2 * N - 1; i >= 0; i--) {
         ng[i] = ng[i + 1];
         while (P[i] > P[ng[i]]) { ng[i] = ng[ng[i]]; }
