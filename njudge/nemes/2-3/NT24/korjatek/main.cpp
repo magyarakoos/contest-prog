@@ -26,7 +26,6 @@ int32_t main() {
             curr += d(pos[i], pos[i + 1]);
         }
         result[pos[j]] = curr;
-        swap(pos[j + 1], pos[j]);
     }
 
     for (int x : result) cout << x << " ";
