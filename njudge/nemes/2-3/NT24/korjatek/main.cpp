@@ -25,4 +25,12 @@ int32_t main() {
     }
 
     cout << result << "\n";
+    swap(pos[N - 2], pos[N - 1]);
+
+    result = 0;
+    for (int i = 0; i < N - 1; i++) {
+        result += d(pos[i], pos[i + 1]);
+    }
+
+    cout << result << "\n";
 }
