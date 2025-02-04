@@ -18,4 +18,11 @@ int32_t main() {
     auto d = [&](int i, int j) {
         return i <= j ? j - i : N + j - i;
     };
+
+    int result = 0;
+    for (int i = 0; i < N - 1; i++) {
+        result += d(pos[i], pos[i + 1]);
+    }
+
+    cout << result << "\n";
 }
