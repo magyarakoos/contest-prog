@@ -8,11 +8,10 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int N;
     cin >> N;
-    vector<int> P(N);
-    for (int& x : P) cin >> x;
-    P.insert(P.end(), P.begin(), P.end());
-    P.push_back(INF);
-
-    for (int i = 0; i < 2 * N; i++) { cout << P[i] << " "; }
-    cout << "\n";
+    vector<int> P(N), pos(N + 1);
+    for (int i = 0; i < N; i++) {
+        cin >> P[i];
+        P[i]--;
+        pos[P[i]] = i;
+    }
 }
