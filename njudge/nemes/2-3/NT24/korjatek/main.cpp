@@ -25,7 +25,7 @@ int32_t main() {
         for (int i = 0; i < N - 1; i++) {
             curr += d(pos[i], pos[i + 1]);
         }
-        result[j] = curr;
+        result[pos[j]] = curr;
         swap(pos[j + 1], pos[j]);
     }
 
