@@ -19,18 +19,12 @@ int32_t main() {
         return i <= j ? j - i : N + j - i;
     };
 
-    int result = 0;
-    for (int i = 0; i < N - 1; i++) {
-        result += d(pos[i], pos[i + 1]);
+    for (int j = N - 1; j >= 0; j--) {
+        int result = 0;
+        for (int i = 0; i < N - 1; i++) {
+            result += d(pos[i], pos[i + 1]);
+        }
+        swap(pos[j + 1], pos[j]);
+        cout << result << "\n";
     }
-
-    cout << result << "\n";
-    swap(pos[N - 2], pos[N - 1]);
-
-    result = 0;
-    for (int i = 0; i < N - 1; i++) {
-        result += d(pos[i], pos[i + 1]);
-    }
-
-    cout << result << "\n";
 }
