@@ -2,7 +2,14 @@
 using namespace std;
 #define int int64_t
 
+const int INF = 1e12;
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
+    int N;
+    cin >> N;
+    vector<int> P(N);
+    for (int& x : P) cin >> x;
+    P.insert(P.end(), P.begin(), P.end());
+    P.push_back(INF);
 }
-
