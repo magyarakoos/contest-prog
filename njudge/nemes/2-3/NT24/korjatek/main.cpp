@@ -14,4 +14,8 @@ int32_t main() {
         P[i]--;
         pos[P[i]] = i;
     }
+
+    auto d = [&](int i, int j) {
+        return i <= j ? j - i : N + j - i;
+    };
 }
