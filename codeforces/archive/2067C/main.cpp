@@ -2,6 +2,10 @@
 using namespace std;
 #define int int64_t
 
+int digsum(int n) {
+    return n ? n % 10 + digsum(n / 10) : 0;
+}
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int T, N;
