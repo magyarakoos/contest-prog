@@ -12,8 +12,8 @@ int32_t main() {
     cin >> T;
     while (T--) {
         cin >> N;
-        for (int i = 0; i < 5e3; i++) {
-            if (digsum(N) == i) {
+        for (int i = 0; i <= N; i++) {
+            if (digsum(N - i) == i) {
                 cout << i << "\n";
                 break;
             }
