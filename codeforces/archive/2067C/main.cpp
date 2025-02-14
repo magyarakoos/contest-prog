@@ -4,5 +4,10 @@ using namespace std;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
+    int T, N;
+    cin >> T;
+    while (T--) {
+        cin >> N;
+        for (int i = 0; i <= 5e3; i++) {}
+    }
 }
-
