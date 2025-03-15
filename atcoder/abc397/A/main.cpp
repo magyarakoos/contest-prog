@@ -6,17 +6,9 @@ const int INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
 
 #define cases 0
 void solve() {
-    int N;
-    cin >> N;
-    for (int y = 1; y * y * y < N; y++) {
-        double rt = cbrt(N + y * y * y);
-        int fl = floor(rt);
-        if (rt == fl) {
-            cout << fl << " " << y << "\n";
-            return;
-        }
-    }
-    cout << "-1\n";
+    double X;
+    cin >> X;
+    cout << (X < 37.5 ? 3 : X < 38.0 ? 2 : 1);
 }
 
 int32_t main() {
