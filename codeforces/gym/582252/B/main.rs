@@ -12,5 +12,7 @@ fn main() {
 
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
+    (1..=(a.max(b) * n));
+
     println!("{} {} {}", a, b, n);
 }
