@@ -1,5 +1,6 @@
-use std::convert::TryInto;
 use std::io;
+
+const MOD: i32 = 1e9 as i32 + 7;
 
 fn main() {
     let mut nums = String::new();
@@ -10,4 +11,6 @@ fn main() {
         .collect();
 
     let (a, b, n) = (nums[0], nums[1], nums[2]);
+
+    println!("{} {} {}", a, b, n);
 }
