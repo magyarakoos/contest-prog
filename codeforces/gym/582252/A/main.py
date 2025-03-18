@@ -1,4 +1,3 @@
 for _ in range(int(input())):
-    a, b = map(int, input().split())
+    a, b, ans = map(int, input().split()), 0
     a, b = min(a, b), max(a, b)
-    print(a, b)
