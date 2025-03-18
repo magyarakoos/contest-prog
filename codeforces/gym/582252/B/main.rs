@@ -14,9 +14,7 @@ fn main() {
 
     let good_nums: Vec<i32> = (1..=(a.max(b) * n))
         .filter(|&x| {
-            for c in x.to_string().chars() {
-                println!("{}", c);
-            }
+            println!("{}", x.to_string().len());
             true
         })
         .collect();
