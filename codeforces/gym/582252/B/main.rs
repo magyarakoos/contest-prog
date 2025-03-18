@@ -12,8 +12,13 @@ fn main() {
 
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
-    let good_nums = (1..=(a.max(b) * n))
-        .filter(|&x| for c in x.as_str().chars() {})
+    let good_nums: Vec<i32> = (1..=(a.max(b) * n))
+        .filter(|&x| {
+            for c in x.to_string().chars() {
+                println!("{}", c);
+            }
+            true
+        })
         .collect();
 
     println!("{} {} {}", a, b, n);
