@@ -15,13 +15,11 @@ fn main() {
     let good_nums: Vec<i32> = (1..=(a.max(b) * n))
         .filter(|&x| {
             for c in x.to_string().chars() {
-                if !matches!(c as i32 - '0' as i32, &a | &b) {
+                if ![a, b].contains(&(c as i32 - '0' as i32)) {
                     return false;
                 }
             }
             true
         })
         .collect();
-
-    println!("{} {} {}", a, b, n);
 }
