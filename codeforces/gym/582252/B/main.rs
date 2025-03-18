@@ -22,4 +22,5 @@ fn main() {
             true
         })
         .collect();
+    let m = good_nums.len();
 }
