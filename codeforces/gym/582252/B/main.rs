@@ -12,9 +12,9 @@ fn main() {
 
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
-    for i in (1..=(a.max(b) * n)) {
-        println!("{}", i);
-    }
+    let good_nums = (1..=(a.max(b) * n))
+        .filter(|&x| for c in x.as_str().chars() {})
+        .collect();
 
     println!("{} {} {}", a, b, n);
 }
