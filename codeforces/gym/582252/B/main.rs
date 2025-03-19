@@ -11,6 +11,12 @@ fn is_good(n: u32, nums: &[u32; 2]) -> bool {
     true
 }
 
+fn exp(a: u32, b: u32) {
+    0
+}
+
+fn inv(a: u32) {}
+
 fn choose(n: u32, k: u32) {}
 
 fn main() {
