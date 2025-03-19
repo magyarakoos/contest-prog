@@ -12,7 +12,7 @@ fn main() {
 
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
-    for i in (1..=(a.max(b) * n)) {
+    for i in 1..=(a.max(b) * n) {
         for c in i.to_string().chars() {
             println!("{}", c);
         }
