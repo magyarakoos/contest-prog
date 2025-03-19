@@ -1,6 +1,6 @@
 MOD, fact, ans = 10**9 + 7, [1], 0
 a, b, n = map(int, input().split())
-for i in range(100):
+for i in range(n):
     fact.append(fact[-1] * (i + 1) % MOD)
 
 def choose(n, k):
