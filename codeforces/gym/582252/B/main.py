@@ -10,6 +10,10 @@ def inv(n):
     return pow(n, MOD - 2, MOD)
 
 
+def choose(n, k):
+    return 0
+
+
 for i in range(max(a, b) * n + 1):
     if is_good(i):
         print(i)
