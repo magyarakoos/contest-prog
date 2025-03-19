@@ -5,16 +5,19 @@ const MOD: i32 = 1e9 as i32 + 7;
 fn main() {
     let mut nums = String::new();
     io::stdin().read_line(&mut nums).unwrap();
-    let nums: Vec<i32> = nums
+    let nums: Vec<u32> = nums
         .split_whitespace()
-        .map(|x| x.parse::<i32>().unwrap())
+        .map(|x| x.parse::<u32>().unwrap())
         .collect();
 
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
     for i in 1..=(a.max(b) * n) {
         for c in i.to_string().chars() {
-            println!("{}", c);
+            if ![a, b].contains(&c.to_digit(10).unwrap()) {
+                println!("Baj");
+                break;
+            }
         }
     }
 }
