@@ -1,3 +1,3 @@
 from itertools import combinations
 
-print(list(combinations("abcdef", 4)))
+print(["".join(seq) for seq in combinations(s, 4)])
