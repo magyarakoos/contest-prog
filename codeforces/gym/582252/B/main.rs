@@ -2,6 +2,15 @@ use std::io;
 
 const MOD: i32 = 1e9 as i32 + 7;
 
+fn is_good(n: u32) {
+    for c in n.to_string().chars() {
+        if ![a, b].contains(&c.to_digit(10).unwrap()) {
+            return false;
+        }
+    }
+    true
+}
+
 fn main() {
     let mut nums = String::new();
     io::stdin().read_line(&mut nums).unwrap();
@@ -13,11 +22,8 @@ fn main() {
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
     for i in 1..=(a.max(b) * n) {
-        for c in i.to_string().chars() {
-            if ![a, b].contains(&c.to_digit(10).unwrap()) {
-                println!("Baj");
-                break;
-            }
+        if is_good(i) {
+            println!("{}", i);
         }
     }
 }
