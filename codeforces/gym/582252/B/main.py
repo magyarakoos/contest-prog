@@ -6,10 +6,9 @@ for i in range(n):
 def choose(n, k):
     return fact[n] * pow(fact[k] * fact[n - k] % MOD, MOD - 2, MOD) % MOD
 
-for i in range(max(a, b) * n + 1):
+for j in range(n + 1):
+    i = j * a + (n - j) * b
     if all([int(c) in [a, b] for c in str(i)]):
-        for j in range(0, n + 1):
-            if j * a + (n - j) * b == i:
-                ans += choose(n, j)
-                ans %= MOD
+        ans += choose(n, j)
+        ans %= MOD
 print(ans)
