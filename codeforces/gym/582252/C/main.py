@@ -1,3 +1,7 @@
 from itertools import combinations
 
-print(["".join(seq) for seq in combinations(s, 4)])
+n = int(input())
+a = []
+for _ in range(n):
+    a.append(["".join(seq) for seq in combinations(input(), 4)])
+print(a)
