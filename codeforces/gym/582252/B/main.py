@@ -2,7 +2,7 @@ MOD = 10**9 + 7
 a, b, n = map(int, input().split())
 
 fact = [1]
-for i in range(n):
+for i in range(100):
     fact.append(fact[-1] * (i + 1) % MOD)
 
 
@@ -15,12 +15,12 @@ def inv(n):
 
 
 def choose(n, k):
-    return fact[n] * inv(fact[k]) * inv(fact[n - k])
+    return fact[n] * inv(fact[k] * fact[n - k] % MOD) % MOD
 
 
 for i in range(1, 11):
     for j in range(1, i + 1):
-        print(i, j)
+        print(i, j, choose(i, j))
 # for i in range(max(a, b) * n + 1):
 #     if is_good(i):
 #         print(i)
