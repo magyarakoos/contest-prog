@@ -21,6 +21,12 @@ fn main() {
     }
 
     for i in 1..=(a.max(b) * n) {
-        if is_good(i, &[a, b]) {}
+        if is_good(i, &[a, b]) {
+            for j in 0..=n {
+                if j * a + (n - j) * b == i {
+                    println!("Van valamennyi: {j} {n}");
+                }
+            }
+        }
     }
 }
