@@ -12,15 +12,9 @@ fn main() {
 
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
-    let good_nums: Vec<i32> = (1..=(a.max(b) * n))
-        .filter(|&x| {
-            for c in x.to_string().chars() {
-                if ![a, b].contains(&(c as i32 - '0' as i32)) {
-                    return false;
-                }
-            }
-            true
-        })
-        .collect();
-    let m = good_nums.len();
+    for i in (1..=(a.max(b) * n)) {
+        for c in i.to_string().chars() {
+            println!("{}", c);
+        }
+    }
 }
