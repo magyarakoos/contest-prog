@@ -15,9 +15,12 @@ def inv(n):
 
 
 def choose(n, k):
-    return fact(n) * inv(fact(k)) * inv(fact(n - k))
+    return fact[n] * inv(fact[k]) * inv(fact[n - k])
 
 
-for i in range(max(a, b) * n + 1):
-    if is_good(i):
-        print(i)
+for i in range(1, 11):
+    for j in range(1, i + 1):
+        print(i, j)
+# for i in range(max(a, b) * n + 1):
+#     if is_good(i):
+#         print(i)
