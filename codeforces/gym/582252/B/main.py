@@ -5,8 +5,6 @@ fact = [1]
 for i in range(n):
     fact.append(fact[-1] * (i + 1) % MOD)
 
-print(fact)
-
 
 def is_good(n):
     return all([int(c) in [a, b] for c in str(n)])
@@ -17,7 +15,7 @@ def inv(n):
 
 
 def choose(n, k):
-    return 0
+    return fact(n) * inv(fact(k)) * inv(fact(n - k))
 
 
 for i in range(max(a, b) * n + 1):
