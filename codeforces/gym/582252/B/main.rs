@@ -9,10 +9,9 @@ fn main() {
         .split_whitespace()
         .map(|x| x.parse::<u32>().unwrap())
         .collect();
-
     let (a, b, n) = (nums[0], nums[1], nums[2]);
 
-    fn is_good(n: u32, nums: [u32; 2]) -> bool {
+    fn is_good(n: u32, nums: &[u32; 2]) -> bool {
         for c in n.to_string().chars() {
             if !nums.contains(&c.to_digit(10).unwrap()) {
                 return false;
@@ -22,8 +21,6 @@ fn main() {
     }
 
     for i in 1..=(a.max(b) * n) {
-        if is_good(i, [a, b]) {
-            println!("{}", i);
-        }
+        if is_good(i, [a, b]) {}
     }
 }
