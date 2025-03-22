@@ -42,7 +42,7 @@ int32_t main() {
     }
      
     // Sort points by polar angle with respect to P[0]
-    sort(P.begin() + 1, P.end(), [&](const node& A, const node& B) {
+    sort(P.begin() + 1, P.end(), [&](node A,node B) {
         int t = turn(P[0][0], A[0], B[0]);
         if (t != 0) return t > 0;
         // If collinear, sort by distance
