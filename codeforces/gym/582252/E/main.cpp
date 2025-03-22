@@ -57,6 +57,10 @@ vector<point> hull(vector<point> ptS) {
         } else
             break;
     }
+
+    cout << result.size() << "\n";
+    for (auto [x, y] : result)
+        cout << x << " " << y << "\n";
     return result;
 }
 
@@ -64,7 +68,7 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     auto A = read({});
-    auto AB = read(A);
+    // auto AB = read(A);
 
     for (auto [x, y] : A) cout << x << " " << y << "\n";
     cout << "\n";
