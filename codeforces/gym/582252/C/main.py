@@ -7,6 +7,11 @@ vis = []
 g = [[] for _ in range(n)]
 pairs = {}
 
+def combs(s):
+    ans = []
+    for i in range(1, 5):
+        ans.extend(["".join(seq) for seq in combinations(l, i)])
+
 def dfs(i):
     if vis[i]:
         return False
@@ -22,10 +27,8 @@ for i in range(n):
     g[i] = ["".join(seq) for seq in combinations(l, 4)] if len(l) >= 4 else [l]
     vis = [0] * n
     if not dfs(i):
-        out.write("-1")
+        out.write("-1\n")
         exit(0)
 
 out.writelines([s + "\n" for _, s in sorted([(i, j) for j, i in pairs.items()])])
-
-
 
