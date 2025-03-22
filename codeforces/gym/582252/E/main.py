@@ -4,9 +4,11 @@ def read():
     for _ in range(n):
         x, y = map(int, input().split())
         a.append(complex(x, y))
-    return (n, a)
-N, A = read()
-M, B = read()
+    return a
 
-print(N, A)
-print(M, B)
+def hull():
+    pass
+
+A, B = read(), read()
+
+print(hull())
