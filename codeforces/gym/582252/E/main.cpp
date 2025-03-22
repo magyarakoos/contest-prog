@@ -38,7 +38,7 @@ int32_t main() {
 
     sort(P.begin() + 1, P.end(), [&](node A, node B) {
         int t = turn(P[0][0], A[0], B[0]);
-        if (t != 0) return t < 0;
+        if (t != 0) return t > 0;
         int d1 =
             (A[0][0] - P[0][0][0]) *
                 (A[0][0] - P[0][0][0]) +
