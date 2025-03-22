@@ -1,4 +1,6 @@
 from itertools import combinations
+f = open("input.txt")
+f.readline();
 
 n = int(input())
 a = []
