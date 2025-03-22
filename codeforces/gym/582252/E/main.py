@@ -7,7 +7,7 @@ def read():
     return a
 
 def turn(A, B, C):
-
+    return (C.x - A.x) * (B.y - A.y) - (C.y - A.y) * (B.x - A.x)
 
 def hull(ptS):
 
