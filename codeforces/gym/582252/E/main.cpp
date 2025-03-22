@@ -28,31 +28,29 @@ int32_t main() {
     }
     P.resize(N + M);
 
-    // Check for duplicate points
     sort(P.begin(), P.end());
     for (int i = 1; i < P.size(); i++) {
         if (P[i - 1][0][0] == P[i][0][0] &&
             P[i - 1][0][1] == P[i][0][1]) {
-            // Duplicate point found - one polygon vertex
-            // lies on another
             cout << "NO\n";
             return 0;
         }
     }
 
-    // Sort points by polar angle with respect to P[0]
     sort(P.begin() + 1, P.end(), [&](node A, node B) {
         int t = turn(P[0][0], A[0], B[0]);
         if (t != 0) return t > 0;
-        // If collinear, sort by distance
-        int d1 = (A[0][0] - P[0][0]) * (A[0][0] - P[0][0]) +
-                 (A[0][1] - P[0][1]) * (A[0][1] - P[0][1]);
-        int d2 = (B[0][0] - P[0][0]) * (B[0][0] - P[0][0]) +
-                 (B[0][1] - P[0][1]) * (B[0][1] - P[0][1]);
+        int d1 =
+            (A[0][0] - P[0][0][0]) *
+                (A[0][0] - P[0][0][0]) +
+            (A[0][1] - P[0][0][1]) * (A[0][1] - P[0][0][1]);
+        int d2 =
+            (B[0][0] - P[0][0][0]) *
+                (B[0][0] - P[0][0][0]) +
+            (B[0][1] - P[0][0][1]) * (B[0][1] - P[0][0][1]);
         return d1 < d2;
     });
 
-    // Graham scan to find convex hull
     vector<node> hull;
     hull.push_back(P[0]);
     hull.push_back(P[1]);
@@ -67,14 +65,11 @@ int32_t main() {
         hull.push_back(P[i]);
     }
 
-    // Check if any point of B is part of the convex hull
     for (const auto& node : hull) {
-        if (node[1][0] ==
-            1) { // It's a point from polygon B
+        if (node[1][0] == 1) {
             cout << "NO\n";
             return 0;
         }
     }
-
     cout << "YES\n";
 }
