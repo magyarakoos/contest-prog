@@ -3,9 +3,8 @@ using namespace std;
 using point = array<int64_t, 2>;
 
 int fordul(point A, point B, point C) {
-    int64_t P = (B[0] - A[0]) * (C[1] - A[1]) -
-                (C[0] - A[0]) * (B[1] - A[1]);
-    return P ? P < 0 ? -1 : 1 : 0;
+    return (B[0] - A[0]) * (C[1] - A[1]) -
+           (C[0] - A[0]) * (B[1] - A[1]);
 }
 
 bool kozte(point A, point B, point C) {
