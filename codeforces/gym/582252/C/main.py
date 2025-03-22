@@ -24,9 +24,8 @@ for i in range(n):
         print(-1)
         exit(0)
 
-ans = ["" for _ in range(n)]
-for j, i in pairs.items():
-    ans[i] = j
+ans = [( i, j ) for j, i in pairs.items()]
+print(ans)
 
 print(ans)
 
