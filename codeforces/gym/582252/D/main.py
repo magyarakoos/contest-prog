@@ -11,8 +11,8 @@ for _ in range(int(input())):
             if j - a[i] + (i == 0) >= 0:
                 for k in range(j - a[i] + 1, j + 1):
                     dp[i][j] += abs(k - i)
-                if i > 0:
-                    dp[i][j] += min(dp[i - 1][:j - a[i] + 1])
+                # if i > 0:
+                #     dp[i][j] += min(dp[i - 1][:j - a[i] + 1])
             else:
                 dp[i][j] = 10**9
         print(dp[i])
