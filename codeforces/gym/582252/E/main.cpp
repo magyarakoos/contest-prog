@@ -43,7 +43,7 @@ vector<point> hull(vector<point> ptS) {
 
     for (int i = 1; i < N; i++) {
         while (K > 0 && fordul(result[K - 1], result[K],
-                               ptS[i]) <= 0) {
+                               ptS[i]) < 0) {
             K--;
             result.pop_back();
         }
