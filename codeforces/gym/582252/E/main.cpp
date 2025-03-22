@@ -13,24 +13,20 @@ int turn(const point& A, const point& B, const point& C) {
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    // Read polygon A
+    vector<node> P(2e5);
     int N;
     cin >> N;
-    vector<node> P;
     for (int i = 0; i < N; i++) {
-        int x, y;
-        cin >> x >> y;
-        P.push_back({{x, y}, {0, i}});
+        cin >> P[i][0][0] >> P[i][0][1];
+        P[i][1] = {0, i};
     }
-
-    // Read polygon B
     int M;
     cin >> M;
     for (int i = 0; i < M; i++) {
-        int x, y;
-        cin >> x >> y;
-        P.push_back({{x, y}, {1, i}});
+        cin >> P[i + N][0][0] >> P[i + N][0][1];
+        P[i + N][1] = {1, i};
     }
+    P.resize(N + M);
 
     // Check for duplicate points
     sort(P.begin(), P.end());
