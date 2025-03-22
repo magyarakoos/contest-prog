@@ -55,10 +55,6 @@ int32_t main() {
         K++;
     }
 
-    sort(hull.begin(), hull.end());
-    hull.resize(unique(hull.begin(), hull.end()) -
-                hull.begin());
-
     for (int i = 0; i < K; i++) {
         if (hull[i][1][0]) {
             cout << "NO\n";
