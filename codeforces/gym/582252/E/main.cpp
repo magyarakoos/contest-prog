@@ -16,6 +16,8 @@ bool kozte(point A, point B, point C) {
 }
 
 vector<point> hull(vector<point> ptS) {
+    int N = ptS.size();
+
     sort(ptS.begin(), ptS.end());
     sort(ptS.begin() + 1, ptS.end(), [&](point a, point b) {
         if (fordul(ptS[0], a, b) == 0 &&
@@ -44,6 +46,7 @@ vector<point> hull(vector<point> ptS) {
         } else
             break;
     }
+    return result;
 }
 
 int main() {
