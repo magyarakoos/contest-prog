@@ -1,2 +1,6 @@
+A = []
+def read():
 N = int(input())
-complex(map(int, input().split()))
+for _ in range(N):
+    x, y = map(int, input().split())
+    A.append(complex(x, y))
