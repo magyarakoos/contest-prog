@@ -5,11 +5,14 @@ n = int(f.readline())
 a = []
 vis = [0] * n
 g = [[] for _ in range(n)]
+pairs = {}
 
 def dfs(i):
     if vis[i]:
         return 0
     vis[i] = 1
+    for j in g[i]:
+        
 
 
 for i in range(n):
