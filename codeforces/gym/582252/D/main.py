@@ -5,4 +5,3 @@ for _ in range(int(input())):
     a = list(map(int, input().split()))
     used = [0] * N
     pq = []
-    heappush(pq, 1)
