@@ -47,17 +47,12 @@ int32_t main() {
         K++;
     }
 
-    for (int i = 1; i < K; i++) {
-        if (hull[i - 1][1][0] != hull[i][1][0]) {
-            if (hull[i - 1][1][0] > hull[i][1][0]) {
-                swap(hull[i - 1], hull[i]);
-            }
-            cout << hull[i - 1][1][1] + 1 << " "
-                 << hull[i][1][1] + 1 << "\n";
+    for (int i = 0; i < K; i++) {
+        if (hull[i][1][0]) {
+            cout << "NO\n";
             return 0;
         }
     }
-
-    cout << "0 0\n";
+    cout << "YES\n";
 }
 
