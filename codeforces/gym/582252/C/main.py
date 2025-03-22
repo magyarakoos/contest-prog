@@ -2,7 +2,6 @@ from itertools import combinations
 f = open("input.txt")
 
 n = int(f.readline())
-a = []
 vis = []
 g = [[] for _ in range(n)]
 pairs = {}
@@ -25,8 +24,7 @@ for i in range(n):
         print(-1)
         exit(0)
 
-
-print(a)
+ans = ["" for _ in range(n)]
 
 # f = open("output.txt", 'w')
 
