@@ -7,12 +7,15 @@ for _ in range(int(input())):
     pq = [(0, i, x, x) for i, x in enumerate(a)]
     result = 0
     while len(pq) > 0:
-        d, ai, pi, cp = heappop(pq)
-        if done[ai]:
+        d, i, x, y = heappop(pq)
+        if done[i]:
             continue
-        if not used[j]:
-            used[j] = 1
+        if not used[y]:
+            used[y] = 1
             done[i] = 1
             result += d
             continue
-        if i == j:
+        if x == y:
+            heappush(pq, (1, i, x, y - 1))
+        if x >= y:
+            heappush(pq, (1, i, x, y + 1))
