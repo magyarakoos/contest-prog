@@ -11,9 +11,12 @@ def read():
 def turn(A, B, C):
     return (C.x - A.x) * (B.y - A.y) - (C.y - A.y) * (B.x - A.x)
 
+
 def hull(ptS):
     ptS.sort()
-    ptS = ptS[0] + sorted(ptS, key=cmp_to_key(cmp))
+    def cmp(A, B):
+        return True
+    ptS = ptS[0] + sorted(ptS[1:], key=cmp_to_key(cmp))
     return ptS
 
 a, b = read(), read()
