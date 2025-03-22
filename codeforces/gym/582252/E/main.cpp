@@ -66,10 +66,12 @@ int main() {
     auto A = read({});
     auto AB = read(A);
 
+    assert(A.size() == hull(A).size());
+
     for (auto [x, y] : A) cout << x << " " << y << "\n";
     cout << "\n";
 
-    for (auto [x, y] : hull(A))
+    for (auto [x, y] : hull(AB))
         cout << x << " " << y << "\n";
     cout << "\n";
 }
