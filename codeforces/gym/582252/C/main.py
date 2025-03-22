@@ -10,7 +10,8 @@ pairs = {}
 def combs(s):
     ans = []
     for i in range(1, 5):
-        ans.extend(["".join(seq) for seq in combinations(l, i)])
+        ans.extend(["".join(seq) for seq in combinations(s, i)])
+    return ans
 
 def dfs(i):
     if vis[i]:
@@ -23,8 +24,8 @@ def dfs(i):
     return False
 
 for i in range(n):
-    l = fin.readline().strip()
-    g[i] = ["".join(seq) for seq in combinations(l, 4)] if len(l) >= 4 else [l]
+    line = fin.readline().strip()
+    g[i] = combs(line) if len(line) >= 4 else [line]
     vis = [0] * n
     if not dfs(i):
         out.write("-1\n")
