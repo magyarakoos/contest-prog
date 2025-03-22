@@ -6,8 +6,12 @@ def read():
         a.append(complex(x, y))
     return a
 
+def turn(A, B, C):
+
+
 def hull(ptS):
+
     pass
 
-A, B = read(), read()
-print("YES" if hull(A + B) == hull(A) else "NO")
+a, b = read(), read()
+print("YES" if hull(a + b) == a else "NO")
