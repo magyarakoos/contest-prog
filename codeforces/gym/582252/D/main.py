@@ -1,25 +1,5 @@
-from heapq import heappush, heappop
-
 for _ in range(int(input())):
     N = int(input())
     a = list(map(int, input().split()))
-    done = [0] * N
-    used = set()
-    pq = [(0, i, x, x) for i, x in enumerate(a)]
     result = 0
-    while len(pq) > 0:
-        d, i, x, y = heappop(pq)
-        if done[i]:
-            continue
-        if not y in used:
-            used.add(y)
-            done[i] = 1
-            result += d
-            continue
-        if x >= y and y > 1:
-            heappush(pq, (d + 1, i, x, y - 1))
-        if x <= y:
-            heappush(pq, (d + 1, i, x, y + 1))
-    for i in range(1, max(a) + 1):
-        print(1 if i in used else 0, end="")
-    print(" | ", result)
+    
