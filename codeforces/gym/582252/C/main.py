@@ -24,7 +24,9 @@ for i in range(n):
         print(-1)
         exit(0)
 
-print(pairs.items())
+for i, s in sorted([(i, j) for j, i in pairs.items()]):
+    print(s)
+
 
 # f = open("output.txt", 'w')
 
