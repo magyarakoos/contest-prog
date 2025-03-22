@@ -3,21 +3,25 @@ f = open("input.txt")
 
 n = int(f.readline())
 a = []
-vis = [0] * n
+vis = []
 g = [[] for _ in range(n)]
 pairs = {}
 
 def dfs(i):
     if vis[i]:
-        return 0
+        return False
     vis[i] = 1
     for j in g[i]:
-        
-
+        if not j in pairs or dfs(pairs[j]):
+            pairs[j] = i
+            return True
+    return False
 
 for i in range(n):
     l = f.readline().strip()
     g[i] = ["".join(seq) for seq in combinations(l, 4)] if len(l) >= 4 else [l]
+    vis = [0] * n
+    print(vis)
 
 
 print(a)
