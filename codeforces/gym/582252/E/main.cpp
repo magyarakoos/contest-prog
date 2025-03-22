@@ -23,13 +23,13 @@ vector<point> read(vector<point> a) {
         cin >> x >> y;
         a.push_back({x, y});
     }
+    sort(a.begin(), a.end());
     return a;
 }
 
 vector<point> hull(vector<point> ptS) {
     int N = ptS.size();
 
-    sort(ptS.begin(), ptS.end());
     sort(ptS.begin() + 1, ptS.end(), [&](point a, point b) {
         if (fordul(ptS[0], a, b) == 0 &&
             !kozte(ptS[0], a, b)) {
@@ -65,8 +65,5 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     auto A = read({});
-    auto AB = read(A);
-
-    assert(A.size() == hull(A).size());
-    cout << (A == AB) << "\n";
+    auto AB = hull(read(A));
 }
