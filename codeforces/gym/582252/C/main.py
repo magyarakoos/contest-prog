@@ -25,8 +25,7 @@ for i in range(n):
         out.write("-1")
         exit(0)
 
-for i, s in sorted([(i, j) for j, i in pairs.items()]):
-    out.writelines(s)
+out.writelines([s + "\n" for _, s in sorted([(i, j) for j, i in pairs.items()])])
 
 
 
