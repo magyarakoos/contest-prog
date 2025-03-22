@@ -4,16 +4,15 @@ for _ in range(int(input())):
     N = int(input())
     a = list(map(int, input().split()))
     used, done = [0] * N, [0] * N
-    pq = [(0, i, i) for i in range(N)]
+    pq = [(0, i, x, x) for i, x in enumerate(a)]
     result = 0
     while len(pq) > 0:
-        d, i, j = heappop(pq)
-        if done[i]:
+        d, ai, pi, cp = heappop(pq)
+        if done[ai]:
             continue
         if not used[j]:
             used[j] = 1
             done[i] = 1
             result += d
             continue
-        heappush(pq, (i, j + 1))
-        heappush(pq, (i, j - 1))
+        if i == j:
