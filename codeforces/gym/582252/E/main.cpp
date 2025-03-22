@@ -58,7 +58,7 @@ int32_t main() {
         while (hull.size() >= 2 &&
                turn(hull[hull.size() - 2][0],
                     hull[hull.size() - 1][0],
-                    P[i][0]) <= 0) {
+                    P[i][0]) < 0) {
             hull.pop_back();
         }
         hull.push_back(P[i]);
