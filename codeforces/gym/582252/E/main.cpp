@@ -34,6 +34,11 @@ int32_t main() {
         return t ? t > 0 : A[0] < B[0];
     });
 
+    for (auto node : P) {
+        cout << node[0][0] << " " << node[0][1] << "\n";
+    }
+    cout << "\n";
+
     vector<node> hull({P[0], P[1]});
     int K = 2;
     for (int i = 2; i < N + M; i++) {
