@@ -37,9 +37,9 @@ int32_t main() {
     {
         int i;
         for (i = P.size() - 2; i >= 1; i--) {
-            if (turn(P[0], P.back(), P[i])) break;
+            if (turn(P[0][0], P.back()[0], P[i][0])) break;
         }
-        reverse(P.begin() + i + 1, P.end())
+        reverse(P.begin() + i + 1, P.end());
     }
 
     for (auto node : P) {
