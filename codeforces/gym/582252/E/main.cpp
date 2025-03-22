@@ -57,6 +57,7 @@ vector<point> hull(vector<point> ptS) {
         } else
             break;
     }
+    sort(result.begin(), result.end());
     return result;
 }
 
@@ -67,11 +68,5 @@ int main() {
     auto AB = read(A);
 
     assert(A.size() == hull(A).size());
-
-    for (auto [x, y] : A) cout << x << " " << y << "\n";
-    cout << "\n";
-
-    for (auto [x, y] : hull(AB))
-        cout << x << " " << y << "\n";
-    cout << "\n";
+    cout << (A == AB) << "\n";
 }
