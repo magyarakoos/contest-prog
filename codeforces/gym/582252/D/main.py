@@ -7,7 +7,7 @@ for _ in range(int(input())):
     dp = [[10**9] * N for _ in range(N)]
     for i in range(N):
         for j in range(N):
-            if j + 1 < a[i]:
+            if j + 1 + (i > 0) < a[i]:
                 continue
             for k in range(j - a[i] + 1, j + 1):
                 dp[i][j] += abs(k - i)
