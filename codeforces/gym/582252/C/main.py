@@ -1,9 +1,8 @@
 from itertools import combinations
 f = open("input.txt")
-f.readline();
 
-n = int(input())
+n = int(f.readline())
 a = []
 for _ in range(n):
-    a.append(["".join(seq) for seq in combinations(input(), 4)])
+    a.append(["".join(seq) for seq in combinations(f.readline(), 4)])
 print(a)
