@@ -12,6 +12,7 @@ for _ in range(int(input())):
                 for l in range(k, j + 1):
                     dp[i][j] += abs(l - i)
                 if i > 0 and sum(a[:i]) > 0:
+                    print("YOLO", k > 0)
                     dp[i][j] += min(dp[i - 1][:k]) if k > 0 else 10**9
             else:
                 dp[i][j] = 10**9
