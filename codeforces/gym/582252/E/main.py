@@ -10,8 +10,8 @@ def turn(A, B, C):
     return (C.x - A.x) * (B.y - A.y) - (C.y - A.y) * (B.x - A.x)
 
 def hull(ptS):
-
-    pass
+    ptS.sort() 
+    return ptS
 
 a, b = read(), read()
 print("YES" if list(set(a + b)) == a + b and hull(a + b) == a else "NO")
