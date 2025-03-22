@@ -15,6 +15,5 @@ for _ in range(int(input())):
                     dp[i][j] += min(dp[i - 1][:k]) if k > 0 else 10**9
             else:
                 dp[i][j] = 10**9
-        print(dp[i])
 
     print(min(dp[-1]))
