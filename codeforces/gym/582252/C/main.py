@@ -1,8 +1,8 @@
 from itertools import combinations
-in = open("input.txt")
+fin = open("input.txt")
 out = open("output.txt", "w")
 
-n = int(in.readline())
+n = int(fin.readline())
 vis = []
 g = [[] for _ in range(n)]
 pairs = {}
@@ -18,15 +18,15 @@ def dfs(i):
     return False
 
 for i in range(n):
-    l = in.readline().strip()
+    l = fin.readline().strip()
     g[i] = ["".join(seq) for seq in combinations(l, 4)] if len(l) >= 4 else [l]
     vis = [0] * n
     if not dfs(i):
-        print(-1)
+        out.write("-1")
         exit(0)
 
 for i, s in sorted([(i, j) for j, i in pairs.items()]):
-    print(s)
+    out.writelines(s)
 
 
 
