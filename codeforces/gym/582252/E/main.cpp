@@ -29,6 +29,7 @@ vector<point> read(vector<point> a) {
 vector<point> hull(vector<point> ptS) {
     int N = ptS.size();
 
+    sort(ptS.begin(), ptS.end());
     sort(ptS.begin() + 1, ptS.end(), [&](point a, point b) {
         if (fordul(ptS[0], a, b) == 0 &&
             !kozte(ptS[0], a, b)) {
@@ -42,7 +43,7 @@ vector<point> hull(vector<point> ptS) {
 
     for (int i = 1; i < N; i++) {
         while (K > 0 && fordul(result[K - 1], result[K],
-                               ptS[i]) < 0) {
+                               ptS[i]) <= 0) {
             K--;
             result.pop_back();
         }
