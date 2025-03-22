@@ -21,7 +21,9 @@ for i in range(n):
     l = f.readline().strip()
     g[i] = ["".join(seq) for seq in combinations(l, 4)] if len(l) >= 4 else [l]
     vis = [0] * n
-    print(vis)
+    if not dfs(i):
+        print(-1)
+        exit(0)
 
 
 print(a)
