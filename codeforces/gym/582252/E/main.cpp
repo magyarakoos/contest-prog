@@ -60,9 +60,6 @@ vector<point> hull(vector<point> ptS) {
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
-    int N;
-    cin >> N;
-
-    vector<point> ptS(N);
-    for (auto& [x, y] : ptS) cin >> x >> y;
+    auto A = read({});
+    auto AB = read(A);
 }
