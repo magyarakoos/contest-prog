@@ -29,6 +29,14 @@ int32_t main() {
     P.resize(N + M);
 
     sort(P.begin(), P.end());
+
+    for (int i = 1; i < N + M; i++) {
+        if (P[i - 1][0] == P[i][0]) {
+            cout << "NO\n";
+            return 0;
+        }
+    }
+
     sort(P.begin() + 1, P.end(), [&](node A, node B) {
         int t = turn(P[0][0], A[0], B[0]);
         return t ? t > 0 : A[0] < B[0];
