@@ -34,6 +34,14 @@ int32_t main() {
         return t ? t > 0 : A[0] < B[0];
     });
 
+    {
+        int i;
+        for (i = P.size() - 2; i >= 1; i--) {
+            if (turn(P[0], P.back(), P[i])) break;
+        }
+        reverse(P.begin() + i + 1, P.end())
+    }
+
     for (auto node : P) {
         cout << node[0][0] << " " << node[0][1] << "\n";
     }
