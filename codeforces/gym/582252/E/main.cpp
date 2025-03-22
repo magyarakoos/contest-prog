@@ -23,7 +23,6 @@ vector<point> read(vector<point> a) {
         cin >> x >> y;
         a.push_back({x, y});
     }
-    sort(a.begin(), a.end());
     return a;
 }
 
@@ -66,4 +65,8 @@ int main() {
 
     auto A = read({});
     auto AB = hull(read(A));
+    sort(A.begin(), A.end());
+    sort(AB.begin(), AB.end());
+
+    cout << (A == AB ? "YES" : "NO") << "\n";
 }
