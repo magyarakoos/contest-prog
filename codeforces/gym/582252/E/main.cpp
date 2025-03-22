@@ -15,17 +15,6 @@ bool kozte(point A, point B, point C) {
              min(A[1], B[1]) <= C[1]));
 }
 
-vector<point> read(vector<point> a) {
-    int N;
-    cin >> N;
-    while (N--) {
-        int x, y;
-        cin >> x >> y;
-        a.push_back({x, y});
-    }
-    return a;
-}
-
 vector<point> hull(vector<point> ptS) {
     int N = ptS.size();
 
@@ -58,6 +47,17 @@ vector<point> hull(vector<point> ptS) {
             break;
     }
     return result;
+}
+
+vector<point> read(vector<point> a) {
+    int N;
+    cin >> N;
+    while (N--) {
+        int x, y;
+        cin >> x >> y;
+        a.push_back({x, y});
+    }
+    return a;
 }
 
 int main() {
