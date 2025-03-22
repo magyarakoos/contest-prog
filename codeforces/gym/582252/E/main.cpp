@@ -42,11 +42,6 @@ int32_t main() {
         reverse(P.begin() + i + 1, P.end());
     }
 
-    for (auto node : P) {
-        cout << node[0][0] << " " << node[0][1] << "\n";
-    }
-    cout << "\n";
-
     vector<node> hull({P[0], P[1]});
     int K = 2;
     for (int i = 2; i < N + M; i++) {
@@ -58,10 +53,6 @@ int32_t main() {
         }
         hull.push_back(P[i]);
         K++;
-    }
-
-    for (auto node : hull) {
-        cout << node[0][0] << " " << node[0][1] << "\n";
     }
 
     for (int i = 0; i < K; i++) {
