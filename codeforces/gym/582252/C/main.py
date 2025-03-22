@@ -25,6 +25,10 @@ for i in range(n):
         exit(0)
 
 ans = ["" for _ in range(n)]
+for j, i in pairs.items():
+    ans[i] = j
+
+print(ans)
 
 # f = open("output.txt", 'w')
 
