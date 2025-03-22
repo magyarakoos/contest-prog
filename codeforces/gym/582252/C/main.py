@@ -6,5 +6,6 @@ a = []
 for _ in range(n):
     a.append(["".join(seq) for seq in combinations(f.readline(), 4)])
 
-f = open("output.txt")
-f.write(str(a));
+# f = open("output.txt", 'w')
+print(a)
+
