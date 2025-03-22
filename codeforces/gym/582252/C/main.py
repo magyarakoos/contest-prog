@@ -3,8 +3,8 @@ f = open("input.txt")
 
 n = int(f.readline())
 a = []
-for l in f.readlines():
-    a.append(["".join(seq) for seq in combinations(l[-1::], 4)])
+for l in map(strip, f.readlines()):
+    # a.append(["".join(seq) for seq in combinations(l[:-1], 4)])
 
 print(a)
 
