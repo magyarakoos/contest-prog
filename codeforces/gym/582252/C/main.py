@@ -12,12 +12,10 @@ def dfs(i):
     vis[i] = 1
 
 
-for _ in range(n):
+for i in range(n):
     l = f.readline().strip()
-    # if len(l) >= 4:
-    #     a.append(["".join(seq) for seq in combinations(l, 4)])
-    # else:
-    #     a.append([l])
+    g[i] = ["".join(seq) for seq in combinations(l, 4)] if len(l) >= 4 else [l]
+
 
 print(a)
 
