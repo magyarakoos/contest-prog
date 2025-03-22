@@ -8,8 +8,12 @@ for _ in range(int(input())):
     result = 0
     while len(pq) > 0:
         i, j = heappop(pq)
-        d = abs(i - j)
+        if done[i]:
+            continue
         if not used[j]:
             used[j] = 1
-            result += d
+            done[i] = 1
+            result += abs(i - j)
             continue
+        heappush(pq, (i, j + 1))
+        heappush(pq, (i, j - 1))
