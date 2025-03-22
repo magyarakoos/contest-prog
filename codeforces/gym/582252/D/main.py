@@ -7,4 +7,6 @@ for _ in range(int(input())):
     dp = [[0] * N for _ in range(N)]
     for i in range(N):
         for j in range(N):
-            pass
+            if j + 1 < a[i]:
+                dp[i][j] = 10**9
+                continue
