@@ -34,7 +34,7 @@ int32_t main() {
         return t ? t > 0 : A[0] < B[0];
     });
 
-    {
+    { // csak emiatt nem működött egész idáig fml
         int i;
         for (i = P.size() - 2; i >= 1; i--) {
             if (turn(P[0][0], P.back()[0], P[i][0])) break;
