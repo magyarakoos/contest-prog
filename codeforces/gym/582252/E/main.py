@@ -6,9 +6,8 @@ def read():
         a.append(complex(x, y))
     return a
 
-def hull():
+def hull(ptS):
     pass
 
 A, B = read(), read()
-
-print(hull())
+print("YES" if hull(A + B) == hull(A) else "NO")
