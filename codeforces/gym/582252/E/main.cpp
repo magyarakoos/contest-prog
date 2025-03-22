@@ -3,8 +3,9 @@ using namespace std;
 using point = array<int64_t, 2>;
 
 int fordul(point A, point B, point C) {
-    return (B[0] - A[0]) * (C[1] - A[1]) -
-           (C[0] - A[0]) * (B[1] - A[1]);
+    int64_t P = (B[0] - A[0]) * (C[1] - A[1]) -
+                (C[0] - A[0]) * (B[1] - A[1]);
+    return P ? P < 0 ? -1 : 1 : 0;
 }
 
 bool kozte(point A, point B, point C) {
@@ -15,19 +16,14 @@ bool kozte(point A, point B, point C) {
              min(A[1], B[1]) <= C[1]));
 }
 
-vector<point> read(vector<point> a) {
+int main() {
+    cin.tie(0), ios::sync_with_stdio(0);
+
     int N;
     cin >> N;
-    while (N--) {
-        int x, y;
-        cin >> x >> y;
-        a.push_back({x, y});
-    }
-    return a;
-}
 
-vector<point> hull(vector<point> ptS) {
-    int N = ptS.size();
+    vector<point> ptS(N);
+    for (auto& [x, y] : ptS) cin >> x >> y;
 
     sort(ptS.begin(), ptS.end());
     sort(ptS.begin() + 1, ptS.end(), [&](point a, point b) {
@@ -61,19 +57,4 @@ vector<point> hull(vector<point> ptS) {
     cout << result.size() << "\n";
     for (auto [x, y] : result)
         cout << x << " " << y << "\n";
-    return result;
-}
-
-int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-    auto A = read({});
-    // auto AB = read(A);
-
-    for (auto [x, y] : A) cout << x << " " << y << "\n";
-    cout << "\n";
-
-    for (auto [x, y] : hull(A))
-        cout << x << " " << y << "\n";
-    cout << "\n";
 }
