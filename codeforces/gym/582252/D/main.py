@@ -9,3 +9,5 @@ for _ in range(int(input())):
         for j in range(N):
             if j + 1 < a[i]:
                 continue
+            for k in range(j - a[i] + 1, j + 1):
+                dp[i][j] += abs(k - i)
