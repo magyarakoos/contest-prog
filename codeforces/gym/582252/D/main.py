@@ -20,4 +20,6 @@ for _ in range(int(input())):
             heappush(pq, (d + 1, i, x, y - 1))
         if x <= y:
             heappush(pq, (d + 1, i, x, y + 1))
-    print(result)
+    for i in range(1, max(a) + 1):
+        print(1 if i in used else 0, end="")
+    print(" | ", result)
