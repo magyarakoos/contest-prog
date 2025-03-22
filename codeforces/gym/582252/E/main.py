@@ -14,4 +14,4 @@ def hull(ptS):
     pass
 
 a, b = read(), read()
-print("YES" if hull(a + b) == a else "NO")
+print("YES" if list(set(a + b)) == a + b and hull(a + b) == a else "NO")
