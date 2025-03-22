@@ -15,15 +15,7 @@ bool kozte(point A, point B, point C) {
              min(A[1], B[1]) <= C[1]));
 }
 
-int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-    int N;
-    cin >> N;
-
-    vector<point> ptS(N);
-    for (auto& [x, y] : ptS) cin >> x >> y;
-
+vector<point> hull(vector<point> ptS) {
     sort(ptS.begin(), ptS.end());
     sort(ptS.begin() + 1, ptS.end(), [&](point a, point b) {
         if (fordul(ptS[0], a, b) == 0 &&
@@ -52,6 +44,16 @@ int main() {
         } else
             break;
     }
+}
+
+int main() {
+    cin.tie(0), ios::sync_with_stdio(0);
+
+    int N;
+    cin >> N;
+
+    vector<point> ptS(N);
+    for (auto& [x, y] : ptS) cin >> x >> y;
 
     cout << result.size() << "\n";
     for (auto [x, y] : result)
