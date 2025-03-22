@@ -47,6 +47,10 @@ int32_t main() {
         K++;
     }
 
+    for (auto node : hull) {
+        cout << node[0][0] << " " << node[0][1] << "\n";
+    }
+
     for (int i = 0; i < K; i++) {
         if (hull[i][1][0]) {
             cout << "NO\n";
