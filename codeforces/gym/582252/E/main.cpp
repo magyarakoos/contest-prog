@@ -15,6 +15,14 @@ bool kozte(point A, point B, point C) {
              min(A[1], B[1]) <= C[1]));
 }
 
+vector<point> read() {
+    int N;
+    cin >> N;
+    vector<point> a(N);
+    for (auto& [x, y] : a) cin >> x >> y;
+    return a;
+}
+
 vector<point> hull(vector<point> ptS) {
     int N = ptS.size();
 
@@ -57,8 +65,4 @@ int main() {
 
     vector<point> ptS(N);
     for (auto& [x, y] : ptS) cin >> x >> y;
-
-    cout << result.size() << "\n";
-    for (auto [x, y] : result)
-        cout << x << " " << y << "\n";
 }
