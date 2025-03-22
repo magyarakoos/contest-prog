@@ -11,7 +11,7 @@ for _ in range(int(input())):
             if j - a[i] + 1 >= 0:
                 for k in range(j - a[i] + 1, j + 1):
                     dp[i][j] += abs(k - i)
-                if i > 0:
+                if i > 0 and sum(a[:i]) > 0:
                     dp[i][j] += min(dp[i - 1][:j - a[i] + 1]) if j - a[i] + 1 > 0 else 10**9
             else:
                 dp[i][j] = 10**9
