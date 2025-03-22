@@ -68,4 +68,7 @@ int main() {
 
     for (auto [x, y] : A) cout << x << " " << y << "\n";
     cout << "\n";
+
+    for (auto [x, y] : AB) cout << x << " " << y << "\n";
+    cout << "\n";
 }
