@@ -13,4 +13,7 @@ int main() {
             m[j].push_back(i);
         }
     }
+    int N, x;
+    cin >> N >> x;
+    for (; cin >> x && N--;) {}
 }
