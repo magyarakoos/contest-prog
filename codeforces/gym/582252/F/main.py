@@ -1,6 +1,6 @@
 from math import gcd
 
-N, MAXN = int(input()), 10**2 + 1
+_, MAXN = int(input()), 10**2 + 1
 
 m = [[] for _ in range(MAXN)]
 s = [1] * MAXN
@@ -9,7 +9,9 @@ for i in range(2, MAXN):
         s[j] = 0
         m[j].append(i)
 
-for a in map(int, input().split()):
-    for d in m[a]:
-        for e in m[a]:
-            if not d == 1 and math
+a1, a2 = [], []
+for x in map(int, input().split()):
+    for d in m[x]:
+        for e in m[x]:
+            if not d == e and gcd(d + e, x) == 1:
+
