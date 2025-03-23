@@ -1,6 +1,3 @@
-from math import gcd
-from itertools import combinations
-
 N = [int(input()), 10**7 + 1][1]
 m = [[0, 1] for _ in range(N)]
 s = [1] * N
@@ -9,16 +6,15 @@ for i in range(2, N):
         s[j] = 0
         if m[j][0]:
             m[j][1] *= i
+        else:
+            m[j][0] = i
 
 
 a1, a2 = [], []
 for x in map(int, input().split()):
-    a1.append(-1)
-    a2.append(-1)
-    for d1, d2 in combinations(m[x], 2):
-        if gcd(d1 + d2, x) == 1:
-            a1[-1] = d1
-            a2[-1] = d2
+    d1, d2 = -1, -1
+    a1.append(d1)
+    a2.append(d2)
 print(*a1)
 print(*a2)
 
