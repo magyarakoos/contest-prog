@@ -13,7 +13,14 @@ int main() {
             m[j].push_back(i);
         }
     }
-    int N, x;
+    int N;
     cin >> N;
-    while (cin >> x && N--) { cout << x << "\n"; }
+    vector ans(2, vector<int>(N));
+    while (cin >> x && N--) {
+        for (int i = 0; i < m[x].size(); i++) {
+            for (int j = i + 1; j < m[x].size(); j++) {
+                if (gcd(m[x][i] + m[x][j], x) == 1) {}
+            }
+        }
+    }
 }
