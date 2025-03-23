@@ -7,11 +7,17 @@ bitset<MAXN> s;
 vector<int> m[MAXN];
 
 int main() {
+    s = ~s;
     for (int i = 2; i < MAXN; i++) {
-        for (int j = i; j < MAXN * s[i]; j++) {
+        for (int j = i; j < MAXN * s[i]; j += i) {
             s[j] = 0;
             m[j].push_back(i);
         }
+    }
+    for (int i = 2; i < 100; i++) {
+        cout << i << " ";
+        for (int x : m[i]) { cout << x << " "; }
+        cout << "\n";
     }
     // int N;
     // cin >> N;
