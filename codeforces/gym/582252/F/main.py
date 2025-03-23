@@ -1,6 +1,9 @@
+from collections import defaultdict
+
+
 N, MAXN = int(input()), 10**2 + 1
 
-m, d = {}, {}
+m, d = defaultdict(list), defaultdict(list)
 for i, x in enumerate(list(map(int, input().split()))):
     m[x].append(i)
 print(m)
