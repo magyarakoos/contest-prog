@@ -1,4 +1,5 @@
 from math import gcd
+from itertools import combinations
 
 _, MAXN = int(input()), 10**2 + 1
 
@@ -11,7 +12,4 @@ for i in range(2, MAXN):
 
 a1, a2 = [], []
 for x in map(int, input().split()):
-    for d in m[x]:
-        for e in m[x]:
-            if not d == e and gcd(d + e, x) == 1:
-
+    print(x, combinations(m[x], 2))
