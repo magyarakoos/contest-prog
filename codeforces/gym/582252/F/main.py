@@ -1,3 +1,5 @@
+from math import gcd
+
 N, MAXN = int(input()), 10**2 + 1
 
 m = [[] for _ in range(MAXN)]
@@ -8,4 +10,6 @@ for i in range(2, MAXN):
         m[j].append(i)
 
 for a in map(int, input().split()):
-    print(a)
+    for d in m[a]:
+        for e in m[a]:
+            if not d == 1 and math
