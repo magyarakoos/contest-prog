@@ -15,14 +15,21 @@ int main() {
         has[x] = 1;
     }
 
+    int cnt = 0;
+
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
                 s[j] = 1;
-                if (has[j]) m[j].push_back(i);
+                if (has[j]) {
+                    m[j].push_back(i);
+                    cnt++
+                }
             }
         }
     }
+
+    cout << cnt << "\n";
 
     vector ans(N, vector<int>(2, -1));
     for (int i = 0; i < N; i++) {
