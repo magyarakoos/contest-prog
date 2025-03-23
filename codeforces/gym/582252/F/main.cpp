@@ -3,28 +3,22 @@ using namespace std;
 
 const int MAXN = 1e7 + 1;
 
-bitset<MAXN> s, has;
-vector<int> m[MAXN];
-
 int main() {
     int N;
     cin >> N;
     vector<int> a(N);
+    bitset<MAXN> s, has;
+    map<int, vector<int>> m;
     for (int& x : a) {
         cin >> x;
         has[x] = 1;
     }
 
-    int cnt = 0;
-
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
                 s[j] = 1;
-                if (has[j]) {
-                    m[j].push_back(i);
-                    cnt++
-                }
+                if (has[j]) m[j].push_back(i);
             }
         }
     }
