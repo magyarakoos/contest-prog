@@ -9,7 +9,6 @@ for i in range(2, N):
         else:
             m[j][0] = i
 
-
 a1, a2 = [], []
 for x in map(int, input().split()):
     d1, d2 = -1, -1
