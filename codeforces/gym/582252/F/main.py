@@ -2,7 +2,6 @@ from math import gcd
 from itertools import combinations
 
 _, MAXN = int(input()), 10**2 + 1
-
 m = [[] for _ in range(MAXN)]
 s = [1] * MAXN
 for i in range(2, MAXN):
@@ -18,4 +17,5 @@ for x in map(int, input().split()):
         if gcd(d1 + d2, x) == 1:
             a1[-1] = d1
             a2[-1] = d2
-
+print(*a1)
+print(*a2)
