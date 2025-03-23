@@ -1,7 +1,7 @@
 from math import gcd
 from itertools import combinations
 
-_, MAXN = int(input()), 10**2 + 1
+N, MAXN = int(input()), 10**2 + 1
 m = [[] for _ in range(MAXN)]
 s = [1] * MAXN
 for i in range(2, MAXN):
