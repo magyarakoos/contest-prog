@@ -27,10 +27,11 @@ int main() {
 
     vector ans(N, vector<int>(2, -1));
     for (int i = 0; i < N; i++) {
-        for (int y : m[a[i]]) {
-            for (int z : m[a[i]]) {
-                if (gcd(a[i], y + z) == 1) ans[i] = {y, z};
-            }
+        if (m[a[i]].size() >= 2) {
+            ans[i] = {m[a[i]][0],
+                      accumulate(m[a[i]].begin() + 1,
+                                 m[a[i]].end(), 1,
+                                 multiplies<int>())};
         }
     }
     for (int j = 0; j < 2; j++) {
