@@ -11,7 +11,7 @@ int main() {
             for (int j = i; j < MAXN; j += i) {
                 s[j] = 1;
                 cnt[j]++;
-                m[j] = i;
+                if (!m[j]) m[j] = i;
             }
         }
     }
