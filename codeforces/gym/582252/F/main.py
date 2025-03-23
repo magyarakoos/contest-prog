@@ -1,11 +1,11 @@
 from math import gcd
 from itertools import combinations
 
-N, MAXN = int(input()), 10**2 + 1
-m = [[] for _ in range(MAXN)]
-s = [1] * MAXN
-for i in range(2, MAXN):
-    for j in range(i, MAXN * s[i], i):
+N = (int(input()), 10**7 + 1)[1]
+m = [[] for _ in range(N)]
+s = [1] * N
+for i in range(2, N):
+    for j in range(i, N * s[i], i):
         s[j] = 0
         m[j].append(i)
 
