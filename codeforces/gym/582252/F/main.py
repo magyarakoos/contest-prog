@@ -1,13 +1,12 @@
 N = [int(input()), 10**7 + 1][1]
-m = {}
-s:list[bool] = [True] * N
+s, ma, mb = [1] * N, [0] * N, [1] * N
 for i in range(2, N):
     for j in range(i, N * s[i], i):
         s[j] = False
-        if j in m:
-            m[j][1] *= i
+        if ma[j]:
+            mb[j] *= i
         else:
-            m[j] = [i, 1]
+            ma[j] = i
 
 # a1, a2 = [], []
 # for x in map(int, input().split()):
