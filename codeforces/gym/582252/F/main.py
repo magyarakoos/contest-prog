@@ -9,8 +9,6 @@ for i in range(2, N):
         s[j] = 0
         m[j].append(i)
 
-exit(0)
-
 a1, a2 = [], []
 for x in map(int, input().split()):
     a1.append(-1)
