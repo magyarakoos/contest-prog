@@ -1,3 +1,5 @@
+from array import array
+
 N = [int(input()), 10**7 + 1][1]
 s, ma, mb = [1] * N, [0] * N, [1] * N
 for i in range(2, N):
