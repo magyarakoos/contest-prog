@@ -15,11 +15,11 @@ int main() {
     }
     int N;
     cin >> N;
-    vector ans(2, vector<int>(N));
-    while (cin >> x && N--) {
-        for (int i = 0; i < m[x].size(); i++) {
-            for (int j = i + 1; j < m[x].size(); j++) {
-                if (gcd(m[x][i] + m[x][j], x) == 1) {}
+    vector ans(2, vector<int>(N, -1));
+    for (int i = 0, x; i < N; i++) {
+        for (int j = 0; j < m[x].size(); j++) {
+            for (int k = j + 1; k < m[x].size(); k++) {
+                if (gcd(m[x][k] + m[x][k], x) == 1) {}
             }
         }
     }
