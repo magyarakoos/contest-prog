@@ -3,14 +3,18 @@ using namespace std;
 
 const int MAXN = 1e7 + 1;
 
-bitset<MAXN> s;
+bitset<MAXN> s, has;
 vector<int> m[MAXN];
 
 int main() {
     int N;
     cin >> N;
-    vector<int> a(N), has(MAXN);
-    for (int& x : a) cin >> x, has[x] = 1;
+    vector<int> a(N);
+    for (int& x : a) {
+        cin >> x;
+        has[x] = 1;
+    }
+
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
@@ -19,6 +23,7 @@ int main() {
             }
         }
     }
+
     vector ans(N, vector<int>(2, -1));
     for (int i = 0; i < N; i++) {
         for (int y : m[a[i]]) {
