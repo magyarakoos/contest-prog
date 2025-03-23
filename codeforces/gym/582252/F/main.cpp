@@ -8,9 +8,8 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> a(N);
+    vector<int> a(N), m(MAXN);
     bitset<MAXN> s, has;
-    map<int, vector<int>> m;
     for (int& x : a) {
         cin >> x;
         has[x] = 1;
@@ -20,18 +19,14 @@ int main() {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
                 s[j] = 1;
-                if (has[j]) m[j].push_back(i);
+                if (!m[j]) m[j] = i;
             }
         }
     }
 
     vector ans(N, vector<int>(2, -1));
     for (int i = 0; i < N; i++) {
-        for (int y : m[a[i]]) {
-            for (int z : m[a[i]]) {
-                if (gcd(a[i], y + z) == 1) ans[i] = {y, z};
-            }
-        }
+        if (m[a[i]]) ans[i] = {m[a[i]], a[i] / m[a[i]]};
     }
     for (int j = 0; j < 2; j++) {
         for (int i = 0; i < N; i++) {
