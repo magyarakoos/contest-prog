@@ -4,13 +4,8 @@ using namespace std;
 const int MAXN = 1e7 + 1;
 
 int main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-
-    int N;
-    cin >> N;
     vector<int> m(MAXN);
     bitset<MAXN> s, has;
-
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
@@ -20,6 +15,8 @@ int main() {
         }
     }
 
+    int N;
+    cin >> N;
     vector ans(N, vector<int>(2, -1));
     for (int i = 0, x; i < N; i++) {
         cin >> x;
