@@ -7,6 +7,11 @@ bitset<MAXN> s;
 vector<int> m[MAXN];
 
 int main() {
+    int N;
+    cin >> N;
+    vector<int> a(N);
+    for (int& x : a) cin >> x;
+
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
