@@ -4,7 +4,7 @@ m, d = [[] for _ in range(MAXN)] * 2
 for i, x in enumerate(list(map(int, input().split()))):
     m[x].append(i)
 print(m)
-print(d)
+print()
 
 s = [1] * MAXN
 for i in range(2, MAXN):
