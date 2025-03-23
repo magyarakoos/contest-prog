@@ -2,10 +2,10 @@
 using namespace std;
 
 const int MAXN = 1e7 + 1;
+int m[MAXN], cnt[MAXN];
+bitset<MAXN> s;
 
 int main() {
-    vector<int> m(MAXN), cnt(MAXN);
-    bitset<MAXN> s, has;
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
