@@ -1,4 +1,4 @@
-N = [int(input()), 10**7 + 1][1]
+N = [int(input()), 10**5 + 1][1]
 m = [[0, 1] for _ in range(N)]
 s = [1] * N
 for i in range(2, N):
@@ -13,6 +13,8 @@ for i in range(2, N):
 a1, a2 = [], []
 for x in map(int, input().split()):
     d1, d2 = -1, -1
+    if m[x][1] > 1:
+        d1, d2 = m[x]
     a1.append(d1)
     a2.append(d2)
 print(*a1)
