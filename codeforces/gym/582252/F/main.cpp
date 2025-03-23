@@ -9,25 +9,21 @@ vector<int> m[MAXN];
 int main() {
     int N;
     cin >> N;
-    vector<int> a(N);
-    for (int& x : a) cin >> x;
-
+    vector<int> a(N), has(MAXN);
+    for (int& x : a) cin >> x, has[x] = 1;
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
             for (int j = i; j < MAXN; j += i) {
                 s[j] = 1;
-                m[j].push_back(i);
+                if (has[j]) m[j].push_back(i);
             }
         }
     }
-    int N;
-    cin >> N;
     vector ans(N, vector<int>(2, -1));
-    for (int i = 0, x; i < N; i++) {
-        cin >> x;
-        for (int y : m[x]) {
-            for (int z : m[x]) {
-                if (gcd(x, y + z) == 1) ans[i] = {y, z};
+    for (int i = 0; i < N; i++) {
+        for (int y : m[a[i]]) {
+            for (int z : m[a[i]]) {
+                if (gcd(a[i], y + z) == 1) ans[i] = {y, z};
             }
         }
     }
