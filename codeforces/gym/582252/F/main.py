@@ -12,4 +12,4 @@ for i in range(2, MAXN):
 
 a1, a2 = [], []
 for x in map(int, input().split()):
-    print(x, combinations(m[x], 2))
+    print(x, list(combinations(m[x], 2)))
