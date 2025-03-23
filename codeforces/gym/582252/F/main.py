@@ -9,13 +9,13 @@ for i in range(2, N):
         else:
             m[j][0] = i
 
-a1, a2 = [], []
-for x in map(int, input().split()):
-    d1, d2 = -1, -1
-    if m[x][1] > 1:
-        d1, d2 = m[x]
-    a1.append(d1)
-    a2.append(d2)
-print(*a1)
-print(*a2)
-
+# a1, a2 = [], []
+# for x in map(int, input().split()):
+#     d1, d2 = -1, -1
+#     if m[x][1] > 1:
+#         d1, d2 = m[x]
+#     a1.append(d1)
+#     a2.append(d2)
+# print(*a1)
+# print(*a2)
+#
