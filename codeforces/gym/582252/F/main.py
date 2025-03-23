@@ -3,10 +3,10 @@ from itertools import combinations
 
 N = [int(input()), 10**7 + 1][1]
 m = [[] for _ in range(N)]
-s = [1] * N
+s: list[bool] = [True] * N
 for i in range(2, N):
     for j in range(i, N * s[i], i):
-        s[j] = 0
+        s[j] = False
         m[j].append(i)
 
 a1, a2 = [], []
