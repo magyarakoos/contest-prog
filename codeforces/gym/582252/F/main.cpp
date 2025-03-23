@@ -14,6 +14,6 @@ int main() {
         }
     }
     int N, x;
-    cin >> N >> x;
-    for (; cin >> x && N--;) {}
+    cin >> N;
+    while (cin >> x && N--) { cout << x << "\n"; }
 }
