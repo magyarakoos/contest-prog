@@ -1,7 +1,7 @@
 from math import gcd
 from itertools import combinations
 
-N = [int(input()), 10**6 + 1][1]
+N = [int(input()), 10**7 + 1][1]
 m = [[] for _ in range(N)]
 s = [1] * N
 for i in range(2, N):
