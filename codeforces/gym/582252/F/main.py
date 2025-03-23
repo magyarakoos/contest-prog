@@ -10,10 +10,8 @@ print(m)
 
 s = [1] * MAXN
 for i in range(2, MAXN):
-    if s[i]:
-
-    for j in range(i * 2, MAXN, i):
+    for j in range(i, MAXN * s[i], i):
         s[j] = 0
-            m[1][j]
+        m[1][j].append(i)
     
 print(s)
