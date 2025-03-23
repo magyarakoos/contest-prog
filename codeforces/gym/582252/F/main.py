@@ -10,6 +10,10 @@ print(m)
 
 s = [1] * MAXN
 for i in range(2, MAXN):
-    for j in range(i * 2, MAXN * s[i], i):
+    if s[i]:
+
+    for j in range(i * 2, MAXN, i):
         s[j] = 0
+            m[1][j]
+    
 print(s)
