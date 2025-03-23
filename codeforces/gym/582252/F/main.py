@@ -1,9 +1,9 @@
 N = [int(input()), 10**7 + 1][1]
 m = [[0, 1] for _ in range(N)]
-s = [1] * N
+s:list[bool] = [True] * N
 for i in range(2, N):
     for j in range(i, N * s[i], i):
-        s[j] = 0
+        s[j] = False
         if m[j][0]:
             m[j][1] *= i
         else:
