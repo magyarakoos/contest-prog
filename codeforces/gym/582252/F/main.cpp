@@ -8,12 +8,8 @@ int main() {
 
     int N;
     cin >> N;
-    vector<int> a(N), m(MAXN);
+    vector<int> m(MAXN);
     bitset<MAXN> s, has;
-    for (int& x : a) {
-        cin >> x;
-        has[x] = 1;
-    }
 
     for (int i = 2; i < MAXN; i++) {
         if (!s[i]) {
@@ -25,8 +21,9 @@ int main() {
     }
 
     vector ans(N, vector<int>(2, -1));
-    for (int i = 0; i < N; i++) {
-        if (m[a[i]]) ans[i] = {m[a[i]], a[i] / m[a[i]]};
+    for (int i = 0, x; i < N; i++) {
+        cin >> x;
+        if (m[x]) ans[i] = {m[x], x / m[x]};
     }
     for (int j = 0; j < 2; j++) {
         for (int i = 0; i < N; i++) {
