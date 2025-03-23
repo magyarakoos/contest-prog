@@ -12,4 +12,10 @@ for i in range(2, MAXN):
 
 a1, a2 = [], []
 for x in map(int, input().split()):
-    print(x, list(combinations(m[x], 2)))
+    a1.append(-1)
+    a2.append(-1)
+    for d1, d2 in combinations(m[x], 2):
+        if gcd(d1 + d2, x) == 1:
+            a1[-1] = d1
+            a2[-1] = d2
+
