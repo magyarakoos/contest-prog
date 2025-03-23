@@ -23,8 +23,6 @@ int main() {
         }
     }
 
-    cout << cnt << "\n";
-
     vector ans(N, vector<int>(2, -1));
     for (int i = 0; i < N; i++) {
         for (int y : m[a[i]]) {
