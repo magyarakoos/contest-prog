@@ -1,4 +1,4 @@
-N = [int(input()), 10**5 + 1][1]
+N = [int(input()), 10**7 + 1][1]
 m = [[0, 1] for _ in range(N)]
 s = [1] * N
 for i in range(2, N):
