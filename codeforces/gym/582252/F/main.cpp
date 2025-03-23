@@ -4,6 +4,8 @@ using namespace std;
 const int MAXN = 1e7 + 1;
 
 int main() {
+    cin.tie(0), ios::sync_with_stdio(0);
+
     int N;
     cin >> N;
     vector<int> a(N);
