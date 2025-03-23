@@ -7,11 +7,12 @@ bitset<MAXN> s;
 vector<int> m[MAXN];
 
 int main() {
-    s = ~s;
     for (int i = 2; i < MAXN; i++) {
-        for (int j = i; j < MAXN * s[i]; j += i) {
-            s[j] = 0;
-            m[j].push_back(i);
+        if (!s[i]) {
+            for (int j = i; j < MAXN; j += i) {
+                s[j] = 1;
+                m[j].push_back(i);
+            }
         }
     }
     for (int i = 2; i < 100; i++) {
