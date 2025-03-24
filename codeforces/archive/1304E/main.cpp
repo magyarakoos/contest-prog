@@ -99,6 +99,7 @@ int32_t main() {
     };
     auto dist = [&](int u, int v) {
         if (u > v) swap(u, v);
+        cout << "DIST " << u << " " << v << "\n";
         return depth[u] + depth[v] - 2 * depth[lca(u, v)];
     };
     auto f = [&]() {
