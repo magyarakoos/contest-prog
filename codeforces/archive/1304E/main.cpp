@@ -98,24 +98,20 @@ int32_t main() {
     auto dist = [&](int u, int v) {
         return depth[u] + depth[v] - 2 * depth[lca(u, v)];
     };
+    auto f = [&]() {
+        int x, y, a, b, k;
+        cin >> x >> y >> a >> b >> k;
+        auto distS = {dist(a, b),
+                      dist(a, x) + dist(b, y) + 1,
+                      dist(b, x) + dist(a, y) + 1};
+        for (int d : distS) {
+            if (d % 2 == k % 2 && d <= k) { return 1; }
+        }
+        return 0;
+    };
 
-    // /*    int Q;
-    //     cin >> Q;
-    //     while (Q--) {
-    //         int x, y, a, b, k;
-    //         cin >> x >> y >> a >> b >> k;
-    //         auto distS = {
-    //             dist(a, b),
-    //             dist(a, x) + dist(b, y) + 1,
-    //             dist(b, x) + dist(a, y) + 1};
-    //         for (int d : distS) {
-    //             if (d % 2 == k % 2 && d <= k) {
-    //                 cout << "YES\n";
-    //                 goto next;
-    //             }
-    //         }
-    //         cout << "NO\n";
-    //         next:continue;
-    //     }*/
+    int Q;
+    cin >> Q;
+    while (Q--) {}
 }
 
