@@ -104,14 +104,14 @@ int32_t main() {
         auto distS = {dist(a, b),
                       dist(a, x) + dist(b, y) + 1,
                       dist(b, x) + dist(a, y) + 1};
-        for (int d : distS) {
-            if (d % 2 == k % 2 && d <= k) { return 1; }
-        }
+        // for (int d : distS) {
+        //     if (d % 2 == k % 2 && d <= k) return 1;
+        // }
         return 0;
     };
 
     int Q;
     cin >> Q;
-    while (Q--) {}
+    while (Q--) cout << (f() ? "YES" : "NO") << "\n";
 }
 
