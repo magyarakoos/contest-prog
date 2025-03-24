@@ -54,7 +54,8 @@ int main() {
     auto st = Node::build(a, 0, N - 1);
 
     while (Q--) {
-        int L, R;
-        cin >> L >> R;
+        int l, r;
+        cin >> l >> r;
+        cout << st->query(l - 1, r - 1) << "\n";
     }
 }
