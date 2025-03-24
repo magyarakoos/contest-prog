@@ -35,7 +35,7 @@ struct Node {
 
     int query(int l, int r) {
         cout << "QRY " << l << " " << r << endl;
-        if (r < tl || tr < l) return INF;
+        if (l > r || r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
         if (cl && cr) {
             return cmb(cl->query(l, r), cr->query(l, r));
@@ -85,6 +85,8 @@ int32_t main() {
 
     dfs(1, 0);
     auto st = Node::build(path, 0, path.size() - 1);
+
+    cout << "DONE BUILD" << endl;
 
     auto lca = [&](int u, int v) {
         return st->query(first[u], first[v]);
