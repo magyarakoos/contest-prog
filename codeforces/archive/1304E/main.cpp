@@ -28,7 +28,7 @@ struct Node {
     }
 
     int query(int l, int r) {
-        cout << "YE" << endl;
+        cout << l << " " << r << endl;
         if (r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
         if (cl && cr) {
@@ -96,6 +96,7 @@ int32_t main() {
         return depth[u] + depth[v] - 2 * depth[lca(u, v)];
     };
 
+    cout << st->tl << " " << st->tr << "\n";
     cout << lca(1, 4) << "\n";
 
     /*    int Q;
