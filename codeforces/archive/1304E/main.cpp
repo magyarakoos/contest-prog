@@ -8,8 +8,6 @@ vector<int> path, first, depth;
 vector<vector<int>> g;
 
 int cmb(int a, int b) {
-    cout << "CMB ";
-    cout << a << " " << b << endl;
     return (a == INF ? INF : depth[a]) <
                    (b == INF ? INF : depth[b])
                ? a
@@ -34,7 +32,6 @@ struct Node {
     }
 
     int query(int l, int r) {
-        cout << "QRY " << l << " " << r << endl;
         if (l > r || r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
         if (cl && cr) {
@@ -84,29 +81,18 @@ int32_t main() {
     }
 
     dfs(1, 0);
-    for (int x : path) cout << x << " ";
-    cout << "\n";
-    for (int x : first) cout << x << " ";
-    cout << "\n";
     auto st = Node::build(path, 0, path.size() - 1);
 
-    cout << "DONE BUILD" << endl;
-
     auto lca = [&](int u, int v) {
-        cout << "LCA " << u << " " << v << " " << first[u]
-             << " " << first[v] << "\n";
+        if (first[u] > first[v]) swap(u, v);
         return st->query(first[u], first[v]);
     };
     auto dist = [&](int u, int v) {
-        if (u > v) swap(u, v);
-        cout << "DIST " << u << " " << v << "\n";
         return depth[u] + depth[v] - 2 * depth[lca(u, v)];
     };
     auto f = [&]() {
         int x, y, a, b, k;
         cin >> x >> y >> a >> b >> k;
-        cout << "F " << x << " " << y << " " << a << " "
-             << b << " " << k << "\n";
         auto distS = {dist(a, b),
                       dist(a, x) + dist(b, y) + 1,
                       dist(b, x) + dist(a, y) + 1};
