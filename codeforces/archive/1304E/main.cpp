@@ -24,13 +24,13 @@ struct Node {
          std::unique_ptr<Node> _cr)
         : tl(_l), tr(_r), cl(std::move(_cl)),
           cr(std::move(_cr)) {
-        value = std::min(cl->value, cr->value);
+        value = cmb(cl->value, cr->value);
     }
 
     int query(int l, int r) {
         if (r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
-        return std::min(cl->query(l, r), cr->query(l, r));
+        return cmb(cl->query(l, r), cr->query(l, r));
     }
 
     void update(int pos, int x) {
@@ -39,7 +39,7 @@ struct Node {
             return;
         }
         (pos <= cl->tr ? cl : cr)->update(pos, x);
-        value = std::min(cl->value, cr->value);
+        value = cmb(cl->value, cr->value);
     }
 
     static std::unique_ptr<Node>
