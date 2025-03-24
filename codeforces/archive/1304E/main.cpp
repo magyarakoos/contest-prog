@@ -96,6 +96,7 @@ int32_t main() {
         auto distS = {dist(a, b),
                       dist(a, x) + dist(b, y) + 1,
                       dist(b, x) + dist(a, y) + 1};
+        cout << depth[a] << " " << depth[b] << " ";
         cout << a << " " << b << " " << lca(a, b) << "\n";
         for (int d : distS) {
             cout << d << endl;
