@@ -8,7 +8,11 @@ vector<int> path, first, depth;
 vector<vector<int>> g;
 
 int cmb(int a, int b) {
-    return b == INF || depth[a] < depth[b] ? a : b;
+    cout << a << " " << b << endl;
+    return b == INF || (a == INF && b == INF) ||
+                   depth[a] < depth[b]
+               ? a
+               : b;
 }
 
 struct Node {
