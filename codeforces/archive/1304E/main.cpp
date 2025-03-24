@@ -46,14 +46,17 @@ struct Node {
     }
 };
 
-vector<int> path, first;
+vector<int> path, first, depth;
 vector<vector<int>> g;
 
 void dfs(int u, int p) {
     first[u] = path.size();
     path.push_back(u);
     for (int v : g[u]) {
-        if (v != p) dfs(v, u);
+        if (v != p) {
+            depth[v] = depth[u] + 1;
+            dfs(v, u);
+        }
     }
     path.push_back(u);
 }
@@ -72,10 +75,7 @@ int32_t main() {
     }
 
     dfs(1, 0);
-    for (int x : path) cout << x << " ";
-    cout << "\n";
-    for (int x : first) cout << x << " ";
-    cout << "\n";
+    auto st = Node::build(path, 0, path.size() - 1);
 
     /*    int Q;
         cin >> Q;
