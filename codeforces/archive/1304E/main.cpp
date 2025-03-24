@@ -2,6 +2,13 @@
 using namespace std;
 #define int int64_t
 
+vector<int> path, first, depth;
+vector<vector<int>> g;
+
+int cmb(int a, int b) {
+    return depth[a] < depth[b] ? a : b;
+}
+
 struct Node {
     const static int INF = 1e9;
 
@@ -46,9 +53,6 @@ struct Node {
     }
 };
 
-vector<int> path, first, depth;
-vector<vector<int>> g;
-
 void dfs(int u, int p) {
     first[u] = path.size();
     path.push_back(u);
@@ -80,6 +84,9 @@ int32_t main() {
 
     auto lca = [&](int u, int v) {
         return st->query(first[u], first[v]);
+    };
+    auto dist = [&](int u, int v) {
+        return depth[u] + depth[v] - 2 * depth[lca()]
     };
 
     /*    int Q;
