@@ -89,6 +89,8 @@ int32_t main() {
     cout << "DONE BUILD" << endl;
 
     auto lca = [&](int u, int v) {
+        cout << "LCA " << u << " " << v << " " << first[u]
+             << " " << first[v] << "\n";
         return st->query(first[u], first[v]);
     };
     auto dist = [&](int u, int v) {
