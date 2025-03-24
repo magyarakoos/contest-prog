@@ -8,6 +8,7 @@ vector<int> path, first, depth;
 vector<vector<int>> g;
 
 int cmb(int a, int b) {
+    cout << "CMB ";
     cout << a << " " << b << endl;
     return (a == INF ? INF : depth[a]) <
                    (b == INF ? INF : depth[b])
@@ -33,6 +34,7 @@ struct Node {
     }
 
     int query(int l, int r) {
+        cout << "QRY " << l << " " << r << endl;
         if (r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
         if (cl && cr) {
@@ -42,15 +44,6 @@ struct Node {
         } else {
             return cr->value;
         }
-    }
-
-    void update(int pos, int x) {
-        if (tl == tr) {
-            value = x;
-            return;
-        }
-        (pos <= cl->tr ? cl : cr)->update(pos, x);
-        value = cmb(cl->value, cr->value);
     }
 
     static std::unique_ptr<Node>
