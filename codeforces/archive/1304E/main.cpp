@@ -8,6 +8,7 @@ vector<int> path, first, depth;
 vector<vector<int>> g;
 
 int cmb(int a, int b) {
+    cout << a << " " << b << endl;
     return (a == INF ? INF : depth[a]) <
                    (b == INF ? INF : depth[b])
                ? a
