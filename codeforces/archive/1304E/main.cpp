@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define int int64_t
 
 struct Node {
     const static int INF = 1e9;
@@ -45,17 +46,50 @@ struct Node {
     }
 };
 
-int main() {
-    int N, Q;
-    cin >> N >> Q;
+vector<int> path;
+vector<vector<int>> g;
 
-    vector<int> a(N);
-    for (int& x : a) cin >> x;
-    auto st = Node::build(a, 0, N - 1);
-
-    while (Q--) {
-        int l, r;
-        cin >> l >> r;
-        cout << st->query(l - 1, r - 1) << "\n";
+void dfs(int u, int p) {
+    path.push_back(u);
+    for (int v : g[u]) {
+        if (v != p) dfs(v, u);
     }
+    path.push_back(u);
 }
+
+int32_t main() {
+    cin.tie(0), ios::sync_with_stdio(0);
+
+    int N;
+    cin >> N;
+    g.resize(N + 1);
+    for (int i = 1, u, v; i < N; i++) {
+        cin >> u >> v;
+        g[u].push_back(v);
+        g[v].push_back(u);
+    }
+
+    dfs(1, 0);
+    for (int x : path) cout << x << " ";
+    cout << "\n";
+
+    /*    int Q;
+        cin >> Q;
+        while (Q--) {
+            int x, y, a, b, k;
+            cin >> x >> y >> a >> b >> k;
+            auto distS = {
+                dist(a, b),
+                dist(a, x) + dist(b, y) + 1,
+                dist(b, x) + dist(a, y) + 1};
+            for (int d : distS) {
+                if (d % 2 == k % 2 && d <= k) {
+                    cout << "YES\n";
+                    goto next;
+                }
+            }
+            cout << "NO\n";
+            next:continue;
+        }*/
+}
+
