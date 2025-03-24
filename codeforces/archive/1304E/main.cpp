@@ -61,9 +61,9 @@ void dfs(int u, int p) {
         if (v != p) {
             depth[v] = depth[u] + 1;
             dfs(v, u);
+            path.push_back(u);
         }
     }
-    path.push_back(u);
 }
 
 int32_t main() {
@@ -96,10 +96,7 @@ int32_t main() {
         auto distS = {dist(a, b),
                       dist(a, x) + dist(b, y) + 1,
                       dist(b, x) + dist(a, y) + 1};
-        cout << depth[a] << " " << depth[b] << " ";
-        cout << a << " " << b << " " << lca(a, b) << "\n";
         for (int d : distS) {
-            cout << d << endl;
             if (d % 2 == k % 2 && d <= k) return 1;
         }
         return 0;
