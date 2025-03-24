@@ -84,6 +84,10 @@ int32_t main() {
     }
 
     dfs(1, 0);
+    for (int x : path) cout << x << " ";
+    cout << "\n";
+    for (int x : first) cout << x << " ";
+    cout << "\n";
     auto st = Node::build(path, 0, path.size() - 1);
 
     cout << "DONE BUILD" << endl;
