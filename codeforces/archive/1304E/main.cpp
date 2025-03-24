@@ -46,10 +46,11 @@ struct Node {
     }
 };
 
-vector<int> path;
+vector<int> path, first;
 vector<vector<int>> g;
 
 void dfs(int u, int p) {
+    first[u] = path.size();
     path.push_back(u);
     for (int v : g[u]) {
         if (v != p) dfs(v, u);
@@ -63,6 +64,7 @@ int32_t main() {
     int N;
     cin >> N;
     g.resize(N + 1);
+    first.resize(N + 1);
     for (int i = 1, u, v; i < N; i++) {
         cin >> u >> v;
         g[u].push_back(v);
@@ -71,6 +73,8 @@ int32_t main() {
 
     dfs(1, 0);
     for (int x : path) cout << x << " ";
+    cout << "\n";
+    for (int x : first) cout << x << " ";
     cout << "\n";
 
     /*    int Q;
