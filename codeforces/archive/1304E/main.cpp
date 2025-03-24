@@ -31,8 +31,13 @@ struct Node {
         cout << "YE" << endl;
         if (r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
-        assert(cl || cr);
-        return cmb(cl->query(l, r), cr->query(l, r));
+        if (cl && cr) {
+            return cmb(cl->query(l, r), cr->query(l, r));
+        } else if (cl) {
+            return cl->value;
+        } else {
+            return cr->value;
+        }
     }
 
     void update(int pos, int x) {
