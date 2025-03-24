@@ -2,15 +2,16 @@
 using namespace std;
 #define int int64_t
 
+const int INF = 1e9;
+
 vector<int> path, first, depth;
 vector<vector<int>> g;
 
 int cmb(int a, int b) {
-    return depth[a] < depth[b] ? a : b;
+    return b == INF || depth[a] < depth[b] ? a : b;
 }
 
 struct Node {
-    const static int INF = 1e9;
 
     int value;
     int tl, tr;
@@ -28,8 +29,6 @@ struct Node {
     }
 
     int query(int l, int r) {
-        cout << tl << " " << tr << "\t" << l << " " << r
-             << endl;
         if (r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
         if (cl && cr) {
@@ -98,7 +97,7 @@ int32_t main() {
     };
 
     cout << st->tl << " " << st->tr << "\n";
-    cout << lca(1, 4) << "\n";
+    cout << dist(2, 5) << "\n";
 
     /*    int Q;
         cin >> Q;
