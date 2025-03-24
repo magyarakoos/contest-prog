@@ -8,9 +8,8 @@ vector<int> path, first, depth;
 vector<vector<int>> g;
 
 int cmb(int a, int b) {
-    cout << a << " " << b << endl;
-    return b == INF || (a == INF && b == INF) ||
-                   depth[a] < depth[b]
+    return (a == INF ? INF : depth[a]) <
+                   (b == INF ? INF : depth[b])
                ? a
                : b;
 }
@@ -100,26 +99,23 @@ int32_t main() {
         return depth[u] + depth[v] - 2 * depth[lca(u, v)];
     };
 
-    cout << st->tl << " " << st->tr << "\n";
-    cout << dist(2, 5) << "\n";
-
-    /*    int Q;
-        cin >> Q;
-        while (Q--) {
-            int x, y, a, b, k;
-            cin >> x >> y >> a >> b >> k;
-            auto distS = {
-                dist(a, b),
-                dist(a, x) + dist(b, y) + 1,
-                dist(b, x) + dist(a, y) + 1};
-            for (int d : distS) {
-                if (d % 2 == k % 2 && d <= k) {
-                    cout << "YES\n";
-                    goto next;
-                }
-            }
-            cout << "NO\n";
-            next:continue;
-        }*/
+    // /*    int Q;
+    //     cin >> Q;
+    //     while (Q--) {
+    //         int x, y, a, b, k;
+    //         cin >> x >> y >> a >> b >> k;
+    //         auto distS = {
+    //             dist(a, b),
+    //             dist(a, x) + dist(b, y) + 1,
+    //             dist(b, x) + dist(a, y) + 1};
+    //         for (int d : distS) {
+    //             if (d % 2 == k % 2 && d <= k) {
+    //                 cout << "YES\n";
+    //                 goto next;
+    //             }
+    //         }
+    //         cout << "NO\n";
+    //         next:continue;
+    //     }*/
 }
 
