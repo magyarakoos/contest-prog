@@ -68,6 +68,7 @@ int32_t main() {
     cin >> N;
     g.resize(N + 1);
     first.resize(N + 1);
+    depth.resize(N + 1);
     for (int i = 1, u, v; i < N; i++) {
         cin >> u >> v;
         g[u].push_back(v);
@@ -76,6 +77,10 @@ int32_t main() {
 
     dfs(1, 0);
     auto st = Node::build(path, 0, path.size() - 1);
+
+    auto lca = [&](int u, int v) {
+        return st->query(first[u], first[v]);
+    };
 
     /*    int Q;
         cin >> Q;
