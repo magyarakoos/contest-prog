@@ -102,15 +102,12 @@ int32_t main() {
     auto f = [&]() {
         int x, y, a, b, k;
         cin >> x >> y >> a >> b >> k;
-        cout << dist(a, b) << endl;
-        cout << dist(a, x) + dist(b, y) + 1 << endl;
-        cout << dist(b, x) + dist(a, y) + 1 << endl;
         auto distS = {dist(a, b),
                       dist(a, x) + dist(b, y) + 1,
                       dist(b, x) + dist(a, y) + 1};
-        // for (int d : distS) {
-        //     if (d % 2 == k % 2 && d <= k) return 1;
-        // }
+        for (int d : distS) {
+            if (d % 2 == k % 2 && d <= k) return 1;
+        }
         return 0;
     };
 
