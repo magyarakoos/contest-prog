@@ -97,6 +97,7 @@ int32_t main() {
                       dist(a, x) + dist(b, y) + 1,
                       dist(b, x) + dist(a, y) + 1};
         for (int d : distS) {
+            cout << d << endl;
             if (d % 2 == k % 2 && d <= k) return 1;
         }
         return 0;
