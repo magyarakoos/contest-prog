@@ -98,6 +98,8 @@ int32_t main() {
     auto f = [&]() {
         int x, y, a, b, k;
         cin >> x >> y >> a >> b >> k;
+        cout << "F " << x << " " << y << " " << a << " "
+             << b << " " << k << "\n";
         auto distS = {dist(a, b),
                       dist(a, x) + dist(b, y) + 1,
                       dist(b, x) + dist(a, y) + 1};
