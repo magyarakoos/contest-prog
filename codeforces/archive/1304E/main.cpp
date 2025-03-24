@@ -86,8 +86,10 @@ int32_t main() {
         return st->query(first[u], first[v]);
     };
     auto dist = [&](int u, int v) {
-        return depth[u] + depth[v] - 2 * depth[lca()]
+        return depth[u] + depth[v] - 2 * depth[lca(u, v)];
     };
+
+    cout << lca(1, 4) << "\n";
 
     /*    int Q;
         cin >> Q;
