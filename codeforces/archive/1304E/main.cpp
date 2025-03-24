@@ -28,9 +28,9 @@ struct Node {
     }
 
     int query(int l, int r) {
-        cout << l << " " << r << endl;
         if (r < tl || tr < l) return INF;
         if (l <= tl && tr <= r) return value;
+        cout << l << " " << r << endl;
         if (cl && cr) {
             return cmb(cl->query(l, r), cr->query(l, r));
         } else if (cl) {
