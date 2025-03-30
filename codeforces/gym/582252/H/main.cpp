@@ -7,10 +7,10 @@ void solve(int ans) {
     int m = 1 << ans;
     vector<vector<array<int, 2>>> g(m);
     vector<int> deg(m);
-    multiset<array<int, 2>> ms;
+    map<array<int, 2>, vector<int>> ms;
     for (int i = 0; i < n; i++) {
         int u = a[i] & (m - 1), v = b[i] & (m - 1);
-        ms.insert({u, v});
+        ms[{u, v}].push_back(i);
         deg[u]++, deg[v]++;
         g[u].push_back({v, i});
         g[v].push_back({u, i});
