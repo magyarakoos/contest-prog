@@ -26,9 +26,10 @@ void solve(int ans) {
             auto v = g[u][--deg[u]];
             if (!used[v[1]]) {
                 used[v[1]] = 1;
-                int ai = a[v[1]], bi = b[v[1]];
-                if (v[0] == (b[v[1]] & (m - 1)))
+                int ai = v[1] * 2, bi = v[1] * 2 + 1;
+                if (v[0] == (b[v[1]] & (m - 1))) {
                     swap(ai, bi);
+                }
                 path.push_back(ai);
                 path.push_back(bi);
                 euler(v[0]);
@@ -36,7 +37,7 @@ void solve(int ans) {
         }
     };
     euler(start);
-    for (int u : path) cout << u << " ";
+    for (int u : path) cout << u + 1 << " ";
 }
 
 int main() {
