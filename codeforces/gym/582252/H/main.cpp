@@ -27,7 +27,7 @@ void solve(int ans) {
             if (!used[v[1]]) {
                 used[v[1]] = 1;
                 int ai = v[1] * 2, bi = v[1] * 2 + 1;
-                if (v[0] == (b[v[1]] & (m - 1))) {
+                if (u == (b[v[1]] & (m - 1))) {
                     swap(ai, bi);
                 }
                 path.push_back(ai);
