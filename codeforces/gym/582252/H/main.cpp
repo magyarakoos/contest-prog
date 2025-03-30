@@ -13,6 +13,7 @@ void solve(int ans) {
         g[u].push_back({v, i});
         g[v].push_back({u, i});
     }
+
     int start = 0;
     for (int u = 0; u < m; u++) {
         if (deg[u] & 1) return;
