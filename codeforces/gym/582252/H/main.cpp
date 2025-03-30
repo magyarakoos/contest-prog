@@ -36,6 +36,7 @@ void solve(int ans) {
         }
     };
     euler(start);
+
     if (path.size() != n) return;
     cout << ans << "\n";
     for (auto [u, v] : path) {
@@ -44,7 +45,10 @@ void solve(int ans) {
         if (rev) it = ms.find({v, u});
         assert(it != ms.end());
         auto [eu, ev] = *it;
+        if (rev) swap(eu, ev);
+        cout << eu << " " << ev << " ";
     }
+    cout << "\n";
     exit(0);
 }
 
