@@ -18,7 +18,10 @@ void solve(int ans) {
         if (deg[u] & 1) return;
         if (deg[u]) start = u;
     }
-    cout << start;
+
+    vector<int> path;
+    vector<bool> used(n);
+    function<void(int)> euler = [&]
 }
 
 int main() {
