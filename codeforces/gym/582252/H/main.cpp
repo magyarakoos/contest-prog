@@ -21,7 +21,13 @@ void solve(int ans) {
 
     vector<int> path;
     vector<bool> used(n);
-    function<void(int)> euler = [&]
+    function<void(int)> euler = [&](int u) -> void {
+        while (deg[u]) {
+            int v = g[u][--deg[u]][1];
+            if (!used[v]) { used[v] = 1; }
+        }
+        path.push_back(u);
+    };
 }
 
 int main() {
