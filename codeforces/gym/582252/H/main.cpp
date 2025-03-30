@@ -3,7 +3,7 @@ using namespace std;
 
 int n, a[1 << 19], b[1 << 19];
 
-bool solve(int ans) {
+void solve(int ans) {
     int m = 1 << ans;
     vector<vector<array<int, 2>>> g(m);
     vector<int> deg(m);
@@ -13,8 +13,12 @@ bool solve(int ans) {
         g[u].push_back({v, i});
         g[v].push_back({u, i});
     }
-    for (int i = 0; i < m; i++) { cout << deg[i] << " "; }
-    return 0;
+    int start = 0;
+    for (int u = 0; u < m; u++) {
+        if (u & 1) return;
+        if (u) start = u;
+    }
+    cout << start;
 }
 
 int main() {
