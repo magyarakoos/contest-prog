@@ -40,13 +40,21 @@ void solve(int ans) {
     if (path.size() != n) return;
     cout << ans << "\n";
     for (auto [u, v] : path) {
-        auto it = ms.find({u, v});
-        bool rev = it == ms.end();
-        if (rev) it = ms.find({v, u});
-        assert(it != ms.end());
-        auto [eu, ev] = *it;
-        if (rev) swap(eu, ev);
-        cout << eu << " " << ev << " ";
+        int i;
+        bool rev = 0;
+        if (!ms[{u, v}].empty()) {
+            i = ms[{u, v}].back();
+            ms[{u, v}].pop_back();
+        } else {
+            rev = 1;
+            i = ms[{v, u}].back();
+            ms[{v, u}].pop_back();
+        }
+        if (rev) {
+            cout << i * 2 + 2 << " " << i * 2 + 1 << " ";
+        } else {
+            cout << i * 2 + 1 << " " << i * 2 + 2 << " ";
+        }
     }
     cout << "\n";
     exit(0);
