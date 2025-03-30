@@ -22,13 +22,14 @@ void solve(int ans) {
 
     vector<int> path;
     vector<bool> used(n);
-    function<void(int)> euler = [&](int u) -> void {
-        while (deg[u]) {
-            auto v = g[u][--deg[u]];
+    function<void(int)> euler = [&](int u) {
+        while (!g[u].empty()) {
+            auto v = g[u].back();
+            g[u].pop_back();
             if (!used[v[1]]) {
                 used[v[1]] = 1;
                 int ai = v[1] * 2, bi = v[1] * 2 + 1;
-                if (u == (b[v[1]] & (m - 1))) {
+                if (u != (a[v[1]] & (m - 1))) {
                     swap(ai, bi);
                 }
                 path.push_back(ai);
