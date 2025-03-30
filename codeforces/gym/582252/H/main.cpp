@@ -24,10 +24,15 @@ void solve(int ans) {
     function<void(int)> euler = [&](int u) -> void {
         while (deg[u]) {
             int v = g[u][--deg[u]][1];
-            if (!used[v]) { used[v] = 1; }
+            if (!used[v]) {
+                used[v] = 1;
+                euler(v);
+            }
         }
         path.push_back(u);
     };
+    euler(start);
+    for (int u : path) cout << u << " ";
 }
 
 int main() {
