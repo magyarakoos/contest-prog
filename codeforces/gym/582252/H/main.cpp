@@ -41,12 +41,11 @@ void solve(int ans) {
     cout << ans << "\n";
     for (auto [u, v] : path) {
         int i;
-        bool rev = 0;
-        if (!ms[{u, v}].empty()) {
+        bool rev = ms[{u, v}].empty();
+        if (!rev) {
             i = ms[{u, v}].back();
             ms[{u, v}].pop_back();
         } else {
-            rev = 1;
             i = ms[{v, u}].back();
             ms[{v, u}].pop_back();
         }
