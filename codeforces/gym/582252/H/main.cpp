@@ -38,7 +38,12 @@ void solve(int ans) {
     euler(start);
     if (path.size() != n) return;
     cout << ans << "\n";
-    for (auto e : path) { auto it = ms.find(e); }
+    for (auto [u, v] : path) {
+        auto it = ms.find({u, v});
+        bool rev = it == ms.end();
+        if (rev) it = ms.find({v, u});
+        assert(it != ms.end());
+    }
     exit(0);
 }
 
