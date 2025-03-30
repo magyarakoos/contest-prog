@@ -15,8 +15,8 @@ void solve(int ans) {
     }
     int start = 0;
     for (int u = 0; u < m; u++) {
-        if (u & 1) return;
-        if (u) start = u;
+        if (deg[u] & 1) return;
+        if (deg[u]) start = u;
     }
     cout << start;
 }
