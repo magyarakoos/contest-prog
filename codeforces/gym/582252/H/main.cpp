@@ -37,13 +37,16 @@ void solve(int ans) {
         }
     };
     euler(start);
+    if (path.size() != n * 2) return;
+    cout << ans << "\n";
     for (int u : path) cout << u + 1 << " ";
+    cout << "\n";
+    exit(0);
 }
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     cin >> n;
     for (int i = 0; i < n; i++) cin >> a[i] >> b[i];
-    solve(3);
-    // for (int i = 20; i >= 0; i--) solve(i);
+    for (int i = 20; i >= 0; i--) solve(i);
 }
