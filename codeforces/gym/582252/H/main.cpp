@@ -20,7 +20,7 @@ void solve(int ans) {
         if (deg[u]) start = u;
     }
 
-    vector<int> path;
+    vector<array<int, 2>> path;
     vector<bool> used(n);
     function<void(int)> euler = [&](int u) {
         while (!g[u].empty()) {
@@ -28,12 +28,7 @@ void solve(int ans) {
             g[u].pop_back();
             if (!used[v[1]]) {
                 used[v[1]] = 1;
-                int ai = v[1] * 2, bi = v[1] * 2 + 1;
-                if (u != (a[v[1]] & (m - 1))) {
-                    swap(ai, bi);
-                }
-                path.push_back(ai);
-                path.push_back(bi);
+                path.push_back({u, v});
                 euler(v[0]);
             }
         }
