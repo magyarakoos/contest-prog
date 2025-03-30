@@ -43,6 +43,7 @@ void solve(int ans) {
         bool rev = it == ms.end();
         if (rev) it = ms.find({v, u});
         assert(it != ms.end());
+        auto [eu, ev] = *it;
     }
     exit(0);
 }
