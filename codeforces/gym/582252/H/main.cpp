@@ -9,6 +9,9 @@ bool solve(int ans) {
     vector<int> deg(m);
     for (int i = 0; i < n; i++) {
         int u = a[i] & (m - 1), v = b[i] & (m - 1);
+        deg[u]++, deg[v]++;
+        g[u].push_back(v);
+        g[v].push_back(u);
     }
 }
 
@@ -16,5 +19,6 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     cin >> n;
     for (int i = 0; i < n; i++) cin >> a[i] >> b[i];
-    for (int i = 20; i >= 0; i--) solve(i);
+    solve(3);
+    // for (int i = 20; i >= 0; i--) solve(i);
 }
