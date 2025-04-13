@@ -1,33 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
-constexpr int MAXN = 1e6;
 
-int trie[MAXN][26];
+struct Tr { map<char, Tr*> to; };
+
 void solve() {
-	memset(trie, 0, sizeof(trie));
-	int node_count = 1;
-	
-	string s;
-	cin >> s;
-	
-	for (int i = 0; i < s.size(); i++) {
-		int node = 1;
-		for (int j = i; j < s.size(); j++) {
-			int c = s[j] - 'A';
-			if (trie[node][c] == 0) {
-				trie[node][c] = ++node_count;
-			}
-			node = trie[node][c];
-		}
-	}
-	
-	cout << node_count - 1 << "\n";
+    Tr* root = new Tr();
+    string s;
+    cin >> s;
+    int n = s.size(), result = 0;
+    for (int i = n - 1; ~i; i--) {
+        Tr* cur = root;
+        for (int j = i; j < n; j++) {
+            Tr*& v = cur->to[s[j]];
+            if (!v) {
+                v = new Tr();
+                result++;
+            }
+            cur = v;
+        }
+    }
+    cout << result << "\n";
 }
 
 int main() {
-	cin.tie(0), ios::sync_with_stdio(0);
-    int T;
-	cin >> T;
-	while (T--) solve();
+    cin.tie(0), ios::sync_with_stdio(0);
+    int t;
+    cin >> t;
+    while (t--) solve();
 }
-
