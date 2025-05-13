@@ -7,8 +7,8 @@ const int MOD = 998244353, MAXN = 1e6 + 1;
 int inv(int a) {
     int res = 1, b = MOD - 2;
     while (b) {
-        if (b & 1) (a *= a) %= MOD;
         (res *= a) %= MOD;
+        if (b & 1) (a *= a) %= MOD;
         b /= 2;
     }
     return res;
@@ -29,5 +29,7 @@ int32_t main() {
      * B -> D
      *
      * AB -> BC -> CD
+     * a^(p - 1) = p^0 (p)
+     * a^(p - 2) = p^(-1) (p)
      */
 }
