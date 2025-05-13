@@ -5,12 +5,13 @@ using namespace std;
 const int MOD = 998244353, MAXN = 1e6 + 1;
 
 int bpow(int a, int b) {
-    int res = 0;
+    int res = 1;
     while (b) {
-        res *= a;
-        if (b & 1) a *= a;
+        (res *= a) %= MOD;
+        if (b & 1) (a *= a) %= MOD;
         b /= 2;
     }
+    return res;
 }
 
 int32_t main() {
@@ -21,6 +22,7 @@ int32_t main() {
     for (int i = 1; i < MAXN; i++) {
         fact[i] = fact[i - 1] * i % MOD;
     }
+    cout << bpow(3, 5);
     /*
      * A -> C
      * A -> D
