@@ -19,16 +19,16 @@ int32_t main() {
     for (int i = 1; i < MAXN; i++) {
         fact[i] = fact[i - 1] * i % MOD;
     }
-
     cin.tie(0), ios::sync_with_stdio(0);
-
     int a, b, c, d;
     cin >> a >> b >> c >> d;
     cout << inv(3);
+    vector<int> ab(b + 1);
     /*
      * A -> C
      * A -> D
      * B -> D
      *
+     * AB -> BC -> CD
      */
 }
