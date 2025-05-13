@@ -36,6 +36,7 @@ int32_t main() {
     for (int i = 0; i <= c; i++) {
         cd[i] = choose(d + i, i);
     }
+
     /*
      * A -> C
      * A -> D
