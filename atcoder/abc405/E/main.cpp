@@ -29,9 +29,12 @@ int32_t main() {
     int a, b, c, d;
     cin >> a >> b >> c >> d;
     cout << inv(3);
-    vector<int> ab(b + 1);
+    vector<int> ab(b + 1), cd(c + 1);
     for (int i = 0; i <= b; i++) {
         ab[i] = choose(a + i, i);
+    }
+    for (int i = 0; i <= c; i++) {
+        cd[i] = choose(d + i, i);
     }
     /*
      * A -> C
