@@ -6,7 +6,11 @@ const int MOD = 998244353, MAXN = 1e6 + 1;
 
 int bpow(int a, int b) {
     int res = 0;
-    for (; b; b /= 2) {}
+    while (b) {
+        res *= a;
+        if (b & 1) a *= a;
+        b /= 2;
+    }
 }
 
 int32_t main() {
