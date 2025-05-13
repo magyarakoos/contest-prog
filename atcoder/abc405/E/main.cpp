@@ -2,10 +2,21 @@
 using namespace std;
 #define int int64_t
 
-const int MOD = 998244353;
+const int MOD = 998244353, MAXN = 1e6 + 1;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int a, b, c, d;
     cin >> a >> b >> c >> d;
+    vector<int> fact(MAXN, 1);
+    for (int i = 1; i < MAXN; i++) {
+        fact[i] = fact[i - 1] * i % MOD;
+    }
+    /*
+     * A -> C
+     * A -> D
+     * B -> D
+     *
+     * AB -> BC -> CD
+     */
 }
