@@ -14,8 +14,14 @@ int inv(int a) {
     return res;
 }
 
+int fact[MAXN];
+
+int choose(int n, int k) {
+    return fact[n] * inv(fact[k]) * inv(fact[n - k]) % MOD;
+}
+
 int32_t main() {
-    vector<int> fact(MAXN, 1);
+    fact[0] = 1;
     for (int i = 1; i < MAXN; i++) {
         fact[i] = fact[i - 1] * i % MOD;
     }
@@ -24,6 +30,9 @@ int32_t main() {
     cin >> a >> b >> c >> d;
     cout << inv(3);
     vector<int> ab(b + 1);
+    for (int i = 0; i <= b; i++) {
+        ab[i] = choose(a + i, i);
+    }
     /*
      * A -> C
      * A -> D
