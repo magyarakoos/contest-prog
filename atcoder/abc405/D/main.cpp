@@ -23,5 +23,12 @@ int32_t main() {
     while (!q.empty()) {
         auto [i, j] = q.front();
         q.pop();
+        for (int k = 0; k < 4; k++) {
+            int ni = i + di[k], nj = j + dj[k];
+            if (ni < 0 || ni < 0 || ni >= h || nj >= w ||
+                dist[ni][nj] <= dist[i][j] + 1) {
+                continue;
+            }
+        }
     }
 }
