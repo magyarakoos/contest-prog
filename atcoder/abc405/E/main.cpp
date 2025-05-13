@@ -15,21 +15,20 @@ int inv(int a) {
 }
 
 int32_t main() {
-    cin.tie(0), ios::sync_with_stdio(0);
-    int a, b, c, d;
-    cin >> a >> b >> c >> d;
     vector<int> fact(MAXN, 1);
     for (int i = 1; i < MAXN; i++) {
         fact[i] = fact[i - 1] * i % MOD;
     }
+
+    cin.tie(0), ios::sync_with_stdio(0);
+
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
     cout << inv(3);
     /*
      * A -> C
      * A -> D
      * B -> D
      *
-     * AB -> BC -> CD
-     * a^(p - 1) = p^0 (p)
-     * a^(p - 2) = p^(-1) (p)
      */
 }
