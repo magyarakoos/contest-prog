@@ -29,6 +29,10 @@ int32_t main() {
                 dist[ni][nj] <= dist[i][j] + 1) {
                 continue;
             }
+            dist[ni][nj] = dist[i][j] + 1;
+            grid[ni][nj] = "^v<>"[k];
+            q.push({ni, nj});
         }
     }
+    for (const string& row : grid) cout << row << "\n";
 }
