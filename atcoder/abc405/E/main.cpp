@@ -4,6 +4,8 @@ using namespace std;
 
 const int MOD = 998244353, MAXN = 1e6 + 1;
 
+int bpow(int a, int b) {}
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int a, b, c, d;
