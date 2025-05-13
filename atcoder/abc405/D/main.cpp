@@ -8,7 +8,7 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int h, w;
     cin >> h >> w;
-    vector grid(h, string(w, 0));
+    vector grid(h, string(w, ' '));
     vector dist(h, vector<int>(w, 1e9));
     queue<array<int, 2>> q;
     for (int i = 0; i < h; i++) {
