@@ -24,6 +24,10 @@ void sort(vector<int>& a, vector<int>& mem, int l, int r) {
 
     while (ai <= m) a[si++] = mem[ai++];
     while (bi <= m) a[si++] = mem[bi++];
+
+    cout << l << "-" << r<< ": ";
+    for (int x : a) cout << x << " ";
+    cout << "\n";
 }
 
 void sort(vector<int>& a) {
