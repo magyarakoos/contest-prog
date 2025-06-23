@@ -37,14 +37,19 @@ void getnum(int* x) {
 }
 
 void putnum(int x) {
+    if (x == 0) {
+        putchar_unlocked('0');
+        return;
+    }
+
     char buffer[10];
     int i = 0;
-    buffer[0] = '0';
     while (x > 0) {
         buffer[i++] = x % 10 + '0';
         x /= 10;
     }
-    for (i--; i >= 0; i--) {}
+
+    for (i--; i >= 0; i--) putchar_unlocked(buffer[i]);
 }
 
 int main() {
@@ -53,8 +58,11 @@ int main() {
 
     sort(0, n - 1);
 
-    for (int i = 0; i < n; i++) printf("%d ", a[i]);
-    puts("");
+    for (int i = 0; i < n; i++) {
+        putnum(a[i]);
+        putchar_unlocked(' ');
+    }
+    putchar_unlocked('\n');
 
     return 0;
 }
