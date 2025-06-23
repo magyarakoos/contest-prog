@@ -21,10 +21,11 @@ void sort(vector<int>& a, vector<int>& mem, int l, int r) {
             a[si++] = mem[bi++];
         }
     }
-    cout << ai << " " << m << " " << bi << " ";
 
     while (ai <= m) a[si++] = mem[ai++];
     while (bi <= r) a[si++] = mem[bi++];
+
+    cout << ai << " " << m << " " << bi << " ";
 
     cout << l << "-" << r<< ": ";
     for (int x : a) cout << x << " ";
