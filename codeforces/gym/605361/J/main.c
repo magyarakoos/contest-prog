@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#define BUBBLE_TRESHOLD 16
+
 int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 
 void bubble(int l, int r) {
@@ -67,7 +69,11 @@ int main() {
 
     for (int i = real_n; i < n; i++) a[i] = 2e9;
 
-    for (int i = 15; i < n; i += 16) bubble(i - 15, i);
+    for (int i = BUBBLE_TRESHOLD - 1; i < n;
+         i += BUBBLE_TRESHOLD) {
+        bubble(i - BUBBLE_TRESHOLD + 1, i);
+    }
+
     // sort(0, n - 1);
 
     for (int i = 0; i < real_n; i++) {
