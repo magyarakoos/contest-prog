@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define min(x, y) (x < y ? x : y)
 #define BTR 8
@@ -35,7 +34,7 @@ void merge(int l1, int r1, int l2, int r2) {
     }
     while (l1 <= r1) mem[mi++] = a[l1++];
     while (l2 <= r2) mem[mi++] = a[l2++];
-    memcpy(a + ol1, mem, mi * 4);
+    for (int i = 0; i < mi; i++) a[ol1 + i] = mem[i];
 }
 
 void getnum(int* x) {
