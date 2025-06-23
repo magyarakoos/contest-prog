@@ -19,10 +19,8 @@ vector<int> merge(const vector<int>& a, const vector<int>& b) {
     return c;
 }
 
-vector<int> sort(const vector<int>& a, int l, int r) {
-    if (l > r) return {};
-    if (l == r) return a;
-
+void sort(const vector<int>& a, int l, int r) {
+    if (left < right) {
     int m = (l + r) / 2;
     auto b = sort(a, l, m);
     auto c = sort(a, m + 1, r);
@@ -31,6 +29,8 @@ vector<int> sort(const vector<int>& a, int l, int r) {
     cout << l << " " << m << " " << r << " " << a.size() << " " << b.size() << " " << c.size() << "\n";
 
     return merge(b, c);
+    }
+
 }
 
 void sort(vector<int>& a) {
