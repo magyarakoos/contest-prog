@@ -9,14 +9,16 @@ vector<int> merge(vector<int>& a, int l1, int r1, int l2,
                   int r2) {
 
     vector<int> c;
-    int ai = 0, bi = 0, mi = 0;
-    while (ai <= r1 && bi <= r2) {
-        if (a[ai] < a[bi]) {
+    int mi = 0;
+    while (l1 <= r1 && l2 <= r2) {
+        if (a[l1] < a[l2]) {
+            mem[mi++] = a[l1++];
         } else {
+            mem[mi++] = a[l2++];
         }
     }
-    while (ai <= r1) c.push_back(a[ai++]);
-    while (bi <= r2) c.push_back(b[bi++]);
+    while (l1 <= r1) mem[mi++] = a[l1++];
+    while (l2 <= r2) mem[mi++] = a[l2++];
     return c;
 }
 
@@ -32,7 +34,7 @@ void sort(vector<int>& a, int l, int r) {
 }
 
 void sort(vector<int>& a) {
-    a = sort(a, 0, a.size() - 1);
+    sort(a, 0, a.size() - 1);
 }
 
 int main() {
