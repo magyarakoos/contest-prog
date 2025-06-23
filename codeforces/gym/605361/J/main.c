@@ -71,14 +71,15 @@ void putnum(int x) {
 
 int main() {
     getnum(&n);
+    for (int i = 0; i < n; i++) getnum(&a[i]);
+
     int real_n = n;
     if (n % 16) { n += 16 - n % 16; }
-    cout << n % 16 << "\n";
-    for (int i = 0; i < n; i++) getnum(&a[i]);
+    putnum(n % 16);
 
     sort(0, n - 1);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < real_n; i++) {
         putnum(a[i]);
         putchar(' ');
     }
