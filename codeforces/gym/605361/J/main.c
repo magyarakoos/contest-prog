@@ -1,27 +1,9 @@
 #include <stdio.h>
 
 #define min(x, y) (x < y ? x : y)
-#define BTR 4
-#define MAXN ((int)1e6 + BTR + 1)
+#define MAXN ((int)1e6 + 1)
 
 int n, a[MAXN], mem[MAXN];
-
-void bubble(int l, int r) {
-    int swapped = 0;
-    int m = r;
-    do {
-        swapped = 0;
-        for (int i = l + 1; i <= m; i++) {
-            if (a[i - 1] > a[i]) {
-                a[i] ^= a[i - 1];
-                a[i - 1] ^= a[i];
-                a[i] ^= a[i - 1];
-                swapped = 1;
-            }
-        }
-        m--;
-    } while (swapped);
-}
 
 void merge(int l1, int r1, int l2, int r2) {
     int ol1 = l1, mi = 0;
@@ -65,17 +47,7 @@ int main() {
     getnum(&n);
     for (int i = 0; i < n; i++) getnum(&a[i]);
 
-    int real_n = n;
-    if (n % BTR) n += BTR - n % BTR;
-
-    for (int i = real_n; i < n; i++) a[i] = 2e9;
-
-    for (int r = BTR - 1; r < n; r += BTR) {
-        int l = r - BTR + 1;
-        bubble(l, r);
-    }
-
-    for (int i = BTR; i < n; i *= 2) {
+    for (int i = 1; i < n; i *= 2) {
         for (int l = 0; l < n - 1; l += 2 * i) {
             int m = min(l + i - 1, n - 1);
             int r = min(l + 2 * i - 1, n - 1);
@@ -83,7 +55,7 @@ int main() {
         }
     }
 
-    for (int i = 0; i < real_n; i++) {
+    for (int i = 0; i < n; i++) {
         putnum(a[i]);
         putchar(' ');
     }
