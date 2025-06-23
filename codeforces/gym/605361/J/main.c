@@ -34,17 +34,6 @@ void merge(int l1, int r1, int l2, int r2) {
     memcpy(a + ol1, mem, mi * 4);
 }
 
-void sort(int l, int r) {
-    if (r - l < 16) {
-        bubble(l, r);
-    } else {
-        int m = (l + r) / 2;
-        if (l < m) sort(l, m);
-        if (m + 1 < r) sort(m + 1, r);
-        merge(l, m, m + 1, r);
-    }
-}
-
 void getnum(int* x) {
     char c;
     do { c = getchar(); } while (c < '0' || c > '9');
