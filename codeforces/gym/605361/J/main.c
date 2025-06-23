@@ -24,12 +24,16 @@ void sort(int l, int r) {
     merge(l, m, m + 1, r);
 }
 
-void getnum(int* i) {
+void getnum(int* x) {
     char c;
     do {
-
         c = getchar_unlocked();
     } while (c < '0' || c > '9');
+    while (c >= '0' && c <= '9') {
+        *x *= 10;
+        *x += (c - '0');
+        c = getchar_unlocked();
+    }
 }
 
 int main() {
