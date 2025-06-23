@@ -74,8 +74,10 @@ int main() {
     for (int i = 0; i < n; i++) getnum(&a[i]);
 
     int real_n = n;
-    if (n % 16) { n += 16 - n % 16; }
+    if (n % 16) n += 16 - n % 16;
     putnum(n % 16);
+
+    for (int i = real_n; i < n; i++) a[i] = 2e9;
 
     sort(0, n - 1);
 
