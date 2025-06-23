@@ -14,7 +14,7 @@ void merge(int l1, int r1, int l2, int r2) {
     }
     while (l1 <= r1) mem[mi++] = a[l1++];
     while (l2 <= r2) mem[mi++] = a[l2++];
-    memcpy(a + ol1, mem, mi * sizeof(int));
+    memcpy(a + ol1, mem, mi * 4);
 }
 
 void sort(int l, int r) {
