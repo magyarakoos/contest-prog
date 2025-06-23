@@ -70,12 +70,14 @@ int main() {
 
     for (int i = real_n; i < n; i++) a[i] = 2e9;
 
-    for (int i = BUBBLE_TRESHOLD - 1; i < n;
-         i += BUBBLE_TRESHOLD) {
-        bubble(i - BUBBLE_TRESHOLD + 1, i);
+    int cnt = 0;
+    for (int r = BUBBLE_TRESHOLD - 1; r < n;
+         r += BUBBLE_TRESHOLD) {
+        int l = r - BUBBLE_TRESHOLD + 1;
+        bubble(l, r);
+        lefts[cnt] = l;
+        rights[cnt++] = r;
     }
-
-    int cnt = n / 16;
 
     // sort(0, n - 1);
 
