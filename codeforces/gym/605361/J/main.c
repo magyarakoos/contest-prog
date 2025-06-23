@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define BUBBLE_TRESHOLD 32
+#define BTR 32
 
 int n, a[(int)1e6 + 1], mem[(int)1e6 + 1],
     lefts[(int)1e5 + 1], rights[(int)1e5 + 1];
@@ -66,14 +66,13 @@ int main() {
     for (int i = 0; i < n; i++) getnum(&a[i]);
 
     int real_n = n;
-    if (n % 16) n += 16 - n % 16;
+    if (n % BTR) n += BTR - n % BTR;
 
     for (int i = real_n; i < n; i++) a[i] = 2e9;
 
     int cnt = 0;
-    for (int r = BUBBLE_TRESHOLD - 1; r < n;
-         r += BUBBLE_TRESHOLD) {
-        int l = r - BUBBLE_TRESHOLD + 1;
+    for (int r = BTR - 1; r < n; r += BTR) {
+        int l = r - BTR + 1;
         bubble(l, r);
         lefts[cnt] = l;
         rights[cnt++] = r;
