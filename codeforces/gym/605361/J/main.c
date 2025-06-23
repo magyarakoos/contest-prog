@@ -75,7 +75,6 @@ int main() {
 
     int real_n = n;
     if (n % 16) n += 16 - n % 16;
-    putnum(n % 16);
 
     for (int i = real_n; i < n; i++) a[i] = 2e9;
 
