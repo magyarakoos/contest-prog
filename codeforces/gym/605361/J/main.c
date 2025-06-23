@@ -6,9 +6,9 @@ int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 void bubble(int l, int r) {
     for (int i = l; i < r; i++) {
         for (int j = i + 1; j <= r && a[i] > a[j]; j++) {
-            int tmp = a[j];
-            a[j] = a[i];
-            a[i] = tmp;
+            a[i] ^= a[j];
+            a[j] ^= a[i];
+            a[i] ^= a[j];
         }
     }
 }
