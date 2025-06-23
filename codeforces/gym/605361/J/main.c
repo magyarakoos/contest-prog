@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-#define MAXN int(1e6 + 1)
-
-int n, a[MAXN], mem[MAXN];
+int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 
 void merge(int l1, int r1, int l2, int r2) {
     int ol1 = l1, mi = 0;
