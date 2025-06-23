@@ -4,7 +4,7 @@ using namespace std;
 
 // vector<int> buckets[1 << 20];
 
-vector<int> merge(vector<int> a, vector<int> b) {
+vector<int> merge(const vector<int>& a, const vector<int>& b) {
     vector<int> c;
     int ai = 0, bi = 0;
     while (ai < a.size() && bi < b.size()) {
@@ -19,7 +19,7 @@ vector<int> merge(vector<int> a, vector<int> b) {
     return c;
 }
 
-vector<int> sort(vector<int>& a, int l, int r) {
+vector<int> sort(const vector<int>& a, int l, int r) {
     if (l > r) return {};
     if (l == r) return a;
 
@@ -31,7 +31,6 @@ vector<int> sort(vector<int>& a, int l, int r) {
 }
 
 void sort(vector<int>& a) {
-    vector<int> mem(a.size());
     a = sort(a, 0, a.size() - 1);
 }
 
