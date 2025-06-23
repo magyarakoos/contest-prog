@@ -7,6 +7,7 @@ void bubble(int l, int r) {
     bool swapped = 0;
     int m = r;
     do {
+        swapped = 0;
         for (int i = l + 1; i <= m; i++) {
             if (a[i - 1] > a[i]) {
                 a[i] ^= a[i - 1];
@@ -17,7 +18,7 @@ void bubble(int l, int r) {
         }
         m--;
 
-    } while (!swapped);
+    } while (swapped);
 }
 
 void merge(int l1, int r1, int l2, int r2) {
