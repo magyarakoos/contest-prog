@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define BUBBLE_TRESHOLD 16
+#define BUBBLE_TRESHOLD 32
 
 int n, a[(int)1e6 + 1], mem[(int)1e6 + 1],
     lefts[(int)1e5 + 1], rights[(int)1e5 + 1];
