@@ -4,8 +4,7 @@
 #define BTR 8
 #define MAXN ((int)1e6 + BTR + 1)
 
-int n, a[MAXN], mem[MAXN], lefts[MAXN / BTR],
-    rights[MAXN / BTR];
+int n, a[MAXN], mem[MAXN];
 
 void bubble(int l, int r) {
     int swapped = 0;
