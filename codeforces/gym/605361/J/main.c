@@ -26,19 +26,17 @@ void sort(int l, int r) {
 
 void getnum(int* x) {
     char c;
-    do {
-        c = getchar_unlocked();
-    } while (c < '0' || c > '9');
+    do { c = getchar(); } while (c < '0' || c > '9');
     while (c >= '0' && c <= '9') {
         *x *= 10;
         *x += (c - '0');
-        c = getchar_unlocked();
+        c = getchar();
     }
 }
 
 void putnum(int x) {
     if (x == 0) {
-        putchar_unlocked('0');
+        putchar('0');
         return;
     }
     char buffer[10];
@@ -47,7 +45,7 @@ void putnum(int x) {
         buffer[i++] = x % 10 + '0';
         x /= 10;
     }
-    for (i--; i >= 0; i--) putchar_unlocked(buffer[i]);
+    for (i--; i >= 0; i--) putchar(buffer[i]);
 }
 
 int main() {
@@ -58,9 +56,9 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         putnum(a[i]);
-        putchar_unlocked(' ');
+        putchar(' ');
     }
-    putchar_unlocked('\n');
+    putchar('\n');
 
     return 0;
 }
