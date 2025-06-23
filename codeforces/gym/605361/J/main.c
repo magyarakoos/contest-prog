@@ -5,16 +5,19 @@ int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 
 void bubble(int l, int r) {
     bool swapped = 0;
+    int m = r;
     do {
+        for (int i = l + 1; i <= m; i++) {
+            if (a[i - 1] > a[i]) {
+                a[i] ^= a[j];
+                a[j] ^= a[i];
+                a[i] ^= a[j];
+                swapped = 1;
+            }
+        }
+        m--;
 
     } while (!swapped);
-    for (int i = l; i < r; i++) {
-        for (int j = i + 1; j <= r && a[i] > a[j]; j++) {
-            a[i] ^= a[j];
-            a[j] ^= a[i];
-            a[i] ^= a[j];
-        }
-    }
 }
 
 void merge(int l1, int r1, int l2, int r2) {
