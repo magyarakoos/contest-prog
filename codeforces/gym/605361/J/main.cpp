@@ -3,9 +3,15 @@
 using namespace std;
 
 vector<int> buckets[1 << 20];
+int swap[1e6 + 1];
+
+void sort(vector<int>& a, int l, int r, vector<int>& swap) {
+
+}
 
 void sort(vector<int>& a) {
     vector<int> swap(a.size());
+
 }
 
 int main() {
