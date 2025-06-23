@@ -9,9 +9,9 @@ void bubble(int l, int r) {
     do {
         for (int i = l + 1; i <= m; i++) {
             if (a[i - 1] > a[i]) {
-                a[i] ^= a[j];
-                a[j] ^= a[i];
-                a[i] ^= a[j];
+                a[i] ^= a[i - 1];
+                a[i - 1] ^= a[i];
+                a[i] ^= a[i - 1];
                 swapped = 1;
             }
         }
