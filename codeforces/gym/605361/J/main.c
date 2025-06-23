@@ -7,20 +7,11 @@
 int n, a[MAXN], mem[MAXN];
 
 void bubble(int l, int r) {
-    int swapped = 0;
-    int m = r;
-    do {
-        swapped = 0;
-        for (int i = l + 1; i <= m; i++) {
-            if (a[i - 1] > a[i]) {
-                a[i] ^= a[i - 1];
-                a[i - 1] ^= a[i];
-                a[i] ^= a[i - 1];
-                swapped = 1;
-            }
-        }
-        m--;
-    } while (swapped);
+    for (int i = l + 1; i < r; i++) {
+        int key = a[i], j = i - 1;
+        while (j >= l && a[j] > key) a[j + 1] = a[j--];
+        a[j + 1] = key;
+    }
 }
 
 void merge(int l1, int r1, int l2, int r2) {
