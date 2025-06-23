@@ -41,14 +41,12 @@ void putnum(int x) {
         putchar_unlocked('0');
         return;
     }
-
     char buffer[10];
     int i = 0;
     while (x > 0) {
         buffer[i++] = x % 10 + '0';
         x /= 10;
     }
-
     for (i--; i >= 0; i--) putchar_unlocked(buffer[i]);
 }
 
