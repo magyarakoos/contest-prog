@@ -79,6 +79,13 @@ int main() {
         rights[cnt++] = r;
     }
 
+    while (cnt > 1) {
+        for (int i = 1; i < cnt; i += 2) {
+            merge(lefts[i - 1], rights[i - 1], lefts[i],
+                  rights[i]);
+        }
+    }
+
     // sort(0, n - 1);
 
     for (int i = 0; i < real_n; i++) {
