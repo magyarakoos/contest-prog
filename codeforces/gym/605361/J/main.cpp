@@ -7,9 +7,13 @@ int swap[1e6 + 1];
 
 void sort(vector<int>& a, int l, int r) {
     if (l >= r) return;
+
     int m = (l + r) / 2;
     sort(a, l, m);
     sort(a, m + 1, r);
+
+    int ai = 0, bi = m + 1, si = 0;
+    while ()
 }
 
 void sort(vector<int>& a) {
