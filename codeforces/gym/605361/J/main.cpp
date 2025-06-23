@@ -4,6 +4,7 @@ using namespace std;
 
 vector<int> buckets[1 << 20];
 int count[1 << 10];
+bool vist[1 << 10];
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
