@@ -1,6 +1,5 @@
-#include <cstring>
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include <string.h>
 
 #define min(x, y) (x < y ? x : y)
 #define BTR 8
@@ -39,12 +38,33 @@ void merge(int l1, int r1, int l2, int r2) {
     memcpy(a + ol1, mem, mi * 4);
 }
 
-int main() {
-    cin.tie(0);
-    ios::sync_with_stdio(0);
+void getnum(int* x) {
+    char c;
+    do { c = getchar(); } while (c < '0' || c > '9');
+    while (c >= '0' && c <= '9') {
+        *x *= 10;
+        *x += (c - '0');
+        c = getchar();
+    }
+}
 
-    cin >> n;
-    for (int i = 0; i < n; i++) cin >> a[i];
+void putnum(int x) {
+    if (x == 0) {
+        putchar('0');
+        return;
+    }
+    char buffer[10];
+    int i = 0;
+    while (x > 0) {
+        buffer[i++] = x % 10 + '0';
+        x /= 10;
+    }
+    for (i--; i >= 0; i--) putchar(buffer[i]);
+}
+
+int main() {
+    getnum(&n);
+    for (int i = 0; i < n; i++) getnum(&a[i]);
 
     int real_n = n;
     if (n % BTR) n += BTR - n % BTR;
@@ -65,7 +85,10 @@ int main() {
     }
 
     for (int i = 0; i < real_n; i++) {
-        cout << a[i] << " ";
+        putnum(a[i]);
+        putchar(' ');
     }
-    cout << "\n";
+    putchar('\n');
+
+    return 0;
 }
