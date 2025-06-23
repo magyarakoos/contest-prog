@@ -79,6 +79,8 @@ int main() {
     for (int i = BTR; i < n; i *= 2) {
         for (int l = 0; l < n - 1; l += 2 * i) {
             int m = min(l + i - 1, n - 1);
+            int r = min(l + 2 * i - 1, n - 1);
+            merge(l, m, m + 1, r);
         }
     }
 
