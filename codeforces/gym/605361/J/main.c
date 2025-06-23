@@ -2,9 +2,10 @@
 #include <string.h>
 
 #define BTR 8
+#define MAXN ((int)1e6 + BTR + 1)
 
-int n, a[(int)1e6 + 1], mem[(int)1e6 + 1],
-    lefts[(int)1e5 + 1], rights[(int)1e5 + 1];
+int n, a[MAXN], mem[MAXN], lefts[(int)1e5 + 1],
+    rights[(int)1e5 + 1];
 
 void bubble(int l, int r) {
     int swapped = 0;
