@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define min(x, y) (x < y ? x : y)
-#define BTR 8
+#define BTR 4
 #define MAXN ((int)1e6 + BTR + 1)
 
 int n, a[MAXN], mem[MAXN];
