@@ -5,13 +5,15 @@ using namespace std;
 vector<int> buckets[1 << 20];
 int swap[1e6 + 1];
 
-void sort(vector<int>& a, int l, int r, vector<int>& swap) {
-
+void sort(vector<int>& a, int l, int r) {
+    if (l >= r) return;
+    int m = (l + r) / 2;
+    sort(a, l, m);
+    sort(a, m + 1, r);
 }
 
 void sort(vector<int>& a) {
-    vector<int> swap(a.size());
-
+    sort(a, 0, a.size() - 1);
 }
 
 int main() {
