@@ -11,6 +11,8 @@ void sort(vector<int>& a, vector<int>& mem, int l, int r) {
     sort(a, mem, l, m);
     sort(a, mem, m + 1, r);
 
+    mem = a;
+
     int ai = 0, bi = m + 1, si = 0;
     while (ai <= m && bi <= r) {
         if (a[ai] < a[bi]) {
@@ -22,8 +24,6 @@ void sort(vector<int>& a, vector<int>& mem, int l, int r) {
 
     while (ai <= m) mem[si++] = a[ai++];
     while (bi <= m) mem[si++] = a[bi++];
-
-    swap(a, mem);
 }
 
 void sort(vector<int>& a) {
