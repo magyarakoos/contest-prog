@@ -39,7 +39,12 @@ void getnum(int* x) {
 void putnum(int x) {
     char buffer[10];
     int i = 0;
-    while (x >= 0) {}
+    buffer[0] = '0';
+    while (x > 0) {
+        buffer[i++] = x % 10 + '0';
+        x /= 10;
+    }
+    for (i--; i >= 0; i--) {}
 }
 
 int main() {
