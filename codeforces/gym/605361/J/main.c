@@ -3,7 +3,8 @@
 
 #define BUBBLE_TRESHOLD 16
 
-int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
+int n, a[(int)1e6 + 1], mem[(int)1e6 + 1],
+    lefts[(int)1e5 + 1], rights[(int)1e5 + 1];
 
 void bubble(int l, int r) {
     int swapped = 0;
@@ -73,6 +74,8 @@ int main() {
          i += BUBBLE_TRESHOLD) {
         bubble(i - BUBBLE_TRESHOLD + 1, i);
     }
+
+    int cnt = n / 16;
 
     // sort(0, n - 1);
 
