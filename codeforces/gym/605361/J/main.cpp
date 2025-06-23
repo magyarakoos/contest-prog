@@ -4,37 +4,22 @@ using namespace std;
 
 // vector<int> buckets[1 << 20];
 
-void sort(vector<int>& a, vector<int>& mem, int l, int r) {
+vector<int> merge(vector<int> a, vector<int> b) {
+
+}
+
+vector<int> sort(vector<int>& a, int l, int r) {
     if (l >= r) return;
 
     int m = (l + r) / 2;
-    sort(a, mem, l, m);
-    sort(a, mem, m + 1, r);
-
-    mem = a;
-
-    int ai = 0, bi = m + 1, si = 0;
-    while (ai <= m && bi <= r) {
-        if (mem[ai] < mem[bi]) {
-            a[si++] = mem[ai++];
-        } else {
-            a[si++] = mem[bi++];
-        }
-    }
-
-    while (ai <= m) a[si++] = mem[ai++];
-    while (bi <= r) a[si++] = mem[bi++];
-
-    cout << ai << " " << m << " " << bi << " ";
-
-    cout << l << "-" << r<< ": ";
-    for (int x : a) cout << x << " ";
-    cout << "\n";
+    auto b = sort(a, l, m);
+    auto c = sort(a, m + 1, r);
+    a = merge(b, c);
 }
 
 void sort(vector<int>& a) {
     vector<int> mem(a.size());
-    sort(a, mem,0, a.size() - 1);
+    a = sort(a, 0, a.size() - 1);
 }
 
 int main() {
