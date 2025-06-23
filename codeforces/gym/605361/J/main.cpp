@@ -13,6 +13,6 @@ int32_t main() {
     while (n--) {
         int x;
         cin >> x;
-        buckets[x & ((1 << LEN) - 1)].push_back(x);
+        buckets[x >> 10].push_back(x);
     }
 }
