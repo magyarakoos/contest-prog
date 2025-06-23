@@ -13,7 +13,11 @@ void sort(vector<int>& a, int l, int r) {
     sort(a, m + 1, r);
 
     int ai = 0, bi = m + 1, si = 0;
-    while ()
+    while (ai <= m && bi <= r) {
+        if (a[ai] < b[bi]) {
+            swap[si++] = a[ai++];
+        }
+    }
 }
 
 void sort(vector<int>& a) {
