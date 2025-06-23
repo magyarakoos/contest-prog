@@ -3,16 +3,16 @@
 using namespace std;
 
 // vector<int> buckets[1 << 20];
-int swap[(int)1e6 + 1];
+int mem[(int)1e6 + 1];
 
-vector<int> merge(int l, int m, int r) {
+vector<int> merge(vector<int>& a, int l1, int r1, int l2,
+                  int r2) {
+
     vector<int> c;
-    int ai = 0, bi = 0;
+    int ai = 0, bi = 0, mi = 0;
     while (ai < a.size() && bi < b.size()) {
-        if (a[ai] < b[bi]) {
-            c.push_back(a[ai++]);
+        if (a[ai] < a[bi]) {
         } else {
-            c.push_back(b[bi++]);
         }
     }
     while (ai < a.size()) c.push_back(a[ai++]);
