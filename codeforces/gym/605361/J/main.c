@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#define min(x, y) (x < y ? x : y)
 #define BTR 8
 #define MAXN ((int)1e6 + BTR + 1)
 
@@ -70,26 +71,15 @@ int main() {
 
     for (int i = real_n; i < n; i++) a[i] = 2e9;
 
-    int cnt = 0;
     for (int r = BTR - 1; r < n; r += BTR) {
         int l = r - BTR + 1;
         bubble(l, r);
-        lefts[cnt] = l;
-        rights[cnt++] = r;
     }
 
-    while (cnt > 1) {
-        for (int i = 1; i < cnt; i += 2) {
-            merge(lefts[i - 1], rights[i - 1], lefts[i],
-                  rights[i]);
-            lefts[i / 2] = lefts[i - 1];
-            rights[i / 2] = rights[i];
+    for (int i = BTR; i < n; i *= 2) {
+        for (int l = 0; l < n - 1; l += 2 * i) {
+            int m = min(l + i - 1, n - 1);
         }
-        if (cnt % 2) {
-            lefts[cnt / 2] = lefts[cnt - 1];
-            rights[cnt / 2] = rights[cnt - 1];
-        }
-        cnt = (cnt + 1) / 2;
     }
 
     for (int i = 0; i < real_n; i++) {
