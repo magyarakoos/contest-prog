@@ -4,6 +4,10 @@
 int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 
 void bubble(int l, int r) {
+    bool swapped = 0;
+    do {
+
+    } while (!swapped);
     for (int i = l; i < r; i++) {
         for (int j = i + 1; j <= r && a[i] > a[j]; j++) {
             a[i] ^= a[j];
