@@ -72,6 +72,8 @@ void putnum(int x) {
 int main() {
     getnum(&n);
     int real_n = n;
+    if (n % 16) { n += 16 - n % 16; }
+    cout << n % 16 << "\n";
     for (int i = 0; i < n; i++) getnum(&a[i]);
 
     sort(0, n - 1);
