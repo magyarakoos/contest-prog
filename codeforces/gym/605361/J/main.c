@@ -83,10 +83,15 @@ int main() {
         for (int i = 1; i < cnt; i += 2) {
             merge(lefts[i - 1], rights[i - 1], lefts[i],
                   rights[i]);
+            lefts[i / 2] = lefts[i - 1];
+            rights[i / 2] = rights[i - 1];
         }
+        if (cnt % 2) {
+            lefts[cnt / 2] = lefts[cnt - 1];
+            rights[cnt / 2] = rights[cnt - 1];
+        }
+        cnt = (cnt + 1) / 2;
     }
-
-    // sort(0, n - 1);
 
     for (int i = 0; i < real_n; i++) {
         putnum(a[i]);
