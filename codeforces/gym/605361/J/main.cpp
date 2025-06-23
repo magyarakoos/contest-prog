@@ -14,6 +14,6 @@ int main() {
         buckets[x >> 10].push_back(x & ((1 << 10) - 1));
     }
     for (int i = 0; i < (1 << 20); i++) {
-
+        sort(buckets[i]);    
     }
 }
