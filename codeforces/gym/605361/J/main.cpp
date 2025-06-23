@@ -27,6 +27,9 @@ vector<int> sort(const vector<int>& a, int l, int r) {
     auto b = sort(a, l, m);
     auto c = sort(a, m + 1, r);
 
+
+    cout << l << " " << m << " " << r << " " << a.size() << " " << b.size() << " " << c.size() << "\n";
+
     return merge(b, c);
 }
 
