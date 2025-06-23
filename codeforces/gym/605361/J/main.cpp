@@ -8,12 +8,12 @@ void sort(vector<int>& a, vector<int>& mem, int l, int r) {
     if (l >= r) return;
 
     int m = (l + r) / 2;
-    sort(a, l, m);
-    sort(a, m + 1, r);
+    sort(a, mem, l, m);
+    sort(a, mem, m + 1, r);
 
     int ai = 0, bi = m + 1, si = 0;
     while (ai <= m && bi <= r) {
-        if (a[ai] < b[bi]) {
+        if (a[ai] < a[bi]) {
             mem[si++] = a[ai++];
         } else {
             mem[si++] = a[bi++];
@@ -28,7 +28,7 @@ void sort(vector<int>& a, vector<int>& mem, int l, int r) {
 
 void sort(vector<int>& a) {
     vector<int> mem(a.size());
-    sort(a, mem, a.size() - 1);
+    sort(a, mem,0, a.size() - 1);
 }
 
 int main() {
