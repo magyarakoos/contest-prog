@@ -3,9 +3,9 @@
 using namespace std;
 
 // vector<int> buckets[1 << 20];
+int swap[(int)1e6 + 1];
 
-vector<int> merge(const vector<int>& a,
-                  const vector<int>& b) {
+vector<int> merge(int l, int m, int r) {
     vector<int> c;
     int ai = 0, bi = 0;
     while (ai < a.size() && bi < b.size()) {
