@@ -4,7 +4,8 @@ using namespace std;
 
 // vector<int> buckets[1 << 20];
 
-vector<int> merge(const vector<int>& a, const vector<int>& b) {
+vector<int> merge(const vector<int>& a,
+                  const vector<int>& b) {
     vector<int> c;
     int ai = 0, bi = 0;
     while (ai < a.size() && bi < b.size()) {
@@ -20,17 +21,14 @@ vector<int> merge(const vector<int>& a, const vector<int>& b) {
 }
 
 void sort(const vector<int>& a, int l, int r) {
-    if (left < right) {
-    int m = (l + r) / 2;
-    auto b = sort(a, l, m);
-    auto c = sort(a, m + 1, r);
+    if (l < r) {
+        int m = (l + r) / 2;
 
+        sort(a, l, m);
+        sort(a, m + 1, r);
 
-    cout << l << " " << m << " " << r << " " << a.size() << " " << b.size() << " " << c.size() << "\n";
-
-    return merge(b, c);
+        merge(a, l, m, r);
     }
-
 }
 
 void sort(vector<int>& a) {
@@ -47,11 +45,11 @@ int main() {
     for (int x : a) cout << x << " ";
     cout << "\n";
     // while (n--) {
-        // int x;
-        // cin >> x;
-        // buckets[x >> 10].push_back(x & ((1 << 10) - 1));
+    // int x;
+    // cin >> x;
+    // buckets[x >> 10].push_back(x & ((1 << 10) - 1));
     // }
     // for (int i = 0; i < (1 << 20); i++) {
-    //     sort(buckets[i]);    
+    //     sort(buckets[i]);
     // }
 }
