@@ -78,7 +78,8 @@ int main() {
 
     for (int i = real_n; i < n; i++) a[i] = 2e9;
 
-    sort(0, n - 1);
+    for (int i = 15; i < n; i += 16) bubble(i - 15, i);
+    // sort(0, n - 1);
 
     for (int i = 0; i < real_n; i++) {
         putnum(a[i]);
