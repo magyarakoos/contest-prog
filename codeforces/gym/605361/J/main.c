@@ -24,6 +24,10 @@ void sort(int l, int r) {
     merge(l, m, m + 1, r);
 }
 
+void getnum(int* i) {
+    *i = 0;
+}
+
 int main() {
     scanf("%d", &n);
     for (int i = 0; i < n; i++) scanf("%d", &a[i]);
