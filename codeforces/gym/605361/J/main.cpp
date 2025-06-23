@@ -10,24 +10,24 @@ vector<int> merge(vector<int>& a, int l1, int r1, int l2,
 
     vector<int> c;
     int ai = 0, bi = 0, mi = 0;
-    while (ai < a.size() && bi < b.size()) {
+    while (ai <= r1 && bi <= r2) {
         if (a[ai] < a[bi]) {
         } else {
         }
     }
-    while (ai < a.size()) c.push_back(a[ai++]);
-    while (bi < b.size()) c.push_back(b[bi++]);
+    while (ai <= r1) c.push_back(a[ai++]);
+    while (bi <= r2) c.push_back(b[bi++]);
     return c;
 }
 
-void sort(const vector<int>& a, int l, int r) {
+void sort(vector<int>& a, int l, int r) {
     if (l < r) {
         int m = (l + r) / 2;
 
         sort(a, l, m);
         sort(a, m + 1, r);
 
-        merge(a, l, m, r);
+        merge(a, l, m, m + 1, r);
     }
 }
 
