@@ -25,9 +25,11 @@ void sort(int l, int r) {
 }
 
 void getnum(int* i) {
-    *i = 0;
     char c;
-    getchar_unlocked();
+    do {
+
+        c = getchar_unlocked();
+    } while (c < '0' || c > '9');
 }
 
 int main() {
