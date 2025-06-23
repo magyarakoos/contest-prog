@@ -22,12 +22,14 @@ void sort(int l, int r) {
     int m = (l + r) / 2;
     if (l < m) sort(l, m);
     if (m + 1 < r) sort(m + 1, r);
+    merge(l, m, m + 1, r);
 }
 
 int main() {
-    int n;
     scanf("%d", &n);
     for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+
+    sort(0, n - 1);
 
     for (int i = 0; i < n; i++) printf("%d ", a[i]);
     puts("");
