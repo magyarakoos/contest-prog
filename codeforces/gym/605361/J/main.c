@@ -13,6 +13,7 @@ void merge(int l1, int r1, int l2, int r2) {
     }
     while (l1 <= r1) mem[mi++] = a[l1++];
     while (l2 <= r2) mem[mi++] = a[l2++];
+    memcpy();
     for (int i = 0; i < mi; i++) a[i + ol1] = mem[i];
 }
 
