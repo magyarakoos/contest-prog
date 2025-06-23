@@ -15,15 +15,15 @@ void sort(vector<int>& a, vector<int>& mem, int l, int r) {
 
     int ai = 0, bi = m + 1, si = 0;
     while (ai <= m && bi <= r) {
-        if (a[ai] < a[bi]) {
-            mem[si++] = a[ai++];
+        if (mem[ai] < mem[bi]) {
+            a[si++] = mem[ai++];
         } else {
-            mem[si++] = a[bi++];
+            a[si++] = mem[bi++];
         }
     }
 
-    while (ai <= m) mem[si++] = a[ai++];
-    while (bi <= m) mem[si++] = a[bi++];
+    while (ai <= m) a[si++] = mem[ai++];
+    while (bi <= m) a[si++] = mem[bi++];
 }
 
 void sort(vector<int>& a) {
