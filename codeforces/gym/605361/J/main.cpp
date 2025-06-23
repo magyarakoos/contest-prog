@@ -42,8 +42,9 @@ void merge(int l1, int r1, int l2, int r2) {
 int main() {
     cin.tie(0);
     ios::sync_with_stdio(0);
-    getnum(&n);
-    for (int i = 0; i < n; i++) getnum(&a[i]);
+
+    cin >> n;
+    for (int i = 0; i < n; i++) cin >> a[i];
 
     int real_n = n;
     if (n % BTR) n += BTR - n % BTR;
@@ -64,10 +65,7 @@ int main() {
     }
 
     for (int i = 0; i < real_n; i++) {
-        putnum(a[i]);
-        putchar(' ');
+        cout << a[i] << " ";
     }
-    putchar('\n');
-
-    return 0;
+    cout << "\n";
 }
