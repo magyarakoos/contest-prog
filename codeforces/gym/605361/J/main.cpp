@@ -9,12 +9,14 @@ vector<int> merge(vector<int> a, vector<int> b) {
 }
 
 vector<int> sort(vector<int>& a, int l, int r) {
-    if (l >= r) return;
+    if (l > r) return {};
+    if (l == r) return a;
 
     int m = (l + r) / 2;
     auto b = sort(a, l, m);
     auto c = sort(a, m + 1, r);
-    a = merge(b, c);
+
+    return merge(b, c);
 }
 
 void sort(vector<int>& a) {
