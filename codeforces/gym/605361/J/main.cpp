@@ -5,8 +5,7 @@ using namespace std;
 // vector<int> buckets[1 << 20];
 int mem[(int)1e6 + 1];
 
-vector<int> merge(vector<int>& a, int l1, int r1, int l2,
-                  int r2) {
+void merge(vector<int>& a, int l1, int r1, int l2, int r2) {
 
     vector<int> c;
     int mi = 0;
@@ -19,7 +18,8 @@ vector<int> merge(vector<int>& a, int l1, int r1, int l2,
     }
     while (l1 <= r1) mem[mi++] = a[l1++];
     while (l2 <= r2) mem[mi++] = a[l2++];
-    return c;
+
+    for (int i = 0; i < mi; i++) a[i] = mem[i];
 }
 
 void sort(vector<int>& a, int l, int r) {
