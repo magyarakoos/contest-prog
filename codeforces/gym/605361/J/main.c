@@ -26,11 +26,13 @@ void sort(int l, int r) {
 
 void getnum(int* i) {
     *i = 0;
+    char c;
+    getchar_unlocked();
 }
 
 int main() {
-    scanf("%d", &n);
-    for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+    getnum(&n);
+    for (int i = 0; i < n; i++) getnum(&a[i]);
 
     sort(0, n - 1);
 
