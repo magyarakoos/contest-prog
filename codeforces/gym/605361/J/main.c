@@ -4,7 +4,7 @@
 int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 
 void bubble(int l, int r) {
-    bool swapped = 0;
+    int swapped = 0;
     int m = r;
     do {
         swapped = 0;
@@ -17,7 +17,6 @@ void bubble(int l, int r) {
             }
         }
         m--;
-
     } while (swapped);
 }
 
@@ -72,6 +71,7 @@ void putnum(int x) {
 
 int main() {
     getnum(&n);
+    int real_n = n;
     for (int i = 0; i < n; i++) getnum(&a[i]);
 
     sort(0, n - 1);
