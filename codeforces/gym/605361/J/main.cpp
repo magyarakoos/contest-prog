@@ -5,7 +5,18 @@ using namespace std;
 // vector<int> buckets[1 << 20];
 
 vector<int> merge(vector<int> a, vector<int> b) {
-
+    vector<int> c;
+    int ai = 0, bi = 0;
+    while (ai < a.size() && bi < b.size()) {
+        if (a[ai] < b[bi]) {
+            c.push_back(a[ai++]);
+        } else {
+            c.push_back(b[bi++]);
+        }
+    }
+    while (ai < a.size()) c.push_back(a[ai++]);
+    while (bi < b.size()) c.push_back(b[bi++]);
+    return c;
 }
 
 vector<int> sort(vector<int>& a, int l, int r) {
