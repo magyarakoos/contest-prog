@@ -1,6 +1,10 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
-#define int int64_t
+
+const int LEN = 20;
+
+vector<int> buckets[1 << LEN];
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
