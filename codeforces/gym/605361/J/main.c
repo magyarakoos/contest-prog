@@ -6,7 +6,7 @@
 
 int n, a[MAXN], mem[MAXN];
 
-void bubble(int l, int r) {
+void slow_sort(int l, int r) {
     for (int i = l + 1; i < r; i++) {
         int key = a[i], j = i - 1;
         while (j >= l && a[j] > key) a[j + 1] = a[j--];
@@ -63,7 +63,7 @@ int main() {
 
     for (int r = BTR - 1; r < n; r += BTR) {
         int l = r - BTR + 1;
-        bubble(l, r);
+        slow_sort(l, r);
     }
 
     for (int i = BTR; i < n; i *= 2) {
