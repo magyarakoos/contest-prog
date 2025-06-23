@@ -8,6 +8,8 @@ void merge(vector<int>& a, int l1, int r1, int l2, int r2) {
 
     cout << l1 << " " << r1 << " " << l2 << " " << r2
          << " : ";
+    for (int i = l1; i <= r2; i++) cout << a[i];
+    cout << " ";
     cout << "\n";
     int mi = 0;
     while (l1 <= r1 && l2 <= r2) {
