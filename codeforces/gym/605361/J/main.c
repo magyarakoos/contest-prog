@@ -84,7 +84,7 @@ int main() {
             merge(lefts[i - 1], rights[i - 1], lefts[i],
                   rights[i]);
             lefts[i / 2] = lefts[i - 1];
-            rights[i / 2] = rights[i - 1];
+            rights[i / 2] = rights[i];
         }
         if (cnt % 2) {
             lefts[cnt / 2] = lefts[cnt - 1];
