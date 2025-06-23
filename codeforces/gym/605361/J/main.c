@@ -36,6 +36,12 @@ void getnum(int* x) {
     }
 }
 
+void putnum(int x) {
+    char buffer[10];
+    int i = 0;
+    while (x >= 0) {}
+}
+
 int main() {
     getnum(&n);
     for (int i = 0; i < n; i++) getnum(&a[i]);
