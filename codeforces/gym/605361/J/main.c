@@ -3,7 +3,15 @@
 
 int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 
-void bubble(int l, int r) {}
+void bubble(int l, int r) {
+    for (int i = l; i < r; i++) {
+        for (int j = i + 1; j <= r && a[i] > a[j]; j++) {
+            int tmp = a[j];
+            a[j] = a[i];
+            a[i] = tmp;
+        }
+    }
+}
 
 void merge(int l1, int r1, int l2, int r2) {
     int ol1 = l1, mi = 0;
