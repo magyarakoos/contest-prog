@@ -3,6 +3,8 @@
 
 int n, a[(int)1e6 + 1], mem[(int)1e6 + 1];
 
+void bubble(int l, int r) {}
+
 void merge(int l1, int r1, int l2, int r2) {
     int ol1 = l1, mi = 0;
     while (l1 <= r1 && l2 <= r2) {
@@ -18,10 +20,14 @@ void merge(int l1, int r1, int l2, int r2) {
 }
 
 void sort(int l, int r) {
-    int m = (l + r) / 2;
-    if (l < m) sort(l, m);
-    if (m + 1 < r) sort(m + 1, r);
-    merge(l, m, m + 1, r);
+    if (r - l < 16) {
+        bubble(l, r);
+    } else {
+        int m = (l + r) / 2;
+        if (l < m) sort(l, m);
+        if (m + 1 < r) sort(m + 1, r);
+        merge(l, m, m + 1, r);
+    }
 }
 
 void getnum(int* x) {
