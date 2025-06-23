@@ -5,12 +5,7 @@ using namespace std;
 int mem[(int)1e6 + 1];
 
 void merge(vector<int>& a, int l1, int r1, int l2, int r2) {
-
-    cout << l1 << " " << r1 << " " << l2 << " " << r2
-         << " : ";
-    for (int i = 0; i < a.size(); i++) cout << a[i];
-    cout << " ";
-    int mi = 0;
+    int ol1 = l1, mi = 0;
     while (l1 <= r1 && l2 <= r2) {
         if (a[l1] < a[l2]) {
             mem[mi++] = a[l1++];
@@ -20,10 +15,7 @@ void merge(vector<int>& a, int l1, int r1, int l2, int r2) {
     }
     while (l1 <= r1) mem[mi++] = a[l1++];
     while (l2 <= r2) mem[mi++] = a[l2++];
-
-    for (int i = 0; i < mi; i++) a[i] = mem[i];
-    for (int i = 0; i < a.size(); i++) cout << a[i];
-    cout << "\n";
+    for (int i = ol1; i < mi; i++) a[i] = mem[i];
 }
 
 void sort(vector<int>& a, int l, int r) {
