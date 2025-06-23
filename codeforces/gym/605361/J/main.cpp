@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-vector<int> buckets[1 << 20];
+// vector<int> buckets[1 << 20];
 
 void sort(vector<int>& a, vector<int>& mem, int l, int r) {
     if (l >= r) return;
@@ -35,12 +35,17 @@ int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n;
     cin >> n;
-    while (n--) {
-        int x;
-        cin >> x;
-        buckets[x >> 10].push_back(x & ((1 << 10) - 1));
-    }
-    for (int i = 0; i < (1 << 20); i++) {
-        sort(buckets[i]);    
-    }
+    vector<int> a(n);
+    for (int& x : a) cin >> x;
+    sort(a);
+    for (int x : a) cout << x << " ";
+    cout << "\n";
+    // while (n--) {
+        // int x;
+        // cin >> x;
+        // buckets[x >> 10].push_back(x & ((1 << 10) - 1));
+    // }
+    // for (int i = 0; i < (1 << 20); i++) {
+    //     sort(buckets[i]);    
+    // }
 }
