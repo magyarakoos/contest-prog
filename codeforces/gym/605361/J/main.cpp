@@ -2,12 +2,10 @@
 #include <vector>
 using namespace std;
 
-// vector<int> buckets[1 << 20];
 int mem[(int)1e6 + 1];
 
 void merge(vector<int>& a, int l1, int r1, int l2, int r2) {
 
-    vector<int> c;
     int mi = 0;
     while (l1 <= r1 && l2 <= r2) {
         if (a[l1] < a[l2]) {
@@ -28,6 +26,7 @@ void sort(vector<int>& a, int l, int r) {
 
         sort(a, l, m);
         sort(a, m + 1, r);
+        cout << l << " " << m << " " << r << "\n";
 
         merge(a, l, m, m + 1, r);
     }
@@ -46,12 +45,4 @@ int main() {
     sort(a);
     for (int x : a) cout << x << " ";
     cout << "\n";
-    // while (n--) {
-    // int x;
-    // cin >> x;
-    // buckets[x >> 10].push_back(x & ((1 << 10) - 1));
-    // }
-    // for (int i = 0; i < (1 << 20); i++) {
-    //     sort(buckets[i]);
-    // }
 }
