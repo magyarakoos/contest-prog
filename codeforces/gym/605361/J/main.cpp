@@ -4,6 +4,10 @@ using namespace std;
 
 vector<int> buckets[1 << 20];
 
+void sort(vector<int>& a) {
+    vector<int> swap(a.size());
+}
+
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n;
