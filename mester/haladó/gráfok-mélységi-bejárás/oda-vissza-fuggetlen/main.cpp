@@ -24,7 +24,13 @@ int32_t main() {
         while (!q.empty()) {
             auto [u, flow] = q.front();
             q.pop();
-            for (auto [v, cap] : g[u]) {}
+            for (auto [v, cap] : g[u]) {
+                if (par[v] == -1 && cap) {
+                    par[v] = u;
+                    q.push({v, min(flow, cap)});
+                    ;
+                }
+            }
         }
     }
 }
