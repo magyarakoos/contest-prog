@@ -13,9 +13,9 @@ void bubble(int l, int r) {
         swapped = 0;
         for (int i = l + 1; i <= m; i++) {
             if (a[i - 1] > a[i]) {
-                a[i] ^= a[i - 1];
-                a[i - 1] ^= a[i];
-                a[i] ^= a[i - 1];
+                int tmp = a[i - 1];
+                a[i - 1] = a[i];
+                a[i] = tmp;
                 swapped = 1;
             }
         }
