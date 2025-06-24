@@ -15,11 +15,17 @@ struct Tr {
     }
 
     int query(int x) {
-        int y = x;
+        int y = 0;
         auto cur = this;
         for (int i = 30; ~i; i--) {
-            if (cur->next[!(x >> i & 1)]) { y ^= 1 << i; }
+            if (cur->next[!(x >> i & 1)]) {
+                y |= 1 << i;
+                cur = cur->next[!(x >> i & 1)];
+            } else {
+                cur = cur->next[x >> i & 1];
+            }
         }
+        return y;
     }
 };
 
