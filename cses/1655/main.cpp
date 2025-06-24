@@ -2,6 +2,10 @@
 using namespace std;
 #define int int64_t
 
+struct Tr {
+    array<Tr*, 2> next;
+};
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
