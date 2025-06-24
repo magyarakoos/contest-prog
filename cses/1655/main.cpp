@@ -5,7 +5,10 @@ using namespace std;
 struct Tr {
     array<Tr*, 2> next;
 
-    void add(int x) {}
+    void add(int x) {
+        auto cur = this;
+        for (int i = 0; i < 30; i++) { if () }
+    }
 };
 
 int32_t main() {
