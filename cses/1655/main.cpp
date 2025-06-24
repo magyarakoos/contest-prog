@@ -4,6 +4,8 @@ using namespace std;
 
 struct Tr {
     array<Tr*, 2> next;
+
+    void add(int x) {}
 };
 
 int32_t main() {
@@ -16,4 +18,6 @@ int32_t main() {
         cin >> a[i];
         a[i] ^= a[i - 1];
     }
+
+    Tr trie;
 }
