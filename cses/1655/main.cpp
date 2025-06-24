@@ -35,11 +35,12 @@ int main() {
     cin >> n;
     vector<int> a(n + 1);
     trie.add(0);
+    return 0;
     for (int i = 1; i <= n; i++) {
         cin >> a[i];
         a[i] ^= a[i - 1];
         trie.add(a[i]);
-        result = max(result, trie.query(a[i]));
+        // result = max(result, trie.query(a[i]));
     }
     cout << result << "\n";
 }
