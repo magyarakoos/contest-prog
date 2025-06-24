@@ -16,4 +16,14 @@ int32_t main() {
         g[u * 2][v] = 1;
         g[v * 2][u] = 1;
     }
+
+    auto bfs = [&](int s, int t, vector<int>& par) {
+        fill(par.begin(), par.end(), -1);
+        par[s] = -2;
+        queue<array<int, 2>> q({{s, 1}});
+        while (!q.empty()) {
+            auto [u, flow] = q.front();
+            q.pop();
+        }
+    }
 }
