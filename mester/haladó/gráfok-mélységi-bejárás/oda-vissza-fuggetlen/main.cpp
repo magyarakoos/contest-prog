@@ -33,4 +33,8 @@ int main() {
         }
         return 0;
     };
+
+    int flow = 0, new_flow;
+    vector<int> par(2 * n);
+    while ((new_flow = bfs(a, b, par))) {}
 }
