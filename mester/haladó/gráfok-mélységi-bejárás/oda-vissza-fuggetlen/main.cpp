@@ -36,5 +36,15 @@ int main() {
 
     int flow = 0, new_flow;
     vector<int> par(2 * n);
-    while ((new_flow = bfs(a, b, par))) {}
+    while ((new_flow = bfs(a, b, par))) {
+        flow += new_flow;
+        int cur = b;
+        while (cur != a) {
+            gr[par[cur]][cur] -= new_flow;
+            gr[cur][par[cur]] += new_flow;
+            cur = par[cur];
+        }
+    }
+
+    cout << flow << "\n";
 }
