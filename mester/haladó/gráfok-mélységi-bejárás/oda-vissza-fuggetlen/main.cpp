@@ -24,7 +24,7 @@ int main() {
             auto [u, flow] = q.front();
             q.pop();
             if (u == t) return flow;
-            for (auto [v, cap] : g[u]) {
+            for (auto [v, cap] : gr[u]) {
                 if (par[v] == -1 && cap) {
                     par[v] = u;
                     q.push({v, min(flow, cap)});
