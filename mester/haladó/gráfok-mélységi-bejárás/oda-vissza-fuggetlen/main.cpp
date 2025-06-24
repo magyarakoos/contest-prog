@@ -24,7 +24,7 @@ int main() {
             auto [u, flow] = q.front();
             q.pop();
             if (u == t) return flow;
-            for (auto [v, cap] : gr[u]) {
+            for (auto [v, cap] : g[u]) {
                 if (par[v] == -1 && cap) {
                     par[v] = u;
                     q.push({v, min(flow, cap)});
@@ -40,8 +40,8 @@ int main() {
         flow += new_flow;
         int cur = b;
         while (cur != a) {
-            gr[par[cur]][cur] -= new_flow;
-            gr[cur][par[cur]] += new_flow;
+            g[par[cur]][cur] -= new_flow;
+            g[cur][par[cur]] += new_flow;
             cur = par[cur];
         }
     }
