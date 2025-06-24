@@ -7,7 +7,11 @@ struct Tr {
 
     void add(int x) {
         auto cur = this;
-        for (int i = 0; i < 30; i++) { if () }
+        for (int i = 0; i < 30; i++) {
+            if (!cur->next[x >> i & 1]) {
+                cur->next[x >> i & 1] = new Tr();
+            }
+        }
     }
 };
 
