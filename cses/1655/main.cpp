@@ -4,6 +4,8 @@ using namespace std;
 struct Tr {
     array<Tr*, 2> next;
 
+    Tr() { next = {0, 0}; }
+
     void add(int x) {
         auto cur = this;
         for (int i = 30; ~i; i--) {
@@ -30,17 +32,16 @@ struct Tr {
 
 int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    Tr trie;
+    Tr* trie = new Tr();
     int n, result = 0;
     cin >> n;
     vector<int> a(n + 1);
-    trie.add(0);
-    return 0;
+    trie->add(0);
     for (int i = 1; i <= n; i++) {
         cin >> a[i];
         a[i] ^= a[i - 1];
-        trie.add(a[i]);
-        // result = max(result, trie.query(a[i]));
+        trie->add(a[i]);
+        result = max(result, trie->query(a[i]));
     }
     cout << result << "\n";
 }
