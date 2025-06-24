@@ -26,5 +26,5 @@ int32_t main() {
         a[i] ^= a[i - 1];
     }
 
-    Tr trie;
+    Tr* trie = new Tr();
 }
