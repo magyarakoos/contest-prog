@@ -4,8 +4,6 @@ using namespace std;
 struct Tr {
     array<Tr*, 2> next;
 
-    Tr() { next = {0, 0}; }
-
     void add(int x) {
         auto cur = this;
         for (int i = 30; ~i; i--) {
