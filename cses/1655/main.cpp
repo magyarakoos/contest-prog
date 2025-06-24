@@ -13,6 +13,15 @@ struct Tr {
             cur = nxt;
         }
     }
+
+    int query(int x) {
+        auto cur = this;
+        for (int i = 30; ~i; i--) {
+            cur = (cur->next[!(x >> i & 1)]
+                       ? cur->next[!(x >> i & 1)]
+                       : cur->next[x >> i & 1]);
+        }
+    }
 };
 
 int32_t main() {
