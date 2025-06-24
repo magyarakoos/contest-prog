@@ -8,7 +8,7 @@ int32_t main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
     a--, b--;
-    vector<map<int, bool>> g(2 * n), gr(2 * n);
+    vector<map<int, int>> g(2 * n), gr(2 * n);
     for (int u = 0; u < n; u++) g[u][u * 2] = 1;
     for (int i = 0, u, v; i < m; i++) {
         cin >> u >> v;
@@ -28,9 +28,8 @@ int32_t main() {
                 if (par[v] == -1 && cap) {
                     par[v] = u;
                     q.push({v, min(flow, cap)});
-                    ;
                 }
             }
         }
-    }
+    };
 }
