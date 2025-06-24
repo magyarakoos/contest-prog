@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define int int64_t
 
 struct Tr {
     array<Tr*, 2> next;
@@ -29,16 +28,18 @@ struct Tr {
     }
 };
 
-int32_t main() {
+int main() {
     cin.tie(0), ios::sync_with_stdio(0);
-
-    int n;
+    Tr trie;
+    int n, result = 0;
     cin >> n;
     vector<int> a(n + 1);
+    trie.add(0);
     for (int i = 1; i <= n; i++) {
         cin >> a[i];
         a[i] ^= a[i - 1];
+        trie.add(a[i]);
+        result = max(result, trie.query(a[i]));
     }
-
-    Tr* trie = new Tr();
+    cout << result << "\n";
 }
