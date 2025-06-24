@@ -7,7 +7,7 @@ int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
     a--, b--;
-    vector<map<int, int>> g(2 * n), gr(2 * n);
+    vector<map<int, int>> g(2 * n);
     for (int u = 0; u < n; u++) g[u][u * 2] = 1;
     for (int i = 0, u, v; i < m; i++) {
         cin >> u >> v;
@@ -44,7 +44,12 @@ int main() {
             g[cur][par[cur]] += new_flow;
             cur = par[cur];
         }
+
+        if (flow == 2) {
+            cout << "YES\n";
+            return 0;
+        }
     }
 
-    cout << flow << "\n";
+    assert(0);
 }
