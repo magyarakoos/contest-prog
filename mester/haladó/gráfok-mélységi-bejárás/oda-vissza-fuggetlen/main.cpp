@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define int int64_t
 
-int32_t main() {
+int main() {
     cin.tie(0), ios::sync_with_stdio(0);
 
     int n, m, a, b;
@@ -24,6 +23,7 @@ int32_t main() {
         while (!q.empty()) {
             auto [u, flow] = q.front();
             q.pop();
+            if (u == t) return flow;
             for (auto [v, cap] : g[u]) {
                 if (par[v] == -1 && cap) {
                     par[v] = u;
@@ -31,5 +31,6 @@ int32_t main() {
                 }
             }
         }
+        return 0;
     };
 }
