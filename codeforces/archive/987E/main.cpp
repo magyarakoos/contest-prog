@@ -12,13 +12,13 @@ int32_t main() {
     int result = 0;
     for (int i = 0; i < n; i++) {
         if (!vis[i]) {
-            int j = p[i], len = 0;
-            vis[i] = 1;
+            int j = i, len = 0;
             while (!vis[j]) {
+                vis[j] = 1;
                 j = p[j];
                 len++;
             }
-            result += len;
+            result += len - 1;
         }
     }
     cout << result << "\n";
