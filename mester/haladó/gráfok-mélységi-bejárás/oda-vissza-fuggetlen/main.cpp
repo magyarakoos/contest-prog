@@ -7,13 +7,14 @@ int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
     a--, b--;
+    a += n;
     vector<map<int, int>> g(2 * n), r(2 * n);
     for (int u = 0; u < n; u++) g[u][u * 2] = 1;
     for (int i = 0, u, v; i < m; i++) {
         cin >> u >> v;
         u--, v--;
-        g[u * 2][v] = 1;
-        g[v * 2][u] = 1;
+        g[u + n][v] = 1;
+        g[v + n][u] = 1;
     }
 
     auto bfs = [&](int s, int t, vector<int>& par) {
