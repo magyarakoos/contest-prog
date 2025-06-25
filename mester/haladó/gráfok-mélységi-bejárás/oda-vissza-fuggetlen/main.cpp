@@ -7,7 +7,6 @@ int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
     a--, b--;
-    a += n;
     vector<map<int, int>> g(2 * n), r(2 * n);
     for (int u = 0; u < n; u++) g[u][u * 2] = 1;
     for (int i = 0, u, v; i < m; i++) {
@@ -37,7 +36,7 @@ int main() {
 
     int flow = 0, new_flow;
     vector<int> par(2 * n);
-    while ((new_flow = bfs(a, b, par))) {
+    while ((new_flow = bfs(a + n, b, par))) {
         flow += new_flow;
         int cur = b;
         while (cur != a) {
