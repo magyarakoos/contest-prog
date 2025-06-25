@@ -24,8 +24,8 @@ int main() {
         while (!q.empty()) {
             auto [u, flow] = q.front();
             q.pop();
-            cout << (u < n ? to_string(u) + "in"
-                           : to_string(u) + "out")
+            cout << (u < n ? to_string(u + 1) + "in"
+                           : to_string(u - n + 1) + "out")
                  << " " << flow << endl;
             if (u == t) return flow;
             for (auto [v, cap] : g[u]) {
