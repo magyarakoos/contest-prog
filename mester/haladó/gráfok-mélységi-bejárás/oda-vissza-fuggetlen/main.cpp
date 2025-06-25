@@ -8,7 +8,7 @@ int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
     a--, b--;
-    vector<map<int, int>> g(2 * n), r(2 * n);
+    vector<map<int, int>> g(2 * n);
     for (int u = 0; u < n; u++) g[u][u + n] = 1;
     for (int i = 0, u, v; i < m; i++) {
         cin >> u >> v;
@@ -41,7 +41,7 @@ int main() {
         sleep(1);
         vector<int> result({u});
         if (u != t) {
-            for (auto [v, cap] : r[u]) {
+            for (auto [v, cap] : g[u]) {
                 if (cap) {
                     for (int w : path(v, t)) {
                         result.push_back(w);
@@ -59,13 +59,26 @@ int main() {
         flow += new_flow;
         int cur = b;
         while (cur != a + n) {
-            r[par[cur]][cur] += new_flow;
-            r[cur][par[cur]] -= new_flow;
             g[par[cur]][cur] -= new_flow;
             g[cur][par[cur]] += new_flow;
             cur = par[cur];
         }
 
         if (flow == 2) break;
+    }
+
+    vector<map<int, bool>> ng(n);
+    for (int u = 0; u < n; u++) {
+        for (auto [v, cap] : g[u]) { ng[u][v] = cap; }
+        for (auto [v, cap] : g[u + n]) {
+            ng[u][v] = max(ng[u][v], cap);
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << ng[i][j] << " ";
+        }
+        cout << "\n";
     }
 }
