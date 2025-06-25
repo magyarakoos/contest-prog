@@ -35,7 +35,8 @@ int main() {
     };
 
     auto path = [&](int u, int t) -> vector<int> {
-
+        vector<int> result({u});
+        if (u == t) return result;
     };
 
     int flow = 0, new_flow;
