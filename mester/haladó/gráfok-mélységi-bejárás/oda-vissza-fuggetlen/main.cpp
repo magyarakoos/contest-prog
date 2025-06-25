@@ -34,6 +34,10 @@ int main() {
         return 0;
     };
 
+    auto path = [&](int u, int t) -> vector<int> {
+
+    };
+
     int flow = 0, new_flow;
     vector<int> par(2 * n);
     while ((new_flow = bfs(a + n, b, par))) {
