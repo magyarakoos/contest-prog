@@ -7,7 +7,7 @@ int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
     a--, b--;
-    vector<map<int, int>> g(2 * n);
+    vector<map<int, int>> g(2 * n), r(2 * n);
     for (int u = 0; u < n; u++) g[u][u * 2] = 1;
     for (int i = 0, u, v; i < m; i++) {
         cin >> u >> v;
