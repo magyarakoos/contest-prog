@@ -66,19 +66,4 @@ int main() {
 
         if (flow == 2) break;
     }
-
-    vector<map<int, bool>> ng(n);
-    for (int u = 0; u < n; u++) {
-        for (auto [v, cap] : g[u]) { ng[u][v] = cap; }
-        for (auto [v, cap] : g[u + n]) {
-            ng[u][v] = max(ng[u][v], cap);
-        }
-    }
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << ng[i][j] << " ";
-        }
-        cout << "\n";
-    }
 }
