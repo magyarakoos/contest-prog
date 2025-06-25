@@ -17,6 +17,7 @@ int main() {
     }
 
     auto bfs = [&](int s, int t, vector<int>& par) {
+        cout << "start" << endl;
         fill(par.begin(), par.end(), -1);
         par[s] = -2;
         queue<array<int, 2>> q({{s, 1}});
@@ -34,6 +35,7 @@ int main() {
                 }
             }
         }
+        cout << "joever" << endl;
         return 0;
     };
 
