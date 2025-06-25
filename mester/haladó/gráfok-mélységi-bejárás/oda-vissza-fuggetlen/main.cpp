@@ -43,7 +43,7 @@ int main() {
         if (u != t) {
             for (int i = 0; i < 2 * n; i++) {
                 for (int j = 0; j < 2 * n; j++) {
-                    cout << r[i][j] << " ";
+                    cout << g[i][j] << " ";
                 }
                 cout << "\n";
             }
