@@ -34,9 +34,18 @@ int main() {
         return 0;
     };
 
-    auto path = [&](int u, int t) -> vector<int> {
+    function<vector<int>(int, int)> path =
+        [&](int u, int t) -> vector<int> {
         vector<int> result({u});
-        if (u == t) return result;
+        if (u != t) {
+            for (auto [v, cap] : g[u]) {
+                if (cap) {
+                    for (int w : path(v, t))
+                        result.push_back(w);
+                }
+            }
+        }
+        return result;
     };
 
     int flow = 0, new_flow;
