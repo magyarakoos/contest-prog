@@ -38,7 +38,7 @@ int main() {
         [&](int u, int t) -> vector<int> {
         vector<int> result({u});
         if (u != t) {
-            for (auto [v, cap] : g[u]) {
+            for (auto [v, cap] : r[u]) {
                 if (cap) {
                     for (int w : path(v, t)) {
                         result.push_back(w);
@@ -56,6 +56,8 @@ int main() {
         flow += new_flow;
         int cur = b;
         while (cur != a + n) {
+            r[par[cur]][cur] += new_flow;
+            r[cur][par[cur]] -= new_flow;
             g[par[cur]][cur] -= new_flow;
             g[cur][par[cur]] += new_flow;
             cur = par[cur];
@@ -63,19 +65,19 @@ int main() {
 
         if (flow == 2) {
             cout << "YES\n";
-            for (auto [v, cap] : g[a + n]) {
+            for (auto [v, cap] : r[a + n]) {
                 if (cap) {
                     for (int x : path(v, b))
                         cout << x << " ";
                     cout << "\n";
                 }
             }
-            for (int i = 0; i < 2 * n; i++) {
-                for (int j = 0; j < 2 * n; j++) {
-                    cout << g[i][j] << " ";
-                }
-                cout << "\n";
-            }
+            // for (int i = 0; i < 2 * n; i++) {
+            //     for (int j = 0; j < 2 * n; j++) {
+            //         cout << r[i][j] << " ";
+            //     }
+            //     cout << "\n";
+            // }
             return 0;
         }
     }
