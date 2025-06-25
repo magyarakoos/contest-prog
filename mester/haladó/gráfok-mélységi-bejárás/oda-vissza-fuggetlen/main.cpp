@@ -8,7 +8,7 @@ int main() {
     cin >> n >> m >> a >> b;
     a--, b--;
     vector<map<int, int>> g(2 * n), r(2 * n);
-    for (int u = 0; u < n; u++) g[u][u * 2] = 1;
+    for (int u = 0; u < n; u++) g[u][u + n] = 1;
     for (int i = 0, u, v; i < m; i++) {
         cin >> u >> v;
         u--, v--;
@@ -17,7 +17,6 @@ int main() {
     }
 
     auto bfs = [&](int s, int t, vector<int>& par) {
-        cout << "at least try" << endl;
         fill(par.begin(), par.end(), -1);
         par[s] = -2;
         queue<array<int, 2>> q({{s, 1}});
