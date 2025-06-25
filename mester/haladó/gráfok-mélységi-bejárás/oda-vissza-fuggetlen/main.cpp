@@ -36,6 +36,7 @@ int main() {
 
     function<vector<int>(int, int)> path =
         [&](int u, int t) -> vector<int> {
+        cout << u << endl;
         vector<int> result({u});
         if (u != t) {
             for (auto [v, cap] : r[u]) {
