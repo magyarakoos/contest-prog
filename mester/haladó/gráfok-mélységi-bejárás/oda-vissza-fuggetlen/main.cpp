@@ -47,6 +47,12 @@ int main() {
 
         if (flow == 2) {
             cout << "YES\n";
+            for (int i = 0; i < 2 * n; i++) {
+                for (int j = 0; j < 2 * n; j++) {
+                    cout << g[i][j] << " ";
+                }
+                cout << "\n";
+            }
             return 0;
         }
     }
