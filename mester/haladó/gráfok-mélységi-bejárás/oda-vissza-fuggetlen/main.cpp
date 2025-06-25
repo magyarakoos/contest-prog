@@ -24,7 +24,7 @@ int main() {
         while (!q.empty()) {
             auto [u, flow] = q.front();
             q.pop();
-            cout << u << " " << flow << "\n";
+            cout << u << " " << flow << endl;
             if (u == t) return flow;
             for (auto [v, cap] : g[u]) {
                 if (par[v] == -1 && cap) {
