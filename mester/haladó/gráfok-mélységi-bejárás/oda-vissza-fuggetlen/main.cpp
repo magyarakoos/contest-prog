@@ -27,7 +27,10 @@ int main() {
             cout << (u < n ? to_string(u + 1) + "in"
                            : to_string(u - n + 1) + "out")
                  << " " << flow << endl;
-            if (u == t) return flow;
+            if (u == t) {
+                cout << "joever" << endl;
+                return flow;
+            }
             for (auto [v, cap] : g[u]) {
                 if (par[v] == -1 && cap) {
                     par[v] = u;
@@ -44,7 +47,7 @@ int main() {
     while ((new_flow = bfs(a + n, b, par))) {
         flow += new_flow;
         int cur = b;
-        while (cur != a) {
+        while (cur != a + n) {
             g[par[cur]][cur] -= new_flow;
             g[cur][par[cur]] += new_flow;
             cur = par[cur];
