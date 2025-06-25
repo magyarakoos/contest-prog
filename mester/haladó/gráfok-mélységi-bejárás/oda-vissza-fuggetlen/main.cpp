@@ -40,8 +40,10 @@ int main() {
         if (u != t) {
             for (auto [v, cap] : g[u]) {
                 if (cap) {
-                    for (int w : path(v, t))
+                    for (int w : path(v, t)) {
                         result.push_back(w);
+                    }
+                    break;
                 }
             }
         }
