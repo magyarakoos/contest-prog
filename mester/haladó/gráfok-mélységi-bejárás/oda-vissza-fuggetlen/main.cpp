@@ -17,12 +17,14 @@ int main() {
     }
 
     auto bfs = [&](int s, int t, vector<int>& par) {
+        cout << "at least try" << endl;
         fill(par.begin(), par.end(), -1);
         par[s] = -2;
         queue<array<int, 2>> q({{s, 1}});
         while (!q.empty()) {
             auto [u, flow] = q.front();
             q.pop();
+            cout << u << " " << flow << "\n";
             if (u == t) return flow;
             for (auto [v, cap] : g[u]) {
                 if (par[v] == -1 && cap) {
