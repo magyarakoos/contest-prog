@@ -8,4 +8,17 @@ int32_t main() {
     cin >> n;
     vector<int> p(n);
     for (int& x : p) cin >> x, x--;
+    vector<bool> vis(n);
+    int result = 0;
+    for (int i = 0; i < n; i++) {
+        if (!vis[i]) {
+            int j = i, len = 0;
+            while (!vis[j]) {
+                j = p[j];
+                len++;
+            }
+            result += len - 1;
+        }
+    }
+    cout << result << "\n";
 }
