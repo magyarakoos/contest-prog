@@ -38,18 +38,23 @@ int main() {
     function<vector<int>(int, int)> path =
         [&](int u, int t) -> vector<int> {
         cout << u << endl;
-
         sleep(1);
         vector<int> result({u});
         if (u != t) {
-            for (auto [v, cap] : r[u]) {
-                if (cap) {
-                    for (int w : path(v, t)) {
-                        result.push_back(w);
-                    }
-                    break;
+            for (int i = 0; i < 2 * n; i++) {
+                for (int j = 0; j < 2 * n; j++) {
+                    cout << r[i][j] << " ";
                 }
+                cout << "\n";
             }
+            // for (auto [v, cap] : r[u]) {
+            //     if (cap) {
+            //         for (int w : path(v, t)) {
+            //             result.push_back(w);
+            //         }
+            //         break;
+            //     }
+            // }
         }
         return result;
     };
