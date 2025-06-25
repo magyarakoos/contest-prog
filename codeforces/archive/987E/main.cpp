@@ -21,5 +21,6 @@ int32_t main() {
             result += len - 1;
         }
     }
-    cout << (result > 3 * n ? "Um_nik" : "Petr") << "\n";
+    cout << (result % 2 == 3 * n % 2 ? "Petr" : "Um_nik")
+         << "\n";
 }
