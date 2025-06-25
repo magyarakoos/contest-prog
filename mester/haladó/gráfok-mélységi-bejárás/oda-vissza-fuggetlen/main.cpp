@@ -63,6 +63,13 @@ int main() {
 
         if (flow == 2) {
             cout << "YES\n";
+            for (auto [v, cap] : g[a + n]) {
+                if (cap) {
+                    for (int x : path(v, b))
+                        cout << x << " ";
+                    cout << "\n";
+                }
+            }
             for (int i = 0; i < 2 * n; i++) {
                 for (int j = 0; j < 2 * n; j++) {
                     cout << g[i][j] << " ";
