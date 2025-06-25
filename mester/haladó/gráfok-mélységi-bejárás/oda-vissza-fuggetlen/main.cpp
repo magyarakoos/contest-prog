@@ -66,28 +66,6 @@ int main() {
             cur = par[cur];
         }
 
-        if (flow == 2) {
-            cout << "YES\n";
-            for (int i = 0; i < 2 * n; i++) {
-                for (int j = 0; j < 2 * n; j++) {
-                    cout << g[i][j] << " ";
-                }
-                cout << "\n";
-            }
-            // for (auto [v, cap] : r[a + n]) {
-            //     if (cap) {
-            //         for (int x : path(v, b))
-            //             cout << x << " ";
-            //         cout << "\n";
-            //     }
-            // }
-            // for (int i = 0; i < 2 * n; i++) {
-            //     for (int j = 0; j < 2 * n; j++) {
-            //         cout << r[i][j] << " ";
-            //     }
-            //     cout << "\n";
-            // }
-            return 0;
-        }
+        if (flow == 2) break;
     }
 }
