@@ -17,20 +17,13 @@ int main() {
     }
 
     auto bfs = [&](int s, int t, vector<int>& par) {
-        cout << "start " << s << " " << t << endl;
         fill(par.begin(), par.end(), -1);
         par[s] = -2;
         queue<array<int, 2>> q({{s, 1}});
         while (!q.empty()) {
             auto [u, flow] = q.front();
             q.pop();
-            cout << (u < n ? to_string(u + 1) + "in"
-                           : to_string(u - n + 1) + "out")
-                 << " " << flow << endl;
-            if (u == t) {
-                cout << "joever" << endl;
-                return flow;
-            }
+            if (u == t) { return flow; }
             for (auto [v, cap] : g[u]) {
                 if (par[v] == -1 && cap) {
                     par[v] = u;
@@ -38,7 +31,6 @@ int main() {
                 }
             }
         }
-        cout << "joever" << endl;
         return 0;
     };
 
