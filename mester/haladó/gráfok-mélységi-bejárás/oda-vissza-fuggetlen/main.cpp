@@ -34,24 +34,6 @@ int main() {
         return 0;
     };
 
-    function<vector<int>(int, int)> path =
-        [&](int u, int t) -> vector<int> {
-        cout << u << endl;
-        sleep(1);
-        vector<int> result({u});
-        if (u != t) {
-            for (auto [v, cap] : g[u]) {
-                if (cap) {
-                    for (int w : path(v, t)) {
-                        result.push_back(w);
-                    }
-                    break;
-                }
-            }
-        }
-        return result;
-    };
-
     int flow = 0, new_flow;
     vector<int> par(2 * n);
     while ((new_flow = bfs(a + n, b, par))) {
@@ -63,6 +45,6 @@ int main() {
             cur = par[cur];
         }
 
-        if (flow == 2) break;
+        if (flow == 2) { cout << "YES\n"; }
     }
 }
