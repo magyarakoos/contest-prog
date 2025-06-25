@@ -41,20 +41,14 @@ int main() {
         sleep(1);
         vector<int> result({u});
         if (u != t) {
-            for (int i = 0; i < 2 * n; i++) {
-                for (int j = 0; j < 2 * n; j++) {
-                    cout << g[i][j] << " ";
+            for (auto [v, cap] : r[u]) {
+                if (cap) {
+                    for (int w : path(v, t)) {
+                        result.push_back(w);
+                    }
+                    break;
                 }
-                cout << "\n";
             }
-            // for (auto [v, cap] : r[u]) {
-            //     if (cap) {
-            //         for (int w : path(v, t)) {
-            //             result.push_back(w);
-            //         }
-            //         break;
-            //     }
-            // }
         }
         return result;
     };
@@ -74,13 +68,19 @@ int main() {
 
         if (flow == 2) {
             cout << "YES\n";
-            for (auto [v, cap] : r[a + n]) {
-                if (cap) {
-                    for (int x : path(v, b))
-                        cout << x << " ";
-                    cout << "\n";
+            for (int i = 0; i < 2 * n; i++) {
+                for (int j = 0; j < 2 * n; j++) {
+                    cout << g[i][j] << " ";
                 }
+                cout << "\n";
             }
+            // for (auto [v, cap] : r[a + n]) {
+            //     if (cap) {
+            //         for (int x : path(v, b))
+            //             cout << x << " ";
+            //         cout << "\n";
+            //     }
+            // }
             // for (int i = 0; i < 2 * n; i++) {
             //     for (int j = 0; j < 2 * n; j++) {
             //         cout << r[i][j] << " ";
