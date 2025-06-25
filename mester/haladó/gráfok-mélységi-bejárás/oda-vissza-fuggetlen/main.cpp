@@ -23,7 +23,7 @@ int main() {
         while (!q.empty()) {
             auto [u, flow] = q.front();
             q.pop();
-            if (u == t) { return flow; }
+            if (u == t) return flow;
             for (auto [v, cap] : g[u]) {
                 if (par[v] == -1 && cap) {
                     par[v] = u;
