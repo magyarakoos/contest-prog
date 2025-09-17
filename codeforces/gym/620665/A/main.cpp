@@ -4,7 +4,12 @@ using namespace std;
 
 struct DSU {
     vector<int> par, rank;
-    DSU(int n) : par(n), rank(n, 1) {}
+    DSU(int n) : par(n), rank(n, 1) {
+        iota(par.begin(), par.end(), 0);
+    }
+    int find(int x) {
+        return x == par[x] ? x : par[x] = find(par[x]);
+    }
 };
 
 int32_t main() {
