@@ -45,4 +45,11 @@ int32_t main() {
     int k = 0;
     for (int i = 0; i < n; i++) { k += !groupS[i].empty(); }
     cout << k << "\n";
+    for (int i = 0; i < n; i++) {
+        if (!groupS[i].empty()) {
+            cout << groupS[i].size();
+            for (int x : groupS[i]) cout << " " << x + 1;
+            cout << "\n";
+        }
+    }
 }
