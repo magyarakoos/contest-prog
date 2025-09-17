@@ -21,7 +21,7 @@ int32_t main() {
         }
     }
     cout << result.size();
-    result.resize(min(result.size(), 100));
+    if (result.size() > 100) result.resize(100);
     for (int x : result) cout << " " << x;
     cout << "\n";
 }
