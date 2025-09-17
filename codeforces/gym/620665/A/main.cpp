@@ -15,8 +15,6 @@ int32_t main() {
         suf[i] = min(suf[i + 1], a[i]);
     }
     int result = 0;
-    for (int i = 1; i <= n; i++) {
-        result += pre[i - 1] < a[i] && suf[i + 1] > a[i];
-    }
+    for (int i = 1; i <= n; i++) { cout << pre[i] << " "; }
     cout << result << "\n";
 }
