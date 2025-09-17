@@ -35,4 +35,14 @@ int32_t main() {
 
     DSU dsu(n);
     for (int i = 0; i < n; i++) { dsu.unite(i, pos[a[i]]); }
+
+    vector<vector<int>> groupS(n);
+
+    for (int i = 0; i < n; i++) {
+        groupS[dsu.find(i)].push_back(a[i]);
+    }
+
+    int k = 0;
+    for (int i = 0; i < n; i++) { k += !groupS[i].empty(); }
+    cout << k << "\n";
 }
