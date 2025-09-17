@@ -6,7 +6,7 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n;
     cin >> n;
-    vector<int> a(n + 1), pre(n + 1), suf(n + 2);
+    vector<int> a(n + 1), pre(n + 1), suf(n + 2, 1e9);
     for (int i = 1; i <= n; i++) cin >> a[i];
     for (int i = 1; i <= n; i++) {
         pre[i] = max(pre[i - 1], a[i]);
@@ -16,5 +16,7 @@ int32_t main() {
     }
     int result = 0;
     for (int i = 1; i <= n; i++) { cout << pre[i] << " "; }
+    cout << result << "\n";
+    for (int i = 1; i <= n; i++) { cout << suf[i] << " "; }
     cout << result << "\n";
 }
