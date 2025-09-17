@@ -13,7 +13,7 @@ int32_t main() {
         for (int j = 0; j < i; j++) {
             bool ok = 1;
             for (int k = 0; k < n / i; k++) {
-                if (!a[k * i + j]) {
+                if (!a[k * (n / i) + j]) {
                     ok = 0;
                     break;
                 }
