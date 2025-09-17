@@ -26,4 +26,13 @@ int32_t main() {
     cin >> n;
     vector<int> a(n);
     for (int& x : a) cin >> x;
+
+    auto b = a;
+    sort(b.begin(), b.end());
+
+    map<int, int> pos;
+    for (int i = 0; i < n; i++) pos[b[i]] = i;
+
+    DSU dsu(n);
+    for (int i = 0; i < n; i++) { dsu.unite(i, pos[a[i]]); }
 }
