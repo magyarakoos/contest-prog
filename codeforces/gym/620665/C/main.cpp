@@ -10,9 +10,9 @@ int32_t main() {
     for (int& x : a) cin >> x;
     for (int i = 3; i <= n; i++) {
         if (n % i || (i % 2 == 0 && i != 4)) continue;
-        for (int j = 0; j < i; j++) {
+        for (int j = 0; j < n / i; j++) {
             bool ok = 1;
-            for (int k = 0; k < n / i; k++) {
+            for (int k = 0; k < i; k++) {
                 if (!a[k * (n / i) + j]) {
                     ok = 0;
                     break;
