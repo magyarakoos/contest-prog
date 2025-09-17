@@ -12,7 +12,18 @@ int32_t main() {
         if (n % i || (i % 2 == 0 && i != 4)) continue;
         for (int j = 0; j < i; j++) {
             bool ok = 1;
-            for (int k = 0; k < n / i; k++) {}
+            for (int k = 0; k < n / i; k++) {
+                if (!a[k * i + j]) {
+                    ok = 0;
+                    break;
+                }
+            }
+            if (ok) {
+                cout << i << " " << j << " ";
+                cout << "YES\n";
+                return 0;
+            }
         }
     }
+    cout << "NO\n";
 }
