@@ -19,7 +19,6 @@ int32_t main() {
                 }
             }
             if (ok) {
-                cout << i << " " << j << " ";
                 cout << "YES\n";
                 return 0;
             }
