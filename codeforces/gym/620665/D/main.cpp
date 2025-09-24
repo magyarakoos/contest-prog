@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int int64_t
-using point = array<int, 2>;
 
 void solve() {
-    map<point, int> m;
+    map<array<int, 2>, int> m;
     int n;
     cin >> n;
     while (n--) {
@@ -18,6 +17,7 @@ void solve() {
     for (auto [p, x] : m) {
         result += x * m[{-p[0], -p[1]}];
     }
+    cout << result / 2 << "\n";
 }
 
 int32_t main() {
