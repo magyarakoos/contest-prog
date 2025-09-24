@@ -4,10 +4,18 @@ using namespace std;
 using point = array<int, 2>;
 
 void solve() {
-    set<point> s;
+    map<point, int> s;
     int n;
     cin >> n;
-    while (n--) {}
+    while (n--) {
+        int x, y, u, v;
+        cin >> x >> y >> u >> v;
+        u -= x;
+        v -= x;
+        s[{u / gcd(u, v), v / gcd(u, v)}]++;
+    }
+    for (point p : s) cout << p[0] << " " << p[1] << "\n";
+    cout << "\n";
 }
 
 int32_t main() {
