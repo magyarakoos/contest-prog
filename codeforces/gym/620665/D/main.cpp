@@ -14,9 +14,10 @@ void solve() {
         v -= x;
         m[{u / gcd(u, v), v / gcd(u, v)}]++;
     }
-    for (auto [p, x] : m)
-        cout << p[0] << " " << p[1] << " = " << x << "\n";
-    cout << "\n";
+    int result = 0;
+    for (auto [p, x] : m) {
+        result += x * m[{-p[0], -p[1]}];
+    }
 }
 
 int32_t main() {
