@@ -4,7 +4,7 @@ using namespace std;
 using point = array<int, 2>;
 
 void solve() {
-    map<point, int> s;
+    map<point, int> m;
     int n;
     cin >> n;
     while (n--) {
@@ -12,9 +12,10 @@ void solve() {
         cin >> x >> y >> u >> v;
         u -= x;
         v -= x;
-        s[{u / gcd(u, v), v / gcd(u, v)}]++;
+        m[{u / gcd(u, v), v / gcd(u, v)}]++;
     }
-    for (point p : s) cout << p[0] << " " << p[1] << "\n";
+    for (auto [p, x] : m)
+        cout << p[0] << " " << p[1] << " = " << x << "\n";
     cout << "\n";
 }
 
