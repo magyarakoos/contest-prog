@@ -10,12 +10,11 @@ void solve() {
         int x, y, u, v;
         cin >> x >> y >> u >> v;
         u -= x;
-        v -= x;
+        v -= y;
         m[{u / gcd(u, v), v / gcd(u, v)}]++;
     }
     int result = 0;
     for (auto [p, x] : m) {
-        cout << p[0] << " " << p[1] << " " << x << "\n";
         result += x * m[{-p[0], -p[1]}];
     }
     cout << result / 2 << "\n";
