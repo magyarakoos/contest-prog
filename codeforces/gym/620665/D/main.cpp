@@ -4,7 +4,8 @@ using namespace std;
 using point = array<int, 2>;
 
 void solve() {
-    set < array<int, 2> int n;
+    set<point> s;
+    int n;
     cin >> n;
     while (n--) {}
 }
