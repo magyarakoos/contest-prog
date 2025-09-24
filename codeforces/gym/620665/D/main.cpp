@@ -15,6 +15,7 @@ void solve() {
     }
     int result = 0;
     for (auto [p, x] : m) {
+        cout << p[0] << " " << p[1] << " " << x << "\n";
         result += x * m[{-p[0], -p[1]}];
     }
     cout << result / 2 << "\n";
