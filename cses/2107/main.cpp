@@ -35,6 +35,8 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     string s;
     cin >> s;
-    for (int x : z[i]) cout << x << " ";
+    for (int x : z(s)) cout << x << " ";
+    cout << "\n";
+    for (int x : pi(s)) cout << x << " ";
     cout << "\n";
 }
