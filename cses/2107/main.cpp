@@ -1,9 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> z(int n) {
-    vector<int> z(n);
-
+vector<int> z(const string& s) {
+    int n = s.size();
+    vector<int> z(n), pi(n);
+    for (int i = 1; i < n; i++) {
+        int j = pi[i - 1];
+        while (j < n && a[i] == a[j]) j++;
+    }
     return z;
 }
 
