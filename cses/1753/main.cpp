@@ -13,7 +13,7 @@ int main() {
         while (i + z[i] < n && s[z[i]] == s[i + z[i]]) {
             z[i]++;
         }
-        if (i + 1 > r) {
+        if (i + z[i] > r) {
             l = i;
             r = i + z[i];
         }
