@@ -3,13 +3,11 @@ using namespace std;
 
 vector<int> z(const string& s) {
     int n = s.size();
-    vector<int> z(n), pi(n);
+    vector<int> z(n);
+    int l = 0, r = 0;
     for (int i = 1; i < n; i++) {
         int j = 0;
-        while (i + j < n && s[i + j] == s[j]) {
-            pi[i + j] = pi[i + j - 1] + 1;
-            j++;
-        }
+        if (j < r) { j = min(j - l, z[l - j]); }
     }
     return z;
 }
