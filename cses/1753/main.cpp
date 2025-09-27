@@ -18,5 +18,5 @@ int main() {
             r = i + z[i];
         }
     }
-    cout << count(z.begin(), z.end(), s.size()) << "\n";
+    cout << count(z.begin(), z.end(), t.size()) << "\n";
 }
