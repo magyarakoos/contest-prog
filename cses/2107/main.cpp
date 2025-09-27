@@ -5,8 +5,8 @@ vector<int> z(const string& s) {
     int n = s.size();
     vector<int> z(n), pi(n);
     for (int i = 1; i < n; i++) {
-        int j = pi[i - 1];
-        while (j < n && a[i] == a[j]) j++;
+        int j = 0;
+        while (i + j < n && s[i + j] == s[j]) j++;
     }
     return z;
 }
