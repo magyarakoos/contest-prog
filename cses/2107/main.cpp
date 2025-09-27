@@ -6,7 +6,10 @@ vector<int> z(const string& s) {
     vector<int> z(n), pi(n);
     for (int i = 1; i < n; i++) {
         int j = 0;
-        while (i + j < n && s[i + j] == s[j]) j++;
+        while (i + j < n && s[i + j] == s[j]) {
+            pi[i + j] = pi[i + j - 1] + 1;
+            j++;
+        }
     }
     return z;
 }
