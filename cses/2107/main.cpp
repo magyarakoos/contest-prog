@@ -7,7 +7,12 @@ vector<int> z(const string& s) {
     int l = 0, r = 0;
     for (int i = 1; i < n; i++) {
         int j = 0;
-        if (j < r) { j = min(j - l, z[l - j]); }
+        // if (j < r) { j = min(j - l, z[l - j]); }
+
+        if (i + 1 < r) {
+            l = i;
+            r = i + z[i];
+        }
     }
     return z;
 }
