@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define int int64_t
 
 vector<int> z(const string& s) {
     int n = s.size();
@@ -18,8 +19,17 @@ vector<int> z(const string& s) {
     return z;
 }
 
+vector<int> pi(const string& s) {
+    int n = s.size();
+    vector<int> pi(n);
+    for (int i = 1; i < n; i++) {
+        for (int j = pi[i - 1]; j > 0 && s[i] != s[j];
+             j = pi[j - 1]);
+    }
+}
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    int n;
-    cin >> n;
+    string s;
+    cin >> s;
 }
