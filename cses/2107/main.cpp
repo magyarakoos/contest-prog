@@ -6,13 +6,11 @@ vector<int> z(const string& s) {
     vector<int> z(n);
     int l = 0, r = 0;
     for (int i = 1; i < n; i++) {
-        int j = 0;
-        // if (j < r) { j = min(j - l, z[l - j]); }
 
-        if (i + 1 < r) {
-            l = i;
-            r = i + z[i];
+        while (i + z[i] < n && s[i + z[i]] == s[z[i]]) {
+            z[i]++;
         }
+        if (i + 1 > r) {}
     }
     return z;
 }
