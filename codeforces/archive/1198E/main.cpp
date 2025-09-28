@@ -17,8 +17,9 @@ int32_t main() {
     }
 
     sort(row.begin(), row.end());
-    row.erase(unique(row.begin(), row.end()), row.end());
     sort(col.begin(), col.end());
+    row.erase(unique(row.begin(), row.end()), row.end());
+    col.erase(unique(col.begin(), col.end()), col.end());
 
     for (int x : row) cout << x << " ";
     cout << "\n";
