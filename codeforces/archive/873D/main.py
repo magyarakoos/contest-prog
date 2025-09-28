@@ -3,7 +3,7 @@ def solve(n, k):
     for i in range(n // 2, 0, -1):
         a.append(i)
     if n > 1:
-        for i in solve(n - n // 2, k - n // 2 * 2 + 1):
+        for i in solve(n - n // 2, k - n // 2 * 2):
             a.append(i + n // 2)
     return a
 
