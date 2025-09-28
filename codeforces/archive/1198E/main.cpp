@@ -30,13 +30,15 @@ int32_t main() {
         col_pos[col[i]] = i;
     }
 
-    for (int x : row) cout << x << " ";
-    cout << "\n";
-    for (int x : col) cout << x << " ";
-    cout << "\n";
+    // for (int x : col) cout << x << " ";
+    // cout << "\n";
 
     int k = row.size() - 1, l = col.size() - 1;
     vector grid(k, vector<bool>(l));
+
+    cout << " ";
+    for (int x : row) cout << x << " ";
+    cout << "\n";
 
     for (auto [x1, y1, x2, y2] : rectS) {
         for (int i = col_pos[y1]; i < col_pos[y2]; i++) {
@@ -45,12 +47,10 @@ int32_t main() {
                 grid[i][j] = 1;
             }
         }
-        for (int i = 0; i < k; i++) {
-            for (int j = 0; j < l; j++) {
-                cout << grid[i][j];
-            }
-            cout << "\n";
-        }
+    }
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < l; j++) { cout << grid[i][j]; }
         cout << "\n";
     }
+    cout << "\n";
 }
