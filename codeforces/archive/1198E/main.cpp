@@ -54,11 +54,14 @@ int32_t main() {
     }
     cout << "\n";
 
-    vector<vector<int>> adj(k + l + 2);
+    vector<vector<int>> adj(k + l + 2),
+        cap(k + l + 2, vector<int>(k + l + 2));
     for (int i = 0; i < k; i++) {
         for (int j = 0; j < l; j++) {
             adj[i].push_back(k + j);
             adj[k + j].push_back(i);
+            cap[i][k + j] = 1e18;
+            cap[k + j][i] = 1e18;
         }
     }
 }
