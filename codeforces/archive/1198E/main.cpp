@@ -45,16 +45,6 @@ int32_t main() {
         }
     }
 
-    cout << "  ";
-    for (int i = 0; i < l; i++) cout << col[i];
-    cout << "\n\n";
-    for (int i = 0; i < k; i++) {
-        cout << row[i] << " ";
-        for (int j = 0; j < l; j++) { cout << grid[i][j]; }
-        cout << "\n";
-    }
-    cout << "\n";
-
     int s = k + l, t = k + l + 1;
 
     vector<vector<int>> g(k + l + 2),
