@@ -11,9 +11,9 @@ int32_t main() {
     for (auto& [x1, y1, x2, y2] : rectS) {
         cin >> x1 >> y1 >> x2 >> y2;
         row.push_back(y1);
-        row.push_back(y2);
+        row.push_back(y2 + 1);
         col.push_back(x1);
-        col.push_back(x2);
+        col.push_back(x2 + 1);
     }
 
     sort(row.begin(), row.end());
