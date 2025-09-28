@@ -97,4 +97,7 @@ int32_t main() {
 
         return 0;
     };
-}
+
+    int flow = 0, nflow;
+    vector<int> par(k + l + 2);
+    while ((nflow = bfs(par))) }
