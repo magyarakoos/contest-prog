@@ -8,7 +8,7 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n, m;
     cin >> n >> m;
-    vector<int> row(1, 1), col(1, 1);
+    vector<int> row({1, n}), col({1, n});
     vector<array<int, 4>> rectS(m);
     for (auto& [x1, y1, x2, y2] : rectS) {
         cin >> x1 >> y1 >> x2 >> y2;
