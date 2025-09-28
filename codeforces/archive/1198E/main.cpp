@@ -22,6 +22,8 @@ int32_t main() {
     row.erase(unique(row.begin(), row.end()), row.end());
     col.erase(unique(col.begin(), col.end()), col.end());
 
+    map<int, int> row_pos, col_pos;
+
     for (int x : row) cout << x << " ";
     cout << "\n";
     for (int x : col) cout << x << " ";
@@ -29,10 +31,4 @@ int32_t main() {
 
     int k = row.size() - 1, l = col.size() - 1;
     vector grid(k, vector<bool>(l));
-
-    for (auto [x1, y1, x2, y2] : rectS) {
-        for (; y1 <= y2; y1++) {
-            for (; x1 <= x2; x1++) {}
-        }
-    }
 }
