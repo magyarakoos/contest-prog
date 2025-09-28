@@ -38,7 +38,6 @@ int32_t main() {
     cout << "\n\n";
 
     vector grid(k, vector<bool>(l));
-
     for (auto [x1, y1, x2, y2] : rectS) {
         for (int i = col_pos[y1]; i < col_pos[y2]; i++) {
             for (int j = row_pos[x1]; j < row_pos[x2];
