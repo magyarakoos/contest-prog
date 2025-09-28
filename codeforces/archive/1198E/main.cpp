@@ -53,4 +53,12 @@ int32_t main() {
         cout << "\n";
     }
     cout << "\n";
+
+    vector<vector<int>> adj(k + l + 2);
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < l; j++) {
+            adj[i].push_back(k + j);
+            adj[k + j].push_back(i);
+        }
+    }
 }
