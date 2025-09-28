@@ -10,6 +10,7 @@ int32_t main() {
     vector<array<int, 4>> rectS(m);
     for (auto& [x1, y1, x2, y2] : rectS) {
         cin >> x1 >> y1 >> x2 >> y2;
+        x2++, y2++;
         row.push_back(y1);
         row.push_back(y2 + 1);
         col.push_back(x1);
@@ -28,4 +29,10 @@ int32_t main() {
 
     int k = row.size() - 1, l = col.size() - 1;
     vector grid(k, vector<bool>(l));
+
+    for (auto [x1, y1, x2, y2] : rectS) {
+        for (; y1 <= y2; y1++) {
+            for (; x1 <= x2; x1++) {}
+        }
+    }
 }
