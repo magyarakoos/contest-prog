@@ -25,4 +25,7 @@ int32_t main() {
     cout << "\n";
     for (int x : col) cout << x << " ";
     cout << "\n";
+
+    int k = row.size() - 1, l = col.size() - 1;
+    vector grid(k, vector<bool>(l));
 }
