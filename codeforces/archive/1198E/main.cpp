@@ -33,10 +33,6 @@ int32_t main() {
         if (i) col[i - 1] = col[i] - col[i - 1];
     }
 
-    cout << "  ";
-    for (int i = 0; i < l; i++) cout << col[i];
-    cout << "\n\n";
-
     vector grid(k, vector<bool>(l));
     for (auto [x1, y1, x2, y2] : rectS) {
         for (int i = col_pos[y1]; i < col_pos[y2]; i++) {
@@ -47,6 +43,9 @@ int32_t main() {
         }
     }
 
+    cout << "  ";
+    for (int i = 0; i < l; i++) cout << col[i];
+    cout << "\n\n";
     for (int i = 0; i < k; i++) {
         cout << row[i] << " ";
         for (int j = 0; j < l; j++) { cout << grid[i][j]; }
@@ -56,6 +55,14 @@ int32_t main() {
 
     vector<vector<int>> adj(k + l + 2),
         cap(k + l + 2, vector<int>(k + l + 2));
+    for (int i = 0; i < k; i++) {
+        adj[k + l].push_back(i);
+        cap[k + l][i] = row[i];
+    }
+    for (int i = 0; i < l; i++) {
+        adj[k + i].push_back(k + l + 1);
+        cap[k + i][k + l + 1] = col[i];
+    }
     for (int i = 0; i < k; i++) {
         for (int j = 0; j < l; j++) {
             if (grid[i][j]) {
