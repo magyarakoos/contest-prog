@@ -1,5 +1,5 @@
 def solve(n, k):
-    if n <= 0 or k <= 0:
+    if n <= 0 or k < 0:
         return []
     a = []
     for i in range(n // 2, 0, -1):
