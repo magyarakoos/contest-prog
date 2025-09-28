@@ -33,10 +33,9 @@ int32_t main() {
         if (i) col[i - 1] = col[i] - col[i - 1];
     }
 
-    for (int i = 0; i < k; i++) cout << row[i];
-    cout << "\n";
+    cout << "  ";
     for (int i = 0; i < l; i++) cout << col[i];
-    cout << "\n";
+    cout << "\n\n";
 
     vector grid(k, vector<bool>(l));
 
@@ -50,6 +49,7 @@ int32_t main() {
     }
 
     for (int i = 0; i < k; i++) {
+        cout << row[i] << " ";
         for (int j = 0; j < l; j++) { cout << grid[i][j]; }
         cout << "\n";
     }
