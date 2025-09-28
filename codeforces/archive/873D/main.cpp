@@ -3,7 +3,7 @@ using namespace std;
 #define int int64_t
 
 void solve(int n, int k) {
-    for (int i = n / 2; i > 0; i--) cout << i << " ";
+    for (int i = n; i > (n + 1) / 2; i--) cout << i << " ";
     if (n > 1) solve(n - n / 2, k - n / 2 * 2 + 1);
 }
 
