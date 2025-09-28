@@ -37,4 +37,13 @@ int32_t main() {
 
     int k = row.size() - 1, l = col.size() - 1;
     vector grid(k, vector<bool>(l));
+
+    for (auto [x1, y1, x2, y2] : rectS) {
+        for (int i = col_pos[y1]; i <= col_pos[y2]; i++) {
+            for (int j = row_pos[x1]; j <= row_pos[x2];
+                 j++) {
+                grid[i][j] = 1;
+            }
+        }
+    }
 }
