@@ -2,7 +2,7 @@ def solve(n, k):
     if n == 1 or k == 1:
         return [i for i in range(1, n // 2 + 1)]
     if k <= n // 2 * 2 - 1:
-        exit(1)      
+        return [i for i in range(1, n // 2 + 1)] + solve(n - n // 2, k)
     else:
         return [i for i in range(n // 2, 0, -1)] + solve(n - n // 2, k - n // 2 * 2 - 1)
 
