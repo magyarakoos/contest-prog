@@ -1,5 +1,4 @@
 def solve(n, k):
-    print(n, k)
     if n == 1 or k == 1:
         return [i for i in range(1, n + 1)]
     k -= 1
