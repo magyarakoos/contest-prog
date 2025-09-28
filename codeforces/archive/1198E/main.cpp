@@ -100,4 +100,16 @@ int32_t main() {
 
     int flow = 0, nflow;
     vector<int> par(k + l + 2);
-    while ((nflow = bfs(par))) }
+    while ((nflow = bfs(par))) {
+        flow += nflow;
+        int u = t;
+        while (u != s) {
+            int v = par[u];
+            cap[v][u] -= nflow;
+            cap[u][v] += nflow;
+            u = v;
+        }
+    }
+
+    cout << flow << "\n";
+}
