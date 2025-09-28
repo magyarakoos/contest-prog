@@ -23,22 +23,11 @@ int32_t main() {
     col.erase(unique(col.begin(), col.end()), col.end());
 
     map<int, int> row_pos, col_pos;
-    for (int i = 0; i < row.size(); i++) {
-        row_pos[row[i]] = i;
-    }
-    for (int i = 0; i < col.size(); i++) {
-        col_pos[col[i]] = i;
-    }
-
-    // for (int x : col) cout << x << " ";
-    // cout << "\n";
-
     int k = row.size() - 1, l = col.size() - 1;
-    vector grid(k, vector<bool>(l));
+    for (int i = 0; i <= k; i++) { row_pos[row[i]] = i; }
+    for (int i = 0; i <= l; i++) { col_pos[col[i]] = i; }
 
-    cout << " ";
-    for (int x : row) cout << x << " ";
-    cout << "\n";
+    vector grid(k, vector<bool>(l));
 
     for (auto [x1, y1, x2, y2] : rectS) {
         for (int i = col_pos[y1]; i < col_pos[y2]; i++) {
@@ -48,6 +37,7 @@ int32_t main() {
             }
         }
     }
+
     for (int i = 0; i < k; i++) {
         for (int j = 0; j < l; j++) { cout << grid[i][j]; }
         cout << "\n";
