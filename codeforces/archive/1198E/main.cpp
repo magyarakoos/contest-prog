@@ -44,7 +44,12 @@ int32_t main() {
                 grid[i][j] = 1;
             }
         }
+        for (int i = 0; i < k; i++) {
+            for (int j = 0; j < l; j++) {
+                cout << grid[i][j];
+            }
+            cout << "\n";
+        }
+        cout << "\n";
     }
-
-    for (int i = 0; i < k; i++) {}
 }
