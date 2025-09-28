@@ -2,6 +2,8 @@
 using namespace std;
 #define int int64_t
 
+const int INF = 1e18;
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n, m;
@@ -70,13 +72,19 @@ int32_t main() {
             if (grid[i][j]) {
                 adj[i].push_back(k + j);
                 adj[k + j].push_back(i);
-                cap[i][k + j] = 1e18;
-                cap[k + j][i] = 1e18;
+                cap[i][k + j] = INF;
+                cap[k + j][i] = INF;
             }
         }
     }
 
-    auto bfs = [&]() -> {
+    auto bfs = [&](vector<int>& par) -> int {
+        fill(par.begin(), par.end(), -1);
+        par[s] = -2;
+        queue<array<int, 2>> q({{s, INF}});
 
+        while (!q.empty()) {}
+
+        return 0;
     };
 }
