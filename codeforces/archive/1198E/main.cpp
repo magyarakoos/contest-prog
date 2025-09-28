@@ -4,6 +4,19 @@ using namespace std;
 
 const int INF = 1e10;
 
+struct Data {};
+
+pair<int, vector<array<int, 4>>> read() {
+    int n, m;
+    cin >> n >> m;
+    vector<array<int, 4>> rectS(m);
+    for (auto& [x1, x2, y1, y2] : rectS) {}
+    return {n, rectS};
+}
+
+vector<vector<int>>
+compress(const vector<array<int, 4>>& rectS) {}
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n, m;
