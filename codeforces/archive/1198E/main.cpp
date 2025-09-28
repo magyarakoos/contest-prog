@@ -37,8 +37,8 @@ int32_t main() {
 
     vector grid(k, vector<bool>(l));
     for (auto [x1, y1, x2, y2] : rectS) {
-        for (int i = col_pos[x1]; i < col_pos[x2]; i++) {
-            for (int j = row_pos[y1]; j < row_pos[y2];
+        for (int i = row_pos[y1]; i < row_pos[y2]; i++) {
+            for (int j = col_pos[x1]; j < col_pos[x2];
                  j++) {
                 grid[i][j] = 1;
             }
