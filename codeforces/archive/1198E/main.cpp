@@ -51,10 +51,12 @@ int32_t main() {
         cap(k + l + 2, vector<int>(k + l + 2));
     for (int i = 0; i < k; i++) {
         g[s].push_back(i);
+        g[i].push_back(s);
         cap[s][i] = row[i];
     }
     for (int i = 0; i < l; i++) {
         g[k + i].push_back(t);
+        g[t].push_back(k + i);
         cap[k + i][t] = col[i];
     }
     for (int i = 0; i < k; i++) {
