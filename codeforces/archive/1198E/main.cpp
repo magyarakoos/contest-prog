@@ -53,15 +53,17 @@ int32_t main() {
     }
     cout << "\n";
 
+    int s = k + l, t = k + l + 1;
+
     vector<vector<int>> adj(k + l + 2),
         cap(k + l + 2, vector<int>(k + l + 2));
     for (int i = 0; i < k; i++) {
-        adj[k + l].push_back(i);
-        cap[k + l][i] = row[i];
+        adj[s].push_back(i);
+        cap[s][i] = row[i];
     }
     for (int i = 0; i < l; i++) {
-        adj[k + i].push_back(k + l + 1);
-        cap[k + i][k + l + 1] = col[i];
+        adj[k + i].push_back(t);
+        cap[k + i][t] = col[i];
     }
     for (int i = 0; i < k; i++) {
         for (int j = 0; j < l; j++) {
@@ -73,4 +75,8 @@ int32_t main() {
             }
         }
     }
+
+    auto bfs = [&]() -> {
+
+    };
 }
