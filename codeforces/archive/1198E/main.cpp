@@ -57,23 +57,22 @@ int32_t main() {
 
     int s = k + l, t = k + l + 1;
 
-    vector<vector<int>> adj(k + l + 2),
+    vector<vector<int>> g(k + l + 2),
         cap(k + l + 2, vector<int>(k + l + 2));
     for (int i = 0; i < k; i++) {
-        adj[s].push_back(i);
+        g[s].push_back(i);
         cap[s][i] = row[i];
     }
     for (int i = 0; i < l; i++) {
-        adj[k + i].push_back(t);
+        g[k + i].push_back(t);
         cap[k + i][t] = col[i];
     }
     for (int i = 0; i < k; i++) {
         for (int j = 0; j < l; j++) {
             if (grid[i][j]) {
-                adj[i].push_back(k + j);
-                adj[k + j].push_back(i);
+                g[i].push_back(k + j);
+                g[k + j].push_back(i);
                 cap[i][k + j] = INF;
-                cap[k + j][i] = INF;
             }
         }
     }
@@ -83,7 +82,18 @@ int32_t main() {
         par[s] = -2;
         queue<array<int, 2>> q({{s, INF}});
 
-        while (!q.empty()) {}
+        while (!q.empty()) {
+            auto [u, flow] = q.front();
+            q.pop();
+            for (int v : g[u]) {
+                if (par[v] == -1 && cap[u][v]) {
+                    par[v] = u;
+                    int nflow = min(flow, cap[u][v]);
+                    if (v == t) return nflow;
+                    q.push({v, nflow});
+                }
+            }
+        }
 
         return 0;
     };
