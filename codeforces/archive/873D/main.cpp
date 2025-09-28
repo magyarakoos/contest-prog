@@ -4,7 +4,7 @@ using namespace std;
 
 void solve(int n, int k) {
     for (int i = n; i > (n + 1) / 2; i--) cout << i << " ";
-    if (n > 1) solve(n - n / 2, k - n / 2 * 2 + 1);
+    if (n) solve(n - n / 2, k - n / 2 * 2 + 1);
 }
 
 int32_t main() {
