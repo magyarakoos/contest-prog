@@ -24,8 +24,14 @@ int32_t main() {
 
     map<int, int> row_pos, col_pos;
     int k = row.size() - 1, l = col.size() - 1;
-    for (int i = 0; i <= k; i++) { row_pos[row[i]] = i; }
-    for (int i = 0; i <= l; i++) { col_pos[col[i]] = i; }
+    for (int i = 0; i <= k; i++) {
+        row_pos[row[i]] = i;
+        row[i - 1] = row[i] - row[i - 1];
+    }
+    for (int i = 0; i <= l; i++) {
+        col_pos[col[i]] = i;
+        col[i - 1] = col[i] - col[i - 1];
+    }
 
     vector grid(k, vector<bool>(l));
 
