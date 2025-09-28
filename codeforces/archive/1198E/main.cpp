@@ -23,6 +23,12 @@ int32_t main() {
     col.erase(unique(col.begin(), col.end()), col.end());
 
     map<int, int> row_pos, col_pos;
+    for (int i = 0; i < row.size(); i++) {
+        row_pos[row[i]] = i;
+    }
+    for (int i = 0; i < col.size(); i++) {
+        col_pos[col[i]] = i;
+    }
 
     for (int x : row) cout << x << " ";
     cout << "\n";
