@@ -8,6 +8,19 @@ int32_t main() {
     cin >> n >> c;
     vector<int> a(n);
     for (int& x : a) cin >> x;
-    set<int> needed;
-    for (int i = 0; i < c; i++) needed.insert(i);
+    map<int, int> m;
+
+    int l = 0, result = 1e9;
+    for (int r = 0; r < n; r++) {
+        m[a[r]]++;
+        while (l < r && m.size() == c) {
+            if (m[l] == 1) break;
+            m[a[l]]--;
+            l++;
+        }
+        if (m.size() == c) {
+            result = min(result, r - l + 1);
+        }
+    }
+    cout << result << "\n";
 }
