@@ -9,11 +9,10 @@ int32_t main() {
     vector<int> a(n);
     for (int& x : a) cin >> x;
     map<int, int> m;
-
     int l = 0, result = 1e9;
     for (int r = 0; r < n; r++) {
         m[a[r]]++;
-        while (l < r && m.size() == c) {
+        while (r < l && m.size() == c) {
             if (m[l] == 1) break;
             m[a[l]]--;
             l++;
