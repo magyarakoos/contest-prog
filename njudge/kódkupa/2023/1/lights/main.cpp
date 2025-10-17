@@ -12,11 +12,8 @@ int32_t main() {
     int l = 0, result = 1e9;
     for (int r = 0; r < n; r++) {
         m[a[r]]++;
-        while (r < l && m.size() == c) {
-            if (m[a[l]] == 1) {
-                m.erase(a[l]);
-                break;
-            }
+        while (l < r && m.size() == c) {
+            if (m[a[l]] == 1) break;
             m[a[l]]--;
             l++;
         }
