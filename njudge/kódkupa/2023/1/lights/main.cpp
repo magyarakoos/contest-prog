@@ -13,7 +13,10 @@ int32_t main() {
     for (int r = 0; r < n; r++) {
         m[a[r]]++;
         while (r < l && m.size() == c) {
-            if (m[l] == 1) break;
+            if (m[a[l]] == 1) {
+                m.erase(a[l]);
+                break;
+            }
             m[a[l]]--;
             l++;
         }
