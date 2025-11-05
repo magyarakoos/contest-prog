@@ -10,6 +10,8 @@ int32_t main() {
     for (int i = 1; i <= n; i++) {
         vector<int> e;
         int x;
-        while ((cin >> x) && x) { e.push_back(i); }
+        while ((cin >> x) && x) e.push_back(x);
+        for (int y : e) cout << y << " ";
+        cout << "\n";
     }
 }
