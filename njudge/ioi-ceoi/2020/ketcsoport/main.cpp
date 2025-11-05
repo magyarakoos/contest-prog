@@ -6,12 +6,19 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n;
     cin >> n;
-    vector<int> g(n + 1);
+    vector<bool> g(n + 1);
     for (int i = 1; i <= n; i++) {
         vector<int> e;
         int x;
         while ((cin >> x) && x) e.push_back(x);
-        for (int y : e) cout << y << " ";
-        cout << "\n";
+        if (e.size() <= 2) {
+            g[i] = !g[e[0]];
+        } else {
+            int zcnt = 0, ocnt = 0;
+            for (int j = 0; j < 3; j++) {
+                (g[e[j]] ? ocnt : zcnt)++;
+            }
+            g[i] = (zcnt > ocnt);
+        }
     }
 }
