@@ -27,6 +27,12 @@ int32_t main() {
         while (!q.empty()) {
             auto [i, j] = q.front();
             q.pop();
+            for (int k = 0; k < 4; k++) {
+                int ni = i + di[k], nj = j + dj[k];
+                if (ni < 0 || ni >= n || nj < 0 ||
+                    nj >= m || g[i][j] > g[ni][nj])
+                    continue;
+            }
         }
     };
 }
