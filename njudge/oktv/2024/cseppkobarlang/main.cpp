@@ -18,4 +18,7 @@ int32_t main() {
         }
     }
     sort(ptS.begin(), ptS.end());
+
+    vector vis(n, vector<bool>(m));
+    auto bfs = [&](int st) { queue<int> q({st}); };
 }
