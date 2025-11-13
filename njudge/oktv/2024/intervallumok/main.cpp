@@ -26,6 +26,15 @@ int32_t main() {
             int j = i - nk + 1;
             w = max(w, a[i] - a[j]);
         }
+        bool ok = 1;
+        for (int i = 2 * nk - 1; i < n; i += nk) {
+            int j = i - nk;
+            if (a[i] - a[j] < w) {
+                ok = 0;
+                break;
+            }
+        }
+        if (!ok) continue;
         cout << k << " " << w << "\n";
     }
 }
