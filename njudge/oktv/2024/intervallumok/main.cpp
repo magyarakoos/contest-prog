@@ -30,11 +30,11 @@ int32_t main() {
                 ok = 0;
                 break;
             }
-            tip = max(tip + 1, a[j]);
+            tip = max(tip + 1, a[i] - w);
             cur.push_back(tip);
             tip += w;
         }
-        if (!ok) { continue; }
+        if (!ok) continue;
         res_w.push_back(w);
         res.push_back(cur);
     }
