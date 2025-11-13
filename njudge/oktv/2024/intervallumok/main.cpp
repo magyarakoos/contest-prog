@@ -23,7 +23,7 @@ int32_t main() {
         vector<int> cur;
         int tip = a[nk - 1] - w;
         cur.push_back(tip);
-        tip += w + 1;
+        tip += w;
         for (int i = 2 * nk - 1; i < n; i += nk) {
             int j = i - nk + 1;
             if (tip >= a[j]) {
