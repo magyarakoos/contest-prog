@@ -25,9 +25,10 @@ int32_t main() {
             int j = i - nk;
             if (a[i] - a[j] - over < w) {
                 over = w - (a[i] - a[j] - over);
-                cout << k << " " << w << "\n";
-                ok = 0;
-                break;
+                if (over > a[i + 1] - a[i]) {
+                    ok = 0;
+                    break;
+                }
             }
         }
         if (!ok) { continue; }
