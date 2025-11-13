@@ -4,15 +4,14 @@ using namespace std;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    int n, p;
-    cin >> n >> p;
+    int n;
+    cin >> n;
     vector<int> a(n);
     for (int& x : a) cin >> x;
-    int l = 0, r = 0, sum = 0, result = 0;
-    while (r < n) {
-        while (r < n && sum + a[r] <= p) sum += a[r++];
-        result = max(result, r - l);
-        sum -= a[l++];
+    vector<int> d(n - 1);
+    for (int i = 1; i < n; i++) {
+        d[i - 1] = a[i] - a[i - 1];
     }
-    cout << result << "\n";
+    for (int x : d) cout << x << " ";
+    cout << "\n";
 }
