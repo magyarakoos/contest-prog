@@ -41,6 +41,11 @@ int32_t main() {
             int j = i - nk + 1;
             res.back().push_back(j);
         }
-        cout << k << " " << w << "\n";
+    }
+
+    cout << res.size();
+    for (int i = 0; i < res.size(); i++) {
+        cout << res[i].size() << " " << res_w[i] << "\n";
+        for (int x : res[i]) cout << x << "\n";
     }
 }
