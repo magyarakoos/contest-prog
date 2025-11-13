@@ -49,6 +49,7 @@ int32_t main() {
     }
 
     cout << result.size() << "\n";
-    for (auto [i, j] : result)
+    for (auto [i, j] : result) {
         cout << i + 1 << " " << j + 1 << "\n";
+    }
 }
