@@ -8,13 +8,6 @@ int32_t main() {
     cin >> n;
     vector<int> a(n);
     for (int& x : a) cin >> x;
-    vector<int> d(n - 1);
-    for (int i = 1; i < n; i++) {
-        d[i - 1] = a[i] - a[i - 1];
-    }
-
-    for (int x : d) cout << x << " ";
-    cout << "\n";
 
     vector<vector<int>> res;
     vector<int> res_w;
@@ -39,12 +32,12 @@ int32_t main() {
         res.push_back({});
         for (int i = nk - 1; i < n; i += nk) {
             int j = i - nk + 1;
-            res.back().push_back(j);
+            res.back().push_back(a[j]);
         }
     }
 
-    cout << res.size();
-    for (int i = 0; i < res.size(); i++) {
+    cout << res.size() << "\n";
+    for (int i = 0; i < (int)res.size(); i++) {
         cout << res[i].size() << " " << res_w[i] << "\n";
         for (int x : res[i]) cout << x << "\n";
     }
