@@ -9,6 +9,7 @@ int32_t main() {
     vector<int> a(n);
     for (int& x : a) cin >> x;
 
+    vector<int> push_i(n);
     vector<vector<int>> res;
     vector<int> res_w;
     for (int k = 1; k < n; k++) {
@@ -25,6 +26,7 @@ int32_t main() {
             int j = i - nk;
             if (a[i] - a[j] - over < w) {
                 over = w - (a[i] - a[j] - over);
+                push_i[i] = over;
                 if (over > a[i + 1] - a[i]) {
                     ok = 0;
                     break;
@@ -35,7 +37,7 @@ int32_t main() {
         res_w.push_back(w);
         res.push_back({});
         for (int i = nk - 1; i < n; i += nk) {
-            res.back().push_back(a[i] - w);
+            res.back().push_back(a[i] + push_i[i] - w);
         }
     }
 
