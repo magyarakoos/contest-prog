@@ -10,11 +10,9 @@ int32_t main() {
     for (int& x : a) cin >> x;
     int l = 0, r = 0, sum = 0, result = 0;
     while (r < n) {
-        while (r < n && sum + a[r] <= p) r++;
-        cout << l << " " << r << " " << sum << "\n";
+        while (r < n && sum + a[r] <= p) sum += a[r++];
         result = max(result, r - l);
-        sum -= a[l];
-        l++;
+        sum -= a[l++];
     }
     cout << result << "\n";
 }
