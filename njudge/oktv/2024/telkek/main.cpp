@@ -8,11 +8,13 @@ int32_t main() {
     cin >> n >> p;
     vector<int> a(n);
     for (int& x : a) cin >> x;
-    int l = 0, r = 0, sum = 0;
+    int l = 0, r = 0, sum = 0, result = 0;
     while (r < n) {
         while (r < n && sum + a[r] <= p) r++;
-
+        cout << l << " " << r << " " << sum << "\n";
+        result = max(result, r - l);
         sum -= a[l];
         l++;
     }
+    cout << result << "\n";
 }
