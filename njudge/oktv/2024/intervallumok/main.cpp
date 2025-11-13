@@ -9,7 +9,6 @@ int32_t main() {
     vector<int> a(n);
     for (int& x : a) cin >> x;
 
-    vector<int> push_i(n);
     vector<vector<int>> res;
     vector<int> res_w;
     for (int k = 1; k < n; k++) {
@@ -21,24 +20,23 @@ int32_t main() {
             w = max(w, a[i] - a[j]);
         }
         bool ok = 1;
-        int over = 0;
-        for (int i = 2 * nk - 1; i < n - 1; i += nk) {
-            int j = i - nk;
-            if (a[i] - a[j] - over < w) {
-                over = w - (a[i] - a[j] - over);
-                push_i[i] = over;
-                if (over > a[i + 1] - a[i]) {
-                    ok = 0;
-                    break;
-                }
+        vector<int> cur;
+        int tip = a[nk - 1] - w;
+        cur.push_back(tip);
+        tip += w + 1;
+        for (int i = 2 * nk - 1; i < n; i += nk) {
+            int j = i - nk + 1;
+            if (tip >= a[j]) {
+                ok = 0;
+                break;
             }
+            tip++;
+            cur.push_back(tip);
+            tip += w;
         }
         if (!ok) { continue; }
         res_w.push_back(w);
-        res.push_back({});
-        for (int i = nk - 1; i < n; i += nk) {
-            res.back().push_back(a[i] - w);
-        }
+        res.push_back(cur);
     }
 
     cout << res.size() << "\n";
