@@ -22,7 +22,7 @@ int32_t main() {
         bool ok = 1;
         for (int i = 2 * nk - 1; i < n; i += nk) {
             int j = i - nk;
-            if (a[i] - a[j] < w) {
+            if (a[i] - a[j] <= w) {
                 ok = 0;
                 break;
             }
