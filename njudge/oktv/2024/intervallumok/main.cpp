@@ -20,14 +20,15 @@ int32_t main() {
             w = max(w, a[i] - a[j]);
         }
         bool ok = 1;
-        for (int i = 2 * nk - 1; i < n; i += nk) {
+        for (int i = 2 * nk - 1; i < n - 1; i += nk) {
             int j = i - nk;
             if (a[i] - a[j] < w) {
+                cout << k << " " << w << "\n";
                 ok = 0;
                 break;
             }
         }
-        if (!ok) continue;
+        if (!ok) { continue; }
         res_w.push_back(w);
         res.push_back({});
         for (int i = nk - 1; i < n; i += nk) {
