@@ -4,27 +4,19 @@ using namespace std;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
-    int n;
-    cin >> n;
-    vector<bool> a(n + 1);
-    for (int i = 0; i < n; i++) {
-        char c;
-        cin >> c;
-        a[i + 1] = c == 'K';
-    }
-    vector<int> ps(n + 1), ss(n + 2);
+    int n, q;
+    cin >> n >> q;
+    vector<int> t(n + 1);
     for (int i = 1; i <= n; i++) {
-        ps[i] = ps[i - 1] + !a[i];
+        cin >> t[i];
+        t[i] = max(t[i], t[i - 1]);
     }
-    for (int i = n; i > 0; i--) {
-        ss[i] = ss[i + 1] + a[i];
+    t.push_back(2e9);
+    while (q--) {
+        int m;
+        cin >> m;
+        int i =
+            upper_bound(t.begin(), t.end(), m) - t.begin();
+        cout << i << "\n";
     }
-    int result = 0;
-    for (int i = 1; i <= n; i++) {
-        if (a[i]) continue;
-        int ac = ps[i];
-        int kc = ss[i + 1];
-        result = max(result, min(ac, kc));
-    }
-    cout << result * 2 << "\n";
 }
