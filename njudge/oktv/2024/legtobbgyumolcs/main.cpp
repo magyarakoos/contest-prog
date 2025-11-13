@@ -13,4 +13,18 @@ int32_t main() {
         a[i + 1] = c == 'K';
     }
     vector<int> ps(n + 1), ss(n + 2);
+    for (int i = 1; i <= n; i++) {
+        ps[i] = ps[i - 1] + !a[i];
+    }
+    for (int i = n; i > 0; i--) {
+        ss[i] = ss[i + 1] + a[i];
+    }
+    int result = 0;
+    for (int i = 1; i <= n; i++) {
+        if (a[i]) continue;
+        int ac = ps[i];
+        int kc = ss[i + 1];
+        result = max(result, min(ac, kc));
+    }
+    cout << result * 2 << "\n";
 }
