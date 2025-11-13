@@ -37,7 +37,7 @@ int32_t main() {
         res_w.push_back(w);
         res.push_back({});
         for (int i = nk - 1; i < n; i += nk) {
-            res.back().push_back(a[i] + push_i[i] - w);
+            res.back().push_back(a[i] - w);
         }
     }
 
