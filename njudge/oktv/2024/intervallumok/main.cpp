@@ -17,7 +17,7 @@ int32_t main() {
     cout << "\n";
 
     vector<vector<int>> res;
-    vector<int> res_h;
+    vector<int> res_w;
     for (int k = 1; k < n; k++) {
         if (n % k) continue;
         int nk = n / k;
@@ -35,6 +35,12 @@ int32_t main() {
             }
         }
         if (!ok) continue;
+        res_w.push_back(w);
+        res.push_back({});
+        for (int i = nk - 1; i < n; i += nk) {
+            int j = i - nk + 1;
+            res.back().push_back(j);
+        }
         cout << k << " " << w << "\n";
     }
 }
