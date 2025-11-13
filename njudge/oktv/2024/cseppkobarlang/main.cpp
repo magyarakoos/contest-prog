@@ -23,6 +23,7 @@ int32_t main() {
 
     vector vis(n, vector<bool>(m));
     auto bfs = [&](int si, int sj) {
+        vis[si][sj] = 1;
         queue<array<int, 2>> q({{si, sj}});
         while (!q.empty()) {
             auto [i, j] = q.front();
@@ -30,9 +31,24 @@ int32_t main() {
             for (int k = 0; k < 4; k++) {
                 int ni = i + di[k], nj = j + dj[k];
                 if (ni < 0 || ni >= n || nj < 0 ||
-                    nj >= m || g[i][j] > g[ni][nj])
+                    nj >= m || vis[ni][nj] ||
+                    g[i][j] > g[ni][nj])
                     continue;
+                vis[ni][nj] = 1;
+                q.push({ni, nj});
             }
         }
     };
+
+    vector<array<int, 2>> result;
+    for (auto [gij, i, j] : ptS) {
+        if (!vis[i][j]) {
+            bfs(i, j);
+            result.push_back({i, j});
+        }
+    }
+
+    cout << result.size() << "\n";
+    for (auto [i, j] : result)
+        cout << i + 1 << " " << j + 1 << "\n";
 }
