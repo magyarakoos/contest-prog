@@ -12,6 +12,20 @@ int32_t main() {
     for (int i = 1; i < n; i++) {
         d[i - 1] = a[i] - a[i - 1];
     }
+
     for (int x : d) cout << x << " ";
     cout << "\n";
+
+    vector<vector<int>> res;
+    vector<int> res_h;
+    for (int k = 1; k < n; k++) {
+        if (n % k) continue;
+        int nk = n / k;
+        int w = 0;
+        for (int i = nk - 1; i < n; i += nk) {
+            int j = i - nk + 1;
+            w = max(w, a[i] - a[j]);
+        }
+        cout << k << " " << w << "\n";
+    }
 }
