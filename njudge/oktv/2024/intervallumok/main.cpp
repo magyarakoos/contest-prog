@@ -30,7 +30,7 @@ int32_t main() {
                 ok = 0;
                 break;
             }
-            tip++;
+            tip = max(tip + 1, a[j]);
             cur.push_back(tip);
             tip += w;
         }
