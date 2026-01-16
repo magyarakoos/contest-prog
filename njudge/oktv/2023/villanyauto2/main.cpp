@@ -34,7 +34,9 @@ int32_t main() {
             if (dist[u][0] != ch || dist[u][1] != cp) {
                 continue;
             }
-            for (auto [v, w] : g[u]) {}
+            for (auto [v, w] : g[u]) {
+                auto nc = calc(ch, cp, w);
+            }
         }
     };
     auto f = [&](int cap) -> bool {
