@@ -13,4 +13,19 @@ int32_t main() {
         g[u].push_back({v, w});
         g[v].push_back({u, w});
     }
+
+    auto f = [&](int cap) -> bool {
+
+    };
+
+    int l = 0, r = 1e12;
+    while (r - l > 1) {
+        int mid = (l + r) / 2;
+        if (f(mid)) {
+            r = m;
+        } else {
+            l = m;
+        }
+    }
+    cout << r << "\n";
 }
