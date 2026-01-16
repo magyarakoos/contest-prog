@@ -22,7 +22,7 @@ int32_t main() {
                         int w) -> array<int, 2> {
             if (w > cap) return {INF, INF};
             if (cp + w <= cap) return {ch, cp + w};
-            return {ch + 1, 0};
+            return {ch + 1, w};
         };
         using state = array<int, 3>;
         priority_queue<state, vector<state>, greater<state>>
