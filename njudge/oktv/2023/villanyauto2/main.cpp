@@ -17,14 +17,13 @@ int32_t main() {
     }
 
     auto check = [&](int start, int cap) -> bool {
-        auto calc = [&](int ch, int cp,
-                        int w) -> array<int, 2> {
-            if (w > cap) return {INF, INF};
-            if (w <= cp) return {ch, cp - w};
-            return {ch + 1, cap};
-        };
         using di = array<int, 2>;
         using state = pair<di, int>;
+        auto calc = [&](di d, int w) -> array<int, 2> {
+            if (w > cap) return {INF, INF};
+            if (w <= d[1]) return {d[0], d[1] - w};
+            return {d[0] + 1, cap};
+        };
         priority_queue<state, vector<state>, greater<state>>
             pq;
         vector<array<int, 2>> dist(n + 1, {INF, INF});
@@ -35,10 +34,10 @@ int32_t main() {
             pq.pop();
             if (dist[u] != d) { continue; }
             for (auto [v, w] : g[u]) {
-                auto nc = calc(ch, cp, w);
-                if (nc < dist[v]) {
-                    dist[v] = nc;
-                    pq.push({nc[0], nc[1], v});
+                auto nd = calc(d, w);
+                if (nd < dist[v]) {
+                    dist[v] = nd;
+                    pq.push({nd, v});
                 }
             }
         }
