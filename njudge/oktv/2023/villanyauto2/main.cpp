@@ -7,4 +7,10 @@ int32_t main() {
     int n, m, k;
     cin >> n >> m >> k;
     vector<vector<array<int, 2>>> g(n + 1);
+    while (m--) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        g[u].push_back({v, w});
+        g[v].push_back({u, w});
+    }
 }
