@@ -36,6 +36,10 @@ int32_t main() {
             }
             for (auto [v, w] : g[u]) {
                 auto nc = calc(ch, cp, w);
+                if (nc < dist[v]) {
+                    dist[v] = nc;
+                    pq.push({nc[0], nc[1], v});
+                }
             }
         }
     };
