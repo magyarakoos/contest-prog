@@ -15,6 +15,10 @@ int32_t main() {
         } else {
             int j = upper_bound(b.begin(), b.end(), a[i]) -
                     b.begin();
+            point[j] = 1;
         }
     }
+    int result = 0;
+    for (int i = 0; i < n; i++) result += point[i];
+    cout << result << "\n";
 }
