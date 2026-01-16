@@ -20,15 +20,15 @@ int32_t main() {
         auto calc = [&](int ch, int cp,
                         int w) -> array<int, 2> {
             if (w > cap) return {INF, INF};
-            if (cp + w <= cap) return {ch, cp + w};
-            return {ch + 1, 0};
+            if (w <= cp) return {ch, cp - w};
+            return {ch + 1, cap};
         };
         using state = array<int, 3>;
         priority_queue<state, vector<state>, greater<state>>
             pq;
         vector<array<int, 2>> dist(n + 1, {INF, INF});
-        dist[start] = {0, 0};
-        pq.push({0, 0, start});
+        dist[start] = {0, cap};
+        pq.push({0, cap, start});
         while (!pq.empty()) {
             auto [ch, cp, u] = pq.top();
             pq.pop();
