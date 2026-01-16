@@ -19,6 +19,7 @@ int32_t main() {
     auto check = [&](int start, int cap) -> bool {
         auto calc = [&](int ch, int cp,
                         int w) -> array<int, 2> {
+            if (w > cap) return {INF, INF};
             if (cp + w <= cap) return {ch, cp + w};
             return {ch + 1, 0};
         };
@@ -30,7 +31,6 @@ int32_t main() {
         pq.push({0, 0, start});
         while (!pq.empty()) {
             auto [ch, cp, u] = pq.top();
-            cout << ch << " " << cp << " " << u << endl;
             pq.pop();
             if (dist[u][0] != ch || dist[u][1] != cp) {
                 continue;
@@ -58,7 +58,6 @@ int32_t main() {
     int l = 0, r = 1e12;
     while (r - l > 1) {
         int mid = (l + r) / 2;
-        cout << mid << ":\n";
         if (f(mid)) {
             r = mid;
         } else {
