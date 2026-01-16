@@ -19,6 +19,7 @@ int32_t main() {
     auto check = [&](int start, int cap) -> bool {
         auto calc = [&](int ch, int cp,
                         int w) -> array<int, 2> {
+            cp = cap - cp;
             if (cp >= w) return {ch, cp - w};
             return {ch + 1, cap};
         };
@@ -26,8 +27,8 @@ int32_t main() {
         priority_queue<state, vector<state>, greater<state>>
             pq;
         vector<array<int, 2>> dist(n + 1, {INF, INF});
-        dist[start] = {0, cap};
-        pq.push({0, cap, start});
+        dist[start] = {0, 0};
+        pq.push({0, 0, start});
         while (!pq.empty()) {
             auto [ch, cp, u] = pq.top();
             cout << ch << " " << cp << " " << u << endl;
