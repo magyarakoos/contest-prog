@@ -19,9 +19,8 @@ int32_t main() {
     auto check = [&](int start, int cap) -> bool {
         auto calc = [&](int ch, int cp,
                         int w) -> array<int, 2> {
-            cp = cap - cp;
-            if (cp >= w) return {ch, cp - w};
-            return {ch + 1, cap};
+            if (cp + w <= cap) return {ch, cp + w};
+            return {ch + 1, 0};
         };
         using state = array<int, 3>;
         priority_queue<state, vector<state>, greater<state>>
@@ -59,6 +58,7 @@ int32_t main() {
     int l = 0, r = 1e12;
     while (r - l > 1) {
         int mid = (l + r) / 2;
+        cout << mid << ":\n";
         if (f(mid)) {
             r = m;
         } else {
