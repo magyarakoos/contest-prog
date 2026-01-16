@@ -15,7 +15,9 @@ int32_t main() {
     }
 
     auto check = [&](int start, int cap) -> bool {
-
+        using state = array<int, 3>;
+        priority_queue<state, vector<state>, greater<state>>
+            pq;
     };
     auto f = [&](int cap) -> bool {
         for (int start = 1; start <= n; start++) {
