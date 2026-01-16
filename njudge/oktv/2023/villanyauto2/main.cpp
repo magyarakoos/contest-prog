@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int INF = 1e18;
+const int INF = 1e12;
 
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
@@ -55,7 +55,7 @@ int32_t main() {
         return 1;
     };
 
-    int l = 0, r = 1e12;
+    int l = 0, r = INF;
     while (r - l > 1) {
         int mid = (l + r) / 2;
         if (f(mid)) {
