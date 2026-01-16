@@ -17,6 +17,11 @@ int32_t main() {
     }
 
     auto check = [&](int start, int cap) -> bool {
+        auto calc = [&](int ch, int cp,
+                        int w) -> array<int, 2> {
+            if (cp >= w) return {ch, cp - w};
+            return {ch + 1, cap};
+        };
         using state = array<int, 3>;
         priority_queue<state, vector<state>, greater<state>>
             pq;
@@ -29,6 +34,7 @@ int32_t main() {
             if (dist[u][0] != ch || dist[u][1] != cp) {
                 continue;
             }
+            for (auto [v, w] : g[u]) {}
         }
     };
     auto f = [&](int cap) -> bool {
