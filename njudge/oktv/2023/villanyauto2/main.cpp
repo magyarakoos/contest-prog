@@ -14,8 +14,14 @@ int32_t main() {
         g[v].push_back({u, w});
     }
 
-    auto f = [&](int cap) -> bool {
+    auto check = [&](int start, int cap) -> bool {
 
+    };
+    auto f = [&](int cap) -> bool {
+        for (int start = 1; start <= n; start++) {
+            if (!check(start, cap)) return 0;
+        }
+        return 1;
     };
 
     int l = 0, r = 1e12;
