@@ -23,18 +23,17 @@ int32_t main() {
             if (w <= cp) return {ch, cp - w};
             return {ch + 1, cap};
         };
-        using state = array<int, 3>;
+        using di = array<int, 2>;
+        using state = pair<di, int>;
         priority_queue<state, vector<state>, greater<state>>
             pq;
         vector<array<int, 2>> dist(n + 1, {INF, INF});
         dist[start] = {0, cap};
-        pq.push({0, cap, start});
+        pq.push({dist[start], start});
         while (!pq.empty()) {
-            auto [ch, cp, u] = pq.top();
+            auto [d, u] = pq.top();
             pq.pop();
-            if (dist[u][0] != ch || dist[u][1] != cp) {
-                continue;
-            }
+            if (dist[u] != d) { continue; }
             for (auto [v, w] : g[u]) {
                 auto nc = calc(ch, cp, w);
                 if (nc < dist[v]) {
