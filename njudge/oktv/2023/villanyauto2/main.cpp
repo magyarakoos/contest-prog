@@ -60,9 +60,9 @@ int32_t main() {
         int mid = (l + r) / 2;
         cout << mid << ":\n";
         if (f(mid)) {
-            r = m;
+            r = mid;
         } else {
-            l = m;
+            l = mid;
         }
     }
     cout << r << "\n";
