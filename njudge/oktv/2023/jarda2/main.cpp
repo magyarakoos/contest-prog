@@ -14,7 +14,7 @@ int32_t main() {
         (dp[i] += 2 * dp[i - 1]) %= MOD;
         if (i >= 2) (dp[i] += 7 * dp[i - 2]) %= MOD;
         for (int j = 0; j < i - 2; j++) {
-            (dp[i] += 4 * dp[j]) %= MOD;
+            (dp[i] += 8 * dp[j]) %= MOD;
         }
     }
     cout << dp[n] << "\n";
