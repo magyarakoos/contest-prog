@@ -8,6 +8,7 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n, m, k;
     cin >> n >> m >> k;
+    k--;
     vector<vector<array<int, 2>>> g(n + 1);
     while (m--) {
         int u, v, w;
@@ -17,27 +18,29 @@ int32_t main() {
     }
 
     auto check = [&](int start, int cap) -> bool {
-        using di = array<int, 2>;
-        using state = pair<di, int>;
-        auto calc = [&](di d, int w) -> array<int, 2> {
+        auto calc = [&](int ch, int cp,
+                        int w) -> array<int, 2> {
             if (w > cap) return {INF, INF};
-            if (w <= d[1]) return {d[0], d[1] - w};
-            return {d[0] + 1, cap};
+            if (cp + w <= cap) return {ch, cp + w};
+            return {ch + 1, 0};
         };
+        using state = array<int, 3>;
         priority_queue<state, vector<state>, greater<state>>
             pq;
         vector<array<int, 2>> dist(n + 1, {INF, INF});
-        dist[start] = {0, cap};
-        pq.push({dist[start], start});
+        dist[start] = {0, 0};
+        pq.push({0, 0, start});
         while (!pq.empty()) {
-            auto [d, u] = pq.top();
+            auto [ch, cp, u] = pq.top();
             pq.pop();
-            if (dist[u] != d) { continue; }
+            if (dist[u][0] != ch || dist[u][1] != cp) {
+                continue;
+            }
             for (auto [v, w] : g[u]) {
-                auto nd = calc(d, w);
-                if (nd < dist[v]) {
-                    dist[v] = nd;
-                    pq.push({nd, v});
+                auto nc = calc(ch, cp, w);
+                if (nc < dist[v]) {
+                    dist[v] = nc;
+                    pq.push({nc[0], nc[1], v});
                 }
             }
         }
