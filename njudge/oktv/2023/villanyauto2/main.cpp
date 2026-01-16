@@ -2,6 +2,8 @@
 using namespace std;
 #define int int64_t
 
+const int INF = 1e18;
+
 int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n, m, k;
@@ -18,6 +20,9 @@ int32_t main() {
         using state = array<int, 3>;
         priority_queue<state, vector<state>, greater<state>>
             pq;
+        vector<array<int, 2>> dist(n + 1, {INF, INF});
+        dist[start] = {0, cap};
+        pq.push({0, cap, start});
     };
     auto f = [&](int cap) -> bool {
         for (int start = 1; start <= n; start++) {
