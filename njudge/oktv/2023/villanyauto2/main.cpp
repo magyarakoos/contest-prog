@@ -23,6 +23,13 @@ int32_t main() {
         vector<array<int, 2>> dist(n + 1, {INF, INF});
         dist[start] = {0, cap};
         pq.push({0, cap, start});
+        while (!pq.empty()) {
+            auto [ch, cp, u] = pq.top();
+            pq.pop();
+            if (dist[u][0] != ch || dist[u][1] != cp) {
+                continue;
+            }
+        }
     };
     auto f = [&](int cap) -> bool {
         for (int start = 1; start <= n; start++) {
