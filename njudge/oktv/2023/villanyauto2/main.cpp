@@ -30,6 +30,7 @@ int32_t main() {
         pq.push({0, cap, start});
         while (!pq.empty()) {
             auto [ch, cp, u] = pq.top();
+            cout << ch << " " << cp << " " << u << endl;
             pq.pop();
             if (dist[u][0] != ch || dist[u][1] != cp) {
                 continue;
@@ -42,6 +43,10 @@ int32_t main() {
                 }
             }
         }
+        for (int i = 1; i <= n; i++) {
+            if (dist[i][0] > k) return 0;
+        }
+        return 1;
     };
     auto f = [&](int cap) -> bool {
         for (int start = 1; start <= n; start++) {
