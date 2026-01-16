@@ -32,4 +32,7 @@ int32_t main() {
             }
         }
     }
+    cout << result.size() << "\n";
+    for (auto [u, v] : result)
+        cout << u << " " << v << "\n";
 }
