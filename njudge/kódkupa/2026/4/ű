@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int int64_t
+
+const int INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
+using point = array<int, 2>;
+using segment = array<point, 2>;
+
+#define cases 0
+void solve() {
+    int s;
+    cin >> s;
+    vector<segment> shape(s);
+    for (segment& seg : shape) {
+        cin >> seg[0][0] >> seg[0][1] >> seg[1][0] >>
+            seg[1][1];
+    }
+    map<point, set<point>> image;
+    int n;
+    cin >> n;
+    while (n--) {
+        point a, b;
+        cin >> a[0] >> a[1] >> b[0] >> b[1];
+        image[a].insert(b);
+        image[b].insert(a);
+    }
+    for (const auto& [start, endS] : image) {}
+}
+
+int32_t main() {
+    cin.tie(0), ios::sync_with_stdio(0);
+    int T = 1;
+    if (cases) cin >> T;
+    while (T--) solve();
+}
