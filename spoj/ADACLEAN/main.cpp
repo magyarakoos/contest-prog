@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int MOD = 1e9 + 7, BMOD = 10;
+const int MOD = 1e9 + 7, BMOD = 29;
 
 void solve() {
     int n, k, pw = 1;
@@ -12,14 +12,12 @@ void solve() {
     set<int> hS;
     int h = 0;
     for (int i = 0; i < n; i++) {
-        h *= BMOD;
-        h %= MOD;
+        (h *= BMOD) %= MOD;
         if (i - k >= 0) {
             h += MOD - pw * (s[i - k] - 'a' + 1);
             h %= MOD;
         }
-        h += s[i] - 'a' + 1;
-        h %= MOD;
+        (h += s[i] - 'a' + 1) %= MOD;
         if (i >= k - 1) hS.insert(h);
     }
     cout << hS.size() << "\n";
