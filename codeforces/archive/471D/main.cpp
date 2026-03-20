@@ -23,7 +23,21 @@ int32_t main() {
     cin.tie(0), ios::sync_with_stdio(0);
     int n, w;
     cin >> n >> w;
-    vector<int> a(n), b(w);
+    vector<int> a(n), b(w), da(n), db(w);
     for (int& x : a) cin >> x;
     for (int& x : b) cin >> x;
+    da[0] = a[0];
+    db[0] = b[0];
+    for (int i = 1; i < n; i++) { da[i] = a[i] - a[i - 1]; }
+    for (int i = 1; i < w; i++) { db[i] = b[i] - b[i - 1]; }
+    db.push_back(2e9);
+    db.insert(db.end(), da.begin(), da.end());
+    for (int x : db) cout << x << " ";
+    cout << "\n";
+    auto z = z_function(db);
+    int result = 0;
+    for (int i = w + 1; i < db.size(); i++) {
+        result += z[i] == w;
+    }
+    cout << result << "\n";
 }
