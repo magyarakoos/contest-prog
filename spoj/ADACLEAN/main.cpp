@@ -29,11 +29,7 @@ void solve() {
         h *= BMOD;
         h %= MOD;
         if (i - k >= 0) {
-            cout << "Y "
-                 << mpow(BMOD, k) * (s[i - k] - 'a' + 1)
-                 << "\n";
-            // h *= inv(mpow(BMOD, k) * (s[i - k] - 'a' +
-            // 1));
+            h += MOD - mpow(BMOD, k) * (s[i - k] - 'a' + 1);
             h %= MOD;
         }
         h += s[i] - 'a' + 1;
