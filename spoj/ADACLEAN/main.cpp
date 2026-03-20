@@ -18,10 +18,6 @@ int mpow(int a, int b) {
     return res;
 }
 
-int inv(int a) {
-    return mpow(a, MOD - 2);
-}
-
 void solve() {
     int n, k;
     string s;
