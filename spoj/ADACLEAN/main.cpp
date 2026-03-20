@@ -34,13 +34,9 @@ void solve() {
         }
         h += s[i] - 'a' + 1;
         h %= MOD;
-        if (i - k + 1 >= 0) {
-            hS.insert(h);
-            cout << s.substr(i - k + 1, k) << " " << h
-                 << "\n";
-        }
+        if (i >= k - 1) hS.insert(h);
     }
-    cout << "\n";
+    cout << hS.size() << "\n";
 }
 
 int32_t main() {
