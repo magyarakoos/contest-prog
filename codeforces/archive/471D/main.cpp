@@ -37,6 +37,8 @@ int32_t main() {
     for (int x : db) cout << x << " ";
     cout << "\n";
     auto z = z_function(db);
+    for (int x : z) cout << x << " ";
+    cout << "\n";
     int result = 0;
     for (int i = w; i < db.size(); i++) {
         result += z[i] == w - 1;
