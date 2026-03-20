@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int MOD = 1e9 + 7, BMOD = 29;
+const int MOD = 1e9 + 7, BMOD = 10;
 
 int mpow(int a, int b) {
     int res = 1;
@@ -36,7 +36,8 @@ void solve() {
             cout << "Y "
                  << mpow(BMOD, k) * (s[i - k] - 'a' + 1)
                  << "\n";
-            h *= inv(mpow(BMOD, k) * (s[i - k] - 'a' + 1));
+            // h *= inv(mpow(BMOD, k) * (s[i - k] - 'a' +
+            // 1));
             h %= MOD;
         }
         h += s[i] - 'a' + 1;
