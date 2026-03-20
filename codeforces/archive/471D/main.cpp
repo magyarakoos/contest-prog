@@ -27,10 +27,10 @@ int32_t main() {
     for (int& x : a) cin >> x;
     for (int& x : b) cin >> x;
     for (int i = 1; i < n - 1; i++) {
-        da[i - 1] = a[i] - a[i - 1];
+        da[i] = a[i + 1] - a[i];
     }
     for (int i = 1; i < w - 1; i++) {
-        db[i - 1] = b[i] - b[i - 1];
+        db[i] = b[i + 1] - b[i];
     }
     db.push_back(2e9);
     db.insert(db.end(), da.begin(), da.end());
