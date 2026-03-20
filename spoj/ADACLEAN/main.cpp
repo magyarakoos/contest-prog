@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int MOD = 1e17 - 3, BMOD = 29;
+const int MOD = 99999999999999997, BMOD = 29;
 
 void solve() {
     int n, k, pw = 1;
