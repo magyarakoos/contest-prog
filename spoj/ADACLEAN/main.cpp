@@ -13,6 +13,7 @@ int mpow(int a, int b) {
         }
         a *= a;
         a %= MOD;
+        b /= 2;
     }
     return res;
 }
