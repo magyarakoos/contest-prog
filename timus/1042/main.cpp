@@ -29,6 +29,6 @@ int32_t main() {
         for (int i = 0; i < n; i++) {
             cout << a[i] << "\n";
         }
-        reverse(a.begin(), a.end());
+        cout << "\n";
     }
 }
