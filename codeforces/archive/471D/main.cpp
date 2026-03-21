@@ -26,19 +26,15 @@ int32_t main() {
     vector<int> a(n), b(w), da(n - 1), db(w - 1);
     for (int& x : a) cin >> x;
     for (int& x : b) cin >> x;
-    for (int i = 1; i < n - 1; i++) {
+    for (int i = 0; i < n - 1; i++) {
         da[i] = a[i + 1] - a[i];
     }
-    for (int i = 1; i < w - 1; i++) {
+    for (int i = 0; i < w - 1; i++) {
         db[i] = b[i + 1] - b[i];
     }
     db.push_back(2e9);
     db.insert(db.end(), da.begin(), da.end());
-    for (int x : db) cout << x << " ";
-    cout << "\n";
     auto z = z_function(db);
-    for (int x : z) cout << x << " ";
-    cout << "\n";
     int result = 0;
     for (int i = w; i < db.size(); i++) {
         result += z[i] == w - 1;
