@@ -13,20 +13,27 @@ int32_t main() {
             cin >> u >> v;
             p[u - 1] = v - 1;
         }
-        vector<bool> vis(w * h);
+        vector<int> vis(w * h);
         vector<double> dp(w * h);
         function<double(int)> solve = [&](int i) {
             cout << i << endl;
             sleep(1);
             if (i + 1 == w * h) return 0.;
-            if (i >= w * h) return solve(2 * w * h - i - 2);
             if (vis[i]) return dp[i];
             double result = 0;
             for (int j = 1; j <= 6; j++) {
-                result += solve(i + j);
+                int k = i + j;
+                if (k >= w * h) {
+                    k = w * h - (i - w * h + 2);
+                }
+                if (i == k) {
+                    same++;
+                } else {
+                    result += solve(k);
+                }
             }
             vis[i] = 1;
-            return dp[i] = result / 6;
+            return dp[i] = result / 6 + 1;
         };
         cout << solve(0) << "\n";
     }
