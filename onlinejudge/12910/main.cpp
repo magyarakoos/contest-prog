@@ -8,5 +8,13 @@ int32_t main() {
     do {
         int w, h, s;
         cin >> w >> h >> s;
-    } while (getline(cin, nl));
+        vector<int> p(w * h);
+        iota(p.begin(), p.end(), 0);
+        while (s--) {
+            int u, v;
+            cin >> u >> v;
+            p[u] = v;
+            cout << u << " " << v << endl;
+        }
+    } while (getline(cin, nl) != "");
 }
