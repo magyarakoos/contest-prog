@@ -13,5 +13,10 @@ int32_t main() {
             cin >> u >> v;
             p[u] = v;
         }
+        vector<bool> vis(w * h);
+        vector<double> dp(w * h);
+        function<void(int)> solve = [&](int i) {
+
+        };
     }
 }
