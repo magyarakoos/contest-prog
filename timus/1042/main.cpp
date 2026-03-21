@@ -10,16 +10,23 @@ int32_t main() {
     for (int i = 0, x; i < n; i++) {
         while (cin >> x && x != -1) a[i][x - 1] = 1;
     }
-    for (int j = 0; j < n; j++) {
-        for (int i = 0; i < n; i++) {
-            if (a[i][j]) {
-                swap(a[i], a[j]);
-                break;
+    for (int i = 0; i < n; i++) { cout << a[i] << "\n"; }
+    cout << "\n";
+    for (int k = 0; k < 2; k++) {
+
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i < n; i++) {
+                if (a[i][j]) {
+                    swap(a[i], a[j]);
+                    break;
+                }
+            }
+            for (int i = 0; i < n; i++) {
+                if (i != j && a[i][j]) a[i] ^= a[j];
             }
         }
         for (int i = 0; i < n; i++) {
-            if (i != j && a[i][j]) a[i] ^= a[j];
+            cout << a[i] << "\n";
         }
     }
-    for (int i = 0; i < n; i++) { cout << a[i] << "\n"; }
 }
