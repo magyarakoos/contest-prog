@@ -16,14 +16,17 @@ int32_t main() {
         vector<bool> vis(w * h);
         vector<double> dp(w * h);
         function<double(int)> solve = [&](int i) {
+            cout << i << endl;
+            sleep(1);
             if (i + 1 == w * h) return 0.;
             if (i >= w * h) return solve(2 * w * h - i - 2);
             if (vis[i]) return dp[i];
-            int result = 0;
+            double result = 0;
             for (int j = 1; j <= 6; j++) {
                 result += solve(i + j);
             }
             return dp[i] = result / 6;
         };
+        cout << solve(0) << "\n";
     }
 }
