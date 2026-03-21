@@ -13,7 +13,7 @@ int32_t main() {
     }
     vector<int> p(n), result;
     iota(p.begin(), p.end(), 0);
-    for (int j = 0, k; j < n; j++) {
+    for (int j = 0; j < n; j++) {
         for (int i = j; i < n; i++) {
             if (a[i][j]) {
                 swap(a[i], a[j]);
