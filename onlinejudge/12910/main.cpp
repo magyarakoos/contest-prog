@@ -25,6 +25,7 @@ int32_t main() {
             for (int j = 1; j <= 6; j++) {
                 result += solve(i + j);
             }
+            vis[i] = 1;
             return dp[i] = result / 6;
         };
         cout << solve(0) << "\n";
