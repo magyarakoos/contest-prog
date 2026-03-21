@@ -11,17 +11,18 @@ int32_t main() {
         while (cin >> x && x != -1) a[x - 1][i] = 1;
         a[i][n] = 1;
     }
-    for (int j = 0; j < n; j++) {
+    for (int j = 0, k; j < n; j++) {
         for (int i = j; i < n; i++) {
             if (a[i][j]) {
                 swap(a[i], a[j]);
-                cout << i << " ";
+                k = i;
                 break;
             }
         }
         for (int i = 0; i < n; i++) {
             if (i != j && a[i][j]) a[i] ^= a[j];
         }
+        if (a[j][n]) cout << k << " ";
     }
     cout << "\n";
 }
