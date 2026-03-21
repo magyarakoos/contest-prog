@@ -11,12 +11,13 @@ int32_t main() {
         while (cin >> x && x != -1) a[x - 1][i] = 1;
         a[i][n] = 1;
     }
-    vector<int> sw(n), result;
+    vector<int> p(n), result;
+    iota(p.begin(), p.end(), 0);
     for (int j = 0, k; j < n; j++) {
         for (int i = j; i < n; i++) {
             if (a[i][j]) {
                 swap(a[i], a[j]);
-                sw[j] = i;
+                swap(p[i], p[j]);
                 break;
             }
         }
@@ -25,7 +26,7 @@ int32_t main() {
         }
     }
     for (int i = 0; i < n; i++) {
-        if (a[i][n]) result.push_back(sw[i]);
+        if (a[i][n]) result.push_back(p[i]);
     }
     sort(result.begin(), result.end());
     for (int x : result) cout << x + 1 << " ";
