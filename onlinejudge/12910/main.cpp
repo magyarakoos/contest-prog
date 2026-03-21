@@ -11,12 +11,13 @@ int32_t main() {
         while (s--) {
             int u, v;
             cin >> u >> v;
-            p[u] = v;
+            p[u - 1] = v - 1;
         }
         vector<bool> vis(w * h);
         vector<double> dp(w * h);
-        function<void(int)> solve = [&](int i) {
-
+        function<double(int)> solve = [&](int i) {
+            if (i + 1 == w * h) return 0.0;
+            if (vis[i]) return dp[i];
         };
     }
 }
