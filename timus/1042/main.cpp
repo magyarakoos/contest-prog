@@ -23,7 +23,9 @@ int32_t main() {
         for (int i = 0; i < n; i++) {
             if (i != j && a[i][j]) a[i] ^= a[j];
         }
+        for (int i = 0; i < n; i++) {
+            cout << a[i] << "\n";
+        }
+        cout << "\n";
     }
-    for (int i = 0; i < n; i++) { cout << a[i] << "\n"; }
-    cout << "\n";
 }
