@@ -6,7 +6,7 @@ int32_t main() {
     cin.tie(0)->sync_with_stdio(0);
     int n;
     cin >> n;
-    vector<bitset<5>> a(n);
+    vector<bitset<251>> a(n);
     for (int i = 0, x; i < n; i++) {
         while (cin >> x && x != -1) a[x - 1][i] = 1;
         a[i][n] = 1;
