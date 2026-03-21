@@ -7,4 +7,7 @@ int32_t main() {
     int n;
     cin >> n;
     vector<bitset<250>> a(n);
+    for (int i = 0, x; i < n; i++) {
+        while ((cin >> x) != -1) { a[i][x - 1] = 1; }
+    }
 }
