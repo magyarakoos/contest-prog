@@ -11,13 +11,10 @@ int32_t main() {
         while (cin >> x && x != -1) a[x - 1][i] = 1;
         a[i][n] = 1;
     }
-    vector<int> p(n), result;
-    iota(p.begin(), p.end(), 0);
     for (int j = 0; j < n; j++) {
         for (int i = j; i < n; i++) {
             if (a[i][j]) {
                 swap(a[i], a[j]);
-                swap(p[i], p[j]);
                 break;
             }
         }
@@ -25,10 +22,13 @@ int32_t main() {
             if (i != j && a[i][j]) a[i] ^= a[j];
         }
     }
+    vector<int> result;
     for (int i = 0; i < n; i++) {
-        if (a[i][n]) result.push_back(p[i]);
+        for (int j = 0; j < n; j++) {
+            if (a[i][j] && a[i][n]) { result.push_back(j); }
+        }
     }
     sort(result.begin(), result.end());
-    for (int x : result) cout << x + 1 << " ";
+    for (int x : result) cout << x << " ";
     cout << "\n";
 }
