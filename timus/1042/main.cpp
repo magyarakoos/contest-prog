@@ -14,7 +14,7 @@ int32_t main() {
     for (int i = 0; i < n; i++) { cout << a[i] << "\n"; }
     cout << "\n";
     for (int j = 0; j < n; j++) {
-        for (int i = 0; i < n; i++) {
+        for (int i = j; i < n; i++) {
             if (a[i][j]) {
                 swap(a[i], a[j]);
                 break;
