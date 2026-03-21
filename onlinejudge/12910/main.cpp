@@ -16,7 +16,7 @@ int32_t main() {
         vector<bool> vis(w * h);
         vector<double> dp(w * h);
         function<double(int)> solve = [&](int i) {
-            if (i + 1 == w * h) return 0.0;
+            if (i + 1 == w * h) return 0.;
             if (vis[i]) return dp[i];
         };
     }
