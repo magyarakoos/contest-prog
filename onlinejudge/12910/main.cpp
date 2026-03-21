@@ -26,8 +26,8 @@ int32_t main() {
                 int k = i + j;
                 if (k >= w * h) {
                     cout << k << "+" << w * h << " "
-                         << (i - w * h + 2) << "\n";
-                    k = w * h - (i - w * h + 2);
+                         << w * h - (k - w * h + 2) << "\n";
+                    k = w * h - (k - w * h + 2);
                 }
                 if (i == k) {
                     same++;
