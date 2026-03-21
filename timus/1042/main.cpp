@@ -11,6 +11,7 @@ int32_t main() {
         while (cin >> x && x != -1) a[i][x - 1] = 1;
         a[i][n] = 1;
     }
+    cout << "Step 0:\n";
     for (int i = 0; i < n; i++) { cout << a[i] << "\n"; }
     cout << "\n";
     for (int j = 0; j < n; j++) {
@@ -23,6 +24,7 @@ int32_t main() {
         for (int i = 0; i < n; i++) {
             if (i != j && a[i][j]) a[i] ^= a[j];
         }
+        cout << "Step " << j + 1 << ":\n";
         for (int i = 0; i < n; i++) {
             cout << a[i] << "\n";
         }
