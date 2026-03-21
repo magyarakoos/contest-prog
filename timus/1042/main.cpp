@@ -25,7 +25,7 @@ int32_t main() {
     vector<int> result;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (a[i][j] && a[i][n]) { result.push_back(j); }
+            if (a[i][j] && a[i][n]) result.push_back(j);
         }
     }
     sort(result.begin(), result.end());
