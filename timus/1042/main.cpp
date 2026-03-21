@@ -9,7 +9,7 @@ int32_t main() {
     vector<bitset<5>> a(n);
     for (int i = 0, x; i < n; i++) {
         while (cin >> x && x != -1) a[i][x - 1] = 1;
-        a[i][n - 1] = 1;
+        a[i][n] = 1;
     }
     for (int i = 0; i < n; i++) { cout << a[i] << "\n"; }
     cout << "\n";
