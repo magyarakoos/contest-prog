@@ -25,7 +25,7 @@ int32_t main() {
             for (int j = 1; j <= 6; j++) {
                 int k = i + j;
                 if (k >= w * h) {
-                    cout << k << " ";
+                    cout << k << "+" << w * h << " ";
                     k = w * h - (i - w * h + 2);
                     cout << k << endl;
                 }
