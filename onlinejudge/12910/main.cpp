@@ -5,9 +5,9 @@ using namespace std;
 int32_t main() {
     cin.tie(0)->sync_with_stdio(0);
     string nl;
-    do {
+    while (1) {
         int w, h, s;
-        cin >> w >> h >> s;
+        if (!(cin >> w >> h >> s)) break;
         vector<int> p(w * h);
         iota(p.begin(), p.end(), 0);
         while (s--) {
@@ -16,5 +16,5 @@ int32_t main() {
             p[u] = v;
             cout << u << " " << v << endl;
         }
-    } while (getline(cin, nl) != "");
+    }
 }
