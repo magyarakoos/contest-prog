@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int MAXN = 1e5, BASEA = 29, BASEB = 31,
+const int MAXN = 1e5, BASEA = 29, BASEB = 41,
           MODA = 1e9 + 9, MODB = 1e9 + 7;
 
 int32_t main() {
