@@ -21,10 +21,11 @@ int32_t main() {
     }
     auto factorize = [&](int a) {
         vector<int> result;
-        if (spf[a]) {
-            result.push_back(a);
-            return result;
+        while (a != 1) {
+            result.push_back(spf[a]);
+            a /= spf[a];
         }
+        return result;
     };
 
     vector<array<int, 2>> ps(n + 1), pw(n + 1);
@@ -45,11 +46,6 @@ int32_t main() {
                  ps[l - 1][1] * pw[r - l + 1][1] % MODB) %
                     MODB};
     };
-    auto is_per = [&](int l, int r, int p) {
-        auto [hla, hlb] = get(l, r - p);
-        auto [hra, hrb] = get(l + p, r);
-        return hla == hra && hlb == hrb;
-    };
 
     int q;
     cin >> q;
@@ -58,11 +54,9 @@ int32_t main() {
         cin >> l >> r;
         l++, r++;
         bool ok = 0;
-        for (int i = 0; primes[i] * 2 <= r - l + 1; i++) {
-            if (is_per(l, r, primes[i])) {
-                ok = 1;
-                break;
-            }
+        for (int x : factorize(r - l + 1)) {
+            auto [hla, hlb] = get(l, r - x);
+            auto [hra, hrb] = get(l + x, r);
         }
         cout << (ok ? "YES\n" : "NO\n");
     }
