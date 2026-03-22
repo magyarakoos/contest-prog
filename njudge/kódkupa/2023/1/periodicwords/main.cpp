@@ -34,9 +34,8 @@ int32_t main() {
         (ps[i][1] += s[i - 1] - 'a' + 1) %= MODB;
     }
     auto get = [&](int l, int r) -> array<int, 2> {
-        return {(ps[r][0] + MODA -
-                 ps[l - 1][0] * pw[r - l + 1][0] % MODA) %
-                    MODA,
+        return {(ps[r][0] + MODA - ps[l - 1][0]) *
+                    pw[r - l + 1][0] % MODA,
                 (ps[r][1] + MODB -
                  ps[l - 1][0] * pw[r - l + 1][1] % MODB) %
                     MODB};
