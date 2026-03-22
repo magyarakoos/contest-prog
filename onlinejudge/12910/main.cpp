@@ -30,7 +30,8 @@ int32_t main() {
             for (int j = 1; j <= 6; j++) {
                 a[i][p[i + j]]--;
             }
-            for (int j = 0; j <= n; j++) a[i][j] /= a[i][i];
+            int x = a[i][i];
+            for (int j = 0; j <= n; j++) a[i][j] /= x;
         }
         a[n - 1][n - 1] = 1;
 
