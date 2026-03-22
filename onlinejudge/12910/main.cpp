@@ -15,8 +15,7 @@ int32_t main() {
             p[u - 1] = v - 1;
         }
         for (int i = 0; i < n; i++) {
-            int j = p[i];
-            while (j != i) { j = p[j]; }
+            while (p[i] != p[p[i]]) p[i] = p[p[i]];
         }
         for (int i = 0; i < n; i++) { cout << p[i] << " "; }
         cout << "\n";
