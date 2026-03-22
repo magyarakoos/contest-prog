@@ -34,10 +34,12 @@ int32_t main() {
         (ps[i][1] += s[i - 1] - 'a' + 1) %= MODB;
     }
     auto get = [&](int l, int r) -> array<int, 2> {
-        return {ps[r][0] + MODA -
-                    ps[l - 1][0] * pw[r - l + 1][0],
-                ps[r][1] + MODA -
-                    ps[l - 1][0] * pw[r - l + 1][1]};
+        return {(ps[r][0] + MODA -
+                 ps[l - 1][0] * pw[r - l + 1][0] % MODA) %
+                    MODA,
+                (ps[r][1] + MODB -
+                 ps[l - 1][0] * pw[r - l + 1][1] % MODB) %
+                    MODB};
     };
 
     int q;
@@ -45,5 +47,8 @@ int32_t main() {
     while (q--) {
         int l, r;
         cin >> l >> r;
+        auto [x, y] = get(l, r);
+        cout << s.substr(l, r - l + 1) << " " << x << " "
+             << y << "\n";
     }
 }
