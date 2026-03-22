@@ -11,16 +11,21 @@ int32_t main() {
     string s;
     cin >> n >> s;
 
-    vector<bool> is_prime(MAXN, 1);
-    vector<int> primes(1, 1);
-    is_prime[0] = is_prime[1] = 0;
+    vector<bool> spf(MAXN, 1);
+    spf[0] = 0;
     for (int i = 2; i < MAXN; i++) {
-        if (!is_prime[i]) continue;
-        primes.push_back(i);
+        if (!spf[i]) continue;
         for (int j = i * 2; j < MAXN; j += i) {
-            is_prime[j] = 0;
+            if (spf[j] == 1) spf[j] = i;
         }
     }
+    auto factorize = [&](int a) {
+        vector<int> result;
+        if (spf[a]) {
+            result.push_back(a);
+            return result;
+        }
+    };
 
     vector<array<int, 2>> ps(n + 1), pw(n + 1);
     pw[0] = {1, 1};
