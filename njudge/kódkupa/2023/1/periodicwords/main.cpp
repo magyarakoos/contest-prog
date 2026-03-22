@@ -20,7 +20,7 @@ int32_t main() {
         }
     }
     auto factorize = [&](int a) {
-        vector<int> result;
+        vector<int> result({1});
         while (a != 1) {
             result.push_back(spf[a]);
             a /= spf[a];
@@ -57,6 +57,10 @@ int32_t main() {
         for (int x : factorize(r - l + 1)) {
             auto [hla, hlb] = get(l, r - x);
             auto [hra, hrb] = get(l + x, r);
+            if (hla == hra && hlb == hrb) {
+                ok = 1;
+                break;
+            }
         }
         cout << (ok ? "YES\n" : "NO\n");
     }
