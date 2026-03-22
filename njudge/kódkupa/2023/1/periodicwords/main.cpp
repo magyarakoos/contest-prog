@@ -38,7 +38,7 @@ int32_t main() {
                  ps[l - 1][0] * pw[r - l + 1][0] % MODA) %
                     MODA,
                 (ps[r][1] + MODB -
-                 ps[l - 1][0] * pw[r - l + 1][1] % MODB) %
+                 ps[l - 1][1] * pw[r - l + 1][1] % MODB) %
                     MODB};
     };
 
