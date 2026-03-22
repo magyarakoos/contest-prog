@@ -34,6 +34,12 @@ int32_t main() {
         a[n - 1][n - 1] = 1;
 
         for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= n; j++) {
+                a[i][j] /= a[i][i];
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 cout << setw(2) << a[i][j] << " ";
             }
