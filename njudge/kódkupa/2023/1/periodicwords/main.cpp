@@ -5,18 +5,6 @@ using namespace std;
 const int BASEA = 29, BASEB = 31, MODA = 1e9 + 9,
           MODB = 1e9 + 7;
 
-vector<array<int, 2>> h(const string& s) {
-    int n = s.size();
-    vector<array<int, 2>> ps(n + 1);
-    for (int i = 1; i <= n; i++) {
-        ps[i] = {ps[i - 1][0] * BASEA % MODA,
-                 ps[i - 1][1] * BASEB % MODB};
-        (ps[i][0] += s[i - 1] - 'a' + 1) %= MODA;
-        (ps[i][1] += s[i - 1] - 'a' + 1) %= MODB;
-    }
-    return ps;
-}
-
 int32_t main() {
     vector<bool> is_prime(1e5 + 1, 1);
     vector<int> primes;
@@ -35,9 +23,17 @@ int32_t main() {
     int n, s;
     cin >> n >> s;
 
-    vector<int> pw()
+    vector<array<int, 2>> ps(n + 1);
+    for (int i = 1; i <= n; i++) {
+        ps[i] = {ps[i - 1][0] * BASEA % MODA,
+                 ps[i - 1][1] * BASEB % MODB};
+        (ps[i][0] += s[i - 1] - 'a' + 1) %= MODA;
+        (ps[i][1] += s[i - 1] - 'a' + 1) %= MODB;
+    }
+    for (int i = 1; i <= n; i++) { cout << ps[i] << " "; }
+    cout << "\n";
 
-        int q;
+    int q;
     cin >> q;
     while (q--) {
         int l, r;
