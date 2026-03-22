@@ -17,9 +17,9 @@ int32_t main() {
         for (int i = 0; i < n; i++) {
             while (p[i] != p[p[i]]) p[i] = p[p[i]];
         }
-        for (int i = 0; i < n; i++) {
-            cout << p[i] + 1 << " ";
-        }
-        cout << "\n";
+        auto bounce = [&](int i) {
+            return i < n ? p[i] : p[n - (i - n)];
+        };
+        vector a(n, vector<double>(n + 1));
     }
 }
