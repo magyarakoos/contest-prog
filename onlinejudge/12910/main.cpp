@@ -35,8 +35,15 @@ int32_t main() {
         }
         a[n - 1][n - 1] = 1;
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= n; j++) {}
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i < n; i++) {
+                if (j == i) continue;
+                int x = a[j][j] / a[i][j];
+                for (int k = 0; k <= n; k++) {
+                    a[i][k] *= x;
+                    a[i][k] -= a[j][k];
+                }
+            }
         }
 
         for (int i = 0; i < n; i++) {
