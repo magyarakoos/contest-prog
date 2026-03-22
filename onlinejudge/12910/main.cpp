@@ -20,9 +20,9 @@ int32_t main() {
         for (int i = n; i < n + 5; i++) {
             p[i] = p[n - (i - n + 2)];
         }
-        // for (int i = 0; i < n + 5; i++)
-        //     cout << p[i] + 1 << " ";
-        // cout << "\n";
+        for (int i = 0; i < n + 5; i++)
+            cout << p[i] + 1 << " ";
+        cout << "\n";
 
         vector a(n, vector<double>(n + 1));
         for (int i = 0; i < n - 1; i++) {
@@ -46,13 +46,13 @@ int32_t main() {
             }
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << setw(2) << a[i][j] << " ";
-            }
-            cout << "| " << a[i][n];
-            cout << "\n";
-        }
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j < n; j++) {
+        //         cout << setw(2) << a[i][j] << " ";
+        //     }
+        //     cout << "| " << a[i][n];
+        //     cout << "\n";
+        // }
         cout << fixed << setprecision(8) << -a[0][n]
              << "\n";
     }
