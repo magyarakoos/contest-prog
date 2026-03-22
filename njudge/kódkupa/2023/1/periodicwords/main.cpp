@@ -21,7 +21,6 @@ int32_t main() {
             is_prime[j] = 0;
         }
     }
-    cout << primes.size() << "\n";
 
     vector<array<int, 2>> ps(n + 1), pw(n + 1);
     pw[0] = {1, 1};
@@ -52,5 +51,14 @@ int32_t main() {
     while (q--) {
         int l, r;
         cin >> l >> r;
+        l++, r++;
+        bool ok = 0;
+        for (int i = 0; primes[i] * 2 <= r - l + 1; i++) {
+            if (is_per(l, r, primes[i])) {
+                ok = 1;
+                break;
+            }
+        }
+        cout << (ok ? "YES\n" : "NO\n");
     }
 }
