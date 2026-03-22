@@ -27,13 +27,14 @@ int32_t main() {
         for (int i = 0; i < n; i++) {
             a[i][i] = a[i][n] = 6;
             for (int j = 1; j <= 6; j++) {
-                a[i][p[i + j]]--;
+                // a[i][p[i + j]]--;
             }
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 cout << a[i][j] << " ";
             }
+            cout << "| " << a[i][n];
             cout << "\n";
         }
         cout << "\n";
