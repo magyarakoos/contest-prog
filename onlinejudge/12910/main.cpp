@@ -24,10 +24,10 @@ int32_t main() {
         //     cout << p[i] + 1 << " ";
         // cout << "\n";
         vector a(n, vector<double>(n + 1));
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n - 1; i++) {
             a[i][i] = a[i][n] = 6;
             for (int j = 1; j <= 6; j++) {
-                // a[i][p[i + j]]--;
+                a[i][p[i + j]]--;
             }
         }
         for (int i = 0; i < n; i++) {
