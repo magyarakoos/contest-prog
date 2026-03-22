@@ -2,8 +2,8 @@
 using namespace std;
 #define int int64_t
 
-const int MAXN = 20, BASEA = 29, BASEB = 31, MODA = 1e9 + 9,
-          MODB = 1e9 + 7;
+const int MAXN = 6e4, BASEA = 29, BASEB = 31,
+          MODA = 1e9 + 9, MODB = 1e9 + 7;
 
 int32_t main() {
     cin.tie(0)->sync_with_stdio(0);
