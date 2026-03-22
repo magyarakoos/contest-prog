@@ -17,7 +17,9 @@ int32_t main() {
         for (int i = 0; i < n; i++) {
             while (p[i] != p[p[i]]) p[i] = p[p[i]];
         }
-        for (int i = 0; i < n; i++) { cout << p[i] << " "; }
+        for (int i = 0; i < n; i++) {
+            cout << p[i] + 1 << " ";
+        }
         cout << "\n";
     }
 }
