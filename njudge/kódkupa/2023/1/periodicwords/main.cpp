@@ -13,7 +13,7 @@ int32_t main() {
         if (!is_prime[i]) continue;
         primes.push_back(i);
         for (int j = i * 2; j <= 1e5; j += i) {
-            is_prime[j] = 1;
+            is_prime[j] = 0;
         }
     }
     for (int i = 0; i < 15; i++) cout << primes[i] << " ";
