@@ -38,7 +38,6 @@ int32_t main() {
         for (int j = 0; j < n; j++) {
             for (int i = 0; i < n; i++) {
                 if (j == i || !a[i][j]) continue;
-                cout << a[i][j] << endl;
                 double x = a[j][j] / a[i][j];
                 for (int k = 0; k <= n; k++) {
                     a[i][k] *= x;
@@ -54,6 +53,7 @@ int32_t main() {
             cout << "| " << a[i][n];
             cout << "\n";
         }
-        cout << "\n";
+        cout << fixed << setprecision(8) << -a[0][n]
+             << "\n";
     }
 }
