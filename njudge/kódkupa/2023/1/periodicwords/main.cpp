@@ -22,7 +22,6 @@ int32_t main() {
     auto factorize = [&](int a) {
         vector<int> result({1});
         while (a != 1) {
-            cout << a << endl;
             result.push_back(spf[a]);
             a /= spf[a];
         }
