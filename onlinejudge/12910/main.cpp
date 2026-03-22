@@ -37,8 +37,9 @@ int32_t main() {
 
         for (int j = 0; j < n; j++) {
             for (int i = 0; i < n; i++) {
-                if (j == i) continue;
-                int x = a[j][j] / a[i][j];
+                if (j == i || !a[i][j]) continue;
+                cout << a[i][j] << endl;
+                double x = a[j][j] / a[i][j];
                 for (int k = 0; k <= n; k++) {
                     a[i][k] *= x;
                     a[i][k] -= a[j][k];
