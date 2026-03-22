@@ -20,7 +20,7 @@ int main() {
             p[i] = p[n - (i - n + 2)];
         }
 
-        vector a(n, vector<double>(n + 1));
+        vector<vector<double>> a(n, vector<double>(n + 1));
         for (int i = 0; i < n - 1; i++) {
             a[i][i] = a[i][n] = 6;
             for (int j = 1; j <= 6; j++) {
