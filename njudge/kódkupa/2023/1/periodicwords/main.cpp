@@ -36,11 +36,16 @@ int32_t main() {
     }
     auto get = [&](int l, int r) -> array<int, 2> {
         return {(ps[r][0] + MODA -
-                 ps[l][0] * pw[r - l][0] % MODA) %
+                 ps[l - 1][0] * pw[r - l + 1][0] % MODA) %
                     MODA,
                 (ps[r][1] + MODB -
-                 ps[l][1] * pw[r - l][1] % MODB) %
+                 ps[l - 1][1] * pw[r - l + 1][1] % MODB) %
                     MODB};
+    };
+    auto is_per = [&](int l, int r, int p) {
+        auto [hla, hlb] = get(l, r - p);
+        auto [hra, hrb] = get(l + p, r);
+        return hla == hra && hlb == hrb;
     };
 
     int q;
@@ -48,8 +53,5 @@ int32_t main() {
     while (q--) {
         int l, r;
         cin >> l >> r;
-        auto [x, y] = get(l, r + 1);
-        cout << s.substr(l, r - l + 1) << " " << x << " "
-             << y << "\n";
     }
 }
