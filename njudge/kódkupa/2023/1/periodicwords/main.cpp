@@ -11,7 +11,7 @@ int32_t main() {
     string s;
     cin >> n >> s;
 
-    vector<bool> spf(MAXN, 1);
+    vector<int> spf(MAXN, 1);
     spf[0] = 0;
     for (int i = 2; i < MAXN; i++) {
         if (spf[i] != 1) continue;
