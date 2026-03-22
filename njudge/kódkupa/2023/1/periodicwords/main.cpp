@@ -19,9 +19,6 @@ int32_t main() {
             if (spf[j] == 1) { spf[j] = i; }
         }
     }
-    for (int i = 1; i <= n; i++) { cout << spf[i] << " "; }
-    cout << "\n";
-    return 0;
     auto factorize = [&](int a) {
         vector<int> result({1});
         while (a != 1) {
@@ -57,13 +54,15 @@ int32_t main() {
         int l, r;
         cin >> l >> r;
         l++, r++;
+        cout << r - l + 1 << " | ";
         bool ok = 0;
         for (int x : factorize(r - l + 1)) {
+            cout << x << " ";
             auto [hla, hlb] = get(l, r - x);
             auto [hra, hrb] = get(l + x, r);
             if (hla == hra && hlb == hrb) {
                 ok = 1;
-                break;
+                // break;
             }
         }
         cout << (ok ? "YES\n" : "NO\n");
