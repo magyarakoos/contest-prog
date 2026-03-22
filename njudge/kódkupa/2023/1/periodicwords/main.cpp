@@ -25,6 +25,7 @@ int32_t main() {
     cin >> n >> s;
 
     vector<array<int, 2>> ps(n + 1), pw(n + 1);
+    pw[0] = {1, 1};
     for (int i = 1; i <= n; i++) {
         pw[i] = {pw[i - 1][0] * BASEA % MODA,
                  pw[i - 1][1] * BASEB % MODB};
@@ -41,6 +42,15 @@ int32_t main() {
                  ps[l][1] * pw[r - l][1] % MODB) %
                     MODB};
     };
+
+    for (int i = 1; i <= n; i++) {
+        cout << pw[i][0] << " ";
+    }
+    cout << "\n";
+    for (int i = 1; i <= n; i++) {
+        cout << ps[i][0] << " ";
+    }
+    cout << "\n";
 
     int q;
     cin >> q;
