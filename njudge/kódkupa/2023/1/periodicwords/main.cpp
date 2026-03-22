@@ -3,9 +3,6 @@ using namespace std;
 #define int int64_t
 
 int32_t main() {
-    cin.tie(0)->sync_with_stdio(0);
-    int n, s;
-    cin >> n >> s;
     vector<bool> is_prime(1e5 + 1, 1);
     vector<int> primes;
     is_prime[0] = is_prime[1] = 0;
@@ -16,7 +13,14 @@ int32_t main() {
             is_prime[j] = 0;
         }
     }
+
+    cin.tie(0)->sync_with_stdio(0);
+
     for (int i = 0; i < 15; i++) cout << primes[i] << " ";
+
+    int n, s;
+    cin >> n >> s;
+
     cout << "\n";
     int q;
     cin >> q;
