@@ -12,7 +12,7 @@ int32_t main() {
     cin >> n >> s;
 
     vector<bool> is_prime(MAXN, 1);
-    vector<int> primes;
+    vector<int> primes(1, 1);
     is_prime[0] = is_prime[1] = 0;
     for (int i = 2; i < MAXN; i++) {
         if (!is_prime[i]) continue;
