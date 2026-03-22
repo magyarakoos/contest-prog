@@ -55,9 +55,10 @@ int32_t main() {
         l++, r++;
         bool ok = 0;
         for (int x : factorize(r - l + 1)) {
-            if (x == r - l + 1) continue;
-            auto [hla, hlb] = get(l, r - x);
-            auto [hra, hrb] = get(l + x, r);
+            int y = (r - l + 1) / x;
+            if (y == r - l + 1) continue;
+            auto [hla, hlb] = get(l, r - y);
+            auto [hra, hrb] = get(l + y, r);
             if (hla == hra && hlb == hrb) {
                 ok = 1;
                 break;
