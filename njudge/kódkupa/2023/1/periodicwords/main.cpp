@@ -20,7 +20,8 @@ int32_t main() {
     cout << "\n";
 
     cin.tie(0)->sync_with_stdio(0);
-    int n, s;
+    int n;
+    string s;
     cin >> n >> s;
 
     vector<array<int, 2>> ps(n + 1);
@@ -30,7 +31,8 @@ int32_t main() {
         (ps[i][0] += s[i - 1] - 'a' + 1) %= MODA;
         (ps[i][1] += s[i - 1] - 'a' + 1) %= MODB;
     }
-    for (int i = 1; i <= n; i++) { cout << ps[i] << " "; }
+    for (int i = 1; i <= n; i++)
+        cout << s.substr(0, i) << " " << ps[i][0] << " ";
     cout << "\n";
 
     int q;
