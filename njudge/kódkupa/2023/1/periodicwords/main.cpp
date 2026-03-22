@@ -14,7 +14,7 @@ int32_t main() {
     vector<bool> spf(MAXN, 1);
     spf[0] = 0;
     for (int i = 2; i < MAXN; i++) {
-        if (!spf[i]) continue;
+        if (spf[i] != 1) continue;
         for (int j = i * 2; j < MAXN; j += i) {
             if (spf[j] == 1) spf[j] = i;
         }
@@ -22,6 +22,7 @@ int32_t main() {
     auto factorize = [&](int a) {
         vector<int> result({1});
         while (a != 1) {
+            cout << a << endl;
             result.push_back(spf[a]);
             a /= spf[a];
         }
