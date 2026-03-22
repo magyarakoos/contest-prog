@@ -43,13 +43,6 @@ int32_t main() {
             }
         }
 
-        // for (int i = 0; i < n; i++) {
-        //     for (int j = 0; j < n; j++) {
-        //         cout << setw(2) << a[i][j] << " ";
-        //     }
-        //     cout << "| " << a[i][n];
-        //     cout << "\n";
-        // }
         cout << fixed << setprecision(8) << -a[0][n]
              << "\n";
     }
