@@ -49,7 +49,7 @@ int32_t main() {
         cin >> l >> r;
         l++, r++;
         auto [x, y] = get(l, r);
-        cout << s.substr(l, r - l + 1) << " " << x << " "
-             << y << "\n";
+        cout << s.substr(l - 1, r - l + 1) << " " << x
+             << " " << y << "\n";
     }
 }
