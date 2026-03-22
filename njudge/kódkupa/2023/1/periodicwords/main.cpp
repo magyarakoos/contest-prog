@@ -24,16 +24,23 @@ int32_t main() {
     string s;
     cin >> n >> s;
 
-    vector<array<int, 2>> ps(n + 1);
+    vector<array<int, 2>> ps(n + 1), pw(n + 1);
     for (int i = 1; i <= n; i++) {
+        pw[i] = {pw[i - 1][0] * BASEA % MODA,
+                 pw[i - 1][1] * BASEB % MODB};
         ps[i] = {ps[i - 1][0] * BASEA % MODA,
                  ps[i - 1][1] * BASEB % MODB};
         (ps[i][0] += s[i - 1] - 'a' + 1) %= MODA;
         (ps[i][1] += s[i - 1] - 'a' + 1) %= MODB;
     }
-    for (int i = 1; i <= n; i++)
-        cout << s.substr(0, i) << " " << ps[i][0] << " ";
-    cout << "\n";
+    auto get = [&](int l, int r) -> array<int, 2> {
+        return {
+            ps[r][0] + MODA -
+                ps[l - 1][0] * pw[r - l + 1][0],
+                ps[r][1] + MODA -
+                    ps[l - 1][0] * pw[r - l + 1][1]
+        }
+    };
 
     int q;
     cin >> q;
