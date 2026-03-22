@@ -6,6 +6,11 @@ const int BASEA = 29, BASEB = 31, MODA = 1e9 + 9,
           MODB = 1e9 + 7;
 
 int32_t main() {
+    cin.tie(0)->sync_with_stdio(0);
+    int n;
+    string s;
+    cin >> n >> s;
+
     vector<bool> is_prime(1e5 + 1, 1);
     vector<int> primes;
     is_prime[0] = is_prime[1] = 0;
@@ -16,13 +21,8 @@ int32_t main() {
             is_prime[j] = 0;
         }
     }
-    for (int i = 0; i < 15; i++) cout << primes[i] << " ";
-    cout << "\n";
 
-    cin.tie(0)->sync_with_stdio(0);
-    int n;
-    string s;
-    cin >> n >> s;
+    cout << primes.size() << "\n";
 
     vector<array<int, 2>> ps(n + 1), pw(n + 1);
     pw[0] = {1, 1};
