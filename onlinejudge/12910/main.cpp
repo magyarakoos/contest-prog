@@ -7,7 +7,7 @@ int32_t main() {
     int w, h, s;
     while (cin >> w >> h >> s) {
         int n = w * h;
-        vector<int> p(n), np(n);
+        vector<int> p(n + 5);
         iota(p.begin(), p.end(), 0);
         while (s--) {
             int u, v;
@@ -17,9 +17,12 @@ int32_t main() {
         for (int i = 0; i < n; i++) {
             while (p[i] != p[p[i]]) p[i] = p[p[i]];
         }
-        auto bounce = [&](int i) {
-            return i < n ? p[i] : p[n - (i - n)];
-        };
+        for (int i = n; i < n + 5; i++) {
+            p[i] = p[n - (i - n + 2)];
+        }
+        for (int i = 0; i < n + 5; i++)
+            cout << p[i] + 1 << " ";
+        cout << "\n";
         vector a(n, vector<double>(n + 1));
     }
 }
