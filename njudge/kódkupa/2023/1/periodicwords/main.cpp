@@ -43,15 +43,6 @@ int32_t main() {
                     MODB};
     };
 
-    for (int i = 1; i <= n; i++) {
-        cout << pw[i][0] << " ";
-    }
-    cout << "\n";
-    for (int i = 1; i <= n; i++) {
-        cout << ps[i][0] << " ";
-    }
-    cout << "\n";
-
     int q;
     cin >> q;
     while (q--) {
