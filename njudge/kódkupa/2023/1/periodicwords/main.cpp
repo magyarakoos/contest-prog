@@ -62,7 +62,7 @@ int32_t main() {
             auto [hra, hrb] = get(l + x, r);
             if (hla == hra && hlb == hrb) {
                 ok = 1;
-                // break;
+                break;
             }
         }
         cout << (ok ? "YES\n" : "NO\n");
