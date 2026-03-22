@@ -20,9 +20,6 @@ int32_t main() {
         for (int i = n; i < n + 5; i++) {
             p[i] = p[n - (i - n + 2)];
         }
-        for (int i = 0; i < n + 5; i++)
-            cout << p[i] + 1 << " ";
-        cout << "\n";
 
         vector a(n, vector<double>(n + 1));
         for (int i = 0; i < n - 1; i++) {
