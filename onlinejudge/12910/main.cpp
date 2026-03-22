@@ -23,6 +23,7 @@ int32_t main() {
         // for (int i = 0; i < n + 5; i++)
         //     cout << p[i] + 1 << " ";
         // cout << "\n";
+
         vector a(n, vector<double>(n + 1));
         for (int i = 0; i < n - 1; i++) {
             a[i][i] = a[i][n] = 6;
@@ -30,6 +31,8 @@ int32_t main() {
                 a[i][p[i + j]]--;
             }
         }
+        a[n - 1][n - 1] = 1;
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 cout << setw(2) << a[i][j] << " ";
