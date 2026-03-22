@@ -7,15 +7,15 @@ const int BASEA = 29, BASEB = 31, MODA = 1e9 + 9,
 
 vector<array<int, 2>> h(const string& s) {
     int n = s.size();
-    vector<int> psa(n + 1), psb(n + 1);
+    vector<array<int, 2>> ps(n + 1);
     for (int i = 1; i <= n; i++) {
-        psa[i] = psa[i - 1] * BASEA % MODA;
-        (psa[i] += s[i - 1] - 'a' + 1) %= MODA;
+        ps[i] = {ps[i - 1][0] * BASEA % MODA,
+                 ps[i - 1][1] * BASEB % MODB};
+        (ps[i][0] += s[i - 1] - 'a' + 1) %= MODA;
+        (ps[i][1] += s[i - 1] - 'a' + 1) %= MODB;
     }
     return ps;
 }
-
-int get_h(int l, int r, const vector<int>& ps) {}
 
 int32_t main() {
     vector<bool> is_prime(1e5 + 1, 1);
