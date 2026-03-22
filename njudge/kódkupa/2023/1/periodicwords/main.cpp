@@ -53,6 +53,7 @@ int32_t main() {
         int l, r;
         cin >> l >> r;
         l++, r++;
+        cout << s.substr(l - 1, r - l + 1) << " ";
         cout << r - l + 1 << " | ";
         bool ok = 0;
         for (int x : factorize(r - l + 1)) {
