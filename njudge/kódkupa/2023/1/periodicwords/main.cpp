@@ -16,10 +16,7 @@ int32_t main() {
     for (int i = 2; i < MAXN; i++) {
         if (spf[i] != 1) continue;
         for (int j = i; j < MAXN; j += i) {
-            if (spf[j] == 1) {
-                spf[j] = i;
-                cout << j << " " << i << "\n";
-            }
+            if (spf[j] == 1) { spf[j] = i; }
         }
     }
     for (int i = 1; i <= n; i++) { cout << spf[i] << " "; }
