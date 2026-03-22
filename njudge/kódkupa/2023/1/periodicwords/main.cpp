@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int MAXN = 6e4, BASEA = 29, BASEB = 31,
+const int MAXN = 1e5, BASEA = 29, BASEB = 31,
           MODA = 1e9 + 9, MODB = 1e9 + 7;
 
 int32_t main() {
@@ -55,7 +55,7 @@ int32_t main() {
         l++, r++;
         bool ok = 0;
         for (int x : factorize(r - l + 1)) {
-            if (x == r - l + 1) break;
+            if (x == r - l + 1) continue;
             auto [hla, hlb] = get(l, r - x);
             auto [hra, hrb] = get(l + x, r);
             if (hla == hra && hlb == hrb) {
