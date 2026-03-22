@@ -2,8 +2,8 @@
 using namespace std;
 #define int int64_t
 
-const int BASEA = 29, BASEB = 31, MODA = 1e9 + 9,
-          MODB = 1e9 + 7;
+const int MAXN = 5e4, BASEA = 29, BASEB = 31,
+          MODA = 1e9 + 9, MODB = 1e9 + 7;
 
 int32_t main() {
     cin.tie(0)->sync_with_stdio(0);
@@ -11,17 +11,16 @@ int32_t main() {
     string s;
     cin >> n >> s;
 
-    vector<bool> is_prime(1e5 + 1, 1);
+    vector<bool> is_prime(MAXN, 1);
     vector<int> primes;
     is_prime[0] = is_prime[1] = 0;
-    for (int i = 2; i <= 1e5; i++) {
+    for (int i = 2; i < MAXN; i++) {
         if (!is_prime[i]) continue;
         primes.push_back(i);
-        for (int j = i * 2; j <= 1e5; j += i) {
+        for (int j = i * 2; j < MAXN; j += i) {
             is_prime[j] = 0;
         }
     }
-
     cout << primes.size() << "\n";
 
     vector<array<int, 2>> ps(n + 1), pw(n + 1);
