@@ -2,8 +2,8 @@
 using namespace std;
 #define int int64_t
 
-const int MAXN = 5e4, BASEA = 29, BASEB = 31,
-          MODA = 1e9 + 9, MODB = 1e9 + 7;
+const int MAXN = 20, BASEA = 29, BASEB = 31, MODA = 1e9 + 9,
+          MODB = 1e9 + 7;
 
 int32_t main() {
     cin.tie(0)->sync_with_stdio(0);
@@ -16,7 +16,10 @@ int32_t main() {
     for (int i = 2; i < MAXN; i++) {
         if (spf[i] != 1) continue;
         for (int j = i; j < MAXN; j += i) {
-            if (spf[j] == 1) spf[j] = i;
+            if (spf[j] == 1) {
+                spf[j] = i;
+                cout << j << " " << i << "\n";
+            }
         }
     }
     for (int i = 1; i <= n; i++) { cout << spf[i] << " "; }
