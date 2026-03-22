@@ -15,10 +15,13 @@ int32_t main() {
     spf[0] = 0;
     for (int i = 2; i < MAXN; i++) {
         if (spf[i] != 1) continue;
-        for (int j = i * 2; j < MAXN; j += i) {
+        for (int j = i; j < MAXN; j += i) {
             if (spf[j] == 1) spf[j] = i;
         }
     }
+    for (int i = 1; i <= n; i++) { cout << spf[i] << " "; }
+    cout << "\n";
+    return 0;
     auto factorize = [&](int a) {
         vector<int> result({1});
         while (a != 1) {
