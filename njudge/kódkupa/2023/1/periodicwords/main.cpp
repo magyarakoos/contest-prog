@@ -2,6 +2,21 @@
 using namespace std;
 #define int int64_t
 
+const int BASEA = 29, BASEB = 31, MODA = 1e9 + 9,
+          MODB = 1e9 + 7;
+
+vector<array<int, 2>> h(const string& s) {
+    int n = s.size();
+    vector<int> psa(n + 1), psb(n + 1);
+    for (int i = 1; i <= n; i++) {
+        psa[i] = psa[i - 1] * BASEA % MODA;
+        (psa[i] += s[i - 1] - 'a' + 1) %= MODA;
+    }
+    return ps;
+}
+
+int get_h(int l, int r, const vector<int>& ps) {}
+
 int32_t main() {
     vector<bool> is_prime(1e5 + 1, 1);
     vector<int> primes;
@@ -13,16 +28,16 @@ int32_t main() {
             is_prime[j] = 0;
         }
     }
+    for (int i = 0; i < 15; i++) cout << primes[i] << " ";
+    cout << "\n";
 
     cin.tie(0)->sync_with_stdio(0);
-
-    for (int i = 0; i < 15; i++) cout << primes[i] << " ";
-
     int n, s;
     cin >> n >> s;
 
-    cout << "\n";
-    int q;
+    vector<int> pw()
+
+        int q;
     cin >> q;
     while (q--) {
         int l, r;
