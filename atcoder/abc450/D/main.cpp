@@ -9,18 +9,11 @@ void solve() {
     int n, k;
     cin >> n >> k;
     vector<int> a(n);
-    for (int& x : a) cin >> x, x %= k;
-    sort(a.begin(), a.end());
-    int result = 0;
-    for (int i = 1; i < n; i++) {
-        result =
-            max(result, min(a[i] - a[0], a[0] + k - a[i]));
+    set<int> s;
+    for (int& x : a) {
+        cin >> x;
+        s.insert(x % k);
     }
-    for (int i = 0; i < n - 1; i++) {
-        result = max(result, min(a[n - 1] - a[i],
-                                 a[i] + k - a[n - 1]));
-    }
-    cout << result << "\n";
 }
 
 int32_t main() {
