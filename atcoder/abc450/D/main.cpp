@@ -14,6 +14,17 @@ void solve() {
         cin >> x;
         s.insert(x % k);
     }
+    while (1) {
+        for (int x : s) cout << x << " ";
+        cout << endl;
+        sleep(1);
+        int l = *s.begin();
+        int r = *s.rbegin();
+        if (r - l > l + k - r) {
+            s.erase(l);
+            s.insert(l + k);
+        }
+    }
 }
 
 int32_t main() {
