@@ -32,7 +32,7 @@ void solve() {
     };
     for (int i = 0; i < h; i++) {
         for (int j = 0; j < w; j++) {
-            if (!vis[i][j]) {
+            if (!vis[i][j] && a[i][j]) {
                 ok = 1;
                 dfs(i, j);
                 result += ok;
