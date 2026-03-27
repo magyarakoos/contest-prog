@@ -15,6 +15,8 @@ void solve() {
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             for (int k = j + 1; k < n; k++) {
+                cout << c[i][j] << " " << c[i][k] << " "
+                     << c[j][k] << "\n";
                 if (c[i][j] + c[i][k] < c[i][k]) {
                     cout << "Yes\n";
                     return;
