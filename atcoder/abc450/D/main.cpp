@@ -13,6 +13,13 @@ void solve() {
         cin >> x;
         x %= k;
     }
+    sort(a.begin(), a.end());
+    deque<int> b;
+    for (int x : a) b.push_back(x);
+    int result = INF;
+    for (int i = 0; i <= n; i++) {
+        result = min(result, b.back() - b.front());
+    }
 }
 
 int32_t main() {
