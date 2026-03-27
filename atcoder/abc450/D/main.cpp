@@ -17,14 +17,10 @@ void solve() {
             max(result, min(a[i] - a[0], a[0] + k - a[i]));
     }
     for (int i = 0; i < n - 1; i++) {
-        cout << min(a[i] - a[n - 1], a[n - 1] + k - a[i]);
-        result = max(result, min(a[i] - a[n - 1],
-                                 a[n - 1] + k - a[i]));
+        result = max(result, min(a[n - 1] - a[i],
+                                 a[i] + k - a[n - 1]));
     }
     cout << result << "\n";
-
-    for (int x : a) cout << x << " ";
-    cout << "\n";
 }
 
 int32_t main() {
