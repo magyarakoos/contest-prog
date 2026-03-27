@@ -20,10 +20,12 @@ void solve() {
         sleep(1);
         int l = *s.begin();
         int r = *s.rbegin();
-        cout << l << " " << r << endl;
         if (r - l > l + k - r) {
+            cout << l << " " << l + k << endl;
             s.erase(l);
             s.insert(l + k);
+        } else {
+            break;
         }
     }
 }
