@@ -35,6 +35,7 @@ void solve() {
             if (!vis[i][j] && a[i][j]) {
                 ok = 1;
                 dfs(i, j);
+                if (ok) { cout << i << " " << j << "\n"; }
                 result += ok;
             }
         }
