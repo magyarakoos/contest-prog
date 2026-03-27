@@ -27,7 +27,7 @@ void solve() {
                 ok = 0;
                 continue;
             }
-            if (a[ni][nj]) dfs(ni, nj);
+            if (!vis[ni][nj] && a[ni][nj]) dfs(ni, nj);
         }
     };
     for (int i = 0; i < h; i++) {
