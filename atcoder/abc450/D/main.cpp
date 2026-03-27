@@ -14,17 +14,26 @@ void solve() {
         cin >> x;
         s.insert(x % k);
     }
-    while (1) {
-        int l = *s.begin();
-        int r = *s.rbegin();
-        if (r - l > l + k - r) {
-            s.erase(l);
-            s.insert(l + k);
-        } else {
-            break;
+    vector<int> b, mid, edge;
+    for (int x : s) b.push_back(x);
+    int m = b.size();
+    if (m % 2) {
+        mid.push_back(b[m / 2]);
+    } else {
+        mid.push_back(b[m / 2 - 1]);
+        mid.push_back(b[m / 2]);
+    }
+    edge.push_back(b[0]);
+    edge.push_back(b[m - 1]);
+    int result = 0;
+    for (int x : mid) {
+        for (int y : edge) {
+            result =
+                max(result, min(abs(x - y),
+                                min(x, y) + k - max(x, y)));
         }
     }
-    cout << *s.rbegin() - *s.begin() << "\n";
+    cout << result << "\n";
 }
 
 int32_t main() {
