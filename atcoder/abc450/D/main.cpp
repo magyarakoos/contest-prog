@@ -10,6 +10,8 @@ void solve() {
     cin >> n >> k;
     vector<int> a(n);
     for (int& x : a) cin >> x, x %= k;
+    sort(a.begin(), a.end());
+    for (int i = 0; i < n; i++) { a.push_back(a[i] + k); }
     for (int x : a) cout << x << " ";
     cout << "\n";
 }
