@@ -7,8 +7,8 @@ const int di[] = {1, -1, 0, 0}, dj[] = {0, 0, 1, -1};
 
 #define cases 0
 void solve() {
-    int w, h;
-    cin >> w >> h;
+    int h, w;
+    cin >> h >> w;
     vector a(h, vector<bool>(w)), vis(h, vector<bool>(w));
     for (int i = 0; i < h; i++) {
         for (int j = 0; j < w; j++) {
@@ -35,7 +35,6 @@ void solve() {
             if (!vis[i][j] && a[i][j]) {
                 ok = 1;
                 dfs(i, j);
-                if (ok) { cout << i << " " << j << "\n"; }
                 result += ok;
             }
         }
