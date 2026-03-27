@@ -11,7 +11,18 @@ void solve() {
     vector<int> a(n);
     for (int& x : a) cin >> x, x %= k;
     sort(a.begin(), a.end());
-    for (int i = 0; i < n; i++) { a.push_back(a[i] + k); }
+    int result = 0;
+    for (int i = 1; i < n; i++) {
+        result =
+            max(result, min(a[i] - a[0], a[0] + k - a[i]));
+    }
+    for (int i = 0; i < n - 1; i++) {
+        cout << min(a[i] - a[n - 1], a[n - 1] + k - a[i]);
+        result = max(result, min(a[i] - a[n - 1],
+                                 a[n - 1] + k - a[i]));
+    }
+    cout << result << "\n";
+
     for (int x : a) cout << x << " ";
     cout << "\n";
 }
