@@ -15,19 +15,16 @@ void solve() {
         s.insert(x % k);
     }
     while (1) {
-        for (int x : s) cout << x << " ";
-        cout << endl;
-        sleep(1);
         int l = *s.begin();
         int r = *s.rbegin();
         if (r - l > l + k - r) {
-            cout << l << " " << l + k << endl;
             s.erase(l);
             s.insert(l + k);
         } else {
             break;
         }
     }
+    cout << *s.rbegin() - *s.begin() << "\n";
 }
 
 int32_t main() {
