@@ -19,7 +19,10 @@ void solve() {
     int result = INF;
     for (int i = 0; i <= n; i++) {
         result = min(result, b.back() - b.front());
+        b.push_back(b.front() + k);
+        b.pop_front();
     }
+    cout << result << "\n";
 }
 
 int32_t main() {
