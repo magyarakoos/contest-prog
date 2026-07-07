@@ -36,6 +36,15 @@ int32_t main() {
                 it2--;
                 auto p1 = mp[*it][0];
                 auto p2 = mp[*it2][0];
+                if (*it - x < x - *it2) {
+                    cout << p1.first << "\n";
+                } else if (*it - x > x - *it2) {
+                    cout << p2.second << "\n";
+                } else if (p1.second < p2.second) {
+                    cout << p1.second << "\n";
+                } else {
+                    cout << p2.second << "\n";
+                }
             }
         }
     }
