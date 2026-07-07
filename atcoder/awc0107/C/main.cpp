@@ -39,11 +39,11 @@ int32_t main() {
                 if (*it - x < x - *it2) {
                     cout << p1.first << "\n";
                 } else if (*it - x > x - *it2) {
-                    cout << p2.second << "\n";
+                    cout << p2.first << "\n";
                 } else if (p1.second < p2.second) {
-                    cout << p1.second << "\n";
+                    cout << p1.first << "\n";
                 } else {
-                    cout << p2.second << "\n";
+                    cout << p2.first << "\n";
                 }
             }
         }
