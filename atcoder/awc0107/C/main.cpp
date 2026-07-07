@@ -7,10 +7,22 @@ int32_t main() {
     int n, q;
     cin >> n >> q;
     map<int, vector<pair<string, int>>> mp;
+    set<int> xS;
     for (int i = 0; i < n; i++) {
         string s;
         int x;
         cin >> s >> x;
+        xS.insert(x);
         mp[x].push_back({s, i});
+    }
+    while (q--) {
+        int x;
+        cin >> x;
+        if (mp.contains(x)) {
+            for (auto p : mp[x]) { cout << p.first << " "; }
+            cout << "\n";
+        } else {
+            auto it = xS.upper_bound(x);
+        }
     }
 }
