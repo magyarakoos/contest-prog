@@ -3,13 +3,12 @@ using namespace std;
 
 int main() {
     cin.tie(0)->sync_with_stdio(0);
-    int n, d, v;
-    cin >> n >> d >> v;
+    int n, m, k;
+    cin >> n >> m >> k;
+    vector<int> a(n + m);
+    for (int& x : a) cin >> x;
+    sort(a.rbegin(), a.rend());
     int result = 0;
-    while (n--) {
-        int s;
-        cin >> s;
-        result += s > v;
-    }
+    for (int i = 0; i < k; i++) result += a[i];
     cout << result << "\n";
 }
