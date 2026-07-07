@@ -22,7 +22,10 @@ int32_t main() {
             for (auto p : mp[x]) { cout << p.first << " "; }
             cout << "\n";
         } else {
-            auto it = xS.upper_bound(x);
+            if (*xS.rbegin() == x) {
+                auto it = xS.rbegin();
+                it--;
+            }
         }
     }
 }
