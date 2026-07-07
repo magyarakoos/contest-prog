@@ -25,6 +25,17 @@ int32_t main() {
             if (*xS.rbegin() == x) {
                 auto it = xS.rbegin();
                 it--;
+                cout << mp[*it][0].first << "\n";
+            } else if (*xS.begin() == x) {
+                auto it = xS.begin();
+                it++;
+                cout << mp[*it][0].first << "\n";
+            } else {
+                auto it = xS.upper_bound(x);
+                auto it2 = it;
+                it2--;
+                auto p1 = mp[*it][0];
+                auto p2 = mp[*it2][0];
             }
         }
     }
