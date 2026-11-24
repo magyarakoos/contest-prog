@@ -57,6 +57,8 @@ int32_t main() {
                 l = m;
             }
         }
-        cout << i << " " << r << "\n";
+        if (r == n) break;
+        result += n - r;
     }
+    cout << result << "\n";
 }
