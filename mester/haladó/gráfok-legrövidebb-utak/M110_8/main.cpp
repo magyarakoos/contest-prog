@@ -48,5 +48,12 @@ int32_t main() {
     } else {
         bfs(r, prv);
         cout << r << "\n";
+        deque<int> path;
+        while (q != p) {
+            path.push_front(q);
+            q = prv[q];
+        }
+        for (int x : path) cout << x << " ";
+        cout << "\n";
     }
 }
