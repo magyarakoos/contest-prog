@@ -29,7 +29,7 @@ int32_t main() {
         s = s.substr(si);
         reverse(s.begin(), s.end());
     }
-    // cout << s << "\n";
+    cout << s << "\n";
 
     n = s.size();
     vector<int> pa(n + 1), pb(n + 1), pc(n + 1);
@@ -51,7 +51,12 @@ int32_t main() {
             int m = (l + r) / 2;
             if (pa[m + 1] - pa[i] >= 0 &&
                 pb[m + 1] - pb[i] >= 0 &&
-                pc[m + 1] - pc[i] >= 0)
+                pc[m + 1] - pc[i] >= 0) {
+                l = m;
+            } else {
+                r = m;
+            }
         }
+        cout << i << " " << l << "\n";
     }
 }
