@@ -7,24 +7,24 @@ int32_t main() {
     int n, k;
     cin >> n >> k;
     vector<int> m(k);
-    vector<array<int, 2>> kid(n);
+    vector<array<int, 3>> kid(n);
     for (int& x : m) cin >> x;
     for (int i = 0; i < n; i++) {
         cin >> kid[i][1] >> kid[i][0];
         kid[i][1]--;
+        kid[i][2] = i;
     }
     sort(kid.rbegin(), kid.rend());
-    vector<int> cnt(k);
     int result = 0;
     vector<int> todo;
     for (int i = 0; i < n; i++) {
-        int s = kid[i][1], t = kid[i][0];
-        if (cnt[s] == m[s]) {
-            todo.push_back(i);
-            result += t;
+        auto [cry_time, chosen, index] = kid[i];
+        if (m[chosen]) {
+            m[chosen]--;
+            cout << index << " " << chosen << "\n";
         } else {
-            cnt[s]++;
-            cout << i << " " << s << "\n";
+            todo.push_back(i);
+            result += cry_time;
         }
     }
     cout << result << "\n";
