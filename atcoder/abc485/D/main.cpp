@@ -7,24 +7,18 @@ int32_t main() {
     int n;
     string s;
     cin >> n >> s;
-    int acnt = 0, bcnt = 0, ccnt = 0;
-    vector<int> aps(n), bps(n), cps(n);
-    for (int i = 0; i < n; i++) {
-        char c = s[i];
-        aps[i] = c == 'A';
-        bps[i] = c == 'B';
-        cps[i] = c == 'C';
-        if (i) {
-            aps[i] += aps[i - 1];
-            bps[i] += bps[i - 1];
-            cps[i] += cps[i - 1];
+    auto start = [](string str) -> int {
+        bool a_found = 0, b_found = 0, c_found = 0;
+        for (int i = 0; i < str.size(); i++) {
+            a_found |= str[i] == 'A';
+            b_found |= str[i] == 'B';
+            c_found |= str[i] == 'C';
+            if (a_found && b_found && c_found) {
+                return i + 1;
+            }
         }
-    }
-    for (int i = 0; i < n; i++) {
-        char c = s[i];
-        acnt += c == 'A';
-        bcnt += c == 'B';
-        ccnt += c == 'C';
-        if (acnt && bcnt && ccnt) {}
-    }
+        return -1;
+    };
+
+    int si = start(s);
 }
