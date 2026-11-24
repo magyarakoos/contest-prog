@@ -24,6 +24,7 @@ int32_t main() {
             result += t;
         } else {
             cnt[s]++;
+            cout << i << " " << s << "\n";
         }
     }
     cout << result << "\n";
