@@ -17,9 +17,10 @@ int32_t main() {
         fill(prv.begin(), prv.end(), -1);
         vector<bool> vis(n + 1);
         vis[p] = 1;
-        queue<int> qu({q});
+        queue<int> qu({p});
         while (!qu.empty()) {
             int u = qu.front();
+            cout << u << "\n";
             qu.pop();
             if (u == q) return true;
             for (auto [v, w] : g[u]) {
@@ -36,6 +37,7 @@ int32_t main() {
     vector<int> prv(n + 1);
     while (r - l > 1) {
         int mid = (l + r) / 2;
+        cout << "MID " << mid << "\n";
         if (bfs(mid, prv)) {
             r = mid;
         } else {
