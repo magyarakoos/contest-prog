@@ -12,22 +12,21 @@ int32_t main() {
         cin >> u >> v >> w;
         g[u].push_back({v, w});
     }
-    map<array<int, 2>, int> distS;
+    vector<int> distS(n + 1, INT_MAX);
+    distS[1] = 0;
     queue<array<int, 2>> q;
-    for (int i = 1; i <= m; i++) {
-        distS[{1, i}] = 0;
-        q.push({1, i});
-    }
+    for (int i = 1; i <= m; i++) { q.push({1, i}); }
     while (!q.empty()) {
         auto [u, color] = q.front();
+        cout << u << " " << color << "\n";
         q.pop();
         if (u == n) {
-            cout << distS[{u, color}] << "\n";
+            cout << distS[u] << "\n";
             return 0;
         }
         for (auto [v, w] : g[u]) {
-            if (w == color || distS.count({v, w})) continue;
-            distS[{v, w}] = distS[{u, color}] + 1;
+            if (w == color || distS[v] < INT_MAX) continue;
+            distS[v] = distS[u] + 1;
             q.push({v, w});
         }
     }
