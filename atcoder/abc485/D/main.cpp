@@ -21,4 +21,17 @@ int32_t main() {
     };
 
     int si = start(s);
+    if (si == -1) {
+        cout << "0\n";
+        return 0;
+    }
+    s = s.substr(si);
+    reverse(s.begin(), s.end());
+    si = start(s);
+    if (si == -1) {
+        cout << "0\n";
+        return 0;
+    }
+    s = s.substr(si);
+    cout << s << "\n";
 }
