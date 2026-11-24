@@ -42,6 +42,11 @@ int32_t main() {
             l = mid;
         }
     }
-    bfs(r, prv);
-    cout << r << "\n";
+
+    if (r == 1001) {
+        cout << "0\n";
+    } else {
+        bfs(r, prv);
+        cout << r << "\n";
+    }
 }
