@@ -13,47 +13,5 @@ int32_t main() {
         g[u].push_back({v, w});
         g[v].push_back({u, w});
     }
-    auto bfs = [&](int min_w, vector<int>& prv) -> bool {
-        fill(prv.begin(), prv.end(), -1);
-        vector<bool> vis(n + 1);
-        vis[p] = 1;
-        queue<int> qu({p});
-        while (!qu.empty()) {
-            int u = qu.front();
-            qu.pop();
-            if (u == q) return true;
-            for (auto [v, w] : g[u]) {
-                if (w < min_w || vis[v]) continue;
-                vis[v] = 1;
-                prv[v] = u;
-                qu.push(v);
-            }
-        }
-        return false;
-    };
-
-    int l = 0, r = 1001;
-    vector<int> prv(n + 1);
-    while (r - l > 1) {
-        int mid = (l + r) / 2;
-        if (bfs(mid, prv)) {
-            l = mid;
-        } else {
-            r = mid;
-        }
-    }
-
-    if (r == 1001) {
-        cout << "0\n";
-    } else {
-        bfs(l, prv);
-        cout << l << "\n";
-        deque<int> path;
-        while (q != -1) {
-            path.push_front(q);
-            q = prv[q];
-        }
-        for (int x : path) cout << x << " ";
-        cout << "\n";
-    }
+    priority_queue<array<int, 2>> pq;
 }
