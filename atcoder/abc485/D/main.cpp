@@ -7,18 +7,24 @@ int32_t main() {
     int n;
     string s;
     cin >> n >> s;
-    bool a_found = 0, b_found = 0, c_found = 0;
     int acnt = 0, bcnt = 0, ccnt = 0;
-    for (char c : s) {
-        acnt += c == 'A';
-        bcnt += c == 'B';
-        ccnt += c == 'C';
+    vector<int> aps(n), bps(n), cps(n);
+    for (int i = 0; i < n; i++) {
+        char c = s[i];
+        aps[i] = c == 'A';
+        bps[i] = c == 'B';
+        cps[i] = c == 'C';
+        if (i) {
+            aps[i] += aps[i - 1];
+            bps[i] += bps[i - 1];
+            cps[i] += cps[i - 1];
+        }
     }
     for (int i = 0; i < n; i++) {
         char c = s[i];
-        a_found |= c == 'A';
-        b_found |= c == 'B';
-        c_found |= c == 'C';
-        if (a_found && b_found && c_found) {}
+        acnt += c == 'A';
+        bcnt += c == 'B';
+        ccnt += c == 'C';
+        if (acnt && bcnt && ccnt) {}
     }
 }
