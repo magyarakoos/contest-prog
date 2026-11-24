@@ -29,7 +29,7 @@ int32_t main() {
         s = s.substr(si);
         reverse(s.begin(), s.end());
     }
-    cout << s << "\n";
+    // cout << s << "\n";
 
     n = s.size();
     vector<int> pa(n + 1), pb(n + 1), pc(n + 1);
