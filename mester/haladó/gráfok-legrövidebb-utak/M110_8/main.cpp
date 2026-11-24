@@ -14,4 +14,22 @@ int32_t main() {
         g[v].push_back({u, w});
     }
     priority_queue<array<int, 2>> pq;
+    pq.push({INT_MAX, p});
+    vector<int> distS(n + 1), prv(n + 1);
+    distS[p] = INT_MAX;
+    while (!pq.empty()) {
+        auto [d, u] = pq.top();
+        pq.pop();
+        cout << u << " " << d << "\n";
+        if (d != distS[u]) continue;
+        for (auto [v, w] : g[u]) {
+            int nd = min(d, w);
+            if (nd <= distS[v]) continue;
+            distS[v] = nd;
+            prv[v] = u;
+            pq.push({nd, v});
+        }
+    }
+    for (int x : distS) cout << x << " ";
+    cout << "\n";
 }
