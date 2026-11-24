@@ -24,7 +24,7 @@ int32_t main() {
             qu.pop();
             if (u == q) return true;
             for (auto [v, w] : g[u]) {
-                if (w < min_w || vis[v]) continue;
+                if (w > min_w || vis[v]) continue;
                 vis[v] = 1;
                 prv[v] = u;
                 qu.push(v);
