@@ -13,8 +13,10 @@ int32_t main() {
             cout << "Faucet " << i + 1 << "\n";
             return 0;
         }
+    }
+    for (int i = 0; i < m; i++) {
         int cnt = 0;
-        for (int j = 0; j < m; j++) {
+        for (int j = 0; j < n; j++) {
             cnt += a[j][i] == 'o';
         }
         if (!cnt) {
