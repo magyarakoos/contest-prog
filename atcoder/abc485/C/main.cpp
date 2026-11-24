@@ -12,7 +12,7 @@ int32_t main() {
     for (int& x : a) cin >> x;
     vector<vector<int>> posS(n + 1);
     for (int i = 0; i < n; i++) { posS[a[i]].push_back(i); }
-    vector<int> result(n);
+    vector<int> result(n, -1);
     for (int i = 1; i <= n; i++) {
         for (int j : posS[i]) { s.erase(j); }
         for (int j : posS[i]) {
@@ -26,8 +26,11 @@ int32_t main() {
                 auto it = s.upper_bound(j);
                 auto it2 = it;
                 it2--;
+                result[j] = min(*it - j, j - *it2);
             }
         }
         for (int j : posS[i]) { s.insert(j); }
     }
+    for (int x : result) cout << x << " ";
+    cout << "\n";
 }
