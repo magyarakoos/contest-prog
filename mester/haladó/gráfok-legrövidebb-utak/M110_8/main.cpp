@@ -14,16 +14,31 @@ int32_t main() {
         g[v].push_back({u, w});
     }
     auto bfs = [&](int min_w, vector<int>& prv) -> bool {
-        prv.assign(n + 1, -1);
+        fill(prv.begin(), prv.end(), -1);
         vector<bool> vis(n + 1);
         vis[p] = 1;
         queue<int> qu({q});
         while (!qu.empty()) {
             int u = qu.front();
             qu.pop();
+            if (u == q) return true;
             for (auto [v, w] : g[u]) {
-                if (w < min_w) continue;
+                if (w < min_w || vis[v]) continue;
+                vis[v] = 1;
+                qu.push(v);
             }
         }
+        return false;
     };
+    int l = 0, r = 1001;
+    vector<int> prv(n + 1);
+    while (r - l > 1) {
+        int mid = (l + r) / 2;
+        if (bfs(mid, prv)) {
+            r = mid;
+        } else {
+            l = mid;
+        }
+    }
+    bfs(r, prv);
 }
