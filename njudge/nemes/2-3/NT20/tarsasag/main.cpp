@@ -15,8 +15,6 @@ int32_t main() {
         g[v].push_back({i, w});
     }
 
-    vector<vector<int>> dp(n + 1);
-
     vector<int> subT(n + 1);
     function<void(int)> dfs = [&](int u) {
         if (!g[u].size()) {
@@ -28,4 +26,6 @@ int32_t main() {
             subT[u] += subT[v];
         }
     };
+
+    vector<vector<int>> dp(n + 1);
 }
