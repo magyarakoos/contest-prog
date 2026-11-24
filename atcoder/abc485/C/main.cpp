@@ -23,9 +23,9 @@ int32_t main() {
             } else if (j > mx) {
                 result[j] = j - mx;
             } else {
-
-                auto [it, b] = s.insert(j);
-                s.erase(j);
+                auto it = s.upper_bound(j);
+                auto it2 = it;
+                it2--;
             }
         }
         for (int j : posS[i]) { s.insert(j); }
