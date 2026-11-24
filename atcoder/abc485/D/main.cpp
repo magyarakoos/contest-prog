@@ -29,5 +29,13 @@ int32_t main() {
         s = s.substr(si);
         reverse(s.begin(), s.end());
     }
-    cout << s << "\n";
+    // cout << s << "\n";
+
+    n = s.size();
+    vector<int> pa(n + 1), pb(n + 1), pc(n + 1);
+    for (int i = 1; i <= n; i++) {
+        pa[i] = pa[i - 1] + (s[i - 1] == 'A');
+        pb[i] = pb[i - 1] + (s[i - 1] == 'B');
+        pc[i] = pc[i - 1] + (s[i - 1] == 'C');
+    }
 }
