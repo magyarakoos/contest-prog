@@ -13,6 +13,7 @@ int32_t main() {
         a[i] = c == '1';
     }
     int p1 = 0;
-    for (int i = 1; i < n; i++) { p1 += a[i - 1] && !a[i]; }
+    bool z_found = 0;
+    for (int i = n - 1; i >= 0; i--) { z_found |= !a[i]; }
     cout << p1 << "\n0\n";
 }
