@@ -46,10 +46,8 @@ int32_t main() {
     if (r == 1001) {
         cout << "0\n";
     } else {
-        bfs(r, prv);
+        // bfs(r, prv);
         cout << r << "\n";
-        for (int x : prv) cout << x << " ";
-        cout << "\n";
         deque<int> path;
         while (q != -1) {
             path.push_front(q);
