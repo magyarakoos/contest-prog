@@ -49,9 +49,9 @@ int32_t main() {
         int l = i - 1, r = n;
         while (r - l > 1) {
             int m = (l + r) / 2;
-            if (pa[m + 1] - pa[i] >= 0 &&
-                pb[m + 1] - pb[i] >= 0 &&
-                pc[m + 1] - pc[i] >= 0) {
+            if (pa[m + 1] - pa[i] > 0 &&
+                pb[m + 1] - pb[i] > 0 &&
+                pc[m + 1] - pc[i] > 0) {
                 r = m;
             } else {
                 l = m;
