@@ -14,6 +14,9 @@ int32_t main() {
     }
     int p1 = 0;
     bool z_found = 0;
-    for (int i = n - 1; i >= 0; i--) { z_found |= !a[i]; }
+    for (int i = n - 1; i >= 0; i--) {
+        z_found |= !a[i];
+        p1 += z_found & a[i];
+    }
     cout << p1 << "\n0\n";
 }
