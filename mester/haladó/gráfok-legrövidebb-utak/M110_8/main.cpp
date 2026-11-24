@@ -13,4 +13,17 @@ int32_t main() {
         g[u].push_back({v, w});
         g[v].push_back({u, w});
     }
+    auto bfs = [&](int min_w, vector<int>& prv) -> bool {
+        prv.assign(n + 1, -1);
+        vector<bool> vis(n + 1);
+        vis[p] = 1;
+        queue<int> qu({q});
+        while (!qu.empty()) {
+            int u = qu.front();
+            qu.pop();
+            for (auto [v, w] : g[u]) {
+                if (w < min_w) continue;
+            }
+        }
+    };
 }
