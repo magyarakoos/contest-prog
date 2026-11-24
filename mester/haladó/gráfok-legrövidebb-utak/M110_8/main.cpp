@@ -20,7 +20,6 @@ int32_t main() {
     while (!pq.empty()) {
         auto [d, u] = pq.top();
         pq.pop();
-        cout << u << " " << d << "\n";
         if (d != distS[u]) continue;
         for (auto [v, w] : g[u]) {
             int nd = min(d, w);
@@ -30,6 +29,14 @@ int32_t main() {
             pq.push({nd, v});
         }
     }
-    for (int x : distS) cout << x << " ";
-    cout << "\n";
+    cout << distS[q] << "\n";
+    if (distS[q]) {
+        deque<int> path;
+        while (q) {
+            path.push_front(q);
+            q = prv[q];
+        }
+        for (int x : path) cout << x << " ";
+        cout << "\n";
+    }
 }
