@@ -21,5 +21,15 @@ int32_t main() {
     while (!q.empty()) {
         auto [u, color] = q.front();
         q.pop();
+        if (u == n) {
+            cout << distS[{u, color}] << "\n";
+            return 0;
+        }
+        for (auto [v, w] : g[u]) {
+            if (w == color || distS.count({v, w})) continue;
+            distS[{v, w}] = distS[{u, color}] + 1;
+            q.push({v, w});
+        }
     }
+    cout << "-1\n";
 }
