@@ -20,11 +20,10 @@ int32_t main() {
         queue<int> qu({p});
         while (!qu.empty()) {
             int u = qu.front();
-            cout << u << "\n";
             qu.pop();
             if (u == q) return true;
             for (auto [v, w] : g[u]) {
-                if (w > min_w || vis[v]) continue;
+                if (w < min_w || vis[v]) continue;
                 vis[v] = 1;
                 prv[v] = u;
                 qu.push(v);
@@ -37,11 +36,10 @@ int32_t main() {
     vector<int> prv(n + 1);
     while (r - l > 1) {
         int mid = (l + r) / 2;
-        cout << "MID " << mid << "\n";
         if (bfs(mid, prv)) {
-            r = mid;
-        } else {
             l = mid;
+        } else {
+            r = mid;
         }
     }
 
