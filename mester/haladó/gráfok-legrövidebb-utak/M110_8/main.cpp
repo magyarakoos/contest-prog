@@ -25,11 +25,13 @@ int32_t main() {
             for (auto [v, w] : g[u]) {
                 if (w < min_w || vis[v]) continue;
                 vis[v] = 1;
+                prv[v] = u;
                 qu.push(v);
             }
         }
         return false;
     };
+
     int l = 0, r = 1001;
     vector<int> prv(n + 1);
     while (r - l > 1) {
@@ -41,4 +43,5 @@ int32_t main() {
         }
     }
     bfs(r, prv);
+    cout << r << "\n";
 }
