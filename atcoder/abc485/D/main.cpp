@@ -52,9 +52,9 @@ int32_t main() {
             if (pa[m + 1] - pa[i] >= 0 &&
                 pb[m + 1] - pb[i] >= 0 &&
                 pc[m + 1] - pc[i] >= 0) {
-                l = m;
-            } else {
                 r = m;
+            } else {
+                l = m;
             }
         }
         cout << i << " " << l << "\n";
