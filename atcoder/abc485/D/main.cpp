@@ -20,18 +20,14 @@ int32_t main() {
         return -1;
     };
 
-    int si = start(s);
-    if (si == -1) {
-        cout << "0\n";
-        return 0;
+    for (int i = 0; i < 2; i++) {
+        int si = start(s);
+        if (si == -1) {
+            cout << "0\n";
+            return 0;
+        }
+        s = s.substr(si);
+        reverse(s.begin(), s.end());
     }
-    s = s.substr(si);
-    reverse(s.begin(), s.end());
-    si = start(s);
-    if (si == -1) {
-        cout << "0\n";
-        return 0;
-    }
-    s = s.substr(si);
     cout << s << "\n";
 }
