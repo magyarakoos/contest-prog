@@ -13,7 +13,7 @@ int32_t main() {
         a[l - 1]++;
         a[r]--;
     }
-    int result = 0;
+    int result = a[0];
     for (int i = 1; i <= 400'000; i++) {
         a[i] += a[i - 1];
         result = max(result, a[i]);
