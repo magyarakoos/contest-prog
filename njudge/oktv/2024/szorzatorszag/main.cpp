@@ -54,6 +54,14 @@ int32_t main() {
                 break;
             }
         }
+
+        int ltwos = two_count(nl, r);
+        int rtwos = two_count(l, nr);
+        if (ltwos > result) {
+            result = ltwos;
+            res_l = nl;
+            res_r = r;
+        }
     };
     int start = -1;
     for (int i = 1; i <= n + 1; i++) {
