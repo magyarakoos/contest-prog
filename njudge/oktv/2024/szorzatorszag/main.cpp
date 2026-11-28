@@ -39,6 +39,21 @@ int32_t main() {
             }
             return;
         }
+
+        int nl = 0;
+        for (int i = l; i <= r; i++) {
+            if (a[i] < 0) {
+                nl = i + 1;
+                break;
+            }
+        }
+        int nr = 0;
+        for (int i = r; i >= l; i--) {
+            if (a[i] < 0) {
+                nr = i - 1;
+                break;
+            }
+        }
     };
     int start = -1;
     for (int i = 1; i <= n + 1; i++) {
