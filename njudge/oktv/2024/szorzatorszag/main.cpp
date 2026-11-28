@@ -8,6 +8,18 @@ int32_t main() {
     cin >> n;
     vector<int> a(n + 2);
     for (int i = 1; i <= n; i++) cin >> a[i];
+    auto neg_count = [&](int l, int r) {
+        int result = 0;
+        for (int i = l; i <= r; i++) { result += a[i] < 0; }
+        return result;
+    };
+    auto two_count = [&](int l, int r) {
+        int result = 0;
+        for (int i = l; i <= r; i++) {
+            result += abs(a[i]) == 2;
+        }
+        return result;
+    };
     auto find_intv = [&](int l, int r) {
 
     };
