@@ -32,6 +32,8 @@ int32_t main() {
     auto find_intv = [&](int l, int r) {
         if (neg_count(l, r) % 2 == 0) {
             int twos = two_count(l, r);
+            cout << "OPT " << l << " " << r << " " << twos
+                 << "\n";
             if (twos > result) {
                 result = twos;
                 res_l = l;
@@ -56,12 +58,16 @@ int32_t main() {
         }
 
         int ltwos = two_count(nl, r);
+        cout << "OPT " << nl << " " << r << " " << ltwos
+             << "\n";
         if (ltwos > result) {
             result = ltwos;
             res_l = nl;
             res_r = r;
         }
         int rtwos = two_count(l, nr);
+        cout << "OPT " << l << " " << nr << " " << rtwos
+             << "\n";
         if (rtwos > result) {
             result = rtwos;
             res_l = l;
