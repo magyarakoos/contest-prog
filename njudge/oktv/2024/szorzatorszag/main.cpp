@@ -29,9 +29,16 @@ int32_t main() {
             res_r = i;
         }
     }
-    assert();
     auto find_intv = [&](int l, int r) {
-        if (neg_count(l, r) % 2 == 0) {}
+        if (neg_count(l, r) % 2 == 0) {
+            int twos = two_count(l, r);
+            if (twos > result) {
+                result = twos;
+                res_l = l;
+                res_r = r;
+            }
+            return;
+        }
     };
     int start = -1;
     for (int i = 1; i <= n + 1; i++) {
