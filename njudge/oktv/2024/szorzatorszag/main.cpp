@@ -8,6 +8,11 @@ int32_t main() {
     cin >> n;
     vector<int> a(n + 2);
     for (int i = 1; i <= n; i++) cin >> a[i];
-    int start = -1;
-    for (int i = 0; i <= n; i++) { if () }
+    int start = 0;
+    for (int i = 1; i <= n + 1; i++) {
+        if (a[i] == 0) {
+            find_intv(start, i);
+            start = i + 1;
+        }
+    }
 }
