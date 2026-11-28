@@ -71,7 +71,8 @@ int32_t main() {
     int start = -1;
     for (int i = 1; i <= n + 1; i++) {
         if (a[i] == 0 && start != -1) {
-            find_intv(start, i);
+            cout << "EX " << start << " " << i - 1 << "\n";
+            find_intv(start, i - 1);
             start = -1;
         } else if (a[i] != 0 && start == -1) {
             start = i;
