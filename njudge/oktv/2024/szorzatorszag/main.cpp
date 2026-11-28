@@ -25,8 +25,9 @@ int32_t main() {
     auto find_intv = [&](int l, int r) {
         if (neg_count(l, r) % 2 == 0) {
             int twos = two_count(l, r);
-            cout << "OPT " << l << " " << r << " " << twos
-                 << "\n";
+            // cout << "OPT " << l << " " << r << " " <<
+            // twos
+            //      << "\n";
             if (twos > result) {
                 result = twos;
                 res_l = l;
@@ -51,16 +52,16 @@ int32_t main() {
         }
 
         int ltwos = two_count(nl, r);
-        cout << "OPT " << nl << " " << r << " " << ltwos
-             << "\n";
+        // cout << "OPT " << nl << " " << r << " " << ltwos
+        //      << "\n";
         if (ltwos > result) {
             result = ltwos;
             res_l = nl;
             res_r = r;
         }
         int rtwos = two_count(l, nr);
-        cout << "OPT " << l << " " << nr << " " << rtwos
-             << "\n";
+        // cout << "OPT " << l << " " << nr << " " << rtwos
+        //      << "\n";
         if (rtwos > result) {
             result = rtwos;
             res_l = l;
@@ -70,13 +71,24 @@ int32_t main() {
     int start = -1;
     for (int i = 1; i <= n + 1; i++) {
         if (a[i] == 0 && start != -1) {
-            cout << "EX " << start << " " << i - 1 << "\n";
+            // cout << "EX " << start << " " << i - 1 <<
+            // "\n";
             find_intv(start, i - 1);
             start = -1;
         } else if (a[i] != 0 && start == -1) {
             start = i;
         }
     }
-    cout << result << "\n";
+    if (result == 0) {
+        int nres = -1e18;
+        for (int i = 1; i <= n; i++) {
+            if (a[i] > nres) {
+                nres = a[i];
+                res_l = i;
+                res_r = i;
+            }
+        }
+    }
+    // cout << result << "\n";
     cout << res_l << " " << res_r << "\n";
 }
