@@ -56,11 +56,16 @@ int32_t main() {
         }
 
         int ltwos = two_count(nl, r);
-        int rtwos = two_count(l, nr);
         if (ltwos > result) {
             result = ltwos;
             res_l = nl;
             res_r = r;
+        }
+        int rtwos = two_count(l, nr);
+        if (rtwos > result) {
+            result = rtwos;
+            res_l = l;
+            res_r = nr;
         }
     };
     int start = -1;
@@ -72,4 +77,6 @@ int32_t main() {
             start = i;
         }
     }
+    cout << result << "\n";
+    cout << res_l << " " << res_r << "\n";
 }
