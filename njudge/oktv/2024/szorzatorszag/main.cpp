@@ -22,13 +22,6 @@ int32_t main() {
     };
 
     int result = -1e18, res_l = 0, res_r = 0;
-    for (int i = 1; i <= n; i++) {
-        if (a[i] > result) {
-            result = a[i];
-            res_l = i;
-            res_r = i;
-        }
-    }
     auto find_intv = [&](int l, int r) {
         if (neg_count(l, r) % 2 == 0) {
             int twos = two_count(l, r);
