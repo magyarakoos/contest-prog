@@ -29,6 +29,7 @@ int32_t main() {
             res_r = i;
         }
     }
+    assert();
     auto find_intv = [&](int l, int r) {
         if (neg_count(l, r) % 2 == 0) {}
     };
