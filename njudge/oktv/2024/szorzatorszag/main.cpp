@@ -84,11 +84,11 @@ int32_t main() {
         for (int i = 1; i <= n; i++) {
             if (a[i] > nres) {
                 nres = a[i];
-                res_l = i + 1;
-                res_r = i + 1;
+                res_l = i;
+                res_r = i;
             }
         }
     }
-    cout << result << "\n";
+    // cout << result << "\n";
     cout << res_l << " " << res_r << "\n";
 }
