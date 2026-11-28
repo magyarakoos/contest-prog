@@ -21,7 +21,7 @@ int32_t main() {
         return result;
     };
 
-    int result = -1e18, res_l = 0, res_r = 0;
+    int result = 0, res_l = 0, res_r = 0;
     auto find_intv = [&](int l, int r) {
         if (neg_count(l, r) % 2 == 0) {
             int twos = two_count(l, r);
@@ -84,11 +84,11 @@ int32_t main() {
         for (int i = 1; i <= n; i++) {
             if (a[i] > nres) {
                 nres = a[i];
-                res_l = i;
-                res_r = i;
+                res_l = i + 1;
+                res_r = i + 1;
             }
         }
     }
-    // cout << result << "\n";
+    cout << result << "\n";
     cout << res_l << " " << res_r << "\n";
 }
